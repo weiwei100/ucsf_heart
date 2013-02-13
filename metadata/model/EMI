@@ -49,10 +49,23 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "field2",
-                "name": "shortdesc",
+                "name": "feed_title",
                 "type": "string"
             },
             "designerId": "ea034395-68fb-45c9-aaae-9fe8f6b29f7e"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field10",
+                "name": "category"
+            },
+            "designerId": "af36b47c-d750-4fa0-8cb6-d8981f473d1d"
         }
     ]
 }

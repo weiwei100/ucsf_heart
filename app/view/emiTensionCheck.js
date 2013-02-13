@@ -27,45 +27,52 @@ Ext.define('HEART.view.emiTensionCheck', {
 				html: 'For each, bring your attention to that area and relax it - even for 2sec!'
 			},
 			{
-				xtype: 'checkboxfield',
-				label: 'Feet',
-				labelWidth: '80%',
-				value: 'Feet'
-			},
-			{
-				xtype: 'checkboxfield',
-				label: 'Left thigh',
-				labelWidth: '80%',
-				value: ''
-			},
-			{
-				xtype: 'checkboxfield',
-				label: 'Abdomen',
-				labelWidth: '80%'
-			},
-			{
-				xtype: 'checkboxfield',
-				label: 'Upper back',
-				labelWidth: '80%'
-			},
-			{
-				xtype: 'checkboxfield',
-				label: 'Left arm',
-				labelWidth: '80%'
-			},
-			{
-				xtype: 'checkboxfield',
-				label: 'Both hands',
-				labelWidth: '80%'
-			},
-			{
-				xtype: 'checkboxfield',
-				label: 'Cheeks',
-				labelWidth: '80%'
-			},
-			{
-				xtype: 'button',
-				text: 'Done!'
+				xtype: 'fieldset',
+				title: 'MyFieldSet',
+				items: [
+					{
+						xtype: 'checkboxfield',
+						label: 'Feet',
+						labelWidth: '80%',
+						value: 'Feet'
+					},
+					{
+						xtype: 'checkboxfield',
+						label: 'Left thigh',
+						labelWidth: '80%',
+						value: ''
+					},
+					{
+						xtype: 'checkboxfield',
+						label: 'Abdomen',
+						labelWidth: '80%'
+					},
+					{
+						xtype: 'checkboxfield',
+						label: 'Upper back',
+						labelWidth: '80%'
+					},
+					{
+						xtype: 'checkboxfield',
+						label: 'Left arm',
+						labelWidth: '80%'
+					},
+					{
+						xtype: 'checkboxfield',
+						label: 'Both hands',
+						labelWidth: '80%'
+					},
+					{
+						xtype: 'checkboxfield',
+						label: 'Cheeks',
+						labelWidth: '80%'
+					},
+					{
+						xtype: 'button',
+						action: 'exercise',
+						text: 'Done!'
+					}
+				]
 			}
 		]
 	}

@@ -1,0 +1,114 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "emaPleasantness"
+    },
+    "id": "ExtBox1-ext-gen34668",
+    "designerId": "7d46841e-2109-42de-a3c6-37339c12305f",
+    "cn": [
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet2",
+                "defaults": [
+                    "{",
+                    "                            labelWidth: '35%',",
+                    "                            labelAlign: 'top'",
+                    "                        }"
+                ],
+                "title": ""
+            },
+            "designerId": "eb2fccfe-ee1b-4799-9f2b-daea800a1353",
+            "cn": [
+                {
+                    "type": "sliderfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySliderField",
+                        "label": "The amount of pleasantness I feel is:",
+                        "labelWrap": true,
+                        "name": "positivity",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "69e36ff5-fde7-463b-957f-9e566b32d605"
+                },
+                {
+                    "type": "sliderfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySliderField1",
+                        "label": "The amount of unpleasantness I feel is:",
+                        "labelWrap": true,
+                        "name": "negativity",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "1c3bbf76-0cd3-4e23-be15-37a2d4de91b4"
+                },
+                {
+                    "type": "sliderfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySliderField1",
+                        "label": "The amount of energy I have right now is:",
+                        "labelWrap": true,
+                        "name": "energy",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "557489c7-d2da-4b45-abc7-0e38e71d23d3"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "exercise",
+                        "designer|userClassName": "MyButton10",
+                        "id": null,
+                        "itemId": null,
+                        "ui": "confirm",
+                        "text": "Done"
+                    },
+                    "designerId": "055c7356-b2e1-43d7-b021-dc825869421a",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

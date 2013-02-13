@@ -8,10 +8,12 @@
     "userConfig": {
         "models": [
             "EMI",
-            "User"
+            "User",
+            "Feed"
         ],
         "stores": [
-            "EMIs"
+            "EMIs",
+            "Feeds"
         ],
         "views": [
             "emiTensionCheck",
@@ -24,12 +26,15 @@
             "emiWeeklyIntentionP1",
             "emiWeeklyIntentionP2",
             "emiDailyGoal",
-            "MainContainer"
+            "emaStress",
+            "emaPleasantness",
+            "emaEmotion",
+            "MainTabs"
         ],
         "name": "HEART",
         "controllers": [
             "EMIController",
-            "EMIMountainController"
+            "ExerciseController"
         ]
     },
     "id": "ExtBox1-ext-gen5652",

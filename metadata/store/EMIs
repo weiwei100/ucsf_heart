@@ -8,7 +8,8 @@
     "userConfig": {
         "designer|userClassName": "EMIs",
         "autoLoad": true,
-        "data": "[{\n\ttitle: \"Test Mounting\",\n\ttype: \"Mountain\"\n},\n {\n\t title: \"Test FGM\",\n\t type: \"FGM\"\n }]",
+        "data": "[{\n\ttitle: \"Measure Stress\",\n\ttype: \"emaStress\",\n\tcategory: \"Checkin\",\n\tfeed_title: \"Stress Checkin\"\n},\n {\n\ttitle: \"Measure Pleasantness\",\n\ttype: \"emaPleasantness\",\n\tcategory: \"Checkin\",\n\tfeed_title: \"Pleasantness Checkin\"\n},\n {\n\ttitle: \"Measure Emotion\",\n\ttype: \"emaEmotion\",\n\tcategory: \"Checkin\",\n\tfeed_title: \"Emotion Checkin\"\n},\n\t\n\t{\n\ttitle: \"Test Mountain\",\n\ttype: \"emiMountain\",\n\tcategory: \"Audio\",\n\tfeed_title: \"Mountain Exercise\"\n},\n {\n\t title: \"Tension Check\", \n\t type: \"emiTensionCheck\",\n\t category: \"EMI\",\n\t feed_title: \"Tension Check\"\n },\n {\n\t title: \"Perspective\", \n\t type: \"emiPerspective\",\n\t category: \"EMI\",\n\t feed_title: \"Perspective Ex.\"\n },\n {\n\t title: \"Acitivity Insight\", \n\t type: \"emiActivityLabel\",\n\t category: \"EMI\",\n\t feed_title: \"Activity Label\"\n }]",
+        "groupField": "category",
         "model": "EMI",
         "storeId": "EMIs"
     },

@@ -1,0 +1,84 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ExerciseController"
+    },
+    "id": "ExtBox1-ext-gen41603",
+    "designerId": "fa915879-6690-4fe5-8286-8eba1d8109c4",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonTap",
+                "fn": "onButtonTap",
+                "implHandler": [
+                    "var form = button.parent.parent;",
+                    "console.log(form);",
+                    "var values = form.getValues();",
+                    "console.log(values);",
+                    "",
+                    "var feed = form.record_data.get(\"feed_title\");",
+                    "",
+                    "Ext.getStore(\"Feeds\").add({title: feed, timestamp: Date.now()});",
+                    "Ext.getStore(\"Feeds\").sort(\"timestamp\", 'DESC');",
+                    "Ext.getStore(\"Feeds\").sync();",
+                    "",
+                    "form.submit({",
+                    "\turl: 'login.php',",
+                    "\tmethod: 'POST',",
+                    "\tsuccess: function(form, result) {",
+                    "\t\tExt.Msg.alert('', 'Data submitted successfully!');",
+                    "\t},",
+                    "\tfailure: function(form, result) {",
+                    "\t\tExt.Msg.alert('', 'Error contacting server.  Please make sure you are online!');",
+                    "\t}",
+                    "});",
+                    "",
+                    "this.getExercises().pop();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[action=exercise]"
+            },
+            "designerId": "131c5222-32c7-4709-a428-f7f05c01e2df"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "exercises",
+                "ref": "exercises",
+                "selector": "#exercises"
+            },
+            "designerId": "4a3c539c-514f-448a-a14a-0a9e8eae79b3"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "emaStress",
+                "ref": "emaStress",
+                "selector": "#emaStress"
+            },
+            "designerId": "bf58f86d-ee99-4bec-a1c4-4b25c719d1b6"
+        }
+    ]
+}

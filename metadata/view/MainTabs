@@ -6,15 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "container|animation": "slide",
         "designer|userClassName": "MainTabs",
-        "hideAnimation": [
-            "'slideOut'"
-        ],
-        "id": "mainTabPanel"
+        "designer|userAlias": "mainview",
+        "designer|initialView": true
     },
-    "id": "ExtBox1-ext-gen13758",
-    "designerId": "0c962f43-511b-4b90-9a92-2a4152bd4323",
+    "id": "ExtBox1-ext-gen66956",
+    "designerId": "3d30dcc2-648a-4eee-a044-22cb7525d54b",
     "cn": [
         {
             "type": "formpanel",
@@ -28,7 +25,7 @@
                 "iconCls": "home",
                 "designer|userClassName": "MyFormPanel4"
             },
-            "designerId": "4c78977e-e42e-46ff-a37b-30835c304605",
+            "designerId": "ae4b176d-43a2-49de-98d6-2638de2b7330",
             "cn": [
                 {
                     "type": "label",
@@ -39,9 +36,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyLabel",
-                        "html": "1This week's value: <here>"
+                        "html": "This week's value: <here>"
                     },
-                    "designerId": "949711bc-ef2c-4ad2-a310-0fb01c62f46d"
+                    "designerId": "6b528b15-4a37-43dd-8038-56e4b9ab6e99"
                 },
                 {
                     "type": "label",
@@ -54,7 +51,7 @@
                         "designer|userClassName": "MyLabel",
                         "html": "Today's goal: <here>"
                     },
-                    "designerId": "855bc790-44b9-4ebc-8266-ed41bea80365"
+                    "designerId": "17e8aa88-c04f-4cd4-b449-14e3bb24e033"
                 },
                 {
                     "type": "label",
@@ -67,7 +64,7 @@
                         "designer|userClassName": "MyLabel",
                         "html": "Do a quick check-in (auto-show the correct EMA from these 3, auto-save when they adjust slider):"
                     },
-                    "designerId": "ede8a0f0-c22a-4805-9d43-25cd9bf857c9"
+                    "designerId": "fc27e9e9-29ca-440c-bbac-edc90a2472d4"
                 },
                 {
                     "type": "label",
@@ -80,120 +77,7 @@
                         "designer|userClassName": "MyLabel",
                         "html": "Notice  your thoughts, emotions and body sensations. (prefix to all EMAs)"
                     },
-                    "designerId": "b8efe6d7-71da-4480-9774-763001650769"
-                },
-                {
-                    "type": "fieldset",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyFieldSet2",
-                        "defaults": [
-                            "{",
-                            "                            labelWidth: '35%',",
-                            "                            labelAlign: 'top'",
-                            "                        }"
-                        ],
-                        "title": ""
-                    },
-                    "designerId": "5d9f93c2-6c7f-4286-92b9-7ed3e4d0ef1a",
-                    "cn": [
-                        {
-                            "type": "sliderfield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "MySliderField",
-                                "label": "How much stress are you aware of right now?",
-                                "labelWrap": true,
-                                "value": [
-                                    50
-                                ],
-                                "thumbConfig": [
-                                    "{draggable: {translatable: {easingX: {duration: 300, type: 'ease-out'}}}}"
-                                ]
-                            },
-                            "designerId": "3bf25bab-ddde-45bd-876f-4e36616d9010"
-                        }
-                    ]
-                },
-                {
-                    "type": "fieldset",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyFieldSet2",
-                        "defaults": [
-                            "{",
-                            "                            labelWidth: '35%',",
-                            "                            labelAlign: 'top'",
-                            "                        }"
-                        ],
-                        "title": ""
-                    },
-                    "designerId": "eb2fccfe-ee1b-4799-9f2b-daea800a1353",
-                    "cn": [
-                        {
-                            "type": "sliderfield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "MySliderField",
-                                "label": "The amount of pleasantness I feel is:",
-                                "labelWrap": true,
-                                "value": [
-                                    50
-                                ]
-                            },
-                            "designerId": "69e36ff5-fde7-463b-957f-9e566b32d605"
-                        },
-                        {
-                            "type": "sliderfield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "MySliderField1",
-                                "label": "The amount of unpleasantness I feel is:",
-                                "labelWrap": true,
-                                "value": [
-                                    50
-                                ]
-                            },
-                            "designerId": "1c3bbf76-0cd3-4e23-be15-37a2d4de91b4"
-                        },
-                        {
-                            "type": "sliderfield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "MySliderField1",
-                                "label": "The amount of energy I have right now is:",
-                                "labelWrap": true,
-                                "value": [
-                                    50
-                                ]
-                            },
-                            "designerId": "557489c7-d2da-4b45-abc7-0e38e71d23d3"
-                        }
-                    ]
+                    "designerId": "b8579e0c-dc1f-4f87-9ddb-fdea44c72069"
                 },
                 {
                     "type": "label",
@@ -206,154 +90,8 @@
                         "designer|userClassName": "MyLabel",
                         "html": "How intensely do you feel..."
                     },
-                    "designerId": "50681007-dcb5-4986-b2c8-e818a59849f4"
+                    "designerId": "f9e17571-d522-45cf-bc0f-102383ddff2a"
                 },
-                {
-                    "type": "fieldset",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyFieldSet2",
-                        "defaults": [
-                            "{",
-                            "                            labelWidth: '35%',",
-                            "                            labelAlign: 'top'",
-                            "                        }"
-                        ],
-                        "title": ""
-                    },
-                    "designerId": "1430d379-6025-4242-b003-d9674a3a0672",
-                    "cn": [
-                        {
-                            "type": "sliderfield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "MySliderField",
-                                "label": "Anger:",
-                                "value": [
-                                    50
-                                ]
-                            },
-                            "designerId": "70c3fa2f-1aa4-40a9-94df-66411c0a00b6"
-                        },
-                        {
-                            "type": "sliderfield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "MySliderField1",
-                                "label": "Sadness:",
-                                "value": [
-                                    50
-                                ]
-                            },
-                            "designerId": "6e54ad34-9d5e-4755-a856-e40adc503e41"
-                        },
-                        {
-                            "type": "sliderfield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "MySliderField1",
-                                "label": "Shame:",
-                                "value": [
-                                    50
-                                ]
-                            },
-                            "designerId": "fb2cfe59-9c7e-4412-9f0c-e237dba1d95e"
-                        },
-                        {
-                            "type": "sliderfield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "MySliderField1",
-                                "label": "Happiness:",
-                                "value": [
-                                    50
-                                ]
-                            },
-                            "designerId": "5a0662aa-bb29-44ac-b6f2-011221b42629"
-                        },
-                        {
-                            "type": "sliderfield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "MySliderField1",
-                                "label": "Energy:",
-                                "value": [
-                                    50
-                                ]
-                            },
-                            "designerId": "19374b53-afd3-4366-9649-edc4070d6833"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "formpanel",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "title": "I'm stressed!",
-                "iconCls": "user",
-                "designer|userClassName": "MyFormPanel5"
-            },
-            "designerId": "30986db2-3dee-4838-b764-25e7999b8897",
-            "cn": [
-                {
-                    "type": "label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyLabel3",
-                        "html": "auto-load an EMI here"
-                    },
-                    "designerId": "a2490ea7-f3cd-4985-a37c-bb854969446b"
-                }
-            ]
-        },
-        {
-            "type": "formpanel",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "title": "Exercises",
-                "iconCls": "organize",
-                "designer|userClassName": "MyFormPanel6"
-            },
-            "designerId": "816adb7a-7cef-4fff-aedc-d377fa245b74",
-            "cn": [
                 {
                     "type": "list",
                     "reference": {
@@ -362,14 +100,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyList",
-                        "height": 280,
-                        "id": "emiList",
-                        "itemId": "",
-                        "width": 281,
-                        "store": "EMIs"
+                        "designer|userClassName": "MyList1",
+                        "border": "1px",
+                        "height": 180,
+                        "width": "100%",
+                        "store": "Feeds"
                     },
-                    "designerId": "668d678c-ffc0-4db2-93ce-a94e6d8ebf38",
+                    "designerId": "ae3437dc-f6ce-4457-ad65-6910f2f8a41c",
                     "cn": [
                         {
                             "type": "template",
@@ -381,11 +118,74 @@
                             "userConfig": {
                                 "designer|userClassName": "itemTpl",
                                 "implHandler": [
-                                    "<div>Item {title}</div>"
+                                    "<div>{title} - {timestamp:date(\"d-m-Y\")}</div>"
                                 ],
                                 "designer|displayName": "itemTpl"
                             },
-                            "designerId": "5415157f-f64d-4c6c-a0d5-1935ab8e689e"
+                            "designerId": "59ea27e6-4ac0-4957-9f99-2cfd30da2046"
+                        },
+                        {
+                            "type": "listpaging",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyListPagingPlugin",
+                                "autoPaging": true
+                            },
+                            "designerId": "9c111ccb-edf3-4301-90e5-9c66a25185fb"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "navigationview",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Exercises",
+                "iconCls": "download",
+                "designer|userClassName": "MyNavigationView",
+                "id": "exercises"
+            },
+            "designerId": "3089ff51-81cd-495a-8ef3-5a5e87a3752f",
+            "cn": [
+                {
+                    "type": "list",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyList",
+                        "id": "exerciseList",
+                        "store": "EMIs",
+                        "grouped": true
+                    },
+                    "designerId": "5d7f16dc-0707-4ead-97ab-17b165af9941",
+                    "cn": [
+                        {
+                            "type": "template",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<div>{title}</div>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "db9a4c69-c52b-469f-9c27-b04f9f814dc4"
                         }
                     ]
                 }
@@ -403,7 +203,7 @@
                 "iconCls": "settings",
                 "designer|userClassName": "MyFormPanel6"
             },
-            "designerId": "fb67378c-c376-497e-94da-f9c35ae355e1",
+            "designerId": "e7443fc1-6b32-4c1d-adbd-54f3b760a2dc",
             "cn": [
                 {
                     "type": "textfield",
@@ -419,7 +219,7 @@
                         "autoCapitalize": true,
                         "maxLength": 15
                     },
-                    "designerId": "aae5128b-1536-4894-b4ff-31eee1bb5f2a"
+                    "designerId": "c41d49e3-436a-4336-9eb7-ffcb7f00556b"
                 },
                 {
                     "type": "textfield",
@@ -435,7 +235,7 @@
                         "autoCapitalize": true,
                         "maxLength": 15
                     },
-                    "designerId": "a3bbd110-808f-4aca-bf94-2903ceeaaf5e"
+                    "designerId": "485db203-2f01-4661-b4da-fb60a6e3e948"
                 },
                 {
                     "type": "textfield",
@@ -450,7 +250,7 @@
                         "labelWidth": "50%",
                         "autoCorrect": false
                     },
-                    "designerId": "4b858da5-4958-42f9-b4af-3e949596bd1e"
+                    "designerId": "1c148c01-595f-4007-a430-cf65fd42e715"
                 },
                 {
                     "type": "textfield",
@@ -464,7 +264,7 @@
                         "label": "Sleep time",
                         "labelWidth": "50%"
                     },
-                    "designerId": "3b9d3f0a-e7e2-4c59-b3ed-15242b12149a"
+                    "designerId": "1c144c06-38ad-4a68-a01f-13c46687f93a"
                 },
                 {
                     "type": "textfield",
@@ -478,7 +278,7 @@
                         "label": "Gender",
                         "labelWidth": "50%"
                     },
-                    "designerId": "6d8ee81d-004e-4dfe-9a2e-b7173e3fa441"
+                    "designerId": "be64ad5e-5f6e-4a0e-b8d3-6c6a6804659e"
                 },
                 {
                     "type": "textfield",
@@ -492,7 +292,7 @@
                         "label": "Weight",
                         "labelWidth": "50%"
                     },
-                    "designerId": "89c6bb8f-b62e-41c1-9840-0ec521e35e13"
+                    "designerId": "735bc8c9-ed32-4fc3-a3a4-84b4d6222344"
                 },
                 {
                     "type": "textfield",
@@ -506,7 +306,7 @@
                         "label": "Height",
                         "labelWidth": "50%"
                     },
-                    "designerId": "dafa2488-0e0a-4d57-bc62-a177e8fbdd89"
+                    "designerId": "f936ab29-36fc-484e-8664-a693c83d5f84"
                 }
             ]
         },
@@ -522,7 +322,7 @@
                 "docked": "bottom",
                 "ui": "light"
             },
-            "designerId": "90148fdc-266f-40ca-8a1f-252164e18306"
+            "designerId": "78f5e37b-c4f2-4c08-8466-6dab9b3617fa"
         }
     ]
 }

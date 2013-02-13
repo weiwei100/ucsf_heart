@@ -28,8 +28,11 @@ Ext.define('HEART.model.EMI', {
 				type: 'string'
 			},
 			{
-				name: 'shortdesc',
+				name: 'feed_title',
 				type: 'string'
+			},
+			{
+				name: 'category'
 			}
 		]
 	}

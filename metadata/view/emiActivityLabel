@@ -150,10 +150,18 @@
             },
             "codeClass": null,
             "userConfig": {
+                "action": "exercise",
                 "designer|userClassName": "MyButton1",
                 "text": "Done!"
             },
-            "designerId": "a52ca5f4-22b6-436d-bac7-54e7f00a69ed"
+            "designerId": "a52ca5f4-22b6-436d-bac7-54e7f00a69ed",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
         }
     ]
 }

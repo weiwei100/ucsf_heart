@@ -65,6 +65,7 @@ Ext.define('HEART.view.emiActivityLabel', {
 			},
 			{
 				xtype: 'button',
+				action: 'exercise',
 				text: 'Done!'
 			}
 		]

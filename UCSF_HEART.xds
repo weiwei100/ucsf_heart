@@ -27,14 +27,6 @@
             ],
             "className": "Library"
         },
-        "0c962f43-511b-4b90-9a92-2a4152bd4323": {
-            "paths": [
-                "metadata/view/MainTabs",
-                "app/view/override/MainTabs.js",
-                "app/view/MainTabs.js"
-            ],
-            "className": "MainTabs"
-        },
         "021dcbd9-44eb-4dd5-815c-ac014c163371": {
             "paths": [
                 "metadata/model/EMI",
@@ -147,26 +139,66 @@
             ],
             "className": "User"
         },
-        "a97fe66a-5150-4350-9c9d-d5b15f6f2e7f": {
+        "d9efeac2-1ec8-4fb9-93d8-fd5712c06101": {
             "paths": [
-                "metadata/controller/EMIMountainController",
-                "app/controller/override/EMIMountainController.js",
-                "app/controller/EMIMountainController.js"
+                "metadata/view/emaStress",
+                "app/view/override/emaStress.js",
+                "app/view/emaStress.js"
             ],
-            "className": "EMIMountainController"
+            "className": "emaStress"
         },
-        "7b9d96af-d715-4c6c-b647-dbcb019c4bec": {
+        "7d46841e-2109-42de-a3c6-37339c12305f": {
             "paths": [
-                "metadata/view/MainContainer",
-                "app/view/override/MainContainer.js",
-                "app/view/MainContainer.js"
+                "metadata/view/emaPleasantness",
+                "app/view/override/emaPleasantness.js",
+                "app/view/emaPleasantness.js"
             ],
-            "className": "MainContainer"
+            "className": "emaPleasantness"
+        },
+        "cbef81a4-8e20-489b-8583-e49ca70365c9": {
+            "paths": [
+                "metadata/view/emaEmotion",
+                "app/view/override/emaEmotion.js",
+                "app/view/emaEmotion.js"
+            ],
+            "className": "emaEmotion"
+        },
+        "fa915879-6690-4fe5-8286-8eba1d8109c4": {
+            "paths": [
+                "metadata/controller/ExerciseController",
+                "app/controller/override/ExerciseController.js",
+                "app/controller/ExerciseController.js"
+            ],
+            "className": "ExerciseController"
+        },
+        "c30abfad-1a37-4265-b300-0151292af2c5": {
+            "paths": [
+                "metadata/model/Feed",
+                "app/model/override/Feed.js",
+                "app/model/Feed.js"
+            ],
+            "className": "Feed"
+        },
+        "a12e83bf-bcd8-4c88-8534-3fe90620d505": {
+            "paths": [
+                "metadata/store/Feeds",
+                "app/store/override/Feeds.js",
+                "app/store/Feeds.js"
+            ],
+            "className": "Feeds"
+        },
+        "3d30dcc2-648a-4eee-a044-22cb7525d54b": {
+            "paths": [
+                "metadata/view/MainTabs",
+                "app/view/override/MainTabs.js",
+                "app/view/MainTabs.js"
+            ],
+            "className": "MainTabs"
         }
     },
     "viewOrderMap": {
         "view": [
-            "0c962f43-511b-4b90-9a92-2a4152bd4323",
+            "3d30dcc2-648a-4eee-a044-22cb7525d54b",
             "20b4102a-0d56-4d56-a98c-f275981ee4ad",
             "882d66d3-fb71-45c7-8785-b5fc5486d7f3",
             "dfc4b43e-183f-4325-8108-2226d01df1f5",
@@ -177,18 +209,22 @@
             "bed1ba24-3414-4855-93c7-db0a0e4dbb5a",
             "f6cd309d-8747-4a07-97a9-9a73d62d0a01",
             "c3a080fc-d114-4952-a14a-4d61f875f8bc",
-            "7b9d96af-d715-4c6c-b647-dbcb019c4bec"
+            "d9efeac2-1ec8-4fb9-93d8-fd5712c06101",
+            "7d46841e-2109-42de-a3c6-37339c12305f",
+            "cbef81a4-8e20-489b-8583-e49ca70365c9"
         ],
         "store": [
-            "39444413-4912-4805-9d9a-77c8467bef15"
+            "39444413-4912-4805-9d9a-77c8467bef15",
+            "a12e83bf-bcd8-4c88-8534-3fe90620d505"
         ],
         "controller": [
             "e3282f86-3944-46c9-a9f6-339833db34db",
-            "a97fe66a-5150-4350-9c9d-d5b15f6f2e7f"
+            "fa915879-6690-4fe5-8286-8eba1d8109c4"
         ],
         "model": [
             "021dcbd9-44eb-4dd5-815c-ac014c163371",
-            "afc8ba04-79a0-472a-98e0-bb5dc603b9c3"
+            "afc8ba04-79a0-472a-98e0-bb5dc603b9c3",
+            "c30abfad-1a37-4265-b300-0151292af2c5"
         ],
         "resource": [
             "a2531373-fbeb-4cc3-9d43-10a6dc7525be"

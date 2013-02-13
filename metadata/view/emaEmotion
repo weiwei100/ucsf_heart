@@ -1,0 +1,145 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "emaEmotion"
+    },
+    "id": "ExtBox1-ext-gen35950",
+    "designerId": "cbef81a4-8e20-489b-8583-e49ca70365c9",
+    "cn": [
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet2",
+                "defaults": [
+                    "{",
+                    "                            labelWidth: '35%',",
+                    "                            labelAlign: 'top'",
+                    "                        }"
+                ],
+                "title": ""
+            },
+            "designerId": "1430d379-6025-4242-b003-d9674a3a0672",
+            "cn": [
+                {
+                    "type": "sliderfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySliderField",
+                        "label": "Anger:",
+                        "name": "anger",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "70c3fa2f-1aa4-40a9-94df-66411c0a00b6"
+                },
+                {
+                    "type": "sliderfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySliderField1",
+                        "label": "Sadness:",
+                        "name": "sadness",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "6e54ad34-9d5e-4755-a856-e40adc503e41"
+                },
+                {
+                    "type": "sliderfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySliderField1",
+                        "label": "Shame:",
+                        "name": "shame",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "fb2cfe59-9c7e-4412-9f0c-e237dba1d95e"
+                },
+                {
+                    "type": "sliderfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySliderField1",
+                        "label": "Happiness:",
+                        "name": "happiness",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "5a0662aa-bb29-44ac-b6f2-011221b42629"
+                },
+                {
+                    "type": "sliderfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySliderField1",
+                        "label": "Energy:",
+                        "name": "energy",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "19374b53-afd3-4366-9649-edc4070d6833"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "exercise",
+                        "designer|userClassName": "MyButton10",
+                        "id": null,
+                        "itemId": null,
+                        "ui": "confirm",
+                        "text": "Done"
+                    },
+                    "designerId": "db1f0d5e-ee88-4ae0-8cab-46fcbed2e3d1",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

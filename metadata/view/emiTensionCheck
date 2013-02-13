@@ -38,122 +38,145 @@
             "designerId": "60c814af-7e05-4e9e-8544-fc14509f7b00"
         },
         {
-            "type": "checkboxfield",
+            "type": "fieldset",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyCheckbox",
-                "label": "Feet",
-                "labelWidth": "80%",
-                "value": "Feet"
+                "designer|userClassName": "MyFieldSet",
+                "title": "MyFieldSet"
             },
-            "designerId": "e0304af6-c8db-4fa2-9744-a80892c3bc5a"
-        },
-        {
-            "type": "checkboxfield",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyCheckbox",
-                "label": "Left thigh",
-                "labelWidth": "80%",
-                "value": ""
-            },
-            "designerId": "61d230f6-d50c-4158-923c-b48b58087a39"
-        },
-        {
-            "type": "checkboxfield",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyCheckbox",
-                "label": "Abdomen",
-                "labelWidth": "80%",
-                "value": null
-            },
-            "designerId": "ef4eb9b8-76dc-449c-b8db-a604e0dc7d72"
-        },
-        {
-            "type": "checkboxfield",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyCheckbox",
-                "label": "Upper back",
-                "labelWidth": "80%",
-                "value": null
-            },
-            "designerId": "e2e80d29-5126-4217-b431-b6a0f0d33a64"
-        },
-        {
-            "type": "checkboxfield",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyCheckbox",
-                "label": "Left arm",
-                "labelWidth": "80%",
-                "value": null
-            },
-            "designerId": "c11aebf5-fb2d-494d-8a4c-0ced349fece8"
-        },
-        {
-            "type": "checkboxfield",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyCheckbox",
-                "label": "Both hands",
-                "labelWidth": "80%",
-                "value": null
-            },
-            "designerId": "b63b3bff-ba8c-4ec6-a902-a92e9b9e0e7d"
-        },
-        {
-            "type": "checkboxfield",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyCheckbox",
-                "label": "Cheeks",
-                "labelWidth": "80%",
-                "value": null
-            },
-            "designerId": "2326f9cb-7aa5-4887-841e-5b053527e492"
-        },
-        {
-            "type": "button",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyButton1",
-                "text": "Done!"
-            },
-            "designerId": "4dbde750-0bfa-47c5-810e-f1def833369f"
+            "designerId": "3ec85e59-c81e-4e38-92fb-56146f1ec558",
+            "cn": [
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Feet",
+                        "labelWidth": "80%",
+                        "value": "Feet"
+                    },
+                    "designerId": "e0304af6-c8db-4fa2-9744-a80892c3bc5a"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Left thigh",
+                        "labelWidth": "80%",
+                        "value": ""
+                    },
+                    "designerId": "61d230f6-d50c-4158-923c-b48b58087a39"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Abdomen",
+                        "labelWidth": "80%",
+                        "value": null
+                    },
+                    "designerId": "ef4eb9b8-76dc-449c-b8db-a604e0dc7d72"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Upper back",
+                        "labelWidth": "80%",
+                        "value": null
+                    },
+                    "designerId": "e2e80d29-5126-4217-b431-b6a0f0d33a64"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Left arm",
+                        "labelWidth": "80%",
+                        "value": null
+                    },
+                    "designerId": "c11aebf5-fb2d-494d-8a4c-0ced349fece8"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Both hands",
+                        "labelWidth": "80%",
+                        "value": null
+                    },
+                    "designerId": "b63b3bff-ba8c-4ec6-a902-a92e9b9e0e7d"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Cheeks",
+                        "labelWidth": "80%",
+                        "value": null
+                    },
+                    "designerId": "2326f9cb-7aa5-4887-841e-5b053527e492"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "exercise",
+                        "designer|userClassName": "MyButton1",
+                        "text": "Done!"
+                    },
+                    "designerId": "4dbde750-0bfa-47c5-810e-f1def833369f",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

@@ -20,10 +20,12 @@ Ext.Loader.setConfig({
 Ext.application({
 	models: [
 		'EMI',
-		'User'
+		'User',
+		'Feed'
 	],
 	stores: [
-		'EMIs'
+		'EMIs',
+		'Feeds'
 	],
 	views: [
 		'emiTensionCheck',
@@ -36,17 +38,20 @@ Ext.application({
 		'emiWeeklyIntentionP1',
 		'emiWeeklyIntentionP2',
 		'emiDailyGoal',
-		'MainContainer'
+		'emaStress',
+		'emaPleasantness',
+		'emaEmotion',
+		'MainTabs'
 	],
 	name: 'HEART',
 	controllers: [
 		'EMIController',
-		'EMIMountainController'
+		'ExerciseController'
 	],
 
 	launch: function() {
 
-		Ext.create('HEART.view.MainContainer', {fullscreen: true});
+		Ext.create('HEART.view.MainTabs', {fullscreen: true});
 	}
 
 });

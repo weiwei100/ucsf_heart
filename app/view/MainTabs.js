@@ -15,14 +15,9 @@
 
 Ext.define('HEART.view.MainTabs', {
 	extend: 'Ext.tab.Panel',
+	alias: 'widget.mainview',
 
 	config: {
-		hideAnimation: 'slideOut',
-		id: 'mainTabPanel',
-		layout: {
-			animation: 'slide',
-			type: 'card'
-		},
 		items: [
 			{
 				xtype: 'formpanel',
@@ -31,7 +26,7 @@ Ext.define('HEART.view.MainTabs', {
 				items: [
 					{
 						xtype: 'label',
-						html: '1This week\'s value: <here>'
+						html: 'This week\'s value: <here>'
 					},
 					{
 						xtype: 'label',
@@ -46,144 +41,41 @@ Ext.define('HEART.view.MainTabs', {
 						html: 'Notice  your thoughts, emotions and body sensations. (prefix to all EMAs)'
 					},
 					{
-						xtype: 'fieldset',
-						defaults: {
-							labelWidth: '35%',
-							labelAlign: 'top'
-						},
-						title: '',
-						items: [
-							{
-								xtype: 'sliderfield',
-								label: 'How much stress are you aware of right now?',
-								labelWrap: true,
-								value: [
-									50
-								],
-								thumbConfig: {
-									draggable: {
-										translatable: {
-											easingX: {
-												duration: 300,
-												type: 'ease-out'
-											}
-										}
-									}
-								}
-							}
-						]
-					},
-					{
-						xtype: 'fieldset',
-						defaults: {
-							labelWidth: '35%',
-							labelAlign: 'top'
-						},
-						title: '',
-						items: [
-							{
-								xtype: 'sliderfield',
-								label: 'The amount of pleasantness I feel is:',
-								labelWrap: true,
-								value: [
-									50
-								]
-							},
-							{
-								xtype: 'sliderfield',
-								label: 'The amount of unpleasantness I feel is:',
-								labelWrap: true,
-								value: [
-									50
-								]
-							},
-							{
-								xtype: 'sliderfield',
-								label: 'The amount of energy I have right now is:',
-								labelWrap: true,
-								value: [
-									50
-								]
-							}
-						]
-					},
-					{
 						xtype: 'label',
 						html: 'How intensely do you feel...'
 					},
 					{
-						xtype: 'fieldset',
-						defaults: {
-							labelWidth: '35%',
-							labelAlign: 'top'
-						},
-						title: '',
-						items: [
+						xtype: 'list',
+						border: '1px',
+						height: 180,
+						width: '100%',
+						itemTpl: [
+							'<div>{title} - {timestamp:date("d-m-Y")}</div>'
+						],
+						store: 'Feeds',
+						plugins: [
 							{
-								xtype: 'sliderfield',
-								label: 'Anger:',
-								value: [
-									50
-								]
-							},
-							{
-								xtype: 'sliderfield',
-								label: 'Sadness:',
-								value: [
-									50
-								]
-							},
-							{
-								xtype: 'sliderfield',
-								label: 'Shame:',
-								value: [
-									50
-								]
-							},
-							{
-								xtype: 'sliderfield',
-								label: 'Happiness:',
-								value: [
-									50
-								]
-							},
-							{
-								xtype: 'sliderfield',
-								label: 'Energy:',
-								value: [
-									50
-								]
+								autoPaging: true,
+								type: 'listpaging'
 							}
 						]
 					}
 				]
 			},
 			{
-				xtype: 'formpanel',
-				title: 'I\'m stressed!',
-				iconCls: 'user',
-				items: [
-					{
-						xtype: 'label',
-						html: 'auto-load an EMI here'
-					}
-				]
-			},
-			{
-				xtype: 'formpanel',
+				xtype: 'navigationview',
 				title: 'Exercises',
-				iconCls: 'organize',
+				iconCls: 'download',
+				id: 'exercises',
 				items: [
 					{
 						xtype: 'list',
-						height: 280,
-						id: 'emiList',
-						itemId: '',
-						width: 281,
+						id: 'exerciseList',
 						itemTpl: [
-							'<div>Item {title}</div>'
+							'<div>{title}</div>'
 						],
-						store: 'EMIs'
+						store: 'EMIs',
+						grouped: true
 					}
 				]
 			},

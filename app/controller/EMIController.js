@@ -18,30 +18,39 @@ Ext.define('HEART.controller.EMIController', {
 
 	config: {
 		refs: {
-			mainTabPanel: '#mainTabPanel',
-			mainContainer: '#mainContainer'
+			mainView: 'mainview',
+			exercises: '#exercises'
 		},
 
 		control: {
-			"#emiList": {
+			"#exerciseList": {
 				itemtap: 'onListItemTap'
+			},
+			"#exercises": {
+				hide: 'onNavigationviewHide'
 			}
 		}
 	},
 
 	onListItemTap: function(dataview, index, target, record, e, options) {
-		console.log(record);
-		var pnl = Ext.create('HEART.view.emi' + record.get("type"));
-		this.getMainContainer().push(pnl);
 
-		console.log("tap2");
+		var pnl = Ext.create('HEART.view.' + record.get("type"));
+		pnl.record_data = record;
+		this.getExercises().push(pnl);
+
+
+	},
+
+	onNavigationviewHide: function(component, options) {
+		this.getExercises().pop();
 	},
 
 	launch: function() {
-		console.log(this.getMainContainer());
-		var pnl = Ext.create('HEART.view.MainTabs');
-		this.getMainContainer().getNavigationBar().hide();
-		this.getMainContainer().setActiveItem(pnl);
+		//console.log(this.getMainContainer());
+
+		this.getExercises().getNavigationBar().hide();
+
+		//this.getExercises().setActiveItem(pnl);
 	}
 
 });

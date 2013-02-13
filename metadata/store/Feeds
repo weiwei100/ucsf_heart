@@ -1,0 +1,32 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Feeds",
+        "autoLoad": true,
+        "autoSync": false,
+        "model": "Feed",
+        "storeId": "Feeds"
+    },
+    "id": "ExtBox1-ext-gen54896",
+    "designerId": "a12e83bf-bcd8-4c88-8534-3fe90620d505",
+    "cn": [
+        {
+            "type": "localstorageproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLocalStorageProxy",
+                "id": "feeds"
+            },
+            "designerId": "4e423c99-41bb-4dd1-a95d-f663bd2f779f"
+        }
+    ]
+}

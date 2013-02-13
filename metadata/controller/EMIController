@@ -22,15 +22,16 @@
                 "designer|userClassName": "onListItemTap",
                 "fn": "onListItemTap",
                 "implHandler": [
-                    "console.log(record);",
-                    "var pnl = Ext.create('HEART.view.emi' + record.get(\"type\"));",
-                    "this.getMainContainer().push(pnl);",
                     "",
-                    "console.log(\"tap2\");"
+                    "var pnl = Ext.create('HEART.view.' + record.get(\"type\"));",
+                    "pnl.record_data = record;",
+                    "this.getExercises().push(pnl);",
+                    "",
+                    ""
                 ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.List",
-                "designer|controlQuery": "#emiList"
+                "designer|controlQuery": "#exerciseList"
             },
             "designerId": "e6598e40-fef6-4bbf-b6fb-acad809e58de"
         },
@@ -45,10 +46,11 @@
                 "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
-                    "console.log(this.getMainContainer());",
-                    "var pnl = Ext.create('HEART.view.MainTabs');",
-                    "this.getMainContainer().getNavigationBar().hide();",
-                    "this.getMainContainer().setActiveItem(pnl);"
+                    "//console.log(this.getMainContainer());",
+                    "",
+                    "this.getExercises().getNavigationBar().hide();",
+                    "",
+                    "//this.getExercises().setActiveItem(pnl);"
                 ]
             },
             "designerId": "dd4da508-1f77-48bf-bffe-c6833c62e462"
@@ -61,9 +63,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "mainTabPanel",
-                "ref": "mainTabPanel",
-                "selector": "#mainTabPanel"
+                "designer|userClassName": "mainView",
+                "ref": "mainView",
+                "selector": "mainview"
             },
             "designerId": "112e1817-95c6-436f-a369-3907bed89ea4"
         },
@@ -75,11 +77,30 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "mainContainer",
-                "ref": "mainContainer",
-                "selector": "#mainContainer"
+                "designer|userClassName": "exercises",
+                "ref": "exercises",
+                "selector": "#exercises"
             },
-            "designerId": "34d69db8-c191-4129-aabb-7e7eefb27c29"
+            "designerId": "bc7a5445-3930-4933-8929-f59f46701fd5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onNavigationviewHide",
+                "fn": "onNavigationviewHide",
+                "implHandler": [
+                    "this.getExercises().pop();"
+                ],
+                "name": "hide",
+                "designer|targetType": "Ext.navigation.View",
+                "designer|controlQuery": "#exercises"
+            },
+            "designerId": "9910458a-ad91-49e4-a7f7-03e4f9c9ff91"
         }
     ]
 }
