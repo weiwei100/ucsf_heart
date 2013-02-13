@@ -1,0 +1,14 @@
+{
+    "type": "libraryresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "basePath": "/sencha/",
+        "debug": true
+    },
+    "id": "ExtBox1-ext-gen24622",
+    "designerId": "a2531373-fbeb-4cc3-9d43-10a6dc7525be"
+}

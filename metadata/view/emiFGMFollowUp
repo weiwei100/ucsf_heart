@@ -1,0 +1,83 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "emiFGMFollowUp"
+    },
+    "id": "ExtBox1-ext-gen14848",
+    "designerId": "b584afea-ae0e-4697-9361-c52111fa9939",
+    "cn": [
+        {
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLabel1",
+                "html": "<center><b>Feel the Goodness</b></center>"
+            },
+            "designerId": "2098855c-0639-4ec5-88ed-7e6f6ac79057"
+        },
+        {
+            "type": "textareafield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTextArea",
+                "label": "Field",
+                "placeHolder": "image here"
+            },
+            "designerId": "947dfc0a-fa77-433a-bbca-ef81b592cd54"
+        },
+        {
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLabel1",
+                "html": "Remember this?"
+            },
+            "designerId": "6ade47e9-fe7b-492f-af84-95bd20b4e642"
+        },
+        {
+            "type": "sliderfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySliderField9",
+                "label": "How much did this shift your mood?",
+                "labelWidth": "40%",
+                "labelWrap": true
+            },
+            "designerId": "5a63b0e4-3385-470a-a013-7ed169cbb9b6"
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton1",
+                "text": "Done!"
+            },
+            "designerId": "2c6b29ca-6c23-451f-9839-2cd2cc20d921"
+        }
+    ]
+}

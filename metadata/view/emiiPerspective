@@ -1,0 +1,88 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "emiiPerspective"
+    },
+    "id": "ExtBox1-ext-gen12194",
+    "designerId": "dfc4b43e-183f-4325-8108-2226d01df1f5",
+    "cn": [
+        {
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLabel1",
+                "html": "<center><b>Perspective-taking</b></center>"
+            },
+            "designerId": "571ab38b-95a2-49e0-a63f-b01f3caa62b3"
+        },
+        {
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLabel1",
+                "html": "Take the perspective of your child to see how they are feeling."
+            },
+            "designerId": "fc7eadd8-9d7a-4265-b350-1d5b3ed114aa"
+        },
+        {
+            "type": "selectfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySelectField",
+                "label": "How are you feeling right now?",
+                "labelWidth": "50%",
+                "labelWrap": true,
+                "maxLength": 20,
+                "placeHolder": "Select..."
+            },
+            "designerId": "520139a7-e8f0-41f6-ac05-3763138bc250"
+        },
+        {
+            "type": "selectfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySelectField",
+                "label": "How might your child be feeling right now?",
+                "labelWidth": "50%",
+                "labelWrap": true,
+                "maxLength": 20,
+                "placeHolder": "Select..."
+            },
+            "designerId": "b2aca159-0955-4270-805c-aa76b3713d2b"
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton1",
+                "text": "Done!"
+            },
+            "designerId": "31375b0a-7a0c-42ec-a63c-8ae49765cb50"
+        }
+    ]
+}

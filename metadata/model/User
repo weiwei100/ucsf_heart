@@ -1,0 +1,106 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "User"
+    },
+    "id": "ExtBox1-ext-gen88048",
+    "designerId": "afc8ba04-79a0-472a-98e0-bb5dc603b9c3",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field3",
+                "name": "name"
+            },
+            "designerId": "756f7848-8797-4a90-993f-865109859d79"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field4",
+                "name": "child_name"
+            },
+            "designerId": "2aa140c7-ebdf-4c36-ac30-499087cad430"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field5",
+                "name": "gender"
+            },
+            "designerId": "9a007363-b7da-4c19-9117-63be5696540f"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field6",
+                "name": "height"
+            },
+            "designerId": "5548d8c6-0e8d-4e17-b51e-1d4505edf050"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field7",
+                "name": "weight"
+            },
+            "designerId": "8ff90635-fcbd-480b-af53-50f483b804de"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field8",
+                "name": "wakup_time"
+            },
+            "designerId": "1673b92d-51d3-491f-b7e8-318ef265b0f8"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field9",
+                "name": "sleep_time"
+            },
+            "designerId": "9af32ac0-a913-43bb-8c9b-3489741125c0"
+        }
+    ]
+}

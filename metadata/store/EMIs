@@ -1,0 +1,17 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EMIs",
+        "autoLoad": true,
+        "data": "[{\n\ttitle: \"Test Mounting\",\n\ttype: \"Mountain\"\n},\n {\n\t title: \"Test FGM\",\n\t type: \"FGM\"\n }]",
+        "model": "EMI",
+        "storeId": "EMIs"
+    },
+    "id": "ExtBox1-ext-gen84596",
+    "designerId": "39444413-4912-4805-9d9a-77c8467bef15"
+}
