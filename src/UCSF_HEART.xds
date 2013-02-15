@@ -3,7 +3,7 @@
     "settings": {
         "urlPrefix": "http://localhost:881/",
         "spacesToIndent": "tab",
-        "exportPath": "/Users/jpalley/Documents/projects/breathwear/test",
+        "exportPath": "/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/www",
         "sdkPath": "",
         "lineEnding": "LF",
         "genTimestamps": false,
@@ -194,10 +194,25 @@
                 "app/view/MainTabs.js"
             ],
             "className": "MainTabs"
+        },
+        "8ce2a3aa-c191-4106-8078-f63371d4f6ec": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
+        },
+        "0c962f43-511b-4b90-9a92-2a4152bd4323": {
+            "paths": [
+                "metadata/view/MyTabPanel1",
+                "app/view/override/MyTabPanel1.js",
+                "app/view/MyTabPanel1.js"
+            ],
+            "className": "MyTabPanel1"
         }
     },
     "viewOrderMap": {
         "view": [
+            "0c962f43-511b-4b90-9a92-2a4152bd4323",
             "3d30dcc2-648a-4eee-a044-22cb7525d54b",
             "20b4102a-0d56-4d56-a98c-f275981ee4ad",
             "882d66d3-fb71-45c7-8785-b5fc5486d7f3",
@@ -227,7 +242,8 @@
             "c30abfad-1a37-4265-b300-0151292af2c5"
         ],
         "resource": [
-            "a2531373-fbeb-4cc3-9d43-10a6dc7525be"
+            "a2531373-fbeb-4cc3-9d43-10a6dc7525be",
+            "8ce2a3aa-c191-4106-8078-f63371d4f6ec"
         ],
         "app": [
             "application"
