@@ -21,7 +21,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Check-in",
+                "title": "Home",
                 "iconCls": "home",
                 "designer|userClassName": "MyFormPanel4"
             },
@@ -36,61 +36,22 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyLabel",
-                        "html": "This week's value: <here>"
+                        "html": "This week's intention is <b>Self-compassion</b>.<br><br>"
+                    },
+                    "designerId": "f7c1108e-04d6-485f-a802-cf5128c7afd9"
+                },
+                {
+                    "type": "label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyLabel",
+                        "html": "<center><b>[Name]'s recent progress</b></center>"
                     },
                     "designerId": "6b528b15-4a37-43dd-8038-56e4b9ab6e99"
-                },
-                {
-                    "type": "label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyLabel",
-                        "html": "Today's goal: <here>"
-                    },
-                    "designerId": "17e8aa88-c04f-4cd4-b449-14e3bb24e033"
-                },
-                {
-                    "type": "label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyLabel",
-                        "html": "Do a quick check-in (auto-show the correct EMA from these 3, auto-save when they adjust slider):"
-                    },
-                    "designerId": "fc27e9e9-29ca-440c-bbac-edc90a2472d4"
-                },
-                {
-                    "type": "label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyLabel",
-                        "html": "Notice  your thoughts, emotions and body sensations. (prefix to all EMAs)"
-                    },
-                    "designerId": "b8579e0c-dc1f-4f87-9ddb-fdea44c72069"
-                },
-                {
-                    "type": "label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyLabel",
-                        "html": "How intensely do you feel..."
-                    },
-                    "designerId": "f9e17571-d522-45cf-bc0f-102383ddff2a"
                 },
                 {
                     "type": "list",
@@ -149,8 +110,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Exercises",
-                "iconCls": "download",
+                "title": "I'm stressed!",
+                "iconCls": "favorites",
                 "designer|userClassName": "MyNavigationView",
                 "id": "exercises"
             },

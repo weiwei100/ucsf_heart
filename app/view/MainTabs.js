@@ -21,28 +21,16 @@ Ext.define('HEART.view.MainTabs', {
 		items: [
 			{
 				xtype: 'formpanel',
-				title: 'Check-in',
+				title: 'Home',
 				iconCls: 'home',
 				items: [
 					{
 						xtype: 'label',
-						html: 'This week\'s value: <here>'
+						html: 'This week\'s intention is <b>Self-compassion</b>.<br><br>'
 					},
 					{
 						xtype: 'label',
-						html: 'Today\'s goal: <here>'
-					},
-					{
-						xtype: 'label',
-						html: 'Do a quick check-in (auto-show the correct EMA from these 3, auto-save when they adjust slider):'
-					},
-					{
-						xtype: 'label',
-						html: 'Notice  your thoughts, emotions and body sensations. (prefix to all EMAs)'
-					},
-					{
-						xtype: 'label',
-						html: 'How intensely do you feel...'
+						html: '<center><b>[Name]\'s recent progress</b></center>'
 					},
 					{
 						xtype: 'list',
@@ -64,8 +52,8 @@ Ext.define('HEART.view.MainTabs', {
 			},
 			{
 				xtype: 'navigationview',
-				title: 'Exercises',
-				iconCls: 'download',
+				title: 'I\'m stressed!',
+				iconCls: 'favorites',
 				id: 'exercises',
 				items: [
 					{

@@ -24,45 +24,45 @@ Ext.define('HEART.store.EMIs', {
 		autoLoad: true,
 		data: [
 			{
-				title: 'Measure Stress',
+				title: 'Stress',
 				type: 'emaStress',
-				category: 'Checkin',
+				category: 'Check-ins',
 				feed_title: 'Stress Checkin'
 			},
 			{
-				title: 'Measure Pleasantness',
+				title: '3-areas',
 				type: 'emaPleasantness',
-				category: 'Checkin',
+				category: 'Check-ins',
 				feed_title: 'Pleasantness Checkin'
 			},
 			{
-				title: 'Measure Emotion',
+				title: 'Emotions',
 				type: 'emaEmotion',
-				category: 'Checkin',
+				category: 'Check-ins',
 				feed_title: 'Emotion Checkin'
 			},
 			{
 				title: 'Test Mountain',
 				type: 'emiMountain',
-				category: 'Audio',
+				category: 'Guided audio',
 				feed_title: 'Mountain Exercise'
 			},
 			{
-				title: 'Tension Check',
+				title: 'Release tension',
 				type: 'emiTensionCheck',
-				category: 'EMI',
+				category: 'Practices',
 				feed_title: 'Tension Check'
 			},
 			{
 				title: 'Perspective',
 				type: 'emiPerspective',
-				category: 'EMI',
+				category: 'Practices',
 				feed_title: 'Perspective Ex.'
 			},
 			{
-				title: 'Acitivity Insight',
+				title: 'Acitivity insight',
 				type: 'emiActivityLabel',
-				category: 'EMI',
+				category: 'Practices',
 				feed_title: 'Activity Label'
 			}
 		],

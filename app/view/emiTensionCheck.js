@@ -19,16 +19,8 @@ Ext.define('HEART.view.emiTensionCheck', {
 	config: {
 		items: [
 			{
-				xtype: 'label',
-				html: '<center><b>Tension Check</b></center>'
-			},
-			{
-				xtype: 'label',
-				html: 'For each, bring your attention to that area and relax it - even for 2sec!'
-			},
-			{
 				xtype: 'fieldset',
-				title: 'MyFieldSet',
+				title: 'Relax each area for 3 seconds:',
 				items: [
 					{
 						xtype: 'checkboxfield',
