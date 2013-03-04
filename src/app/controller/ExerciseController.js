@@ -48,7 +48,7 @@ Ext.define('HEART.controller.ExerciseController', {
 				Ext.Msg.alert('', 'Data submitted successfully!');
 			},
 			failure: function(form, result) {
-				Ext.Msg.alert('', 'Error contacting server.  Please make sure you are online!');
+				Ext.Msg.alert('', 'Still under development.  Data currently not collected');
 			}
 		});
 

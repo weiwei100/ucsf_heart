@@ -40,7 +40,7 @@
                     "\t\tExt.Msg.alert('', 'Data submitted successfully!');",
                     "\t},",
                     "\tfailure: function(form, result) {",
-                    "\t\tExt.Msg.alert('', 'Error contacting server.  Please make sure you are online!');",
+                    "\t\tExt.Msg.alert('', 'Still under development.  Data currently not collected');",
                     "\t}",
                     "});",
                     "",

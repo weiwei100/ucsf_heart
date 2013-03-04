@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "cordova-2.4.0.js"
+    },
+    "id": "ExtBox1-ext-gen94303",
+    "designerId": "8ce2a3aa-c191-4106-8078-f63371d4f6ec"
+}

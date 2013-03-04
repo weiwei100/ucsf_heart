@@ -28,7 +28,7 @@ Ext.define('HEART.view.emaPleasantness', {
 				items: [
 					{
 						xtype: 'sliderfield',
-						label: 'The amount of pleasantness I feel is:',
+						label: 'The amount of pleasantness I feels is:',
 						labelWrap: true,
 						name: 'positivity',
 						value: [
