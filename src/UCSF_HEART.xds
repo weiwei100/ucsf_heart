@@ -200,19 +200,10 @@
                 "metadata/resource/js"
             ],
             "className": "js"
-        },
-        "0c962f43-511b-4b90-9a92-2a4152bd4323": {
-            "paths": [
-                "metadata/view/MyTabPanel1",
-                "app/view/override/MyTabPanel1.js",
-                "app/view/MyTabPanel1.js"
-            ],
-            "className": "MyTabPanel1"
         }
     },
     "viewOrderMap": {
         "view": [
-            "0c962f43-511b-4b90-9a92-2a4152bd4323",
             "3d30dcc2-648a-4eee-a044-22cb7525d54b",
             "20b4102a-0d56-4d56-a98c-f275981ee4ad",
             "882d66d3-fb71-45c7-8785-b5fc5486d7f3",
