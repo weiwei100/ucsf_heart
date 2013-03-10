@@ -30,7 +30,7 @@ Ext.define('HEART.controller.ExerciseController', {
 	},
 	
 	onButtonTap: function(button, e, options) {
-		var form = button.parent;
+		var form = button.parent.parent;
 		console.log(form);
 		var values = form.getValues();
 		console.log(values);
