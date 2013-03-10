@@ -28,9 +28,9 @@ Ext.define('HEART.controller.ExerciseController', {
 			}
 		}
 	},
-
+	
 	onButtonTap: function(button, e, options) {
-		var form = button.parent.parent;
+		var form = button.parent;
 		console.log(form);
 		var values = form.getValues();
 		console.log(values);
@@ -40,7 +40,8 @@ Ext.define('HEART.controller.ExerciseController', {
 		Ext.getStore("Feeds").add({title: feed, timestamp: Date.now()});
 		Ext.getStore("Feeds").sort("timestamp", 'DESC');
 		Ext.getStore("Feeds").sync();
-
+		
+		
 		form.submit({
 			url: 'login.php',
 			method: 'POST',

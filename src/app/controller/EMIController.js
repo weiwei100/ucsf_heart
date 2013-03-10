@@ -38,7 +38,6 @@ Ext.define('HEART.controller.EMIController', {
 		pnl.record_data = record;
 		this.getExercises().push(pnl);
 
-
 	},
 
 	onNavigationviewHide: function(component, options) {

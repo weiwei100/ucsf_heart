@@ -14,24 +14,28 @@
  */
 
 Ext.define('HEART.view.emiFGMList', {
-	extend: 'Ext.form.Panel',
+	extend : 'Ext.form.Panel',
+	xtype: 'fgmlist',
 
-	config: {
-		items: [
-			{
-				xtype: 'label',
-				html: '<center><b>Feel the Goodness</b></center>'
-			},
-			{
-				xtype: 'label',
-				html: 'These are your feel good moments.'
-			},
-			{
-				xtype: 'textareafield',
-				label: 'Field',
-				placeHolder: 'images here'
-			}
-		]
+	config : {
+		items : [{
+			xtype : 'label',
+			html : '<center><b>Feel the Goodness</b></center>'
+		}, {
+			xtype : 'label',
+			html : 'These are your feel good moments.'
+		}, {
+			xtype : 'list',
+			border : '1px',
+			height : 295,
+			width : 282,
+			itemTpl : ['<img src="{local}"/>'],
+			store : 'FGMs',
+			plugins : [{
+				autoPaging : true,
+				type : 'listpaging'
+			}]
+		}]
 	}
 
 });

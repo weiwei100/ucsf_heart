@@ -64,6 +64,18 @@ Ext.define('HEART.store.EMIs', {
 				type: 'emiActivityLabel',
 				category: 'Practices',
 				feed_title: 'Activity Label'
+			},
+			{
+				title: 'Take a photo',
+				type: 'emiFGM',
+				category: 'Feel Good Moment',
+				feed_title: 'Take a photo'
+			},
+			{
+				title: 'Photo List',
+				type: 'emiFGMList',
+				category: 'Feel Good Moment',
+				feed_title: 'Photo List'	
 			}
 		],
 		groupField: 'category',

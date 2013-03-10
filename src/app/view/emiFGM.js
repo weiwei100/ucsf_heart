@@ -15,6 +15,11 @@
 
 Ext.define('HEART.view.emiFGM', {
 	extend: 'Ext.form.Panel',
+	xtype: 'feelgood',
+	
+	requires: [
+		'Ext.ux.Fileup'
+	],
 
 	config: {
 		showAnimation: 'slideIn',
@@ -29,12 +34,28 @@ Ext.define('HEART.view.emiFGM', {
 				html: 'Take a photo of something beautiful happening around you right now.'
 			},
 			{
-				xtype: 'button',
-				text: 'Press here to take photo...'
+				itemId: 'loadBtn',
+				xtype: 'fileupload',
+				autoUpload: false,
+				loadAsDataUrl: true,
+				url: '',
+				states: {
+					browse: {
+						text: 'Press here to take photo...'
+					},
+					ready: {
+						text: 'Upload'
+					},
+					uploading: {
+						text: 'Loading'
+					}
+				},
 			},
 			{
 				xtype: 'button',
-				text: 'Done!'
+				action: 'goback',
+				ui: 'confirm',
+				text: 'Done'
 			}
 		]
 	}

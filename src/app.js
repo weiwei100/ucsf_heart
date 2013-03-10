@@ -17,15 +17,22 @@ Ext.Loader.setConfig({
 	enabled: true
 });
 
+Ext.Loader.setPath({
+    'Ext.ux': 'ux'
+});
+
 Ext.application({
 	models: [
 		'EMI',
+		'FGM',
 		'User',
 		'Feed'
 	],
 	stores: [
 		'EMIs',
-		'Feeds'
+		'FGMs',
+		'Feeds',
+		'Follow'
 	],
 	views: [
 		'emiTensionCheck',
@@ -39,19 +46,19 @@ Ext.application({
 		'emiWeeklyIntentionP2',
 		'emiDailyGoal',
 		'emaStress',
-		'emaPleasantness',
 		'emaEmotion',
+		'emaPleasantness',
 		'MainTabs'
 	],
 	name: 'HEART',
 	controllers: [
 		'EMIController',
-		'ExerciseController'
+		'FGMController',
+		'ExerciseController'		
 	],
 
 	launch: function() {
-
-		Ext.create('HEART.view.MainTabs', {fullscreen: true});
+		Ext.create('HEART.view.MainTabs', {fullscreen: true} );
 	}
 
 });

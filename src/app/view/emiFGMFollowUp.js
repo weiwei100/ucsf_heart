@@ -15,7 +15,8 @@
 
 Ext.define('HEART.view.emiFGMFollowUp', {
 	extend: 'Ext.form.Panel',
-
+	xtype: 'fgmfollowup',
+	
 	config: {
 		items: [
 			{
@@ -23,9 +24,12 @@ Ext.define('HEART.view.emiFGMFollowUp', {
 				html: '<center><b>Feel the Goodness</b></center>'
 			},
 			{
-				xtype: 'textareafield',
-				label: 'Field',
-				placeHolder: 'image here'
+				xtype : 'list',
+				border : '1px',
+				height : 295,
+				width : 282,
+				itemTpl : ['<img src="{local}"/>'],
+				store : 'Follow'
 			},
 			{
 				xtype: 'label',
@@ -35,11 +39,14 @@ Ext.define('HEART.view.emiFGMFollowUp', {
 				xtype: 'sliderfield',
 				label: 'How much did this shift your mood?',
 				labelWidth: '40%',
-				labelWrap: true
+				labelWrap: true,
+				name: 'rate'
 			},
 			{
 				xtype: 'button',
-				text: 'Done!'
+				action: 'rate',
+				ui: 'confirm',
+				text: 'Done'
 			}
 		]
 	}
