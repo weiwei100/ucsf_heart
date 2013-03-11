@@ -33,8 +33,8 @@ Ext.define('HEART.controller.FGMController', {
 		var FGMs = Ext.getStore("FGMs")
 		var follow = Ext.getStore("Follow");
 		var id = follow.getAt(0).id;
-		var index = FGMs.findBy( function(record) {return record.id == id } );
-		FGMs.getAt(index).rate = values.rate;
+		var index = FGMs.findBy( function(record) { return record.id == id } );
+		FGMs.getAt(index).set('rate', values.rate);
 		FGMs.sync();
 		follow.removeAll();
 		this.goBack();

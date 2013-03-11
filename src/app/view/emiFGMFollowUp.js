@@ -26,9 +26,9 @@ Ext.define('HEART.view.emiFGMFollowUp', {
 			{
 				xtype : 'list',
 				border : '1px',
-				height : 295,
-				width : 282,
-				itemTpl : ['<img src="{local}"/>'],
+				height : 640,
+				width : 640,
+				itemTpl : ['<img src="{local}" width=640 height=640 />'],
 				store : 'Follow'
 			},
 			{

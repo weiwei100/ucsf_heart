@@ -10,13 +10,14 @@ Ext.define('HEART.model.FGM', {
 				type: 'date'
 			},
 			{
+				name: 'rate',
+				defaultValue: 0
+			},
+			{
 				name: 'local'
 			},
 			{
 				name: 'remote'
-			},
-			{
-				name: 'rate'
 			},
 			{
 				name: 'id',
