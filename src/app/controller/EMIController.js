@@ -33,11 +33,9 @@ Ext.define('HEART.controller.EMIController', {
 	},
 
 	onListItemTap: function(dataview, index, target, record, e, options) {
-
 		var pnl = Ext.create('HEART.view.' + record.get("type"));
 		pnl.record_data = record;
 		this.getExercises().push(pnl);
-
 	},
 
 	onNavigationviewHide: function(component, options) {

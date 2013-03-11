@@ -24,12 +24,9 @@ Ext.define('HEART.view.emiFGMFollowUp', {
 				html: '<center><b>Feel the Goodness</b></center>'
 			},
 			{
-				xtype : 'list',
-				border : '1px',
-				height : 640,
-				width : 640,
-				itemTpl : ['<img src="{local}" width=640 height=640 />'],
-				store : 'Follow'
+				xtype: 'image',
+				height: 480,
+				src: ''
 			},
 			{
 				xtype: 'label',

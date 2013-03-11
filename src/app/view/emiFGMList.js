@@ -27,9 +27,8 @@ Ext.define('HEART.view.emiFGMList', {
 		}, {
 			xtype : 'list',
 			border : '1px',
-			height : 640,
-			width : 640,
-			itemTpl : ['<img src="{local}" width=640 height=640 />'],
+			height : 322,
+			itemTpl : ['<img src="{local}" height=320 />'],
 			store : 'FGMs',
 			plugins : [{
 				autoPaging : true,

@@ -72,7 +72,7 @@ Ext.define('HEART.store.EMIs', {
 				feed_title: 'Take a photo'
 			},
 			{
-				title: 'Photo List',
+				title: 'Photos List',
 				type: 'emiFGMList',
 				category: 'Feel Good Moment',
 				feed_title: 'Photo List'	

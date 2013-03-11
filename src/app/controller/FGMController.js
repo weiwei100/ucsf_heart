@@ -5,7 +5,7 @@ Ext.define('HEART.controller.FGMController', {
 	config: {
 		refs: {
 			'uploadBtn': 'feelgood #loadBtn',
-			'imageList': 'fgmlist list',
+			'momentsList': 'fgmlist list',
 			'followUp': 'fgmfollowup',
 			'exercises': '#exercises'
 		},
@@ -15,35 +15,23 @@ Ext.define('HEART.controller.FGMController', {
 				loadsuccess: 'onLoadSuccess',
 				loadfailure: 'onLoadFailure'
 			},
-			imageList: {
+			momentsList: {
 				itemtap: 'onListItemTap'
 			},
 			"button[action=goback]": {
-				tap: 'goBack'
+				tap: 'back'
 			},
 			"button[action=rate]": {
 				tap: 'rate'
 			}
 		}
 	},
-	
-	rate: function(button, e, options) {
-		var form = button.parent;
-		var values = form.getValues();
-		var FGMs = Ext.getStore("FGMs")
-		var follow = Ext.getStore("Follow");
-		var id = follow.getAt(0).id;
-		var index = FGMs.findBy( function(record) { return record.id == id } );
-		FGMs.getAt(index).set('rate', values.rate);
-		FGMs.sync();
-		follow.removeAll();
-		this.goBack();
-	},
 
 	onLoadSuccess: function(dataurl, e) {
-		Ext.getStore("FGMs").add( { timestamp: Date.now(), local: dataurl, remote: '' } );
-		Ext.getStore("FGMs").sort("timestamp", 'DESC');
-		Ext.getStore("FGMs").sync();
+		var FGMs = Ext.getStore("FGMs");
+		FGMs.add({ timestamp: Date.now(), local: dataurl });
+		FGMs.sort("timestamp", 'DESC');
+		FGMs.sync();
 	},
 	
 	onLoadFailure: function(message) {
@@ -51,17 +39,23 @@ Ext.define('HEART.controller.FGMController', {
 	},
 	
 	onListItemTap: function(dataview, index, target, record, e, options)  {
-		var follow = Ext.Viewport.add({xtype: 'fgmfollowup'});
-		Ext.getStore("Follow").add( record.data );
-		follow.setRecord(record);
-		Ext.Viewport.animateActiveItem(this.getFollowUp(), this.slideRightTransition);
+		follow = Ext.create('HEART.view.emiFGMFollowUp').setRecord(record);
+		this.getFollowUp().child('image').setSrc(record.data.local);
+		this.getExercises().push(follow);
 	},
 	
-	goBack: function() {
-		Ext.Viewport.animateActiveItem(this.getExercises(), this.slideLeftTransition);
+	back: function() {
+		this.getExercises().pop();
 	},
 	
-	slideRightTransition: { type: 'slide', direction: 'right' },
-	slideLeftTransition: { type: 'slide', direction: 'left' }
+	rate: function(button, e, options) {
+		var form = button.parent;
+		var id = form.getRecord().id;
+		var FGMs = Ext.getStore("FGMs");
+		var index = FGMs.findBy(function(record){ return record.id == id });
+		FGMs.getAt(index).set('rate', form.getValues().rate);
+		FGMs.sync();
+		this.back();
+	}
 
 });

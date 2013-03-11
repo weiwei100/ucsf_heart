@@ -31,8 +31,7 @@ Ext.application({
 	stores: [
 		'EMIs',
 		'FGMs',
-		'Feeds',
-		'Follow'
+		'Feeds'
 	],
 	views: [
 		'emiTensionCheck',
@@ -56,7 +55,7 @@ Ext.application({
 		'FGMController',
 		'ExerciseController'		
 	],
-
+	
 	launch: function() {
 		Ext.create('HEART.view.MainTabs', {fullscreen: true} );
 	}
