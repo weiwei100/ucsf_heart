@@ -1,0 +1,13 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "html": "Re One",
+        "designer|userClassName": "emiReflection1"
+    },
+    "designerId": "c914b31e-2bd5-4f04-836c-7bf5e6ce2509"
+}

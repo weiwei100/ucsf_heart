@@ -1,5 +1,5 @@
 {
-    "type": "jsonstore",
+    "type": "arraystore",
     "reference": {
         "name": "items",
         "type": "array"
@@ -7,11 +7,14 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": true,
-        "model": "Feed",
-        "storeId": "Feeds",
-        "designer|userClassName": "Feeds"
+        "model": "User",
+        "storeId": "Users",
+        "designer|userClassName": "Users",
+        "requires": [
+            "HEART.model.User"
+        ]
     },
-    "designerId": "a12e83bf-bcd8-4c88-8534-3fe90620d505",
+    "designerId": "95d83a77-d412-477f-be26-0e1b987e85a7",
     "cn": [
         {
             "type": "Ext.data.proxy.LocalStorage",
@@ -21,10 +24,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLocalStorageProxy",
-                "id": "feeds"
+                "designer|userClassName": "MyLocalStorageProxy1",
+                "id": "users"
             },
-            "designerId": "4e423c99-41bb-4dd1-a95d-f663bd2f779f"
+            "designerId": "1031efd5-9698-4aae-9763-1d3fee14f63b"
         }
     ]
 }

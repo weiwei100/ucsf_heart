@@ -9,7 +9,6 @@ Ext.define('HEART.controller.FGMController', {
 			'followUp': 'fgmfollowup',
 			'exercises': '#exercises'
 		},
-
 		control: {
 			uploadBtn: {
 				loadsuccess: 'onLoadSuccess',
@@ -18,7 +17,7 @@ Ext.define('HEART.controller.FGMController', {
 			momentsList: {
 				itemtap: 'onListItemTap'
 			},
-			"button[action=goback]": {
+			"button[action=back]": {
 				tap: 'back'
 			},
 			"button[action=rate]": {

@@ -1,20 +1,20 @@
 {
-    "type": "tabpanel",
+    "type": "Ext.tab.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "id": null,
         "designer|userClassName": "MainTabs",
         "designer|userAlias": "mainview",
         "designer|initialView": true
     },
-    "id": "ExtBox1-ext-gen66956",
     "designerId": "3d30dcc2-648a-4eee-a044-22cb7525d54b",
     "cn": [
         {
-            "type": "formpanel",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -23,87 +23,96 @@
             "userConfig": {
                 "title": "Home",
                 "iconCls": "home",
+                "id": "homepanel",
                 "designer|userClassName": "MyFormPanel4"
             },
             "designerId": "ae4b176d-43a2-49de-98d6-2638de2b7330",
             "cn": [
                 {
-                    "type": "label",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyLabel",
-                        "html": "This week's intention is <b>Self-compassion</b>.<br><br>"
+                        "docked": null,
+                        "html": "My intention for this week is:",
+                        "itemId": "homeTitle",
+                        "designer|userClassName": "MyLabel"
                     },
                     "designerId": "f7c1108e-04d6-485f-a802-cf5128c7afd9"
                 },
                 {
-                    "type": "label",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyLabel",
-                        "html": "<center><b>[Name]'s recent progress</b></center>"
+                        "html": null,
+                        "itemId": "editIntention",
+                        "designer|userClassName": "MyButton",
+                        "text": "Here"
                     },
-                    "designerId": "6b528b15-4a37-43dd-8038-56e4b9ab6e99"
+                    "designerId": "bf3b7157-6010-46f8-9d6a-fb087fdba9d0"
                 },
                 {
-                    "type": "list",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyList1",
-                        "border": "1px",
-                        "height": 295,
-                        "width": 282,
-                        "store": "Feeds"
+                        "docked": null,
+                        "html": "Stop and notice your body then your emotions. How much stress are you aware of right now?",
+                        "itemId": "homeHow",
+                        "styleHtmlContent": true,
+                        "designer|userClassName": "MyLabel10"
                     },
-                    "designerId": "ae3437dc-f6ce-4457-ad65-6910f2f8a41c",
-                    "cn": [
-                        {
-                            "type": "template",
-                            "reference": {
-                                "name": "itemTpl",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "itemTpl",
-                                "implHandler": [
-                                    "<div>{title} - {timestamp:date(\"d-m-Y\")}</div>"
-                                ],
-                                "designer|displayName": "itemTpl"
-                            },
-                            "designerId": "59ea27e6-4ac0-4957-9f99-2cfd30da2046"
-                        },
-                        {
-                            "type": "listpaging",
-                            "reference": {
-                                "name": "plugins",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "MyListPagingPlugin",
-                                "autoPaging": true
-                            },
-                            "designerId": "9c111ccb-edf3-4301-90e5-9c66a25185fb"
-                        }
-                    ]
+                    "designerId": "f5751c9d-42df-4869-811f-6d8a2ea2864d"
+                },
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "itemId": "homeSlider",
+                        "designer|userClassName": "MySliderField11",
+                        "clearIcon": null,
+                        "label": null,
+                        "labelAlign": "bottom",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "c689dd0a-6d23-4a6a-8665-67dc57407c52"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "itemId": "homeDone",
+                        "designer|userClassName": "MyButton8",
+                        "text": "Done"
+                    },
+                    "designerId": "0d0d2527-f9ee-43d3-977e-14f37500c010"
                 }
             ]
         },
         {
-            "type": "navigationview",
+            "type": "Ext.navigation.View",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -111,29 +120,45 @@
             "codeClass": null,
             "userConfig": {
                 "title": "I'm stressed!",
-                "iconCls": "favorites",
-                "designer|userClassName": "MyNavigationView",
-                "id": "exercises"
+                "iconCls": "user",
+                "id": "stressed",
+                "itemId": "stressedView",
+                "designer|userClassName": "MyNavigationView1"
+            },
+            "designerId": "ff4f20c8-12a9-4f1b-a90e-82d983d05723"
+        },
+        {
+            "type": "Ext.navigation.View",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Exercises",
+                "iconCls": "organize",
+                "id": "exercises",
+                "designer|userClassName": "MyNavigationView"
             },
             "designerId": "3089ff51-81cd-495a-8ef3-5a5e87a3752f",
             "cn": [
                 {
-                    "type": "list",
+                    "type": "Ext.dataview.List",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyList",
                         "id": "exerciseList",
-                        "store": "EMIs",
+                        "designer|userClassName": "MyList",
+                        "store": "EMXs",
                         "grouped": true
                     },
                     "designerId": "5d7f16dc-0707-4ead-97ab-17b165af9941",
                     "cn": [
                         {
-                            "type": "template",
+                            "type": "Ext.XTemplate",
                             "reference": {
                                 "name": "itemTpl",
                                 "type": "object"
@@ -153,7 +178,7 @@
             ]
         },
         {
-            "type": "formpanel",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -162,128 +187,198 @@
             "userConfig": {
                 "title": "Settings",
                 "iconCls": "settings",
+                "id": "settings",
                 "designer|userClassName": "MyFormPanel6"
             },
             "designerId": "e7443fc1-6b32-4c1d-adbd-54f3b760a2dc",
             "cn": [
                 {
-                    "type": "textfield",
+                    "type": "Ext.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "firstname",
                         "designer|userClassName": "MyTextField",
                         "label": "First name",
                         "labelWidth": "50%",
+                        "name": "name",
                         "autoCapitalize": true,
                         "maxLength": 15
                     },
                     "designerId": "c41d49e3-436a-4336-9eb7-ffcb7f00556b"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "childName",
                         "designer|userClassName": "MyTextField",
                         "label": "Child's name",
                         "labelWidth": "50%",
+                        "name": "child_name",
                         "autoCapitalize": true,
                         "maxLength": 15
                     },
                     "designerId": "485db203-2f01-4661-b4da-fb60a6e3e948"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "wakeTime",
                         "designer|userClassName": "MyTextField",
                         "label": "Wake-up time",
                         "labelWidth": "50%",
+                        "name": "wake_time",
                         "autoCorrect": false
                     },
                     "designerId": "1c148c01-595f-4007-a430-cf65fd42e715"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "sleepTime",
                         "designer|userClassName": "MyTextField",
                         "label": "Sleep time",
-                        "labelWidth": "50%"
+                        "labelWidth": "50%",
+                        "name": "sleep_time"
                     },
                     "designerId": "1c144c06-38ad-4a68-a01f-13c46687f93a"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.field.Select",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyTextField",
+                        "centered": false,
+                        "contentEl": null,
+                        "html": null,
+                        "itemId": "gender",
+                        "designer|userClassName": "MySelectField",
                         "label": "Gender",
-                        "labelWidth": "50%"
+                        "name": "gender",
+                        "value": null,
+                        "placeHolder": "tap here",
+                        "hiddenName": null,
+                        "options": "[{text: 'Male', value: 'm'}, {text: 'Female', value: 'm'}, {text: 'Other', value: 'o'}]",
+                        "valueField": null
                     },
-                    "designerId": "be64ad5e-5f6e-4a0e-b8d3-6c6a6804659e"
+                    "designerId": "b228de72-125e-44ae-92aa-2f77b39b67ed"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.field.Spinner",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyTextField",
+                        "itemId": "weight",
+                        "designer|userClassName": "MySpinnerField",
                         "label": "Weight",
-                        "labelWidth": "50%"
+                        "name": "weight",
+                        "maxValue": null,
+                        "minValue": null,
+                        "stepValue": 5,
+                        "groupButtons": false,
+                        "increment": 64
                     },
-                    "designerId": "735bc8c9-ed32-4fc3-a3a4-84b4d6222344"
+                    "designerId": "1a78caf9-a551-485c-bfbd-8cb84b918fc5"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.field.Spinner",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyTextField",
+                        "itemId": "height",
+                        "designer|userClassName": "MySpinnerField1",
                         "label": "Height",
-                        "labelWidth": "50%"
+                        "name": "height",
+                        "stepValue": 5,
+                        "groupButtons": false,
+                        "increment": 64
                     },
-                    "designerId": "f936ab29-36fc-484e-8664-a693c83d5f84"
+                    "designerId": "121e433e-5ba1-484c-8c7d-4bc61d026ae4"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "itemId": "setNotifications",
+                        "designer|userClassName": "MyButton2",
+                        "text": "Set More or Fewer Notifications"
+                    },
+                    "designerId": "658a955a-b968-4ee5-9803-7856021b1b6e"
                 }
             ]
         },
         {
-            "type": "tabbar",
+            "type": "Ext.tab.Bar",
             "reference": {
                 "name": "tabBar",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTabBar",
                 "docked": "bottom",
-                "ui": "light"
+                "ui": "light",
+                "designer|userClassName": "MyTabBar"
             },
             "designerId": "78f5e37b-c4f2-4c08-8466-6dab9b3617fa"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "initialize",
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "var uuid = Ext.device.Device.uuid;",
+                    "var user = Ext.getStore(\"Users\").last();",
+                    "var settings = this.child('#settings');",
+                    "",
+                    "if(user==null){",
+                    "\tthis.getTabBar().hide();",
+                    "\tthis.setActiveItem(settings);",
+                    "}else{",
+                    "\tsettings.setRecord(user);",
+                    "}"
+                ]
+            },
+            "designerId": "9c748870-c0b3-4c73-8cd6-790fb210800f"
         }
     ]
 }

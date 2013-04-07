@@ -1,0 +1,168 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EMITensionCheck"
+    },
+    "designerId": "20b4102a-0d56-4d56-a98c-f275981ee4ad",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet",
+                "title": "Tension Check"
+            },
+            "designerId": "3ec85e59-c81e-4e38-92fb-56146f1ec558",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Check off each as you relax it for 3 seconds each.",
+                        "designer|userClassName": "MyLabel6"
+                    },
+                    "designerId": "bce212dc-819b-4018-a9b6-022e9083aa02"
+                },
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Feet",
+                        "labelWidth": "80%",
+                        "value": "Feet"
+                    },
+                    "designerId": "e0304af6-c8db-4fa2-9744-a80892c3bc5a"
+                },
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Left thigh",
+                        "labelWidth": "80%",
+                        "value": ""
+                    },
+                    "designerId": "61d230f6-d50c-4158-923c-b48b58087a39"
+                },
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Abdomen",
+                        "labelWidth": "80%",
+                        "value": null
+                    },
+                    "designerId": "ef4eb9b8-76dc-449c-b8db-a604e0dc7d72"
+                },
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Upper back",
+                        "labelWidth": "80%",
+                        "value": null
+                    },
+                    "designerId": "e2e80d29-5126-4217-b431-b6a0f0d33a64"
+                },
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Left arm",
+                        "labelWidth": "80%",
+                        "value": null
+                    },
+                    "designerId": "c11aebf5-fb2d-494d-8a4c-0ced349fece8"
+                },
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Both hands",
+                        "labelWidth": "80%",
+                        "value": null
+                    },
+                    "designerId": "b63b3bff-ba8c-4ec6-a902-a92e9b9e0e7d"
+                },
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Cheeks",
+                        "labelWidth": "80%",
+                        "value": null
+                    },
+                    "designerId": "2326f9cb-7aa5-4887-841e-5b053527e492"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "exercise",
+                        "designer|userClassName": "MyButton1",
+                        "text": "Done!"
+                    },
+                    "designerId": "4dbde750-0bfa-47c5-810e-f1def833369f",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

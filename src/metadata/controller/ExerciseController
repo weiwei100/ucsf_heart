@@ -1,5 +1,5 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,7 +8,6 @@
     "userConfig": {
         "designer|userClassName": "ExerciseController"
     },
-    "id": "ExtBox1-ext-gen41603",
     "designerId": "fa915879-6690-4fe5-8286-8eba1d8109c4",
     "cn": [
         {
@@ -23,15 +22,15 @@
                 "fn": "onButtonTap",
                 "implHandler": [
                     "var form = button.parent.parent;",
-                    "console.log(form);",
                     "var values = form.getValues();",
-                    "console.log(values);",
                     "",
-                    "var feed = form.record_data.get(\"feed_title\");",
+                    "var title = form.record_data.get(\"type\");",
                     "",
-                    "Ext.getStore(\"Feeds\").add({title: feed, timestamp: Date.now()});",
-                    "Ext.getStore(\"Feeds\").sort(\"timestamp\", 'DESC');",
-                    "Ext.getStore(\"Feeds\").sync();",
+                    "var feeds = Ext.getStore(\"Feeds\");",
+                    "",
+                    "feeds.add({timestamp: Date.now(), activity: title, formData: values, mark: false});",
+                    "feeds.sort(\"timestamp\", 'DESC');",
+                    "feeds.sync();",
                     "",
                     "form.submit({",
                     "\turl: 'login.php',",
@@ -65,20 +64,6 @@
                 "selector": "#exercises"
             },
             "designerId": "4a3c539c-514f-448a-a14a-0a9e8eae79b3"
-        },
-        {
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "emaStress",
-                "ref": "emaStress",
-                "selector": "#emaStress"
-            },
-            "designerId": "bf58f86d-ee99-4bec-a1c4-4b25c719d1b6"
         }
     ]
 }

@@ -1,5 +1,5 @@
 {
-    "type": "application",
+    "type": "Ext.app.Application",
     "reference": {
         "name": "items",
         "type": "array"
@@ -7,36 +7,39 @@
     "codeClass": null,
     "userConfig": {
         "models": [
-            "EMI",
             "User",
-            "Feed"
+            "Feed",
+            "EMX"
         ],
         "stores": [
-            "EMIs",
-            "Feeds"
+            "Feeds",
+            "EMXs",
+            "Users"
         ],
         "views": [
-            "emiTensionCheck",
-            "emiMountain",
-            "emiiPerspective",
-            "emiFGM",
-            "emiFGMFollowUp",
-            "emiFGMList",
-            "emiActivityLabel",
-            "emiWeeklyIntentionP1",
-            "emiWeeklyIntentionP2",
-            "emiDailyGoal",
-            "emaStress",
-            "emaPleasantness",
-            "emaEmotion",
-            "MainTabs"
+            "MainTabs",
+            "EMIIntentionSet",
+            "emaType1",
+            "emaType2",
+            "emaType3",
+            "emiAudio1",
+            "emiAudio2",
+            "emiAudio3",
+            "emiReflection1",
+            "emiReflection2",
+            "emiReflection3",
+            "emiReflection4",
+            "emiReflection5"
         ],
-        "name": "HEART",
+        "requires": [
+            "Ext.device.Device"
+        ],
         "controllers": [
-            "EMIController",
-            "ExerciseController"
-        ]
+            "ExercisesController",
+            "ExerciseController",
+            "MainController"
+        ],
+        "name": "HEART"
     },
-    "id": "ExtBox1-ext-gen5652",
     "designerId": "application"
 }

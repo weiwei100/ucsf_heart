@@ -6,9 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "emaPleasantness"
+        "designer|userClassName": "emaType2"
     },
-    "designerId": "7d46841e-2109-42de-a3c6-37339c12305f",
+    "designerId": "df2a85a8-d4f3-4e68-bab4-1a38a66b43db",
     "cn": [
         {
             "type": "Ext.form.FieldSet",
@@ -18,16 +18,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyFieldSet2",
-                "defaults": [
-                    "{",
-                    "                            labelWidth: '35%',",
-                    "                            labelAlign: 'top'",
-                    "                        }"
-                ],
-                "title": ""
+                "docked": "top",
+                "designer|userClassName": "MyFieldSet3",
+                "title": "Tell us about your current emotion intensity."
             },
-            "designerId": "eb2fccfe-ee1b-4799-9f2b-daea800a1353",
+            "designerId": "1d917d3a-18d9-4be5-bd9d-17939b0930a8",
             "cn": [
                 {
                     "type": "Ext.field.Slider",
@@ -37,15 +32,16 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField",
-                        "label": "The amount of pleasantness I feels is:",
+                        "designer|userClassName": "MySliderField8",
+                        "label": "The amount of pleasantness I feel is:",
+                        "labelAlign": "top",
                         "labelWrap": true,
-                        "name": "positivity",
+                        "name": "pleasantness",
                         "value": [
                             50
                         ]
                     },
-                    "designerId": "69e36ff5-fde7-463b-957f-9e566b32d605"
+                    "designerId": "d01e49cc-73e7-4e8a-a243-4b11ee06d06d"
                 },
                 {
                     "type": "Ext.field.Slider",
@@ -55,15 +51,16 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField1",
+                        "designer|userClassName": "MySliderField9",
                         "label": "The amount of unpleasantness I feel is:",
+                        "labelAlign": "top",
                         "labelWrap": true,
-                        "name": "negativity",
+                        "name": "unpleasantness",
                         "value": [
                             50
                         ]
                     },
-                    "designerId": "1c3bbf76-0cd3-4e23-be15-37a2d4de91b4"
+                    "designerId": "aa91e874-3825-4d21-bc39-27c9a87fca07"
                 },
                 {
                     "type": "Ext.field.Slider",
@@ -73,15 +70,16 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField1",
+                        "designer|userClassName": "MySliderField10",
                         "label": "The amount of energy I have right now is:",
+                        "labelAlign": "top",
                         "labelWrap": true,
                         "name": "energy",
                         "value": [
                             50
                         ]
                     },
-                    "designerId": "557489c7-d2da-4b45-abc7-0e38e71d23d3"
+                    "designerId": "13c0df7a-d6d9-469b-8899-24eadaa5582d"
                 },
                 {
                     "type": "Ext.Button",
@@ -92,13 +90,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "action": "exercise",
-                        "id": null,
-                        "itemId": null,
-                        "ui": "confirm",
-                        "designer|userClassName": "MyButton10",
+                        "designer|userClassName": "MyButton8",
                         "text": "Done"
                     },
-                    "designerId": "055c7356-b2e1-43d7-b021-dc825869421a",
+                    "designerId": "929d2455-ecb1-468a-8631-a3afa2fd7344",
                     "customConfigs": [
                         {
                             "group": "(Custom Properties)",

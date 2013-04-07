@@ -1,0 +1,84 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ExercisesController"
+    },
+    "designerId": "e3282f86-3944-46c9-a9f6-339833db34db",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onListItemTap",
+                "fn": "onListItemTap",
+                "implHandler": [
+                    "var pnl = Ext.create('HEART.view.' + record.get(\"type\"));",
+                    "pnl.record_data = record;",
+                    "this.getExercises().push(pnl);"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "#exerciseList"
+            },
+            "designerId": "e6598e40-fef6-4bbf-b6fb-acad809e58de"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "this.getExercises().getNavigationBar().hide();"
+                ]
+            },
+            "designerId": "dd4da508-1f77-48bf-bffe-c6833c62e462"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "exercises",
+                "ref": "exercises",
+                "selector": "#exercises"
+            },
+            "designerId": "bc7a5445-3930-4933-8929-f59f46701fd5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onNavigationviewHide",
+                "fn": "onNavigationviewHide",
+                "implHandler": [
+                    "this.getExercises().pop();"
+                ],
+                "name": "hide",
+                "designer|targetType": "Ext.navigation.View",
+                "designer|controlQuery": "#exercises"
+            },
+            "designerId": "9910458a-ad91-49e4-a7f7-03e4f9c9ff91"
+        }
+    ]
+}
