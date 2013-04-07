@@ -108,12 +108,6 @@
             ],
             "className": "MainTabs"
         },
-        "8ce2a3aa-c191-4106-8078-f63371d4f6ec": {
-            "paths": [
-                "metadata/resource/js"
-            ],
-            "className": "js"
-        },
         "83d777b4-31f3-46fc-9dd8-9d4803d6c6a2": {
             "paths": [
                 "metadata/view/EMIIntentionSet",
@@ -241,6 +235,12 @@
                 "app/view/emiReflection5.js"
             ],
             "className": "emiReflection5"
+        },
+        "9a48f17e-e509-4bad-aed3-b00a4e7d72b4": {
+            "paths": [
+                "metadata/resource/js1"
+            ],
+            "className": "js1"
         }
     },
     "viewOrderMap": {
@@ -280,7 +280,7 @@
         ],
         "resource": [
             "a2531373-fbeb-4cc3-9d43-10a6dc7525be",
-            "8ce2a3aa-c191-4106-8078-f63371d4f6ec"
+            "9a48f17e-e509-4bad-aed3-b00a4e7d72b4"
         ],
         "app": [
             "application"

@@ -33,7 +33,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "activity",
+                "name": "type",
                 "designer|userClassName": "field12"
             },
             "designerId": "6096832d-d0b9-455f-9385-1d18bfacf12f"
@@ -46,7 +46,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "formData",
+                "name": "data",
                 "type": null,
                 "designer|userClassName": "field13"
             },

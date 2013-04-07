@@ -124,7 +124,7 @@
                             "",
                             "var feeds = Ext.getStore(\"Feeds\");",
                             "",
-                            "feeds.add({timestamp: Date.now(), activity: 'intention', formData: text, user: '', mark: false});",
+                            "feeds.add({timestamp: Date.now(), type: 'intention', data: text, user: 'kyle', mark: false});",
                             "feeds.sort(\"timestamp\", 'DESC');",
                             "feeds.sync();",
                             "",

@@ -138,6 +138,7 @@
                     "var index = Math.floor(count*Math.random());",
                     "var exercise = EMXs.getAt(index);",
                     "var pnl = Ext.create('HEART.view.' + exercise.get(\"type\"));",
+                    "pnl.record_data = exercise;",
                     "this.getStressed().push(pnl);"
                 ],
                 "name": "activate",
