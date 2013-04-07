@@ -3,7 +3,7 @@
     "settings": {
         "urlPrefix": "http://localhost:881/",
         "spacesToIndent": "tab",
-        "exportPath": "/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/www",
+        "exportPath": "/home/jpalley/Documents/projects/brainpage/ucsf_heart/build/www",
         "sdkPath": "",
         "lineEnding": "LF",
         "genTimestamps": true,
@@ -17,7 +17,7 @@
         "buildShouldOverwriteIndex": true
     },
     "xdsVersion": "2.2.0",
-    "xdsBuild": 894,
+    "xdsBuild": 908,
     "schemaVersion": 1,
     "upgradeVersion": 210000000499,
     "framework": "touch20",
