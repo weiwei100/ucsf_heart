@@ -172,14 +172,6 @@
             ],
             "className": "emiAudio1"
         },
-        "0c962f43-511b-4b90-9a92-2a4152bd4323": {
-            "paths": [
-                "metadata/view/MyTabPanel1",
-                "app/view/override/MyTabPanel1.js",
-                "app/view/MyTabPanel1.js"
-            ],
-            "className": "MyTabPanel1"
-        },
         "ee457f84-adec-4616-b758-13d4b006fc89": {
             "paths": [
                 "metadata/view/emiAudio2",
@@ -241,11 +233,16 @@
                 "metadata/resource/js1"
             ],
             "className": "js1"
+        },
+        "5dac7843-38ea-4c4a-a25d-2189c9be0da2": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
         }
     },
     "viewOrderMap": {
         "view": [
-            "0c962f43-511b-4b90-9a92-2a4152bd4323",
             "3d30dcc2-648a-4eee-a044-22cb7525d54b",
             "20b4102a-0d56-4d56-a98c-f275981ee4ad",
             "7d46841e-2109-42de-a3c6-37339c12305f",
@@ -280,6 +277,7 @@
         ],
         "resource": [
             "a2531373-fbeb-4cc3-9d43-10a6dc7525be",
+            "5dac7843-38ea-4c4a-a25d-2189c9be0da2",
             "9a48f17e-e509-4bad-aed3-b00a4e7d72b4"
         ],
         "app": [
