@@ -81,6 +81,6 @@ public class HEART extends DroidGap
 	}
 
 	private void showMessage(String message) {
-		Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+		Toast.makeText(this, "damn it!", Toast.LENGTH_LONG).show();
 	}
 }

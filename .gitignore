@@ -10,3 +10,9 @@ Gemfile.lock
 *.tar.gz
 .settings
 *.apk
+*.ap_
+*.dex
+*.class
+gen/
+local.properties
+proguard/
