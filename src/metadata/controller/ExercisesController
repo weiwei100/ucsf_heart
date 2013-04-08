@@ -70,8 +70,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onNavigationviewHide",
-                "fn": "onNavigationviewHide",
+                "designer|userClassName": "onExercisesHide",
+                "fn": "onExercisesHide",
                 "implHandler": [
                     "this.getExercises().pop();"
                 ],

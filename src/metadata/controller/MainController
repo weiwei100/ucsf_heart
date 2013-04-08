@@ -147,18 +147,34 @@
                 "designer|userClassName": "onHomePanelActive",
                 "fn": "onHomePanelActive",
                 "implHandler": [
+                    "this.renderIntention();"
+                ],
+                "name": "activeitemchange",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "formpanel"
+            },
+            "designerId": "735469cf-418b-4623-9a94-ce35ff6448fa"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "renderIntention",
+                "fn": "renderIntention",
+                "implHandler": [
                     "var feeds = Ext.getStore('Feeds');",
                     "intention = feeds.findRecord('type', 'intention');",
                     "if(intention!=null){",
                     "\tvar text = intention.get('data');",
                     "\tthis.getHomePanel().child('button').setText(text);",
                     "}"
-                ],
-                "name": "show",
-                "designer|targetType": "Ext.form.Panel",
-                "designer|controlQuery": "#homepanel"
+                ]
             },
-            "designerId": "735469cf-418b-4623-9a94-ce35ff6448fa"
+            "designerId": "beedc266-12b0-48b2-8a73-8a1efa362087"
         },
         {
             "type": "fixedfunction",
@@ -171,10 +187,10 @@
                 "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
-                    "this.getStressed().getNavigationBar().hide();"
+                    "this.renderIntention();"
                 ]
             },
-            "designerId": "eaab1004-6496-42b1-886f-65c2de8f62df"
+            "designerId": "64ac1c69-fee3-4109-8849-00cd10a7c40c"
         }
     ]
 }
