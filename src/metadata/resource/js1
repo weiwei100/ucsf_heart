@@ -6,7 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "url": "cordova-2.4.0.js"
+        "url": "base64-webtoolkit.js",
+        "defer": false
     },
-    "designerId": "8ce2a3aa-c191-4106-8078-f63371d4f6ec"
+    "designerId": "9a48f17e-e509-4bad-aed3-b00a4e7d72b4"
 }

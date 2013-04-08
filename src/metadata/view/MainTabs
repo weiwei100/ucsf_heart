@@ -279,9 +279,7 @@
                         "value": null,
                         "placeHolder": "tap here",
                         "hiddenName": null,
-                        "options": [
-                            "[{text: 'Male', value: 'm'}, {text: 'Female', value: 'm'}, {text: 'Other', value: 'o'}]"
-                        ],
+                        "options": "[\"[{text: 'Male', value: 'm'}, {text: 'Female', value: 'm'}, {text: 'Other', value: 'o'}]\"]",
                         "valueField": null
                     },
                     "designerId": "b228de72-125e-44ae-92aa-2f77b39b67ed"

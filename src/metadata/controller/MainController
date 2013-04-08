@@ -123,31 +123,6 @@
             "designerId": "655ff30e-1efb-4127-add5-ac3648130da1"
         },
         {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "onStressedActivate",
-                "fn": "onStressedActivate",
-                "implHandler": [
-                    "var EMXs = Ext.getStore('EMXs');",
-                    "var count = EMXs.getAllCount();",
-                    "var index = Math.floor(count*Math.random());",
-                    "var exercise = EMXs.getAt(index);",
-                    "var pnl = Ext.create('HEART.view.' + exercise.get(\"type\"));",
-                    "pnl.record_data = exercise;",
-                    "this.getStressed().push(pnl);"
-                ],
-                "name": "activate",
-                "designer|targetType": "Ext.navigation.View",
-                "designer|controlQuery": "#stressed"
-            },
-            "designerId": "839f629c-bc80-4d3d-abe3-896fe4d9b804"
-        },
-        {
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -169,38 +144,37 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStressedDeactivate",
-                "fn": "onStressedDeactivate",
-                "implHandler": [
-                    "this.getStressed().pop();"
-                ],
-                "name": "deactivate",
-                "designer|targetType": "Ext.navigation.View",
-                "designer|controlQuery": "#stressed"
-            },
-            "designerId": "d7d1ea0f-cb14-4150-88f2-c455dceeac6e"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "designer|userClassName": "onHomePanelActive",
                 "fn": "onHomePanelActive",
                 "implHandler": [
                     "var feeds = Ext.getStore('Feeds');",
-                    "intention = feeds.findRecord('activity', 'intention');",
-                    "var text = intention.get('formData');",
-                    "this.getHomePanel().child('button').setText(text);"
+                    "intention = feeds.findRecord('type', 'intention');",
+                    "if(intention!=null){",
+                    "\tvar text = intention.get('data');",
+                    "\tthis.getHomePanel().child('button').setText(text);",
+                    "}"
                 ],
                 "name": "show",
                 "designer|targetType": "Ext.form.Panel",
                 "designer|controlQuery": "#homepanel"
             },
             "designerId": "735469cf-418b-4623-9a94-ce35ff6448fa"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "this.getStressed().getNavigationBar().hide();"
+                ]
+            },
+            "designerId": "eaab1004-6496-42b1-886f-65c2de8f62df"
         }
     ]
 }

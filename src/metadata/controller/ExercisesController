@@ -21,9 +21,9 @@
                 "designer|userClassName": "onListItemTap",
                 "fn": "onListItemTap",
                 "implHandler": [
-                    "var pnl = Ext.create('HEART.view.' + record.get(\"type\"));",
-                    "pnl.record_data = record;",
-                    "this.getExercises().push(pnl);"
+                    "var exercise = Ext.create('HEART.view.' + record.get(\"type\"));",
+                    "exercise.record_data = record;",
+                    "this.getExercises().push(exercise);"
                 ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.List",
@@ -42,7 +42,8 @@
                 "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
-                    "this.getExercises().getNavigationBar().hide();"
+                    "this.getExercises().getNavigationBar().hide();",
+                    "this.getStressed().getNavigationBar().hide();"
                 ]
             },
             "designerId": "dd4da508-1f77-48bf-bffe-c6833c62e462"
@@ -79,6 +80,67 @@
                 "designer|controlQuery": "#exercises"
             },
             "designerId": "9910458a-ad91-49e4-a7f7-03e4f9c9ff91"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "stressed",
+                "ref": "stressed",
+                "selector": "#stressed"
+            },
+            "designerId": "380bf61c-189c-459b-9819-b72f47a31cf9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStressedShow",
+                "fn": "onStressedShow",
+                "implHandler": [
+                    "var EMXs = Ext.getStore('EMXs');",
+                    "var count = EMXs.getAllCount();",
+                    "",
+                    "var index = Math.floor(count*Math.random());",
+                    "var emx = EMXs.getAt(index);",
+                    "",
+                    "var exercise = Ext.create('HEART.view.' + emx.get(\"type\"));",
+                    "",
+                    "exercise.record_data = emx;",
+                    "this.getStressed().push(exercise);"
+                ],
+                "name": "show",
+                "designer|targetType": "Ext.navigation.View",
+                "designer|controlQuery": "#stressed"
+            },
+            "designerId": "ab72d431-16a4-43ab-88f3-0cfb5483fa3d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStressedHide",
+                "fn": "onStressedHide",
+                "implHandler": [
+                    "this.getStressed().pop();"
+                ],
+                "name": "hide",
+                "designer|targetType": "Ext.navigation.View",
+                "designer|controlQuery": "#stressed"
+            },
+            "designerId": "1fa47330-c437-4bfd-93a2-9c8d15ff4fdf"
         }
     ]
 }

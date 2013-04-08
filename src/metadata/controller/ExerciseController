@@ -79,6 +79,20 @@
                 "selector": "#exercises"
             },
             "designerId": "4a3c539c-514f-448a-a14a-0a9e8eae79b3"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "stressed",
+                "ref": "stressed",
+                "selector": "#stressed"
+            },
+            "designerId": "d531fbef-0131-468f-8a90-a5e29132e044"
         }
     ]
 }
