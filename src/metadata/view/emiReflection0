@@ -80,7 +80,8 @@
                         "designer|userClassName": "MyTextArea1",
                         "label": null,
                         "labelAlign": "top",
-                        "name": "reflect"
+                        "name": "reflect",
+                        "required": true
                     },
                     "designerId": "c691af5e-1185-4243-946d-f0ab2a268744"
                 },

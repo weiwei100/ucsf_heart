@@ -33,7 +33,8 @@
             "emiReflection5"
         ],
         "requires": [
-            "Ext.device.Device"
+            "Ext.device.Device",
+            "Ext.device.Connection"
         ],
         "controllers": [
             "EMXsController",

@@ -68,7 +68,8 @@
                         "designer|userClassName": "MyTextArea1",
                         "label": "What is most important to me in this moment?",
                         "labelAlign": "top",
-                        "name": "reflect"
+                        "name": "reflect",
+                        "required": true
                     },
                     "designerId": "ffb17884-e281-4cd1-a7d1-b734508e48f7"
                 },

@@ -70,6 +70,7 @@
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "reflect",
+                        "required": true,
                         "placeHolder": null
                     },
                     "designerId": "401c401c-1fc7-40cb-ac1f-20deb99e5b4a"

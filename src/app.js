@@ -20,7 +20,8 @@ Ext.Loader.setConfig({
 Ext.application({
 
 	requires: [
-		'Ext.device.Device'
+		'Ext.device.Device',
+		'Ext.device.Connection'
 	],
 	models: [
 		'User',

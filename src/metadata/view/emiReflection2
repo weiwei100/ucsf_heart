@@ -70,6 +70,7 @@
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "reflect",
+                        "required": true,
                         "placeHolder": "(Hint: It's ussally not visible on the surface like getting teeth brushed.)"
                     },
                     "designerId": "e2ebe4f8-a8f4-4a08-ad97-a7bc33309593"

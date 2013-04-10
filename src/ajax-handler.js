@@ -23,6 +23,21 @@ var AJAX = {
 	
 	},
 	
-	probability: 0.55
+	probability: 0.55,
+	
+	sync: function() {
+		var feeds = Ext.getStore('Feeds');
+		if(feeds.getAllCount()>0){
+			feeds.each(
+				function(item, index, length){
+					var succ = function(response){console.log(response); feeds.removeAt(index); feeds.sync();};
+					var fail = function(response){console.log(response)};
+					var content = item.data.data;
+					content.timestamp = item.data.timestamp;
+					AJAX.toSensor(content, succ, fail);					
+				}
+			);
+		}
+	}
 
 }
