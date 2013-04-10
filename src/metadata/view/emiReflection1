@@ -6,8 +6,114 @@
     },
     "codeClass": null,
     "userConfig": {
-        "html": "Re One",
+        "html": null,
         "designer|userClassName": "emiReflection1"
     },
-    "designerId": "c914b31e-2bd5-4f04-836c-7bf5e6ce2509"
+    "designerId": "c914b31e-2bd5-4f04-836c-7bf5e6ce2509",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet6",
+                "title": null
+            },
+            "designerId": "8088b272-4ce2-4779-aee9-bf28ab4dea82",
+            "cn": [
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "pre-slider",
+                        "designer|userClassName": "MySliderField15",
+                        "label": "How do you feel (stress-pesce)?",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "pre-slider",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "5ace536b-6eb6-458c-a87a-b2f38cde3d3d"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<center><b>Reflect</b></center>",
+                        "designer|userClassName": "MyLabel9"
+                    },
+                    "designerId": "8b4da4a2-a63a-4cc1-81c6-5d5fbb03ba4c"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextArea1",
+                        "label": "What is most important to me in this moment?",
+                        "labelAlign": "top",
+                        "name": "reflect"
+                    },
+                    "designerId": "ffb17884-e281-4cd1-a7d1-b734508e48f7"
+                },
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "post-slider",
+                        "designer|userClassName": "MySliderField16",
+                        "label": "How do you feel (stress--peace)?",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "post-slider",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "4eb9ad29-9c8c-46a5-a0ef-4314271bb8d9"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "exercise",
+                        "designer|userClassName": "MyButton11",
+                        "text": "Done"
+                    },
+                    "designerId": "af122c0a-ee70-430f-a18d-94a3871e1c54",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

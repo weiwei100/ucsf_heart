@@ -78,10 +78,7 @@
                     "\tfeeds.sync();",
                     "};",
                     "",
-                    "AJAX.toSensor(content, succ, fail);",
-                    "",
-                    "button.disable();",
-                    "setTimeout(function(){button.enable()}, 300000);"
+                    "AJAX.toSensor(content, succ, fail);"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -209,6 +206,26 @@
                 ]
             },
             "designerId": "64ac1c69-fee3-4109-8849-00cd10a7c40c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonDoneTap",
+                "fn": "onButtonDoneTap",
+                "implHandler": [
+                    "button.disable();",
+                    "setTimeout(function(){button.enable()}, 300000);"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[text=Done]"
+            },
+            "designerId": "2eadb79f-4532-4e15-9a03-9cfaf3c1cc00"
         }
     ]
 }

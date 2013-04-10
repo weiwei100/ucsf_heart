@@ -21,6 +21,8 @@ var AJAX = {
 			failure: fail
 		});
 	
-	}
+	},
+	
+	probability: 0.55
 
 }
