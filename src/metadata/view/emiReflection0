@@ -7,9 +7,9 @@
     "codeClass": null,
     "userConfig": {
         "html": null,
-        "designer|userClassName": "emiReflection4"
+        "designer|userClassName": "emiReflection0"
     },
-    "designerId": "122054c0-8659-4da0-af59-7a3032af1333",
+    "designerId": "1f3f482d-ff10-49a1-a23b-6a515d324343",
     "cn": [
         {
             "type": "Ext.form.FieldSet",
@@ -22,7 +22,7 @@
                 "designer|userClassName": "MyFieldSet6",
                 "title": null
             },
-            "designerId": "cdd2c24e-3bea-409b-b53e-1aba86a57ddf",
+            "designerId": "75d41b42-4e6a-4a67-8a41-56c7daf33792",
             "cn": [
                 {
                     "type": "Ext.field.Slider",
@@ -42,7 +42,7 @@
                             50
                         ]
                     },
-                    "designerId": "a53ae98b-e2ed-4444-b3ec-7dcfc9685635"
+                    "designerId": "c563a66e-6dde-42af-b15a-4601f783ebf6"
                 },
                 {
                     "type": "Ext.Label",
@@ -52,10 +52,22 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<center><b>Reflect</b></center>",
+                        "html": "<center><b>Listen & Reflect</b></center>",
                         "designer|userClassName": "MyLabel9"
                     },
-                    "designerId": "17e1302d-27b6-4e1c-a23d-e5f445005216"
+                    "designerId": "11fbd176-b756-49a8-98de-802a6ef63818"
+                },
+                {
+                    "type": "Ext.Audio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyAudio1"
+                    },
+                    "designerId": "2ff1d115-bc1c-4648-8289-79121295be15"
                 },
                 {
                     "type": "Ext.field.TextArea",
@@ -66,14 +78,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyTextArea1",
-                        "label": "What is more important than me being fully presentt in this moment?",
+                        "label": null,
                         "labelAlign": "top",
-                        "labelWrap": true,
                         "name": "reflect",
-                        "required": true,
-                        "placeHolder": null
+                        "required": true
                     },
-                    "designerId": "a7268b4c-6a4f-468e-aa33-ed8f8dacb0de"
+                    "designerId": "c691af5e-1185-4243-946d-f0ab2a268744"
                 },
                 {
                     "type": "Ext.field.Slider",
@@ -93,7 +103,7 @@
                             50
                         ]
                     },
-                    "designerId": "d3b4ac6e-929f-4377-99bb-b6fbab5022c0"
+                    "designerId": "af641405-b60e-46fe-821b-c88a7ef8b315"
                 },
                 {
                     "type": "Ext.Button",
@@ -107,7 +117,7 @@
                         "designer|userClassName": "MyButton11",
                         "text": "Done"
                     },
-                    "designerId": "c98de851-20e7-4fc8-8ac1-d8eae32904a4",
+                    "designerId": "85f86589-c65a-42b0-bf82-11c1904f3083",
                     "customConfigs": [
                         {
                             "group": "(Custom Properties)",

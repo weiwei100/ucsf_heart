@@ -54,11 +54,11 @@
         },
         "e3282f86-3944-46c9-a9f6-339833db34db": {
             "paths": [
-                "metadata/controller/ExercisesController",
-                "app/controller/override/ExercisesController.js",
-                "app/controller/ExercisesController.js"
+                "metadata/controller/EMXsController",
+                "app/controller/override/EMXsController.js",
+                "app/controller/EMXsController.js"
             ],
-            "className": "ExercisesController"
+            "className": "EMXsController"
         },
         "afc8ba04-79a0-472a-98e0-bb5dc603b9c3": {
             "paths": [
@@ -67,22 +67,6 @@
                 "app/model/User.js"
             ],
             "className": "User"
-        },
-        "7d46841e-2109-42de-a3c6-37339c12305f": {
-            "paths": [
-                "metadata/view/emaPleasantness",
-                "app/view/override/emaPleasantness.js",
-                "app/view/emaPleasantness.js"
-            ],
-            "className": "emaPleasantness"
-        },
-        "fa915879-6690-4fe5-8286-8eba1d8109c4": {
-            "paths": [
-                "metadata/controller/ExerciseController",
-                "app/controller/override/ExerciseController.js",
-                "app/controller/ExerciseController.js"
-            ],
-            "className": "ExerciseController"
         },
         "c30abfad-1a37-4265-b300-0151292af2c5": {
             "paths": [
@@ -172,14 +156,6 @@
             ],
             "className": "emiAudio1"
         },
-        "0c962f43-511b-4b90-9a92-2a4152bd4323": {
-            "paths": [
-                "metadata/view/MyTabPanel1",
-                "app/view/override/MyTabPanel1.js",
-                "app/view/MyTabPanel1.js"
-            ],
-            "className": "MyTabPanel1"
-        },
         "ee457f84-adec-4616-b758-13d4b006fc89": {
             "paths": [
                 "metadata/view/emiAudio2",
@@ -206,13 +182,21 @@
         },
         "1f3f482d-ff10-49a1-a23b-6a515d324343": {
             "paths": [
+                "metadata/view/emiReflection0",
+                "app/view/override/emiReflection0.js",
+                "app/view/emiReflection0.js"
+            ],
+            "className": "emiReflection0"
+        },
+        "45ffb2a6-7ce7-4069-b545-dd3766209a4a": {
+            "paths": [
                 "metadata/view/emiReflection2",
                 "app/view/override/emiReflection2.js",
                 "app/view/emiReflection2.js"
             ],
             "className": "emiReflection2"
         },
-        "45ffb2a6-7ce7-4069-b545-dd3766209a4a": {
+        "ec02208e-d35b-471e-884e-358bcc1e4df1": {
             "paths": [
                 "metadata/view/emiReflection3",
                 "app/view/override/emiReflection3.js",
@@ -220,7 +204,7 @@
             ],
             "className": "emiReflection3"
         },
-        "ec02208e-d35b-471e-884e-358bcc1e4df1": {
+        "122054c0-8659-4da0-af59-7a3032af1333": {
             "paths": [
                 "metadata/view/emiReflection4",
                 "app/view/override/emiReflection4.js",
@@ -228,27 +212,31 @@
             ],
             "className": "emiReflection4"
         },
-        "122054c0-8659-4da0-af59-7a3032af1333": {
+        "9a48f17e-e509-4bad-aed3-b00a4e7d72b4": {
+            "paths": [
+                "metadata/resource/js1"
+            ],
+            "className": "js1"
+        },
+        "5dac7843-38ea-4c4a-a25d-2189c9be0da2": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
+        },
+        "bae2e87f-6d72-44ed-8b20-c074c41bdd6f": {
             "paths": [
                 "metadata/view/emiReflection5",
                 "app/view/override/emiReflection5.js",
                 "app/view/emiReflection5.js"
             ],
             "className": "emiReflection5"
-        },
-        "9a48f17e-e509-4bad-aed3-b00a4e7d72b4": {
-            "paths": [
-                "metadata/resource/js1"
-            ],
-            "className": "js1"
         }
     },
     "viewOrderMap": {
         "view": [
-            "0c962f43-511b-4b90-9a92-2a4152bd4323",
             "3d30dcc2-648a-4eee-a044-22cb7525d54b",
             "20b4102a-0d56-4d56-a98c-f275981ee4ad",
-            "7d46841e-2109-42de-a3c6-37339c12305f",
             "83d777b4-31f3-46fc-9dd8-9d4803d6c6a2",
             "356e2f39-aebc-46c3-a290-2b75aad8eb97",
             "7d969f35-80f6-497f-9677-8bc260ef4b83",
@@ -257,11 +245,12 @@
             "1eb73208-28ad-410e-a453-81084fc2a8b8",
             "ee457f84-adec-4616-b758-13d4b006fc89",
             "5e7c2ac9-f8b6-4753-9b18-c5d3d9549bc6",
-            "c914b31e-2bd5-4f04-836c-7bf5e6ce2509",
             "1f3f482d-ff10-49a1-a23b-6a515d324343",
+            "c914b31e-2bd5-4f04-836c-7bf5e6ce2509",
             "45ffb2a6-7ce7-4069-b545-dd3766209a4a",
             "ec02208e-d35b-471e-884e-358bcc1e4df1",
-            "122054c0-8659-4da0-af59-7a3032af1333"
+            "122054c0-8659-4da0-af59-7a3032af1333",
+            "bae2e87f-6d72-44ed-8b20-c074c41bdd6f"
         ],
         "store": [
             "39444413-4912-4805-9d9a-77c8467bef15",
@@ -270,7 +259,6 @@
         ],
         "controller": [
             "e3282f86-3944-46c9-a9f6-339833db34db",
-            "fa915879-6690-4fe5-8286-8eba1d8109c4",
             "337b1891-c296-4f0e-b2d1-6ceb928a8088"
         ],
         "model": [
@@ -280,6 +268,7 @@
         ],
         "resource": [
             "a2531373-fbeb-4cc3-9d43-10a6dc7525be",
+            "5dac7843-38ea-4c4a-a25d-2189c9be0da2",
             "9a48f17e-e509-4bad-aed3-b00a4e7d72b4"
         ],
         "app": [

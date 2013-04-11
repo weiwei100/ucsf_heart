@@ -205,6 +205,7 @@
                         "label": "First name",
                         "labelWidth": "50%",
                         "name": "name",
+                        "required": true,
                         "autoCapitalize": true,
                         "maxLength": 15
                     },
@@ -223,6 +224,7 @@
                         "label": "Child's name",
                         "labelWidth": "50%",
                         "name": "child_name",
+                        "required": true,
                         "autoCapitalize": true,
                         "maxLength": 15
                     },
@@ -241,6 +243,7 @@
                         "label": "Wake-up time",
                         "labelWidth": "50%",
                         "name": "wake_time",
+                        "required": true,
                         "autoCorrect": false
                     },
                     "designerId": "1c148c01-595f-4007-a430-cf65fd42e715"
@@ -257,7 +260,8 @@
                         "designer|userClassName": "MyTextField",
                         "label": "Sleep time",
                         "labelWidth": "50%",
-                        "name": "sleep_time"
+                        "name": "sleep_time",
+                        "required": true
                     },
                     "designerId": "1c144c06-38ad-4a68-a01f-13c46687f93a"
                 },
@@ -276,6 +280,7 @@
                         "designer|userClassName": "MySelectField",
                         "label": "Gender",
                         "name": "gender",
+                        "required": true,
                         "value": null,
                         "placeHolder": "tap here",
                         "hiddenName": null,
@@ -296,6 +301,7 @@
                         "designer|userClassName": "MySpinnerField",
                         "label": "Weight",
                         "name": "weight",
+                        "required": true,
                         "maxValue": null,
                         "minValue": null,
                         "stepValue": 5,
@@ -316,6 +322,7 @@
                         "designer|userClassName": "MySpinnerField1",
                         "label": "Height",
                         "name": "height",
+                        "required": true,
                         "stepValue": 5,
                         "groupButtons": false,
                         "increment": 64

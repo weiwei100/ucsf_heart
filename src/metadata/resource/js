@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "ajax-handler.js",
+        "defer": false
+    },
+    "designerId": "5dac7843-38ea-4c4a-a25d-2189c9be0da2"
+}

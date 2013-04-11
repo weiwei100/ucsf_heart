@@ -62,8 +62,23 @@
                 "designer|userClassName": "onHomeDoneTap",
                 "fn": "onHomeDoneTap",
                 "implHandler": [
-                    "button.disable();",
-                    "setTimeout(function(){button.enable()}, 300000);"
+                    "var slider = button.parent.child('sliderfield');",
+                    "var stress = slider.getValue();",
+                    "",
+                    "var content = { type: 'homePanel', user: 'kyle', data: stress };",
+                    "",
+                    "var succ = function(response) {",
+                    "\tconsole.log(response);",
+                    "};",
+                    "",
+                    "var fail = function(response) {",
+                    "\tvar feeds = Ext.getStore(\"Feeds\");",
+                    "\tfeeds.add({timestamp: Date.now(), type: 'homePanel', data: stress, mark: false});",
+                    "\tfeeds.sort(\"timestamp\", 'DESC');\t\t",
+                    "\tfeeds.sync();",
+                    "};",
+                    "",
+                    "AJAX.toSensor(content, succ, fail);"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -187,10 +202,32 @@
                 "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
-                    "this.renderIntention();"
+                    "this.renderIntention();",
+                    "",
+                    "setInterval(function(){if(Ext.device.Connection.isOnline()){AJAX.sync()}}, 4096);"
                 ]
             },
             "designerId": "64ac1c69-fee3-4109-8849-00cd10a7c40c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonDoneTap",
+                "fn": "onButtonDoneTap",
+                "implHandler": [
+                    "button.disable();",
+                    "setTimeout(function(){button.enable()}, 300000);"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[text=Done]"
+            },
+            "designerId": "2eadb79f-4532-4e15-9a03-9cfaf3c1cc00"
         }
     ]
 }

@@ -6,7 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "ExercisesController"
+        "designer|userClassName": "EMXsController"
     },
     "designerId": "e3282f86-3944-46c9-a9f6-339833db34db",
     "cn": [
@@ -141,6 +141,87 @@
                 "designer|controlQuery": "#stressed"
             },
             "designerId": "1fa47330-c437-4bfd-93a2-9c8d15ff4fdf"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onExerciseDone",
+                "fn": "onExerciseDone",
+                "implHandler": [
+                    "var form = button.parent.parent;",
+                    "var values = form.getValues();",
+                    "var content = values;",
+                    "",
+                    "console.log(form.record_data);",
+                    "",
+                    "var type = form.record_data.get('type');",
+                    "",
+                    "content.type = type;",
+                    "content.user = 'kyle';",
+                    "",
+                    "var succ = function(response) {",
+                    "\tconsole.log(response);",
+                    "};",
+                    "",
+                    "var fail = function(response) {",
+                    "\tvar feeds = Ext.getStore(\"Feeds\");",
+                    "\tfeeds.add({timestamp: Date.now(), type: type, data: values, mark: false});",
+                    "\tfeeds.sort(\"timestamp\", 'DESC');\t\t",
+                    "\tfeeds.sync();",
+                    "};",
+                    "",
+                    "AJAX.toSensor(content, succ, fail);",
+                    "",
+                    "this.getExercises().pop();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[action=exercise]"
+            },
+            "designerId": "4e47477b-a5ac-44a6-9e25-8784b2d2a942"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onPreSliderChange",
+                "fn": "onPreSliderChange",
+                "implHandler": [
+                    "Slider.hide();"
+                ],
+                "name": "change",
+                "designer|targetType": "Ext.field.Slider",
+                "designer|controlQuery": "sliderfield[name=pre-slider]"
+            },
+            "designerId": "d45f4be5-1b58-4b82-b794-d4a3c894ea79"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onPostSliderChange",
+                "fn": "onPostSliderChange",
+                "implHandler": [
+                    "Slider.hide();"
+                ],
+                "name": "change",
+                "designer|targetType": "Ext.field.Slider",
+                "designer|controlQuery": "sliderfield[name=post-slider]"
+            },
+            "designerId": "b52bf379-6cfa-4c81-8bce-17719749c456"
         }
     ]
 }

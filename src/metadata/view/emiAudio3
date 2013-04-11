@@ -11,17 +11,121 @@
     "designerId": "5e7c2ac9-f8b6-4753-9b18-c5d3d9549bc6",
     "cn": [
         {
-            "type": "Ext.Label",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "html": "Audio 3",
-                "designer|userClassName": "MyLabel14"
+                "designer|userClassName": "MyFieldSet5",
+                "title": null
             },
-            "designerId": "f924cf74-eabf-4b3c-956c-7073c770cc18"
+            "designerId": "525b2870-aabf-4239-9ebd-bd615906ecb0",
+            "cn": [
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "per-slider",
+                        "designer|userClassName": "MySliderField15",
+                        "label": "How do you feel (stress--peace)?",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "pre-slider",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "e016f34d-9a10-4904-98d8-3f762c540a15"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<center><b>Perspective-taking</b></center>",
+                        "designer|userClassName": "MyLabel7"
+                    },
+                    "designerId": "2b74114e-8e3c-4e5e-930c-e0b52775c384"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<p>Listen to this guided session from the workshop.</p><p>Tip: Use headphones. <br/> Duration: 10min</p>",
+                        "designer|userClassName": "MyLabel8"
+                    },
+                    "designerId": "212db81b-a269-43c4-b6cc-c04fdf2ad981"
+                },
+                {
+                    "type": "Ext.Audio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": false,
+                        "docked": null,
+                        "html": null,
+                        "designer|userClassName": "MyAudio"
+                    },
+                    "designerId": "01cf0738-b4a0-4f3d-8335-b315a508357e"
+                },
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "post-slider",
+                        "designer|userClassName": "MySliderField16",
+                        "label": "How do you feel (stress--peace)?",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "post-slider",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "8556fef7-29fd-4c16-b07c-84d327fbde4e"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "exercise",
+                        "designer|userClassName": "MyButton12",
+                        "text": "Done"
+                    },
+                    "designerId": "94716c0f-84a9-4733-b8b0-d29dbc396eeb",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
