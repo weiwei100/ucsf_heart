@@ -20,6 +20,8 @@
             "userConfig": {
                 "docked": "top",
                 "designer|userClassName": "MyFieldSet3",
+                "hideOnMaskTap": false,
+                "modal": false,
                 "title": "Tell us about your current emotion intensity."
             },
             "designerId": "1d917d3a-18d9-4be5-bd9d-17939b0930a8",

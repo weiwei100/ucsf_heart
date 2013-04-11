@@ -18,14 +18,21 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onListItemTap",
-                "fn": "onListItemTap",
+                "designer|userClassName": "onListSelect",
+                "fn": "onListSelect",
                 "implHandler": [
                     "var exercise = Ext.create('HEART.view.' + record.get(\"type\"));",
                     "exercise.record_data = record;",
+                    "",
+                    "if(record.get(\"type\").indexOf('emi')>=0&&Math.random()<AJAX.probability){",
+                    "\tvar field = exercise.child('fieldset');",
+                    "\tfield.child('#pre-slider').hide();",
+                    "\tfield.child('#post-slider').hide();",
+                    "}",
+                    "",
                     "this.getExercises().push(exercise);"
                 ],
-                "name": "itemtap",
+                "name": "select",
                 "designer|targetType": "Ext.dataview.List",
                 "designer|controlQuery": "#exerciseList"
             },

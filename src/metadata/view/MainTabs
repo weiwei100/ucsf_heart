@@ -82,6 +82,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "centered": false,
+                        "disabled": false,
                         "docked": null,
                         "itemId": "homeSlider",
                         "designer|userClassName": "MySliderField11",
@@ -297,6 +299,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "html": null,
                         "itemId": "weight",
                         "designer|userClassName": "MySpinnerField",
                         "label": "Weight",

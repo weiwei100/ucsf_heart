@@ -31,7 +31,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "per-slider",
+                        "itemId": "pre-slider",
                         "designer|userClassName": "MySliderField15",
                         "label": "How do you feel (stress--peace)?",
                         "labelAlign": "top",
