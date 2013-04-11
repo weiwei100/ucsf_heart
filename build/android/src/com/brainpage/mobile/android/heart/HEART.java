@@ -36,7 +36,7 @@ public class HEART extends DroidGap
         // Set by <content src="index.html" /> in config.xml
 
         //initialize the push manager, pushwoosh app ID and GCM sender ID(project num)
-        PushManager pushManager = new PushManager(this, "F86CD-A3DC5", "535622621184");
+        PushManager pushManager = new PushManager(this, /*"F86CD-A3DC5"*/"B7BBF-34717", "535622621184");
         pushManager.onStartup(this);
         checkMessage(getIntent());
         
@@ -56,7 +56,7 @@ public class HEART extends DroidGap
 
 	private void checkMessage(Intent intent) {
 		if (null != intent)
-	    {
+	    {/*showMessage("push message is ");*/
 	        if (intent.hasExtra(PushManager.PUSH_RECEIVE_EVENT))
 	        {
 	            showMessage("push message is " + intent.getExtras().getString(PushManager.PUSH_RECEIVE_EVENT));
@@ -81,6 +81,6 @@ public class HEART extends DroidGap
 	}
 
 	private void showMessage(String message) {
-		Toast.makeText(this, "damn it!", Toast.LENGTH_LONG).show();
+		Toast.makeText(this, message, Toast.LENGTH_LONG).show();
 	}
 }
