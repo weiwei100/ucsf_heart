@@ -3,7 +3,7 @@
     "settings": {
         "urlPrefix": "http://localhost:881/",
         "spacesToIndent": "tab",
-        "exportPath": "/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/www",
+        "exportPath": "/home/iaomw/ucsf_heart/build/www",
         "sdkPath": "",
         "lineEnding": "LF",
         "genTimestamps": true,
@@ -231,6 +231,12 @@
                 "app/view/emiReflection5.js"
             ],
             "className": "emiReflection5"
+        },
+        "d19f9e55-066f-4a20-92f6-b366da455211": {
+            "paths": [
+                "metadata/resource/js2"
+            ],
+            "className": "js2"
         }
     },
     "viewOrderMap": {
@@ -269,7 +275,8 @@
         "resource": [
             "a2531373-fbeb-4cc3-9d43-10a6dc7525be",
             "5dac7843-38ea-4c4a-a25d-2189c9be0da2",
-            "9a48f17e-e509-4bad-aed3-b00a4e7d72b4"
+            "9a48f17e-e509-4bad-aed3-b00a4e7d72b4",
+            "d19f9e55-066f-4a20-92f6-b366da455211"
         ],
         "app": [
             "application"

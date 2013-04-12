@@ -14,19 +14,23 @@ function initPushwoosh()
     );
  
     document.addEventListener('push-notification', function(event) {
-        var title = event.notification.title;
-            var userData = event.notification.userdata;
+	var title = event.notification.title;
+	var userData = event.notification.userdata;
  
-            if(typeof(userData) != "undefined") {
-            console.warn('user data: ' + JSON.stringify(userData));
-        }
- 
+	if(typeof(userData) != "undefined") {
+	  console.warn('user data: ' + JSON.stringify(userData));
+	}
+	
+	var EMXs = Ext.getStore('EMXs');
+	var form = Ext.create('HEART.view.emaType1');
+	var emx = EMXs.findRecord('type', 'emaType1');
+	form.record_data = emx;
+	Ext.Viewport.setActiveItem(form);
         //navigator.notification.alert(title);
     });
 }
 
 function init() {
     document.addEventListener("deviceready", initPushwoosh, true);
- 
     //rest of the code
 }

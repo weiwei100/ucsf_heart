@@ -6,7 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "url": "base64-webtoolkit.js",
+        "url": "base64-toolkit.js",
         "defer": false
     },
     "designerId": "9a48f17e-e509-4bad-aed3-b00a4e7d72b4"

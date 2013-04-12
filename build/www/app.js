@@ -13,7 +13,6 @@
  * Do NOT hand edit this file.
  */
 
-//@require @packageOverrides
 Ext.Loader.setConfig({
 
 });
@@ -21,7 +20,8 @@ Ext.Loader.setConfig({
 Ext.application({
 
 	requires: [
-		'Ext.device.Device'
+		'Ext.device.Device',
+		'Ext.device.Connection'
 	],
 	models: [
 		'User',
@@ -43,14 +43,14 @@ Ext.application({
 		'emiAudio2',
 		'emiAudio3',
 		'emiReflection1',
+		'emiReflection0',
 		'emiReflection2',
 		'emiReflection3',
 		'emiReflection4',
 		'emiReflection5'
 	],
 	controllers: [
-		'ExercisesController',
-		'ExerciseController',
+		'EMXsController',
 		'MainController'
 	],
 	name: 'HEART',

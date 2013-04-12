@@ -59,22 +59,6 @@
                     "designerId": "bf3b7157-6010-46f8-9d6a-fb087fdba9d0"
                 },
                 {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": null,
-                        "html": "Stop and notice your body then your emotions. How much stress are you aware of right now?",
-                        "itemId": "homeHow",
-                        "styleHtmlContent": true,
-                        "designer|userClassName": "MyLabel10"
-                    },
-                    "designerId": "f5751c9d-42df-4869-811f-6d8a2ea2864d"
-                },
-                {
                     "type": "Ext.field.Slider",
                     "reference": {
                         "name": "items",
@@ -85,11 +69,12 @@
                         "centered": false,
                         "disabled": false,
                         "docked": null,
+                        "html": null,
                         "itemId": "homeSlider",
                         "designer|userClassName": "MySliderField11",
                         "clearIcon": null,
-                        "label": null,
-                        "labelAlign": "bottom",
+                        "label": "Stop and notice your body then your emotions. Why are you aware of right now? <br/> (left=overwhelmed, right=balance)",
+                        "labelAlign": "top",
                         "value": [
                             50
                         ]
@@ -343,7 +328,7 @@
                         "docked": null,
                         "itemId": "setNotifications",
                         "designer|userClassName": "MyButton2",
-                        "text": "Set More or Fewer Notifications"
+                        "text": "Set Notification Frequency"
                     },
                     "designerId": "658a955a-b968-4ee5-9803-7856021b1b6e"
                 }

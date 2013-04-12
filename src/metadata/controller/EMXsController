@@ -164,8 +164,6 @@
                     "var values = form.getValues();",
                     "var content = values;",
                     "",
-                    "console.log(form.record_data);",
-                    "",
                     "var type = form.record_data.get('type');",
                     "",
                     "content.type = type;",
@@ -183,6 +181,8 @@
                     "};",
                     "",
                     "AJAX.toSensor(content, succ, fail);",
+                    "",
+                    "form.destroy();",
                     "",
                     "this.getExercises().pop();"
                 ],
