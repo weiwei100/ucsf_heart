@@ -1,0 +1,141 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "disabled": false,
+        "designer|userClassName": "EMIGeneralMindfulness"
+    },
+    "designerId": "74708139-d538-43ee-93f9-9e694bf2ef61",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": false,
+                "designer|userClassName": "MyFieldSet",
+                "title": "<center>Take A Moment<center>"
+            },
+            "designerId": "ed7dc267-c453-4f61-9895-82dc486e2055",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Wherever you are in this moment...",
+                        "designer|userClassName": "MyLabel6"
+                    },
+                    "designerId": "aebdc730-1705-4685-bef2-e40fb432769d"
+                },
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Feeling your feet planted on the ground",
+                        "labelWidth": "80%",
+                        "value": null
+                    },
+                    "designerId": "614e079e-0fe7-4493-8d66-b7a67389e782"
+                },
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Feeling your breath supporting you",
+                        "labelWidth": "80%",
+                        "value": ""
+                    },
+                    "designerId": "7405ce3e-032b-4373-b7ac-b0933be7345d"
+                },
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Feeling your body just as it is",
+                        "labelWidth": "80%",
+                        "value": null
+                    },
+                    "designerId": "b8ead39d-6b8e-4ad2-aa40-3c47327ad061"
+                },
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Breathing with everything",
+                        "labelWidth": "80%",
+                        "value": null
+                    },
+                    "designerId": "1437fcf7-cfe4-465c-acb8-4e624d37e3fa"
+                },
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "label": "Just as it is",
+                        "labelWidth": "80%",
+                        "value": null
+                    },
+                    "designerId": "55153c2a-cf5e-4b7e-aeff-04c3272376e5"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "exercise",
+                        "disabled": null,
+                        "designer|userClassName": "MyButton1",
+                        "text": "Done"
+                    },
+                    "designerId": "069ab68c-f952-47a0-b4b0-46ab38e53443",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

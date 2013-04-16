@@ -1,0 +1,74 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EMAType1"
+    },
+    "designerId": "7d969f35-80f6-497f-9677-8bc260ef4b83",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "designer|userClassName": "MyFieldSet5",
+                "hideOnMaskTap": false,
+                "modal": false,
+                "instructions": null,
+                "title": "What is happening right now?"
+            },
+            "designerId": "9ad08515-b391-4810-99e2-f9c0971e0a2b",
+            "cn": [
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySliderField7",
+                        "label": "How much stress are you experiencing in this moment? <br/> (left=none, right=alot)",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "stress",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "8e631a67-460d-4e9b-b9e5-6f12d0b6020d"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "exercise",
+                        "disabled": null,
+                        "designer|userClassName": "MyButton7",
+                        "text": "Done"
+                    },
+                    "designerId": "43994e75-d9e0-4b3c-8fc0-38a5b9c10a07",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EMITrackExercise"
+    },
+    "designerId": "56a5426b-4a72-4fc0-a2bf-5d12256de530",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet21",
+                "title": "<center>Did you exercise today?<center>"
+            },
+            "designerId": "6e7a520f-a133-4b41-b03f-5baa8714ebde",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton35",
+                        "text": "Not today"
+                    },
+                    "designerId": "1532b269-7e0f-4ca5-a3ef-442d76ca711a"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Yes. <br/><br/> How many minutes?",
+                        "itemId": "describe",
+                        "designer|userClassName": "MyLabel23"
+                    },
+                    "designerId": "9e8ef21d-1b5f-449e-bb60-30f84bb5efa0"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField4",
+                        "label": "min",
+                        "labelAlign": "right",
+                        "name": "time"
+                    },
+                    "designerId": "6b4f8de7-9531-4f0d-a123-66eb0208dad7"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton36",
+                        "text": "Done"
+                    },
+                    "designerId": "88af972b-fce4-4d87-9306-a8faf4f55fd9"
+                }
+            ]
+        }
+    ]
+}

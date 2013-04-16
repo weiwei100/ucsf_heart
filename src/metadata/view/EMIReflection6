@@ -1,0 +1,138 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "html": null,
+        "designer|userClassName": "EMIReflection6"
+    },
+    "designerId": "e0e2a56e-a1c7-44bb-a49b-ed468cbfdcaf",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet6",
+                "title": null
+            },
+            "designerId": "9e04c90d-d11a-4f3e-9e96-ef39da0d47ce",
+            "cn": [
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "pre-slider",
+                        "designer|userClassName": "MySliderField15",
+                        "label": "How do you feel (left=overwhelmed, right=balanced)?",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "pre-slider",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "78637c73-c92b-4ebf-b3b7-70345d7b1221"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<center><b>Reflect</b></center>",
+                        "designer|userClassName": "MyLabel9"
+                    },
+                    "designerId": "5fe5398f-dbd7-4b86-9e48-9d64b5b34d26"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton20",
+                        "iconCls": "compose",
+                        "iconMask": true,
+                        "text": "Write"
+                    },
+                    "designerId": "7edabf05-f8ac-466c-858e-4a00f610d142"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextArea1",
+                        "label": "What habitual thoughts or stories are shaping how I experience my self in this moment?",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "reflect",
+                        "required": true,
+                        "placeHolder": null
+                    },
+                    "designerId": "8ab7f77b-e375-47d2-b761-19dd2d84a406"
+                },
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "post-slider",
+                        "designer|userClassName": "MySliderField16",
+                        "label": "How do you feel (left=overwhelmed, right=balanced)?",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "post-slider",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "47afa6d8-63a3-4813-be33-2b9a879211d2"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "exercise",
+                        "disabled": null,
+                        "designer|userClassName": "MyButton11",
+                        "text": "Done"
+                    },
+                    "designerId": "a50fb541-30cb-43b1-9eb2-ddbfb6a0e1e6",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

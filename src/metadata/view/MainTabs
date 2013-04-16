@@ -6,7 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
+        "container|animation": null,
+        "container|animation.duration": null,
         "id": null,
+        "showAnimation": [
+            "{type :\"fadeIn\", duration : 1024}"
+        ],
         "designer|userClassName": "MainTabs",
         "designer|userAlias": "mainview",
         "designer|initialView": true
@@ -23,11 +28,30 @@
             "userConfig": {
                 "title": "Home",
                 "iconCls": "home",
+                "centered": null,
                 "id": "homepanel",
-                "designer|userClassName": "MyFormPanel4"
+                "styleHtmlContent": null,
+                "designer|userClassName": "MyFormPanel4",
+                "layout": null,
+                "modal": null
             },
             "designerId": "ae4b176d-43a2-49de-98d6-2638de2b7330",
             "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 128,
+                        "itemId": "homeIcon",
+                        "designer|userClassName": "MyImg",
+                        "src": "heart-icon"
+                    },
+                    "designerId": "2f5c8c58-30ac-4854-8d32-759ddaba81d9"
+                },
                 {
                     "type": "Ext.Label",
                     "reference": {
@@ -37,7 +61,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "docked": null,
-                        "html": "My intention for this week is:",
+                        "html": "<center>My intention for this week is:</center>",
                         "itemId": "homeTitle",
                         "designer|userClassName": "MyLabel"
                     },
@@ -51,10 +75,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "baseCls": "x-html",
                         "html": null,
                         "itemId": "editIntention",
                         "designer|userClassName": "MyButton",
-                        "text": "Here"
+                        "iconCls": "compose",
+                        "iconMask": true,
+                        "text": "<b>press here to set</b>"
                     },
                     "designerId": "bf3b7157-6010-46f8-9d6a-fb087fdba9d0"
                 },
@@ -66,15 +93,16 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "centered": false,
-                        "disabled": false,
+                        "centered": null,
+                        "disabled": null,
                         "docked": null,
                         "html": null,
                         "itemId": "homeSlider",
                         "designer|userClassName": "MySliderField11",
                         "clearIcon": null,
-                        "label": "Stop and notice your body then your emotions. Why are you aware of right now? <br/> (left=overwhelmed, right=balance)",
+                        "label": "Stop and notice your body then your emotions. What are you aware of right now? <br/> (left=overwhelmed, right=balance)",
                         "labelAlign": "top",
+                        "labelWrap": true,
                         "value": [
                             50
                         ]
@@ -174,6 +202,7 @@
             "userConfig": {
                 "title": "Settings",
                 "iconCls": "settings",
+                "centered": null,
                 "id": "settings",
                 "designer|userClassName": "MyFormPanel6"
             },
@@ -292,7 +321,7 @@
                         "required": true,
                         "maxValue": null,
                         "minValue": null,
-                        "stepValue": 5,
+                        "stepValue": 1,
                         "groupButtons": false,
                         "increment": 64
                     },
@@ -311,7 +340,7 @@
                         "label": "Height",
                         "name": "height",
                         "required": true,
-                        "stepValue": 5,
+                        "stepValue": 1,
                         "groupButtons": false,
                         "increment": 64
                     },
@@ -361,15 +390,15 @@
                 "implHandler": [
                     "this.callParent();",
                     "",
-                    "var uuid = Ext.device.Device.uuid;",
-                    "var user = Ext.getStore(\"Users\").last();",
+                    "var user = window.localStorage.getItem('user');",
                     "var settings = this.child('#settings');",
                     "",
                     "if(user==null){",
                     "\tthis.getTabBar().hide();",
                     "\tthis.setActiveItem(settings);",
                     "}else{",
-                    "\tsettings.setRecord(user);",
+                    "\tuser = JSON.parse(user);",
+                    "\tsettings.setValues(user);",
                     "}"
                 ]
             },

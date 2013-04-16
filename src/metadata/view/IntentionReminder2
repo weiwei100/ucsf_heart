@@ -1,0 +1,86 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "IntentionReminder2"
+    },
+    "designerId": "4c196440-232d-4374-887b-88b262b48b91",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet17",
+                "title": "<center>Living from your intention today.</center>"
+            },
+            "designerId": "06e270bc-9471-48da-a378-d73338a91929",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<p>Your current intention is: <br/> <b>here.</b></p> <br/> <p>Take a few moments and feel your intention.</p> <p>Visualize your day today and imagine bringing your intention into whatever you do.</p>",
+                        "designer|userClassName": "MyLabel19"
+                    },
+                    "designerId": "e8b48fcc-169d-47f5-abbe-8b01947e0a72"
+                },
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySliderField44",
+                        "label": "Can you feel this?<br/>(left=not at all, right=very much so)",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "04f04642-5f49-409c-8b37-299f19880f32"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton28",
+                        "text": "Done"
+                    },
+                    "designerId": "200dfce8-86a4-4e3e-8923-61be00e63387"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton29",
+                        "text": "Change my intention"
+                    },
+                    "designerId": "d2d7d3b1-edf1-41df-b599-d014c3484485"
+                }
+            ]
+        }
+    ]
+}

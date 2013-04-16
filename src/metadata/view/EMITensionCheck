@@ -18,8 +18,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "centered": false,
                 "designer|userClassName": "MyFieldSet",
-                "title": "Tension Check"
+                "title": "<center>Mindful Body-Scan<center>"
             },
             "designerId": "3ec85e59-c81e-4e38-92fb-56146f1ec558",
             "cn": [
@@ -31,7 +32,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "Check off each as you relax it for 3 seconds each.",
+                        "html": "Feel and relax each body part for a few seonds, then check:",
                         "designer|userClassName": "MyLabel6"
                     },
                     "designerId": "bce212dc-819b-4018-a9b6-022e9083aa02"
@@ -60,7 +61,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyCheckbox",
-                        "label": "Left thigh",
+                        "label": "Thighs",
                         "labelWidth": "80%",
                         "value": ""
                     },
@@ -75,7 +76,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyCheckbox",
-                        "label": "Abdomen",
+                        "label": "Belly",
                         "labelWidth": "80%",
                         "value": null
                     },
@@ -90,7 +91,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyCheckbox",
-                        "label": "Upper back",
+                        "label": "Chest",
                         "labelWidth": "80%",
                         "value": null
                     },
@@ -105,7 +106,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyCheckbox",
-                        "label": "Left arm",
+                        "label": "Hands",
                         "labelWidth": "80%",
                         "value": null
                     },
@@ -120,7 +121,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyCheckbox",
-                        "label": "Both hands",
+                        "label": "Hands",
                         "labelWidth": "80%",
                         "value": null
                     },
@@ -135,7 +136,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyCheckbox",
-                        "label": "Cheeks",
+                        "label": "Face & Jaw",
                         "labelWidth": "80%",
                         "value": null
                     },
@@ -150,6 +151,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "action": "exercise",
+                        "disabled": null,
                         "designer|userClassName": "MyButton1",
                         "text": "Done!"
                     },

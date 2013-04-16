@@ -23,11 +23,13 @@
                 "implHandler": [
                     "var exercise = Ext.create('HEART.view.' + record.get(\"type\"));",
                     "exercise.record_data = record;",
+                    "var type = record.get(\"type\");",
+                    "var find = type.indexOf('Reflection')>=0||type.indexOf('Audio')>=0",
                     "",
-                    "if(record.get(\"type\").indexOf('emi')>=0&&Math.random()<AJAX.probability){",
+                    "if(find&&Math.random()<AJAX.probability){",
                     "\tvar field = exercise.child('fieldset');",
-                    "\tfield.child('#pre-slider').hide();",
-                    "\tfield.child('#post-slider').hide();",
+                    "\tfield.child('#pre-slider').destroy();",
+                    "\tfield.child('#post-slider').destroy();",
                     "}",
                     "",
                     "this.getExercises().push(exercise);"
@@ -80,7 +82,8 @@
                 "designer|userClassName": "onExercisesHide",
                 "fn": "onExercisesHide",
                 "implHandler": [
-                    "this.getExercises().pop();"
+                    "this.getExercises().pop();",
+                    "this.getExercises().child('dataview').deselectAll();"
                 ],
                 "name": "hide",
                 "designer|targetType": "Ext.navigation.View",
@@ -182,7 +185,7 @@
                     "",
                     "AJAX.toSensor(content, succ, fail);",
                     "",
-                    "form.destroy();",
+                    "//form.destroy();",
                     "",
                     "this.getExercises().pop();"
                 ],

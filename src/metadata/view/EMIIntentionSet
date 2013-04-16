@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "showAnimation": [
+            "{type :\"fadeIn\", duration : 1024}"
+        ],
         "designer|userClassName": "EMIIntentionSet"
     },
     "designerId": "83d777b4-31f3-46fc-9dd8-9d4803d6c6a2",
@@ -32,7 +35,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "disabled": false,
-                        "html": "<p>Visualize the week ahead. How do you want to carry yourself this week?</p><p>What is this week's intention for  you?</p><p>Examples: self-compassion, me-time, patience.</p>",
+                        "html": "<p>Visualize the week ahead. What do you want to cultivate this week?</p><p>Examples: self-compassion, patience, acceptiance, self-care.</p>",
                         "itemId": "describe",
                         "styleHtmlContent": true,
                         "designer|userClassName": "MyLabel1"
@@ -121,10 +124,12 @@
                                 "designer|userClassName": "onIntentionSave",
                                 "fn": "onIntentionSave",
                                 "implHandler": [
+                                    "var uuid = 'dropboxisawesome'; //device.uuid;",
                                     "var intention = Ext.Viewport.getActiveItem();",
                                     "var text = intention.child('fieldset').child('textareafield').getValue();",
                                     "",
-                                    "var content = { type: 'intention', data: text, user: 'kyle' };",
+                                    "var content = { type: 'intentionSet', data: text, user: uuid };",
+                                    "window.localStorage.setItem('intention', text);",
                                     "",
                                     "var succ = function(response) {",
                                     "\tconsole.log(response);",
@@ -132,7 +137,7 @@
                                     "",
                                     "var\tfail = function(response) {",
                                     "\tvar feeds = Ext.getStore(\"Feeds\");",
-                                    "\tfeeds.add({timestamp: Date.now(), type: 'intention', data: text, user: 'kyle', mark: false});",
+                                    "\tfeeds.add({timestamp: Date.now(), type: 'intentionSet', data: text, user: uuid});",
                                     "\tfeeds.sort(\"timestamp\", 'DESC');\t",
                                     "\tfeeds.sync();",
                                     "};",

@@ -187,7 +187,8 @@ Ext.define('HEART.view.MainTabs', {
 	initialize: function() {
 		this.callParent();
 
-		var uuid = device.uuid;
+		var uuid = Ext.device.Device.uuid;
+		alert(uuid);
 		var user = Ext.getStore("Users").last();
 		var settings = this.child('#settings');
 
