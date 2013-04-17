@@ -80,6 +80,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "hidden": true,
                         "designer|userClassName": "MyTextArea1",
                         "label": "What is more important than being fully present in this moment?",
                         "labelAlign": "top",

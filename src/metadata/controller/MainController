@@ -45,7 +45,7 @@
                     "",
                     "window.localStorage.setItem('home', value);",
                     "",
-                    "var uuid = 'dropboxisawesome'; //device.uuid;",
+                    "var uuid = AJAX.uuid;",
                     "",
                     "var content = { type: 'homePanel', user: uuid, data: value };",
                     "",
@@ -86,7 +86,7 @@
                     "var slider = button.parent.child('sliderfield');",
                     "var value = slider.getValue();",
                     "",
-                    "var uuid = 'dropboxisawesome'; //device.uuid;",
+                    "var uuid = AJAX.uuid;",
                     "",
                     "var content = { type: 'homePanel', user: uuid, data: value };",
                     "",
@@ -129,12 +129,14 @@
                     "}",
                     "",
                     "var values = button.parent.getValues();",
-                    "values.uuid = 'dropboxisawesome'; //device.uuid;",
+                    "values.uuid = AJAX.uuid;",
                     "values.push_set = push_set;",
                     "",
                     "user = JSON.stringify(values);",
                     "",
                     "window.localStorage.setItem('user', user);",
+                    "",
+                    "AJAX.toUser({uuid: AJAX.uuid, wake: values.wake_time, sleep: values.sleep_time});",
                     "",
                     "var form = Ext.create('HEART.view.EMIPushSlider');",
                     "Ext.Viewport.setActiveItem(form);"
@@ -228,26 +230,6 @@
                 ]
             },
             "designerId": "64ac1c69-fee3-4109-8849-00cd10a7c40c"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "onButtonDoneTap",
-                "fn": "onButtonDoneTap",
-                "implHandler": [
-                    "button.disable();",
-                    "setTimeout(function(){button.enable()}, 300000);"
-                ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button[text=Done]"
-            },
-            "designerId": "2eadb79f-4532-4e15-9a03-9cfaf3c1cc00"
         }
     ]
 }

@@ -38,6 +38,31 @@ var AJAX = {
 				}
 			);
 		}
+	},
+	
+	uuid: 'dropboxisawesome', // device.uuid
+	
+	toUser: function(content, succ, fail) {
+	
+		var username = 'breathwear';
+		var password = 'deepbreath';
+	
+		var base = Base64.encode(username + ':' + password);
+		
+		var auth = "Basic " + base;	
+	
+		Ext.Ajax.request({
+			method: 'POST',
+			withCredentials: true,
+			useDefaultXhrHeader: false,
+
+			url: 'http://192.168.1.157:3000/api/users',
+			headers: {Authorization: auth, 'Access-Control-Allow-Origin': '*'},
+
+			params: content,
+			success: succ,
+			failure: fail
+		});
 	}
 
 }

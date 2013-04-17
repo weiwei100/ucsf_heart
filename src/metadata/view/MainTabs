@@ -203,7 +203,9 @@
                 "title": "Settings",
                 "iconCls": "settings",
                 "centered": null,
+                "hidden": null,
                 "id": "settings",
+                "itemId": "myformpanel16",
                 "designer|userClassName": "MyFormPanel6"
             },
             "designerId": "e7443fc1-6b32-4c1d-adbd-54f3b760a2dc",
@@ -247,7 +249,7 @@
                     "designerId": "485db203-2f01-4661-b4da-fb60a6e3e948"
                 },
                 {
-                    "type": "Ext.field.Text",
+                    "type": "Ext.field.Select",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -255,17 +257,15 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "wakeTime",
-                        "designer|userClassName": "MyTextField",
-                        "label": "Wake-up time",
-                        "labelWidth": "50%",
+                        "designer|userClassName": "MySelectField1",
+                        "label": "Wake time",
                         "name": "wake_time",
-                        "required": true,
-                        "autoCorrect": false
+                        "readOnly": false
                     },
-                    "designerId": "1c148c01-595f-4007-a430-cf65fd42e715"
+                    "designerId": "a1bbeb64-14ef-4f45-965e-12c53e7a7f0a"
                 },
                 {
-                    "type": "Ext.field.Text",
+                    "type": "Ext.field.Select",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -273,13 +273,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "sleepTime",
-                        "designer|userClassName": "MyTextField",
+                        "designer|userClassName": "MySelectField1",
                         "label": "Sleep time",
-                        "labelWidth": "50%",
                         "name": "sleep_time",
-                        "required": true
+                        "readOnly": false
                     },
-                    "designerId": "1c144c06-38ad-4a68-a01f-13c46687f93a"
+                    "designerId": "72edc4b0-a099-4f0d-a711-f53baae2eb5b"
                 },
                 {
                     "type": "Ext.field.Select",
@@ -360,6 +359,33 @@
                         "text": "Set Notification Frequency"
                     },
                     "designerId": "658a955a-b968-4ee5-9803-7856021b1b6e"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onSettingsInitialize",
+                        "fn": "onSettingsInitialize",
+                        "implHandler": [
+                            "var options = [];",
+                            "",
+                            "for(i=0;i<24;i++){",
+                            "\toption = { text: i+': 00', value: i };\t",
+                            "\toptions.push(option);",
+                            "\toption = { text: i+': 30', value: i+0.5 };",
+                            "\toptions.push(option);",
+                            "}",
+                            "",
+                            "this.child('#wakeTime').setOptions(options);",
+                            "this.child('#sleepTime').setOptions(options);"
+                        ],
+                        "name": "initialize"
+                    },
+                    "designerId": "f7024b6a-9490-4a40-b4e1-02441d1dfded"
                 }
             ]
         },

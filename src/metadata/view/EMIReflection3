@@ -19,6 +19,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "hidden": false,
                 "designer|userClassName": "MyFieldSet6",
                 "title": null
             },
@@ -80,6 +81,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "hidden": true,
                         "designer|userClassName": "MyTextArea1",
                         "label": "What do I want from my next interaction with my child?",
                         "labelAlign": "top",

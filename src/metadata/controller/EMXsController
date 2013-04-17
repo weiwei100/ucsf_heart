@@ -168,9 +168,10 @@
                     "var content = values;",
                     "",
                     "var type = form.record_data.get('type');",
+                    "var uuid = AJAX.uuid;",
                     "",
                     "content.type = type;",
-                    "content.user = 'kyle';",
+                    "content.user = uuid;",
                     "",
                     "var succ = function(response) {",
                     "\tconsole.log(response);",
@@ -178,14 +179,25 @@
                     "",
                     "var fail = function(response) {",
                     "\tvar feeds = Ext.getStore(\"Feeds\");",
-                    "\tfeeds.add({timestamp: Date.now(), type: type, data: values, mark: false});",
+                    "\tfeeds.add({timestamp: Date.now(), type: type, data: values, user: uuid});",
                     "\tfeeds.sort(\"timestamp\", 'DESC');\t\t",
                     "\tfeeds.sync();",
                     "};",
                     "",
                     "AJAX.toSensor(content, succ, fail);",
                     "",
-                    "//form.destroy();",
+                    "content = { uid: AJAX.uuid };",
+                    "",
+                    "if(type.indexOf('Type')>=0){",
+                    "\tif(type.indexOf('1')>=0)",
+                    "\t\tcontent.emi_type_1=values.stress;",
+                    "\tif(type.indexOf('2')>=0)",
+                    "\t\tcontent.emi_type_2=values.unpleasantness;",
+                    "\tif(type.indexOf('3')>=0)",
+                    "\t\tcontent.emi_type_3=values.anxiety;\t",
+                    "\t",
+                    "\tAJAX.toUser(content);",
+                    "}",
                     "",
                     "this.getExercises().pop();"
                 ],
@@ -206,6 +218,7 @@
                 "designer|userClassName": "onPreSliderChange",
                 "fn": "onPreSliderChange",
                 "implHandler": [
+                    "Slider.setHideAnimation({type :\"fadeOut\", duration : 256});",
                     "Slider.hide();"
                 ],
                 "name": "change",
@@ -225,6 +238,7 @@
                 "designer|userClassName": "onPostSliderChange",
                 "fn": "onPostSliderChange",
                 "implHandler": [
+                    "Slider.setHideAnimation({type :\"fadeOut\", duration : 256});",
                     "Slider.hide();"
                 ],
                 "name": "change",
@@ -232,6 +246,89 @@
                 "designer|controlQuery": "sliderfield[name=post-slider]"
             },
             "designerId": "b52bf379-6cfa-4c81-8bce-17719749c456"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onFieldsetInitialize",
+                "fn": "onFieldsetInitialize",
+                "implHandler": [
+                    "var items = component.getInnerItems();",
+                    "",
+                    "for(i=1;i<items.length;i++){",
+                    "\tcomponent.getAt(i).hide();",
+                    "}",
+                    "",
+                    "var index = 0;",
+                    "",
+                    "for(i=0; i< items.length; i++){",
+                    "\tvar comp = component.getAt(i);",
+                    "\tcomp.index = i;",
+                    "\tvar onChange = function(){",
+                    "\t\t",
+                    "\t\tthis.setHideAnimation({type :\"fadeOut\", duration : 256});",
+                    "\t\tthis.hide(); ",
+                    "\t\tvar next = component.getAt(this.index+1);",
+                    "\t\t",
+                    "\t\tnext.setShowAnimation({type :\"fadeIn\", duration : 1024});",
+                    "\t\tnext.show();",
+                    "\t};",
+                    "\t",
+                    "    comp.on({ change: onChange });",
+                    "}"
+                ],
+                "name": "initialize",
+                "designer|targetType": "Ext.form.FieldSet",
+                "designer|controlQuery": "fieldset[instructions=goola]"
+            },
+            "designerId": "9372221e-b368-4ccb-862f-8a3e0dad0bc0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onWriteTap",
+                "fn": "onWriteTap",
+                "implHandler": [
+                    "button.setHideAnimation({type :\"fadeOut\", duration : 256});",
+                    "button.hide();",
+                    "var textarea = button.parent.child('textareafield')",
+                    "textarea.setShowAnimation({type :\"fadeIn\", duration : 768});",
+                    "textarea.show();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[text=Write]"
+            },
+            "designerId": "1c0ebff3-83ed-43e3-bf33-f25730f03e1c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTrackDone",
+                "fn": "onTrackDone",
+                "implHandler": [
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button"
+            },
+            "designerId": "4ebf9412-a750-4e3a-b467-df6917cd87d1"
         }
     ]
 }

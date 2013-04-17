@@ -20,6 +20,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyFieldSet6",
+                "instructions": "goola",
                 "title": "What emotions are you experiencing in this moment? <br> (left=none, right=a lot)"
             },
             "designerId": "e839560e-d96e-4c34-86e1-79b2079841a5",

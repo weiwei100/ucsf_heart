@@ -8,7 +8,7 @@
     "userConfig": {
         "designer|userClassName": "EMITrackExercise"
     },
-    "designerId": "56a5426b-4a72-4fc0-a2bf-5d12256de530",
+    "designerId": "b0acc8ba-5db7-4c55-a02b-e0971e946a78",
     "cn": [
         {
             "type": "Ext.form.FieldSet",
@@ -21,7 +21,7 @@
                 "designer|userClassName": "MyFieldSet21",
                 "title": "<center>Did you exercise today?<center>"
             },
-            "designerId": "6e7a520f-a133-4b41-b03f-5baa8714ebde",
+            "designerId": "d43f5438-5037-4d97-bb79-4a400cd4bff6",
             "cn": [
                 {
                     "type": "Ext.Button",
@@ -31,10 +31,36 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "not",
                         "designer|userClassName": "MyButton35",
                         "text": "Not today"
                     },
-                    "designerId": "1532b269-7e0f-4ca5-a3ef-442d76ca711a"
+                    "designerId": "ceb87d14-338c-4650-a289-7f88bee2cdf1",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onNotTap",
+                                "fn": "onNotTap",
+                                "implHandler": [
+                                    "var meditation = window.localStorage.getItem('exercise');",
+                                    "",
+                                    "if(meditation==null){",
+                                    "\tmeditation = 0;",
+                                    "}",
+                                    "",
+                                    "Ext.Msg.alert(':)', \"<div align='center'>[\"+ meditation +\"]min exercised so far.</div>\", Ext.emptyFn);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "a27dffab-75b3-46c9-9490-33154190fcaf"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Label",
@@ -48,7 +74,7 @@
                         "itemId": "describe",
                         "designer|userClassName": "MyLabel23"
                     },
-                    "designerId": "9e8ef21d-1b5f-449e-bb60-30f84bb5efa0"
+                    "designerId": "310a329d-874b-4733-ac43-d6baf685a5b1"
                 },
                 {
                     "type": "Ext.field.Text",
@@ -58,12 +84,39 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "centered": null,
+                        "itemId": "mytextfield4",
                         "designer|userClassName": "MyTextField4",
                         "label": "min",
                         "labelAlign": "right",
-                        "name": "time"
+                        "name": "time",
+                        "required": true
                     },
-                    "designerId": "6b4f8de7-9531-4f0d-a123-66eb0208dad7"
+                    "designerId": "1c382c4a-cff8-43b2-a2f6-603497efacb8",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMyTimeChange",
+                                "fn": "onMyTimeChange",
+                                "implHandler": [
+                                    "var value = textfield.getValue();",
+                                    "",
+                                    "if(/\\D+/.test(value)){",
+                                    "\tExt.Msg.alert(';(', \"<div align='center'>Please don't enter letters or other characters.</div>\", Ext.emptyFn);",
+                                    "\ttextfield.setValue(0);",
+                                    "}"
+                                ],
+                                "name": "keyup"
+                            },
+                            "designerId": "a26ec347-4b72-4d2f-be91-002f2f69958f"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Button",
@@ -73,10 +126,62 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "mybutton36",
                         "designer|userClassName": "MyButton36",
                         "text": "Done"
                     },
-                    "designerId": "88af972b-fce4-4d87-9306-a8faf4f55fd9"
+                    "designerId": "61287697-8936-4839-ab18-3fa2358809dc",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMyTimeSave",
+                                "fn": "onMyTimeSave",
+                                "implHandler": [
+                                    "var exercise = window.localStorage.getItem('exercise');",
+                                    "var plus = button.parent.child('textfield').getValue();",
+                                    "",
+                                    "if(exercise==null){",
+                                    "\texercise=0;",
+                                    "}",
+                                    "",
+                                    "exercise = parseInt(exercise);",
+                                    "plus = parseInt(plus);",
+                                    "",
+                                    "exercise += plus;",
+                                    "",
+                                    "window.localStorage.setItem('exercise', exercise);",
+                                    "",
+                                    "var type = 'exerciseTrack';",
+                                    "var uuid = AJAX.uuid;",
+                                    "",
+                                    "var content = { type: type, data: plus, user: uuid};",
+                                    "",
+                                    "var succ = function(response) {",
+                                    "\tconsole.log(response);",
+                                    "};",
+                                    "",
+                                    "var fail = function(response) {",
+                                    "\tvar feeds = Ext.getStore(\"Feeds\");",
+                                    "\tfeeds.add({timestamp: Date.now(), type: type, data: plus, user: uuid});",
+                                    "\tfeeds.sort(\"timestamp\", 'DESC');\t\t",
+                                    "\tfeeds.sync();",
+                                    "};",
+                                    "",
+                                    "AJAX.toSensor(content, succ, fail);",
+                                    "",
+                                    "this.destroy();"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "d2b33b80-4edd-4731-9b28-62e675747b79"
+                        }
+                    ]
                 }
             ]
         }

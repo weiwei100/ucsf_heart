@@ -13,6 +13,19 @@
     "designerId": "8804c401-278b-4ed3-a95a-f3721979a040",
     "cn": [
         {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "First, take a moment. Then, are you aware of trying to not feel something right now?<br/>(left=none, right=a lot)",
+                "designer|userClassName": "MyLabel19"
+            },
+            "designerId": "6374dd3d-ba74-4a6d-ba2b-6b2a1af1ea5c"
+        },
+        {
             "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
@@ -22,23 +35,11 @@
             "userConfig": {
                 "designer|userClassName": "MyFieldSet6",
                 "scrollable": null,
+                "instructions": "goola",
                 "title": null
             },
             "designerId": "434f5ae2-09d0-46a0-8d05-ec3d73c1aa49",
             "cn": [
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "html": "First, take a moment. Then, are you aware of trying to not feel something right now?<br/>(left=none, right=a lot)",
-                        "designer|userClassName": "MyLabel19"
-                    },
-                    "designerId": "6374dd3d-ba74-4a6d-ba2b-6b2a1af1ea5c"
-                },
                 {
                     "type": "Ext.field.Slider",
                     "reference": {

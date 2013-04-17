@@ -24,30 +24,34 @@ Ext.application({
 		'Ext.device.Connection'
 	],
 	models: [
-		'User',
 		'Feed',
 		'EMX'
 	],
 	stores: [
 		'Feeds',
-		'EMXs',
-		'Users'
+		'EMXs'
 	],
 	views: [
 		'MainTabs',
 		'EMIIntentionSet',
-		'emaType1',
-		'emaType2',
-		'emaType3',
-		'emiAudio1',
-		'emiAudio2',
-		'emiAudio3',
-		'emiReflection1',
-		'emiReflection0',
-		'emiReflection2',
-		'emiReflection3',
-		'emiReflection4',
-		'emiReflection5'
+		'EMAType1',
+		'EMAType2',
+		'EMAType3',
+		'EMIAudio1',
+		'EMIAudio2',
+		'EMIAudio3',
+		'EMIReflection1',
+		'EMIReflection2',
+		'EMIReflection3',
+		'EMIReflection4',
+		'EMIReflection5',
+		'EMAType4',
+		'EMIGeneralMindfulness',
+		'EMIReflection6',
+		'IntentionSavorShare',
+		'EMAType5',
+		'EMITrackExercise',
+		'IntentionReminder2'
 	],
 	controllers: [
 		'EMXsController',

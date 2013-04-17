@@ -22,6 +22,7 @@
                 "designer|userClassName": "MyFieldSet3",
                 "hideOnMaskTap": null,
                 "modal": false,
+                "instructions": "goola",
                 "title": "What is happening in your body right now?"
             },
             "designerId": "1d917d3a-18d9-4be5-bd9d-17939b0930a8",

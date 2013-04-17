@@ -246,22 +246,6 @@
             ],
             "className": "IntentionReminder1"
         },
-        "4c196440-232d-4374-887b-88b262b48b91": {
-            "paths": [
-                "metadata/view/IntentionReminder2",
-                "app/view/override/IntentionReminder2.js",
-                "app/view/IntentionReminder2.js"
-            ],
-            "className": "IntentionReminder2"
-        },
-        "3f869208-94d0-4fc2-8336-4c3fd95539b3": {
-            "paths": [
-                "metadata/view/IntentionSavorShare",
-                "app/view/override/IntentionSavorShare.js",
-                "app/view/IntentionSavorShare.js"
-            ],
-            "className": "IntentionSavorShare"
-        },
         "0fbc87db-4927-439d-bca2-70278fc51350": {
             "paths": [
                 "metadata/view/EMAType5",
@@ -278,7 +262,23 @@
             ],
             "className": "EMITrackMeditation"
         },
-        "56a5426b-4a72-4fc0-a2bf-5d12256de530": {
+        "7abf8546-081f-4ab7-ae1c-d0cb96a5013b": {
+            "paths": [
+                "metadata/view/IntentionReminder2",
+                "app/view/override/IntentionReminder2.js",
+                "app/view/IntentionReminder2.js"
+            ],
+            "className": "IntentionReminder2"
+        },
+        "400ba324-109a-4e35-8271-2da4c4c0eddb": {
+            "paths": [
+                "metadata/view/IntentionSavorShare",
+                "app/view/override/IntentionSavorShare.js",
+                "app/view/IntentionSavorShare.js"
+            ],
+            "className": "IntentionSavorShare"
+        },
+        "b0acc8ba-5db7-4c55-a02b-e0971e946a78": {
             "paths": [
                 "metadata/view/EMITrackExercise",
                 "app/view/override/EMITrackExercise.js",
@@ -309,10 +309,10 @@
             "bae2e87f-6d72-44ed-8b20-c074c41bdd6f",
             "e0e2a56e-a1c7-44bb-a49b-ed468cbfdcaf",
             "66ae294e-a774-4832-9f70-3a677c4a7503",
-            "4c196440-232d-4374-887b-88b262b48b91",
-            "3f869208-94d0-4fc2-8336-4c3fd95539b3",
+            "7abf8546-081f-4ab7-ae1c-d0cb96a5013b",
+            "400ba324-109a-4e35-8271-2da4c4c0eddb",
             "c478480b-9b04-4a50-ae90-cada9879ba21",
-            "56a5426b-4a72-4fc0-a2bf-5d12256de530"
+            "b0acc8ba-5db7-4c55-a02b-e0971e946a78"
         ],
         "store": [
             "39444413-4912-4805-9d9a-77c8467bef15",

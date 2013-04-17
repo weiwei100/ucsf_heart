@@ -31,10 +31,24 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "Your current intention is: <br/> <b>here.</b>",
+                        "html": "Your current intention is:",
+                        "itemId": "describe",
                         "designer|userClassName": "MyLabel19"
                     },
                     "designerId": "b5a693b6-bc18-48a1-95d0-cf3d04f78cd5"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "intention",
+                        "designer|userClassName": "MyLabel4"
+                    },
+                    "designerId": "312c6d75-e591-4434-8249-18839c357034"
                 },
                 {
                     "type": "Ext.field.Slider",
@@ -44,6 +58,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "being",
                         "designer|userClassName": "MySliderField44",
                         "label": "Can you connection with and feel your intention right now? <br/> (left=not at all, right=a lot)",
                         "labelAlign": "top",
@@ -62,10 +77,53 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "reminderDone",
                         "designer|userClassName": "MyButton28",
                         "text": "Done"
                     },
-                    "designerId": "363a062c-09b3-44a5-9dc2-2de66fbb18b1"
+                    "designerId": "363a062c-09b3-44a5-9dc2-2de66fbb18b1",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onReminderDoneTap",
+                                "fn": "onReminderDoneTap",
+                                "implHandler": [
+                                    "var being = button.parent.child('#being');",
+                                    "var value = being.getValue();",
+                                    "var content = {data: value};",
+                                    "",
+                                    "var type = 'intentionReminder1';",
+                                    "var uuid =  AJAX.uuid;",
+                                    "",
+                                    "content.type = type;",
+                                    "content.user = uuid;",
+                                    "",
+                                    "var succ = function(response) {",
+                                    "\tconsole.log(response);",
+                                    "};",
+                                    "",
+                                    "var fail = function(response) {",
+                                    "\tvar feeds = Ext.getStore(\"Feeds\");",
+                                    "\tfeeds.add({timestamp: Date.now(), type: type, data: value, user: uuid});",
+                                    "\tfeeds.sort(\"timestamp\", 'DESC');\t\t",
+                                    "\tfeeds.sync();",
+                                    "};",
+                                    "",
+                                    "AJAX.toSensor(content, succ, fail);",
+                                    "",
+                                    "this.destroy();"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "525d6a1f-4e51-4b0e-8365-94aadcd2ebdb"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Button",
@@ -75,12 +133,53 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "editIntention",
                         "designer|userClassName": "MyButton29",
                         "text": "Change my intention"
                     },
-                    "designerId": "d68bedfc-ad4b-4b74-8bff-31296208505b"
+                    "designerId": "d68bedfc-ad4b-4b74-8bff-31296208505b",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onEditIntentionTap",
+                                "fn": "onEditIntentionTap",
+                                "implHandler": [
+                                    "var intention = Ext.create('HEART.view.EMIIntentionSet');",
+                                    "Ext.Viewport.setActiveItem(intention);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "bd3f2683-92a3-4774-bc9a-ea012d2bc421"
+                        }
+                    ]
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "initialize",
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "var intention = window.localStorage.getItem('intention');",
+                    "if(intention!=null){",
+                    "\tthis.child('fieldset').child('#intention').setHtml(intention);",
+                    "}"
+                ]
+            },
+            "designerId": "89438424-e8ed-4c57-b0f3-6199648c1be4"
         }
     ]
 }

@@ -22,7 +22,7 @@
                 "designer|userClassName": "MyFieldSet5",
                 "hideOnMaskTap": false,
                 "modal": false,
-                "instructions": null,
+                "instructions": "goola",
                 "title": "What is happening right now?"
             },
             "designerId": "9ad08515-b391-4810-99e2-f9c0971e0a2b",

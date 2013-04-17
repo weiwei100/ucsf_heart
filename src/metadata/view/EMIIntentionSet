@@ -34,6 +34,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "centered": null,
                         "disabled": false,
                         "html": "<p>Visualize the week ahead. What do you want to cultivate this week?</p><p>Examples: self-compassion, patience, acceptiance, self-care.</p>",
                         "itemId": "describe",
@@ -124,8 +125,8 @@
                                 "designer|userClassName": "onIntentionSave",
                                 "fn": "onIntentionSave",
                                 "implHandler": [
-                                    "var uuid = 'dropboxisawesome'; //device.uuid;",
-                                    "var intention = Ext.Viewport.getActiveItem();",
+                                    "var uuid = AJAX.uuid;",
+                                    "var intention = button.parent.parent;",
                                     "var text = intention.child('fieldset').child('textareafield').getValue();",
                                     "",
                                     "var content = { type: 'intentionSet', data: text, user: uuid };",
@@ -143,6 +144,12 @@
                                     "};",
                                     "",
                                     "AJAX.toSensor(content, succ, fail);",
+                                    "",
+                                    "fail = function(response) {",
+                                    "\tconsole.log(response);",
+                                    "};",
+                                    "",
+                                    "AJAX.toUser({uuid: AJAX.uuid, intention_set: true}, succ, fail);",
                                     "",
                                     "intention.destroy();"
                                 ],

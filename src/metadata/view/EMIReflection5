@@ -80,6 +80,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "hidden": true,
                         "designer|userClassName": "MyTextArea1",
                         "label": "What habitual thoughts or stories are shaping how I experience my child in this moment?",
                         "labelAlign": "top",

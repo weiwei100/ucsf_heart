@@ -31,10 +31,36 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "not",
                         "designer|userClassName": "MyButton35",
                         "text": "Not today"
                     },
-                    "designerId": "1dc429ca-694f-4063-91cd-30e1e0accad4"
+                    "designerId": "1dc429ca-694f-4063-91cd-30e1e0accad4",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onNotTap",
+                                "fn": "onNotTap",
+                                "implHandler": [
+                                    "var meditation = window.localStorage.getItem('meditation');",
+                                    "",
+                                    "if(meditation==null){",
+                                    "\tmeditation = 0;",
+                                    "}",
+                                    "",
+                                    "Ext.Msg.alert(':)', \"<div align='center'>[\"+ meditation +\"]min meditated so far.</div>\", Ext.emptyFn);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "e72530f8-af57-4363-a983-ce2985fdc7c9"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Label",
@@ -58,12 +84,39 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "centered": null,
+                        "itemId": "mytextfield4",
                         "designer|userClassName": "MyTextField4",
                         "label": "min",
                         "labelAlign": "right",
-                        "name": "time"
+                        "name": "time",
+                        "required": true
                     },
-                    "designerId": "3263567f-70b1-4d34-8a1d-ed7eab32087d"
+                    "designerId": "3263567f-70b1-4d34-8a1d-ed7eab32087d",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMyTimeChange",
+                                "fn": "onMyTimeChange",
+                                "implHandler": [
+                                    "var value = textfield.getValue();",
+                                    "",
+                                    "if(/\\D+/.test(value)){",
+                                    "\tExt.Msg.alert(';(', \"<div align='center'>Please don't enter letters or other characters.</div>\", Ext.emptyFn);",
+                                    "\ttextfield.setValue(0);",
+                                    "}"
+                                ],
+                                "name": "keyup"
+                            },
+                            "designerId": "4b11a0c2-b82d-46a1-96fd-666d7acaffa2"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Button",
@@ -73,10 +126,62 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "mybutton36",
                         "designer|userClassName": "MyButton36",
                         "text": "Done"
                     },
-                    "designerId": "adf83247-d89f-465c-a35e-fb3f23b2338a"
+                    "designerId": "adf83247-d89f-465c-a35e-fb3f23b2338a",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMyTimeSave",
+                                "fn": "onMyTimeSave",
+                                "implHandler": [
+                                    "var meditation = window.localStorage.getItem('meditation');",
+                                    "var plus = button.parent.child('textfield').getValue();",
+                                    "",
+                                    "if(meditation==null){",
+                                    "\tmeditation=0;",
+                                    "}",
+                                    "",
+                                    "meditation = parseInt(meditation);",
+                                    "plus = parseInt(plus);",
+                                    "",
+                                    "meditation += plus;",
+                                    "",
+                                    "window.localStorage.setItem('meditation', meditation);",
+                                    "",
+                                    "var type = 'meditationTrack';",
+                                    "var uuid = uuid;",
+                                    "",
+                                    "var content = { type: type, data: plus, user: uuid};",
+                                    "",
+                                    "var succ = function(response) {",
+                                    "\tconsole.log(response);",
+                                    "};",
+                                    "",
+                                    "var fail = function(response) {",
+                                    "\tvar feeds = Ext.getStore(\"Feeds\");",
+                                    "\tfeeds.add({timestamp: Date.now(), type: type, data: plus, user: uuid});",
+                                    "\tfeeds.sort(\"timestamp\", 'DESC');\t\t",
+                                    "\tfeeds.sync();",
+                                    "};",
+                                    "",
+                                    "AJAX.toSensor(content, succ, fail);",
+                                    "",
+                                    "this.destroy();"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "b6fc34af-c5ac-4bb5-b58b-1fdbb6356cb0"
+                        }
+                    ]
                 }
             ]
         }

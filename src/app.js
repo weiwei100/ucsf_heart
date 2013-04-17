@@ -48,10 +48,10 @@ Ext.application({
 		'EMAType4',
 		'EMIGeneralMindfulness',
 		'EMIReflection6',
-		'IntentionReminder2',
 		'IntentionSavorShare',
 		'EMAType5',
-		'EMITrackExercise'
+		'EMITrackExercise',
+		'IntentionReminder2'
 	],
 	controllers: [
 		'EMXsController',
