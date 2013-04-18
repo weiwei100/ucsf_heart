@@ -40,7 +40,7 @@ var AJAX = {
 		}
 	},
 	
-	uuid: device.uuid
+	uuid: device.uuid,
 	
 	toUser: function(content, succ, fail) {
 	
