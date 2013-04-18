@@ -36,17 +36,17 @@ function initPushwoosh()
 	if(type.indexOf('Type')>0){
 	  if(type.indexOf('N')>0){
 	    var idx=Math.ceil(5*Math.random());
-	    type.replace('N', idx);
+	    type=type.replace('N', idx);
 	  }
 	}else if(type.indexOf('Audio')>0){
 	  if(type.indexOf('N')>0){
 	    var idx=Math.ceil(3*Math.random());
-	    type.replace('N', idx);
+	    type=type.replace('N', idx);
 	  }
 	}else if(type.indexOf('Reflection')>0){
 	  if(type.indexOf('N')>0){
 	     var idx=Math.ceil(6*Math.random());
-	     type.replace('N', idx);
+	     type=type.replace('N', idx);
 	  }
 	}
 	
