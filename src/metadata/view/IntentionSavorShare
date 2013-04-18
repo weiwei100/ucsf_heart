@@ -131,7 +131,16 @@
                                     "",
                                     "AJAX.toSensor(content, succ, fail);",
                                     "",
-                                    "this.destroy();"
+                                    "",
+                                    "if(this.goola=='exercises'){",
+                                    "\tthis.parent.pop();",
+                                    "}else if(this.goola=='stressed'){",
+                                    "\tthis.parent.pop();",
+                                    "\tthis.parent.hide();",
+                                    "\tthis.parent.show();",
+                                    "}else{",
+                                    "\tthis.destroy();",
+                                    "}"
                                 ],
                                 "name": "tap"
                             },

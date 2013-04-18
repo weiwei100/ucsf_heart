@@ -18,10 +18,18 @@
             },
             "codeClass": null,
             "userConfig": {
+                "goola": "audio",
                 "designer|userClassName": "MyFieldSet5",
                 "title": null
             },
             "designerId": "80c3b397-b59a-42be-acd0-900d7bd0f712",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "goola",
+                    "type": "string"
+                }
+            ],
             "cn": [
                 {
                     "type": "Ext.field.Slider",
@@ -80,10 +88,11 @@
                         "centered": false,
                         "docked": null,
                         "html": null,
+                        "itemId": "audioPanel",
                         "designer|userClassName": "MyAudio",
                         "autoPause": false,
                         "enableControls": true,
-                        "url": "yellow.mp3"
+                        "url": "Yellow.mp3"
                     },
                     "designerId": "dfbe811d-143d-4ec1-bba6-2c4e53afad34"
                 },

@@ -18,14 +18,22 @@
             },
             "codeClass": null,
             "userConfig": {
+                "goola": "ema",
                 "docked": "top",
                 "designer|userClassName": "MyFieldSet5",
                 "hideOnMaskTap": false,
                 "modal": false,
-                "instructions": "goola",
+                "instructions": null,
                 "title": "What is happening right now?"
             },
             "designerId": "9ad08515-b391-4810-99e2-f9c0971e0a2b",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "goola",
+                    "type": "string"
+                }
+            ],
             "cn": [
                 {
                     "type": "Ext.field.Slider",
