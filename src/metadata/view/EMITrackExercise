@@ -146,7 +146,7 @@
                                     "var exercise = window.localStorage.getItem('exercise');",
                                     "var plus = button.parent.child('textfield').getValue();",
                                     "",
-                                    "if(exercise==null){",
+                                    "if(exercise==null||isNaN(exercise)){",
                                     "\texercise=0;",
                                     "}",
                                     "",

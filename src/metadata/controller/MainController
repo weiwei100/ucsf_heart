@@ -101,7 +101,11 @@
                     "\tfeeds.sync();",
                     "};",
                     "",
-                    "AJAX.toSensor(content, succ, fail);"
+                    "AJAX.toSensor(content, succ, fail);",
+                    "",
+                    "button.disable();",
+                    "",
+                    "Ext.Msg.alert(':)', \"<div align='center'>Data Updated</div>\", Ext.emptyFn);"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -139,6 +143,8 @@
                     "window.localStorage.setItem('user', user);",
                     "",
                     "AJAX.toUser({uuid: AJAX.uuid, wake: values.wake_time, sleep: values.sleep_time});",
+                    "",
+                    "Ext.Msg.alert(':)', \"<div align='center'>User Saved</div>\", Ext.emptyFn);",
                     "",
                     "this.getHomePanel().parent.getTabBar().show();",
                     "var form = Ext.create('HEART.view.EMIPushSlider');",

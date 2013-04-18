@@ -12,6 +12,19 @@
     "designerId": "74a66690-e41f-48f5-a274-7d59108223a6",
     "cn": [
         {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "What emotions are you experiencing in this moment? <br> (left=none, right=a lot)",
+                "designer|userClassName": "MyLabel9"
+            },
+            "designerId": "edbb549f-0996-4368-822b-56a6b47c1496"
+        },
+        {
             "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
@@ -22,7 +35,7 @@
                 "goola": "ema",
                 "designer|userClassName": "MyFieldSet6",
                 "instructions": null,
-                "title": "What emotions are you experiencing in this moment? <br> (left=none, right=a lot)"
+                "title": null
             },
             "designerId": "e839560e-d96e-4c34-86e1-79b2079841a5",
             "customConfigs": [

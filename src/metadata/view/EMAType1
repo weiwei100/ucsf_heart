@@ -11,6 +11,19 @@
     "designerId": "7d969f35-80f6-497f-9677-8bc260ef4b83",
     "cn": [
         {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "What is happening right now?",
+                "designer|userClassName": "MyLabel9"
+            },
+            "designerId": "8d96d19e-8686-48e7-bd04-cafa30c058e9"
+        },
+        {
             "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
@@ -19,12 +32,12 @@
             "codeClass": null,
             "userConfig": {
                 "goola": "ema",
-                "docked": "top",
+                "docked": null,
                 "designer|userClassName": "MyFieldSet5",
                 "hideOnMaskTap": false,
                 "modal": false,
                 "instructions": null,
-                "title": "What is happening right now?"
+                "title": null
             },
             "designerId": "9ad08515-b391-4810-99e2-f9c0971e0a2b",
             "customConfigs": [

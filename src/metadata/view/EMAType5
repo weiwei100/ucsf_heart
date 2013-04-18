@@ -12,6 +12,19 @@
     "designerId": "0fbc87db-4927-439d-bca2-70278fc51350",
     "cn": [
         {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "What is the state of your mind in this moment?",
+                "designer|userClassName": "MyLabel12"
+            },
+            "designerId": "7e92d79d-789e-4c54-9cdf-d5024852f69f"
+        },
+        {
             "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
@@ -22,7 +35,7 @@
                 "goola": "ema",
                 "designer|userClassName": "MyFieldSet6",
                 "instructions": null,
-                "title": "What is the state of your mind in this moment?"
+                "title": null
             },
             "designerId": "19b9c1da-91dd-4258-abf8-a7343b400add",
             "customConfigs": [

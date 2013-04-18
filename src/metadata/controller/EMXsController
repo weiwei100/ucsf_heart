@@ -211,7 +211,7 @@
                     "\tthis.getStressed().hide();",
                     "\tthis.getStressed().show();",
                     "}else{",
-                    "\tfrom.destroy();",
+                    "\tform.destroy();",
                     "}"
                 ],
                 "name": "tap",
@@ -316,7 +316,18 @@
                     "button.hide();",
                     "var textarea = button.parent.child('textareafield')",
                     "textarea.setShowAnimation({type :\"fadeIn\", duration : 768});",
-                    "textarea.show();"
+                    "textarea.show();",
+                    "",
+                    "var post = button.parent.child('#post-slider');",
+                    "var done = button.parent.child('button[text=Done]');",
+                    "",
+                    "if(post!=null){",
+                    "\tpost.setShowAnimation({type :\"fadeIn\", duration : 1024});",
+                    "\tpost.show();",
+                    "}",
+                    "",
+                    "done.setShowAnimation({type :\"fadeIn\", duration : 1024});",
+                    "done.show();"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -401,6 +412,29 @@
                 "designer|controlQuery": "fieldset[goola=audio]"
             },
             "designerId": "412aeae3-588e-4c8a-94de-857f389ec065"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onReflectionInitialize",
+                "fn": "onReflectionInitialize",
+                "implHandler": [
+                    "var post = component.child('#post-slider');",
+                    "var button = component.child('button[text=Done]');",
+                    "",
+                    "post.hide();",
+                    "button.hide();"
+                ],
+                "name": "initialize",
+                "designer|targetType": "Ext.form.FieldSet",
+                "designer|controlQuery": "fieldset[goola=reflect]"
+            },
+            "designerId": "fb3c61e1-76c1-4bd8-bf02-e040eae2ea90"
         }
     ]
 }

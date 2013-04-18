@@ -73,23 +73,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "defaultValue": [
-                    "false"
-                ],
-                "name": "mark",
-                "type": null,
-                "designer|userClassName": "field15"
-            },
-            "designerId": "820625e7-a09c-4ba9-8b76-52e2818bf5c4"
-        },
-        {
-            "type": "Ext.data.Field",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "allowNull": false,
                 "name": "id",
                 "designer|userClassName": "field16"

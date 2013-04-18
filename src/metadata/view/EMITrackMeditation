@@ -146,7 +146,7 @@
                                     "var meditation = window.localStorage.getItem('meditation');",
                                     "var plus = button.parent.child('textfield').getValue();",
                                     "",
-                                    "if(meditation==null){",
+                                    "if(meditation==null||isNaN(meditation)){",
                                     "\tmeditation=0;",
                                     "}",
                                     "",

@@ -17,12 +17,11 @@ function initPushwoosh()
     );
  
     document.addEventListener('push-notification', function(event) {
-    	console.log('22222222222222222222222222');
 	var title = event.notification.title;
 	var userData = event.notification.userdata;
 
-	//console.log("received title: ===== " + event.notification.title);
-	//console.log("received user data: ===== " + event.notification.userdata);
+	//console.log("received title: " + event.notification.title);
+	//console.log("received user data: " + event.notification.userdata);
 
 	if(typeof(userData) != "undefined") {
 	  console.warn('user data: ' + JSON.stringify(userData));

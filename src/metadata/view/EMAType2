@@ -11,6 +11,19 @@
     "designerId": "df2a85a8-d4f3-4e68-bab4-1a38a66b43db",
     "cn": [
         {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "What is happening in your body right now?",
+                "designer|userClassName": "MyLabel9"
+            },
+            "designerId": "ce798d9d-b0f2-46ea-8222-bebe76c7c131"
+        },
+        {
             "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
@@ -19,12 +32,12 @@
             "codeClass": null,
             "userConfig": {
                 "goola": "ema",
-                "docked": "top",
+                "docked": null,
                 "designer|userClassName": "MyFieldSet3",
                 "hideOnMaskTap": null,
                 "modal": false,
                 "instructions": null,
-                "title": "What is happening in your body right now?"
+                "title": null
             },
             "designerId": "1d917d3a-18d9-4be5-bd9d-17939b0930a8",
             "customConfigs": [

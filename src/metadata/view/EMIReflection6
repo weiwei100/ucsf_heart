@@ -19,10 +19,18 @@
             },
             "codeClass": null,
             "userConfig": {
+                "goola": "reflect",
                 "designer|userClassName": "MyFieldSet6",
                 "title": null
             },
             "designerId": "9e04c90d-d11a-4f3e-9e96-ef39da0d47ce",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "goola",
+                    "type": "string"
+                }
+            ],
             "cn": [
                 {
                     "type": "Ext.field.Slider",
