@@ -99,14 +99,9 @@ Ext.define('HEART.controller.MainController', {
 	onPushSettingEdit: function(button, e, eOpts) {
 		var user = window.localStorage.getItem('user');
 		var push_set = 50;
-<<<<<<< HEAD
-		if(user!=null){			
-			user = JSON.parse(user);
-=======
 
 		if(user!=null){
 			user = JSON.parse(user);	
->>>>>>> b47cd46a31cf856ebb640ea99de4541eaa828b17
 			if(user.push_set!=null){
 				push_set = user.push_set;
 			}
