@@ -19,11 +19,19 @@
             },
             "codeClass": null,
             "userConfig": {
+                "goola": "ema",
                 "designer|userClassName": "MyFieldSet6",
-                "instructions": "goola",
+                "instructions": null,
                 "title": "What is the state of your mind in this moment?"
             },
             "designerId": "19b9c1da-91dd-4258-abf8-a7343b400add",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "goola",
+                    "type": "string"
+                }
+            ],
             "cn": [
                 {
                     "type": "Ext.field.Slider",

@@ -18,11 +18,19 @@
             },
             "codeClass": null,
             "userConfig": {
+                "goola": "emi",
                 "centered": false,
                 "designer|userClassName": "MyFieldSet",
                 "title": "<center>Mindful Body-Scan<center>"
             },
             "designerId": "3ec85e59-c81e-4e38-92fb-56146f1ec558",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "goola",
+                    "type": "string"
+                }
+            ],
             "cn": [
                 {
                     "type": "Ext.Label",
@@ -48,6 +56,7 @@
                         "designer|userClassName": "MyCheckbox",
                         "label": "Feet",
                         "labelWidth": "80%",
+                        "labelWrap": true,
                         "value": "Feet"
                     },
                     "designerId": "e0304af6-c8db-4fa2-9744-a80892c3bc5a"
@@ -63,6 +72,7 @@
                         "designer|userClassName": "MyCheckbox",
                         "label": "Thighs",
                         "labelWidth": "80%",
+                        "labelWrap": true,
                         "value": ""
                     },
                     "designerId": "61d230f6-d50c-4158-923c-b48b58087a39"
@@ -78,6 +88,7 @@
                         "designer|userClassName": "MyCheckbox",
                         "label": "Belly",
                         "labelWidth": "80%",
+                        "labelWrap": true,
                         "value": null
                     },
                     "designerId": "ef4eb9b8-76dc-449c-b8db-a604e0dc7d72"
@@ -93,6 +104,7 @@
                         "designer|userClassName": "MyCheckbox",
                         "label": "Chest",
                         "labelWidth": "80%",
+                        "labelWrap": true,
                         "value": null
                     },
                     "designerId": "e2e80d29-5126-4217-b431-b6a0f0d33a64"
@@ -108,6 +120,7 @@
                         "designer|userClassName": "MyCheckbox",
                         "label": "Hands",
                         "labelWidth": "80%",
+                        "labelWrap": true,
                         "value": null
                     },
                     "designerId": "c11aebf5-fb2d-494d-8a4c-0ced349fece8"
@@ -123,6 +136,7 @@
                         "designer|userClassName": "MyCheckbox",
                         "label": "Hands",
                         "labelWidth": "80%",
+                        "labelWrap": true,
                         "value": null
                     },
                     "designerId": "b63b3bff-ba8c-4ec6-a902-a92e9b9e0e7d"
@@ -138,6 +152,7 @@
                         "designer|userClassName": "MyCheckbox",
                         "label": "Face & Jaw",
                         "labelWidth": "80%",
+                        "labelWrap": true,
                         "value": null
                     },
                     "designerId": "2326f9cb-7aa5-4887-841e-5b053527e492"

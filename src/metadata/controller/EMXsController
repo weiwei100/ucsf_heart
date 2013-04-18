@@ -32,6 +32,8 @@
                     "\tfield.child('#post-slider').destroy();",
                     "}",
                     "",
+                    "exercise.goola = 'exercises';",
+                    "",
                     "this.getExercises().push(exercise);"
                 ],
                 "name": "select",
@@ -125,6 +127,8 @@
                     "var exercise = Ext.create('HEART.view.' + emx.get(\"type\"));",
                     "",
                     "exercise.record_data = emx;",
+                    "exercise.goola = 'stressed';",
+                    "",
                     "this.getStressed().push(exercise);"
                 ],
                 "name": "show",
@@ -189,17 +193,26 @@
                     "content = { uid: AJAX.uuid };",
                     "",
                     "if(type.indexOf('Type')>=0){",
-                    "\tif(type.indexOf('1')>=0)",
+                    "\tif(type.indexOf('1')>=0){",
                     "\t\tcontent.emi_type_1=values.stress;",
-                    "\tif(type.indexOf('2')>=0)",
+                    "\t}else if(type.indexOf('2')>=0){",
                     "\t\tcontent.emi_type_2=values.unpleasantness;",
-                    "\tif(type.indexOf('3')>=0)",
+                    "\t}else if(type.indexOf('3')>=0){",
                     "\t\tcontent.emi_type_3=values.anxiety;\t",
-                    "\t",
+                    "\t}",
                     "\tAJAX.toUser(content);",
                     "}",
                     "",
-                    "this.getExercises().pop();"
+                    "if(form.goola=='exercises'){",
+                    "\tthis.getExercises().pop();",
+                    "\tthis.getExercises().child('dataview').deselectAll();",
+                    "}else if(form.goola=='stressed'){",
+                    "\tthis.getStressed().pop();",
+                    "\tthis.getStressed().hide();",
+                    "\tthis.getStressed().show();",
+                    "}else{",
+                    "\tfrom.destroy();",
+                    "}"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -255,8 +268,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onFieldsetInitialize",
-                "fn": "onFieldsetInitialize",
+                "designer|userClassName": "onEMAInitialize",
+                "fn": "onEMAInitialize",
                 "implHandler": [
                     "var items = component.getInnerItems();",
                     "",
@@ -270,21 +283,21 @@
                     "\tvar comp = component.getAt(i);",
                     "\tcomp.index = i;",
                     "\tvar onChange = function(){",
-                    "\t\t",
+                    "",
                     "\t\tthis.setHideAnimation({type :\"fadeOut\", duration : 256});",
                     "\t\tthis.hide(); ",
                     "\t\tvar next = component.getAt(this.index+1);",
-                    "\t\t",
+                    "",
                     "\t\tnext.setShowAnimation({type :\"fadeIn\", duration : 1024});",
                     "\t\tnext.show();",
                     "\t};",
-                    "\t",
-                    "    comp.on({ change: onChange });",
+                    "",
+                    "\tcomp.on({ change: onChange });",
                     "}"
                 ],
                 "name": "initialize",
                 "designer|targetType": "Ext.form.FieldSet",
-                "designer|controlQuery": "fieldset[instructions=goola]"
+                "designer|controlQuery": "fieldset[goola=ema]"
             },
             "designerId": "9372221e-b368-4ccb-862f-8a3e0dad0bc0"
         },
@@ -319,16 +332,75 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTrackDone",
-                "fn": "onTrackDone",
+                "designer|userClassName": "onEMIInitialize",
+                "fn": "onEMIInitialize",
                 "implHandler": [
-                    ""
+                    "var items = component.getInnerItems();",
+                    "",
+                    "for(i=2;i<items.length;i++){",
+                    "\tcomponent.getAt(i).hide();",
+                    "}",
+                    "",
+                    "var index = 0;",
+                    "",
+                    "for(i=1; i< items.length; i++){",
+                    "\tvar comp = component.getAt(i);",
+                    "\tcomp.index = i;",
+                    "\tvar onChange = function(){",
+                    "",
+                    "\t\tthis.setHideAnimation({type :\"fadeOut\", duration : 256});",
+                    "\t\tthis.hide(); ",
+                    "\t\tvar next = component.getAt(this.index+1);",
+                    "",
+                    "\t\tnext.setShowAnimation({type :\"fadeIn\", duration : 1024});",
+                    "\t\tnext.show();",
+                    "\t};",
+                    "",
+                    "\tcomp.on({ change: onChange });",
+                    "}"
                 ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button"
+                "name": "initialize",
+                "designer|targetType": "Ext.form.FieldSet",
+                "designer|controlQuery": "fieldset[goola=emi]"
             },
-            "designerId": "4ebf9412-a750-4e3a-b467-df6917cd87d1"
+            "designerId": "520222c3-6bb3-47e4-8252-78df62885bb3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onAudioInitialize",
+                "fn": "onAudioInitialize",
+                "implHandler": [
+                    "var audio = component.child('#audioPanel');",
+                    "var post = component.child('#post-slider');",
+                    "var button = component.child('button');",
+                    "",
+                    "post.hide();",
+                    "button.hide();",
+                    "",
+                    "callback = function() {",
+                    "\tvar slider = this.parent.child('#post-slider');",
+                    "\tif(slider!=null){",
+                    "\t\tgo.show();",
+                    "\t}else{",
+                    "\t\tbutton.show();",
+                    "\t}",
+                    "};",
+                    "",
+                    "audio.on( { ended: callback, stop: callback, pause: callback } );",
+                    "",
+                    "post.on( { change: function(){ button.show() } } );"
+                ],
+                "name": "initialize",
+                "designer|targetType": "Ext.form.FieldSet",
+                "designer|controlQuery": "fieldset"
+            },
+            "designerId": "412aeae3-588e-4c8a-94de-857f389ec065"
         }
     ]
 }
