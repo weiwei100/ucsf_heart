@@ -40,8 +40,6 @@ var AJAX = {
 		}
 	},
 	
-	uuid: device.uuid
-	
 	toUser: function(content, succ, fail) {
 	
 		var username = 'breathwear';

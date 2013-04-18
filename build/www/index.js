@@ -1,5 +1,8 @@
 function initPushwoosh()
 {
+
+	AJAX.uuid = device.uuid;
+
     var pushNotification = window.plugins.pushNotification;
     pushNotification.onDeviceReady();
  
