@@ -398,7 +398,7 @@
                 ],
                 "name": "initialize",
                 "designer|targetType": "Ext.form.FieldSet",
-                "designer|controlQuery": "fieldset"
+                "designer|controlQuery": "fieldset[goola=audio]"
             },
             "designerId": "412aeae3-588e-4c8a-94de-857f389ec065"
         }
