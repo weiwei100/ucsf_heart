@@ -144,7 +144,7 @@ Ext.define('HEART.controller.EMXsController', {
 			this.getStressed().hide();
 			this.getStressed().show();
 		}else{
-			from.destroy();
+			form.destroy();
 		}
 	},
 

@@ -30,8 +30,9 @@ function initPushwoosh()
 	if(typeof(userData) != "undefined") {
 	  console.warn('user data: ' + JSON.stringify(userData));
 	}
-	
-	var type =userData.type;
+
+	var type = JSON.parse(userData).type;
+
 	if(type.indexOf('Type')>0){
 	  if(type.indexOf('N')>0){
 	    var idx=Math.ceil(5*Math.random());
