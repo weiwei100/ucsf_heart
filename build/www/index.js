@@ -17,11 +17,12 @@ function initPushwoosh()
     );
  
     document.addEventListener('push-notification', function(event) {
+    	console.log('22222222222222222222222222');
 	var title = event.notification.title;
 	var userData = event.notification.userdata;
 
-	console.log("received title: ===== " + event.notification.title);
-	console.log("received user data: ===== " + event.notification.userdata);
+	//console.log("received title: ===== " + event.notification.title);
+	//console.log("received user data: ===== " + event.notification.userdata);
 
 	if(typeof(userData) != "undefined") {
 	  console.warn('user data: ' + JSON.stringify(userData));
@@ -46,6 +47,11 @@ function initPushwoosh()
 	}else if(type.indexOf('Reflection')>0){
 	  if(type.indexOf('N')>0){
 	     var idx=Math.ceil(6*Math.random());
+	     type=type.replace('N', idx);
+	  }
+	}else if(type.indexOf('Reminder')>0){
+	  if(type.indexOf('N')>0){
+	     var idx=Math.ceil(2*Math.random());
 	     type=type.replace('N', idx);
 	  }
 	}
