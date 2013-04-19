@@ -6,7 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "EMIAudio3"
+        "designer|userClassName": "EMIAudio3",
+        "scrollable": "vertical"
     },
     "designerId": "5e7c2ac9-f8b6-4753-9b18-c5d3d9549bc6",
     "cn": [
@@ -90,7 +91,7 @@
                         "html": null,
                         "itemId": "audioPanel",
                         "designer|userClassName": "MyAudio",
-                        "url": "Yellow.mp3"
+                        "url": "audio/W_10.0.m4a"
                     },
                     "designerId": "01cf0738-b4a0-4f3d-8335-b315a508357e"
                 },

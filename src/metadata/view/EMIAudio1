@@ -6,7 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "EMIAudio1"
+        "designer|userClassName": "EMIAudio1",
+        "scrollable": "vertical"
     },
     "designerId": "1eb73208-28ad-410e-a453-81084fc2a8b8",
     "cn": [
@@ -92,7 +93,7 @@
                         "designer|userClassName": "MyAudio",
                         "autoPause": false,
                         "enableControls": true,
-                        "url": "Yellow.mp3"
+                        "url": "audio/W_2.0.m4a"
                     },
                     "designerId": "dfbe811d-143d-4ec1-bba6-2c4e53afad34"
                 },
