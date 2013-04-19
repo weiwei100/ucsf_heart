@@ -232,8 +232,8 @@
                 "designer|userClassName": "onPreSliderChange",
                 "fn": "onPreSliderChange",
                 "implHandler": [
-                    "Slider.setHideAnimation({type :\"fadeOut\", duration : 256});",
-                    "Slider.hide();"
+                    "me.setHideAnimation({type :\"fadeOut\", duration : 256});",
+                    "me.hide();"
                 ],
                 "name": "change",
                 "designer|targetType": "Ext.field.Slider",
@@ -252,8 +252,8 @@
                 "designer|userClassName": "onPostSliderChange",
                 "fn": "onPostSliderChange",
                 "implHandler": [
-                    "Slider.setHideAnimation({type :\"fadeOut\", duration : 256});",
-                    "Slider.hide();"
+                    "me.setHideAnimation({type :\"fadeOut\", duration : 256});",
+                    "me.hide();"
                 ],
                 "name": "change",
                 "designer|targetType": "Ext.field.Slider",

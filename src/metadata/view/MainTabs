@@ -305,29 +305,50 @@
                     "designerId": "b228de72-125e-44ae-92aa-2f77b39b67ed"
                 },
                 {
-                    "type": "Ext.field.Spinner",
+                    "type": "Ext.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": null,
                         "itemId": "weight",
-                        "designer|userClassName": "MySpinnerField",
+                        "designer|userClassName": "MyTextField",
                         "label": "Weight",
+                        "labelWidth": "50%",
                         "name": "weight",
                         "required": true,
-                        "maxValue": null,
-                        "minValue": null,
-                        "stepValue": 1,
-                        "groupButtons": false,
-                        "increment": 64
+                        "autoCapitalize": true,
+                        "maxLength": 15
                     },
-                    "designerId": "1a78caf9-a551-485c-bfbd-8cb84b918fc5"
+                    "designerId": "862a29c3-55a0-4c3c-aec4-e3be0f3df663",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onWeightKeyup",
+                                "fn": "onWeightKeyup",
+                                "implHandler": [
+                                    "var value = textfield.getValue();",
+                                    "",
+                                    "if(/\\D+/.test(value)){",
+                                    "\tExt.Msg.alert(';(', \"<div align='center'>Please don't enter letters or other characters.</div>\", Ext.emptyFn);",
+                                    "\ttextfield.setValue(0);",
+                                    "}"
+                                ],
+                                "name": "keyup"
+                            },
+                            "designerId": "611c21fa-19d1-4a2b-9135-98c5f0801ae9"
+                        }
+                    ]
                 },
                 {
-                    "type": "Ext.field.Spinner",
+                    "type": "Ext.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -335,15 +356,39 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "height",
-                        "designer|userClassName": "MySpinnerField1",
+                        "designer|userClassName": "MyTextField",
                         "label": "Height",
+                        "labelWidth": "50%",
                         "name": "height",
                         "required": true,
-                        "stepValue": 1,
-                        "groupButtons": false,
-                        "increment": 64
+                        "autoCapitalize": true,
+                        "maxLength": 15
                     },
-                    "designerId": "121e433e-5ba1-484c-8c7d-4bc61d026ae4"
+                    "designerId": "218c3989-e75d-4ca9-a77e-ed527ce179bb",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onHeightKeyup",
+                                "fn": "onHeightKeyup",
+                                "implHandler": [
+                                    "var value = textfield.getValue();",
+                                    "",
+                                    "if(/\\D+/.test(value)){",
+                                    "\tExt.Msg.alert(';(', \"<div align='center'>Please don't enter letters or other characters.</div>\", Ext.emptyFn);",
+                                    "\ttextfield.setValue(0);",
+                                    "}"
+                                ],
+                                "name": "keyup"
+                            },
+                            "designerId": "86dd7623-de8a-49fd-b2f4-9331c8b6af74"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Button",
