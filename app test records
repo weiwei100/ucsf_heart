@@ -11,8 +11,9 @@
 8.	Q : 'exercises -> 'current stress level: there is 'goola' under 'Done' button.
 9.	Q : home screen the two buttons 'press here to set' and 'Done' are grey
 10.	Q : 'exercises -> lables need to add padding
+11. Q : 'exercises'->state of mind: test info goes out of the screen, so does the slider
 
 
-
+at first startup, after I set notification settings and frequency, it goes back to the notification view, should it go to home view?
 
 PS: maybe give a tutorial?

@@ -47,6 +47,8 @@ Ext.define('HEART.view.EMIAudio2', {
 						xtype: 'audio',
 						centered: false,
 						itemId: 'audioPanel',
+						autoPause: false,
+						enableControls: true,
 						url: 'https://dl.dropboxusercontent.com/u/37254590/W_5.0.m4a'
 					},
 					{
