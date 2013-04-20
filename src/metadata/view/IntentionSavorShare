@@ -31,20 +31,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "Your current intention is:",
-                        "itemId": "describe",
-                        "designer|userClassName": "MyLabel19"
-                    },
-                    "designerId": "35623edc-6faf-4b10-ad37-6142e6853bc0"
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
                         "itemId": "intention",
                         "designer|userClassName": "MyLabel4"
                     },
@@ -59,7 +45,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "html": "<p>Take a few moments and savor the feelings and sensations of your intention.</p> <p>Take a moments to imagine sharing this with someone special.</p>",
-                        "itemId": "more",
+                        "itemId": "describe",
                         "designer|userClassName": "MyLabel20"
                     },
                     "designerId": "d3d17d45-ca30-4761-a839-81df081cfe6c"
@@ -113,7 +99,7 @@
                                     "var content = {data: value};",
                                     "",
                                     "var type = 'intentioSavorShare';",
-                                    "var uuid =  AJAX.uuid;",
+                                    "var uuid = HEART.uuid;",
                                     "",
                                     "content.type = type;",
                                     "content.user = uuid;",
@@ -130,7 +116,7 @@
                                     "\tfeeds.sync();",
                                     "};",
                                     "",
-                                    "AJAX.toSensor(content, succ, fail);",
+                                    "HEART.toSensor(content, succ, fail);",
                                     "",
                                     "",
                                     "if(this.goola=='exercises'){",

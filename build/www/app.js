@@ -49,13 +49,13 @@ Ext.application({
 		'EMIReflection5',
 		'EMIReflection6',
 		'IntentionReminder1',
-		'IntentionReminder2',
 		'IntentionSavorShare',
 		'EMIAudio1',
 		'EMIAudio2',
 		'EMIAudio3',
 		'EMITrackExercise',
-		'EMITrackMeditation'
+		'EMITrackMeditation',
+		'IntentionReminder2'
 	],
 	controllers: [
 		'EMXsController',

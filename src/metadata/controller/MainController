@@ -18,15 +18,16 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onEditIntentionTap",
-                "fn": "onEditIntentionTap",
+                "designer|userClassName": "onHomeIntentionTap",
+                "fn": "onHomeIntentionTap",
                 "implHandler": [
-                    "var intention = Ext.create('HEART.view.EMIIntentionSet');",
-                    "Ext.Viewport.setActiveItem(intention);"
+                    "form = Ext.create('HEART.view.EMIIntentionSet');",
+                    "form.emxType = 'EMIIntentionSet';",
+                    "Ext.Viewport.setActiveItem(form);"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#homepanel #editIntention"
+                "designer|controlQuery": "#homePanel #editIntention"
             },
             "designerId": "55eee0b7-5be8-4cdd-a3f0-36f5f55cf490"
         },
@@ -41,26 +42,32 @@
                 "designer|userClassName": "onHomeSliderChange",
                 "fn": "onHomeSliderChange",
                 "implHandler": [
-                    "var value = Slider.getValue();",
+                    "value = Slider.getValue();",
                     "",
-                    "window.localStorage.setItem('home', value);",
+                    "uuid = HEART.uuid;",
                     "",
-                    "var uuid = AJAX.uuid;",
+                    "HEART.setItem('local', 'home', value);",
                     "",
-                    "var content = { type: 'homePanel', user: uuid, data: value };",
+                    "content = me.parent.getValues();",
+                    "",
+                    "content.type = 'homePanel';",
+                    "content.uuid = uuid;",
+                    "",
+                    "console.log(content);",
                     "",
                     "var succ = function(response) {",
                     "\tconsole.log(response);",
                     "};",
                     "",
                     "var fail = function(response) {",
-                    "\tvar feeds = Ext.getStore(\"Feeds\");",
-                    "\tfeeds.add({timestamp: Date.now(), type: 'homePanel', user: uuid, data: value});",
+                    "\tfeeds = Ext.getStore(\"Feeds\");",
+                    "\tcontent.timestamp = Date.now();",
+                    "\tfeeds.add(data);",
                     "\tfeeds.sort(\"timestamp\", 'DESC');\t\t",
                     "\tfeeds.sync();",
                     "};",
                     "",
-                    "AJAX.toSensor(content, succ, fail);",
+                    "HEART.toSensor(content, succ, fail);",
                     "",
                     "me.parent.child('#homeDone').enable();",
                     "",
@@ -68,7 +75,7 @@
                 ],
                 "name": "change",
                 "designer|targetType": "Ext.field.Slider",
-                "designer|controlQuery": "#homepanel #homeSlider"
+                "designer|controlQuery": "#homePanel #homeSlider"
             },
             "designerId": "44f8bf47-029b-4625-a0e4-0df640978587"
         },
@@ -83,32 +90,11 @@
                 "designer|userClassName": "onHomeDoneTap",
                 "fn": "onHomeDoneTap",
                 "implHandler": [
-                    "var slider = button.parent.child('sliderfield');",
-                    "var value = slider.getValue();",
-                    "",
-                    "var uuid = AJAX.uuid;",
-                    "",
-                    "var content = { type: 'homePanel', user: uuid, data: value };",
-                    "",
-                    "var succ = function(response) {",
-                    "\tExt.Msg.alert(':)', \"<div align='center'>Data Submitted</div>\", Ext.emptyFn);",
-                    "};",
-                    "",
-                    "var fail = function(response) {",
-                    "\tExt.Msg.alert(';(', \"<div align='center'>Network Error</div>\", Ext.emptyFn);",
-                    "\tvar feeds = Ext.getStore(\"Feeds\");",
-                    "\tfeeds.add({timestamp: Date.now(), type: 'homePanel', user: uuid, data: value});",
-                    "\tfeeds.sort(\"timestamp\", 'DESC');\t\t",
-                    "\tfeeds.sync();",
-                    "};",
-                    "",
-                    "AJAX.toSensor(content, succ, fail);",
-                    "",
                     "button.disable();"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#homepanel #homeDone"
+                "designer|controlQuery": "#homePanel #homeDone"
             },
             "designerId": "d1278f3b-bc3b-411c-b34a-84503b2348da"
         },
@@ -120,26 +106,23 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onPushSettingEdit",
-                "fn": "onPushSettingEdit",
+                "designer|userClassName": "onSettingDone",
+                "fn": "onSettingDone",
                 "implHandler": [
-                    "var user = window.localStorage.getItem('user');",
-                    "var push_set = 50;",
+                    "user = HEART.getItem('local', 'user');",
+                    "",
+                    "values = button.parent.getValues();",
+                    "values.uuid = HEART.uuid;",
                     "",
                     "if(user!=null){",
-                    "\tuser = JSON.parse(user);\t",
-                    "\tif(user.push_set!=null){",
-                    "\t\tpush_set = user.push_set;",
-                    "\t}",
+                    "\tuser = JSON.parse(user);",
+                    "\tvalue = user.priority||2;\t",
+                    "\tvalues.priority = value;",
                     "}",
-                    "",
-                    "var values = button.parent.getValues();",
-                    "values.uuid = AJAX.uuid;",
-                    "values.push_set = push_set;",
                     "",
                     "user = JSON.stringify(values);",
                     "",
-                    "window.localStorage.setItem('user', user);",
+                    "HEART.setItem('local', 'user', user);",
                     "",
                     "var succ = function() {",
                     "\tExt.Msg.alert(':)', \"<div align='center'>Data Submitted</div>\", Ext.emptyFn);",
@@ -149,15 +132,18 @@
                     "\tExt.Msg.alert(';(', \"<div align='center'>Network Error</div>\", Ext.emptyFn);",
                     "};",
                     "",
-                    "AJAX.toUser( {uuid: AJAX.uuid, wake: values.wake_time, sleep: values.sleep_time}, succ, fail );",
+                    "HEART.toUser( {uuid: AJAX.uuid, wake: values.wake_time, sleep: values.sleep_time}, succ, fail );",
                     "",
                     "this.getHomePanel().parent.getTabBar().show();",
-                    "var form = Ext.create('HEART.view.EMIPushSlider');",
+                    "",
+                    "form = Ext.create('HEART.view.EMIPushSlider');",
+                    "form.emxType = 'EMIPushSlider';",
+                    "",
                     "Ext.Viewport.setActiveItem(form);"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#settings #setNotifications"
+                "designer|controlQuery": "#settings #done"
             },
             "designerId": "4ce12db4-0d98-4ba9-809b-bdc0cc7e7b76"
         },
@@ -171,7 +157,7 @@
             "userConfig": {
                 "designer|userClassName": "homePanel",
                 "ref": "homePanel",
-                "selector": "#homepanel"
+                "selector": "#homePanel"
             },
             "designerId": "655ff30e-1efb-4127-add5-ac3648130da1"
         },
@@ -197,8 +183,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onHomePanelActive",
-                "fn": "onHomePanelActive",
+                "designer|userClassName": "onActive",
+                "fn": "onActive",
                 "implHandler": [
                     "this.renderIntention();"
                 ],
@@ -219,9 +205,9 @@
                 "designer|userClassName": "renderIntention",
                 "fn": "renderIntention",
                 "implHandler": [
-                    "var intention = window.localStorage.getItem('intention');",
-                    "if(intention!=null){",
-                    "\tthis.getHomePanel().child('button').setText(intention);",
+                    "value = HEART.getItem('local', 'intention');",
+                    "if(value!=null){",
+                    "\tthis.getHomePanel().child('button').setText(value);",
                     "}"
                 ]
             },
@@ -238,12 +224,55 @@
                 "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
-                    "this.renderIntention();",
-                    "this.getHomePanel().child('sliderfield').setValue(window.localStorage.getItem('home'));",
-                    "setInterval( function(){ if(Ext.device.Connection.isOnline()) {AJAX.sync();} }, 4096);"
+                    "this.renderIntention();"
                 ]
             },
             "designerId": "64ac1c69-fee3-4109-8849-00cd10a7c40c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onNumberFieldKeyup",
+                "fn": "onNumberFieldKeyup",
+                "implHandler": [
+                    "var value = textfield.getValue();",
+                    "\t",
+                    "if(/\\D+/.test(value)){",
+                    "\tvar message = \"<div align='center'>Please don't enter letters or other characters.</div>\";",
+                    "\tExt.Msg.alert(';(', message, Ext.emptyFn);",
+                    "\ttextfield.setValue(0);",
+                    "}"
+                ],
+                "name": "keyup",
+                "designer|targetType": "Ext.field.Text",
+                "designer|controlQuery": "textfield[goola=number]"
+            },
+            "designerId": "d5776b1d-41da-493f-925a-1921c2d5deac"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onHomeSliderInitialize",
+                "fn": "onHomeSliderInitialize",
+                "implHandler": [
+                    "value = HEART.getItem('local', 'home');",
+                    "component.setValue(value);"
+                ],
+                "name": "initialize",
+                "designer|targetType": "Ext.field.Slider",
+                "designer|controlQuery": "#homePanel #homeSlider"
+            },
+            "designerId": "a0549356-72bf-436c-942e-0dcd9d6ce75e"
         }
     ]
 }

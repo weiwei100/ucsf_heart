@@ -1,8 +1,5 @@
-function initPushwoosh()
-{
-
-	AJAX.uuid = device.uuid;
-
+function initPushwoosh() {
+  
     var pushNotification = window.plugins.pushNotification;
     pushNotification.onDeviceReady();
  
@@ -32,33 +29,24 @@ function initPushwoosh()
 	}
 
 	var type = JSON.parse(userData).type;
-
-	if(type.indexOf('Type')>0){
-	  if(type.indexOf('N')>0){
-	    var idx=Math.ceil(5*Math.random());
-	    type=type.replace('N', idx);
+	
+	if(type.indexOf('N')>0){
+	  var size = 0;
+	  if(type.indexOf('Type')>0){
+	    size = 5;
+	  }else if(type.indexOf('Audio')>0){
+	    size = 3;
+	  }else if(type.indexOf('Reminder')>0){
+	    size = 6;
+	  }else if(type.indexOf('Reflection')>0){
+	    size = 2;
 	  }
-	}else if(type.indexOf('Audio')>0){
-	  if(type.indexOf('N')>0){
-	    var idx=Math.ceil(3*Math.random());
-	    type=type.replace('N', idx);
-	  }
-	}else if(type.indexOf('Reflection')>0){
-	  if(type.indexOf('N')>0){
-	     var idx=Math.ceil(6*Math.random());
-	     type=type.replace('N', idx);
-	  }
-	}else if(type.indexOf('Reminder')>0){
-	  if(type.indexOf('N')>0){
-	     var idx=Math.ceil(2*Math.random());
-	     type=type.replace('N', idx);
-	  }
+	  idx=Math.ceil(size*Math.random());
+	  type=type.replace('N', idx);
 	}
 	
-	var EMXs = Ext.getStore('EMXs');
-	var form = Ext.create('HEART.view.' + type);
-	var emx = EMXs.findRecord('type', type);
-	form.record_data = emx;
+	form = Ext.create('HEART.view.' + type);
+	form.type = type;
 	form.goola = 'notification';		      
 	Ext.Viewport.setActiveItem(form);
 	
@@ -68,5 +56,5 @@ function initPushwoosh()
 
 function init() {
     document.addEventListener("deviceready", initPushwoosh, true);
-    //rest of the code
+    HEART.uuid = device.uuid;
 }

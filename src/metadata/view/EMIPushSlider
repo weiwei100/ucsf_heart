@@ -6,8 +6,11 @@
     },
     "codeClass": null,
     "userConfig": {
+        "hideAnimation": [
+            "{type :\"fadeOut\", duration : 768}"
+        ],
         "showAnimation": [
-            "{type :\"fadeIn\", duration : 1024}"
+            "{type :\"fadeIn\", duration : 768}"
         ],
         "designer|userClassName": "EMIPushSlider"
     },
@@ -78,23 +81,18 @@
                         "designer|userClassName": "onPushSliderChange",
                         "fn": "onPushSliderChange",
                         "implHandler": [
-                            "var label = me.parent.child('#pushInfor');",
+                            "var label = me.parent.child('#pushLevel');",
                             "",
                             "switch(newValue){",
-                            "\tcase 0:",
-                            "\t\tlabel.setHtml('<center>Only show urgent pushes.</center>');",
+                            "\tcase 00: label.setHtml('<center>Only show urgent pushes.</center>'); ",
                             "\t\tbreak;",
-                            "\tcase 25:",
-                            "\t\tlabel.setHtml('<center>Very few pushes.</center>');",
+                            "\tcase 25: label.setHtml('<center>Very few pushes.</center>'); ",
                             "\t\tbreak;",
-                            "\tcase 50:",
-                            "\t\tlabel.setHtml('<center>Some pushes.</center>');",
+                            "\tcase 50: label.setHtml('<center>Some pushes.</center>'); ",
                             "\t\tbreak;",
-                            "\tcase 75:",
-                            "\t\tlabel.setHtml('<center>Many pushes.</center>');",
+                            "\tcase 75: label.setHtml('<center>Many pushes.</center>'); ",
                             "\t\tbreak;",
-                            "\tcase 100:",
-                            "\t\tlabel.setHtml('<center>Show all pushes.</center>');",
+                            "\tcase 100: label.setHtml('<center>Show all pushes.</center>'); ",
                             "\t\tbreak;",
                             "}"
                         ],
@@ -113,7 +111,7 @@
             "codeClass": null,
             "userConfig": {
                 "html": "<center>Some pushes<center>",
-                "itemId": "pushInfor",
+                "itemId": "pushLevel",
                 "designer|userClassName": "MyLabel22"
             },
             "designerId": "8876a8bb-2440-42b4-8eda-058a29d68639"
@@ -144,29 +142,27 @@
                         "designer|userClassName": "onPushSettingSave",
                         "fn": "onPushSettingSave",
                         "implHandler": [
-                            "var form = button.parent;",
-                            "var user = window.localStorage.getItem('user');",
-                            "",
+                            "user = HEART.getItem('local', 'user');",
                             "user = JSON.parse(user);",
+                            "user.uuid = HEART.uuid;",
                             "",
-                            "user.uuid = AJAX.uuid;",
-                            "",
-                            "var value = form.child('sliderfield').getValue();",
-                            "user.push_set = value;",
+                            "form = button.parent;",
+                            "value = form.child('#pushSlider').getValue();",
+                            "user.priority = value/25;",
                             "",
                             "user = JSON.stringify(user);",
                             "",
-                            "window.localStorage.setItem('user', user);",
+                            "HEART.setItem('local', 'user', user);",
                             "",
-                            "var succ = function(response) {",
+                            "succ = function(response) {",
                             "\tExt.Msg.alert(':)', \"<div align='center'>Data Submitted</div>\", Ext.emptyFn);",
                             "};",
                             "",
-                            "var fail = function(response) {",
+                            "fail = function(response) {",
                             "\tExt.Msg.alert(';(', \"<div align='center'>Network Error</div>\", Ext.emptyFn);",
                             "};",
                             "",
-                            "AJAX.toUser({uid: AJAX.uuid, priority: value/25}, succ, fail);",
+                            "HEART.toUser({uid: AJAX.uuid, priority: value/25}, succ, fail);",
                             "",
                             "form.destroy();"
                         ],
@@ -188,9 +184,9 @@
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();",
-                    "var user = window.localStorage.getItem('user');",
-                    "var push_set = JSON.parse(user).push_set;",
-                    "this.child('#pushSlider').setValue(push_set);"
+                    "user = HEART.getItem('local', 'user');",
+                    "priority = JSON.parse(user).priority*25;",
+                    "this.child('#pushSlider').setValue(priority);"
                 ]
             },
             "designerId": "95a6fa43-74ad-4c76-8593-7ab39e000a80"

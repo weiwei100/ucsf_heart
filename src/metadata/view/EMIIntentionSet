@@ -6,159 +6,163 @@
     },
     "codeClass": null,
     "userConfig": {
+        "hideAnimation": [
+            "{type :\"fadeOut\", duration : 768}"
+        ],
         "showAnimation": [
-            "{type :\"fadeIn\", duration : 1024}"
+            "{type :\"fadeIn\", duration : 768}"
         ],
         "designer|userClassName": "EMIIntentionSet"
     },
     "designerId": "83d777b4-31f3-46fc-9dd8-9d4803d6c6a2",
     "cn": [
         {
-            "type": "Ext.form.FieldSet",
+            "type": "Ext.Label",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyFieldSet8",
-                "title": "<b>What's your intention this week?</b>"
+                "html": "What is your intention this week?",
+                "itemId": "title",
+                "designer|userClassName": "MyLabel5"
             },
-            "designerId": "07d3857e-9e35-4778-abf4-e1c31f5b4681",
+            "designerId": "5fc63c3f-0aaf-47f9-8b83-7aae5dc1749a"
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": null,
+                "disabled": false,
+                "docked": null,
+                "html": "<p>Visualize the week ahead. What do you want to cultivate this week?</p><p>Examples: self-compassion, patience, acceptiance, self-care.</p>",
+                "itemId": "describe",
+                "styleHtmlContent": true,
+                "designer|userClassName": "MyLabel1"
+            },
+            "designerId": "b25fe0bb-2f4e-4d3c-a354-0969cca7a085"
+        },
+        {
+            "type": "Ext.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "intention",
+                "designer|userClassName": "MyTextArea",
+                "label": "Enter it here",
+                "labelAlign": "top",
+                "labelWrap": true,
+                "name": "intention",
+                "value": null,
+                "maxLength": 100
+            },
+            "designerId": "9ce087bf-3d75-45fb-af96-b6a38799b7bc",
             "cn": [
                 {
-                    "type": "Ext.Label",
+                    "type": "basiceventbinding",
                     "reference": {
-                        "name": "items",
+                        "name": "listeners",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "centered": null,
-                        "disabled": false,
-                        "html": "<p>Visualize the week ahead. What do you want to cultivate this week?</p><p>Examples: self-compassion, patience, acceptiance, self-care.</p>",
-                        "itemId": "describe",
-                        "styleHtmlContent": true,
-                        "designer|userClassName": "MyLabel1"
+                        "designer|userClassName": "onTextareaChange",
+                        "fn": "onTextareaChange",
+                        "implHandler": [
+                            "value = textfield.getValue().toUpperCase();",
+                            "button = textfield.parent.child('button');",
+                            "",
+                            "if(value.length<2||/\\W+/.test(value)){",
+                            "\tbutton.disable();",
+                            "}else{",
+                            "\tbutton.enable();",
+                            "}",
+                            "",
+                            "textfield.setValue(value);"
+                        ],
+                        "name": "keyup"
                     },
-                    "designerId": "b25fe0bb-2f4e-4d3c-a354-0969cca7a085"
-                },
+                    "designerId": "ecc5de40-cfef-4fd5-9fcc-2f6d4d96b643"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": null,
+                "disabled": true,
+                "itemId": "done",
+                "designer|userClassName": "MyButton2",
+                "text": "Done"
+            },
+            "designerId": "ec495742-ff4f-49ae-ab6c-5b68ae553a3c",
+            "customConfigs": [
                 {
-                    "type": "Ext.field.TextArea",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "itemId": "intentionText",
-                        "designer|userClassName": "MyTextArea",
-                        "label": "Enter it here",
-                        "labelAlign": "top",
-                        "labelWrap": true,
-                        "name": "content",
-                        "required": true,
-                        "value": null,
-                        "maxLength": 100
-                    },
-                    "designerId": "9ce087bf-3d75-45fb-af96-b6a38799b7bc",
-                    "cn": [
-                        {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "onTextareaChange",
-                                "fn": "onTextareaChange",
-                                "implHandler": [
-                                    "var value = textfield.getValue().toUpperCase();",
-                                    "var button = textfield.parent.child('button');",
-                                    "",
-                                    "if(value.length<2||/\\W+/.test(value)){",
-                                    "\tbutton.disable();",
-                                    "}else{",
-                                    "\tbutton.enable();",
-                                    "}",
-                                    "",
-                                    "textfield.setValue(value);"
-                                ],
-                                "name": "keyup"
-                            },
-                            "designerId": "ecc5de40-cfef-4fd5-9fcc-2f6d4d96b643"
-                        }
-                    ]
-                },
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ],
+            "cn": [
                 {
-                    "type": "Ext.Button",
+                    "type": "basiceventbinding",
                     "reference": {
-                        "name": "items",
+                        "name": "listeners",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "action": null,
-                        "disabled": true,
-                        "itemId": "saveIntention",
-                        "designer|userClassName": "MyButton2",
-                        "text": "Done"
+                        "designer|userClassName": "onIntentionSave",
+                        "fn": "onIntentionSave",
+                        "implHandler": [
+                            "text = button.parent.child('#intention').getValue();",
+                            "HEART.setItem('local', 'intention', text);",
+                            "",
+                            "form = button.parent;",
+                            "uuid = HEART.uuid;",
+                            "",
+                            "content = form.getValues();",
+                            "",
+                            "content.type = form.type;",
+                            "content.user = uuid;",
+                            "",
+                            "succ = function(response) {",
+                            "\tExt.Msg.alert(':)', \"<div align='center'>Data Submitted</div>\", Ext.emptyFn);",
+                            "};",
+                            "",
+                            "fail = function(response) {",
+                            "\tExt.Msg.alert(';(', \"<div align='center'>Network Error</div>\", Ext.emptyFn);",
+                            "",
+                            "\tfeeds = Ext.getStore(\"Feeds\");",
+                            "\tcontent.timestamp = Date.now();",
+                            "\tfeeds.add(content);",
+                            "\tfeeds.sort(\"timestamp\", 'DESC');\t",
+                            "\tfeeds.sync();",
+                            "};",
+                            "",
+                            "HEART.toSensor(content, succ, fail);",
+                            "",
+                            "HEART.toUser({uuid: HEART.uuid, intention_set: true});",
+                            "",
+                            "form.destroy();"
+                        ],
+                        "name": "tap"
                     },
-                    "designerId": "ec495742-ff4f-49ae-ab6c-5b68ae553a3c",
-                    "customConfigs": [
-                        {
-                            "group": "(Custom Properties)",
-                            "name": "action",
-                            "type": "string"
-                        }
-                    ],
-                    "cn": [
-                        {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "onIntentionSave",
-                                "fn": "onIntentionSave",
-                                "implHandler": [
-                                    "var uuid = AJAX.uuid;",
-                                    "var intention = button.parent.parent;",
-                                    "var text = intention.child('fieldset').child('textareafield').getValue();",
-                                    "",
-                                    "var content = { type: 'intentionSet', data: text, user: uuid };",
-                                    "window.localStorage.setItem('intention', text);",
-                                    "",
-                                    "var succ = function(response) {",
-                                    "\tExt.Msg.alert(':)', \"<div align='center'>Data Submitted</div>\", Ext.emptyFn);",
-                                    "};",
-                                    "",
-                                    "var\tfail = function(response) {",
-                                    "\tExt.Msg.alert(';(', \"<div align='center'>Network Error</div>\", Ext.emptyFn);",
-                                    "\tvar feeds = Ext.getStore(\"Feeds\");",
-                                    "\tfeeds.add({timestamp: Date.now(), type: 'intentionSet', data: text, user: uuid});",
-                                    "\tfeeds.sort(\"timestamp\", 'DESC');\t",
-                                    "\tfeeds.sync();",
-                                    "};",
-                                    "",
-                                    "AJAX.toSensor(content, succ, fail);",
-                                    "",
-                                    "fail = function(response) {",
-                                    "\tconsole.log(response);",
-                                    "};",
-                                    "",
-                                    "AJAX.toUser({uuid: AJAX.uuid, intention_set: true}, succ, fail);",
-                                    "",
-                                    "intention.destroy();"
-                                ],
-                                "name": "tap"
-                            },
-                            "designerId": "a7046bb0-99e5-46ab-b5d0-5a43f34901bf"
-                        }
-                    ]
+                    "designerId": "a7046bb0-99e5-46ab-b5d0-5a43f34901bf"
                 }
             ]
         }

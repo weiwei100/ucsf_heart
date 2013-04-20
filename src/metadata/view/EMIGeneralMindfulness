@@ -22,7 +22,7 @@
                 "goola": "emi",
                 "centered": false,
                 "designer|userClassName": "MyFieldSet",
-                "title": "<center>Take A Moment<center>"
+                "title": "<div align='center'>Take A Moment</div>"
             },
             "designerId": "ed7dc267-c453-4f61-9895-82dc486e2055",
             "customConfigs": [
@@ -42,6 +42,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "html": "Wherever you are in this moment...",
+                        "itemId": "describe",
                         "designer|userClassName": "MyLabel6"
                     },
                     "designerId": "aebdc730-1705-4685-bef2-e40fb432769d"
@@ -58,6 +59,7 @@
                         "label": "Feeling your feet planted on the ground",
                         "labelWidth": "80%",
                         "labelWrap": true,
+                        "name": null,
                         "value": null
                     },
                     "designerId": "614e079e-0fe7-4493-8d66-b7a67389e782"
@@ -74,6 +76,7 @@
                         "label": "Feeling your breath supporting you",
                         "labelWidth": "80%",
                         "labelWrap": true,
+                        "name": null,
                         "value": ""
                     },
                     "designerId": "7405ce3e-032b-4373-b7ac-b0933be7345d"
@@ -90,6 +93,7 @@
                         "label": "Feeling your body just as it is",
                         "labelWidth": "80%",
                         "labelWrap": true,
+                        "name": null,
                         "value": null
                     },
                     "designerId": "b8ead39d-6b8e-4ad2-aa40-3c47327ad061"

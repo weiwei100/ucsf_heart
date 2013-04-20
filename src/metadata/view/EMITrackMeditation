@@ -48,7 +48,7 @@
                                 "designer|userClassName": "onNotTap",
                                 "fn": "onNotTap",
                                 "implHandler": [
-                                    "var meditation = window.localStorage.getItem('meditation');",
+                                    "var meditation = HEART.getItem('local', 'meditation');",
                                     "",
                                     "if(meditation==null){",
                                     "\tmeditation = 0;",
@@ -84,8 +84,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "goola": "number",
                         "centered": null,
-                        "itemId": "mytextfield4",
+                        "itemId": "plus",
                         "designer|userClassName": "MyTextField4",
                         "label": "min",
                         "labelAlign": "right",
@@ -93,28 +94,11 @@
                         "required": true
                     },
                     "designerId": "3263567f-70b1-4d34-8a1d-ed7eab32087d",
-                    "cn": [
+                    "customConfigs": [
                         {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "onMyTimeChange",
-                                "fn": "onMyTimeChange",
-                                "implHandler": [
-                                    "var value = textfield.getValue();",
-                                    "",
-                                    "if(/\\D+/.test(value)){",
-                                    "\tExt.Msg.alert(';(', \"<div align='center'>Please don't enter letters or other characters.</div>\", Ext.emptyFn);",
-                                    "\ttextfield.setValue(0);",
-                                    "}"
-                                ],
-                                "name": "keyup"
-                            },
-                            "designerId": "4b11a0c2-b82d-46a1-96fd-666d7acaffa2"
+                            "group": "(Custom Properties)",
+                            "name": "goola",
+                            "type": "string"
                         }
                     ]
                 },
@@ -126,7 +110,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "mybutton36",
+                        "itemId": "done",
                         "designer|userClassName": "MyButton36",
                         "text": "Done"
                     },
@@ -158,7 +142,7 @@
                                     "window.localStorage.setItem('meditation', meditation);",
                                     "",
                                     "var type = 'meditationTrack';",
-                                    "var uuid = uuid;",
+                                    "var uuid = HEART.uuid;",
                                     "",
                                     "var content = { type: type, data: plus, user: uuid};",
                                     "",
@@ -174,7 +158,7 @@
                                     "\tfeeds.sync();",
                                     "};",
                                     "",
-                                    "AJAX.toSensor(content, succ, fail);",
+                                    "HEART.toSensor(content, succ, fail);",
                                     "",
                                     "if(this.goola=='exercises'){",
                                     "\tthis.parent.pop();",

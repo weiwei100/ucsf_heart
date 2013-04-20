@@ -6,12 +6,16 @@
     },
     "codeClass": null,
     "userConfig": {
-        "container|animation": null,
+        "container|animation": "slide",
         "container|animation.duration": null,
+        "hideAnimation": [
+            "{type :\"fadeOut\", duration : 256}"
+        ],
         "id": null,
         "showAnimation": [
             "{type :\"fadeIn\", duration : 1024}"
         ],
+        "ui": "light",
         "designer|userClassName": "MainTabs",
         "designer|userAlias": "mainview",
         "designer|initialView": true
@@ -29,7 +33,7 @@
                 "title": "Home",
                 "iconCls": "home",
                 "centered": null,
-                "id": "homepanel",
+                "id": "homePanel",
                 "styleHtmlContent": null,
                 "designer|userClassName": "MyFormPanel4",
                 "layout": null,
@@ -103,6 +107,7 @@
                         "label": "Stop and notice your body then your emotions. What are you aware of right now? <br/> (left=overwhelmed, right=balance)",
                         "labelAlign": "top",
                         "labelWrap": true,
+                        "name": "stress",
                         "value": [
                             50
                         ]
@@ -137,7 +142,7 @@
                 "title": "I'm stressed!",
                 "iconCls": "user",
                 "id": "stressed",
-                "itemId": "stressedView",
+                "itemId": null,
                 "designer|userClassName": "MyNavigationView1"
             },
             "designerId": "ff4f20c8-12a9-4f1b-a90e-82d983d05723"
@@ -167,8 +172,15 @@
                     "userConfig": {
                         "id": "exerciseList",
                         "designer|userClassName": "MyList",
+                        "hideOnMaskTap": true,
+                        "allowDeselect": true,
+                        "disableSelection": false,
+                        "emptyText": "Nothing",
+                        "pressedDelay": 64,
                         "store": "EMXs",
-                        "grouped": true
+                        "grouped": true,
+                        "onItemDisclosure": null,
+                        "preventSelectionOnDisclose": null
                     },
                     "designerId": "5d7f16dc-0707-4ead-97ab-17b165af9941",
                     "cn": [
@@ -205,8 +217,9 @@
                 "centered": null,
                 "hidden": null,
                 "id": "settings",
-                "itemId": "myformpanel16",
-                "designer|userClassName": "MyFormPanel6"
+                "itemId": null,
+                "designer|userClassName": "MyFormPanel6",
+                "scrollable": null
             },
             "designerId": "e7443fc1-6b32-4c1d-adbd-54f3b760a2dc",
             "cn": [
@@ -223,7 +236,7 @@
                         "label": "First name",
                         "labelWidth": "50%",
                         "name": "name",
-                        "required": true,
+                        "required": null,
                         "autoCapitalize": true,
                         "maxLength": 15
                     },
@@ -242,7 +255,7 @@
                         "label": "Child's name",
                         "labelWidth": "50%",
                         "name": "child_name",
-                        "required": true,
+                        "required": null,
                         "autoCapitalize": true,
                         "maxLength": 15
                     },
@@ -259,6 +272,7 @@
                         "itemId": "wakeTime",
                         "designer|userClassName": "MySelectField1",
                         "label": "Wake time",
+                        "labelWidth": "50%",
                         "name": "wake_time",
                         "readOnly": false
                     },
@@ -275,6 +289,7 @@
                         "itemId": "sleepTime",
                         "designer|userClassName": "MySelectField1",
                         "label": "Sleep time",
+                        "labelWidth": "50%",
                         "name": "sleep_time",
                         "readOnly": false
                     },
@@ -294,10 +309,11 @@
                         "itemId": "gender",
                         "designer|userClassName": "MySelectField",
                         "label": "Gender",
+                        "labelWidth": "50%",
                         "name": "gender",
-                        "required": true,
+                        "required": null,
                         "value": null,
-                        "placeHolder": "tap here",
+                        "placeHolder": null,
                         "hiddenName": null,
                         "options": "[{text: 'Male', value: 'm'}, {text: 'Female', value: 'm'}, {text: 'Other', value: 'o'}]",
                         "valueField": null
@@ -312,38 +328,23 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "goola": "number",
                         "itemId": "weight",
                         "designer|userClassName": "MyTextField",
+                        "clearIcon": null,
                         "label": "Weight",
                         "labelWidth": "50%",
                         "name": "weight",
-                        "required": true,
-                        "autoCapitalize": true,
+                        "required": null,
+                        "autoCapitalize": null,
                         "maxLength": 15
                     },
                     "designerId": "862a29c3-55a0-4c3c-aec4-e3be0f3df663",
-                    "cn": [
+                    "customConfigs": [
                         {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "onWeightKeyup",
-                                "fn": "onWeightKeyup",
-                                "implHandler": [
-                                    "var value = textfield.getValue();",
-                                    "",
-                                    "if(/\\D+/.test(value)){",
-                                    "\tExt.Msg.alert(';(', \"<div align='center'>Please don't enter letters or other characters.</div>\", Ext.emptyFn);",
-                                    "\ttextfield.setValue(0);",
-                                    "}"
-                                ],
-                                "name": "keyup"
-                            },
-                            "designerId": "611c21fa-19d1-4a2b-9135-98c5f0801ae9"
+                            "group": "(Custom Properties)",
+                            "name": "goola",
+                            "type": "string"
                         }
                     ]
                 },
@@ -355,38 +356,23 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "goola": "number",
                         "itemId": "height",
                         "designer|userClassName": "MyTextField",
+                        "clearIcon": null,
                         "label": "Height",
                         "labelWidth": "50%",
                         "name": "height",
-                        "required": true,
-                        "autoCapitalize": true,
+                        "required": null,
+                        "autoCapitalize": null,
                         "maxLength": 15
                     },
                     "designerId": "218c3989-e75d-4ca9-a77e-ed527ce179bb",
-                    "cn": [
+                    "customConfigs": [
                         {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "onHeightKeyup",
-                                "fn": "onHeightKeyup",
-                                "implHandler": [
-                                    "var value = textfield.getValue();",
-                                    "",
-                                    "if(/\\D+/.test(value)){",
-                                    "\tExt.Msg.alert(';(', \"<div align='center'>Please don't enter letters or other characters.</div>\", Ext.emptyFn);",
-                                    "\ttextfield.setValue(0);",
-                                    "}"
-                                ],
-                                "name": "keyup"
-                            },
-                            "designerId": "86dd7623-de8a-49fd-b2f4-9331c8b6af74"
+                            "group": "(Custom Properties)",
+                            "name": "goola",
+                            "type": "string"
                         }
                     ]
                 },
@@ -399,39 +385,11 @@
                     "codeClass": null,
                     "userConfig": {
                         "docked": null,
-                        "itemId": "setNotifications",
+                        "itemId": "done",
                         "designer|userClassName": "MyButton2",
                         "text": "Set Notification Frequency"
                     },
                     "designerId": "658a955a-b968-4ee5-9803-7856021b1b6e"
-                },
-                {
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "onSettingsInitialize",
-                        "fn": "onSettingsInitialize",
-                        "implHandler": [
-                            "var options = [];",
-                            "",
-                            "for( i=0; i<24; i++ ){\t",
-                            "\t",
-                            "\toption = { text: i +': 00', value: i };\t",
-                            "\toptions.push(option);",
-                            "\toption = { text: i +': 30', value: i+0.5 };",
-                            "\toptions.push(option);",
-                            "}",
-                            "",
-                            "this.child('#wakeTime').setOptions(options);",
-                            "this.child('#sleepTime').setOptions(options);"
-                        ],
-                        "name": "initialize"
-                    },
-                    "designerId": "f7024b6a-9490-4a40-b4e1-02441d1dfded"
                 }
             ]
         },
@@ -462,16 +420,29 @@
                 "implHandler": [
                     "this.callParent();",
                     "",
-                    "var user = window.localStorage.getItem('user');",
-                    "var settings = this.child('#settings');",
+                    "user = HEART.getItem('local','user');",
+                    "settings = this.child('#settings');",
                     "",
-                    "if(user==null){",
+                    "if( user==null ){",
                     "\tthis.getTabBar().hide();",
                     "\tthis.setActiveItem(settings);",
                     "}else{",
                     "\tuser = JSON.parse(user);",
                     "\tsettings.setValues(user);",
-                    "}"
+                    "}",
+                    "",
+                    "var options = new Array();",
+                    "",
+                    "for( i=0; i<24; i++ ){\t",
+                    "",
+                    "\toption = { text: i +': 00', value: i };\t",
+                    "\toptions.push(option);",
+                    "\toption = { text: i +': 30', value: i+0.5 };",
+                    "\toptions.push(option);",
+                    "}",
+                    "",
+                    "settings.child('#wakeTime').setOptions(options);",
+                    "settings.child('#sleepTime').setOptions(options);"
                 ]
             },
             "designerId": "9c748870-c0b3-4c73-8cd6-790fb210800f"

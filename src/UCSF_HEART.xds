@@ -194,12 +194,6 @@
             ],
             "className": "js1"
         },
-        "5dac7843-38ea-4c4a-a25d-2189c9be0da2": {
-            "paths": [
-                "metadata/resource/js"
-            ],
-            "className": "js"
-        },
         "bae2e87f-6d72-44ed-8b20-c074c41bdd6f": {
             "paths": [
                 "metadata/view/EMIReflection5",
@@ -262,14 +256,6 @@
             ],
             "className": "EMITrackMeditation"
         },
-        "7abf8546-081f-4ab7-ae1c-d0cb96a5013b": {
-            "paths": [
-                "metadata/view/IntentionReminder2",
-                "app/view/override/IntentionReminder2.js",
-                "app/view/IntentionReminder2.js"
-            ],
-            "className": "IntentionReminder2"
-        },
         "400ba324-109a-4e35-8271-2da4c4c0eddb": {
             "paths": [
                 "metadata/view/IntentionSavorShare",
@@ -285,6 +271,20 @@
                 "app/view/EMITrackExercise.js"
             ],
             "className": "EMITrackExercise"
+        },
+        "f1270a97-19a1-4e1a-a9b7-80eb5a421210": {
+            "paths": [
+                "metadata/resource/js3"
+            ],
+            "className": "js3"
+        },
+        "91807876-f809-43a0-90e0-e10068323732": {
+            "paths": [
+                "metadata/view/IntentionReminder2",
+                "app/view/override/IntentionReminder2.js",
+                "app/view/IntentionReminder2.js"
+            ],
+            "className": "IntentionReminder2"
         }
     },
     "viewOrderMap": {
@@ -309,7 +309,7 @@
             "bae2e87f-6d72-44ed-8b20-c074c41bdd6f",
             "e0e2a56e-a1c7-44bb-a49b-ed468cbfdcaf",
             "66ae294e-a774-4832-9f70-3a677c4a7503",
-            "7abf8546-081f-4ab7-ae1c-d0cb96a5013b",
+            "91807876-f809-43a0-90e0-e10068323732",
             "400ba324-109a-4e35-8271-2da4c4c0eddb",
             "c478480b-9b04-4a50-ae90-cada9879ba21",
             "b0acc8ba-5db7-4c55-a02b-e0971e946a78"
@@ -328,9 +328,9 @@
         ],
         "resource": [
             "a2531373-fbeb-4cc3-9d43-10a6dc7525be",
-            "5dac7843-38ea-4c4a-a25d-2189c9be0da2",
             "9a48f17e-e509-4bad-aed3-b00a4e7d72b4",
-            "d19f9e55-066f-4a20-92f6-b366da455211"
+            "d19f9e55-066f-4a20-92f6-b366da455211",
+            "f1270a97-19a1-4e1a-a9b7-80eb5a421210"
         ],
         "app": [
             "application"

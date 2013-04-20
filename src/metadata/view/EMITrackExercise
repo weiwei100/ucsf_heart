@@ -48,7 +48,7 @@
                                 "designer|userClassName": "onNotTap",
                                 "fn": "onNotTap",
                                 "implHandler": [
-                                    "var meditation = window.localStorage.getItem('exercise');",
+                                    "var meditation = HEART.getItem('local', 'exercise');",
                                     "",
                                     "if(meditation==null){",
                                     "\tmeditation = 0;",
@@ -84,7 +84,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "goola": "number",
                         "centered": null,
+                        "id": "plus",
                         "itemId": "mytextfield4",
                         "designer|userClassName": "MyTextField4",
                         "label": "min",
@@ -93,28 +95,11 @@
                         "required": true
                     },
                     "designerId": "1c382c4a-cff8-43b2-a2f6-603497efacb8",
-                    "cn": [
+                    "customConfigs": [
                         {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "onMyTimeChange",
-                                "fn": "onMyTimeChange",
-                                "implHandler": [
-                                    "var value = textfield.getValue();",
-                                    "",
-                                    "if(/\\D+/.test(value)){",
-                                    "\tExt.Msg.alert(';(', \"<div align='center'>Please don't enter letters or other characters.</div>\", Ext.emptyFn);",
-                                    "\ttextfield.setValue(0);",
-                                    "}"
-                                ],
-                                "name": "keyup"
-                            },
-                            "designerId": "a26ec347-4b72-4d2f-be91-002f2f69958f"
+                            "group": "(Custom Properties)",
+                            "name": "goola",
+                            "type": "string"
                         }
                     ]
                 },
@@ -126,7 +111,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "mybutton36",
+                        "id": "",
+                        "itemId": "done",
                         "designer|userClassName": "MyButton36",
                         "text": "Done"
                     },
@@ -158,7 +144,7 @@
                                     "window.localStorage.setItem('exercise', exercise);",
                                     "",
                                     "var type = 'exerciseTrack';",
-                                    "var uuid = AJAX.uuid;",
+                                    "var uuid = HEART.uuid;",
                                     "",
                                     "var content = { type: type, data: plus, user: uuid};",
                                     "",
@@ -174,7 +160,7 @@
                                     "\tfeeds.sync();",
                                     "};",
                                     "",
-                                    "AJAX.toSensor(content, succ, fail);",
+                                    "HEART.toSensor(content, succ, fail);",
                                     "",
                                     "",
                                     "if(this.goola=='exercises'){",

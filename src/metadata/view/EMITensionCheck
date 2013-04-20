@@ -6,7 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "EMITensionCheck"
+        "designer|userClassName": "EMITensionCheck",
+        "scrollable": null
     },
     "designerId": "20b4102a-0d56-4d56-a98c-f275981ee4ad",
     "cn": [
@@ -20,8 +21,10 @@
             "userConfig": {
                 "goola": "emi",
                 "centered": false,
+                "docked": null,
                 "designer|userClassName": "MyFieldSet",
-                "title": "<center>Mindful Body-Scan<center>"
+                "scrollable": null,
+                "title": "<div align='center'>Mindful Body-Scan<div>"
             },
             "designerId": "3ec85e59-c81e-4e38-92fb-56146f1ec558",
             "customConfigs": [
@@ -41,6 +44,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "html": "Feel and relax each body part for a few seonds, then check:",
+                        "itemId": "describe",
                         "designer|userClassName": "MyLabel6"
                     },
                     "designerId": "bce212dc-819b-4018-a9b6-022e9083aa02"
@@ -57,6 +61,7 @@
                         "label": "Feet",
                         "labelWidth": "80%",
                         "labelWrap": true,
+                        "name": null,
                         "value": "Feet"
                     },
                     "designerId": "e0304af6-c8db-4fa2-9744-a80892c3bc5a"
@@ -73,6 +78,7 @@
                         "label": "Thighs",
                         "labelWidth": "80%",
                         "labelWrap": true,
+                        "name": null,
                         "value": ""
                     },
                     "designerId": "61d230f6-d50c-4158-923c-b48b58087a39"
@@ -89,6 +95,7 @@
                         "label": "Belly",
                         "labelWidth": "80%",
                         "labelWrap": true,
+                        "name": null,
                         "value": null
                     },
                     "designerId": "ef4eb9b8-76dc-449c-b8db-a604e0dc7d72"
@@ -105,6 +112,7 @@
                         "label": "Chest",
                         "labelWidth": "80%",
                         "labelWrap": true,
+                        "name": null,
                         "value": null
                     },
                     "designerId": "e2e80d29-5126-4217-b431-b6a0f0d33a64"
@@ -121,6 +129,7 @@
                         "label": "Hands",
                         "labelWidth": "80%",
                         "labelWrap": true,
+                        "name": null,
                         "value": null
                     },
                     "designerId": "c11aebf5-fb2d-494d-8a4c-0ced349fece8"
@@ -134,25 +143,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyCheckbox",
-                        "label": "Hands",
-                        "labelWidth": "80%",
-                        "labelWrap": true,
-                        "value": null
-                    },
-                    "designerId": "b63b3bff-ba8c-4ec6-a902-a92e9b9e0e7d"
-                },
-                {
-                    "type": "Ext.field.Checkbox",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyCheckbox",
                         "label": "Face & Jaw",
                         "labelWidth": "80%",
                         "labelWrap": true,
+                        "name": null,
                         "value": null
                     },
                     "designerId": "2326f9cb-7aa5-4887-841e-5b053527e492"

@@ -86,12 +86,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "centered": false,
+                        "centered": null,
                         "docked": null,
                         "html": null,
                         "itemId": "audioPanel",
                         "designer|userClassName": "MyAudio",
-                        "autoPause": false,
                         "enableControls": true,
                         "url": "https://dl.dropboxusercontent.com/u/37254590/W_2.0.m4a"
                     },

@@ -8,8 +8,21 @@
     "userConfig": {
         "designer|userClassName": "IntentionReminder2"
     },
-    "designerId": "7abf8546-081f-4ab7-ae1c-d0cb96a5013b",
+    "designerId": "91807876-f809-43a0-90e0-e10068323732",
     "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<center>Living from your intention today.</center>",
+                "designer|userClassName": "MyLabel5"
+            },
+            "designerId": "c5d45704-502b-4002-9365-860174a6112f"
+        },
         {
             "type": "Ext.form.FieldSet",
             "reference": {
@@ -19,9 +32,9 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyFieldSet17",
-                "title": "<center>Living from your intention today?</center>"
+                "title": null
             },
-            "designerId": "0469d4e1-bc7f-4d7b-92d4-d8e31dff6a77",
+            "designerId": "d8c35bdc-721b-4e6c-a344-48d17a614a7c",
             "cn": [
                 {
                     "type": "Ext.Label",
@@ -35,7 +48,7 @@
                         "itemId": "describe",
                         "designer|userClassName": "MyLabel19"
                     },
-                    "designerId": "17983d8c-0a48-4abd-913b-7a18cd796a0a"
+                    "designerId": "54849c28-9064-491d-b9d8-4f6d92ae684d"
                 },
                 {
                     "type": "Ext.Label",
@@ -48,21 +61,7 @@
                         "itemId": "intention",
                         "designer|userClassName": "MyLabel4"
                     },
-                    "designerId": "e8dbb299-4c65-46ca-9911-d26dae6fd542"
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "html": "<p>Take a few moments and feel your intention.</p><p>Visualize your day today and image bringing your intention into whatever you do.</p>",
-                        "itemId": "more",
-                        "designer|userClassName": "MyLabel20"
-                    },
-                    "designerId": "52a52321-8900-4f51-90b5-97beee376057"
+                    "designerId": "adc14913-7abd-429b-89b8-6a6aac23fc62"
                 },
                 {
                     "type": "Ext.field.Slider",
@@ -74,14 +73,14 @@
                     "userConfig": {
                         "itemId": "being",
                         "designer|userClassName": "MySliderField44",
-                        "label": "Can your feel this? <br/> (left=not at all, right=very much so)",
+                        "label": "Can you connection with and feel your intention right now? <br/> (left=not at all, right=a lot)",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "value": [
                             50
                         ]
                     },
-                    "designerId": "07989f99-0ee1-49e1-9325-2e531cbb8fee"
+                    "designerId": "866a95b5-2372-4f99-bafd-dd9a702bd3f1"
                 },
                 {
                     "type": "Ext.Button",
@@ -95,7 +94,7 @@
                         "designer|userClassName": "MyButton28",
                         "text": "Done"
                     },
-                    "designerId": "2d921588-6967-4cae-b59a-b0f906014838",
+                    "designerId": "b778a0c7-b493-4d23-8cc1-a79b9c3119da",
                     "cn": [
                         {
                             "type": "basiceventbinding",
@@ -113,7 +112,7 @@
                                     "var content = {data: value};",
                                     "",
                                     "var type = 'intentionReminder2';",
-                                    "var uuid = AJAX.uuid;",
+                                    "var uuid =  HEART.uuid;",
                                     "",
                                     "content.type = type;",
                                     "content.user = uuid;",
@@ -130,7 +129,7 @@
                                     "\tfeeds.sync();",
                                     "};",
                                     "",
-                                    "AJAX.toSensor(content, succ, fail);",
+                                    "HEART.toSensor(content, succ, fail);",
                                     "",
                                     "if(this.goola=='exercises'){",
                                     "\tthis.parent.pop();",
@@ -144,7 +143,7 @@
                                 ],
                                 "name": "tap"
                             },
-                            "designerId": "a1f41db2-3cd0-48c3-905e-568ef3cebf61"
+                            "designerId": "b6b8a37a-9243-4377-bbf9-9c7e551524b6"
                         }
                     ]
                 },
@@ -160,7 +159,7 @@
                         "designer|userClassName": "MyButton29",
                         "text": "Change my intention"
                     },
-                    "designerId": "181720fd-dae8-4eb8-9898-dddeceb30135",
+                    "designerId": "47c1b145-675e-4a13-b41b-d1a4199c779c",
                     "cn": [
                         {
                             "type": "basiceventbinding",
@@ -178,7 +177,7 @@
                                 ],
                                 "name": "tap"
                             },
-                            "designerId": "c336dcc8-d9e4-4b51-a4f5-4dad1150b195"
+                            "designerId": "18700056-5eca-43d1-a372-cca5cb1c011b"
                         }
                     ]
                 }
@@ -202,7 +201,7 @@
                     "}"
                 ]
             },
-            "designerId": "6f5b864c-e05e-4112-ae96-d9b927360ff0"
+            "designerId": "90e18cfb-6fde-446c-ab9a-979d44c0990e"
         }
     ]
 }
