@@ -46,7 +46,7 @@ function initPushwoosh() {
 	}
 	
 	form = Ext.create('HEART.view.' + type);
-	form.type = type;
+	form.emxType = type;
 	form.goola = 'notification';		      
 	Ext.Viewport.setActiveItem(form);
 	

@@ -48,7 +48,7 @@
                                 "designer|userClassName": "onNotTap",
                                 "fn": "onNotTap",
                                 "implHandler": [
-                                    "var meditation = HEART.getItem('local', 'meditation');",
+                                    "meditation = HEART.getItem('local', 'meditation');",
                                     "",
                                     "if(meditation==null){",
                                     "\tmeditation = 0;",
@@ -110,11 +110,19 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "action": "exercise",
                         "itemId": "done",
                         "designer|userClassName": "MyButton36",
                         "text": "Done"
                     },
                     "designerId": "adf83247-d89f-465c-a35e-fb3f23b2338a",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ],
                     "cn": [
                         {
                             "type": "basiceventbinding",
@@ -127,8 +135,8 @@
                                 "designer|userClassName": "onMyTimeSave",
                                 "fn": "onMyTimeSave",
                                 "implHandler": [
-                                    "var meditation = window.localStorage.getItem('meditation');",
-                                    "var plus = button.parent.child('textfield').getValue();",
+                                    "meditation = HEART.getItem('local', 'meditation');",
+                                    "plus = button.parent.child('textfield').getValue();",
                                     "",
                                     "if(meditation==null||isNaN(meditation)){",
                                     "\tmeditation=0;",
@@ -136,39 +144,9 @@
                                     "",
                                     "meditation = parseInt(meditation);",
                                     "plus = parseInt(plus);",
-                                    "",
                                     "meditation += plus;",
                                     "",
-                                    "window.localStorage.setItem('meditation', meditation);",
-                                    "",
-                                    "var type = 'meditationTrack';",
-                                    "var uuid = HEART.uuid;",
-                                    "",
-                                    "var content = { type: type, data: plus, user: uuid};",
-                                    "",
-                                    "var succ = function(response) {",
-                                    "\tExt.Msg.alert(':)', \"<div align='center'>Data Submitted</div>\", Ext.emptyFn);",
-                                    "};",
-                                    "",
-                                    "var fail = function(response) {",
-                                    "\tExt.Msg.alert(';(', \"<div align='center'>Network Error</div>\", Ext.emptyFn);",
-                                    "\tvar feeds = Ext.getStore(\"Feeds\");",
-                                    "\tfeeds.add({timestamp: Date.now(), type: type, data: plus, user: uuid});",
-                                    "\tfeeds.sort(\"timestamp\", 'DESC');\t\t",
-                                    "\tfeeds.sync();",
-                                    "};",
-                                    "",
-                                    "HEART.toSensor(content, succ, fail);",
-                                    "",
-                                    "if(this.goola=='exercises'){",
-                                    "\tthis.parent.pop();",
-                                    "}else if(this.goola=='stressed'){",
-                                    "\tthis.parent.pop();",
-                                    "\tthis.parent.hide();",
-                                    "\tthis.parent.show();",
-                                    "}else{",
-                                    "\tthis.destroy();",
-                                    "}"
+                                    "HEART.setItem('local', 'meditation', meditation);"
                                 ],
                                 "name": "tap"
                             },

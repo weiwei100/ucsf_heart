@@ -63,6 +63,7 @@
                         "label": "Can your feel this? <br/> (left=not at all, right=very much so)",
                         "labelAlign": "top",
                         "labelWrap": true,
+                        "name": "being",
                         "value": [
                             50
                         ]
@@ -77,61 +78,17 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "reminderDone",
+                        "action": "exercise",
+                        "itemId": "done",
                         "designer|userClassName": "MyButton28",
                         "text": "Done"
                     },
                     "designerId": "85f7820e-aaf5-4856-a401-9a3474b97379",
-                    "cn": [
+                    "customConfigs": [
                         {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "onReminderDoneTap",
-                                "fn": "onReminderDoneTap",
-                                "implHandler": [
-                                    "var being = button.parent.child('#being');",
-                                    "var value = being.getValue();",
-                                    "var content = {data: value};",
-                                    "",
-                                    "var type = 'intentioSavorShare';",
-                                    "var uuid = HEART.uuid;",
-                                    "",
-                                    "content.type = type;",
-                                    "content.user = uuid;",
-                                    "",
-                                    "var succ = function(response) {",
-                                    "\tExt.Msg.alert(':)', \"<div align='center'>Data Submitted</div>\", Ext.emptyFn);",
-                                    "};",
-                                    "",
-                                    "var fail = function(response) {",
-                                    "\tExt.Msg.alert(':)', \"<div align='center'>Network Error</div>\", Ext.emptyFn);",
-                                    "\tvar feeds = Ext.getStore(\"Feeds\");",
-                                    "\tfeeds.add({timestamp: Date.now(), type: type, data: value, user: uuid});",
-                                    "\tfeeds.sort(\"timestamp\", 'DESC');\t\t",
-                                    "\tfeeds.sync();",
-                                    "};",
-                                    "",
-                                    "HEART.toSensor(content, succ, fail);",
-                                    "",
-                                    "",
-                                    "if(this.goola=='exercises'){",
-                                    "\tthis.parent.pop();",
-                                    "}else if(this.goola=='stressed'){",
-                                    "\tthis.parent.pop();",
-                                    "\tthis.parent.hide();",
-                                    "\tthis.parent.show();",
-                                    "}else{",
-                                    "\tthis.destroy();",
-                                    "}"
-                                ],
-                                "name": "tap"
-                            },
-                            "designerId": "5eba93f7-859b-418c-8db0-2efc51589c89"
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
                         }
                     ]
                 },
@@ -143,29 +100,17 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "action": "intention",
                         "itemId": "editIntention",
                         "designer|userClassName": "MyButton29",
                         "text": "Change my intention"
                     },
                     "designerId": "6525f663-0d90-4f45-aa3c-c3fcf1636220",
-                    "cn": [
+                    "customConfigs": [
                         {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "onEditIntentionTap",
-                                "fn": "onEditIntentionTap",
-                                "implHandler": [
-                                    "var intention = Ext.create('HEART.view.EMIIntentionSet');",
-                                    "Ext.Viewport.setActiveItem(intention);"
-                                ],
-                                "name": "tap"
-                            },
-                            "designerId": "3e7c2ef9-9e82-4d1e-bef6-ae1468ab1b58"
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
                         }
                     ]
                 }
@@ -183,7 +128,7 @@
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();",
-                    "var intention = window.localStorage.getItem('intention');",
+                    "intention = HEART.getItem('local', 'intention');",
                     "if(intention!=null){",
                     "\tthis.child('fieldset').child('#intention').setHtml(intention);",
                     "}"

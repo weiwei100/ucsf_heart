@@ -18,8 +18,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onHomeIntentionTap",
-                "fn": "onHomeIntentionTap",
+                "designer|userClassName": "onEditIntentionTap",
+                "fn": "onEditIntentionTap",
                 "implHandler": [
                     "form = Ext.create('HEART.view.EMIIntentionSet');",
                     "form.emxType = 'EMIIntentionSet';",
@@ -27,7 +27,7 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#homePanel #editIntention"
+                "designer|controlQuery": "button[action=intention]"
             },
             "designerId": "55eee0b7-5be8-4cdd-a3f0-36f5f55cf490"
         },
@@ -132,7 +132,7 @@
                     "\tExt.Msg.alert(';(', \"<div align='center'>Network Error</div>\", Ext.emptyFn);",
                     "};",
                     "",
-                    "HEART.toUser( {uuid: AJAX.uuid, wake: values.wake_time, sleep: values.sleep_time}, succ, fail );",
+                    "HEART.toUser( {uuid: HEART.uuid, wake: values.wake_time, sleep: values.sleep_time}, succ, fail );",
                     "",
                     "this.getHomePanel().parent.getTabBar().show();",
                     "",

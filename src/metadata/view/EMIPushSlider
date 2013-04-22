@@ -162,7 +162,7 @@
                             "\tExt.Msg.alert(';(', \"<div align='center'>Network Error</div>\", Ext.emptyFn);",
                             "};",
                             "",
-                            "HEART.toUser({uid: AJAX.uuid, priority: value/25}, succ, fail);",
+                            "HEART.toUser({uid: HEART.uuid, priority: value/25}, succ, fail);",
                             "",
                             "form.destroy();"
                         ],

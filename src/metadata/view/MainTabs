@@ -79,6 +79,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "action": "intention",
                         "baseCls": "x-html",
                         "html": null,
                         "itemId": "editIntention",
@@ -87,7 +88,14 @@
                         "iconMask": true,
                         "text": "<b>press here to set</b>"
                     },
-                    "designerId": "bf3b7157-6010-46f8-9d6a-fb087fdba9d0"
+                    "designerId": "bf3b7157-6010-46f8-9d6a-fb087fdba9d0",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.field.Slider",
@@ -442,7 +450,8 @@
                     "}",
                     "",
                     "settings.child('#wakeTime').setOptions(options);",
-                    "settings.child('#sleepTime').setOptions(options);"
+                    "settings.child('#sleepTime').setOptions(options);",
+                    ""
                 ]
             },
             "designerId": "9c748870-c0b3-4c73-8cd6-790fb210800f"

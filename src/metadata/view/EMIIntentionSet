@@ -137,7 +137,7 @@
                             "",
                             "content = form.getValues();",
                             "",
-                            "content.type = form.type;",
+                            "content.type = form.emxType;",
                             "content.user = uuid;",
                             "",
                             "succ = function(response) {",
@@ -155,8 +155,6 @@
                             "};",
                             "",
                             "HEART.toSensor(content, succ, fail);",
-                            "",
-                            "HEART.toUser({uuid: HEART.uuid, intention_set: true});",
                             "",
                             "form.destroy();"
                         ],
