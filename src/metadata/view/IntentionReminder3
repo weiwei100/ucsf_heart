@@ -1,0 +1,169 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "IntentionReminder3"
+    },
+    "designerId": "4fb3a47b-8ddd-4302-919f-793903f499a2",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<center>Feel your intention today.</center>",
+                "padding": "8px",
+                "designer|userClassName": "MyLabel5"
+            },
+            "designerId": "62352c55-d995-40ca-a672-8031c5058341"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet17",
+                "title": null
+            },
+            "designerId": "1277876f-f4a8-492a-96d0-135c0235a290",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Your current intention is:",
+                        "itemId": "describe",
+                        "designer|userClassName": "MyLabel19"
+                    },
+                    "designerId": "20c284ab-f8fb-48bc-ae9d-ac93386b3830"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "intention",
+                        "designer|userClassName": "MyLabel4"
+                    },
+                    "designerId": "cfda70a4-194f-4072-9fbc-25471e87f036"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Take a few moments and savor the feelings and sensations of your intention. <br/> Take a moment to imagine sharing this with someone special.",
+                        "itemId": "more",
+                        "margin": "8px",
+                        "designer|userClassName": "MyLabel9"
+                    },
+                    "designerId": "63c824f7-3e00-465d-862d-e8aab795a83e"
+                },
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "being",
+                        "designer|userClassName": "MySliderField44",
+                        "label": "Can you connection with and feel your intention right now? <br/> (left=not at all, right=a lot)",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "being",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "d3faf109-6cb2-4927-b304-2cb649409b90"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "exercise",
+                        "itemId": "done",
+                        "designer|userClassName": "MyButton28",
+                        "text": "Done"
+                    },
+                    "designerId": "85b8a3d6-5a3e-4836-a770-1ef10e13c9f3",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "intention",
+                        "itemId": "intentionEdit",
+                        "designer|userClassName": "MyButton29",
+                        "text": "Change my intention"
+                    },
+                    "designerId": "9509350b-4bbe-487a-a8b3-445d3326654d",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "initialize",
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "intention = HEART.getItem('local', 'intention');",
+                    "if(intention!=null){",
+                    "\tthis.child('fieldset').child('#intention').setHtml(intention);",
+                    "}"
+                ]
+            },
+            "designerId": "569669be-777b-45dd-8dfe-18657da31226"
+        }
+    ]
+}
