@@ -44,7 +44,7 @@ var HEART = {
 	},
 	
 	toUser: function(content, succ, fail) {
-		var url = 'http://192.168.1.157:3000/api/users';
+		var url = 'http://app.brainpage.com/ucsf/api/users';
 		
 		var username = 'breathwear';
 		var password = 'deepbreath';
@@ -57,21 +57,22 @@ var HEART = {
 	},
 	
 	sync: function() {
-		var feeds = Ext.getStore('Feeds');
+		feeds=Ext.getStore('Feeds');
 		if(feeds.getAllCount()>0){
 			feeds.each(
 				function(item, index, length){
-					var succ = function(response){console.log(response); feeds.removeAt(index); feeds.sync();};
+					var succ = function(response){feeds.removeAt(index);feeds.sync();};
 					var fail = function(response){console.log(response)};
 					var content = item.data.data;
 					content.timestamp = item.data.timestamp;
-					AJAX.toSensor(content, succ, fail);					
-				}
-			);
+					HEART.toSensor(content, succ, fail);					
+				});
 		}
 	},
 	
 	uuid: 'dropboxisawesome',
+	audioRoot: 'file:///android_asset/www/audios',
+	audioPlay: 'stawberry',
 	probability: 0.55
 	
 }

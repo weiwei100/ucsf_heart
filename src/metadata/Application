@@ -38,10 +38,13 @@
             "EMIAudio3",
             "EMITrackExercise",
             "EMITrackMeditation",
-            "IntentionReminder2"
+            "IntentionReminder2",
+            "EMIAudio4",
+            "EMIAudio5",
+            "EMIAudio6",
+            "EMIAudio7"
         ],
         "requires": [
-            "Ext.device.Device",
             "Ext.device.Connection"
         ],
         "controllers": [

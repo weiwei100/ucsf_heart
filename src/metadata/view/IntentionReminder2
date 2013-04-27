@@ -114,7 +114,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "action": "intention",
-                        "itemId": "editIntention",
+                        "itemId": "intentionEdit",
                         "designer|userClassName": "MyButton29",
                         "text": "Change my intention"
                     },

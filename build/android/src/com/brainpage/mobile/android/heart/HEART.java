@@ -19,11 +19,13 @@
 
 package com.brainpage.mobile.android.heart;
 
+import org.apache.cordova.Config;
+import org.apache.cordova.DroidGap;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
-
-import org.apache.cordova.*;
 
 import com.arellomobile.android.push.PushManager;
 
@@ -39,7 +41,7 @@ public class HEART extends DroidGap
         PushManager pushManager = new PushManager(this, /*"F86CD-A3DC5"*/"B7BBF-34717", "535622621184");
         pushManager.onStartup(this);
         checkMessage(getIntent());
-        
+
         super.loadUrl(Config.getStartUrl());
 //        super.loadUrl("file:///android_asset/www/app.html");
     }

@@ -60,7 +60,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<center><b>Compassion Meditation</b></center>",
+                        "html": "<center><b>Loving-kindness Meditation</b></center>",
                         "designer|userClassName": "MyLabel7"
                     },
                     "designerId": "5cb5cc9e-8508-46fb-b15d-6501041c4255"
@@ -73,7 +73,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<p>Listen to this guided session from the workshop.</p><p>Tip: Use headphones. <br/> Duration: 10min</p>",
+                        "html": "<p>Listen to this guided session from the workshop.</p><p>Tip: Use headphones. <br/> Duration: 5:40 min</p>",
                         "designer|userClassName": "MyLabel8"
                     },
                     "designerId": "720532b6-65f2-4059-b977-903dc3a8d17f"
@@ -92,7 +92,7 @@
                         "itemId": "audioPanel",
                         "designer|userClassName": "MyAudio",
                         "enableControls": true,
-                        "url": "https://dl.dropboxusercontent.com/u/37254590/W_2.0.m4a"
+                        "url": "https://dl.dropboxusercontent.com/u/37254590/T_Lovingkindness_5.40.m4a"
                     },
                     "designerId": "dfbe811d-143d-4ec1-bba6-2c4e53afad34"
                 },
@@ -139,6 +139,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "initialize",
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();"
+                ]
+            },
+            "designerId": "fe687fa9-4c6f-4819-b1d6-d5b0af7725f7"
         }
     ]
 }

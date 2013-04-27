@@ -60,7 +60,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<center><b>Perspective-taking</b></center>",
+                        "html": "<center><b>Body Connection</b></center>",
                         "designer|userClassName": "MyLabel7"
                     },
                     "designerId": "2b74114e-8e3c-4e5e-930c-e0b52775c384"
@@ -73,7 +73,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<p>Listen to this guided session from the workshop.</p><p>Tip: Use headphones. <br/> Duration: 10min</p>",
+                        "html": "<p>Listen to this guided session from the workshop.</p><p>Tip: Use headphones and stand or sit down. <br/> Duration: 0:35 min</p>",
                         "designer|userClassName": "MyLabel8"
                     },
                     "designerId": "212db81b-a269-43c4-b6cc-c04fdf2ad981"
@@ -92,7 +92,7 @@
                         "itemId": "audioPanel",
                         "designer|userClassName": "MyAudio",
                         "enableControls": true,
-                        "url": "https://dl.dropboxusercontent.com/u/37254590/W_10.0.m4a"
+                        "url": "https://dl.dropboxusercontent.com/u/37254590/T_35%20sec.m4a"
                     },
                     "designerId": "01cf0738-b4a0-4f3d-8335-b315a508357e"
                 },

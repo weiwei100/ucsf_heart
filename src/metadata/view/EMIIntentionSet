@@ -156,6 +156,9 @@
                             "",
                             "HEART.toSensor(content, succ, fail);",
                             "",
+                            "elements = Ext.ComponentQuery.query('#homePanel #editIntention');",
+                            "elements[0].setText(text);",
+                            "",
                             "form.destroy();"
                         ],
                         "name": "tap"

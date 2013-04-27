@@ -20,7 +20,6 @@ Ext.Loader.setConfig({
 Ext.application({
 
 	requires: [
-		'Ext.device.Device',
 		'Ext.device.Connection'
 	],
 	models: [
@@ -55,7 +54,11 @@ Ext.application({
 		'EMIAudio3',
 		'EMITrackExercise',
 		'EMITrackMeditation',
-		'IntentionReminder2'
+		'IntentionReminder2',
+		'EMIAudio4',
+		'EMIAudio5',
+		'EMIAudio6',
+		'EMIAudio7'
 	],
 	controllers: [
 		'EMXsController',

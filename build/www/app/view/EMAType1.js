@@ -31,6 +31,7 @@ Ext.define('HEART.view.EMAType1', {
 				items: [
 					{
 						xtype: 'sliderfield',
+						itemId: 'stressslider',
 						label: 'How much stress are you experiencing in this moment? <br/> (left=none, right=alot)',
 						labelAlign: 'top',
 						labelWrap: true,
@@ -46,7 +47,37 @@ Ext.define('HEART.view.EMAType1', {
 					}
 				]
 			}
+		],
+		listeners: [
+		    {
+			fn: 'onStressSliderChange',
+			delegate: '#stressslider',
+			event: 'change'
+		    }
 		]
+	},
+	
+	onStressSliderChange: function(me, Slider, thumb, newValue, oldValue, eOpts) {
+	  value = me.getValue();
+	  succ = function(response) {
+	      Ext.Msg.alert(':)', "<div align='center'>Data Submitted</div>", Ext.emptyFn);
+	  };
+
+	  fail = function(response) {
+	      Ext.Msg.alert(';(', "<div align='center'>Network Error</div>", Ext.emptyFn);
+	  };
+
+	  HEART.toUser({uid: HEART.uuid, ema_type_1: value}, succ, fail);
+	  
+	  user = HEART.getItem('local', 'pnapi');
+	  user = JSON.parse(user)||{};
+	  
+	  user.uid = HEART.uuid;
+	  user.emi_type_1 = value;
+		
+	  user = JSON.stringify(user);
+	  HEART.setItem('local', 'pnapi', user);
+	
 	}
 
 });

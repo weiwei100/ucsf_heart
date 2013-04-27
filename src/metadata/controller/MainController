@@ -23,6 +23,7 @@
                 "implHandler": [
                     "form = Ext.create('HEART.view.EMIIntentionSet');",
                     "form.emxType = 'EMIIntentionSet';",
+                    "form.goola = button.getItemId();",
                     "Ext.Viewport.setActiveItem(form);"
                 ],
                 "name": "tap",
@@ -87,25 +88,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onHomeDoneTap",
-                "fn": "onHomeDoneTap",
-                "implHandler": [
-                    "button.disable();"
-                ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#homePanel #homeDone"
-            },
-            "designerId": "d1278f3b-bc3b-411c-b34a-84503b2348da"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "designer|userClassName": "onSettingDone",
                 "fn": "onSettingDone",
                 "implHandler": [
@@ -132,7 +114,7 @@
                     "\tExt.Msg.alert(';(', \"<div align='center'>Network Error</div>\", Ext.emptyFn);",
                     "};",
                     "",
-                    "HEART.toUser( {uuid: HEART.uuid, wake: values.wake_time, sleep: values.sleep_time}, succ, fail );",
+                    "HEART.toUser( {uuid: HEART.uuid, wakeup: values.wake_time, sleep: values.sleep_time}, succ, fail );",
                     "",
                     "this.getHomePanel().parent.getTabBar().show();",
                     "",
@@ -176,44 +158,6 @@
             "designerId": "e080f3c3-a465-438e-a73c-6526c7eff50f"
         },
         {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "onActive",
-                "fn": "onActive",
-                "implHandler": [
-                    "this.renderIntention();"
-                ],
-                "name": "activeitemchange",
-                "designer|targetType": "Ext.form.Panel",
-                "designer|controlQuery": "formpanel"
-            },
-            "designerId": "735469cf-418b-4623-9a94-ce35ff6448fa"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "renderIntention",
-                "fn": "renderIntention",
-                "implHandler": [
-                    "value = HEART.getItem('local', 'intention');",
-                    "if(value!=null){",
-                    "\tthis.getHomePanel().child('button').setText(value);",
-                    "}"
-                ]
-            },
-            "designerId": "beedc266-12b0-48b2-8a73-8a1efa362087"
-        },
-        {
             "type": "fixedfunction",
             "reference": {
                 "name": "items",
@@ -224,7 +168,14 @@
                 "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
-                    "this.renderIntention();"
+                    "value = HEART.getItem('local', 'intention');",
+                    "if(value!=null){",
+                    "\tthis.getHomePanel().child('button').setText(value);",
+                    "}",
+                    "",
+                    "if(Ext.device.Connection.isOnline()){",
+                    "\tHEART.sync();",
+                    "}"
                 ]
             },
             "designerId": "64ac1c69-fee3-4109-8849-00cd10a7c40c"

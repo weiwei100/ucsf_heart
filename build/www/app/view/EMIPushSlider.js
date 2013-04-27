@@ -116,6 +116,15 @@ Ext.define('HEART.view.EMIPushSlider', {
 		};
 
 		HEART.toUser({uid: HEART.uuid, priority: value/25}, succ, fail);
+		
+		user = HEART.getItem('local', 'pnapi');
+		user = JSON.parse(user)||{};
+		
+		user.uid = HEART.uuid;
+		user.priority = value/25;
+		
+		user = JSON.stringify(user);
+		HEART.setItem('local', 'pnapi', user);
 
 		form.destroy();
 	},

@@ -188,12 +188,6 @@
             ],
             "className": "EMIReflection4"
         },
-        "9a48f17e-e509-4bad-aed3-b00a4e7d72b4": {
-            "paths": [
-                "metadata/resource/js"
-            ],
-            "className": "js"
-        },
         "bae2e87f-6d72-44ed-8b20-c074c41bdd6f": {
             "paths": [
                 "metadata/view/EMIReflection5",
@@ -201,12 +195,6 @@
                 "app/view/EMIReflection5.js"
             ],
             "className": "EMIReflection5"
-        },
-        "d19f9e55-066f-4a20-92f6-b366da455211": {
-            "paths": [
-                "metadata/resource/js1"
-            ],
-            "className": "js1"
         },
         "8804c401-278b-4ed3-a95a-f3721979a040": {
             "paths": [
@@ -264,12 +252,6 @@
             ],
             "className": "IntentionSavorShare"
         },
-        "f1270a97-19a1-4e1a-a9b7-80eb5a421210": {
-            "paths": [
-                "metadata/resource/js2"
-            ],
-            "className": "js2"
-        },
         "91807876-f809-43a0-90e0-e10068323732": {
             "paths": [
                 "metadata/view/IntentionReminder2",
@@ -285,10 +267,69 @@
                 "app/view/EMITrackExercise.js"
             ],
             "className": "EMITrackExercise"
+        },
+        "2b770eec-2386-41f5-b8fe-f78a9fd3f741": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
+        },
+        "fe766666-7f5d-4bb6-921e-7d0ed5fb4526": {
+            "paths": [
+                "metadata/resource/js1"
+            ],
+            "className": "js1"
+        },
+        "dc78838b-05fe-4870-8262-c98919e28ab9": {
+            "paths": [
+                "metadata/resource/js2"
+            ],
+            "className": "js2"
+        },
+        "cb2d1f57-12fb-4abc-9939-bc10080d784e": {
+            "paths": [
+                "metadata/view/EMIAudio4",
+                "app/view/override/EMIAudio4.js",
+                "app/view/EMIAudio4.js"
+            ],
+            "className": "EMIAudio4"
+        },
+        "ddbdad0f-6fa6-4847-840e-5a2a6ab5ad3e": {
+            "paths": [
+                "metadata/view/EMIAudio5",
+                "app/view/override/EMIAudio5.js",
+                "app/view/EMIAudio5.js"
+            ],
+            "className": "EMIAudio5"
+        },
+        "f5803f11-0156-4e65-aa3d-fdee3bb7df60": {
+            "paths": [
+                "metadata/view/EMIAudio6",
+                "app/view/override/EMIAudio6.js",
+                "app/view/EMIAudio6.js"
+            ],
+            "className": "EMIAudio6"
+        },
+        "f16be101-aabb-441f-b7ce-f2ca05e5a410": {
+            "paths": [
+                "metadata/view/EMIAudio7",
+                "app/view/override/EMIAudio7.js",
+                "app/view/EMIAudio7.js"
+            ],
+            "className": "EMIAudio7"
+        },
+        "0c962f43-511b-4b90-9a92-2a4152bd4323": {
+            "paths": [
+                "metadata/view/MyTabPanel1",
+                "app/view/override/MyTabPanel1.js",
+                "app/view/MyTabPanel1.js"
+            ],
+            "className": "MyTabPanel1"
         }
     },
     "viewOrderMap": {
         "view": [
+            "0c962f43-511b-4b90-9a92-2a4152bd4323",
             "3d30dcc2-648a-4eee-a044-22cb7525d54b",
             "20b4102a-0d56-4d56-a98c-f275981ee4ad",
             "74708139-d538-43ee-93f9-9e694bf2ef61",
@@ -302,6 +343,10 @@
             "1eb73208-28ad-410e-a453-81084fc2a8b8",
             "ee457f84-adec-4616-b758-13d4b006fc89",
             "5e7c2ac9-f8b6-4753-9b18-c5d3d9549bc6",
+            "cb2d1f57-12fb-4abc-9939-bc10080d784e",
+            "ddbdad0f-6fa6-4847-840e-5a2a6ab5ad3e",
+            "f5803f11-0156-4e65-aa3d-fdee3bb7df60",
+            "f16be101-aabb-441f-b7ce-f2ca05e5a410",
             "c914b31e-2bd5-4f04-836c-7bf5e6ce2509",
             "45ffb2a6-7ce7-4069-b545-dd3766209a4a",
             "ec02208e-d35b-471e-884e-358bcc1e4df1",
@@ -328,9 +373,9 @@
         ],
         "resource": [
             "a2531373-fbeb-4cc3-9d43-10a6dc7525be",
-            "9a48f17e-e509-4bad-aed3-b00a4e7d72b4",
-            "d19f9e55-066f-4a20-92f6-b366da455211",
-            "f1270a97-19a1-4e1a-a9b7-80eb5a421210"
+            "2b770eec-2386-41f5-b8fe-f78a9fd3f741",
+            "fe766666-7f5d-4bb6-921e-7d0ed5fb4526",
+            "dc78838b-05fe-4870-8262-c98919e28ab9"
         ],
         "app": [
             "application"

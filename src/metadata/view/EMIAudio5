@@ -6,10 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "EMIAudio2",
+        "designer|userClassName": "EMIAudio5",
         "scrollable": "vertical"
     },
-    "designerId": "ee457f84-adec-4616-b758-13d4b006fc89",
+    "designerId": "ddbdad0f-6fa6-4847-840e-5a2a6ab5ad3e",
     "cn": [
         {
             "type": "Ext.form.FieldSet",
@@ -23,7 +23,7 @@
                 "designer|userClassName": "MyFieldSet5",
                 "title": null
             },
-            "designerId": "d25e7e0c-0173-479d-89cb-09d06b0e2a7b",
+            "designerId": "d6d42909-a16d-4a6b-9c8f-f7b250e1faba",
             "customConfigs": [
                 {
                     "group": "(Custom Properties)",
@@ -50,7 +50,7 @@
                             50
                         ]
                     },
-                    "designerId": "ebeb3fba-3d0a-4436-ab18-1639c64573c9"
+                    "designerId": "9c6c1b42-602e-4b58-b19c-209475a2043e"
                 },
                 {
                     "type": "Ext.Label",
@@ -60,10 +60,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<center><b>Breath Meditation</b></center>",
+                        "html": "<center><b>Five_minute Meditation</b></center>",
                         "designer|userClassName": "MyLabel7"
                     },
-                    "designerId": "04f1e85c-f837-41ad-8346-e1416bb6e676"
+                    "designerId": "c1f105ab-ea62-4c1f-9218-bd34bde1aca1"
                 },
                 {
                     "type": "Ext.Label",
@@ -73,10 +73,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<p>Listen to this guided session from the workshop.</p><p>Tip: Use headphones and sit or lay down. <br/> Duration: 2:50 min</p>",
+                        "html": "<p>Listen to this guided session from the workshop.</p><p>Tip: Use headphones and stand or sit down. <br/> Duration: 5:00 min</p>",
                         "designer|userClassName": "MyLabel8"
                     },
-                    "designerId": "fa2d5df1-b5ae-49ae-850e-243bf9f8e0e6"
+                    "designerId": "d5b41ab4-4ac0-4e33-bf92-d8439a273b02"
                 },
                 {
                     "type": "Ext.Audio",
@@ -92,9 +92,9 @@
                         "itemId": "audioPanel",
                         "designer|userClassName": "MyAudio",
                         "enableControls": true,
-                        "url": "https://dl.dropboxusercontent.com/u/37254590/T_2.50.m4a"
+                        "url": "https://dl.dropboxusercontent.com/u/37254590/W_5.0.m4a"
                     },
-                    "designerId": "98ec82a7-b391-4bbc-821c-2191f1a483d1"
+                    "designerId": "23c0d98a-51fb-419c-a24d-db701190cfc1"
                 },
                 {
                     "type": "Ext.field.Slider",
@@ -114,7 +114,7 @@
                             50
                         ]
                     },
-                    "designerId": "61559474-be6c-4658-8603-229aa7be57bc"
+                    "designerId": "fbdb8f3a-b7d2-47a5-972d-2998d39816fc"
                 },
                 {
                     "type": "Ext.Button",
@@ -129,7 +129,7 @@
                         "designer|userClassName": "MyButton12",
                         "text": "Done"
                     },
-                    "designerId": "6e5efa7e-0ca0-4c1a-a0e6-72bc45cd6608",
+                    "designerId": "8d61ad26-aa69-49a7-9db6-6777a0ce4191",
                     "customConfigs": [
                         {
                             "group": "(Custom Properties)",

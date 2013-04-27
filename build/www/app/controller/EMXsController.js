@@ -173,35 +173,60 @@ Ext.define('HEART.controller.EMXsController', {
 	},
 
 	onAudioPanelInitialize: function(component, eOpts) {
+	  
+		component.on({ activeitemchange: function(){
+		  HEART.getAudio().release();  
+		}});
+		
 		preSlider = component.child('#pre-slider');
-		audioPanel = component.child('#audioPanel');
 		postSlider = component.child('#post-slider');
+	
 		button = component.child('button[text=Done]');
-
-		callback = {};
-		button.hide();
-
+		button.setHideAnimation({type: "fadeOut", duration: 128});
+		button.setShowAnimation({type: "fadeIn", duration: 1024});
+		
+		audioButton = component.child('#audioButton');
+		audioButton.setHideAnimation({type: "fadeOut", duration: 128});
+		audioButton.setShowAnimation({type: "fadeIn", duration: 1024});
+		
+		audioHandle = function(button, e, eOpts) {
+		  if(button.getText()=='Play'){
+		    HEART.getAudio().play();
+		    button.setText('Pause');
+		  }else{
+		    HEART.getAudio().pause();
+		    button.setText('Play');
+		  }
+		};
+		
+		audioButton.on( {tap: audioHandle} );
+		
 		button.setShowAnimation({type: "fadeIn", duration: 1024});
 
 		if(Math.random()<HEART.probability){
 			preSlider.destroy();
 			postSlider.destroy();
-			callback = function() { button.show() };
-		}else{
-			preSlider.on( { change: function() { this.hide(); audioPanel.show(); } } );
-
-			audioPanel.hide();
-			audioPanel.setShowAnimation({type: "fadeIn", duration: 1024});
-
-			callback = function() { postSlider.show(); };
-
-			postSlider.hide();
+			HEART.audioCallback = function() {
+			  audioButton.hide();
+			  button.show();
+			}
+		}else{ 
+			preSlider.setHideAnimation({type: "fadeOut", duration: 128});
+			preSlider.on( { change: function() { preSlider.hide(); audioButton.show(); } } );
+			audioButton.hide();
 			postSlider.setShowAnimation({type: "fadeIn", duration: 1024});
-
-			postSlider.on( { change: function(){ this.hide(); button.show(); } } );
+			postSlider.hide();
+			postSlider.on( { change: function() { postSlider.hide(); button.show(); } } );
+			HEART.audioCallback =function() {
+			  audioButton.hide();
+			  postSlider.show();
+			}
 		}
-
-		audioPanel.on( { ended: callback, stop: callback, pause: callback } );
+		
+		button.on( { tap: function() { HEART.getAudio().release(); } } );
+		
+		button.hide();
+		
 	},
 
 	onReflectionInitialize: function(component, eOpts) {

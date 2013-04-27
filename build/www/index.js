@@ -30,21 +30,6 @@ function initPushwoosh() {
 
 	var type = JSON.parse(userData).type;
 	
-	if(type.indexOf('N')>0){
-	  var size = 0;
-	  if(type.indexOf('Type')>0){
-	    size = 5;
-	  }else if(type.indexOf('Audio')>0){
-	    size = 3;
-	  }else if(type.indexOf('Reminder')>0){
-	    size = 6;
-	  }else if(type.indexOf('Reflection')>0){
-	    size = 2;
-	  }
-	  idx=Math.ceil(size*Math.random());
-	  type=type.replace('N', idx);
-	}
-	
 	form = Ext.create('HEART.view.' + type);
 	form.emxType = type;
 	form.goola = 'notification';		      

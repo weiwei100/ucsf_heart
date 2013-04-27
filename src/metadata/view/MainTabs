@@ -135,7 +135,26 @@
                         "designer|userClassName": "MyButton8",
                         "text": "Done"
                     },
-                    "designerId": "0d0d2527-f9ee-43d3-977e-14f37500c010"
+                    "designerId": "0d0d2527-f9ee-43d3-977e-14f37500c010",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onHomeDoneTap",
+                                "fn": "onHomeDoneTap",
+                                "implHandler": [
+                                    "button.disable();"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "3b6a96e5-4cbc-4327-9fe5-8a82c1ae37e9"
+                        }
+                    ]
                 }
             ]
         },
@@ -439,7 +458,7 @@
                     "\tsettings.setValues(user);",
                     "}",
                     "",
-                    "var options = new Array();",
+                    "options = new Array();",
                     "",
                     "for( i=0; i<24; i++ ){\t",
                     "",
