@@ -1,0 +1,9 @@
+2013-04-08 17:26:37.247 ucsf_heart_ios[2123:18e03] Multi-tasking -> Device: YES, App: YES
+2013-04-08 17:26:37.537 ucsf_heart_ios[2123:18e03] Resetting plugins due to page load.
+2013-04-08 17:26:37.798 ucsf_heart_ios[2123:18e03] Finished load of: file:///Users/jpalley/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/6CA94BC0-2D80-4AE4-9BD2-730490DC8DBD/ucsf_heart_ios.app/www/index.html
+2013-04-08 17:26:37.844 ucsf_heart_ios[2123:18e03] [LOG] Received Event: deviceready
+2013-04-08 17:28:24.738 ucsf_heart_ios[2276:18e03] Multi-tasking -> Device: YES, App: YES
+2013-04-08 17:28:24.747 ucsf_heart_ios[2276:18e03] ERROR: Start Page at 'www/index.html' was not found.
+2013-04-08 17:28:24.812 ucsf_heart_ios[2276:18e03] Resetting plugins due to page load.
+2013-04-08 17:28:24.889 ucsf_heart_ios[2276:18e03] Finished load of: about:blank
+Terminating in response to SpringBoard's termination.
