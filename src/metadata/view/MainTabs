@@ -49,7 +49,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 128,
+                        "height": 86,
                         "itemId": "homeIcon",
                         "designer|userClassName": "MyImg",
                         "src": "heart-icon"
@@ -120,7 +120,51 @@
                             50
                         ]
                     },
-                    "designerId": "c689dd0a-6d23-4a6a-8665-67dc57407c52"
+                    "designerId": "c689dd0a-6d23-4a6a-8665-67dc57407c52",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onHomeSliderChange",
+                                "fn": "onHomeSliderChange",
+                                "implHandler": [
+                                    "value = me.getValue();",
+                                    "",
+                                    "HEART.setItem('local', 'home', value);",
+                                    "",
+                                    "content = me.parent.getValues();",
+                                    "",
+                                    "content.type = 'homePanel';",
+                                    "content.uuid = HEART.uuid;",
+                                    "",
+                                    "var succ = function(response) {",
+                                    "\tconsole.log(response);",
+                                    "};",
+                                    "",
+                                    "var fail = function(response) {",
+                                    "\tfeeds = Ext.getStore(\"Feeds\");",
+                                    "\tcontent.timestamp = Date.now();",
+                                    "\tfeeds.add(data);",
+                                    "\tfeeds.sort(\"timestamp\", 'DESC');\t\t",
+                                    "\tfeeds.sync();",
+                                    "};",
+                                    "",
+                                    "HEART.toSensor(content, succ, fail);",
+                                    "",
+                                    "me.parent.child('#homeDone').enable();",
+                                    "",
+                                    "setTimeout(function(){me.setValue(value/2)},60000);"
+                                ],
+                                "name": "change"
+                            },
+                            "designerId": "2ee04438-662f-4fef-9077-828eec9be479"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Button",
@@ -148,6 +192,12 @@
                                 "designer|userClassName": "onHomeDoneTap",
                                 "fn": "onHomeDoneTap",
                                 "implHandler": [
+                                    "value = button.parent.child('#homeSlider').getValue();",
+                                    "",
+                                    "message=\"<div align='center'>\" + value + \"</div>\";",
+                                    "",
+                                    "Ext.Msg.alert(':)', message, Ext.emptyFn);",
+                                    "",
                                     "button.disable();"
                                 ],
                                 "name": "tap"
@@ -342,7 +392,7 @@
                         "value": null,
                         "placeHolder": null,
                         "hiddenName": null,
-                        "options": "[{text: 'Male', value: 'm'}, {text: 'Female', value: 'm'}, {text: 'Other', value: 'o'}]",
+                        "options": "[{text: 'Male', value: 'm'}, {text: 'Female', value: 'f'}]",
                         "valueField": null
                     },
                     "designerId": "b228de72-125e-44ae-92aa-2f77b39b67ed"
@@ -412,11 +462,87 @@
                     "codeClass": null,
                     "userConfig": {
                         "docked": null,
-                        "itemId": "done",
+                        "itemId": "settingsDone",
                         "designer|userClassName": "MyButton2",
                         "text": "Set Notification Frequency"
                     },
-                    "designerId": "658a955a-b968-4ee5-9803-7856021b1b6e"
+                    "designerId": "658a955a-b968-4ee5-9803-7856021b1b6e",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onSettingsDoneTap",
+                                "fn": "onSettingsDoneTap",
+                                "implHandler": [
+                                    "user = HEART.getItem('local', 'user');",
+                                    "",
+                                    "values = button.parent.getValues();",
+                                    "",
+                                    "var empty;",
+                                    "",
+                                    "for(field in values){",
+                                    "\tif(values[field]=='')",
+                                    "\t{ empty=true; break; }",
+                                    "}",
+                                    "",
+                                    "if(empty){return;}",
+                                    "",
+                                    "values.uuid = HEART.uuid;",
+                                    "",
+                                    "if(user!=null){",
+                                    "\tuser = JSON.parse(user);",
+                                    "\tvalue = user.priority||2;\t",
+                                    "\tvalues.priority = value;",
+                                    "}",
+                                    "",
+                                    "user = JSON.stringify(values);",
+                                    "",
+                                    "HEART.setItem('local', 'user', user);",
+                                    "",
+                                    "succ = function(response) {",
+                                    "\tconsole.log(response);",
+                                    "};",
+                                    "",
+                                    "fail = function(response) {",
+                                    "\tconsole.log(response);",
+                                    "};",
+                                    "",
+                                    "content = {};",
+                                    "",
+                                    "content.uid=HEART.uuid;",
+                                    "",
+                                    "content.wakeup=values.wake_time;",
+                                    "content.sleep=values.sleep_time;",
+                                    "",
+                                    "HEART.toUser( content, succ, fail );",
+                                    "///////////////////////////////////////",
+                                    "user = HEART.getItem('local', 'pnapi');",
+                                    "user = JSON.parse(user)||{};",
+                                    "",
+                                    "user.uid = HEART.uuid;",
+                                    "user.wakeup = values.wake_time;",
+                                    "user.sleep = values.sleep_time;",
+                                    "",
+                                    "user = JSON.stringify(user);",
+                                    "HEART.setItem('local', 'pnapi', user);",
+                                    "///////////////////////////////////////",
+                                    "",
+                                    "this.getTabBar().show();",
+                                    "form = Ext.create('HEART.view.EMIPushSlider');",
+                                    "form.emxType = 'EMIPushSlider';",
+                                    "",
+                                    "Ext.Viewport.setActiveItem(form);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "dc06667e-f750-4617-8c35-52b273e2ede1"
+                        }
+                    ]
                 }
             ]
         },
@@ -428,6 +554,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "container|align": "center",
                 "docked": "bottom",
                 "ui": "light",
                 "designer|userClassName": "MyTabBar"
@@ -456,20 +583,37 @@
                     "}else{",
                     "\tuser = JSON.parse(user);",
                     "\tsettings.setValues(user);",
+                    "\thVar = HEART.getItem('local','home')||50;",
+                    "\thomePanel = this.child('#homePanel');",
+                    "\tslider=homePanel.child('#homeSlider');",
+                    "\tslider.setValue(hVar);",
+                    "\tvalue=HEART.getItem('local', 'intention');",
+                    "\tif(value!=null){",
+                    "\t\thomePanel.child('#editIntention').setText(value);",
+                    "\t}",
                     "}",
                     "",
-                    "options = new Array();",
+                    "wakeOptions = new Array();",
                     "",
-                    "for( i=0; i<24; i++ ){\t",
-                    "",
+                    "for( i=5; i<12; i++ ){\t",
                     "\toption = { text: i +': 00', value: i };\t",
-                    "\toptions.push(option);",
+                    "\twakeOptions.push(option);",
                     "\toption = { text: i +': 30', value: i+0.5 };",
-                    "\toptions.push(option);",
+                    "\twakeOptions.push(option);",
                     "}",
                     "",
-                    "settings.child('#wakeTime').setOptions(options);",
-                    "settings.child('#sleepTime').setOptions(options);",
+                    "settings.child('#wakeTime').setOptions(wakeOptions);",
+                    "",
+                    "sleepOptions = new Array();",
+                    "",
+                    "for( i=18; i<24; i++ ){\t",
+                    "\toption = { text: i +': 00', value: i };\t",
+                    "\tsleepOptions.push(option);",
+                    "\toption = { text: i +': 30', value: i+0.5 };",
+                    "\tsleepOptions.push(option);",
+                    "}",
+                    "",
+                    "settings.child('#sleepTime').setOptions(sleepOptions);",
                     ""
                 ]
             },

@@ -73,28 +73,25 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<p>Listen to this guided session from the workshop.</p><p>Tip: Use headphones and stand or sit down. <br/> Duration: 5:00 min</p>",
+                        "html": "Listen to this guided session from the workshop. <br/> Tip: Use headphones and stand or sit down. <br/> Duration: 5:00 min",
+                        "styleHtmlContent": true,
                         "designer|userClassName": "MyLabel8"
                     },
                     "designerId": "d5b41ab4-4ac0-4e33-bf92-d8439a273b02"
                 },
                 {
-                    "type": "Ext.Audio",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "centered": null,
-                        "docked": null,
-                        "html": null,
-                        "itemId": "audioPanel",
-                        "designer|userClassName": "MyAudio",
-                        "enableControls": true,
-                        "url": "https://dl.dropboxusercontent.com/u/37254590/W_5.0.m4a"
+                        "itemId": "audioButton",
+                        "designer|userClassName": "MyButton1",
+                        "text": "Play"
                     },
-                    "designerId": "23c0d98a-51fb-419c-a24d-db701190cfc1"
+                    "designerId": "688deaa1-1ade-44d8-b870-853346631a55"
                 },
                 {
                     "type": "Ext.field.Slider",
@@ -139,6 +136,23 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "initialize",
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "HEART.setAudio('W_5.0.m4a', HEART.audioCallback);"
+                ]
+            },
+            "designerId": "5c734197-3fda-452d-9fb8-97d3c93b558c"
         }
     ]
 }

@@ -27,15 +27,15 @@ function initPushwoosh() {
 	if(typeof(userData) != "undefined") {
 	  console.warn('user data: ' + JSON.stringify(userData));
 	}
-
+	
+	//navigator.notification.alert(title);
 	var type = JSON.parse(userData).type;
 	
 	form = Ext.create('HEART.view.' + type);
 	form.emxType = type;
 	form.goola = 'notification';		      
-	Ext.Viewport.setActiveItem(form);
-	
-        //navigator.notification.alert(title);
+	Ext.Viewport.setActiveItem(form);	
+        
     });
 }
 

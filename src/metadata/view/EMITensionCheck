@@ -45,6 +45,7 @@
                     "userConfig": {
                         "html": "Feel and relax each body part for a few seonds, then check:",
                         "itemId": "describe",
+                        "margin": "8px",
                         "designer|userClassName": "MyLabel6"
                     },
                     "designerId": "bce212dc-819b-4018-a9b6-022e9083aa02"
@@ -160,6 +161,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "action": "exercise",
+                        "cls": [
+                            "button"
+                        ],
                         "disabled": null,
                         "designer|userClassName": "MyButton1",
                         "text": "Done!"

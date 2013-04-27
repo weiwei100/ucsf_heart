@@ -19,6 +19,7 @@
             "codeClass": null,
             "userConfig": {
                 "html": "<center>Living from your intention today.</center>",
+                "padding": "8px",
                 "designer|userClassName": "MyLabel5"
             },
             "designerId": "c5d45704-502b-4002-9365-860174a6112f"
@@ -62,6 +63,21 @@
                         "designer|userClassName": "MyLabel4"
                     },
                     "designerId": "adc14913-7abd-429b-89b8-6a6aac23fc62"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Take a few moments and feel your intention. <br/> Visualize your day today and imagine bringing your intention into whatever you do. ",
+                        "itemId": "more",
+                        "margin": "8px",
+                        "designer|userClassName": "MyLabel9"
+                    },
+                    "designerId": "53363e00-8323-41cc-b102-02852c6f3071"
                 },
                 {
                     "type": "Ext.field.Slider",

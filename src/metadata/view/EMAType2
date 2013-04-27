@@ -18,7 +18,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "cls": [
+                    "desc"
+                ],
                 "html": "What is happening in your body right now?",
+                "margin": "8px",
                 "designer|userClassName": "MyLabel9"
             },
             "designerId": "ce798d9d-b0f2-46ea-8222-bebe76c7c131"

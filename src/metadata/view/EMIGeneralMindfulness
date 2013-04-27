@@ -41,8 +41,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "Wherever you are in this moment...",
+                        "html": "Wherever you are in this moment",
                         "itemId": "describe",
+                        "margin": "8px",
                         "designer|userClassName": "MyLabel6"
                     },
                     "designerId": "aebdc730-1705-4685-bef2-e40fb432769d"

@@ -44,8 +44,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<p>Take a few moments and savor the feelings and sensations of your intention.</p> <p>Take a moments to imagine sharing this with someone special.</p>",
+                        "html": "Take a few moments and savor the feelings and sensations of your intention.<br/>Take a moments to imagine sharing this with someone special.",
                         "itemId": "describe",
+                        "styleHtmlContent": true,
                         "designer|userClassName": "MyLabel20"
                     },
                     "designerId": "d3d17d45-ca30-4761-a839-81df081cfe6c"

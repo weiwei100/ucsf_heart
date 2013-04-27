@@ -19,7 +19,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "cls": [
+                    "desc"
+                ],
                 "html": "What is the state of your mind in this moment?",
+                "margin": "8px",
                 "designer|userClassName": "MyLabel12"
             },
             "designerId": "7e92d79d-789e-4c54-9cdf-d5024852f69f"

@@ -43,6 +43,8 @@ public class HEART extends DroidGap
         checkMessage(getIntent());
 
         super.loadUrl(Config.getStartUrl());
+        
+        super.appView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
 //        super.loadUrl("file:///android_asset/www/app.html");
     }
     

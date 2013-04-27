@@ -20,7 +20,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "cls": [
+                    "desc"
+                ],
                 "html": "First, take a moment. Then, are you aware of trying to not feel something right now?<br/>(left=none, right=a lot)",
+                "margin": "8px",
                 "designer|userClassName": "MyLabel19"
             },
             "designerId": "6374dd3d-ba74-4a6d-ba2b-6b2a1af1ea5c"

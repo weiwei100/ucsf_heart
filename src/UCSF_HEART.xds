@@ -318,18 +318,23 @@
             ],
             "className": "EMIAudio7"
         },
-        "0c962f43-511b-4b90-9a92-2a4152bd4323": {
+        "a8085bb7-8f59-42f5-b2f8-37fd1c55317e": {
             "paths": [
-                "metadata/view/MyTabPanel1",
-                "app/view/override/MyTabPanel1.js",
-                "app/view/MyTabPanel1.js"
+                "metadata/resource/css"
             ],
-            "className": "MyTabPanel1"
+            "className": "css"
+        },
+        "4fb3a47b-8ddd-4302-919f-793903f499a2": {
+            "paths": [
+                "metadata/view/IntentionReminder3",
+                "app/view/override/IntentionReminder3.js",
+                "app/view/IntentionReminder3.js"
+            ],
+            "className": "IntentionReminder3"
         }
     },
     "viewOrderMap": {
         "view": [
-            "0c962f43-511b-4b90-9a92-2a4152bd4323",
             "3d30dcc2-648a-4eee-a044-22cb7525d54b",
             "20b4102a-0d56-4d56-a98c-f275981ee4ad",
             "74708139-d538-43ee-93f9-9e694bf2ef61",
@@ -355,6 +360,7 @@
             "e0e2a56e-a1c7-44bb-a49b-ed468cbfdcaf",
             "66ae294e-a774-4832-9f70-3a677c4a7503",
             "91807876-f809-43a0-90e0-e10068323732",
+            "4fb3a47b-8ddd-4302-919f-793903f499a2",
             "400ba324-109a-4e35-8271-2da4c4c0eddb",
             "c478480b-9b04-4a50-ae90-cada9879ba21",
             "f482bdac-9f46-467d-a5c5-5ad903fc37d6"
@@ -375,6 +381,7 @@
             "a2531373-fbeb-4cc3-9d43-10a6dc7525be",
             "2b770eec-2386-41f5-b8fe-f78a9fd3f741",
             "fe766666-7f5d-4bb6-921e-7d0ed5fb4526",
+            "a8085bb7-8f59-42f5-b2f8-37fd1c55317e",
             "dc78838b-05fe-4870-8262-c98919e28ab9"
         ],
         "app": [

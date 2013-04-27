@@ -44,14 +44,14 @@ var HEART = {
 	},
 	
 	toUser: function(content, succ, fail) {
-		var url = 'http://app.brainpage.com/ucsf/api/users';
+		var url = 'https://app.brainpage.com/ucsf/api/users';
 		
 		var username = 'breathwear';
 		var password = 'deepbreath';
 	
 		var base = Base64.encode(username + ':' + password);
 		
-		var auth = "Basic " + base;	
+		var auth = "Basic " + base;
 	
 		HEART.request(url, auth, content, succ, fail);
 	},

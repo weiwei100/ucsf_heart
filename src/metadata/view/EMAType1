@@ -19,6 +19,7 @@
             "codeClass": null,
             "userConfig": {
                 "html": "What is happening right now?",
+                "margin": "8px",
                 "designer|userClassName": "MyLabel9"
             },
             "designerId": "8d96d19e-8686-48e7-bd04-cafa30c058e9"
@@ -66,7 +67,50 @@
                             50
                         ]
                     },
-                    "designerId": "8e631a67-460d-4e9b-b9e5-6f12d0b6020d"
+                    "designerId": "8e631a67-460d-4e9b-b9e5-6f12d0b6020d",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMysliderfieldChange",
+                                "fn": "onMysliderfieldChange",
+                                "implHandler": [
+                                    "value = me.getValue();",
+                                    "",
+                                    "content = {};",
+                                    "content.uid = HEART.uuid;",
+                                    "content.ema_type_1=value;",
+                                    "",
+                                    "succ = function(response) {",
+                                    "\tconsole.log(response);",
+                                    "};",
+                                    "",
+                                    "fail = function(response) {",
+                                    "\tconsole.log(response);",
+                                    "};",
+                                    "",
+                                    "HEART.toUser(content, succ, fail);",
+                                    "///////////////////////////////////////////",
+                                    "user = HEART.getItem('local', 'pnapi')||{};",
+                                    "user = JSON.parse(user);",
+                                    "\t  ",
+                                    "user.uid = HEART.uuid;",
+                                    "user.emi_type_1 = value;",
+                                    "\t\t",
+                                    "user = JSON.stringify(user);",
+                                    "HEART.setItem('local', 'pnapi', user);",
+                                    "//////////////////////////////////////"
+                                ],
+                                "name": "change"
+                            },
+                            "designerId": "a69c5ddc-8ce5-4564-a10e-71521d36153c"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Button",

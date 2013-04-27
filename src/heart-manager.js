@@ -44,14 +44,14 @@ var HEART = {
 	},
 	
 	toUser: function(content, succ, fail) {
-		var url = 'http://app.brainpage.com/ucsf/api/users';
+		var url = 'https://app.brainpage.com/ucsf/api/users';
 		
 		var username = 'breathwear';
 		var password = 'deepbreath';
 	
 		var base = Base64.encode(username + ':' + password);
 		
-		var auth = "Basic " + base;	
+		var auth = "Basic " + base;
 	
 		HEART.request(url, auth, content, succ, fail);
 	},
@@ -68,11 +68,26 @@ var HEART = {
 					HEART.toSensor(content, succ, fail);					
 				});
 		}
+		user = HEART.getItem('local', 'pnapi');
+		user =JSON.parse(user);
+		HEART.toUser(user);
 	},
 	
 	uuid: 'dropboxisawesome',
-	audioRoot: 'file:///android_asset/www/audios',
-	audioPlay: 'stawberry',
+	
+	audioRoot: 'file:///android_asset/www/audios/',
+	audioPlay: 'strawberry',
+	audioCallback: {},
+	setAudio: function(name, succ, fail) {
+	  url=HEART.audioRoot+name;
+	  audio=new Media(url,succ,fail);
+	  HEART.audioPlay = audio;
+	},
+	
+	getAudio: function() {
+	  return HEART.audioPlay;
+	},
+	
 	probability: 0.55
 	
 }

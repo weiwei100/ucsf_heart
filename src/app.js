@@ -58,7 +58,8 @@ Ext.application({
 		'EMIAudio4',
 		'EMIAudio5',
 		'EMIAudio6',
-		'EMIAudio7'
+		'EMIAudio7',
+		'IntentionReminder3'
 	],
 	controllers: [
 		'EMXsController',
