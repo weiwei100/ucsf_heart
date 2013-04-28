@@ -61,6 +61,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "html": "<center><b>Body Connection</b></center>",
+                        "styleHtmlContent": true,
                         "designer|userClassName": "MyLabel7"
                     },
                     "designerId": "2b74114e-8e3c-4e5e-930c-e0b52775c384"

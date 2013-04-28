@@ -61,6 +61,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "html": "<center><b>Loving-kindness Meditation</b></center>",
+                        "styleHtmlContent": true,
                         "designer|userClassName": "MyLabel7"
                     },
                     "designerId": "5cb5cc9e-8508-46fb-b15d-6501041c4255"

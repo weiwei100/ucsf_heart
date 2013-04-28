@@ -7,7 +7,8 @@
     "codeClass": null,
     "userConfig": {
         "html": null,
-        "designer|userClassName": "EMIReflection1"
+        "designer|userClassName": "EMIReflection1",
+        "scrollable": "vertical"
     },
     "designerId": "c914b31e-2bd5-4f04-836c-7bf5e6ce2509",
     "cn": [

@@ -61,6 +61,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "html": "<center><b>Five_minute Meditation</b></center>",
+                        "styleHtmlContent": true,
                         "designer|userClassName": "MyLabel7"
                     },
                     "designerId": "c1f105ab-ea62-4c1f-9218-bd34bde1aca1"

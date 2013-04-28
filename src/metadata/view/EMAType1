@@ -6,7 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "EMAType1"
+        "designer|userClassName": "EMAType1",
+        "scrollable": "vertical"
     },
     "designerId": "7d969f35-80f6-497f-9677-8bc260ef4b83",
     "cn": [

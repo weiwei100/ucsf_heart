@@ -61,6 +61,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "html": "<center><b>Body Scan</b></center>",
+                        "styleHtmlContent": true,
                         "designer|userClassName": "MyLabel7"
                     },
                     "designerId": "a13e5e58-68e7-41d5-b253-dfe72bcb878b"
