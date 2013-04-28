@@ -6,7 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "EMAType2"
+        "designer|userClassName": "EMAType2",
+        "scrollable": "vertical"
     },
     "designerId": "df2a85a8-d4f3-4e68-bab4-1a38a66b43db",
     "cn": [
@@ -39,7 +40,7 @@
                 "docked": null,
                 "designer|userClassName": "MyFieldSet3",
                 "hideOnMaskTap": null,
-                "modal": false,
+                "modal": null,
                 "instructions": null,
                 "title": null
             },

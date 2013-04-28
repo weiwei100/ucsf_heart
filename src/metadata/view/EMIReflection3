@@ -6,8 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
+        "hidden": null,
         "html": null,
-        "designer|userClassName": "EMIReflection3"
+        "designer|userClassName": "EMIReflection3",
+        "scrollable": "vertical"
     },
     "designerId": "ec02208e-d35b-471e-884e-358bcc1e4df1",
     "cn": [
@@ -20,7 +22,7 @@
             "codeClass": null,
             "userConfig": {
                 "goola": "reflect",
-                "hidden": false,
+                "hidden": null,
                 "designer|userClassName": "MyFieldSet6",
                 "title": null
             },

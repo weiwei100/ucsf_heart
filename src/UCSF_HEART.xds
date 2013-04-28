@@ -331,10 +331,19 @@
                 "app/view/IntentionReminder3.js"
             ],
             "className": "IntentionReminder3"
+        },
+        "0c962f43-511b-4b90-9a92-2a4152bd4323": {
+            "paths": [
+                "metadata/view/MyTabPanel1",
+                "app/view/override/MyTabPanel1.js",
+                "app/view/MyTabPanel1.js"
+            ],
+            "className": "MyTabPanel1"
         }
     },
     "viewOrderMap": {
         "view": [
+            "0c962f43-511b-4b90-9a92-2a4152bd4323",
             "3d30dcc2-648a-4eee-a044-22cb7525d54b",
             "20b4102a-0d56-4d56-a98c-f275981ee4ad",
             "74708139-d538-43ee-93f9-9e694bf2ef61",
