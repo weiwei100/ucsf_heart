@@ -11,7 +11,7 @@
         "hideAnimation": [
             "{type :\"fadeOut\", duration : 256}"
         ],
-        "id": null,
+        "id": "mainTabs",
         "showAnimation": [
             "{type :\"fadeIn\", duration : 1024}"
         ],
@@ -19,6 +19,10 @@
         "designer|userClassName": "MainTabs",
         "designer|userAlias": "mainview",
         "designer|initialView": true
+    },
+    "configAlternates": {
+        "showAnimation": "object",
+        "hideAnimation": "object"
     },
     "designerId": "3d30dcc2-648a-4eee-a044-22cb7525d54b",
     "cn": [
@@ -49,51 +53,68 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 86,
-                        "itemId": "homeIcon",
-                        "designer|userClassName": "MyImg",
-                        "src": "heart-icon"
+                        "centered": false,
+                        "height": 130,
+                        "designer|userClassName": "MyImg1",
+                        "src": "logo_header.png"
                     },
-                    "designerId": "2f5c8c58-30ac-4854-8d32-759ddaba81d9"
+                    "designerId": "aa4e5e98-969c-4f47-bfbe-78ce7fbea8f2"
                 },
                 {
-                    "type": "Ext.Label",
+                    "type": "Ext.Container",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "docked": null,
-                        "html": "<center>My intention for this week is:</center>",
-                        "itemId": "homeTitle",
-                        "designer|userClassName": "MyLabel"
+                        "border": "1px",
+                        "itemId": "cntIntention",
+                        "padding": "5px",
+                        "designer|userClassName": "MyContainer"
                     },
-                    "designerId": "f7c1108e-04d6-485f-a802-cf5128c7afd9"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "action": "intention",
-                        "baseCls": "x-html",
-                        "html": null,
-                        "itemId": "editIntention",
-                        "designer|userClassName": "MyButton",
-                        "iconCls": "compose",
-                        "iconMask": true,
-                        "text": "<b>press here to set</b>"
-                    },
-                    "designerId": "bf3b7157-6010-46f8-9d6a-fb087fdba9d0",
-                    "customConfigs": [
+                    "designerId": "c66ca41e-7aea-46db-b8b7-e78223de83b3",
+                    "cn": [
                         {
-                            "group": "(Custom Properties)",
-                            "name": "action",
-                            "type": "string"
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "html": "<center>My intention for this week is:</center>",
+                                "itemId": "homeTitle",
+                                "designer|userClassName": "MyLabel"
+                            },
+                            "designerId": "f7c1108e-04d6-485f-a802-cf5128c7afd9"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "action": "intention",
+                                "baseCls": "x-html",
+                                "html": null,
+                                "itemId": "editIntention",
+                                "designer|userClassName": "MyButton",
+                                "iconCls": "compose",
+                                "iconMask": true,
+                                "text": "<b>press here to set</b>"
+                            },
+                            "designerId": "bf3b7157-6010-46f8-9d6a-fb087fdba9d0",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "action",
+                                    "type": "string"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -112,7 +133,7 @@
                         "itemId": "homeSlider",
                         "designer|userClassName": "MySliderField11",
                         "clearIcon": null,
-                        "label": "Stop and notice your body then your emotions. What are you aware of right now? <br/> (left=overwhelmed, right=balance)",
+                        "label": "Stop and notice your body then your emotions. What are you aware of right now? <div><span style=\"float:right\">balance</span><span>overwhelmed</span></div> ",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "stress",
@@ -392,10 +413,28 @@
                         "value": null,
                         "placeHolder": null,
                         "hiddenName": null,
-                        "options": "[{text: 'Male', value: 'm'}, {text: 'Female', value: 'f'}]",
+                        "options": [
+                            "[{text: 'Male', value: 'm'}, {text: 'Female', value: 'f'}]"
+                        ],
                         "valueField": null
                     },
                     "designerId": "b228de72-125e-44ae-92aa-2f77b39b67ed"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "height",
+                        "designer|userClassName": "MySelectField3",
+                        "label": "Height",
+                        "labelWidth": "50%",
+                        "name": "height"
+                    },
+                    "designerId": "6cda6adf-1fff-432e-b07f-c3e97b684f31"
                 },
                 {
                     "type": "Ext.field.Text",
@@ -426,30 +465,40 @@
                     ]
                 },
                 {
-                    "type": "Ext.field.Text",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "goola": "number",
-                        "itemId": "height",
-                        "designer|userClassName": "MyTextField",
-                        "clearIcon": null,
-                        "label": "Height",
-                        "labelWidth": "50%",
-                        "name": "height",
-                        "required": null,
-                        "autoCapitalize": null,
-                        "maxLength": 15
+                        "itemId": "settngsSave",
+                        "designer|userClassName": "MyButton28",
+                        "text": "Save"
                     },
-                    "designerId": "218c3989-e75d-4ca9-a77e-ed527ce179bb",
-                    "customConfigs": [
+                    "designerId": "2e7e451c-9885-4138-97cd-1c1bc95dbca1",
+                    "cn": [
                         {
-                            "group": "(Custom Properties)",
-                            "name": "goola",
-                            "type": "string"
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onSettngsSaveTap",
+                                "fn": "onSettngsSaveTap",
+                                "implHandler": [
+                                    "if(button.parent.parent.saveSettings(button)){",
+                                    "",
+                                    "",
+                                    "",
+                                    "button.parent.parent.setActiveItem(0);",
+                                    "}"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "03828b46-11a7-4a27-9cf8-b1d879265cb1"
                         }
                     ]
                 },
@@ -479,64 +528,14 @@
                                 "designer|userClassName": "onSettingsDoneTap",
                                 "fn": "onSettingsDoneTap",
                                 "implHandler": [
-                                    "user = HEART.getItem('local', 'user');",
-                                    "",
-                                    "values = button.parent.getValues();",
-                                    "",
-                                    "var empty;",
-                                    "",
-                                    "for(field in values){",
-                                    "\tif(values[field]=='')",
-                                    "\t{ empty=true; break; }",
-                                    "}",
-                                    "",
-                                    "if(empty){return;}",
-                                    "",
-                                    "values.uuid = HEART.uuid;",
-                                    "",
-                                    "if(user!=null){",
-                                    "\tuser = JSON.parse(user);",
-                                    "\tvalue = user.priority||2;\t",
-                                    "\tvalues.priority = value;",
-                                    "}",
-                                    "",
-                                    "user = JSON.stringify(values);",
-                                    "",
-                                    "HEART.setItem('local', 'user', user);",
-                                    "",
-                                    "succ = function(response) {",
-                                    "\tconsole.log(response);",
-                                    "};",
-                                    "",
-                                    "fail = function(response) {",
-                                    "\tconsole.log(response);",
-                                    "};",
-                                    "",
-                                    "content = {};",
-                                    "",
-                                    "content.uid=HEART.uuid;",
-                                    "",
-                                    "content.wakeup=values.wake_time;",
-                                    "content.sleep=values.sleep_time;",
-                                    "",
-                                    "HEART.toUser( content, succ, fail );",
-                                    "///////////////////////////////////////",
-                                    "user = HEART.getItem('local', 'pnapi');",
-                                    "user = JSON.parse(user)||{};",
-                                    "",
-                                    "user.uid = HEART.uuid;",
-                                    "user.wakeup = values.wake_time;",
-                                    "user.sleep = values.sleep_time;",
-                                    "",
-                                    "user = JSON.stringify(user);",
-                                    "HEART.setItem('local', 'pnapi', user);",
-                                    "///////////////////////////////////////",
+                                    "if(button.parent.parent.saveSettings(button)){",
                                     "",
                                     "this.getTabBar().show();",
                                     "form = Ext.create('HEART.view.EMIPushSlider');",
                                     "form.emxType = 'EMIPushSlider';",
                                     "",
-                                    "Ext.Viewport.setActiveItem(form);"
+                                    "Ext.Viewport.setActiveItem(form);",
+                                    "}"
                                 ],
                                 "name": "tap"
                             },
@@ -576,23 +575,6 @@
                     "",
                     "user = HEART.getItem('local','user');",
                     "settings = this.child('#settings');",
-                    "",
-                    "if( user==null ){",
-                    "\tthis.getTabBar().hide();",
-                    "\tthis.setActiveItem(settings);",
-                    "}else{",
-                    "\tuser = JSON.parse(user);",
-                    "\tsettings.setValues(user);",
-                    "\thVar = HEART.getItem('local','home')||50;",
-                    "\thomePanel = this.child('#homePanel');",
-                    "\tslider=homePanel.child('#homeSlider');",
-                    "\tslider.setValue(hVar);",
-                    "\tvalue=HEART.getItem('local', 'intention');",
-                    "\tif(value!=null){",
-                    "\t\thomePanel.child('#editIntention').setText(value);",
-                    "\t}",
-                    "}",
-                    "",
                     "wakeOptions = new Array();",
                     "",
                     "for( i=5; i<12; i++ ){\t",
@@ -614,10 +596,134 @@
                     "}",
                     "",
                     "settings.child('#sleepTime').setOptions(sleepOptions);",
+                    "",
+                    "heightOptions = new Array();",
+                    "",
+                    "heightOptions.push( {text: \"4'11\\\"\", value: 59});",
+                    "heightOptions.push( {text: \"5'0\\\"\", value: 60});",
+                    "heightOptions.push( {text: \"5'1\\\"\", value: 61});",
+                    "heightOptions.push( {text: \"5'2\\\"\", value: 62});",
+                    "heightOptions.push( {text: \"5'3\\\"\", value: 63});",
+                    "heightOptions.push( {text: \"5'4\\\"\", value: 64});",
+                    "heightOptions.push( {text: \"5'5\\\"\", value: 65});",
+                    "heightOptions.push( {text: \"5'6\\\"\", value: 66});",
+                    "heightOptions.push( {text: \"5'7\\\"\", value: 67});",
+                    "heightOptions.push( {text: \"5'8\\\"\", value: 68});",
+                    "heightOptions.push( {text: \"5'9\\\"\", value: 69});",
+                    "heightOptions.push( {text: \"5'10\\\"\", value: 70});",
+                    "heightOptions.push( {text: \"5'11\\\"\", value: 71});",
+                    "heightOptions.push( {text: \"6'0\\\"\", value: 72});",
+                    "heightOptions.push( {text: \"6'1\\\"\", value: 73});",
+                    "heightOptions.push( {text: \"6'2\\\"\", value: 74});",
+                    "heightOptions.push( {text: \"6'3\\\"\", value: 75});",
+                    "heightOptions.push( {text: \"6'4\\\"\", value: 76});",
+                    "heightOptions.push( {text: \"6'5\\\"\", value: 77});",
+                    "heightOptions.push( {text: \"6'6\\\"\", value: 78});",
+                    "",
+                    "settings.child(\"#height\").setOptions(heightOptions);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "if( user==null ){",
+                    "\tthis.getTabBar().hide();",
+                    "\tthis.setActiveItem(settings);",
+                    "}else{",
+                    "\tuser = JSON.parse(user);",
+                    "\tsettings.setValues(user);",
+                    "\thVar = HEART.getItem('local','home')||50;",
+                    "\thomePanel = this.child('#homePanel');",
+                    "\tslider=homePanel.child('#homeSlider');",
+                    "\tslider.setValue(hVar);",
+                    "\tvalue=HEART.getItem('local', 'intention');",
+                    "\tconsole.log(\"intention: \" + value);",
+                    "\tif(value!==null){",
+                    "\t\thomePanel.child('#cntIntention').child('#editIntention').setText(value);",
+                    "\t}",
+                    "}",
+                    "",
                     ""
                 ]
             },
             "designerId": "9c748870-c0b3-4c73-8cd6-790fb210800f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "saveSettings",
+                "fn": "saveSettings",
+                "designer|params": [
+                    "button"
+                ],
+                "implHandler": [
+                    "user = HEART.getItem('local', 'user');",
+                    "",
+                    "values = button.parent.getValues();",
+                    "",
+                    "var empty;",
+                    "",
+                    "for(field in values){",
+                    "\tif(values[field]=='')",
+                    "\t{ empty=true; break; }",
+                    "}",
+                    "",
+                    "if(empty){",
+                    "\tExt.Msg.alert('Error', \"You must fill out all information before continuing\", Ext.emptyFn);",
+                    "",
+                    "\treturn false;}",
+                    "",
+                    "values.uuid = HEART.uuid;",
+                    "",
+                    "if(user!=null){",
+                    "\tuser = JSON.parse(user);",
+                    "\tvalue = user.priority||2;\t",
+                    "\tvalues.priority = value;",
+                    "}",
+                    "",
+                    "user = JSON.stringify(values);",
+                    "",
+                    "HEART.setItem('local', 'user', user);",
+                    "",
+                    "succ = function(response) {",
+                    "\tconsole.log(response);",
+                    "};",
+                    "",
+                    "fail = function(response) {",
+                    "\tconsole.log(response);",
+                    "};",
+                    "",
+                    "content = {};",
+                    "",
+                    "content.uid=HEART.uuid;",
+                    "content.name = values.name;",
+                    "content.child_name = values.child_name;",
+                    "content.weight = values.weight;",
+                    "content.height = values.height;",
+                    "content.gender = values.gender; ",
+                    "content.wakeup=values.wake_time;",
+                    "content.sleep=values.sleep_time;",
+                    "",
+                    "HEART.toUser( content, succ, fail );",
+                    "///////////////////////////////////////",
+                    "user = HEART.getItem('local', 'pnapi');",
+                    "user = JSON.parse(user)||{};",
+                    "",
+                    "user.uid = HEART.uuid;",
+                    "user.wakeup = values.wake_time;",
+                    "user.sleep = values.sleep_time;",
+                    "",
+                    "user = JSON.stringify(user);",
+                    "HEART.setItem('local', 'pnapi', user);",
+                    "///////////////////////////////////////",
+                    "return true;"
+                ]
+            },
+            "designerId": "a3d96fb7-2196-42ed-99b2-67fc66ca3c81"
         }
     ]
 }

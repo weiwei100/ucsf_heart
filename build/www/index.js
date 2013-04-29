@@ -3,7 +3,7 @@ function initPushwoosh() {
     var pushNotification = window.plugins.pushNotification;
     pushNotification.onDeviceReady();
  
-    pushNotification.registerDevice({ projectid: "535622621184", appid : /*"F86CD-A3DC5"*/"B7BBF-34717" },
+    pushNotification.registerDevice({ projectid: "535622621184", pw_appid : "B7BBF-34717" },
         function(status) {
             var pushToken = status;
             console.warn('push token: ' + pushToken);
@@ -14,6 +14,7 @@ function initPushwoosh() {
     );
  
     document.addEventListener('push-notification', function(event) {
+                              alert("received data");
 	var title = event.notification.title;
 	var userData = event.notification.userdata;
 
@@ -40,6 +41,8 @@ function initPushwoosh() {
 }
 
 function init() {
-    document.addEventListener("deviceready", initPushwoosh, true);
-    HEART.uuid = device.uuid;
+/*    document.addEventListener("deviceready", initPushwoosh, true);
+    alert("load");
+    alert(device.uuid);
+    HEART.uuid = device.uuid; */
 }

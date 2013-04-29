@@ -60,7 +60,7 @@
                     "userConfig": {
                         "itemId": "mysliderfield",
                         "designer|userClassName": "MySliderField7",
-                        "label": "How much stress are you experiencing in this moment? <br/> (left=none, right=alot)",
+                        "label": "How much stress are you experiencing in this moment? <div><span style=\"float:right\">a lot</span><span>none</span></span>",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "stress",
@@ -99,10 +99,10 @@
                                     "///////////////////////////////////////////",
                                     "user = HEART.getItem('local', 'pnapi')||{};",
                                     "user = JSON.parse(user);",
-                                    "\t  ",
+                                    "",
                                     "user.uid = HEART.uuid;",
                                     "user.emi_type_1 = value;",
-                                    "\t\t",
+                                    "",
                                     "user = JSON.stringify(user);",
                                     "HEART.setItem('local', 'pnapi', user);",
                                     "//////////////////////////////////////"

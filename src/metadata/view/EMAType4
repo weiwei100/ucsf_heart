@@ -23,7 +23,7 @@
                 "cls": [
                     "desc"
                 ],
-                "html": "First, take a moment. Then, are you aware of trying to not feel something right now?<br/>(left=none, right=a lot)",
+                "html": "First, take a moment. Then, are you aware of trying to not feel something right now?<br/><br/> <div><span style=\"float:right\">a lot</span><span>none</span></div>",
                 "margin": "8px",
                 "designer|userClassName": "MyLabel19"
             },

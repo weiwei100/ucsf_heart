@@ -14,6 +14,10 @@
         ],
         "designer|userClassName": "EMIIntentionSet"
     },
+    "configAlternates": {
+        "showAnimation": "object",
+        "hideAnimation": "object"
+    },
     "designerId": "83d777b4-31f3-46fc-9dd8-9d4803d6c6a2",
     "cn": [
         {
@@ -81,7 +85,7 @@
                             "value = textfield.getValue().toUpperCase();",
                             "button = textfield.parent.child('button');",
                             "",
-                            "if(value.length<2||/\\W+/.test(value)){",
+                            "if(value.length<2){",
                             "\tbutton.disable();",
                             "}else{",
                             "\tbutton.enable();",

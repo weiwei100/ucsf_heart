@@ -43,7 +43,7 @@
                     "userConfig": {
                         "itemId": "pre-slider",
                         "designer|userClassName": "MySliderField15",
-                        "label": "How do you feel (left=overwhelmed, right=balanced)?",
+                        "label": "How do you feel? <div><span style=\"float:right\">balanced</span><span>overwhelmed</span></div>",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "pre-slider",
@@ -54,50 +54,67 @@
                     "designerId": "5ace536b-6eb6-458c-a87a-b2f38cde3d3d"
                 },
                 {
-                    "type": "Ext.Label",
+                    "type": "Ext.form.FieldSet",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<center><b>Reflect</b></center>",
-                        "designer|userClassName": "MyLabel9"
+                        "itemId": "fsReflect",
+                        "designer|userClassName": "MyFieldSet7",
+                        "title": "Reflect"
                     },
-                    "designerId": "8b4da4a2-a63a-4cc1-81c6-5d5fbb03ba4c"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyButton20",
-                        "iconCls": "compose",
-                        "iconMask": true,
-                        "text": "Write"
-                    },
-                    "designerId": "05a18875-f27f-497f-9ed1-e83f7acf486e"
-                },
-                {
-                    "type": "Ext.field.TextArea",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "hidden": true,
-                        "itemId": "reflect",
-                        "designer|userClassName": "MyTextArea1",
-                        "label": "What is most important to me in this moment?",
-                        "labelAlign": "top",
-                        "name": "reflect",
-                        "required": true
-                    },
-                    "designerId": "ffb17884-e281-4cd1-a7d1-b734508e48f7"
+                    "designerId": "3d434a05-9aaa-45bb-b5f1-a8b141008bdc",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "What is most important to me in this moment?",
+                                "margin": "5px",
+                                "designer|userClassName": "MyLabel7"
+                            },
+                            "designerId": "e645e051-6c83-467e-9bfb-bf5ff1083c48"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton20",
+                                "iconCls": "compose",
+                                "iconMask": true,
+                                "text": "Write"
+                            },
+                            "designerId": "05a18875-f27f-497f-9ed1-e83f7acf486e"
+                        },
+                        {
+                            "type": "Ext.field.TextArea",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "itemId": "reflect",
+                                "designer|userClassName": "MyTextArea1",
+                                "label": "",
+                                "labelAlign": "top",
+                                "name": "reflect",
+                                "required": true
+                            },
+                            "designerId": "ffb17884-e281-4cd1-a7d1-b734508e48f7"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.field.Slider",
@@ -109,7 +126,7 @@
                     "userConfig": {
                         "itemId": "post-slider",
                         "designer|userClassName": "MySliderField16",
-                        "label": "How do you feel (left=overwhelmed, right=balanced)?",
+                        "label": "How do you feel? <div><span style=\"float:right\">balanced</span><span>overwhelmed</span></div>",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "post-slider",

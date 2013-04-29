@@ -23,7 +23,7 @@
                 "cls": [
                     "desc"
                 ],
-                "html": "What emotions are you experiencing in this moment? <br> (left=none, right=a lot)",
+                "html": "What emotions are you experiencing in this moment? <br/> <br/> <div><span style=\"float:right\">a lot</span><span>none</span></span>",
                 "margin": "8px",
                 "designer|userClassName": "MyLabel9"
             },

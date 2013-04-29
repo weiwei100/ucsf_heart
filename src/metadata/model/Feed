@@ -20,7 +20,7 @@
             "userConfig": {
                 "dateFormat": "time",
                 "name": "timestamp",
-                "type": "date",
+                "type": "int",
                 "designer|userClassName": "field11"
             },
             "designerId": "09038290-a5e5-4909-a39a-962057e79c3d"

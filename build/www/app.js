@@ -68,8 +68,10 @@ Ext.application({
 	name: 'HEART',
 
 	launch: function() {
-
-		Ext.create('HEART.view.MainTabs', {fullscreen: true});
+            initPushwoosh();
+            HEART.uuid = device.uuid;
+            HEART.audioRoot = "/audio/";
+            Ext.create('HEART.view.MainTabs', {fullscreen: true});
 	}
 
 });

@@ -62,7 +62,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MySliderField8",
-                        "label": "The amount of pleasant feeling I am experiencing is: <br/> (left=none, right=a lot)",
+                        "label": "The amount of pleasant feeling I am experiencing is:  <div><span style=\"float:right\">a lot</span><span>none</span></span>",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "pleasantness",
@@ -81,7 +81,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MySliderField9",
-                        "label": "The amount of unpleasant feeling I am experiencing is:",
+                        "label": "The amount of unpleasant feeling I am experiencing is:  <div><span style=\"float:right\">a lot</span><span>none</span></span>",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "unpleasantness",
@@ -100,7 +100,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MySliderField10",
-                        "label": "My energy level in this moment is:",
+                        "label": "My energy level in this moment is:  <div><span style=\"float:right\">a lot</span><span>none</span></span>",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "energy",

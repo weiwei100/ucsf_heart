@@ -31,28 +31,45 @@ var HEART = {
 	},
 	
 	toSensor: function(content, succ, fail) {
-		var url = 'http://sensocol.bj.brainpage.com/v1/sensors/'+HEART.uuid;
-	
+//		var url = 'http://sensocol.bj.brainpage.com/v1/sensors/'+HEART.uuid;
+		var url = 'http://localhost:8881/v1/sensors/' + HEART.uuid;
 		var username = '2551135934';
 		var password = '4bbdbcd0b64e75ca047aac5e7d44934b';
 		var base = Base64.encode(username + ':' + password);
 		
 		var auth = "Basic " + base;
 		
+		uuid = HEART.uuid;
+		content.user = uuid;
+		succ = function(response) {
+			console.log(response);
+		};
+
+		fail = function(response) {
+			//Ext.Msg.alert(';(', "<div align='center'>Network Error</div>", Ext.emptyFn);
+			feeds = Ext.getStore("Feeds");
+			content.timestamp = Date.now();
+			feeds.add(content);
+			feeds.sort("timestamp", 'DESC');		
+			feeds.sync();
+		};
+
 		HEART.request(url, auth, content, succ, fail);
+		//HEART.sync();
 	
 	},
 	
 	toUser: function(content, succ, fail) {
-		var url = 'https://app.brainpage.com/ucsf/api/users';
-		
+		//var url = 'https://app.brainpage.com/ucsf/api/users';
+		var url = 'http://localhost:8881/ucsf/api/users';
 		var username = 'breathwear';
 		var password = 'deepbreath';
 	
 		var base = Base64.encode(username + ':' + password);
 		
 		var auth = "Basic " + base;
-	
+		console.log("toUser");
+		console.log(content);
 		HEART.request(url, auth, content, succ, fail);
 	},
 	
@@ -63,14 +80,17 @@ var HEART = {
 				function(item, index, length){
 					var succ = function(response){feeds.removeAt(index);feeds.sync();};
 					var fail = function(response){console.log(response)};
-					var content = item.data.data;
-					content.timestamp = item.data.timestamp;
+					var content = item.data;
+					console.log(item);
+					console.log(item.data);
+					//content.timestamp = item.timestamp;
 					HEART.toSensor(content, succ, fail);					
 				});
-		}
 		user = HEART.getItem('local', 'pnapi');
 		user =JSON.parse(user);
 		HEART.toUser(user);
+		}
+
 	},
 	
 	uuid: 'dropboxisawesome',

@@ -18,10 +18,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyFieldSet21",
-                "title": "<center>Did you exercise today?<center>"
+                "height": 186,
+                "itemId": "fieldSetExercise",
+                "designer|userClassName": "MyFieldSet",
+                "title": "Did you exercise today?"
             },
-            "designerId": "eab14ee3-01e0-429d-a95a-0eb76a50ea1b",
+            "designerId": "053ed517-28d3-40f0-84ed-8952facbad99",
             "cn": [
                 {
                     "type": "Ext.Button",
@@ -31,11 +33,20 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "action": "exercise",
                         "itemId": "not",
+                        "ui": "decline",
                         "designer|userClassName": "MyButton35",
                         "text": "Not today"
                     },
                     "designerId": "4ffa9ea0-a9c3-46e1-ae3a-84876d1f31fb",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ],
                     "cn": [
                         {
                             "type": "basiceventbinding",
@@ -48,13 +59,7 @@
                                 "designer|userClassName": "onNotTap",
                                 "fn": "onNotTap",
                                 "implHandler": [
-                                    "exercise = HEART.getItem('local', 'exercise');",
-                                    "",
-                                    "if(exercise==null){",
-                                    "\texercise = 0;",
-                                    "}",
-                                    "",
-                                    "Ext.Msg.alert(':)', \"<div align='center'>[\"+ meditation +\"]min exercised so far.</div>\", Ext.emptyFn);"
+                                    ""
                                 ],
                                 "name": "tap"
                             },
@@ -63,44 +68,79 @@
                     ]
                 },
                 {
-                    "type": "Ext.Label",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "Yes. <br/><br/> How many minutes?",
-                        "itemId": "describe",
-                        "designer|userClassName": "MyLabel23"
+                        "itemId": "yes",
+                        "ui": "action",
+                        "designer|userClassName": "MyButton10",
+                        "text": "Yes"
                     },
-                    "designerId": "e85b7bed-9432-4f99-b35c-fe744a473030"
-                },
+                    "designerId": "e3055426-42e8-42ac-933f-147b4583c83f",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onYesTap",
+                                "fn": "onYesTap",
+                                "implHandler": [
+                                    "",
+                                    "var exercise = button.parent;",
+                                    "var minutes = button.parent.parent.child('#fieldSetMinutes');",
+                                    "minutes.child(\"#plus\").setValue('');",
+                                    "minutes.setShowAnimation({type: \"fadeIn\", duration: 1024});",
+                                    "minutes.show();",
+                                    "exercise.hide();"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "3b53f36f-7c9c-460f-b8df-350caa6532a5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "itemId": "fieldSetMinutes",
+                "designer|userClassName": "MyFieldSet21",
+                "title": "How many minutes<br/>did you exercise?"
+            },
+            "designerId": "eab14ee3-01e0-429d-a95a-0eb76a50ea1b",
+            "cn": [
                 {
-                    "type": "Ext.field.Text",
+                    "type": "Ext.field.Number",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "goola": "number",
-                        "centered": null,
                         "itemId": "plus",
-                        "designer|userClassName": "MyTextField4",
+                        "designer|userClassName": "MyNumberField1",
                         "label": "min",
                         "labelAlign": "right",
                         "name": "time",
-                        "required": true
+                        "required": true,
+                        "minValue": 0
                     },
-                    "designerId": "9082fb71-66fc-48e3-b87a-4568a6d2d750",
-                    "customConfigs": [
-                        {
-                            "group": "(Custom Properties)",
-                            "name": "goola",
-                            "type": "string"
-                        }
-                    ]
+                    "designerId": "2191c641-da0c-48de-875c-1e54348d68ef"
                 },
                 {
                     "type": "Ext.Button",
@@ -138,7 +178,7 @@
                                     "exercise = HEART.getItem('local', 'exercise');",
                                     "plus = button.parent.child('textfield').getValue();",
                                     "",
-                                    "if(exercise==null||isNaN(exercise)){",
+                                    "if(exercise===null||isNaN(exercise)){",
                                     "\texercise=0;",
                                     "}",
                                     "",
@@ -155,6 +195,45 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "initialize",
+                "fn": "initialize",
+                "implHandler": [
+                    "exercise = HEART.getItem('local', 'exercise');",
+                    "",
+                    "if(exercise===null || isNaN(exercise)){",
+                    "\texercise = 0;",
+                    "}",
+                    "var lbl = this.child(\"#lblMins\");",
+                    "lbl.setHtml( \"<div align='center'>\"+ exercise +\"min of exercise so far.</div>\");",
+                    "",
+                    "var plus = this.child(\"#fieldSetMinutes\").child(\"#plus\");",
+                    "plus.setValue(0);",
+                    "this.callParent();"
+                ]
+            },
+            "designerId": "eb83262a-58b7-45b4-9b2b-ac2a8516fb43"
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "lblMins",
+                "designer|userClassName": "MyLabel2"
+            },
+            "designerId": "a37764f8-c00f-4854-a6d9-fd8b35703a09"
         }
     ]
 }
