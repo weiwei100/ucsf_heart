@@ -42,7 +42,7 @@
                     "userConfig": {
                         "itemId": "pre-slider",
                         "designer|userClassName": "MySliderField15",
-                        "label": "How do you feel (left=overwhelmed, right=balanced)?",
+                        "label": "How do you feel? <div><span style=\"float:right\">Balanced</span><span>Overwhelmed</span></div>",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "pre-slider",
@@ -53,46 +53,48 @@
                     "designerId": "e016f34d-9a10-4904-98d8-3f762c540a15"
                 },
                 {
-                    "type": "Ext.Label",
+                    "type": "Ext.form.FieldSet",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<center><b>Body Connection</b></center>",
-                        "styleHtmlContent": true,
-                        "designer|userClassName": "MyLabel7"
+                        "itemId": "fsAudio",
+                        "designer|userClassName": "MyFieldSet39",
+                        "title": "Body Connection"
                     },
-                    "designerId": "2b74114e-8e3c-4e5e-930c-e0b52775c384"
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "html": "Listen to this guided session from the workshop. <br/> Tip: Use headphones and stand or sit down. <br/> Duration: 0:35 min",
-                        "styleHtmlContent": true,
-                        "designer|userClassName": "MyLabel8"
-                    },
-                    "designerId": "212db81b-a269-43c4-b6cc-c04fdf2ad981"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "itemId": "audioButton",
-                        "designer|userClassName": "MyButton1",
-                        "text": "Play"
-                    },
-                    "designerId": "7bcc333b-f33d-4c67-9a99-baa7733abba3"
+                    "designerId": "61d496ee-28ea-4093-a11f-54a191f0dce8",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "Listen to this guided session from the workshop. <br/> Tip: Use headphones and stand or sit down. <br/> Duration: 0:35 min",
+                                "styleHtmlContent": true,
+                                "designer|userClassName": "MyLabel8"
+                            },
+                            "designerId": "212db81b-a269-43c4-b6cc-c04fdf2ad981"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "audioButton",
+                                "designer|userClassName": "MyButton1",
+                                "text": "Play"
+                            },
+                            "designerId": "7bcc333b-f33d-4c67-9a99-baa7733abba3"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.field.Slider",
@@ -104,7 +106,7 @@
                     "userConfig": {
                         "itemId": "post-slider",
                         "designer|userClassName": "MySliderField16",
-                        "label": "How do you feel (left=overwhelmed, right=balanced)?",
+                        "label": "How do you feel? <div><span style=\"float:right\">Balanced</span><span>Overwhelmed</span></div>",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "post-slider",
@@ -150,7 +152,7 @@
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();",
-                    "HEART.setAudio('T_35 sec.m4a', HEART.audioCallback);"
+                    "HEART.setAudio('T_35sec.mp3', HEART.audioCallback);"
                 ]
             },
             "designerId": "c36322f5-590c-4afb-bdbb-00665471727e"

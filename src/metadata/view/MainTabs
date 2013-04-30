@@ -53,12 +53,27 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "shrinkWrap": null,
                         "centered": false,
+                        "docked": "top",
                         "height": 130,
+                        "html": "<img src=\"logo_header.png\">",
+                        "margin": "0px",
+                        "maxWidth": "",
+                        "style": "",
+                        "ui": "light",
+                        "width": 121,
                         "designer|userClassName": "MyImg1",
-                        "src": "logo_header.png"
+                        "src": ""
                     },
-                    "designerId": "aa4e5e98-969c-4f47-bfbe-78ce7fbea8f2"
+                    "designerId": "aa4e5e98-969c-4f47-bfbe-78ce7fbea8f2",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "shrinkWrap",
+                            "type": "string"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Container",
@@ -133,7 +148,7 @@
                         "itemId": "homeSlider",
                         "designer|userClassName": "MySliderField11",
                         "clearIcon": null,
-                        "label": "Stop and notice your body then your emotions. What are you aware of right now? <div><span style=\"float:right\">balance</span><span>overwhelmed</span></div> ",
+                        "label": "Stop and notice your body then your emotions. What are you aware of right now? <div><span style=\"float:right\">balanced</span><span>overwhelmed</span></div> ",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "stress",
@@ -158,15 +173,13 @@
                                     "",
                                     "HEART.setItem('local', 'home', value);",
                                     "",
-                                    "content = me.parent.getValues();",
                                     "",
-                                    "content.type = 'homePanel';",
-                                    "content.action = 'set';",
-                                    "HEART.toSensor(content);",
+                                    "var button = me.parent.child('#homeDone');",
+                                    "button.setShowAnimation({type: \"fadeIn\", duration: 1024});",
                                     "",
-                                    "me.parent.child('#homeDone').enable();",
+                                    "button.show();",
                                     "",
-                                    "setTimeout(function(){me.setValue(value/2)},60000);"
+                                    "setTimeout(function(){me.setValue(50);},60000);"
                                 ],
                                 "name": "change"
                             },
@@ -182,7 +195,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "disabled": true,
+                        "disabled": false,
+                        "hidden": true,
                         "itemId": "homeDone",
                         "designer|userClassName": "MyButton8",
                         "text": "Done"
@@ -200,13 +214,16 @@
                                 "designer|userClassName": "onHomeDoneTap",
                                 "fn": "onHomeDoneTap",
                                 "implHandler": [
-                                    "value = button.parent.child('#homeSlider').getValue();",
+                                    "content = {};",
+                                    "content.homeSlider = button.parent.child(\"#homeSlider\").getValue();",
                                     "",
-                                    "message=\"<div align='center'>\" + value + \"</div>\";",
+                                    "content.type = 'homePanel';",
+                                    "content.action = 'set';",
+                                    "HEART.toSensor(content);",
                                     "",
-                                    "Ext.Msg.alert(':)', message, Ext.emptyFn);",
+                                    "button.setHideAnimation({type: \"fadeOut\", duration: 1024});",
                                     "",
-                                    "button.disable();"
+                                    "button.hide();"
                                 ],
                                 "name": "tap"
                             },
@@ -290,7 +307,7 @@
             ]
         },
         {
-            "type": "Ext.form.Panel",
+            "type": "Ext.navigation.View",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -298,237 +315,318 @@
             "codeClass": null,
             "userConfig": {
                 "title": "Settings",
+                "badgeText": "",
                 "iconCls": "settings",
-                "centered": null,
-                "hidden": null,
-                "id": "settings",
-                "itemId": null,
-                "designer|userClassName": "MyFormPanel6",
-                "scrollable": null
+                "itemId": "settingsNav",
+                "designer|userClassName": "MyNavigationView2"
             },
-            "designerId": "e7443fc1-6b32-4c1d-adbd-54f3b760a2dc",
+            "designerId": "283cb5c8-83b8-4b55-a2b0-dd9db4743d03",
             "cn": [
                 {
-                    "type": "Ext.field.Text",
+                    "type": "Ext.form.Panel",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "firstname",
-                        "designer|userClassName": "MyTextField",
-                        "label": "First name",
-                        "labelWidth": "50%",
-                        "name": "name",
-                        "required": null,
-                        "autoCapitalize": true,
-                        "maxLength": 15
+                        "title": "Settings",
+                        "centered": null,
+                        "hidden": null,
+                        "id": "settings",
+                        "itemId": null,
+                        "designer|userClassName": "MyFormPanel6",
+                        "scrollable": null
                     },
-                    "designerId": "c41d49e3-436a-4336-9eb7-ffcb7f00556b"
-                },
-                {
-                    "type": "Ext.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "itemId": "childName",
-                        "designer|userClassName": "MyTextField",
-                        "label": "Child's name",
-                        "labelWidth": "50%",
-                        "name": "child_name",
-                        "required": null,
-                        "autoCapitalize": true,
-                        "maxLength": 15
-                    },
-                    "designerId": "485db203-2f01-4661-b4da-fb60a6e3e948"
-                },
-                {
-                    "type": "Ext.field.Select",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "itemId": "wakeTime",
-                        "designer|userClassName": "MySelectField1",
-                        "label": "Wake time",
-                        "labelWidth": "50%",
-                        "name": "wake_time",
-                        "readOnly": false
-                    },
-                    "designerId": "a1bbeb64-14ef-4f45-965e-12c53e7a7f0a"
-                },
-                {
-                    "type": "Ext.field.Select",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "itemId": "sleepTime",
-                        "designer|userClassName": "MySelectField1",
-                        "label": "Sleep time",
-                        "labelWidth": "50%",
-                        "name": "sleep_time",
-                        "readOnly": false
-                    },
-                    "designerId": "72edc4b0-a099-4f0d-a711-f53baae2eb5b"
-                },
-                {
-                    "type": "Ext.field.Select",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "centered": false,
-                        "contentEl": null,
-                        "html": null,
-                        "itemId": "gender",
-                        "designer|userClassName": "MySelectField",
-                        "label": "Gender",
-                        "labelWidth": "50%",
-                        "name": "gender",
-                        "required": null,
-                        "value": null,
-                        "placeHolder": null,
-                        "hiddenName": null,
-                        "options": [
-                            "[{text: 'Male', value: 'm'}, {text: 'Female', value: 'f'}]"
-                        ],
-                        "valueField": null
-                    },
-                    "designerId": "b228de72-125e-44ae-92aa-2f77b39b67ed"
-                },
-                {
-                    "type": "Ext.field.Select",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "itemId": "height",
-                        "designer|userClassName": "MySelectField3",
-                        "label": "Height",
-                        "labelWidth": "50%",
-                        "name": "height"
-                    },
-                    "designerId": "6cda6adf-1fff-432e-b07f-c3e97b684f31"
-                },
-                {
-                    "type": "Ext.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "goola": "number",
-                        "itemId": "weight",
-                        "designer|userClassName": "MyTextField",
-                        "clearIcon": null,
-                        "label": "Weight",
-                        "labelWidth": "50%",
-                        "name": "weight",
-                        "required": null,
-                        "autoCapitalize": null,
-                        "maxLength": 15
-                    },
-                    "designerId": "862a29c3-55a0-4c3c-aec4-e3be0f3df663",
-                    "customConfigs": [
-                        {
-                            "group": "(Custom Properties)",
-                            "name": "goola",
-                            "type": "string"
-                        }
-                    ]
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "itemId": "settngsSave",
-                        "designer|userClassName": "MyButton28",
-                        "text": "Save"
-                    },
-                    "designerId": "2e7e451c-9885-4138-97cd-1c1bc95dbca1",
+                    "designerId": "e7443fc1-6b32-4c1d-adbd-54f3b760a2dc",
                     "cn": [
                         {
-                            "type": "basiceventbinding",
+                            "type": "Ext.field.Text",
                             "reference": {
-                                "name": "listeners",
+                                "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onSettngsSaveTap",
-                                "fn": "onSettngsSaveTap",
-                                "implHandler": [
-                                    "if(button.parent.parent.saveSettings(button)){",
-                                    "",
-                                    "this.getTabBar().show();",
-                                    "",
-                                    "button.parent.parent.setActiveItem(0);",
-                                    "}"
-                                ],
-                                "name": "tap"
+                                "itemId": "firstname",
+                                "designer|userClassName": "MyTextField",
+                                "label": "First name",
+                                "labelWidth": "50%",
+                                "name": "name",
+                                "required": null,
+                                "autoCapitalize": true,
+                                "maxLength": 15
                             },
-                            "designerId": "03828b46-11a7-4a27-9cf8-b1d879265cb1"
-                        }
-                    ]
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": null,
-                        "itemId": "settingsDone",
-                        "designer|userClassName": "MyButton2",
-                        "text": "Set Notification Frequency"
-                    },
-                    "designerId": "658a955a-b968-4ee5-9803-7856021b1b6e",
-                    "cn": [
+                            "designerId": "c41d49e3-436a-4336-9eb7-ffcb7f00556b"
+                        },
                         {
-                            "type": "basiceventbinding",
+                            "type": "Ext.field.Text",
                             "reference": {
-                                "name": "listeners",
+                                "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onSettingsDoneTap",
-                                "fn": "onSettingsDoneTap",
-                                "implHandler": [
-                                    "if(button.parent.parent.saveSettings(button)){",
-                                    "",
-                                    "this.getTabBar().show();",
-                                    "form = Ext.create('HEART.view.EMIPushSlider');",
-                                    "form.emxType = 'EMIPushSlider';",
-                                    "",
-                                    "Ext.Viewport.setActiveItem(form);",
-                                    "}"
-                                ],
-                                "name": "tap"
+                                "itemId": "childName",
+                                "designer|userClassName": "MyTextField",
+                                "label": "Child's name",
+                                "labelWidth": "50%",
+                                "name": "child_name",
+                                "required": null,
+                                "autoCapitalize": true,
+                                "maxLength": 15
                             },
-                            "designerId": "dc06667e-f750-4617-8c35-52b273e2ede1"
+                            "designerId": "485db203-2f01-4661-b4da-fb60a6e3e948"
+                        },
+                        {
+                            "type": "Ext.field.Select",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "wakeTime",
+                                "designer|userClassName": "MySelectField1",
+                                "label": "Wake time",
+                                "labelWidth": "50%",
+                                "name": "wake_time",
+                                "readOnly": false
+                            },
+                            "designerId": "a1bbeb64-14ef-4f45-965e-12c53e7a7f0a"
+                        },
+                        {
+                            "type": "Ext.field.Select",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "sleepTime",
+                                "designer|userClassName": "MySelectField1",
+                                "label": "Sleep time",
+                                "labelWidth": "50%",
+                                "name": "sleep_time",
+                                "readOnly": false
+                            },
+                            "designerId": "72edc4b0-a099-4f0d-a711-f53baae2eb5b"
+                        },
+                        {
+                            "type": "Ext.field.Select",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "centered": false,
+                                "contentEl": null,
+                                "html": null,
+                                "itemId": "gender",
+                                "designer|userClassName": "MySelectField",
+                                "label": "Gender",
+                                "labelWidth": "50%",
+                                "name": "gender",
+                                "required": null,
+                                "value": null,
+                                "placeHolder": null,
+                                "hiddenName": null,
+                                "options": [
+                                    "[{text: 'Male', value: 'm'}, {text: 'Female', value: 'f'}]"
+                                ],
+                                "valueField": null
+                            },
+                            "designerId": "b228de72-125e-44ae-92aa-2f77b39b67ed"
+                        },
+                        {
+                            "type": "Ext.field.Select",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "height",
+                                "designer|userClassName": "MySelectField3",
+                                "label": "Height",
+                                "labelWidth": "50%",
+                                "name": "height"
+                            },
+                            "designerId": "6cda6adf-1fff-432e-b07f-c3e97b684f31"
+                        },
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "goola": "number",
+                                "itemId": "weight",
+                                "designer|userClassName": "MyTextField",
+                                "clearIcon": null,
+                                "label": "Weight",
+                                "labelWidth": "50%",
+                                "name": "weight",
+                                "required": null,
+                                "autoCapitalize": null,
+                                "maxLength": 15
+                            },
+                            "designerId": "862a29c3-55a0-4c3c-aec4-e3be0f3df663",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "goola",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "itemId": "settingsDone",
+                                "ui": "action",
+                                "designer|userClassName": "MyButton2",
+                                "text": "Set Notification Frequency"
+                            },
+                            "designerId": "658a955a-b968-4ee5-9803-7856021b1b6e",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onSettingsDoneTap",
+                                        "fn": "onSettingsDoneTap",
+                                        "implHandler": [
+                                            "//if(button.parent.parent.saveSettings(button)){",
+                                            "",
+                                            "//\tthis.getTabBar().show();",
+                                            "\tform = Ext.create('HEART.view.EMIPushSlider');",
+                                            "\tform.emxType = 'EMIPushSlider';",
+                                            "    //console.log(Ext.Viewport.getActiveItem().getActiveItem());",
+                                            "\t//Ext.Viewport.getActiveItem().setActiveItem(form);",
+                                            "\tbutton.parent.parent.push(form);",
+                                            "//}"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "dc06667e-f750-4617-8c35-52b273e2ede1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "settngsSave",
+                                "designer|userClassName": "MyButton28",
+                                "text": "Save"
+                            },
+                            "designerId": "2e7e451c-9885-4138-97cd-1c1bc95dbca1",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onSettngsSaveTap",
+                                        "fn": "onSettngsSaveTap",
+                                        "implHandler": [
+                                            "if(button.parent.parent.saveSettings(button)){",
+                                            "",
+                                            "\tthis.getTabBar().show();",
+                                            "",
+                                            "\tbutton.parent.parent.setActiveItem(0);",
+                                            "}"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "03828b46-11a7-4a27-9cf8-b1d879265cb1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "<br/>",
+                                "designer|userClassName": "MyLabel27"
+                            },
+                            "designerId": "0cf86a9f-0cc3-4333-afad-736e69adefbb"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "btnInfo",
+                                "designer|userClassName": "MyButton53",
+                                "iconCls": "info",
+                                "iconMask": true,
+                                "text": "Debug Info"
+                            },
+                            "designerId": "d5b7607a-5bd1-4744-b3ac-5a825680ce94",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onbtnInfo",
+                                        "fn": "onbtnInfo",
+                                        "implHandler": [
+                                            "Ext.Msg.alert(\"Info\", \"UUID: \" + HEART.uuid + \"<br/>Cached Feed Items: \" + Ext.getStore('Feeds').getAllCount() + \"<br/>User Info: \" + HEART.getItem('local','user'));"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "74cd7bd6-dc30-4ad5-9f5f-60e74433a1ac"
+                                }
+                            ]
                         }
                     ]
+                },
+                {
+                    "type": "Ext.navigation.Bar",
+                    "reference": {
+                        "name": "navigationBar",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": null,
+                        "docked": "top",
+                        "designer|userClassName": "MyNavigationBar"
+                    },
+                    "designerId": "08174013-92fb-4849-890b-6fcfef39bc20"
                 }
             ]
         },
@@ -561,7 +659,8 @@
                     "this.callParent();",
                     "",
                     "user = HEART.getItem('local','user');",
-                    "settings = this.child('#settings');",
+                    "settings = this.child('#settingsNav').child('#settings');",
+                    "this.child('#settingsNav')",
                     "wakeOptions = new Array();",
                     "",
                     "for( i=5; i<12; i++ ){\t",
@@ -662,7 +761,7 @@
                     "if(empty){",
                     "\tExt.Msg.alert('Error', \"You must fill out all information before continuing\", Ext.emptyFn);",
                     "",
-                    "\treturn false;}",
+                    "return false;}",
                     "",
                     "values.uuid = HEART.uuid;",
                     "",

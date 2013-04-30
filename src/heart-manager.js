@@ -68,8 +68,8 @@ var HEART = {
 	},
 	
 	toUser: function(content, succ, fail) {
-		//var url = 'https://app.brainpage.com/ucsf/api/users';
-		var url = 'http://localhost:8881/ucsf/api/users';
+		var url = 'https://app.brainpage.com/ucsf/api/users';
+		//var url = 'http://localhost:8881/ucsf/api/users';
 		var username = 'breathwear';
 		var password = 'deepbreath';
 	
@@ -109,11 +109,13 @@ var HEART = {
 	audioCallback: {},
 	setAudio: function(name, succ, fail) {
 		url=HEART.audioRoot+name;
-		audio=new Media(url,succ,fail);
+		var finished = function(){
+			HEART.audioCallback();
+		};
+		audio=new Media(url,finished, finished);
 		HEART.audioPlay = audio;
 	},
-	
-	getAudio: function() {
+    getAudio: function() {
 		return HEART.audioPlay;
 	},
 	

@@ -3,7 +3,7 @@
     "settings": {
         "urlPrefix": "http://localhost:8881/",
         "spacesToIndent": "tab",
-        "exportPath": "/home/iaomw/ucsf_heart/build/www",
+        "exportPath": "/Users/jpalley/Documents/projects/breathwear/ucsf/build/www",
         "sdkPath": "",
         "lineEnding": "LF",
         "genTimestamps": true,
