@@ -31,7 +31,22 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "html": "Your current intention is:",
+                        "margin": "5px",
+                        "designer|userClassName": "MyLabel29"
+                    },
+                    "designerId": "87d1b452-1b1b-4772-891b-5d26403a2f87"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
                         "itemId": "intention",
+                        "margin": "5px",
                         "designer|userClassName": "MyLabel4"
                     },
                     "designerId": "7ce75ac3-273f-4494-8a9f-41f44fa298d8"
@@ -61,7 +76,7 @@
                     "userConfig": {
                         "itemId": "being",
                         "designer|userClassName": "MySliderField44",
-                        "label": "Can your feel this? <br/> (left=not at all, right=very much so)",
+                        "label": "Can you connect with and feel your intention right now? <div><span style=\"float:right\">A Lot</span><span>Not at all</span></div>",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "being",

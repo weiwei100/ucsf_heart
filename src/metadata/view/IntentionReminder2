@@ -47,6 +47,7 @@
                     "userConfig": {
                         "html": "Your current intention is:",
                         "itemId": "describe",
+                        "margin": "5px",
                         "designer|userClassName": "MyLabel19"
                     },
                     "designerId": "54849c28-9064-491d-b9d8-4f6d92ae684d"
@@ -60,6 +61,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "intention",
+                        "margin": "5px",
                         "designer|userClassName": "MyLabel4"
                     },
                     "designerId": "adc14913-7abd-429b-89b8-6a6aac23fc62"
@@ -89,7 +91,7 @@
                     "userConfig": {
                         "itemId": "being",
                         "designer|userClassName": "MySliderField44",
-                        "label": "Can you connection with and feel your intention right now? <br/> (left=not at all, right=a lot)",
+                        "label": "Can you connect with and feel your intention right now? <div><span style=\"float:right\">A Lot</span><span>Not at all</span></div>",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "being",
