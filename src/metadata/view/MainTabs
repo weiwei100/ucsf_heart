@@ -149,7 +149,7 @@
                         "itemId": "homeSlider",
                         "designer|userClassName": "MySliderField11",
                         "clearIcon": null,
-                        "label": "Stop and notice your body then your emotions. What are you aware of right now? <div><span style=\"float:right\">balanced</span><span>overwhelmed</span></div> ",
+                        "label": "Notice your body and emotions.  Right now, how do you feel?<div><span style=\"float:right\">balanced</span><span>overwhelmed</span></div> ",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "stress",
@@ -414,77 +414,6 @@
                             "designerId": "72edc4b0-a099-4f0d-a711-f53baae2eb5b"
                         },
                         {
-                            "type": "Ext.field.Select",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "centered": false,
-                                "contentEl": null,
-                                "html": null,
-                                "itemId": "gender",
-                                "designer|userClassName": "MySelectField",
-                                "label": "Gender",
-                                "labelWidth": "50%",
-                                "name": "gender",
-                                "required": null,
-                                "value": null,
-                                "placeHolder": null,
-                                "hiddenName": null,
-                                "options": [
-                                    "[{text: 'Male', value: 'm'}, {text: 'Female', value: 'f'}]"
-                                ],
-                                "valueField": null
-                            },
-                            "designerId": "b228de72-125e-44ae-92aa-2f77b39b67ed"
-                        },
-                        {
-                            "type": "Ext.field.Select",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "itemId": "height",
-                                "designer|userClassName": "MySelectField3",
-                                "label": "Height",
-                                "labelWidth": "50%",
-                                "name": "height"
-                            },
-                            "designerId": "6cda6adf-1fff-432e-b07f-c3e97b684f31"
-                        },
-                        {
-                            "type": "Ext.field.Text",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "goola": "number",
-                                "itemId": "weight",
-                                "designer|userClassName": "MyTextField",
-                                "clearIcon": null,
-                                "label": "Weight",
-                                "labelWidth": "50%",
-                                "name": "weight",
-                                "required": null,
-                                "autoCapitalize": null,
-                                "maxLength": 15
-                            },
-                            "designerId": "862a29c3-55a0-4c3c-aec4-e3be0f3df663",
-                            "customConfigs": [
-                                {
-                                    "group": "(Custom Properties)",
-                                    "name": "goola",
-                                    "type": "string"
-                                }
-                            ]
-                        },
-                        {
                             "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
@@ -685,7 +614,7 @@
                     "}",
                     "",
                     "settings.child('#sleepTime').setOptions(sleepOptions);",
-                    "",
+                    "/*",
                     "heightOptions = new Array();",
                     "",
                     "heightOptions.push( {text: \"4'11\\\"\", value: 59});",
@@ -711,7 +640,7 @@
                     "",
                     "settings.child(\"#height\").setOptions(heightOptions);",
                     "",
-                    "",
+                    "*/",
                     "",
                     "",
                     "if( user===null ){",

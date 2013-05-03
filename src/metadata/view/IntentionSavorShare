@@ -59,7 +59,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "Take a few moments and savor the feelings and sensations of your intention.<br/>Take a moments to imagine sharing this with someone special.",
+                        "html": "Take a few moments and savor the feelings and sensations of your intention.",
                         "itemId": "describe",
                         "styleHtmlContent": true,
                         "designer|userClassName": "MyLabel20"
@@ -74,17 +74,52 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "being",
+                        "itemId": "connect",
                         "designer|userClassName": "MySliderField44",
                         "label": "Can you connect with and feel your intention right now? <div><span style=\"float:right\">A Lot</span><span>Not at all</span></div>",
                         "labelAlign": "top",
                         "labelWrap": true,
-                        "name": "being",
+                        "name": "connect",
                         "value": [
                             50
                         ]
                     },
                     "designerId": "c9e12529-66be-4c5e-935c-f01bd47b61fb"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Now, imagine sharing this with someone special",
+                        "itemId": "describe1",
+                        "styleHtmlContent": true,
+                        "designer|userClassName": "MyLabel20"
+                    },
+                    "designerId": "bc1adbc6-07d2-4729-a2cc-b3bd4ae855f1"
+                },
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "share",
+                        "designer|userClassName": "MySliderField44",
+                        "label": "Can you feel this?",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "share",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "e4a3a576-fde4-4da9-bdc2-93e0ca76313a"
                 },
                 {
                     "type": "Ext.Button",

@@ -40,9 +40,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "random_show": "y",
                         "itemId": "pre-slider",
                         "designer|userClassName": "MySliderField15",
-                        "label": "How do you feel? <div><span style=\"float:right\">Balanced</span><span>Overwhelmed</span></div>",
+                        "label": "How stressed do you feel now? <div><span style=\"float:right\">A lot</span><span>Not at all</span></div>",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "pre-slider",
@@ -50,7 +51,14 @@
                             50
                         ]
                     },
-                    "designerId": "e016f34d-9a10-4904-98d8-3f762c540a15"
+                    "designerId": "e016f34d-9a10-4904-98d8-3f762c540a15",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "random_show",
+                            "type": "string"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.form.FieldSet",
@@ -106,7 +114,7 @@
                     "userConfig": {
                         "itemId": "post-slider",
                         "designer|userClassName": "MySliderField16",
-                        "label": "How do you feel? <div><span style=\"float:right\">Balanced</span><span>Overwhelmed</span></div>",
+                        "label": "How stressed do you feel now? <div><span style=\"float:right\">A lot</span><span>Not at all</span></div>",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "post-slider",
@@ -152,7 +160,7 @@
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();",
-                    "HEART.setAudio('T_35sec.mp3', HEART.audioCallback);"
+                    "HEART.setAudio('T35sec.mp3', HEART.audioCallback);"
                 ]
             },
             "designerId": "c36322f5-590c-4afb-bdbb-00665471727e"

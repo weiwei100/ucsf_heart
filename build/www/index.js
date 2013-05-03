@@ -17,9 +17,9 @@ function initPNHandler() {
                  //             alert("received data");
 	var title = event.notification.aps.title;
 	var userData = event.notification.u;
-                              console.log("PN");
-                              console.log(event.notification.aps.alert);
-                              console.log(event.notification.u);
+            //     console.log("PN");
+                         //     console.log(event.notification.aps.alert);
+                         //     console.log(event.notification.u);
 
 	//console.log("received title: " + event.notification.title);
 	//console.log("received user data: " + event.notification.userdata);
@@ -40,14 +40,15 @@ function initPNHandler() {
 	form = Ext.create('HEART.view.' + userData.type);
 	form.emxType = userData.type;
 	form.goola = 'exercises';
+    content = {};
+    content.type = userData.type;
+    content.action = 'show-pushed';
+    HEART.toSensor(content);
+                              
+
     Ext.Viewport.getActiveItem().setActiveItem(2);
 	Ext.Viewport.getActiveItem().getActiveItem().push(form);
-                              content = {};
-                              content.type = userData.type;
-                              content.action = 'show-pushed';
-                              HEART.toSensor(content);
-                              
-        
+                                     
     });
 }
 

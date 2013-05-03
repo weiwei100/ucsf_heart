@@ -23,7 +23,7 @@
                 "cls": [
                     "desc"
                 ],
-                "html": "First, take a moment. Then, are you aware of trying to not feel something right now?<br/><br/> <div><span style=\"float:right\">a lot</span><span>none</span></div>",
+                "html": "First, take a moment. Then, are you aware of trying <b>TO NOT FEEL</b> something right now?<br/><br/> <div><span style=\"float:right\">a lot</span><span>none</span></div>",
                 "margin": "8px",
                 "designer|userClassName": "MyLabel19"
             },
@@ -148,23 +148,18 @@
                     "designerId": "2c3d269b-bdcb-4c90-9d0e-be4175465eef"
                 },
                 {
-                    "type": "Ext.field.Slider",
+                    "type": "Ext.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField13",
+                        "designer|userClassName": "MyTextField2",
                         "label": "Other",
-                        "labelAlign": "top",
-                        "labelWrap": true,
-                        "name": "other",
-                        "value": [
-                            50
-                        ]
+                        "name": "other"
                     },
-                    "designerId": "7b647c2c-323e-40e2-b943-9902b97685f9"
+                    "designerId": "a8678d72-2a9c-4ca7-972c-4c755084d026"
                 },
                 {
                     "type": "Ext.field.Slider",
