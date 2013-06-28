@@ -95,7 +95,7 @@ var HEART = {
 					//content.timestamp = item.timestamp;
 					HEART.toSensocol(content, succ, fail);					
 				});
-		user = HEART.getItem('local', 'pnapi');
+		user = HEART.getItem('local', 'user');
 		user =JSON.parse(user);
 		HEART.toUser(user);
 		}

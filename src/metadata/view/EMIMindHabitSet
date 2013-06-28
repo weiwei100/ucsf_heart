@@ -1,0 +1,130 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EMIMindHabitSet"
+    },
+    "designerId": "fd2941b2-dc8a-4780-ada1-f0b679a63881",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "fset",
+                "title": "Experiment with mindfulness..."
+            },
+            "designerId": "71f1f695-e01e-4490-8659-23f37359ce32",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Choose 1 activity for this week.<br/> See what it feels like to bring your full awareness to this. You can change it at any time.",
+                        "itemId": "describe",
+                        "styleHtmlContent": true
+                    },
+                    "designerId": "1f1807d6-85bd-46ba-b760-62d8d8d5c27d"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "My mindful habit this week is:",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "mindful"
+                    },
+                    "designerId": "a53050d2-204b-4dec-bc84-442154738da4"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "time",
+                        "label": "Remind me of this at",
+                        "labelWidth": "65%",
+                        "name": "time",
+                        "options": null
+                    },
+                    "designerId": "17e98bb5-d7a2-41bb-8a91-a760e6ef61cd"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Example: <br/> Bring awareness to the sounds all around you right now. <br/> Be present when you hug or kiss anyone today. <br/>  Brush your teeth with awareness.",
+                        "itemId": "example",
+                        "style": "color: rgb(128,128,128); font-size: 13px",
+                        "styleHtmlContent": true
+                    },
+                    "designerId": "76a57511-c7ad-49d1-86e1-9bb4a3448540"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "Done"
+                    },
+                    "designerId": "3b021864-9493-406b-a4d1-e479264ba16b"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormpanelInitialize",
+                "implHandler": [
+                    "time = this.child('#fset').child('#time');",
+                    "",
+                    "options = [];",
+                    "",
+                    "for( i=0; i<24; i++ ){\t",
+                    "\toption = { text: i +': 00', value: i };\t",
+                    "\toptions.push(option);",
+                    "\toption = { text: i +': 30', value: i+0.5 };",
+                    "\toptions.push(option);",
+                    "}",
+                    "",
+                    "",
+                    "time.setOptions(options);",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "designerId": "3a348c84-eddf-4d7e-bfe8-72bfb07ae730"
+        }
+    ]
+}

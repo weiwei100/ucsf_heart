@@ -20,7 +20,6 @@
             "userConfig": {
                 "height": 186,
                 "itemId": "fieldSetExercise",
-                "designer|userClassName": "MyFieldSet",
                 "title": "Did you exercise today?"
             },
             "designerId": "053ed517-28d3-40f0-84ed-8952facbad99",
@@ -36,7 +35,6 @@
                         "action": "exercise",
                         "itemId": "not",
                         "ui": "decline",
-                        "designer|userClassName": "MyButton35",
                         "text": "Not today"
                     },
                     "designerId": "4ffa9ea0-a9c3-46e1-ae3a-84876d1f31fb",
@@ -56,7 +54,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onNotTap",
                                 "fn": "onNotTap",
                                 "implHandler": [
                                     ""
@@ -77,7 +74,6 @@
                     "userConfig": {
                         "itemId": "yes",
                         "ui": "action",
-                        "designer|userClassName": "MyButton10",
                         "text": "Yes"
                     },
                     "designerId": "e3055426-42e8-42ac-933f-147b4583c83f",
@@ -90,7 +86,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onYesTap",
                                 "fn": "onYesTap",
                                 "implHandler": [
                                     "",
@@ -119,7 +114,6 @@
             "userConfig": {
                 "hidden": true,
                 "itemId": "fieldSetMinutes",
-                "designer|userClassName": "MyFieldSet21",
                 "title": "How many minutes<br/>did you exercise?"
             },
             "designerId": "eab14ee3-01e0-429d-a95a-0eb76a50ea1b",
@@ -133,7 +127,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "plus",
-                        "designer|userClassName": "MyNumberField1",
                         "label": "min",
                         "labelAlign": "right",
                         "name": "time",
@@ -152,7 +145,6 @@
                     "userConfig": {
                         "action": "exercise",
                         "itemId": "done",
-                        "designer|userClassName": "MyButton36",
                         "text": "Done"
                     },
                     "designerId": "fc8ad8ca-d2d6-4c2d-aa49-fb959b03af2c",
@@ -172,7 +164,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onMyTimeSave",
                                 "fn": "onMyTimeSave",
                                 "implHandler": [
                                     "exercise = HEART.getItem('local', 'exercise');",
@@ -204,7 +195,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "initialize",
                 "fn": "initialize",
                 "implHandler": [
                     "exercise = HEART.getItem('local', 'exercise');",
@@ -230,8 +220,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "lblMins",
-                "designer|userClassName": "MyLabel2"
+                "itemId": "lblMins"
             },
             "designerId": "a37764f8-c00f-4854-a6d9-fd8b35703a09"
         }

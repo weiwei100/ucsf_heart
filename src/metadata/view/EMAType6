@@ -1,0 +1,93 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EMAType6",
+        "scrollable": "vertical"
+    },
+    "designerId": "0779356a-402f-440c-af31-c302778463fc",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "desc"
+                ],
+                "html": "What is happening right now?",
+                "margin": "8px"
+            },
+            "designerId": "a068c0c8-42bd-41be-9188-666b8b5ce6a7"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "goola": "ema",
+                "instructions": null,
+                "title": null
+            },
+            "designerId": "13f8ba88-7f21-4068-83e6-66f4c3e2cc06",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "goola",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "How much stress are you experiencing in this moment? <div><span style=\"float:right\"> a lot</span><span>none</span></div>",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "stress",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "e3625ddc-5431-406e-8ccd-a3a5a54b3ca5"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "exercise",
+                        "disabled": null,
+                        "text": "Done"
+                    },
+                    "designerId": "3ed31d6f-982e-4d11-8dc1-0eddea5c9298",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

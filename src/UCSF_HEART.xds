@@ -1,7 +1,7 @@
 {
     "name": "UCSF_HEART",
     "settings": {
-        "urlPrefix": "http://localhost:8881/",
+        "urlPrefix": "http://localhost:881/",
         "spacesToIndent": "tab",
         "exportPath": "/Users/jpalley/Documents/projects/breathwear/ucsf/build/www",
         "sdkPath": "",
@@ -16,10 +16,10 @@
         "appName": "MyApp",
         "buildShouldOverwriteIndex": true
     },
-    "xdsVersion": "2.2.1",
-    "xdsBuild": 951,
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000500,
+    "upgradeVersion": 210000000503,
     "framework": "touch20",
     "topInstanceFileMap": {
         "a2531373-fbeb-4cc3-9d43-10a6dc7525be": {
@@ -156,46 +156,6 @@
             ],
             "className": "EMIAudio3"
         },
-        "c914b31e-2bd5-4f04-836c-7bf5e6ce2509": {
-            "paths": [
-                "metadata/view/EMIReflection1",
-                "app/view/override/EMIReflection1.js",
-                "app/view/EMIReflection1.js"
-            ],
-            "className": "EMIReflection1"
-        },
-        "45ffb2a6-7ce7-4069-b545-dd3766209a4a": {
-            "paths": [
-                "metadata/view/EMIReflection2",
-                "app/view/override/EMIReflection2.js",
-                "app/view/EMIReflection2.js"
-            ],
-            "className": "EMIReflection2"
-        },
-        "ec02208e-d35b-471e-884e-358bcc1e4df1": {
-            "paths": [
-                "metadata/view/EMIReflection3",
-                "app/view/override/EMIReflection3.js",
-                "app/view/EMIReflection3.js"
-            ],
-            "className": "EMIReflection3"
-        },
-        "122054c0-8659-4da0-af59-7a3032af1333": {
-            "paths": [
-                "metadata/view/EMIReflection4",
-                "app/view/override/EMIReflection4.js",
-                "app/view/EMIReflection4.js"
-            ],
-            "className": "EMIReflection4"
-        },
-        "bae2e87f-6d72-44ed-8b20-c074c41bdd6f": {
-            "paths": [
-                "metadata/view/EMIReflection5",
-                "app/view/override/EMIReflection5.js",
-                "app/view/EMIReflection5.js"
-            ],
-            "className": "EMIReflection5"
-        },
         "8804c401-278b-4ed3-a95a-f3721979a040": {
             "paths": [
                 "metadata/view/EMAType4",
@@ -212,22 +172,6 @@
             ],
             "className": "EMIGeneralMindfulness"
         },
-        "e0e2a56e-a1c7-44bb-a49b-ed468cbfdcaf": {
-            "paths": [
-                "metadata/view/EMIReflection6",
-                "app/view/override/EMIReflection6.js",
-                "app/view/EMIReflection6.js"
-            ],
-            "className": "EMIReflection6"
-        },
-        "66ae294e-a774-4832-9f70-3a677c4a7503": {
-            "paths": [
-                "metadata/view/IntentionReminder1",
-                "app/view/override/IntentionReminder1.js",
-                "app/view/IntentionReminder1.js"
-            ],
-            "className": "IntentionReminder1"
-        },
         "0fbc87db-4927-439d-bca2-70278fc51350": {
             "paths": [
                 "metadata/view/EMAType5",
@@ -243,22 +187,6 @@
                 "app/view/EMITrackMeditation.js"
             ],
             "className": "EMITrackMeditation"
-        },
-        "400ba324-109a-4e35-8271-2da4c4c0eddb": {
-            "paths": [
-                "metadata/view/IntentionSavorShare",
-                "app/view/override/IntentionSavorShare.js",
-                "app/view/IntentionSavorShare.js"
-            ],
-            "className": "IntentionSavorShare"
-        },
-        "91807876-f809-43a0-90e0-e10068323732": {
-            "paths": [
-                "metadata/view/IntentionReminder2",
-                "app/view/override/IntentionReminder2.js",
-                "app/view/IntentionReminder2.js"
-            ],
-            "className": "IntentionReminder2"
         },
         "f482bdac-9f46-467d-a5c5-5ad903fc37d6": {
             "paths": [
@@ -324,26 +252,73 @@
             ],
             "className": "css"
         },
-        "4fb3a47b-8ddd-4302-919f-793903f499a2": {
+        "fd2941b2-dc8a-4780-ada1-f0b679a63881": {
             "paths": [
-                "metadata/view/IntentionReminder3",
-                "app/view/override/IntentionReminder3.js",
-                "app/view/IntentionReminder3.js"
+                "metadata/view/EMIMindHabitSet",
+                "app/view/override/EMIMindHabitSet.js",
+                "app/view/EMIMindHabitSet.js"
             ],
-            "className": "IntentionReminder3"
+            "className": "EMIMindHabitSet"
         },
-        "0c962f43-511b-4b90-9a92-2a4152bd4323": {
+        "9f498051-2056-4b3b-a785-c7106ad7991e": {
             "paths": [
-                "metadata/view/MyTabPanel1",
-                "app/view/override/MyTabPanel1.js",
-                "app/view/MyTabPanel1.js"
+                "metadata/view/MindfulnessHabit",
+                "app/view/override/MindfulnessHabit.js",
+                "app/view/MindfulnessHabit.js"
             ],
-            "className": "MyTabPanel1"
+            "className": "MindfulnessHabit"
+        },
+        "4680a6de-a74c-4076-b96b-631578ea7a3e": {
+            "paths": [
+                "metadata/view/QUOTES",
+                "app/view/override/QUOTES.js",
+                "app/view/QUOTES.js"
+            ],
+            "className": "QUOTES"
+        },
+        "0a43a4c5-2da5-4e99-a176-e26bc0c5957e": {
+            "paths": [
+                "metadata/view/DAILYLOG",
+                "app/view/override/DAILYLOG.js",
+                "app/view/DAILYLOG.js"
+            ],
+            "className": "DAILYLOG"
+        },
+        "14db8fb0-6548-4940-b1d0-c5a32ee91928": {
+            "paths": [
+                "metadata/view/Experience",
+                "app/view/override/Experience.js",
+                "app/view/Experience.js"
+            ],
+            "className": "Experience"
+        },
+        "30beeb36-af96-4670-bc9c-9eeb44866a21": {
+            "paths": [
+                "metadata/view/FEEDBACK",
+                "app/view/override/FEEDBACK.js",
+                "app/view/FEEDBACK.js"
+            ],
+            "className": "FEEDBACK"
+        },
+        "0779356a-402f-440c-af31-c302778463fc": {
+            "paths": [
+                "metadata/view/EMAType6",
+                "app/view/override/EMAType6.js",
+                "app/view/EMAType6.js"
+            ],
+            "className": "EMAType6"
+        },
+        "59c1cab1-1a57-4660-bd51-67d2b7962336": {
+            "paths": [
+                "metadata/view/EMAType7",
+                "app/view/override/EMAType7.js",
+                "app/view/EMAType7.js"
+            ],
+            "className": "EMAType7"
         }
     },
     "viewOrderMap": {
         "view": [
-            "0c962f43-511b-4b90-9a92-2a4152bd4323",
             "3d30dcc2-648a-4eee-a044-22cb7525d54b",
             "20b4102a-0d56-4d56-a98c-f275981ee4ad",
             "74708139-d538-43ee-93f9-9e694bf2ef61",
@@ -354,6 +329,8 @@
             "74a66690-e41f-48f5-a274-7d59108223a6",
             "8804c401-278b-4ed3-a95a-f3721979a040",
             "0fbc87db-4927-439d-bca2-70278fc51350",
+            "0779356a-402f-440c-af31-c302778463fc",
+            "59c1cab1-1a57-4660-bd51-67d2b7962336",
             "1eb73208-28ad-410e-a453-81084fc2a8b8",
             "ee457f84-adec-4616-b758-13d4b006fc89",
             "5e7c2ac9-f8b6-4753-9b18-c5d3d9549bc6",
@@ -361,18 +338,14 @@
             "ddbdad0f-6fa6-4847-840e-5a2a6ab5ad3e",
             "f5803f11-0156-4e65-aa3d-fdee3bb7df60",
             "f16be101-aabb-441f-b7ce-f2ca05e5a410",
-            "c914b31e-2bd5-4f04-836c-7bf5e6ce2509",
-            "45ffb2a6-7ce7-4069-b545-dd3766209a4a",
-            "ec02208e-d35b-471e-884e-358bcc1e4df1",
-            "122054c0-8659-4da0-af59-7a3032af1333",
-            "bae2e87f-6d72-44ed-8b20-c074c41bdd6f",
-            "e0e2a56e-a1c7-44bb-a49b-ed468cbfdcaf",
-            "66ae294e-a774-4832-9f70-3a677c4a7503",
-            "91807876-f809-43a0-90e0-e10068323732",
-            "4fb3a47b-8ddd-4302-919f-793903f499a2",
-            "400ba324-109a-4e35-8271-2da4c4c0eddb",
             "c478480b-9b04-4a50-ae90-cada9879ba21",
-            "f482bdac-9f46-467d-a5c5-5ad903fc37d6"
+            "f482bdac-9f46-467d-a5c5-5ad903fc37d6",
+            "fd2941b2-dc8a-4780-ada1-f0b679a63881",
+            "9f498051-2056-4b3b-a785-c7106ad7991e",
+            "4680a6de-a74c-4076-b96b-631578ea7a3e",
+            "0a43a4c5-2da5-4e99-a176-e26bc0c5957e",
+            "14db8fb0-6548-4940-b1d0-c5a32ee91928",
+            "30beeb36-af96-4670-bc9c-9eeb44866a21"
         ],
         "store": [
             "39444413-4912-4805-9d9a-77c8467bef15",
@@ -394,6 +367,7 @@
             "dc78838b-05fe-4870-8262-c98919e28ab9"
         ],
         "app": [
+            "application",
             "application"
         ]
     }

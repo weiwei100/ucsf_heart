@@ -1,0 +1,93 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EMAType7",
+        "scrollable": "vertical"
+    },
+    "designerId": "59c1cab1-1a57-4660-bd51-67d2b7962336",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "desc"
+                ],
+                "html": "What emotions are you experiencing in this moment? <br/><br/> <div><span style=\"float:right\">a lot</span><span>none</span></div>",
+                "margin": "8px"
+            },
+            "designerId": "22976a5a-fbf1-4255-95e4-5b0dca88b999"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "goola": "ema",
+                "instructions": null,
+                "title": null
+            },
+            "designerId": "6a665dc6-3cca-4a8a-a894-e4c573d4498e",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "goola",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "How much stress are you experiencing in this moment? <div><span style=\"float:right\"> a lot</span><span>none</span></div>",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "stress",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "367bb364-c710-43db-85d4-f59418479e0b"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "exercise",
+                        "disabled": null,
+                        "text": "Done"
+                    },
+                    "designerId": "51ad8fe1-5add-48a3-8fd4-42ff810003f2",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

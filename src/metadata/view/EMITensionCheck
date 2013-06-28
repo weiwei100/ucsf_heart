@@ -22,7 +22,6 @@
                 "goola": "emi",
                 "centered": false,
                 "docked": null,
-                "designer|userClassName": "MyFieldSet",
                 "scrollable": null,
                 "title": "<div align='center'>Mindful Body-Scan<div>"
             },
@@ -45,8 +44,7 @@
                     "userConfig": {
                         "html": "Feel and relax each body part for a few seonds, then check:",
                         "itemId": "describe",
-                        "margin": "8px",
-                        "designer|userClassName": "MyLabel6"
+                        "margin": "8px"
                     },
                     "designerId": "bce212dc-819b-4018-a9b6-022e9083aa02"
                 },
@@ -58,7 +56,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyCheckbox",
                         "label": "Feet",
                         "labelWidth": "80%",
                         "labelWrap": true,
@@ -75,7 +72,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyCheckbox",
                         "label": "Thighs",
                         "labelWidth": "80%",
                         "labelWrap": true,
@@ -92,7 +88,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyCheckbox",
                         "label": "Belly",
                         "labelWidth": "80%",
                         "labelWrap": true,
@@ -109,7 +104,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyCheckbox",
                         "label": "Chest",
                         "labelWidth": "80%",
                         "labelWrap": true,
@@ -126,7 +120,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyCheckbox",
                         "label": "Hands",
                         "labelWidth": "80%",
                         "labelWrap": true,
@@ -143,7 +136,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyCheckbox",
                         "label": "Face & Jaw",
                         "labelWidth": "80%",
                         "labelWrap": true,
@@ -165,7 +157,6 @@
                             "button"
                         ],
                         "disabled": null,
-                        "designer|userClassName": "MyButton1",
                         "text": "Done!"
                     },
                     "designerId": "4dbde750-0bfa-47c5-810e-f1def833369f",

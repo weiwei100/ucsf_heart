@@ -19,7 +19,6 @@
             "codeClass": null,
             "userConfig": {
                 "itemId": "fieldSetMeditate",
-                "designer|userClassName": "MyFieldSet4",
                 "title": "Did you meditate today?"
             },
             "designerId": "1fbac4fe-33f3-4dcd-b3dd-8d29b46c83c6",
@@ -35,7 +34,6 @@
                         "action": "exercise",
                         "itemId": "not",
                         "ui": "decline",
-                        "designer|userClassName": "MyButton35",
                         "text": "Not today"
                     },
                     "designerId": "1dc429ca-694f-4063-91cd-30e1e0accad4",
@@ -55,7 +53,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onNotTap",
                                 "fn": "onNotTap",
                                 "implHandler": [
                                     ""
@@ -77,7 +74,6 @@
                         "docked": null,
                         "itemId": "yes_meditate",
                         "ui": "action",
-                        "designer|userClassName": "MyButton7",
                         "text": "Yes"
                     },
                     "designerId": "678235e1-1d51-40e9-a7b6-df784ce534f5",
@@ -90,7 +86,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onYes_meditateTap",
                                 "fn": "onYes_meditateTap",
                                 "implHandler": [
                                     "",
@@ -119,7 +114,6 @@
             "userConfig": {
                 "hidden": true,
                 "itemId": "fieldSetMinutes",
-                "designer|userClassName": "MyFieldSet3",
                 "title": "How many minutes <br/> did you meditate?"
             },
             "designerId": "bddff8f9-ce0c-4230-a150-5bad541fde67",
@@ -133,7 +127,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "plus",
-                        "designer|userClassName": "MyNumberField",
                         "label": "min",
                         "labelAlign": "right",
                         "name": "time",
@@ -152,7 +145,6 @@
                     "userConfig": {
                         "action": "exercise",
                         "itemId": "done",
-                        "designer|userClassName": "MyButton36",
                         "text": "Done"
                     },
                     "designerId": "adf83247-d89f-465c-a35e-fb3f23b2338a",
@@ -172,7 +164,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onMyTimeSave",
                                 "fn": "onMyTimeSave",
                                 "implHandler": [
                                     "meditation = HEART.getItem('local', 'meditation');",
@@ -205,8 +196,7 @@
             "codeClass": null,
             "userConfig": {
                 "html": "<div align='center'>X min meditated so far </div>",
-                "itemId": "lblMins",
-                "designer|userClassName": "MyLabel1"
+                "itemId": "lblMins"
             },
             "designerId": "4e66d8f2-8b23-4325-b513-9fc3e07b126c"
         },
@@ -218,7 +208,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "initialize",
                 "fn": "initialize",
                 "implHandler": [
                     "meditation = HEART.getItem('local', 'meditation');",

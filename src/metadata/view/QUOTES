@@ -1,0 +1,42 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "QUOTES"
+    },
+    "designerId": "4680a6de-a74c-4076-b96b-631578ea7a3e",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": true,
+                "html": "somthing",
+                "itemId": "quote",
+                "styleHtmlContent": true
+            },
+            "designerId": "8e4b6538-3a29-4b3d-a953-17cc6f9e11c7"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "text": "Done"
+            },
+            "designerId": "7f60cfad-78aa-4a6c-bdd1-260b40b6c602"
+        }
+    ]
+}

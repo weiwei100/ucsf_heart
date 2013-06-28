@@ -20,7 +20,6 @@
             "codeClass": null,
             "userConfig": {
                 "goola": "audio",
-                "designer|userClassName": "MyFieldSet5",
                 "title": null
             },
             "designerId": "d25e7e0c-0173-479d-89cb-09d06b0e2a7b",
@@ -41,7 +40,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "pre-slider",
-                        "designer|userClassName": "MySliderField15",
                         "label": "How stressed do you feel now? <div><span style=\"float:right\">A lot</span><span>Not at all</span></div>",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -61,7 +59,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "fsAudio",
-                        "designer|userClassName": "MyFieldSet38",
                         "title": "Breath Meditation"
                     },
                     "designerId": "0580b189-7309-4c86-abc7-bb98054df572",
@@ -75,8 +72,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "Listen to this guided session from the workshop. <br/> Tip: Use headphones and sit or lay down. <br/> Duration: 2:50 min",
-                                "styleHtmlContent": true,
-                                "designer|userClassName": "MyLabel8"
+                                "styleHtmlContent": true
                             },
                             "designerId": "fa2d5df1-b5ae-49ae-850e-243bf9f8e0e6"
                         },
@@ -89,7 +85,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "itemId": "audioButton",
-                                "designer|userClassName": "MyButton1",
                                 "text": "Play"
                             },
                             "designerId": "d7e241b2-4ab9-4336-9607-c2e961cfb7e9"
@@ -105,7 +100,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "post-slider",
-                        "designer|userClassName": "MySliderField16",
                         "label": "How stressed do you feel now? <div><span style=\"float:right\">A lot</span><span>Not at all</span></div>",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -126,7 +120,6 @@
                     "userConfig": {
                         "action": "exercise",
                         "disabled": null,
-                        "designer|userClassName": "MyButton12",
                         "text": "Done"
                     },
                     "designerId": "6e5efa7e-0ca0-4c1a-a0e6-72bc45cd6608",
@@ -148,7 +141,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "initialize",
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();",

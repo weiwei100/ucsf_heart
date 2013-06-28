@@ -25,13 +25,6 @@
             "EMAType3",
             "EMAType4",
             "EMAType5",
-            "EMIReflection1",
-            "EMIReflection2",
-            "EMIReflection3",
-            "EMIReflection4",
-            "EMIReflection5",
-            "EMIReflection6",
-            "IntentionReminder1",
             "IntentionSavorShare",
             "EMIAudio1",
             "EMIAudio2",
@@ -43,7 +36,15 @@
             "EMIAudio5",
             "EMIAudio6",
             "EMIAudio7",
-            "IntentionReminder3"
+            "IntentionReminder3",
+            "MindHabitSet",
+            "MindfulnessHabit",
+            "QUOTES",
+            "DAILYLOG",
+            "Experience",
+            "FEEDBACK",
+            "EMAType6",
+            "EMAType7"
         ],
         "requires": [
             "Ext.device.Connection"

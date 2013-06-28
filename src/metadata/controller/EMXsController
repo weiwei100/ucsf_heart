@@ -18,7 +18,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onExerciseSelect",
                 "fn": "onExerciseSelect",
                 "implHandler": [
                     "type = record.get(\"type\");",
@@ -48,9 +47,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
+                    "this.getSettingsNav().getNavigationBar().hide();",
                     "this.getExercises().getNavigationBar().hide();",
                     "this.getStressed().getNavigationBar().hide();"
                 ]
@@ -65,7 +64,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "exercises",
                 "ref": "exercises",
                 "selector": "#exercises"
             },
@@ -79,7 +77,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onExercisesHide",
                 "fn": "onExercisesHide",
                 "implHandler": [
                     "this.getExercises().pop();",
@@ -99,7 +96,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "stressed",
                 "ref": "stressed",
                 "selector": "#stressed"
             },
@@ -113,7 +109,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStressedShow",
                 "fn": "onStressedShow",
                 "implHandler": [
                     "var EMX = ['EMIAudio3', 'EMIAudio4', 'EMITensionCheck', 'EMIGeneralMindfulness','IntentionReminder1', 'IntentionReminder2','IntentionSavorShare'];",
@@ -150,7 +145,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStressedHide",
                 "fn": "onStressedHide",
                 "implHandler": [
                     "this.getStressed().pop();"
@@ -169,7 +163,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onExerciseDone",
                 "fn": "onExerciseDone",
                 "implHandler": [
                     "form = button.parent.parent;",
@@ -215,7 +208,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onEMAInitialize",
                 "fn": "onEMAInitialize",
                 "implHandler": [
                     "items = component.getInnerItems();",
@@ -252,7 +244,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onEMIInitialize",
                 "fn": "onEMIInitialize",
                 "implHandler": [
                     "items = component.getInnerItems();",
@@ -289,7 +280,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onAudioPanelInitialize",
                 "fn": "onAudioPanelInitialize",
                 "implHandler": [
                     "",
@@ -372,7 +362,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onReflectionInitialize",
                 "fn": "onReflectionInitialize",
                 "implHandler": [
                     "preSlider = component.child('#pre-slider');",
@@ -449,11 +438,23 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "mainTabs",
                 "ref": "mainTabs",
                 "selector": "#mainTabs"
             },
             "designerId": "66a73a13-59ae-46bd-b88b-00eef8ed6380"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "settingsNav",
+                "selector": "#settingsNav"
+            },
+            "designerId": "e1a90b2c-df5b-4bda-91d2-4d34693b5443"
         }
     ]
 }

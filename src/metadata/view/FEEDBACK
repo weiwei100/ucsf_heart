@@ -1,0 +1,57 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "FEEDBACK"
+    },
+    "designerId": "30beeb36-af96-4670-bc9c-9eeb44866a21",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "activity",
+                "instructions": null,
+                "title": "My Activity"
+            },
+            "designerId": "b9b36398-10e5-4d72-b416-0208509539aa",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Here is your summary statistics of your activities this week. (Note: Missed days count as 0)",
+                        "itemId": "describe",
+                        "styleHtmlContent": true
+                    },
+                    "designerId": "a968bc4f-73c7-46ed-a21c-4fef075a5894"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "experience",
+                "title": "My Experience"
+            },
+            "designerId": "bd2fd6d8-4605-45aa-8fde-99dfc61d4c77"
+        }
+    ]
+}

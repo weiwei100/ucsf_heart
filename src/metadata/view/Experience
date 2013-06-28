@@ -1,0 +1,140 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Experience"
+    },
+    "designerId": "14db8fb0-6548-4940-b1d0-c5a32ee91928",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "My Experience"
+            },
+            "designerId": "7260cbcd-c32a-40ef-87f1-0cfb5ab66397",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Write a few words to capture your experiences today (emotions felt, your reactions, etc)",
+                        "itemId": "describe",
+                        "styleHtmlContent": true
+                    },
+                    "designerId": "1af7daec-7129-4863-9550-8cbd83844da5",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTitleInitialize",
+                                "implHandler": [
+                                    "component.element.on({",
+                                    "\ttap : function(e, t){",
+                                    "",
+                                    "\t\tcontent = '<p>Do you have a moment to reflect on your day? “If you’d like, write a few words to capture your most salient experience and predominant emotions felt, and your relationship to this experience whether you observed it, reacted to it. Click for more background on this”</p>';",
+                                    "\t\t",
+                                    "\t\tExt.create('Ext.Panel', {",
+                                    "\t\t\thideOnMaskTap: true,",
+                                    "\t\t\tautoDestroy: true, ",
+                                    "\t\t\tmodal: true,",
+                                    "\t\t\thtml: content,",
+                                    "\t\t\tpadding: 10,",
+                                    "\t\t\tleft: 0",
+                                    "\t\t}).showBy(component);",
+                                    "",
+                                    "\t}",
+                                    "});"
+                                ],
+                                "name": "initialize"
+                            },
+                            "designerId": "046dc08a-ba86-4c0f-93e1-e3bba5a484be"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": null,
+                        "id": null,
+                        "itemId": "pleasant",
+                        "label": "Moments of pleasant feeling today? How did you respond?",
+                        "labelAlign": "top",
+                        "labelWidth": "100%",
+                        "labelWrap": true,
+                        "name": "pleasant"
+                    },
+                    "designerId": "70af7752-2f2f-4a12-a92d-b2beb9571a96"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "unpleasant",
+                        "label": "Moments of unpleasant feeling today? How did you respond?",
+                        "labelAlign": "top",
+                        "labelWidth": "100%",
+                        "labelWrap": true,
+                        "name": "unpleasant"
+                    },
+                    "designerId": "f389915f-88d2-4b60-af23-0c0cec46a897"
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 200,
+                        "html": "THANK YOU",
+                        "itemId": "heart",
+                        "styleHtmlContent": true,
+                        "src": "heart_icon.png"
+                    },
+                    "designerId": "0bb101c2-70e4-4d0e-ae59-a8a10d5166e0"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "done",
+                        "text": "Done"
+                    },
+                    "designerId": "57559ca4-9faa-4e5c-be02-7f7b950f2a76"
+                }
+            ]
+        }
+    ]
+}

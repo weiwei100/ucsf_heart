@@ -23,8 +23,7 @@
                     "desc"
                 ],
                 "html": "What is happening in your body right now?",
-                "margin": "8px",
-                "designer|userClassName": "MyLabel9"
+                "margin": "8px"
             },
             "designerId": "ce798d9d-b0f2-46ea-8222-bebe76c7c131"
         },
@@ -38,7 +37,6 @@
             "userConfig": {
                 "goola": "ema",
                 "docked": null,
-                "designer|userClassName": "MyFieldSet3",
                 "hideOnMaskTap": null,
                 "modal": null,
                 "instructions": null,
@@ -61,7 +59,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField8",
                         "label": "The amount of pleasant feeling I am experiencing is:  <div><span style=\"float:right\">a lot</span><span>none</span></span>",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -80,7 +77,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField9",
                         "label": "The amount of unpleasant feeling I am experiencing is:  <div><span style=\"float:right\">a lot</span><span>none</span></span>",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -99,7 +95,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField10",
                         "label": "My energy level in this moment is:  <div><span style=\"float:right\">a lot</span><span>none</span></span>",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -120,7 +115,6 @@
                     "userConfig": {
                         "action": "exercise",
                         "disabled": null,
-                        "designer|userClassName": "MyButton8",
                         "text": "Done"
                     },
                     "designerId": "929d2455-ecb1-468a-8631-a3afa2fd7344",

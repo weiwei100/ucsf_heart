@@ -24,8 +24,7 @@
                     "desc"
                 ],
                 "html": "What emotions are you experiencing in this moment? <br/> <br/> <div><span style=\"float:right\">a lot</span><span>none</span></span>",
-                "margin": "8px",
-                "designer|userClassName": "MyLabel9"
+                "margin": "8px"
             },
             "designerId": "edbb549f-0996-4368-822b-56a6b47c1496"
         },
@@ -38,7 +37,6 @@
             "codeClass": null,
             "userConfig": {
                 "goola": "ema",
-                "designer|userClassName": "MyFieldSet6",
                 "instructions": null,
                 "title": null
             },
@@ -59,8 +57,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField11",
-                        "label": "Anger",
+                        "label": "I am feeling anger:",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "anger",
@@ -78,8 +75,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField12",
-                        "label": "Sadness",
+                        "label": "I am feeling sad:",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "sadness",
@@ -97,8 +93,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField12",
-                        "label": "Joy",
+                        "label": "I am feeling joyful",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "joy",
@@ -116,11 +111,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField13",
-                        "label": "Shame",
+                        "label": "I am feeling calm:",
                         "labelAlign": "top",
                         "labelWrap": true,
-                        "name": "shame",
+                        "name": "calm",
                         "value": [
                             50
                         ]
@@ -135,11 +129,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField13",
-                        "label": "Fear",
+                        "label": "I am feeling fearful or anxious:",
                         "labelAlign": "top",
                         "labelWrap": true,
-                        "name": "fear",
+                        "name": "fora",
                         "value": [
                             50
                         ]
@@ -154,111 +147,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField13",
-                        "label": "Anxiety",
+                        "label": "I am feeling grateful:",
                         "labelAlign": "top",
                         "labelWrap": true,
-                        "name": "anxiety",
+                        "name": "grate",
                         "value": [
                             50
                         ]
                     },
-                    "designerId": "623ced58-c2e0-4f54-be1b-9ac304e5bd37"
-                },
-                {
-                    "type": "Ext.field.Slider",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MySliderField13",
-                        "label": "Love",
-                        "labelAlign": "top",
-                        "labelWrap": true,
-                        "name": "love",
-                        "value": [
-                            50
-                        ]
-                    },
-                    "designerId": "26a5dafa-00a0-472e-a838-a7847e51b3e3"
-                },
-                {
-                    "type": "Ext.field.Slider",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MySliderField13",
-                        "label": "Frustration",
-                        "labelAlign": "top",
-                        "labelWrap": true,
-                        "name": "frustration",
-                        "value": [
-                            50
-                        ]
-                    },
-                    "designerId": "9d1ede75-b418-4352-821d-8b4ab5141299"
-                },
-                {
-                    "type": "Ext.field.Slider",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MySliderField13",
-                        "label": "Gratitude",
-                        "labelAlign": "top",
-                        "labelWrap": true,
-                        "name": "gratitude",
-                        "value": [
-                            50
-                        ]
-                    },
-                    "designerId": "edf43bd9-205e-403f-9776-3a9c1ba1680c"
-                },
-                {
-                    "type": "Ext.field.Slider",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MySliderField13",
-                        "label": "Exhaustion",
-                        "labelAlign": "top",
-                        "labelWrap": true,
-                        "name": "exhaustion",
-                        "value": [
-                            50
-                        ]
-                    },
-                    "designerId": "1b4a2a97-c0ba-426a-ba49-5096dd963741"
-                },
-                {
-                    "type": "Ext.field.Slider",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MySliderField13",
-                        "label": "Contentment",
-                        "labelAlign": "top",
-                        "labelWrap": true,
-                        "name": "Contentment",
-                        "value": [
-                            50
-                        ]
-                    },
-                    "designerId": "ca002b4a-3d24-4803-b044-183265fc8601"
+                    "designerId": "4f1d15c1-3618-4e88-91d1-558ac70e900c"
                 },
                 {
                     "type": "Ext.Button",
@@ -270,7 +167,6 @@
                     "userConfig": {
                         "action": "exercise",
                         "disabled": null,
-                        "designer|userClassName": "MyButton9",
                         "text": "Done"
                     },
                     "designerId": "27e9b9fa-f65d-4c0c-b22c-acd9baed63d0",

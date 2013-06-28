@@ -21,7 +21,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLocalStorageProxy",
                 "id": "feeds"
             },
             "designerId": "4e423c99-41bb-4dd1-a95d-f663bd2f779f"

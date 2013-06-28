@@ -23,8 +23,7 @@
                     "desc"
                 ],
                 "html": "What is the state of your mind in this moment? <br/><br/>  <div><span style=\"float:right\">a lot</span><span>none</span></div>",
-                "margin": "8px",
-                "designer|userClassName": "MyLabel12"
+                "margin": "8px"
             },
             "designerId": "7e92d79d-789e-4c54-9cdf-d5024852f69f"
         },
@@ -37,7 +36,6 @@
             "codeClass": null,
             "userConfig": {
                 "goola": "ema",
-                "designer|userClassName": "MyFieldSet6",
                 "instructions": null,
                 "title": null
             },
@@ -58,7 +56,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField11",
                         "label": "Calm",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -77,7 +74,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField12",
                         "label": "Agitated",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -96,7 +92,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField13",
                         "label": "Restless",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -115,7 +110,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField13",
                         "label": "Open",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -134,7 +128,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField13",
                         "label": "Constricted",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -153,7 +146,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySliderField13",
                         "label": "Balanced",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -174,7 +166,6 @@
                     "userConfig": {
                         "action": "exercise",
                         "disabled": null,
-                        "designer|userClassName": "MyButton9",
                         "text": "Done"
                     },
                     "designerId": "cb90b7b0-8cb9-406e-b4f7-37748cc7fa34",

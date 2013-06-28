@@ -34,8 +34,7 @@
                 "docked": null,
                 "html": "<center>Too many or too few push notifications?<center>",
                 "itemId": "pushTitle",
-                "ui": "",
-                "designer|userClassName": "MyLabel2"
+                "ui": ""
             },
             "designerId": "11cfff80-7fb3-48bc-b1f1-b1742b7c4295"
         },
@@ -54,8 +53,7 @@
                 "itemId": "pushDesc",
                 "margin": "",
                 "styleHtmlContent": true,
-                "top": null,
-                "designer|userClassName": "MyLabel3"
+                "top": null
             },
             "designerId": "b8f6b25c-9e14-43c2-ab1c-d09f9b9ee76d"
         },
@@ -68,7 +66,6 @@
             "codeClass": null,
             "userConfig": {
                 "itemId": "pushSlider",
-                "designer|userClassName": "MySliderField1",
                 "label": "",
                 "value": [
                     50
@@ -85,20 +82,19 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onPushSliderChange",
                         "fn": "onPushSliderChange",
                         "implHandler": [
-                            "var label = me.parent.child('#pushLevel');",
+                            "label = me.parent.child('#pushLevel');",
                             "",
                             "me.parent.setLabel(newValue, label);",
                             "",
                             "user = HEART.getItem('local', 'user');",
                             "user = JSON.parse(user);",
-                            "user.uuid = HEART.uuid;",
                             "",
-                            "value = newValue;",
+                            "user.priority = newValue/25;",
                             "",
-                            "user.priority = value/25;",
+                            "HEART.toUser( user, succ, fail );",
+                            "",
                             "user = JSON.stringify(user);",
                             "",
                             "HEART.setItem('local', 'user', user);",
@@ -109,25 +105,7 @@
                             "",
                             "fail = function(response) {",
                             "\tconsole.log(response);",
-                            "};",
-                            "",
-                            "content={};",
-                            "content.uid=HEART.uuid;",
-                            "content.priority=value/25;",
-                            "",
-                            "HEART.toUser(content, succ, fail);",
-                            "///////////////////////////////////////",
-                            "user = HEART.getItem('local', 'pnapi');",
-                            "user = JSON.parse(user)||{};",
-                            "",
-                            "user.uid = HEART.uuid;",
-                            "user.priority = value/25;",
-                            "",
-                            "user = JSON.stringify(user);",
-                            "HEART.setItem('local', 'pnapi', user);",
-                            "///////////////////////////////////////",
-                            "",
-                            ""
+                            "};"
                         ],
                         "name": "change"
                     },
@@ -144,8 +122,7 @@
             "codeClass": null,
             "userConfig": {
                 "html": "<center>Some pushes<center>",
-                "itemId": "pushLevel",
-                "designer|userClassName": "MyLabel22"
+                "itemId": "pushLevel"
             },
             "designerId": "8876a8bb-2440-42b4-8eda-058a29d68639"
         },
@@ -162,7 +139,6 @@
                 ],
                 "disabled": null,
                 "itemId": "pushDone",
-                "designer|userClassName": "MyButton3",
                 "text": "Done"
             },
             "designerId": "98fa9cd7-428d-4bef-b37b-0bb02386fc00",
@@ -175,7 +151,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onPushSettingSave",
                         "fn": "onPushSettingSave",
                         "implHandler": [
                             "this.parent.pop();"
@@ -194,7 +169,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "initialize",
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();",
@@ -214,7 +188,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "setLabel",
                 "fn": "setLabel",
                 "designer|params": [
                     "value",

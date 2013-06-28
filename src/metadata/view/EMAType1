@@ -20,8 +20,7 @@
             "codeClass": null,
             "userConfig": {
                 "html": "What is happening right now?",
-                "margin": "8px",
-                "designer|userClassName": "MyLabel9"
+                "margin": "8px"
             },
             "designerId": "8d96d19e-8686-48e7-bd04-cafa30c058e9"
         },
@@ -35,7 +34,6 @@
             "userConfig": {
                 "goola": "ema",
                 "docked": null,
-                "designer|userClassName": "MyFieldSet5",
                 "hideOnMaskTap": false,
                 "modal": false,
                 "instructions": null,
@@ -59,7 +57,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "mysliderfield",
-                        "designer|userClassName": "MySliderField7",
                         "label": "How much stress are you experiencing in this moment? <div><span style=\"float:right\">a lot</span><span>none</span></span>",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -78,7 +75,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onMysliderfieldChange",
                                 "fn": "onMysliderfieldChange",
                                 "implHandler": [
                                     "value = me.getValue();",
@@ -123,7 +119,6 @@
                     "userConfig": {
                         "action": "exercise",
                         "disabled": null,
-                        "designer|userClassName": "MyButton7",
                         "text": "Done"
                     },
                     "designerId": "43994e75-d9e0-4b3c-8fc0-38a5b9c10a07",

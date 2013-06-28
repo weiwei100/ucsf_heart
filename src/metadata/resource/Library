@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "Library",
         "basePath": "/sencha/",
         "debug": true,
         "includeJs": null,

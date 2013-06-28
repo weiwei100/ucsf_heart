@@ -1,0 +1,41 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MindfulnessHabit"
+    },
+    "designerId": "9f498051-2056-4b3b-a785-c7106ad7991e",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": true,
+                "html": "something",
+                "itemId": "mindful"
+            },
+            "designerId": "d874fbed-7275-4c89-aeea-b597d2180e02"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "text": "Done"
+            },
+            "designerId": "dea7a58c-8b3f-424f-af40-e55ffce2170e"
+        }
+    ]
+}

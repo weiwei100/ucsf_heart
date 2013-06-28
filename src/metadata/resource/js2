@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "js2",
         "url": "heart-manager.js"
     },
     "designerId": "dc78838b-05fe-4870-8262-c98919e28ab9"

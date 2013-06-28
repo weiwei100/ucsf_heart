@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "contentEl": null,
         "hideAnimation": [
             "{type :\"fadeOut\", duration : 768}"
         ],
@@ -21,153 +22,193 @@
     "designerId": "83d777b4-31f3-46fc-9dd8-9d4803d6c6a2",
     "cn": [
         {
-            "type": "Ext.Label",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "html": "What is your intention this week?",
-                "itemId": "title",
-                "designer|userClassName": "MyLabel5"
+                "itemId": "fset",
+                "title": null
             },
-            "designerId": "5fc63c3f-0aaf-47f9-8b83-7aae5dc1749a"
-        },
-        {
-            "type": "Ext.Label",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "centered": null,
-                "disabled": false,
-                "docked": null,
-                "html": "Visualize the week ahead. What do you want to cultivate this week? <br/> Examples: self-compassion, patience, acceptiance, self-care.",
-                "itemId": "describe",
-                "styleHtmlContent": true,
-                "designer|userClassName": "MyLabel1"
-            },
-            "designerId": "b25fe0bb-2f4e-4d3c-a354-0969cca7a085"
-        },
-        {
-            "type": "Ext.field.TextArea",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "itemId": "intention",
-                "designer|userClassName": "MyTextArea",
-                "label": "Enter it here",
-                "labelAlign": "top",
-                "labelWrap": true,
-                "name": "intention",
-                "value": null,
-                "maxLength": 100
-            },
-            "designerId": "9ce087bf-3d75-45fb-af96-b6a38799b7bc",
+            "designerId": "6f1274de-78ca-4870-a171-7a334c22f41d",
             "cn": [
                 {
-                    "type": "basiceventbinding",
+                    "type": "Ext.field.TextArea",
                     "reference": {
-                        "name": "listeners",
+                        "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onTextareaChange",
-                        "fn": "onTextareaChange",
-                        "implHandler": [
-                            "value = textfield.getValue().toUpperCase();",
-                            "button = textfield.parent.child('button');",
-                            "",
-                            "if(value.length<2){",
-                            "\tbutton.disable();",
-                            "}else{",
-                            "\tbutton.enable();",
-                            "}",
-                            "",
-                            "textfield.setValue(value);"
-                        ],
-                        "name": "keyup"
+                        "itemId": "intention",
+                        "label": "What would you like your intention to be for this week?",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "intention",
+                        "value": null,
+                        "maxLength": 100,
+                        "placeHolder": "Visualize the week ahead. Think about how do you want to live this week."
                     },
-                    "designerId": "ecc5de40-cfef-4fd5-9fcc-2f6d4d96b643"
-                }
-            ]
-        },
-        {
-            "type": "Ext.Button",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "action": null,
-                "cls": [
-                    "button"
-                ],
-                "disabled": true,
-                "itemId": "done",
-                "designer|userClassName": "MyButton2",
-                "text": "Done"
-            },
-            "designerId": "ec495742-ff4f-49ae-ab6c-5b68ae553a3c",
-            "customConfigs": [
+                    "designerId": "9ce087bf-3d75-45fb-af96-b6a38799b7bc",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTextareaChange",
+                                "implHandler": [
+                                    "value = textfield.getValue().toUpperCase();",
+                                    "button = textfield.parent.child('button');",
+                                    "",
+                                    "if(value.length<2){",
+                                    "\tbutton.disable();",
+                                    "}else{",
+                                    "\tbutton.enable();",
+                                    "}",
+                                    "",
+                                    "textfield.setValue(value);"
+                                ],
+                                "name": "keyup"
+                            },
+                            "designerId": "ecc5de40-cfef-4fd5-9fcc-2f6d4d96b643"
+                        }
+                    ]
+                },
                 {
-                    "group": "(Custom Properties)",
-                    "name": "action",
-                    "type": "string"
-                }
-            ],
-            "cn": [
-                {
-                    "type": "basiceventbinding",
+                    "type": "Ext.Label",
                     "reference": {
-                        "name": "listeners",
+                        "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onIntentionSave",
-                        "fn": "onIntentionSave",
-                        "implHandler": [
-                            "text = button.parent.child('#intention').getValue();",
-                            "HEART.setItem('local', 'intention', text);",
-                            "",
-                            "content = this.getValues();",
-                            "",
-                            "content.type = this.emxType;",
-                            "content.action = 'submit';",
-                            "",
-                            "",
-                            "HEART.toSensor(content);",
-                            "",
-                            "elements = Ext.ComponentQuery.query('#homePanel #editIntention');",
-                            "elements[0].setText(text);",
-                            "",
-                            "",
-                            "HEART.toUser({uid: HEART.uuid, intention_set: true});",
-                            "///////////////////////////////////////",
-                            "user = HEART.getItem('local', 'pnapi');",
-                            "user = JSON.parse(user)||{};",
-                            "",
-                            "user.uid = HEART.uuid;",
-                            "user.intention_set = true;",
-                            "",
-                            "user = JSON.stringify(user);",
-                            "HEART.setItem('local', 'pnapi', user);",
-                            "///////////////////////////////////////",
-                            "",
-                            "this.destroy();"
-                        ],
-                        "name": "tap"
+                        "html": "Example Intentions: <br/> <p>self-compassion<br/>patience<br/>acceptiance<br/>self-care</p>",
+                        "itemId": "example",
+                        "style": "color: rgb(128,128,128); font-size: 15px;"
                     },
-                    "designerId": "a7046bb0-99e5-46ab-b5d0-5a43f34901bf"
+                    "designerId": "f6e80e29-e902-49f0-af15-1e11d3a4d285"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": null,
+                        "cls": [
+                            "button"
+                        ],
+                        "disabled": true,
+                        "itemId": "done",
+                        "text": "Done"
+                    },
+                    "designerId": "ec495742-ff4f-49ae-ab6c-5b68ae553a3c",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onIntentionSave",
+                                "implHandler": [
+                                    "text = button.parent.child('#intention').getValue();",
+                                    "HEART.setItem('local', 'intention', text);",
+                                    "",
+                                    "content = this.getValues();",
+                                    "",
+                                    "content.type = this.emxType;",
+                                    "",
+                                    "HEART.toSensor(content);",
+                                    "",
+                                    "//elements = Ext.ComponentQuery.query('#homePanel #editIntention');",
+                                    "",
+                                    "user = HEART.getItem('local', 'user');",
+                                    "",
+                                    "user = JSON.parse(user);",
+                                    "user.intention = text;",
+                                    "",
+                                    "succ = function(response) {",
+                                    "\tconsole.log(response);",
+                                    "};",
+                                    "",
+                                    "fail = function(response) {",
+                                    "\tconsole.log(response);",
+                                    "};",
+                                    "",
+                                    "HEART.toUser( user, succ, fail );",
+                                    "",
+                                    "user = JSON.stringify(user);",
+                                    "",
+                                    "HEART.setItem('local', 'user', user);",
+                                    "",
+                                    "console.log(this);",
+                                    "",
+                                    "if(this.goola=='settings'){",
+                                    "\tthis.parent.pop();",
+                                    "}else{",
+                                    "\tthis.destroy();",
+                                    "}",
+                                    ""
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "a7046bb0-99e5-46ab-b5d0-5a43f34901bf"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "notnow",
+                        "text": "Not Now"
+                    },
+                    "designerId": "09e1329a-be18-496e-a134-01b21ccb95cc",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onNotNowTap",
+                                "implHandler": [
+                                    "if(this.goola=='settings'){",
+                                    "\tthis.parent.pop();",
+                                    "}else{",
+                                    "\tthis.destroy();",
+                                    "}",
+                                    ""
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "b338b5ac-161d-4919-aa10-2aad09401bc4"
+                        }
+                    ]
                 }
             ]
         }
