@@ -114,10 +114,21 @@
                     "codeClass": null,
                     "userConfig": {
                         "height": 200,
+                        "hidden": true,
+                        "hideAnimation": [
+                            "{ type: 'fade', duration: 4096 }"
+                        ],
                         "html": "THANK YOU",
                         "itemId": "heart",
+                        "showAnimation": [
+                            "{ type: 'fade', duration: 4096 }"
+                        ],
                         "styleHtmlContent": true,
                         "src": "heart_icon.png"
+                    },
+                    "configAlternates": {
+                        "hideAnimation": "object",
+                        "showAnimation": "object"
                     },
                     "designerId": "0bb101c2-70e4-4d0e-ae59-a8a10d5166e0"
                 },
@@ -129,10 +140,62 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "hideAnimation": [
+                            "{ type: 'fadeOut', duration: 2048 }"
+                        ],
                         "itemId": "done",
                         "text": "Done"
                     },
-                    "designerId": "57559ca4-9faa-4e5c-be02-7f7b950f2a76"
+                    "configAlternates": {
+                        "hideAnimation": "object"
+                    },
+                    "designerId": "57559ca4-9faa-4e5c-be02-7f7b950f2a76",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onDoneTap",
+                                "implHandler": [
+                                    "pleasant = button.parent.child('#pleasant');",
+                                    "unpleasant = button.parent.child('#unpleasant');",
+                                    "",
+                                    "experiences = Ext.getStore('Experiences');",
+                                    "",
+                                    "content = {};",
+                                    "",
+                                    "content.timestamp = Date.now();",
+                                    "content.pleasant = pleasant.getValue();",
+                                    "content.unpleasant = unpleasant.getValue();",
+                                    "",
+                                    "experiences.add(content);",
+                                    "experiences.sort(\"timestamp\", 'DESC');\t\t",
+                                    "experiences.sync();",
+                                    "",
+                                    "button.hide();",
+                                    "",
+                                    "heart = button.parent.child('#heart');",
+                                    "",
+                                    "heart.show();",
+                                    "",
+                                    "setTimeout(function(){",
+                                    "\theart.hide();",
+                                    "\tif(this.goola=='settings'){",
+                                    "\t\tthis.parent.pop();",
+                                    "\t}else{",
+                                    "\t\tbutton.parent.parent.destroy();",
+                                    "\t}\t  ",
+                                    "}, 5000);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "b538d9d7-af65-4f1a-938c-5025ff5d6b3c"
+                        }
+                    ]
                 }
             ]
         }

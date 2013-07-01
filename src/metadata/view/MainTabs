@@ -38,6 +38,7 @@
                 "iconCls": "home",
                 "centered": null,
                 "id": "homePanel",
+                "itemId": "myformpanel2",
                 "margin": null,
                 "padding": null,
                 "styleHtmlContent": null,
@@ -47,33 +48,17 @@
             "designerId": "ae4b176d-43a2-49de-98d6-2638de2b7330",
             "cn": [
                 {
-                    "type": "Ext.Img",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "shrinkWrap": null,
-                        "centered": false,
-                        "docked": "top",
-                        "height": null,
                         "html": "<center><img src=\"heart_icon.png\" height=111></center>",
-                        "margin": "5px",
-                        "maxWidth": "",
-                        "style": "",
-                        "ui": "light",
-                        "width": null,
-                        "src": ""
+                        "itemId": "image"
                     },
-                    "designerId": "aa4e5e98-969c-4f47-bfbe-78ce7fbea8f2",
-                    "customConfigs": [
-                        {
-                            "group": "(Custom Properties)",
-                            "name": "shrinkWrap",
-                            "type": "string"
-                        }
-                    ]
+                    "designerId": "cc1300db-e331-42b2-bc5e-59935a8a3a2a"
                 },
                 {
                     "type": "Ext.Container",
@@ -181,7 +166,7 @@
                                 "implHandler": [
                                     "component.element.on({",
                                     "\ttap : function(e, t){",
-                                    "",
+                                    "\t\talert('somthing');",
                                     "\t}",
                                     "});"
                                 ],
@@ -219,18 +204,29 @@
                                 "itemId": "intention",
                                 "label": "Intention",
                                 "labelWidth": "50%",
-                                "options": [
-                                    "[",
-                                    "\t{text: 'gggg', value: 'gggg'},",
-                                    "\t{text: 'hhhh', value: 'hhhh'},",
-                                    "\t{text: 'jjjj', value: 'jjjj'},",
-                                    "\t{text: 'kkkk', value: 'kkkk'},",
-                                    "]"
-                                ]
+                                "options": null,
+                                "store": "Intentions"
                             },
                             "designerId": "d59314b4-f640-4b78-89e4-8cccf5afb937"
                         }
                     ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onHomePanelActivate",
+                        "implHandler": [
+                            "ttt = container.child('#myintention').child('#intention');",
+                            "ttt.reset();"
+                        ],
+                        "name": "activate"
+                    },
+                    "designerId": "bc00c797-e816-497c-bcdf-6af432a8bded"
                 }
             ]
         },

@@ -25,11 +25,15 @@ Ext.application({
 	],
 	models: [
 		'Feed',
-		'EMX'
+		'EMX',
+		'Intention',
+		'Experience'
 	],
 	stores: [
 		'Feeds',
-		'EMXs'
+		'EMXs',
+		'Intentions',
+		'Experiences'
 	],
 	views: [
 		'MainTabs',

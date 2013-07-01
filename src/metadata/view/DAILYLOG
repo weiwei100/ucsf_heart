@@ -48,7 +48,7 @@
                                 "implHandler": [
                                     "component.element.on({",
                                     "\ttap : function(e, t){",
-                                    "\t\t",
+                                    "",
                                     "\t\tcontent = '<p>Instructions: \"Each night we ask a few quick questions about your day’s activities. These should take less than 1 minute to complete. We don’t expect you to complete it every night, but the more the better, for the research and for your own tracking. A missing value on meditation, mindful eating, or exericise will count as a 0 (not done that day). Thank you so much for committing to the mindful path for your life and for this research.”</p>';",
                                     "",
                                     "\t\tExt.create('Ext.Panel', {",
@@ -116,6 +116,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "html": "(body scan, recorded or self-guided meditation, or mindful breathing)",
+                        "itemId": "meditation",
                         "styleHtmlContent": true,
                         "label": "Any formal meditation today?",
                         "labelAlign": "top",
@@ -132,6 +133,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "howlong",
                         "label": "How long ?",
                         "labelWidth": "50%",
                         "options": [
@@ -153,7 +155,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "html": null,
-                        "itemId": "mycheckbox23",
+                        "itemId": "mindful",
                         "label": "Any mindful eating today?",
                         "labelWidth": "",
                         "labelWrap": true
@@ -169,6 +171,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "html": null,
+                        "itemId": "exercise",
                         "label": "Any exercise today? (10min or more)",
                         "labelAlign": "top",
                         "labelWidth": "100%",
@@ -182,7 +185,25 @@
                             "]"
                         ]
                     },
-                    "designerId": "89266576-1b09-4836-8414-7909f2eb5753"
+                    "designerId": "89266576-1b09-4836-8414-7909f2eb5753",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onAnyExerciseChange",
+                                "implHandler": [
+                                    "selectfield.parent.child('#group').show();"
+                                ],
+                                "name": "change"
+                            },
+                            "designerId": "d78995b9-cc9a-4133-a99d-a3e59a8fc5d3"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Container",
@@ -192,7 +213,24 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "hidden": true
+                        "hidden": true,
+                        "hideAnimation": [
+                            "{",
+                            "\ttype: 'fadeOut',",
+                            "\tduration: 2048",
+                            "}"
+                        ],
+                        "itemId": "group",
+                        "showAnimation": [
+                            "{",
+                            "\ttype: 'fadeIn',",
+                            "\tduration: 2048",
+                            "}"
+                        ]
+                    },
+                    "configAlternates": {
+                        "showAnimation": "object",
+                        "hideAnimation": "object"
                     },
                     "designerId": "aacfb43b-6a62-446a-bfd2-f6d7c0b460d1",
                     "cn": [
@@ -204,7 +242,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "<b>THANK YOU</b>"
+                                "html": "<b>THANK YOU</b>",
+                                "itemId": "thanks",
+                                "styleHtmlContent": true
                             },
                             "designerId": "10b65a12-95e6-4aff-aa5d-cc00bf81d832"
                         },
@@ -216,7 +256,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "Have a few moments to reflect on your day?"
+                                "html": "Have a few moments to reflect on your day?",
+                                "itemId": "describe"
                             },
                             "designerId": "b13e22de-189a-41a3-b0ec-bbc3c1a3cfe4"
                         },
@@ -228,9 +269,31 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "itemId": "ok",
                                 "text": "YES"
                             },
-                            "designerId": "eb5470dd-a3a6-4d70-9770-1b46725dcf3d"
+                            "designerId": "eb5470dd-a3a6-4d70-9770-1b46725dcf3d",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onOKTap",
+                                        "implHandler": [
+                                            "form = Ext.create('HEART.view.Experience');",
+                                            "Ext.Viewport.add(form);",
+                                            "",
+                                            "button.parent.parent.parent.destroy();"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "fb68d812-1421-47b4-b97c-56561e01919a"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.Button",
@@ -240,9 +303,28 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "itemId": "no",
                                 "text": "NO"
                             },
-                            "designerId": "4dc37328-dc79-4f8b-9296-8e17d2a6e8bf"
+                            "designerId": "4dc37328-dc79-4f8b-9296-8e17d2a6e8bf",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onNoTap",
+                                        "implHandler": [
+                                            "button.parent.parent.parent.destroy();"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "43f3cd70-3858-4b5a-a8a9-be42d4ed890e"
+                                }
+                            ]
                         }
                     ]
                 }

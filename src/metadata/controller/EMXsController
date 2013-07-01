@@ -111,13 +111,11 @@
             "userConfig": {
                 "fn": "onStressedShow",
                 "implHandler": [
-                    "var EMX = ['EMIAudio3', 'EMIAudio4', 'EMITensionCheck', 'EMIGeneralMindfulness','IntentionReminder1', 'IntentionReminder2','IntentionSavorShare'];",
-                    "",
-                    "//EMXs = Ext.getStore('EMXs');",
-                    "count = EMX.length; //EMXs.getAllCount();",
+                    "var EMX = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio4', 'EMIAudio7'];",
+                    "count = EMX.length;",
                     "",
                     "index = Math.floor(count*Math.random());",
-                    "type = EMX[index]; //.get('type');",
+                    "type = EMX[index]; ",
                     "",
                     "form = Ext.create('HEART.view.'+type);",
                     "",
@@ -127,6 +125,7 @@
                     "content = {};",
                     "content.type = type;",
                     "content.action = 'show-stressed';",
+                    "",
                     "HEART.toSensor(content);",
                     "",
                     "this.getStressed().push(form);"

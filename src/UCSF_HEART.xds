@@ -315,6 +315,38 @@
                 "app/view/EMAType7.js"
             ],
             "className": "EMAType7"
+        },
+        "c312f3ac-f7ef-4b3a-8c36-3c79880259f0": {
+            "paths": [
+                "metadata/model/Intention",
+                "app/model/override/Intention.js",
+                "app/model/Intention.js"
+            ],
+            "className": "Intention"
+        },
+        "77267584-e91e-4b6f-83e9-ef48dcc4e594": {
+            "paths": [
+                "metadata/store/Intentions",
+                "app/store/override/Intentions.js",
+                "app/store/Intentions.js"
+            ],
+            "className": "Intentions"
+        },
+        "b14dfacc-3819-4953-97bb-a626d60232ba": {
+            "paths": [
+                "metadata/store/Experiences",
+                "app/store/override/Experiences.js",
+                "app/store/Experiences.js"
+            ],
+            "className": "Experiences"
+        },
+        "3ad2b3ae-d06a-4fa2-adba-0fe39a885b2a": {
+            "paths": [
+                "metadata/model/Experience",
+                "app/model/override/Experience.js",
+                "app/model/Experience.js"
+            ],
+            "className": "Experience"
         }
     },
     "viewOrderMap": {
@@ -349,7 +381,9 @@
         ],
         "store": [
             "39444413-4912-4805-9d9a-77c8467bef15",
-            "a12e83bf-bcd8-4c88-8534-3fe90620d505"
+            "a12e83bf-bcd8-4c88-8534-3fe90620d505",
+            "77267584-e91e-4b6f-83e9-ef48dcc4e594",
+            "b14dfacc-3819-4953-97bb-a626d60232ba"
         ],
         "controller": [
             "e3282f86-3944-46c9-a9f6-339833db34db",
@@ -357,7 +391,9 @@
         ],
         "model": [
             "021dcbd9-44eb-4dd5-815c-ac014c163371",
-            "c30abfad-1a37-4265-b300-0151292af2c5"
+            "c30abfad-1a37-4265-b300-0151292af2c5",
+            "c312f3ac-f7ef-4b3a-8c36-3c79880259f0",
+            "3ad2b3ae-d06a-4fa2-adba-0fe39a885b2a"
         ],
         "resource": [
             "a2531373-fbeb-4cc3-9d43-10a6dc7525be",

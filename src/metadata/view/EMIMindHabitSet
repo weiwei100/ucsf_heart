@@ -45,12 +45,38 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "mindful",
                         "label": "My mindful habit this week is:",
                         "labelAlign": "top",
                         "labelWrap": true,
                         "name": "mindful"
                     },
-                    "designerId": "a53050d2-204b-4dec-bc84-442154738da4"
+                    "designerId": "a53050d2-204b-4dec-bc84-442154738da4",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTextfieldChange",
+                                "implHandler": [
+                                    "value = textfield.getValue();",
+                                    "button = textfield.parent.child('button');",
+                                    "",
+                                    "if(value.length<2){",
+                                    "\tbutton.disable();",
+                                    "}else{",
+                                    "\tbutton.enable();",
+                                    "}"
+                                ],
+                                "name": "keyup"
+                            },
+                            "designerId": "dfd1b048-12e9-45a9-ae84-01ebbecef07c"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.field.Select",
@@ -76,10 +102,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "Example: <br/> Bring awareness to the sounds all around you right now. <br/> Be present when you hug or kiss anyone today. <br/>  Brush your teeth with awareness.",
+                        "html": "Example: <p>Bring awareness to the sounds all around you right now. <br/> Be present when you hug or kiss anyone today. <br/> Brush your teeth with awareness.</p>",
                         "itemId": "example",
-                        "style": "color: rgb(128,128,128); font-size: 13px",
-                        "styleHtmlContent": true
+                        "style": "color: rgb(128,128,128); font-size: 13px"
                     },
                     "designerId": "76a57511-c7ad-49d1-86e1-9bb4a3448540"
                 },
@@ -91,9 +116,44 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "disabled": true,
+                        "itemId": "done",
                         "text": "Done"
                     },
-                    "designerId": "3b021864-9493-406b-a4d1-e479264ba16b"
+                    "designerId": "3b021864-9493-406b-a4d1-e479264ba16b",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onHabitDoneTap",
+                                "implHandler": [
+                                    "text = button.parent.child('#mindful').getValue();",
+                                    "",
+                                    "user = HEART.getItem('local', 'user');",
+                                    "",
+                                    "user = JSON.parse(user);",
+                                    "user.habit = text;",
+                                    "",
+                                    "user = JSON.stringify(user);",
+                                    "",
+                                    "HEART.setItem('local', 'user', user);",
+                                    "",
+                                    "if(this.goola=='settings'){",
+                                    "\tthis.parent.pop();",
+                                    "}else{",
+                                    "\tthis.destroy();",
+                                    "}"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "f450ee8a-a8aa-4fc3-8b96-fc10bc9e6364"
+                        }
+                    ]
                 }
             ]
         },

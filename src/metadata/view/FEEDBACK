@@ -6,7 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "FEEDBACK"
+        "designer|userClassName": "FEEDBACK",
+        "layout": "vbox",
+        "scrollable": "vertical"
     },
     "designerId": "30beeb36-af96-4670-bc9c-9eeb44866a21",
     "cn": [
@@ -18,6 +20,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout|flex": 1,
                 "itemId": "activity",
                 "instructions": null,
                 "title": "My Activity"
@@ -48,10 +51,89 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout|flex": 2,
                 "itemId": "experience",
+                "layout": "vbox",
+                "scrollable": "vertical",
                 "title": "My Experience"
             },
-            "designerId": "bd2fd6d8-4605-45aa-8fde-99dfc61d4c77"
+            "designerId": "bd2fd6d8-4605-45aa-8fde-99dfc61d4c77",
+            "cn": [
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "hidden": null,
+                        "itemId": "explist",
+                        "designer|displayName": null,
+                        "emptyText": "Nothing...",
+                        "itemCls": null,
+                        "store": "Experiences",
+                        "onItemDisclosure": null
+                    },
+                    "designerId": "9b31d8c2-4c3f-4b08-af4f-a28e2f900cc2",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "<span>Time: {timestamp}</span><br/>",
+                                    "<span>Pleasant: {pleasant}</span><br/>",
+                                    "<span>Unpleasant: {unpleasant}</span>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "e57c5753-2c8f-47b6-8175-e25d0218d35b"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "itemId": "ok",
+                "text": "OK"
+            },
+            "designerId": "3a272d79-0660-4f04-b86a-beaaaaf85628",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onOKTap",
+                        "implHandler": [
+                            "if(this.goola=='settings'){",
+                            "\tthis.parent.pop();",
+                            "}else{",
+                            "\tbutton.parent.destroy();",
+                            "}"
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "40cea785-659a-4bb2-9943-48cc6e69b25d"
+                }
+            ]
         }
     ]
 }
