@@ -168,11 +168,8 @@
                                     "",
                                     "HEART.setItem('local', 'user', user);",
                                     "",
-                                    "if(this.goola=='settings'){",
-                                    "\tthis.parent.pop();",
-                                    "}else{",
-                                    "\tbutton.parent.parent.destroy();",
-                                    "}",
+                                    "this.parent.pop();",
+                                    "",
                                     ""
                                 ],
                                 "name": "tap"
@@ -204,11 +201,7 @@
                             "userConfig": {
                                 "fn": "onNotNowTap",
                                 "implHandler": [
-                                    "if(this.goola=='settings'){",
-                                    "\tthis.parent.pop();",
-                                    "}else{",
-                                    "\tbutton.parent.parent.destroy();",
-                                    "}",
+                                    "this.parent.pop();",
                                     ""
                                 ],
                                 "name": "tap"

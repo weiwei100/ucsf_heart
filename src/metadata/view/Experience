@@ -165,6 +165,8 @@
                                     "pleasant = button.parent.child('#pleasant');",
                                     "unpleasant = button.parent.child('#unpleasant');",
                                     "",
+                                    "ref = this;",
+                                    "",
                                     "experiences = Ext.getStore('Experiences');",
                                     "",
                                     "content = {};",
@@ -185,11 +187,7 @@
                                     "",
                                     "setTimeout(function(){",
                                     "\theart.hide();",
-                                    "\tif(this.goola=='settings'){",
-                                    "\t\tthis.parent.pop();",
-                                    "\t}else{",
-                                    "\t\tbutton.parent.parent.destroy();",
-                                    "\t}\t  ",
+                                    "\tref.parent.pop();\t  ",
                                     "}, 5000);"
                                 ],
                                 "name": "tap"

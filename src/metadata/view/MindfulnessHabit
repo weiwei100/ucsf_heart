@@ -33,9 +33,29 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "bottom",
-                "text": "Done"
+                "itemId": "ok",
+                "text": "OK"
             },
-            "designerId": "dea7a58c-8b3f-424f-af40-e55ffce2170e"
+            "designerId": "11c457e6-bd38-488a-910a-a7b871a0d0b4",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onOKTap",
+                        "implHandler": [
+                            "this.parent.pop();",
+                            ""
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "8d462888-3941-4807-9742-65a15e0d4a2a"
+                }
+            ]
         }
     ]
 }

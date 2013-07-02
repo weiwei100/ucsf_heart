@@ -107,7 +107,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "bottom",
+                "docked": null,
                 "itemId": "ok",
                 "text": "OK"
             },
@@ -123,11 +123,7 @@
                     "userConfig": {
                         "fn": "onOKTap",
                         "implHandler": [
-                            "if(this.goola=='settings'){",
-                            "\tthis.parent.pop();",
-                            "}else{",
-                            "\tbutton.parent.destroy();",
-                            "}"
+                            "this.parent.pop();"
                         ],
                         "name": "tap"
                     },

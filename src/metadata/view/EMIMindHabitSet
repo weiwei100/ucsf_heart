@@ -143,11 +143,7 @@
                                     "",
                                     "HEART.setItem('local', 'user', user);",
                                     "",
-                                    "if(this.goola=='settings'){",
-                                    "\tthis.parent.pop();",
-                                    "}else{",
-                                    "\tthis.destroy();",
-                                    "}"
+                                    "this.parent.pop();"
                                 ],
                                 "name": "tap"
                             },

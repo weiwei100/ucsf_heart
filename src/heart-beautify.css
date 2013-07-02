@@ -6,11 +6,6 @@
 	background: transparent;
 }
 
-.x-button {
-	margin: 8px 4px;
-	background: transparent;
-}
-
 .x-form {
 	background: transparent;
 }
@@ -36,6 +31,15 @@
 }
 
 .xhtml {
+	background: transparent;
+}
+
+.x-panel {
+	background: transparent;
+}
+
+.x-button {
+	margin: 8px 4px;
 	background: transparent;
 }
   

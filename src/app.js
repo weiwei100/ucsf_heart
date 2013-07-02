@@ -49,8 +49,6 @@ Ext.application({
 		'EMIAudio1',
 		'EMIAudio2',
 		'EMIAudio3',
-		'EMITrackExercise',
-		'EMITrackMeditation',
 		'EMIAudio4',
 		'EMIAudio5',
 		'EMIAudio6',

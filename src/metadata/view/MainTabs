@@ -42,9 +42,9 @@
                 "itemId": null,
                 "margin": null,
                 "padding": null,
-                "style": "background-color:transparent !important;",
+                "style": null,
                 "styleHtmlContent": null,
-                "layout": null,
+                "layout": "vbox",
                 "modal": null
             },
             "designerId": "ae4b176d-43a2-49de-98d6-2638de2b7330",
@@ -73,6 +73,7 @@
                         "container|align": "center",
                         "container|pack": "center",
                         "itemId": "header",
+                        "margin": 22,
                         "layout": "hbox"
                     },
                     "designerId": "dbdca429-6bb6-4fe5-906e-58f4f42712ec",
@@ -154,7 +155,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "html": "<center>My Meditation</center>",
-                        "itemId": "meditation"
+                        "itemId": "meditation",
+                        "margin": 22
                     },
                     "designerId": "7171abe3-dab9-47a1-84a2-12ef03dca6e3",
                     "cn": [
@@ -191,6 +193,7 @@
                         "container|align": "center",
                         "container|pack": "center",
                         "itemId": "myintention",
+                        "margin": 22,
                         "layout": "hbox"
                     },
                     "designerId": "ac7218c8-88e9-4fab-a76c-b8c125384ad0",
@@ -209,9 +212,37 @@
                                 "label": "Intention",
                                 "labelWidth": "50%",
                                 "options": null,
-                                "store": "Intentions"
+                                "store": "Intentions",
+                                "valueField": "text"
                             },
-                            "designerId": "d59314b4-f640-4b78-89e4-8cccf5afb937"
+                            "designerId": "d59314b4-f640-4b78-89e4-8cccf5afb937",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onIntentionChange",
+                                        "implHandler": [
+                                            "intentions = Ext.getStore('Intentions');",
+                                            "",
+                                            "index = intentions.findBy(function(record, id) {",
+                                            "\treturn record.get('text') == newValue;",
+                                            "});",
+                                            "",
+                                            "intentions.getAt(index).set('timestamp', Date.now());",
+                                            "",
+                                            "intentions.sort(\"timestamp\", 'DESC');\t\t",
+                                            "intentions.sync();"
+                                        ],
+                                        "name": "change"
+                                    },
+                                    "designerId": "3ebe1ad4-1299-43f9-b1fd-2673ed351bd7"
+                                }
+                            ]
                         }
                     ]
                 },

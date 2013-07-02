@@ -180,22 +180,6 @@
             ],
             "className": "EMAType5"
         },
-        "c478480b-9b04-4a50-ae90-cada9879ba21": {
-            "paths": [
-                "metadata/view/EMITrackMeditation",
-                "app/view/override/EMITrackMeditation.js",
-                "app/view/EMITrackMeditation.js"
-            ],
-            "className": "EMITrackMeditation"
-        },
-        "f482bdac-9f46-467d-a5c5-5ad903fc37d6": {
-            "paths": [
-                "metadata/view/EMITrackExercise",
-                "app/view/override/EMITrackExercise.js",
-                "app/view/EMITrackExercise.js"
-            ],
-            "className": "EMITrackExercise"
-        },
         "2b770eec-2386-41f5-b8fe-f78a9fd3f741": {
             "paths": [
                 "metadata/resource/js"
@@ -370,8 +354,6 @@
             "ddbdad0f-6fa6-4847-840e-5a2a6ab5ad3e",
             "f5803f11-0156-4e65-aa3d-fdee3bb7df60",
             "f16be101-aabb-441f-b7ce-f2ca05e5a410",
-            "c478480b-9b04-4a50-ae90-cada9879ba21",
-            "f482bdac-9f46-467d-a5c5-5ad903fc37d6",
             "fd2941b2-dc8a-4780-ada1-f0b679a63881",
             "9f498051-2056-4b3b-a785-c7106ad7991e",
             "4680a6de-a74c-4076-b96b-631578ea7a3e",

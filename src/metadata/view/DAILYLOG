@@ -285,10 +285,10 @@
                                     "userConfig": {
                                         "fn": "onOKTap",
                                         "implHandler": [
-                                            "form = Ext.create('HEART.view.Experience');",
-                                            "Ext.Viewport.add(form);",
+                                            "this.parent.pop();",
                                             "",
-                                            "button.parent.parent.parent.destroy();"
+                                            "form = Ext.create('HEART.view.Experience');",
+                                            "this.parent.push(form);"
                                         ],
                                         "name": "tap"
                                     },
@@ -319,7 +319,7 @@
                                     "userConfig": {
                                         "fn": "onNoTap",
                                         "implHandler": [
-                                            "button.parent.parent.parent.destroy();"
+                                            "this.parent.pop();"
                                         ],
                                         "name": "tap"
                                     },
