@@ -1,7 +1,44 @@
-.x-button {
-	margin: 16px 4px;
+.x-scroll-container {
+	background: url(water.jpg) no-repeat center;
 }
 
+.x-form-fieldset .x-form-fieldset-inner {
+	background: transparent;
+}
+
+.x-button {
+	margin: 8px 4px;
+	background: transparent;
+}
+
+.x-form {
+	background: transparent;
+}
+
+.x-form-label {
+	background: transparent;
+}
+
+.x-form-field {
+	background: transparent;
+}
+
+.x-field {
+	background: transparent;
+}
+
+.x-field-input {
+	background: transparent;
+}
+
+.x-field-select {
+	background: transparent;
+}
+
+.xhtml {
+	background: transparent;
+}
+  
 p {
 	padding: 8px;	
 }

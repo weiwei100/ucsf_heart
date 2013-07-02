@@ -216,6 +216,22 @@
                             "designerId": "b338b5ac-161d-4919-aa10-2aad09401bc4"
                         }
                     ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onFsetInitialize",
+                        "implHandler": [
+                            "console.log(component.getCls());"
+                        ],
+                        "name": "initialize"
+                    },
+                    "designerId": "bc3f5934-33ee-4616-96dd-4219b15bf845"
                 }
             ]
         }

@@ -15,6 +15,7 @@
         "showAnimation": [
             "{type :\"fadeIn\", duration : 1024}"
         ],
+        "style": null,
         "ui": "light",
         "designer|userClassName": "MainTabs",
         "designer|userAlias": "mainview",
@@ -38,9 +39,10 @@
                 "iconCls": "home",
                 "centered": null,
                 "id": "homePanel",
-                "itemId": "myformpanel2",
+                "itemId": null,
                 "margin": null,
                 "padding": null,
+                "style": "background-color:transparent !important;",
                 "styleHtmlContent": null,
                 "layout": null,
                 "modal": null
@@ -114,7 +116,8 @@
                                             "\t\t\tmodal: true,",
                                             "\t\t\thtml: content,",
                                             "\t\t\tpadding: 10,",
-                                            "\t\t\tleft: 0",
+                                            "\t\t\tleft: 0,",
+                                            "\t\t\tstyle: \"color: rgb(128,128,128); font-size: 9px\"",
                                             "\t\t}).showBy(component);",
                                             "",
                                             "\t}",
@@ -134,8 +137,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "<b>, [NAME] to H.E.A.R.T.</b>",
-                                "itemId": "sometext"
+                                "html": "<b>[NAME] to H.E.A.R.T.</b>",
+                                "itemId": "sometext",
+                                "padding": 8
                             },
                             "designerId": "281928ec-06a4-4134-9f37-9bc6d2d693e3"
                         }
@@ -166,7 +170,7 @@
                                 "implHandler": [
                                     "component.element.on({",
                                     "\ttap : function(e, t){",
-                                    "\t\talert('somthing');",
+                                    "\t\tcomponent.parent.parent.setActiveItem(2);",
                                     "\t}",
                                     "});"
                                 ],
@@ -221,8 +225,24 @@
                     "userConfig": {
                         "fn": "onHomePanelActivate",
                         "implHandler": [
-                            "ttt = container.child('#myintention').child('#intention');",
-                            "ttt.reset();"
+                            "store = Ext.getStore(\"Intentions\");",
+                            "store.sort(\"timestamp\", 'DESC');\t\t",
+                            "store.sync();",
+                            "",
+                            "selection = container.child('#myintention').child('#intention');",
+                            "selection.reset();",
+                            "",
+                            "text = container.child('#header').child('#sometext').getHtml();",
+                            "",
+                            "user = HEART.getItem('local', 'user')||{};",
+                            "",
+                            "user = JSON.parse(user);",
+                            "",
+                            "if(user.name===null){return;}",
+                            "",
+                            "text = text.replace('[NAME]', user.name);",
+                            "",
+                            "container.child('#header').child('#sometext').setHtml(text);"
                         ],
                         "name": "activate"
                     },
@@ -714,9 +734,9 @@
                     "\tsettings.setValues(user);",
                     "}",
                     "",
-                    "form = Ext.create('HEART.view.DAILYLOG');",
+                    "//form = Ext.create('HEART.view.Experience');",
                     "",
-                    "Ext.Viewport.add(form);"
+                    "//Ext.Viewport.add(form);"
                 ]
             },
             "designerId": "9c748870-c0b3-4c73-8cd6-790fb210800f"
