@@ -153,11 +153,8 @@
                     "userConfig": {
                         "fn": "onPushSettingSave",
                         "implHandler": [
-                            "if(this.goola=='settings'){",
-                            "\tthis.parent.pop();",
-                            "}else{",
-                            "\tbutton.parent.destroy();",
-                            "}"
+                            "this.parent.pop();",
+                            ""
                         ],
                         "name": "tap"
                     },

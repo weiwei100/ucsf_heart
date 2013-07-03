@@ -230,8 +230,7 @@
                                             "intentions = Ext.getStore('Intentions');",
                                             "",
                                             "index = intentions.findBy(function(record, id) {",
-                                            "\treturn record.get('text') == newValue;",
-                                            "});",
+                                            "\treturn record.get('text') == newValue; });",
                                             "",
                                             "intentions.getAt(index).set('timestamp', Date.now());",
                                             "",
@@ -256,24 +255,24 @@
                     "userConfig": {
                         "fn": "onHomePanelActivate",
                         "implHandler": [
+                            "user = HEART.getItem('local', 'user');",
+                            "",
+                            "if(user===null){return;}",
+                            "",
+                            "user = JSON.parse(user);",
+                            "",
+                            "text = container.child('#header').child('#sometext').getHtml();",
+                            "",
+                            "text = text.replace('[NAME]', user.name||'[NAME]');",
+                            "",
+                            "container.child('#header').child('#sometext').setHtml(text);",
+                            "",
                             "store = Ext.getStore(\"Intentions\");",
                             "store.sort(\"timestamp\", 'DESC');\t\t",
                             "store.sync();",
                             "",
                             "selection = container.child('#myintention').child('#intention');",
-                            "selection.reset();",
-                            "",
-                            "text = container.child('#header').child('#sometext').getHtml();",
-                            "",
-                            "user = HEART.getItem('local', 'user')||{};",
-                            "",
-                            "user = JSON.parse(user);",
-                            "",
-                            "if(user.name===null){return;}",
-                            "",
-                            "text = text.replace('[NAME]', user.name);",
-                            "",
-                            "container.child('#header').child('#sometext').setHtml(text);"
+                            "selection.reset();"
                         ],
                         "name": "activate"
                     },
@@ -362,7 +361,8 @@
                 "badgeText": "",
                 "iconCls": "settings",
                 "hidden": false,
-                "itemId": "settingsNav"
+                "id": "settingsNav",
+                "itemId": null
             },
             "designerId": "283cb5c8-83b8-4b55-a2b0-dd9db4743d03",
             "cn": [
@@ -374,15 +374,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "title": "Settings",
-                        "centered": null,
-                        "hidden": null,
-                        "id": "settings",
-                        "itemId": null,
-                        "autoDestroy": false,
-                        "scrollable": null
+                        "itemId": "settings"
                     },
-                    "designerId": "e7443fc1-6b32-4c1d-adbd-54f3b760a2dc",
+                    "designerId": "670beffc-a06d-4c94-806a-47654644730d",
                     "cn": [
                         {
                             "type": "Ext.field.Text",
@@ -506,7 +500,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "itemId": "saveSettings",
+                                "itemId": "save",
                                 "text": "Save"
                             },
                             "designerId": "2e7e451c-9885-4138-97cd-1c1bc95dbca1",
@@ -519,10 +513,9 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "fn": "onSaveSettingsTap",
+                                        "fn": "onSaveTap",
                                         "implHandler": [
                                             "user = HEART.getItem('local', 'user');",
-                                            "",
                                             "values = button.parent.getValues();",
                                             "",
                                             "var empty;",
@@ -532,8 +525,10 @@
                                             "\t{ empty=true; break; }",
                                             "}",
                                             "",
+                                            "message = \"You must fill out all information before continuing\";",
+                                            "",
                                             "if(empty){",
-                                            "\tExt.Msg.alert('Error', \"You must fill out all information before continuing\", Ext.emptyFn);",
+                                            "\tExt.Msg.alert('Error', message, Ext.emptyFn);",
                                             "\treturn;",
                                             "}",
                                             "",
@@ -559,8 +554,8 @@
                                             "",
                                             "HEART.toUser( values, succ, fail );",
                                             "",
-                                            "button.parent.parent.parent.setActiveItem(0);",
-                                            "this.getTabBar().show();"
+                                            "this.getTabBar().show();",
+                                            "this.setActiveItem(0);"
                                         ],
                                         "name": "tap"
                                     },
@@ -604,10 +599,13 @@
                                             "userConfig": {
                                                 "fn": "onIntentionSetTap",
                                                 "implHandler": [
+                                                    "nav = button.parent.parent.parent;",
+                                                    "",
                                                     "form = Ext.create('HEART.view.EMIIntentionSet');",
                                                     "form.emxType = 'EMIIntentionSet';",
                                                     "form.goola = 'settings';",
-                                                    "button.parent.parent.parent.push(form);",
+                                                    "",
+                                                    "nav.push(form);",
                                                     ""
                                                 ],
                                                 "name": "tap"
@@ -625,7 +623,7 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "docked": null,
-                                        "itemId": "mindful",
+                                        "itemId": "habit",
                                         "text": "Mindful Habit"
                                     },
                                     "designerId": "4f7742f8-ebbf-428f-8a44-0d93281ca76a",
@@ -638,12 +636,15 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "fn": "onMindfullTap",
+                                                "fn": "onHabitTap",
                                                 "implHandler": [
+                                                    "nav = button.parent.parent.parent;",
+                                                    "",
                                                     "form = Ext.create('HEART.view.EMIMindHabitSet');",
                                                     "form.emxType = 'EMIMindHabitSet';",
                                                     "form.goola = 'settings';",
-                                                    "button.parent.parent.parent.push(form);"
+                                                    "",
+                                                    "nav.push(form);"
                                                 ],
                                                 "name": "tap"
                                             },
@@ -673,12 +674,15 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "fn": "onNotificationFrequencyTap",
+                                                "fn": "onNotificationTap",
                                                 "implHandler": [
+                                                    "nav = button.parent.parent.parent;",
+                                                    "",
                                                     "form = Ext.create('HEART.view.EMIPushSlider');",
                                                     "form.emxType = 'EMIPushSlidert';",
                                                     "form.goola = 'settings';",
-                                                    "button.parent.parent.parent.push(form);"
+                                                    "",
+                                                    "nav.push(form);"
                                                 ],
                                                 "name": "tap"
                                             },
@@ -718,9 +722,8 @@
                 "implHandler": [
                     "this.callParent();",
                     "",
-                    "user = HEART.getItem('local','user');",
-                    "settingsNav = this.child('#settingsNav');",
-                    "settings = settingsNav.child('#settings');",
+                    "nav = this.child('#settingsNav');",
+                    "settings = nav.child('#settings');",
                     "buttons = settings.child('#buttons');",
                     "",
                     "awakeOptions = [];",
@@ -756,18 +759,16 @@
                     "",
                     "settings.child('#daily').setOptions(dailyOptions);",
                     "",
+                    "user = HEART.getItem('local','user');",
+                    "",
                     "if( user===null ){",
-                    "\tthis.setActiveItem(settingsNav);",
+                    "\tthis.setActiveItem(nav);",
                     "\tthis.getTabBar().hide();",
                     "\tbuttons.hide();",
                     "}else{",
                     "\tuser = JSON.parse(user);",
                     "\tsettings.setValues(user);",
-                    "}",
-                    "",
-                    "//form = Ext.create('HEART.view.Experience');",
-                    "",
-                    "//Ext.Viewport.add(form);"
+                    "}"
                 ]
             },
             "designerId": "9c748870-c0b3-4c73-8cd6-790fb210800f"

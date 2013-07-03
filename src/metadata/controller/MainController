@@ -11,27 +11,6 @@
     "designerId": "337b1891-c296-4f0e-b2d1-6ceb928a8088",
     "cn": [
         {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onEditIntentionTap",
-                "implHandler": [
-                    "form = Ext.create('HEART.view.EMIIntentionSet');",
-                    "form.emxType = 'EMIIntentionSet';",
-                    "form.goola = button.getItemId();",
-                    "Ext.Viewport.setActiveItem(form);"
-                ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button[action=intention]"
-            },
-            "designerId": "55eee0b7-5be8-4cdd-a3f0-36f5f55cf490"
-        },
-        {
             "type": "fixedfunction",
             "reference": {
                 "name": "items",
@@ -47,30 +26,6 @@
                 ]
             },
             "designerId": "64ac1c69-fee3-4109-8849-00cd10a7c40c"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onNumberFieldKeyup",
-                "implHandler": [
-                    "var value = textfield.getValue();",
-                    "",
-                    "if(/\\D+/.test(value)){",
-                    "\tvar message = \"<div align='center'>Please don't enter letters or other characters.</div>\";",
-                    "\tExt.Msg.alert(';(', message, Ext.emptyFn);",
-                    "\ttextfield.setValue(0);",
-                    "}"
-                ],
-                "name": "keyup",
-                "designer|targetType": "Ext.field.Text",
-                "designer|controlQuery": "textfield[goola=number]"
-            },
-            "designerId": "d5776b1d-41da-493f-925a-1921c2d5deac"
         }
     ]
 }
