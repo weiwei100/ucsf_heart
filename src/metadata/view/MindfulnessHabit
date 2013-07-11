@@ -11,49 +11,49 @@
     "designerId": "9f498051-2056-4b3b-a785-c7106ad7991e",
     "cn": [
         {
-            "type": "Ext.Label",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "centered": true,
-                "html": "something",
-                "itemId": "mindful"
+                "itemId": "fset",
+                "title": null
             },
-            "designerId": "d874fbed-7275-4c89-aeea-b597d2180e02"
-        },
-        {
-            "type": "Ext.Button",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "docked": "bottom",
-                "itemId": "ok",
-                "text": "OK"
-            },
-            "designerId": "11c457e6-bd38-488a-910a-a7b871a0d0b4",
+            "designerId": "1b8068bb-d17e-4ef5-baac-71f5591a9a99",
             "cn": [
                 {
-                    "type": "basiceventbinding",
+                    "type": "Ext.Button",
                     "reference": {
-                        "name": "listeners",
+                        "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "onOKTap",
-                        "implHandler": [
-                            "this.parent.pop();",
-                            ""
-                        ],
-                        "name": "tap"
+                        "docked": null,
+                        "itemId": "ok",
+                        "text": "OK"
                     },
-                    "designerId": "8d462888-3941-4807-9742-65a15e0d4a2a"
+                    "designerId": "11c457e6-bd38-488a-910a-a7b871a0d0b4",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onOKTap",
+                                "implHandler": [
+                                    "this.parent.pop();"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "8d462888-3941-4807-9742-65a15e0d4a2a"
+                        }
+                    ]
                 }
             ]
         }

@@ -104,12 +104,15 @@
                                             "component.element.on({",
                                             "\ttap : function(e, t){",
                                             "",
+                                            "\t\tcontent = \"<div class='ellipsis'><div>\";",
                                             "",
-                                            "\t\tcontent='<p>“HEART stands for health enhancement, emotions, and resiliency training.” In addition to the workshops, we developed the HEART app to help you bring mindfulness into your day.</p>';",
+                                            "\t\tcontent+='<p>“HEART stands for health enhancement, emotions, and resiliency training.” In addition to the workshops, we developed the HEART app to help you bring mindfulness into your day.</p>';",
                                             "",
                                             "\t\tcontent+='<p>HEART helps you to develop your own present moment awareness, to find greater calm and stability in the midst of your life’s changing conditions. The HEART app is here to help you work with various aspects of mindfulness—increasing awareness of your own body and mind states, and developing the capacity to “be with” whatever is happening in a more relaxed and balanced way.</p>';",
                                             "",
                                             "\t\tcontent+='<p>You can decide how you want to use the HEART app – using it in whatever way you find most supportive. More use of HEART should lead to greater stress resiliency.”</p>';",
+                                            "",
+                                            "\t\tcontent+=\"</div></div>\";",
                                             "",
                                             "\t\tExt.create('Ext.Panel', {",
                                             "\t\t\thideOnMaskTap: true,",
@@ -118,6 +121,7 @@
                                             "\t\t\thtml: content,",
                                             "\t\t\tpadding: 10,",
                                             "\t\t\tleft: 0,",
+                                            "\t\t\tcls: '.Ellipsis',",
                                             "\t\t\tstyle: \"color: rgb(128,128,128); font-size: 9px\"",
                                             "\t\t}).showBy(component);",
                                             "",
@@ -584,8 +588,8 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "docked": null,
-                                        "itemId": "intention",
-                                        "text": "Intention Set"
+                                        "itemId": "ahead",
+                                        "text": "Week Ahead"
                                     },
                                     "designerId": "0c4c4517-ae7d-43c0-96aa-8f4d86d7c7dc",
                                     "cn": [
@@ -601,8 +605,8 @@
                                                 "implHandler": [
                                                     "nav = button.parent.parent.parent;",
                                                     "",
-                                                    "form = Ext.create('HEART.view.EMIIntentionSet');",
-                                                    "form.emxType = 'EMIIntentionSet';",
+                                                    "form = Ext.create('HEART.view.EMIWkAheadSet');",
+                                                    "form.emxType = 'EMIWkAheadSet';",
                                                     "form.goola = 'settings';",
                                                     "",
                                                     "nav.push(form);",
@@ -611,44 +615,6 @@
                                                 "name": "tap"
                                             },
                                             "designerId": "ec1ca58b-1825-40e0-997c-04e54b1a80ce"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.Button",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "docked": null,
-                                        "itemId": "habit",
-                                        "text": "Mindful Habit"
-                                    },
-                                    "designerId": "4f7742f8-ebbf-428f-8a44-0d93281ca76a",
-                                    "cn": [
-                                        {
-                                            "type": "basiceventbinding",
-                                            "reference": {
-                                                "name": "listeners",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "fn": "onHabitTap",
-                                                "implHandler": [
-                                                    "nav = button.parent.parent.parent;",
-                                                    "",
-                                                    "form = Ext.create('HEART.view.EMIMindHabitSet');",
-                                                    "form.emxType = 'EMIMindHabitSet';",
-                                                    "form.goola = 'settings';",
-                                                    "",
-                                                    "nav.push(form);"
-                                                ],
-                                                "name": "tap"
-                                            },
-                                            "designerId": "eb86ad5f-cb90-4808-92e0-affc997af694"
                                         }
                                     ]
                                 },
@@ -768,7 +734,10 @@
                     "}else{",
                     "\tuser = JSON.parse(user);",
                     "\tsettings.setValues(user);",
-                    "}"
+                    "}",
+                    "",
+                    "//form = Ext.create('HEART.view.IntentionRemind');",
+                    "//Ext.Viewport.setActiveItem(form)"
                 ]
             },
             "designerId": "9c748870-c0b3-4c73-8cd6-790fb210800f"

@@ -22,7 +22,6 @@
             "MainTabs",
             "EMITensionCheck",
             "EMIGeneralMindfulness",
-            "EMIIntentionSet",
             "EMIPushSlider",
             "EMAType1",
             "EMAType2",
@@ -36,14 +35,14 @@
             "EMIAudio5",
             "EMIAudio6",
             "EMIAudio7",
-            "EMIMindHabitSet",
             "MindfulnessHabit",
             "QUOTES",
             "DAILYLOG",
             "Experience",
             "FEEDBACK",
             "EMAType6",
-            "EMAType7"
+            "EMAType7",
+            "EMIWkAheadSet"
         ],
         "requires": [
             "Ext.device.Connection"

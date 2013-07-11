@@ -76,6 +76,10 @@ var HEART = {
 	},
 	
 	sync: function() {
+		user = HEART.getItem('local', 'user');
+		user =JSON.parse(user);
+		HEART.toUser(user);
+		
 		feeds=Ext.getStore('Feeds');
 		if(feeds.getAllCount()>0){
 			feeds.each(function(item, index, length){
@@ -84,10 +88,7 @@ var HEART = {
 				var content = item.data.data;
 				content.timestamp = item.data.timestamp;
 				HEART.toSensocol(content, succ, fail);					
-			});
-			user = HEART.getItem('local', 'user');
-			user =JSON.parse(user);
-			HEART.toUser(user);
+			});	
 		}
 	},
 	
@@ -104,7 +105,7 @@ var HEART = {
 		HEART.audioPlay = audio;
 	},
 	
-    getAudio: function() {
+    getAudio: function() { 
 		return HEART.audioPlay;
 	},
 	

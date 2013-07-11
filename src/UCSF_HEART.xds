@@ -84,14 +84,6 @@
             ],
             "className": "MainTabs"
         },
-        "83d777b4-31f3-46fc-9dd8-9d4803d6c6a2": {
-            "paths": [
-                "metadata/view/EMIIntentionSet",
-                "app/view/override/EMIIntentionSet.js",
-                "app/view/EMIIntentionSet.js"
-            ],
-            "className": "EMIIntentionSet"
-        },
         "356e2f39-aebc-46c3-a290-2b75aad8eb97": {
             "paths": [
                 "metadata/view/EMIPushSlider",
@@ -236,14 +228,6 @@
             ],
             "className": "css"
         },
-        "fd2941b2-dc8a-4780-ada1-f0b679a63881": {
-            "paths": [
-                "metadata/view/EMIMindHabitSet",
-                "app/view/override/EMIMindHabitSet.js",
-                "app/view/EMIMindHabitSet.js"
-            ],
-            "className": "EMIMindHabitSet"
-        },
         "9f498051-2056-4b3b-a785-c7106ad7991e": {
             "paths": [
                 "metadata/view/MindfulnessHabit",
@@ -331,6 +315,22 @@
                 "app/model/Experience.js"
             ],
             "className": "Experience"
+        },
+        "5389dc62-18e3-4b44-b685-1a5eda636bcb": {
+            "paths": [
+                "metadata/view/EMIWkAheadSet",
+                "app/view/override/EMIWkAheadSet.js",
+                "app/view/EMIWkAheadSet.js"
+            ],
+            "className": "EMIWkAheadSet"
+        },
+        "afbebebd-90df-4c0b-9fcb-504a7580fdeb": {
+            "paths": [
+                "metadata/view/IntentionRemind",
+                "app/view/override/IntentionRemind.js",
+                "app/view/IntentionRemind.js"
+            ],
+            "className": "IntentionRemind"
         }
     },
     "viewOrderMap": {
@@ -338,8 +338,10 @@
             "3d30dcc2-648a-4eee-a044-22cb7525d54b",
             "20b4102a-0d56-4d56-a98c-f275981ee4ad",
             "74708139-d538-43ee-93f9-9e694bf2ef61",
-            "83d777b4-31f3-46fc-9dd8-9d4803d6c6a2",
+            "5389dc62-18e3-4b44-b685-1a5eda636bcb",
             "356e2f39-aebc-46c3-a290-2b75aad8eb97",
+            "afbebebd-90df-4c0b-9fcb-504a7580fdeb",
+            "9f498051-2056-4b3b-a785-c7106ad7991e",
             "7d969f35-80f6-497f-9677-8bc260ef4b83",
             "df2a85a8-d4f3-4e68-bab4-1a38a66b43db",
             "74a66690-e41f-48f5-a274-7d59108223a6",
@@ -354,8 +356,6 @@
             "ddbdad0f-6fa6-4847-840e-5a2a6ab5ad3e",
             "f5803f11-0156-4e65-aa3d-fdee3bb7df60",
             "f16be101-aabb-441f-b7ce-f2ca05e5a410",
-            "fd2941b2-dc8a-4780-ada1-f0b679a63881",
-            "9f498051-2056-4b3b-a785-c7106ad7991e",
             "4680a6de-a74c-4076-b96b-631578ea7a3e",
             "0a43a4c5-2da5-4e99-a176-e26bc0c5957e",
             "14db8fb0-6548-4940-b1d0-c5a32ee91928",
@@ -385,7 +385,6 @@
             "dc78838b-05fe-4870-8262-c98919e28ab9"
         ],
         "app": [
-            "application",
             "application"
         ]
     }

@@ -39,7 +39,6 @@ Ext.application({
 		'MainTabs',
 		'EMITensionCheck',
 		'EMIGeneralMindfulness',
-		'EMIIntentionSet',
 		'EMIPushSlider',
 		'EMAType1',
 		'EMAType2',
@@ -53,14 +52,15 @@ Ext.application({
 		'EMIAudio5',
 		'EMIAudio6',
 		'EMIAudio7',
-		'EMIMindHabitSet',
 		'MindfulnessHabit',
 		'QUOTES',
 		'DAILYLOG',
 		'Experience',
 		'FEEDBACK',
 		'EMAType6',
-		'EMAType7'
+		'EMAType7',
+		'EMIWkAheadSet',
+		'IntentionRemind'
 	],
 	controllers: [
 		'EMXsController',

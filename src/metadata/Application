@@ -8,43 +8,42 @@
     "userConfig": {
         "models": [
             "Feed",
-            "EMX"
+            "EMX",
+            "Intention",
+            "Experience"
         ],
         "stores": [
             "Feeds",
-            "EMXs"
+            "EMXs",
+            "Intentions",
+            "Experiences"
         ],
         "views": [
             "MainTabs",
             "EMITensionCheck",
             "EMIGeneralMindfulness",
-            "EMIIntentionSet",
             "EMIPushSlider",
             "EMAType1",
             "EMAType2",
             "EMAType3",
             "EMAType4",
             "EMAType5",
-            "IntentionSavorShare",
             "EMIAudio1",
             "EMIAudio2",
             "EMIAudio3",
-            "EMITrackExercise",
-            "EMITrackMeditation",
-            "IntentionReminder2",
             "EMIAudio4",
             "EMIAudio5",
             "EMIAudio6",
             "EMIAudio7",
-            "IntentionReminder3",
-            "MindHabitSet",
             "MindfulnessHabit",
             "QUOTES",
             "DAILYLOG",
             "Experience",
             "FEEDBACK",
             "EMAType6",
-            "EMAType7"
+            "EMAType7",
+            "EMIWkAheadSet",
+            "IntentionRemind"
         ],
         "requires": [
             "Ext.device.Connection"

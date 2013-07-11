@@ -1,0 +1,245 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "contentEl": null,
+        "hideAnimation": [
+            "{type :\"fadeOut\", duration : 768}"
+        ],
+        "html": null,
+        "showAnimation": [
+            "{type :\"fadeIn\", duration : 768}"
+        ],
+        "designer|userClassName": "IntentionRemind"
+    },
+    "configAlternates": {
+        "showAnimation": "object",
+        "hideAnimation": "object"
+    },
+    "designerId": "afbebebd-90df-4c0b-9fcb-504a7580fdeb",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "fset",
+                "title": null
+            },
+            "designerId": "955fb063-8389-4a4f-a786-1c2ae1e2ca09",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Take a few moments to reflect on your intention",
+                        "itemId": "describe",
+                        "styleHtmlContent": true
+                    },
+                    "designerId": "f4fd5e9c-86af-4e86-9077-1510c1352160"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<center><b>Intention:</b>&nbsp;&nbsp;<b>Eat</b><center>",
+                        "itemId": "intention"
+                    },
+                    "designerId": "5b4e3712-1b41-493b-90a5-ab329e235340"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "How do you feel in your body? <br> How do you feel overall?",
+                        "itemId": "question",
+                        "styleHtmlContent": true
+                    },
+                    "designerId": "8b5ab113-8bb8-440f-bb95-a977d21d787b"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "baseCls": null,
+                        "hideAnimation": [
+                            "{",
+                            "\ttype: 'fadeOut',",
+                            "\tduration: 1024",
+                            "}"
+                        ],
+                        "itemId": "fakeTimer",
+                        "style": [
+                            "{ background: 'transparent' ,color: 'green' }"
+                        ],
+                        "iconCls": "time",
+                        "iconMask": true,
+                        "labelCls": "''",
+                        "pressedCls": "''",
+                        "text": null
+                    },
+                    "configAlternates": {
+                        "hideAnimation": "object",
+                        "style": "object"
+                    },
+                    "designerId": "36a924d8-54e6-4a6c-a2ba-11d1326297fa",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onFakeTimerTap",
+                                "implHandler": [
+                                    "button.hide();",
+                                    "fset = button.parent",
+                                    "fset.child('#guide').hide();",
+                                    "",
+                                    "setTimeout(function(){",
+                                    "\t",
+                                    "\tfset.child('#timer').show();",
+                                    "\t",
+                                    "\tsetTimeout(function(){",
+                                    "\t",
+                                    "\t\tfset.child('#timer').hide();",
+                                    "\t",
+                                    "\t\tsetTimeout(function(){",
+                                    "\t\t\tfset.child('#done').show();",
+                                    "\t\t}, 1024);",
+                                    "\t",
+                                    "\t}, 20000);",
+                                    "",
+                                    "",
+                                    "}, 1024);",
+                                    ""
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "a3f854a0-2a78-4823-9e50-fd0bef1198e0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "itemId": "done",
+                        "showAnimation": [
+                            "{",
+                            "\ttype: 'fadeIn',",
+                            "\tduration: 1024",
+                            "}"
+                        ],
+                        "text": "Done"
+                    },
+                    "configAlternates": {
+                        "showAnimation": "object"
+                    },
+                    "designerId": "69434afb-c4ac-441a-b32f-08484c10cfb3",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onDoneTap",
+                                "implHandler": [
+                                    "this.destroy();"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "73c86d23-42aa-45f0-9090-7595a5810713"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "hideAnimation": [
+                            "{",
+                            "\ttype: 'fadeOut',",
+                            "\tduration: 1024",
+                            "}"
+                        ],
+                        "html": "<div class=\"wrapper\">   <div class=\"pie spinner\"></div>   <div class=\"pie filler\"></div>   <div class=\"mask\"></div> </div>",
+                        "itemId": "timer",
+                        "showAnimation": [
+                            "{",
+                            "\ttype: 'fadeIn',",
+                            "\tduration: 1024",
+                            "}"
+                        ]
+                    },
+                    "configAlternates": {
+                        "showAnimation": "object",
+                        "hideAnimation": "object"
+                    },
+                    "designerId": "bda95608-1ffb-4c90-846c-8d693f63c0e1"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hideAnimation": [
+                            "{",
+                            "\ttype: 'fadeOut',",
+                            "\tduration: 1024",
+                            "}"
+                        ],
+                        "html": "Click the timer and open up to this experience for a few moments now...",
+                        "itemId": "guide",
+                        "styleHtmlContent": true
+                    },
+                    "configAlternates": {
+                        "hideAnimation": "object"
+                    },
+                    "designerId": "39a38244-9941-486e-8543-fb4410d18cd4"
+                }
+            ]
+        }
+    ]
+}
