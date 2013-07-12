@@ -6,22 +6,96 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "MindfulnessHabit"
+        "designer|userClassName": "MindfulnessHabit",
+        "layout": "vbox"
     },
     "designerId": "9f498051-2056-4b3b-a785-c7106ad7991e",
     "cn": [
         {
-            "type": "Ext.form.FieldSet",
+            "type": "Ext.Label",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "fset",
-                "title": null
+                "html": "<br/><br/><br/>",
+                "itemId": "empty"
             },
-            "designerId": "1b8068bb-d17e-4ef5-baac-71f5591a9a99",
+            "designerId": "4c3c5cbd-64d1-47e7-b88e-503fd12e661a"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 3,
+                "docked": null,
+                "floatingCls": null,
+                "itemId": "content",
+                "margin": null,
+                "padding": null
+            },
+            "designerId": "5ac91b45-82b8-447a-951b-5c0fe52adf96",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": null,
+                        "docked": null,
+                        "html": "Mindfulness Habit: Eat",
+                        "itemId": "habit",
+                        "ui": null
+                    },
+                    "designerId": "d7801dd0-399b-46d9-be3b-54e5c1841646",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onHabitInitialize",
+                                "implHandler": [
+                                    "user = HEART.getItem('local', 'user');",
+                                    "user = JSON.parse(user);",
+                                    "",
+                                    "content='<center><b>Mindfulness Habit:</b>&nbsp;&nbsp;<b>'+user.habit+'</b><center>';",
+                                    "",
+                                    "component.setHtml(content);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "designerId": "f6caaec1-6627-45b9-bd25-c44d14b9d978"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "docked": null,
+                "floatingCls": null,
+                "itemId": "handler"
+            },
+            "designerId": "db23a634-c9bc-4031-a668-89eeee5cee14",
             "cn": [
                 {
                     "type": "Ext.Button",
@@ -31,9 +105,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "centered": null,
                         "docked": null,
-                        "itemId": "ok",
-                        "text": "OK"
+                        "itemId": "done",
+                        "text": "Done"
                     },
                     "designerId": "11c457e6-bd38-488a-910a-a7b871a0d0b4",
                     "cn": [

@@ -234,12 +234,19 @@
                                             "intentions = Ext.getStore('Intentions');",
                                             "",
                                             "index = intentions.findBy(function(record, id) {",
-                                            "\treturn record.get('text') == newValue; });",
+                                            "return record.get('text') == newValue; });",
                                             "",
                                             "intentions.getAt(index).set('timestamp', Date.now());",
                                             "",
                                             "intentions.sort(\"timestamp\", 'DESC');\t\t",
-                                            "intentions.sync();"
+                                            "intentions.sync();",
+                                            "",
+                                            "",
+                                            "// Log to server",
+                                            "",
+                                            "content = {};",
+                                            "",
+                                            "HEART.toSensor(content);"
                                         ],
                                         "name": "change"
                                     },
@@ -540,6 +547,10 @@
                                             "\tuser = JSON.parse(user);",
                                             "\tvalue = user.priority||2;\t",
                                             "\tvalues.priority = value;",
+                                            "",
+                                            "\tvalues.intention=user.intention;",
+                                            "\tvalues.habit=user.habit;",
+                                            "\tvalues.time=user.time;",
                                             "}",
                                             "",
                                             "user = JSON.stringify(values);",
@@ -736,7 +747,7 @@
                     "\tsettings.setValues(user);",
                     "}",
                     "",
-                    "//form = Ext.create('HEART.view.IntentionRemind');",
+                    "//form = Ext.create('HEART.view.IntentionConnect');",
                     "//Ext.Viewport.setActiveItem(form)"
                 ]
             },

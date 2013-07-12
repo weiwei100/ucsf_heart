@@ -161,7 +161,25 @@
                         "labelWidth": "",
                         "labelWrap": true
                     },
-                    "designerId": "aa6a5f20-c6b5-44c6-8f5d-793a37832126"
+                    "designerId": "aa6a5f20-c6b5-44c6-8f5d-793a37832126",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMindfulInitialize",
+                                "implHandler": [
+                                    "console.log(component);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "designerId": "7c4d3f92-0e5c-4182-8782-0def1c3e8b2e"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.field.Select",

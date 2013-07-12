@@ -53,14 +53,15 @@ Ext.application({
 		'EMIAudio6',
 		'EMIAudio7',
 		'MindfulnessHabit',
-		'QUOTES',
 		'DAILYLOG',
 		'Experience',
 		'FEEDBACK',
 		'EMAType6',
 		'EMAType7',
 		'EMIWkAheadSet',
-		'IntentionRemind'
+		'IntentionRemind',
+		'QUOTES',
+		'IntentionConnect'
 	],
 	controllers: [
 		'EMXsController',

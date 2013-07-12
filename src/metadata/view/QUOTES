@@ -6,55 +6,140 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "QUOTES"
+        "designer|userClassName": "QUOTES",
+        "layout": "vbox"
     },
-    "designerId": "4680a6de-a74c-4076-b96b-631578ea7a3e",
+    "designerId": "70e406ea-b180-4285-b394-7afe7ae1c037",
     "cn": [
         {
-            "type": "Ext.Label",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "centered": true,
-                "html": "somthing",
-                "itemId": "quote",
-                "styleHtmlContent": true
+                "layout|flex": 3,
+                "docked": null,
+                "floatingCls": null,
+                "itemId": "content",
+                "margin": null,
+                "padding": 20
             },
-            "designerId": "8e4b6538-3a29-4b3d-a953-17cc6f9e11c7"
-        },
-        {
-            "type": "Ext.Button",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "docked": "bottom",
-                "itemId": "ok",
-                "text": "OK"
-            },
-            "designerId": "cf51c57f-137d-4edf-b4ff-f708eb48b73a",
+            "designerId": "b33c591a-f7b3-45c9-bc55-70d81b1b52dc",
             "cn": [
                 {
-                    "type": "basiceventbinding",
+                    "type": "Ext.Label",
                     "reference": {
-                        "name": "listeners",
+                        "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "onOKTap",
-                        "implHandler": [
-                            "this.parent.pop();",
-                            ""
-                        ],
-                        "name": "tap"
+                        "html": "<br/><br/><br/>",
+                        "itemId": "empty"
                     },
-                    "designerId": "a943c473-4763-4953-866d-94db55cb18fc"
+                    "designerId": "1799f6cf-2909-4700-b7d3-5fe5496bf0b3"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": null,
+                        "contentEl": null,
+                        "docked": null,
+                        "html": "QUOTES",
+                        "itemId": "quote",
+                        "ui": null
+                    },
+                    "designerId": "a7efa295-a358-4303-8a55-75edda60a151",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onHabitInitialize",
+                                "implHandler": [
+                                    "content = 'some quote...';",
+                                    "",
+                                    "component.setHtml(content);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "designerId": "6fcb3114-17d6-49c0-a79a-27d6ebe165f4"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<div align='right'>name<div>",
+                        "itemId": "name"
+                    },
+                    "designerId": "951ec20d-85e8-45a2-9d5b-0d06c35f5981"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "docked": null,
+                "floatingCls": null,
+                "itemId": "handler"
+            },
+            "designerId": "4dedeaea-52e3-48c6-85f3-a652d41b7eb3",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": null,
+                        "docked": null,
+                        "itemId": "done",
+                        "text": "Done"
+                    },
+                    "designerId": "58ff9875-b3b7-4751-a477-fcf309cd0044",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onOKTap",
+                                "implHandler": [
+                                    "this.parent.pop();"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "6c146bc8-07c9-4d55-b776-75b2fa6ff8f5"
+                        }
+                    ]
                 }
             ]
         }

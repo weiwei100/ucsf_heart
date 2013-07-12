@@ -14,7 +14,8 @@
         "showAnimation": [
             "{type :\"fadeIn\", duration : 768}"
         ],
-        "designer|userClassName": "IntentionRemind"
+        "designer|userClassName": "IntentionRemind",
+        "scrollable": "vertical"
     },
     "configAlternates": {
         "showAnimation": "object",
@@ -31,6 +32,7 @@
             "codeClass": null,
             "userConfig": {
                 "itemId": "fset",
+                "scrollable": null,
                 "title": null
             },
             "designerId": "955fb063-8389-4a4f-a786-1c2ae1e2ca09",
@@ -60,7 +62,30 @@
                         "html": "<center><b>Intention:</b>&nbsp;&nbsp;<b>Eat</b><center>",
                         "itemId": "intention"
                     },
-                    "designerId": "5b4e3712-1b41-493b-90a5-ab329e235340"
+                    "designerId": "5b4e3712-1b41-493b-90a5-ab329e235340",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onIntentionInitialize",
+                                "implHandler": [
+                                    "user = HEART.getItem('local', 'user');",
+                                    "user = JSON.parse(user);",
+                                    "",
+                                    "content='<center><b>Intention:</b>&nbsp;&nbsp;<b>'+user.intention+'</b><center>';",
+                                    "",
+                                    "component.setHtml(content);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "designerId": "f833b14e-12d0-49d2-8849-d06f1bbc3aa4"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Label",
@@ -178,7 +203,7 @@
                             "userConfig": {
                                 "fn": "onDoneTap",
                                 "implHandler": [
-                                    "this.destroy();"
+                                    "this.parent.pop();"
                                 ],
                                 "name": "tap"
                             },
