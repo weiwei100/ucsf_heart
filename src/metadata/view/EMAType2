@@ -23,6 +23,7 @@
                     "desc"
                 ],
                 "html": "What is happening in your body right now?",
+                "itemId": "question",
                 "margin": "8px"
             },
             "designerId": "ce798d9d-b0f2-46ea-8222-bebe76c7c131"
@@ -37,6 +38,7 @@
             "userConfig": {
                 "goola": "ema",
                 "docked": null,
+                "itemId": "fset",
                 "hideOnMaskTap": null,
                 "modal": null,
                 "instructions": null,

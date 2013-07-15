@@ -24,6 +24,7 @@
                     "desc"
                 ],
                 "html": "Is there an emotion present you are trying NOT to feel or are pushing away right now? <br/> <div><span style=\"float:right\">a lot</span><span>none</span></span>",
+                "itemId": "question",
                 "margin": "8px"
             },
             "designerId": "6374dd3d-ba74-4a6d-ba2b-6b2a1af1ea5c"
@@ -37,6 +38,7 @@
             "codeClass": null,
             "userConfig": {
                 "goola": "ema",
+                "itemId": "fset",
                 "scrollable": null,
                 "instructions": null,
                 "title": null

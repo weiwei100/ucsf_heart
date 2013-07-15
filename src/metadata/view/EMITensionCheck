@@ -157,7 +157,8 @@
                             "button"
                         ],
                         "disabled": null,
-                        "text": "Done!"
+                        "itemId": "done",
+                        "text": "Done"
                     },
                     "designerId": "4dbde750-0bfa-47c5-810e-f1def833369f",
                     "customConfigs": [
@@ -165,6 +166,36 @@
                             "group": "(Custom Properties)",
                             "name": "action",
                             "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onDoneTap",
+                                "implHandler": [
+                                    "if(this.goola=='stressed' && Math.random()>2/3){",
+                                    "",
+                                    "\tsetTimeout(function(){",
+                                    "",
+                                    "\t\tform = Ext.create('HEART.view.EMAType1');",
+                                    "\t\tform.goola = 'stressed';",
+                                    "",
+                                    "\t\tExt.Viewport.getActiveItem().setActiveItem(2);",
+                                    "\t\tExt.Viewport.getActiveItem().getActiveItem().push(form);",
+                                    "",
+                                    "\t}, 1000*60*15);",
+                                    "",
+                                    "}"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "21a12d08-3516-4a93-b99c-8424b4dc749f"
                         }
                     ]
                 }

@@ -12,22 +12,6 @@
     "designerId": "0fbc87db-4927-439d-bca2-70278fc51350",
     "cn": [
         {
-            "type": "Ext.Label",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": [
-                    "desc"
-                ],
-                "html": "What is the state of your mind in this moment? <br/><br/>  <div><span style=\"float:right\">a lot</span><span>none</span></div>",
-                "margin": "8px"
-            },
-            "designerId": "7e92d79d-789e-4c54-9cdf-d5024852f69f"
-        },
-        {
             "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
@@ -36,6 +20,7 @@
             "codeClass": null,
             "userConfig": {
                 "goola": "ema",
+                "itemId": "fset",
                 "instructions": null,
                 "title": null
             },
@@ -56,100 +41,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": "Calm",
+                        "itemId": "experience",
+                        "label": "What is your experience in this moment? <br/>  <div><span style=\"float:right\">overwhelmed</span><span>balanced</span></div>",
                         "labelAlign": "top",
                         "labelWrap": true,
-                        "name": "calm",
-                        "value": [
-                            50
-                        ]
-                    },
-                    "designerId": "4e8792ef-0710-4683-bc23-bebc40f6ab35"
-                },
-                {
-                    "type": "Ext.field.Slider",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "label": "Agitated",
-                        "labelAlign": "top",
-                        "labelWrap": true,
-                        "name": "agitated",
-                        "value": [
-                            50
-                        ]
-                    },
-                    "designerId": "a56d5e0f-fd8b-46d1-8a78-2d50446a2747"
-                },
-                {
-                    "type": "Ext.field.Slider",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "label": "Restless",
-                        "labelAlign": "top",
-                        "labelWrap": true,
-                        "name": "restless",
-                        "value": [
-                            50
-                        ]
-                    },
-                    "designerId": "3f9c4a73-9447-4350-a587-f08ee81234ec"
-                },
-                {
-                    "type": "Ext.field.Slider",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "label": "Open",
-                        "labelAlign": "top",
-                        "labelWrap": true,
-                        "name": "open",
-                        "value": [
-                            50
-                        ]
-                    },
-                    "designerId": "4d633570-e670-4877-9f1a-d933714d5100"
-                },
-                {
-                    "type": "Ext.field.Slider",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "label": "Constricted",
-                        "labelAlign": "top",
-                        "labelWrap": true,
-                        "name": "constricted",
-                        "value": [
-                            50
-                        ]
-                    },
-                    "designerId": "9dd114ac-d6f4-4728-93f9-67c875da0798"
-                },
-                {
-                    "type": "Ext.field.Slider",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "label": "Balanced",
-                        "labelAlign": "top",
-                        "labelWrap": true,
-                        "name": "balanced",
+                        "name": "experience",
                         "value": [
                             50
                         ]
@@ -166,6 +62,7 @@
                     "userConfig": {
                         "action": "exercise",
                         "disabled": null,
+                        "itemId": "done",
                         "text": "Done"
                     },
                     "designerId": "cb90b7b0-8cb9-406e-b4f7-37748cc7fa34",
@@ -174,6 +71,81 @@
                             "group": "(Custom Properties)",
                             "name": "action",
                             "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onDoneRelease",
+                                "implHandler": [
+                                    "experience=button.parent.child('#stress').getValue();",
+                                    "",
+                                    "user = HEART.getItem('local', 'user');",
+                                    "user = JSON.parse(user);",
+                                    "",
+                                    "user.experience=experience;",
+                                    " ",
+                                    "user = JSON.stringify(user);",
+                                    "HEART.setItem('local', 'user', user);",
+                                    "",
+                                    "if(this.goola=='followup'){return;}",
+                                    "",
+                                    "",
+                                    "if(experience>50){",
+                                    "\t\t",
+                                    "\tEMX = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio4', 'EMIAudio7'];",
+                                    "\t",
+                                    "\ttype = EMX[Math.floor(EMX.length*Math.random())]; ",
+                                    "",
+                                    "\tform = Ext.create('HEART.view.'+type);",
+                                    "",
+                                    "\tExt.Viewport.getActiveItem().setActiveItem(2);",
+                                    "\tExt.Viewport.getActiveItem().getActiveItem().push(form);",
+                                    "\t",
+                                    "\tif(Math.random()<1/3){",
+                                    "\t\t",
+                                    "\t\tsetTimeout(function(){",
+                                    "",
+                                    "\t\t\tform = Ext.create('HEART.view.'+this.emxType);",
+                                    "\t\t\tform.goola = 'followup';",
+                                    "",
+                                    "\t\t\tExt.Viewport.getActiveItem().setActiveItem(2);",
+                                    "\t\t\tExt.Viewport.getActiveItem().getActiveItem().push(form);",
+                                    "",
+                                    "\t\t}, 1000*60*15);",
+                                    "\t\t\t\t",
+                                    "\t\tsetTimeout(function(){",
+                                    "\t\t\t",
+                                    "\t\t\tuser = HEART.getItem('local', 'user');",
+                                    "\t\t\tuser = JSON.parse(user);",
+                                    "",
+                                    "\t\t\tif(user.experience>50){",
+                                    "\t\t\t\t",
+                                    "\t\t\t\tform = Ext.create('HEART.view.'+this.emxType);",
+                                    "\t\t\t\tform.goola = 'followup';",
+                                    "",
+                                    "\t\t\t\tExt.Viewport.getActiveItem().setActiveItem(2);",
+                                    "\t\t\t\tExt.Viewport.getActiveItem().getActiveItem().push(form);",
+                                    "\t\t\t}",
+                                    "",
+                                    "",
+                                    "\t\t}, 1000*60*30);",
+                                    "\t\t",
+                                    "\t}\t",
+                                    "\t",
+                                    "}",
+                                    "",
+                                    "button.fireEvent('tap');"
+                                ],
+                                "name": "release"
+                            },
+                            "designerId": "4fca3a3e-dd20-482c-a72b-41a3f3c7c615"
                         }
                     ]
                 }

@@ -114,6 +114,7 @@
                 "fn": "onStressedShow",
                 "implHandler": [
                     "var EMX = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio4', 'EMIAudio7'];",
+                    "",
                     "count = EMX.length;",
                     "",
                     "index = Math.floor(count*Math.random());",

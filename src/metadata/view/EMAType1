@@ -20,6 +20,7 @@
             "codeClass": null,
             "userConfig": {
                 "html": "What is happening right now?",
+                "itemId": "question",
                 "margin": "8px"
             },
             "designerId": "8d96d19e-8686-48e7-bd04-cafa30c058e9"
@@ -34,6 +35,7 @@
             "userConfig": {
                 "goola": "ema",
                 "docked": null,
+                "itemId": "fset",
                 "hideOnMaskTap": false,
                 "modal": false,
                 "instructions": null,
@@ -56,7 +58,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "mysliderfield",
+                        "itemId": "stress",
                         "label": "How much stress are you experiencing in this moment? <div><span style=\"float:right\">a lot</span><span>none</span></span>",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -65,49 +67,7 @@
                             50
                         ]
                     },
-                    "designerId": "8e631a67-460d-4e9b-b9e5-6f12d0b6020d",
-                    "cn": [
-                        {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "fn": "onMysliderfieldChange",
-                                "implHandler": [
-                                    "value = me.getValue();",
-                                    "",
-                                    "content = {};",
-                                    "content.uid = HEART.uuid;",
-                                    "content.ema_type_1=value;",
-                                    "",
-                                    "succ = function(response) {",
-                                    "\tconsole.log(response);",
-                                    "};",
-                                    "",
-                                    "fail = function(response) {",
-                                    "\tconsole.log(response);",
-                                    "};",
-                                    "",
-                                    "HEART.toUser(content, succ, fail);",
-                                    "///////////////////////////////////////////",
-                                    "user = HEART.getItem('local', 'pnapi')||{};",
-                                    "user = JSON.parse(user);",
-                                    "",
-                                    "user.uid = HEART.uuid;",
-                                    "user.emi_type_1 = value;",
-                                    "",
-                                    "user = JSON.stringify(user);",
-                                    "HEART.setItem('local', 'pnapi', user);",
-                                    "//////////////////////////////////////"
-                                ],
-                                "name": "change"
-                            },
-                            "designerId": "a69c5ddc-8ce5-4564-a10e-71521d36153c"
-                        }
-                    ]
+                    "designerId": "8e631a67-460d-4e9b-b9e5-6f12d0b6020d"
                 },
                 {
                     "type": "Ext.Button",
@@ -119,6 +79,8 @@
                     "userConfig": {
                         "action": "exercise",
                         "disabled": null,
+                        "itemId": "done",
+                        "autoEvent": null,
                         "text": "Done"
                     },
                     "designerId": "43994e75-d9e0-4b3c-8fc0-38a5b9c10a07",
@@ -128,9 +90,125 @@
                             "name": "action",
                             "type": "string"
                         }
+                    ],
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onDoneRelease",
+                                "implHandler": [
+                                    "stress=button.parent.child('#stress').getValue();",
+                                    "",
+                                    "user = HEART.getItem('local', 'user');",
+                                    "user = JSON.parse(user);",
+                                    "",
+                                    "user.stress=stress;",
+                                    " ",
+                                    "user = JSON.stringify(user);",
+                                    "HEART.setItem('local', 'user', user);",
+                                    "",
+                                    "if(this.goola=='followup'){return;}",
+                                    "",
+                                    "",
+                                    "if(stress>50){",
+                                    "\t",
+                                    "\tif(this.goola=='stressed'){",
+                                    "",
+                                    "\t\tsetTimeout(function(){",
+                                    "\t",
+                                    "\t\t\tform = Ext.create('HEART.view.EMAType6');",
+                                    "\t\t\tform.goola = 'stressed';",
+                                    "",
+                                    "\t\t\tExt.Viewport.getActiveItem().setActiveItem(2);",
+                                    "\t\t\tExt.Viewport.getActiveItem().getActiveItem().push(form);",
+                                    "",
+                                    "\t\t}, 1000*60*30);",
+                                    "",
+                                    "\t}else{",
+                                    "\t",
+                                    "\t\tEMX = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio4', 'EMIAudio7'];",
+                                    "\t",
+                                    "\t\ttype = EMX[Math.floor(EMX.length*Math.random())]; ",
+                                    "",
+                                    "\t\tform = Ext.create('HEART.view.'+type);",
+                                    "",
+                                    "\t\tExt.Viewport.getActiveItem().setActiveItem(2);",
+                                    "\t\tExt.Viewport.getActiveItem().getActiveItem().push(form);",
+                                    "\t",
+                                    "\t\tif(Math.random()<1/3){",
+                                    "\t\t",
+                                    "\t\t\tsetTimeout(function(){",
+                                    "",
+                                    "\t\t\t\tform = Ext.create('HEART.view.'+this.emxType);",
+                                    "\t\t\t\tform.goola = 'followup';",
+                                    "",
+                                    "\t\t\t\tExt.Viewport.getActiveItem().setActiveItem(2);",
+                                    "\t\t\t\tExt.Viewport.getActiveItem().getActiveItem().push(form);",
+                                    "",
+                                    "\t\t\t}, 1000*60*15);",
+                                    "\t\t\t\t",
+                                    "\t\t\tsetTimeout(function(){",
+                                    "\t\t\t",
+                                    "\t\t\t\tuser = HEART.getItem('local', 'user');",
+                                    "\t\t\t\tuser = JSON.parse(user);",
+                                    "",
+                                    "\t\t\t\tif(user.stress>50){",
+                                    "\t\t\t\t",
+                                    "\t\t\t\t\tform = Ext.create('HEART.view.'+this.emxType);",
+                                    "\t\t\t\t\tform.goola = 'followup';",
+                                    "",
+                                    "\t\t\t\t\tExt.Viewport.getActiveItem().setActiveItem(2);",
+                                    "\t\t\t\t\tExt.Viewport.getActiveItem().getActiveItem().push(form);",
+                                    "\t\t\t\t}",
+                                    "",
+                                    "",
+                                    "\t\t\t}, 1000*60*30);",
+                                    "\t\t",
+                                    "\t\t}\t",
+                                    "\t",
+                                    "\t}",
+                                    "",
+                                    "}",
+                                    "",
+                                    "",
+                                    "button.fireEvent('tap');"
+                                ],
+                                "delay": null,
+                                "single": null,
+                                "name": "release",
+                                "order": "before"
+                            },
+                            "designerId": "e29e96a8-b3cc-46c2-9a07-3b3cb814802d"
+                        }
                     ]
                 }
             ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "isAbove",
+                "implHandler": [
+                    "value = this.child('#fset').child('#stress').getValue();",
+                    "",
+                    "if(value>50){",
+                    "\treturn true;",
+                    "}else{",
+                    "\treturn false;",
+                    "}"
+                ]
+            },
+            "designerId": "660c21a7-6898-453b-b100-f295419e90af"
         }
     ]
 }

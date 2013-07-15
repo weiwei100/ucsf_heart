@@ -148,6 +148,104 @@
                     "designerId": "b843232e-3c88-4854-a2e0-470dd0036409"
                 },
                 {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "text-group",
+                        "margin": null,
+                        "layout": "hbox"
+                    },
+                    "designerId": "fbe015af-fb6a-4579-b7ed-338f75eb7bb2",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "&nbsp;Any&nbsp;"
+                            },
+                            "designerId": "a38e0e73-08cd-4ab6-bdd6-72377e81cfea"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "mindful eating",
+                                "itemId": "mylabel62",
+                                "style": [
+                                    "{",
+                                    "\tcolor: 'blue'",
+                                    "}"
+                                ]
+                            },
+                            "configAlternates": {
+                                "style": "object"
+                            },
+                            "designerId": "359ab1b6-daca-46bd-87ce-7b1356acbd42",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onMylabel62Initialize",
+                                        "implHandler": [
+                                            "component.element.on({",
+                                            "\ttap : function(e, t){",
+                                            "",
+                                            "\t\tcontent='<p>Mindful eating means eating while paying attention to the full experience of eating. Even just one minute of mindful eating counts as a “yes!”</p>';",
+                                            "\t\tcontent+='<p>ð You might check in at be beginning of a meal, taking a mindful minute of breathing.</p>';",
+                                            "\t\tcontent+='<p>ð You might check with your sensations of hunger and satiety, rating them on a ten point scale, at the start and in the middle of a meal or snack.</p>';",
+                                            "\t\tcontent+='<p>ð Enjoy the pleasure of the food, notice when the pleasure diminishes.</p>';",
+                                            "",
+                                            "\t\tExt.create('Ext.Panel', {",
+                                            "\t\t\thideOnMaskTap: true,",
+                                            "\t\t\tautoDestroy: true, ",
+                                            "\t\t\tmodal: true,",
+                                            "\t\t\thtml: content,",
+                                            "\t\t\tpadding: 10,",
+                                            "\t\t\tleft: 0,",
+                                            "\t\t\tstyle: \"color: rgb(128,128,128); font-size: 9px\"",
+                                            "\t\t}).showBy(component);",
+                                            "",
+                                            "\t}",
+                                            "});"
+                                        ],
+                                        "name": "initialize"
+                                    },
+                                    "designerId": "1014a578-ded2-4d7a-9d8c-5d0f0156b813"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "&nbsp;today?"
+                            },
+                            "designerId": "33b07637-772e-4968-af03-98094fa7bd06"
+                        }
+                    ]
+                },
+                {
                     "type": "Ext.field.Checkbox",
                     "reference": {
                         "name": "items",
@@ -173,7 +271,9 @@
                             "userConfig": {
                                 "fn": "onMindfulInitialize",
                                 "implHandler": [
-                                    "console.log(component);"
+                                    "label = component.label;",
+                                    "",
+                                    "label.hide();"
                                 ],
                                 "name": "initialize"
                             },

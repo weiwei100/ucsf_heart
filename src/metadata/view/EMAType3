@@ -23,7 +23,8 @@
                 "cls": [
                     "desc"
                 ],
-                "html": "What emotions are you experiencing in this moment? <br/> <br/> <div><span style=\"float:right\">a lot</span><span>none</span></span>",
+                "html": "What emotions are you experiencing in this moment? <br/> <div><span style=\"float:right\">a lot</span><span>none</span></span>",
+                "itemId": "question",
                 "margin": "8px"
             },
             "designerId": "edbb549f-0996-4368-822b-56a6b47c1496"
@@ -37,6 +38,7 @@
             "codeClass": null,
             "userConfig": {
                 "goola": "ema",
+                "itemId": "fset",
                 "instructions": null,
                 "title": null
             },
