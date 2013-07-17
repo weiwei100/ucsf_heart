@@ -87,7 +87,7 @@ Ext.define('HEART.view.DAILYLOG', {
 						itemId: 'meditation',
 						styleHtmlContent: true,
 						label: 'Any formal meditation today?',
-						labelAlign: 'top',
+						labelAlign: 'left',
 						labelWidth: '',
 						labelWrap: true
 					},
@@ -177,6 +177,7 @@ Ext.define('HEART.view.DAILYLOG', {
 						xtype: 'checkboxfield',
 						itemId: 'mindful',
 						label: 'Any mindful eating today?',
+						labelAlign: 'left',
 						labelWidth: '',
 						labelWrap: true,
 						listeners: [
