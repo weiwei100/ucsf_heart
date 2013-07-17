@@ -231,6 +231,8 @@
                             "\t\tcontent.type = 'popup';",
                             "\t\tcontent.action = 'show-intention';",
                             "\t\t",
+                            "\t\tHEART.toSensor(content);",
+                            "\t\t",
                             "\t\tExt.create('Ext.Panel', {",
                             "\t\t\thideOnMaskTap: true,",
                             "\t\t\tautoDestroy: true, ",
@@ -723,10 +725,7 @@
                     "}else{",
                     "\tuser = JSON.parse(user);",
                     "\tsettings.setValues(user);",
-                    "}",
-                    "",
-                    "//form = Ext.create('HEART.view.EMAType1');",
-                    "//Ext.Viewport.setActiveItem(form)"
+                    "}"
                 ]
             },
             "designerId": "9c748870-c0b3-4c73-8cd6-790fb210800f"

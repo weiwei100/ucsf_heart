@@ -71,28 +71,53 @@
                             "userConfig": {
                                 "fn": "onHabitInitialize",
                                 "implHandler": [
-                                    "content = 'some quote...';",
+                                    "quotes=Ext.getStore('Quotes'); ",
+                                    "count=quotes.getAllCount();",
+                                    "quote='This is quote';",
                                     "",
-                                    "component.setHtml(content);"
+                                    "if(this.wrapped){",
+                                    "\tfor(i=0;i<count;i++){",
+                                    "\t\ttext = quotes.getAt(i).data.text;",
+                                    "\t\tif(text.indexOf(this.wrapped)>=0){",
+                                    "\t\t\tquote=text; break;",
+                                    "\t\t}",
+                                    "\t}\t",
+                                    "}else{",
+                                    "\t",
+                                    "\tindex=Math.ceil(Math.random()*count);",
+                                    "",
+                                    "\tquote=quotes.getAt(index).data.text;",
+                                    "\t",
+                                    "}\t",
+                                    "\t",
+                                    "wrapped = 'This is wrapped';",
+                                    "",
+                                    "if(quote.length>60){",
+                                    "\twrapped = quote.substring(0, 60);",
+                                    "\twrapped+='...';",
+                                    "\tcomponent.setHtml(wrapped);",
+                                    "}else{",
+                                    "\tcomponent.setHtml(quote);",
+                                    "}",
+                                    "",
+                                    "component.element.on({",
+                                    "\t",
+                                    "\ttap : function(e, t){\t\t",
+                                    "\t\tcontent = {};",
+                                    "\t\tcontent.type = 'label';",
+                                    "\t\tcontent.action = 'show-quote';",
+                                    "\t\t",
+                                    "\t\tHEART.toSensor(content);",
+                                    "\t\t",
+                                    "\t\tcomponent.setHtml(quote);",
+                                    "\t}",
+                                    "});"
                                 ],
                                 "name": "initialize"
                             },
                             "designerId": "6fcb3114-17d6-49c0-a79a-27d6ebe165f4"
                         }
                     ]
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "html": "<div align='right'>name<div>",
-                        "itemId": "name"
-                    },
-                    "designerId": "951ec20d-85e8-45a2-9d5b-0d06c35f5981"
                 }
             ]
         },
