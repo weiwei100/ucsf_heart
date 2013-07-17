@@ -7,11 +7,14 @@
     "codeClass": null,
     "userConfig": {
         "cls": [
-            "xxxxxx"
+            "feedback"
         ],
         "designer|userClassName": "FEEDBACK",
         "layout": "vbox",
         "scrollable": "vertical"
+    },
+    "configAlternates": {
+        "style": "object"
     },
     "designerId": "30beeb36-af96-4670-bc9c-9eeb44866a21",
     "cn": [
@@ -172,6 +175,7 @@
                             "label.setHtml(content);",
                             "",
                             "label=component.child('#stressLevel');",
+                            "",
                             "object = mylog.stressed||{};",
                             "",
                             "content = 'Your stress level: Your range of stress was '+object.low+' to '+object.high+', the average is '+object.average;",
@@ -179,6 +183,7 @@
                             "label.setHtml(content);",
                             "",
                             "label=component.child('#balanceFeeling');",
+                            "",
                             "object = mylog.balance||{};",
                             "",
                             "content = 'Your average feelings of balance were '+object.average;",

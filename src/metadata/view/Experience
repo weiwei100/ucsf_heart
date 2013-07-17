@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "experience"
+        ],
         "designer|userClassName": "Experience"
     },
     "designerId": "14db8fb0-6548-4940-b1d0-c5a32ee91928",

@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "dailyLog"
+        ],
         "designer|userClassName": "DAILYLOG"
     },
     "designerId": "0a43a4c5-2da5-4e99-a176-e26bc0c5957e",

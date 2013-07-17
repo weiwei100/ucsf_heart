@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "EMAType"
+        ],
         "margin": null,
         "designer|userClassName": "EMAType3",
         "scrollable": "vertical"

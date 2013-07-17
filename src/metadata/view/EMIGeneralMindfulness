@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "breathLife"
+        ],
         "disabled": false,
         "designer|userClassName": "EMIGeneralMindfulness"
     },

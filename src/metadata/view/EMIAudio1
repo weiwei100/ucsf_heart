@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "EMIAudio"
+        ],
         "designer|userClassName": "EMIAudio1",
         "scrollable": "vertical"
     },
@@ -144,11 +147,7 @@
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();",
-                    "var succ = function(){",
-                    "\tconsole.log(\"S\");",
-                    "\talert(\"S\");",
-                    "};",
-                    "HEART.setAudio('LKMeditation.mp3', succ, succ);"
+                    "HEART.setAudio('LKMeditation.mp3', HEART.audioCallback);"
                 ]
             },
             "designerId": "fe687fa9-4c6f-4819-b1d6-d5b0af7725f7"

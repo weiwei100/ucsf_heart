@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "bodyScan"
+        ],
         "designer|userClassName": "EMITensionCheck",
         "scrollable": null
     },

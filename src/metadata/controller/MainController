@@ -21,7 +21,7 @@
                 "fn": "launch",
                 "implHandler": [
                     "if(Ext.device.Connection.isOnline()){",
-                    "\t//HEART.sync();",
+                    "\tHEART.sync();",
                     "}"
                 ]
             },

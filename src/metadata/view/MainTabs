@@ -38,15 +38,26 @@
                 "title": "Home",
                 "iconCls": "home",
                 "centered": null,
+                "cls": [
+                    "homePanel"
+                ],
                 "id": "homePanel",
                 "itemId": null,
                 "margin": null,
                 "padding": null,
-                "style": null,
+                "style": [
+                    "{",
+                    "\tbackground: 'url(water.jpg) no-repeat center !important'",
+                    "}",
+                    ""
+                ],
                 "styleHtmlContent": null,
                 "layout": "vbox",
                 "modal": null,
                 "scrollable": "vertical"
+            },
+            "configAlternates": {
+                "style": "object"
             },
             "designerId": "ae4b176d-43a2-49de-98d6-2638de2b7330",
             "cn": [
@@ -202,7 +213,7 @@
                             "",
                             "container.child('#header').child('#sometext').setHtml(content);",
                             "",
-                            "content=user.intention; ",
+                            "content=user.intention||''; ",
                             "",
                             "if(content.length>20){",
                             "\tcontent=content.substring(0,20);",
@@ -273,6 +284,9 @@
             "userConfig": {
                 "title": "Exercises",
                 "iconCls": "organize",
+                "cls": [
+                    "exercise"
+                ],
                 "id": "exercises"
             },
             "designerId": "3089ff51-81cd-495a-8ef3-5a5e87a3752f",
@@ -342,6 +356,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "setting"
+                        ],
                         "itemId": "settings"
                     },
                     "designerId": "670beffc-a06d-4c94-806a-47654644730d",

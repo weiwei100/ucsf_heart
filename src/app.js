@@ -26,13 +26,11 @@ Ext.application({
 	models: [
 		'Feed',
 		'EMX',
-		'Intention',
 		'Experience'
 	],
 	stores: [
 		'Feeds',
 		'EMXs',
-		'Intentions',
 		'Experiences'
 	],
 	views: [

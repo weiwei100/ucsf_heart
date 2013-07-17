@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "intention"
+        ],
         "contentEl": null,
         "hideAnimation": [
             "{type :\"fadeOut\", duration : 768}"

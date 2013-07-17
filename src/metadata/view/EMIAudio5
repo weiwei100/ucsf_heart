@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "EMIAudio"
+        ],
         "designer|userClassName": "EMIAudio5",
         "scrollable": "vertical"
     },

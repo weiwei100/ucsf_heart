@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "quotes"
+        ],
         "designer|userClassName": "QUOTES",
         "layout": "vbox"
     },

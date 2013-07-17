@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "weekAhead"
+        ],
         "contentEl": null,
         "hideAnimation": [
             "{type :\"fadeOut\", duration : 768}"
@@ -292,17 +295,6 @@
                                     "content = this.getValues();",
                                     "content.type = this.emxType;",
                                     "HEART.toSensor(content);",
-                                    "",
-                                    "intentions = Ext.getStore(\"Intentions\");",
-                                    "",
-                                    "store = {};",
-                                    "store.text = intention;",
-                                    "store.timestamp = Date.now();",
-                                    "intentions.add(store);",
-                                    "intentions.sort(\"timestamp\", 'DESC');\t\t",
-                                    "intentions.sync();",
-                                    "",
-                                    "//elements = Ext.ComponentQuery.query('#homePanel #image');",
                                     "",
                                     "this.parent.pop();"
                                 ],

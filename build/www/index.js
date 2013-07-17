@@ -29,11 +29,9 @@ function initPNHandler() {
 	  console.warn('user data: ' + JSON.stringify(userData));
 	}
 
-    console.log(userData.type);
 	   navigator.notification.alert(title);
 	   var type = JSON.parse(userData).type;
-      //                        console.log("hello world");
-      //                        console.log(type);
+      
 	form = Ext.create('HEART.view.' + userData.type);
 	form.emxType = userData.type;
 	form.goola = 'exercises';
@@ -44,14 +42,12 @@ function initPNHandler() {
                               
 
     Ext.Viewport.getActiveItem().setActiveItem(2);
-	   Ext.Viewport.getActiveItem().getActiveItem().push(form);
+	Ext.Viewport.getActiveItem().getActiveItem().push(form);
                                      
     });
 }
 
 function init() {
-    document.addEventListener("deviceready", initPushwoosh, true);
-    alert("load");
-    alert(device.uuid);
+    document.addEventListener("deviceready", initPNHandler, true);
     HEART.uuid = device.uuid;
 }
