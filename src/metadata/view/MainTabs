@@ -45,7 +45,8 @@
                 "style": null,
                 "styleHtmlContent": null,
                 "layout": "vbox",
-                "modal": null
+                "modal": null,
+                "scrollable": "vertical"
             },
             "designerId": "ae4b176d-43a2-49de-98d6-2638de2b7330",
             "cn": [
@@ -86,7 +87,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "<b>Welcome</b>",
+                                "html": "<b>Welcome,</b>",
                                 "itemId": "welcome"
                             },
                             "designerId": "92dd5013-79d9-4c18-9181-05484b845923",
@@ -104,7 +105,7 @@
                                             "component.element.on({",
                                             "\ttap : function(e, t){",
                                             "",
-                                            "\t\tcontent+='<p>“HEART stands for health enhancement, emotions, and resiliency training.” In addition to the workshops, we developed the HEART app to help you bring mindfulness into your day.</p>';",
+                                            "\t\tcontent='<p>“HEART stands for health enhancement, emotions, and resiliency training.” In addition to the workshops, we developed the HEART app to help you bring mindfulness into your day.</p>';",
                                             "",
                                             "\t\tcontent+='<p>HEART helps you to develop your own present moment awareness, to find greater calm and stability in the midst of your life’s changing conditions. The HEART app is here to help you work with various aspects of mindfulness—increasing awareness of your own body and mind states, and developing the capacity to “be with” whatever is happening in a more relaxed and balanced way.</p>';",
                                             "",
@@ -117,7 +118,7 @@
                                             "\t\t\thtml: content,",
                                             "\t\t\tpadding: 10,",
                                             "\t\t\tleft: 0,",
-                                            "\t\t\tstyle: \"color: rgb(128,128,128); font-size: 9px\"",
+                                            "\t\t\tstyle: \"color: rgb(128,128,128); font-size: 15px\"",
                                             "\t\t}).showBy(component);",
                                             "",
                                             "\t}",
@@ -182,76 +183,6 @@
                     ]
                 },
                 {
-                    "type": "Ext.Container",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "container|align": "center",
-                        "container|pack": "center",
-                        "itemId": "myintention",
-                        "margin": 22,
-                        "layout": "hbox"
-                    },
-                    "designerId": "ac7218c8-88e9-4fab-a76c-b8c125384ad0",
-                    "cn": [
-                        {
-                            "type": "Ext.field.Select",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "centered": false,
-                                "floatingCls": null,
-                                "itemId": "intention",
-                                "label": "Intention",
-                                "labelWidth": "50%",
-                                "options": null,
-                                "store": "Intentions",
-                                "valueField": "text"
-                            },
-                            "designerId": "d59314b4-f640-4b78-89e4-8cccf5afb937",
-                            "cn": [
-                                {
-                                    "type": "basiceventbinding",
-                                    "reference": {
-                                        "name": "listeners",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "fn": "onIntentionChange",
-                                        "implHandler": [
-                                            "intentions = Ext.getStore('Intentions');",
-                                            "",
-                                            "index = intentions.findBy(function(record, id) {",
-                                            "return record.get('text') == newValue; });",
-                                            "",
-                                            "intentions.getAt(index).set('timestamp', Date.now());",
-                                            "",
-                                            "intentions.sort(\"timestamp\", 'DESC');\t\t",
-                                            "intentions.sync();",
-                                            "",
-                                            "",
-                                            "// Log to server",
-                                            "",
-                                            "content = {};",
-                                            "",
-                                            "HEART.toSensor(content);"
-                                        ],
-                                        "name": "change"
-                                    },
-                                    "designerId": "3ebe1ad4-1299-43f9-b1fd-2673ed351bd7"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
                     "type": "basiceventbinding",
                     "reference": {
                         "name": "listeners",
@@ -267,22 +198,53 @@
                             "",
                             "user = JSON.parse(user);",
                             "",
-                            "text = container.child('#header').child('#sometext').getHtml();",
+                            "content = user.name+'&nbsp;'+'H.E.A.R.T.';",
                             "",
-                            "text = text.replace('[NAME]', user.name||'[NAME]');",
+                            "container.child('#header').child('#sometext').setHtml(content);",
                             "",
-                            "container.child('#header').child('#sometext').setHtml(text);",
+                            "content=user.intention; ",
                             "",
-                            "store = Ext.getStore(\"Intentions\");",
-                            "store.sort(\"timestamp\", 'DESC');\t\t",
-                            "store.sync();",
+                            "if(content.length>20){",
+                            "\tcontent=content.substring(0,20);",
+                            "\tcontent+='...';",
+                            "}",
                             "",
-                            "selection = container.child('#myintention').child('#intention');",
-                            "selection.reset();"
+                            "text = '<center><b>Intention:</b>&nbsp;&nbsp;'+content+'</center>';",
+                            "",
+                            "container.child('#intention').setHtml(text);",
+                            "",
+                            "container.child('#intention').element.on({",
+                            "\ttap : function(e, t){",
+                            "",
+                            "\t\tExt.create('Ext.Panel', {",
+                            "\t\t\thideOnMaskTap: true,",
+                            "\t\t\tautoDestroy: true, ",
+                            "\t\t\tmodal: true,",
+                            "\t\t\thtml: user.intention,",
+                            "\t\t\tpadding: 10,",
+                            "\t\t\tleft: 0,",
+                            "\t\t\tstyle: \"color: rgb(128,128,128); font-size: 15px\"",
+                            "\t\t}).showBy(container.child('#intention'));",
+                            "",
+                            "\t}",
+                            "});"
                         ],
                         "name": "activate"
                     },
                     "designerId": "bc00c797-e816-497c-bcdf-6af432a8bded"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<center><b>Intention:</b>&nbsp;&nbsp;[TEXT]</center>",
+                        "itemId": "intention"
+                    },
+                    "designerId": "ac605158-3f08-44e9-8683-bd4960978b11"
                 }
             ]
         },

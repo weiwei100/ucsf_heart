@@ -230,11 +230,11 @@
         },
         "9f498051-2056-4b3b-a785-c7106ad7991e": {
             "paths": [
-                "metadata/view/MindfulnessHabit",
-                "app/view/override/MindfulnessHabit.js",
-                "app/view/MindfulnessHabit.js"
+                "metadata/view/EMIHabit",
+                "app/view/override/EMIHabit.js",
+                "app/view/EMIHabit.js"
             ],
-            "className": "MindfulnessHabit"
+            "className": "EMIHabit"
         },
         "0a43a4c5-2da5-4e99-a176-e26bc0c5957e": {
             "paths": [
@@ -259,14 +259,6 @@
                 "app/view/FEEDBACK.js"
             ],
             "className": "FEEDBACK"
-        },
-        "0779356a-402f-440c-af31-c302778463fc": {
-            "paths": [
-                "metadata/view/EMAType6",
-                "app/view/override/EMAType6.js",
-                "app/view/EMAType6.js"
-            ],
-            "className": "EMAType6"
         },
         "59c1cab1-1a57-4660-bd51-67d2b7962336": {
             "paths": [
@@ -339,6 +331,22 @@
                 "app/view/IntentionConnect.js"
             ],
             "className": "IntentionConnect"
+        },
+        "f33623a8-ac15-476d-af85-819eac5372cf": {
+            "paths": [
+                "metadata/view/EMIMoments",
+                "app/view/override/EMIMoments.js",
+                "app/view/EMIMoments.js"
+            ],
+            "className": "EMIMoments"
+        },
+        "d3bbe1ab-633c-4374-99df-15ed7e7b7748": {
+            "paths": [
+                "metadata/view/EMAType6",
+                "app/view/override/EMAType6.js",
+                "app/view/EMAType6.js"
+            ],
+            "className": "EMAType6"
         }
     },
     "viewOrderMap": {
@@ -351,13 +359,14 @@
             "afbebebd-90df-4c0b-9fcb-504a7580fdeb",
             "a31b26b2-4771-449e-a519-c49118d76fe6",
             "9f498051-2056-4b3b-a785-c7106ad7991e",
+            "f33623a8-ac15-476d-af85-819eac5372cf",
             "70e406ea-b180-4285-b394-7afe7ae1c037",
             "7d969f35-80f6-497f-9677-8bc260ef4b83",
             "df2a85a8-d4f3-4e68-bab4-1a38a66b43db",
             "74a66690-e41f-48f5-a274-7d59108223a6",
             "8804c401-278b-4ed3-a95a-f3721979a040",
             "0fbc87db-4927-439d-bca2-70278fc51350",
-            "0779356a-402f-440c-af31-c302778463fc",
+            "d3bbe1ab-633c-4374-99df-15ed7e7b7748",
             "59c1cab1-1a57-4660-bd51-67d2b7962336",
             "1eb73208-28ad-410e-a453-81084fc2a8b8",
             "ee457f84-adec-4616-b758-13d4b006fc89",

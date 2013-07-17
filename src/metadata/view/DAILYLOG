@@ -124,7 +124,47 @@
                         "labelWidth": "",
                         "labelWrap": true
                     },
-                    "designerId": "20571e87-dae2-4ac6-b580-6b7ba35f4ae1"
+                    "designerId": "20571e87-dae2-4ac6-b580-6b7ba35f4ae1",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMeditationCheck",
+                                "implHandler": [
+                                    "howlong=checkboxfield.parent.child('#howlong')",
+                                    "",
+                                    "howlong.enable();",
+                                    "howlong.show();"
+                                ],
+                                "name": "check"
+                            },
+                            "designerId": "9f7b3f6a-2259-4dab-a22b-1d9815052090"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMeditationUncheck",
+                                "implHandler": [
+                                    "howlong=checkboxfield.parent.child('#howlong')",
+                                    "",
+                                    "howlong.disable();",
+                                    "howlong.hide();"
+                                ],
+                                "name": "uncheck"
+                            },
+                            "designerId": "ed5efc5f-22aa-431e-a29e-c4f0e8dd0088"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.field.Select",
@@ -134,6 +174,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "disabled": true,
+                        "hidden": true,
                         "itemId": "howlong",
                         "label": "How long ?",
                         "labelWidth": "50%",
@@ -169,7 +211,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "&nbsp;Any&nbsp;"
+                                "html": "&nbsp;Any&nbsp;",
+                                "id": null,
+                                "itemId": "left"
                             },
                             "designerId": "a38e0e73-08cd-4ab6-bdd6-72377e81cfea"
                         },
@@ -182,7 +226,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "mindful eating",
-                                "itemId": "mylabel62",
+                                "itemId": "middle",
                                 "style": [
                                     "{",
                                     "\tcolor: 'blue'",
@@ -239,7 +283,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "&nbsp;today?"
+                                "html": "&nbsp;today?",
+                                "itemId": "right"
                             },
                             "designerId": "33b07637-772e-4968-af03-98094fa7bd06"
                         }
@@ -316,9 +361,9 @@
                             "userConfig": {
                                 "fn": "onAnyExerciseChange",
                                 "implHandler": [
-                                    "selectfield.parent.child('#group').show();"
+                                    "textfield.parent.child('#group').show();"
                                 ],
-                                "name": "change"
+                                "name": "focus"
                             },
                             "designerId": "d78995b9-cc9a-4133-a99d-a3e59a8fc5d3"
                         }
@@ -403,6 +448,89 @@
                                     "userConfig": {
                                         "fn": "onOKTap",
                                         "implHandler": [
+                                            "container = button.parent.parent;",
+                                            "",
+                                            "exercise = container.child('#exercise').getValue();",
+                                            "mindful = container.child('#mindful').getChecked();",
+                                            "",
+                                            "meditation=container.child('#meditation').getChecked();",
+                                            "howlong = container.child('#howlong').getValue();",
+                                            "",
+                                            "",
+                                            "///////////////////////////////////////////",
+                                            "mylog = JSON.parse(HEART.getItem('local', 'mylog'))||{};",
+                                            "",
+                                            "dead = new Date(Date.now()-Date.now()%(1000*60*60*24*7)+(1000*60*60*24*10));",
+                                            "",
+                                            "if(mylog.expire){",
+                                            "\tif(Date.now()>mylog.expire){",
+                                            "\t\tmylog = {};",
+                                            "\t\tmylog.expire = dead;",
+                                            "\t}",
+                                            "",
+                                            "}else{",
+                                            "\tmylog.expire = dead",
+                                            "}",
+                                            "",
+                                            "if(exercise>0){",
+                                            "\texercised = mylog.exercised||{times:0,days:1,updated:Date.now()};",
+                                            "\texercised.times+=1;",
+                                            "\t",
+                                            "\tupdated = (new Date(exercised.updated)).getDay();",
+                                            "\ttoday = (new Date()).getDay();",
+                                            "\t",
+                                            "\tif(updated!=today){",
+                                            "\t\texercised.days+=1;",
+                                            "\t}",
+                                            "\t",
+                                            "\texercised.updated=Date.now();",
+                                            "\t",
+                                            "\tmylog.exercised=exercised; ",
+                                            "}",
+                                            "",
+                                            "if(mindful){",
+                                            "\tmindful = mylog.mindful||{times:0,days:1,updated:Date.now()};",
+                                            "\tmindful.times+=1;",
+                                            "\t",
+                                            "\tupdated = (new Date(mindful.updated)).getDay();",
+                                            "\ttoday = (new Date()).getDay();",
+                                            "\t",
+                                            "\tif(updated!=today){",
+                                            "\t\tmindful.days+=1;",
+                                            "\t}",
+                                            "\t",
+                                            "\tmindful.updated=Date.now();",
+                                            "\t",
+                                            "\tmylog.mindful=mindful; ",
+                                            "}",
+                                            "",
+                                            "if(meditation){",
+                                            "\tcosting = mylog.meditation||{days:1,minutes:0, updated:Date.now()};",
+                                            "\t",
+                                            "\tupdated = (new Date(costing.updated)).getDay();",
+                                            "\ttoday = (new Date()).getDay();",
+                                            "\t",
+                                            "\tif(updated!=today){",
+                                            "\t\tcosting.days+=1;",
+                                            "\t}",
+                                            "\t",
+                                            "\tcosting.updated=Date.now();",
+                                            "\t",
+                                            "\tif(howlong==0){",
+                                            "\t\tcosting.minutes+=5;\t",
+                                            "\t}else if(howlong==1){",
+                                            "\t\tcosting.minutes+=15;",
+                                            "\t}else if(howlong==2){",
+                                            "\t\tcosting.minutes+=30;\t",
+                                            "\t}",
+                                            "\t",
+                                            "\tmylog.meditation=costing;",
+                                            "}",
+                                            "",
+                                            "mylog = JSON.stringify(mylog);",
+                                            "",
+                                            "HEART.setItem('local', 'mylog', mylog);",
+                                            "",
                                             "this.parent.pop();",
                                             "",
                                             "form = Ext.create('HEART.view.Experience');",

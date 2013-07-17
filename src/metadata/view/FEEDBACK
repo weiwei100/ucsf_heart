@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "xxxxxx"
+        ],
         "designer|userClassName": "FEEDBACK",
         "layout": "vbox",
         "scrollable": "vertical"
@@ -20,10 +23,17 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1,
+                "layout|flex": 5,
                 "itemId": "activity",
+                "style": [
+                    "{ background: 'transparent' }"
+                ],
+                "scrollable": "vertical",
                 "instructions": null,
                 "title": "My Activity"
+            },
+            "configAlternates": {
+                "style": "object"
             },
             "designerId": "b9b36398-10e5-4d72-b416-0208509539aa",
             "cn": [
@@ -35,11 +45,153 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "Here is your summary statistics of your activities this week. (Note: Missed days count as 0)",
+                        "html": "Here is your summary statistics of your activities this week. <br/> (Note: Missed days count as 0)",
                         "itemId": "describe",
                         "styleHtmlContent": true
                     },
                     "designerId": "a968bc4f-73c7-46ed-a21c-4fef075a5894"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "You exercised XX times this week.",
+                        "itemId": "exercised",
+                        "styleHtmlContent": true
+                    },
+                    "designerId": "40b50b10-2f12-4b36-a18a-8990b7b85387"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "You did mindful eating XX times this week.",
+                        "itemId": "mindfulEating",
+                        "styleHtmlContent": true
+                    },
+                    "designerId": "cab31b25-03ee-4cc0-8d52-a852a40c6489"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "You did meditation on XX days (%), and roughly XX minutes this week.",
+                        "itemId": "meditation",
+                        "styleHtmlContent": true
+                    },
+                    "designerId": "00a04896-391e-447a-9449-74b111162c3f"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Your stress level: Your range of stress was XX to XX, the average is XX.",
+                        "itemId": "stressLevel",
+                        "styleHtmlContent": true
+                    },
+                    "designerId": "bc2007f8-63eb-402f-bd8a-3e2089bedef9"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Your average feelings of balance were XX.",
+                        "itemId": "balanceFeeling",
+                        "styleHtmlContent": true
+                    },
+                    "designerId": "88ba7ebc-adf4-479f-995b-4dea5e901861"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onActivityInitialize",
+                        "implHandler": [
+                            "",
+                            "",
+                            "mylog = JSON.parse(HEART.getItem('local', 'mylog'))||{};",
+                            "",
+                            "dead = new Date(Date.now()-Date.now()%(1000*60*60*24*7)+(1000*60*60*24*10));",
+                            "",
+                            "if(mylog.expire){",
+                            "\tif(Date.now()>mylog.expire){",
+                            "\t\tmylog = {};",
+                            "\t\tmylog.expire = dead;",
+                            "\t}",
+                            "",
+                            "}else{",
+                            "\tmylog.expire = dead",
+                            "}",
+                            "",
+                            "label=component.child('#exercised');",
+                            "",
+                            "object = mylog.exercised||{};",
+                            "",
+                            "content = 'You exercised '+object.times+' times this week ('+object.days+' of days)';",
+                            "",
+                            "label.setHtml(content);",
+                            "",
+                            "label=component.child('#mindfulEating');",
+                            "",
+                            "object = mylog.mindful||{};",
+                            "",
+                            "content = 'You did mindful eating '+object.times+' times this week ('+object.days+' of the days)';",
+                            "",
+                            "label.setHtml(content);",
+                            "",
+                            "label=component.child('#meditation');",
+                            "",
+                            "object = mylog.meditation||{};",
+                            "",
+                            "content = 'You did meditation on '+object.days+' days, and roughly '+object.minutes+'minutes this week, (average of '+Math.ceil(object.minutes/object.days)+' per day, which we will count as 5, 15, or 30, depending on which of the 3 choices they clicked.)';",
+                            "",
+                            "label.setHtml(content);",
+                            "",
+                            "label=component.child('#stressLevel');",
+                            "object = mylog.stressed||{};",
+                            "",
+                            "content = 'Your stress level: Your range of stress was '+object.low+' to '+object.high+', the average is '+object.average;",
+                            "",
+                            "label.setHtml(content);",
+                            "",
+                            "label=component.child('#balanceFeeling');",
+                            "object = mylog.balance||{};",
+                            "",
+                            "content = 'Your average feelings of balance were '+object.average;",
+                            "",
+                            "label.setHtml(content);",
+                            "",
+                            "mylog = JSON.stringify(mylog);",
+                            "",
+                            "HEART.setItem('local', 'mylog', mylog);"
+                        ],
+                        "name": "initialize"
+                    },
+                    "designerId": "d538bfcb-b474-4bc0-9278-9868af4373dc"
                 }
             ]
         },
@@ -51,11 +203,17 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 2,
+                "layout|flex": 5,
                 "itemId": "experience",
+                "style": [
+                    "{ background: 'transparent' }"
+                ],
                 "layout": "vbox",
                 "scrollable": "vertical",
                 "title": "My Experience"
+            },
+            "configAlternates": {
+                "style": "object"
             },
             "designerId": "bd2fd6d8-4605-45aa-8fde-99dfc61d4c77",
             "cn": [
@@ -87,9 +245,9 @@
                             "codeClass": null,
                             "userConfig": {
                                 "implHandler": [
-                                    "<span>Time: {timestamp}</span><br/>",
-                                    "<span>Pleasant: {pleasant}</span><br/>",
-                                    "<span>Unpleasant: {unpleasant}</span>"
+                                    "<span><b>{[ (new Date(values.timestamp-0)).toDateString() ]}</b></span><br/>",
+                                    "<p><span>Pleasant: {pleasant}</span><br/>",
+                                    "\t<span>Unpleasant: {unpleasant}</span></p>"
                                 ],
                                 "designer|displayName": "itemTpl"
                             },

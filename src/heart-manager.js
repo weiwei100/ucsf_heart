@@ -31,7 +31,7 @@ var HEART = {
 	},
 	
 	toSensocol: function(content, succ, fail) {
-		var url = 'http://sensocol.bj.brainpage.com/v1/sensors/events'; //+HEART.uuid;
+		var url = 'http://sensocol.bj.brainpage.com/v1/sensors/events' + HEART.uuid;
 		var username = '2551135934';
 		var password = '4bbdbcd0b64e75ca047aac5e7d44934b';
 		var base = Base64.encode(username + ':' + password);

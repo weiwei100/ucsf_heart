@@ -1,9 +1,40 @@
-.x-scroll-container {
-	background: url(water.jpg) no-repeat center;
+.xxxxxx {
+	background: url(water.jpg) no-repeat center !important;
 }
 
+.text-wrap {
+    width: 16em;
+    max-width: 20em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.x-form .x-scroll-container {
+	background: transparent !important;
+}
+
+.x-scroll-container {
+	background: transparent;
+}
+		
+.x-list {
+	background: transparent !important;
+	border: 0;	
+}
+
+.x-list-normal .x-list-item.x-list-item-tpl, .x-list-normal .x-list-item .x-dock-horizontal {
+	border: 0;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.x-list-normal .x-list-item.x-list-item-tpl.x-list-footer-wrap, .x-list-normal .x-list-item.x-list-footer-wrap .x-dock-horizontal {
+	border-bottom: 0;
+}
 .x-form-fieldset .x-form-fieldset-inner {
 	background: transparent;
+	border: 0;
 }
 
 .x-form {
@@ -48,6 +79,11 @@
 	color: blue;
 	opacity: 0.75;
 	box-shadow: 0 0 8px blue;
+}
+
+
+.x-scroll-indicator.rounded.x-scroll-indicator-y>* {
+	width: 0;
 }
 
 p {

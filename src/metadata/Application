@@ -35,16 +35,17 @@
             "EMIAudio5",
             "EMIAudio6",
             "EMIAudio7",
-            "MindfulnessHabit",
+            "EMIHabit",
             "DAILYLOG",
             "Experience",
             "FEEDBACK",
-            "EMAType6",
             "EMAType7",
             "EMIWkAheadSet",
             "IntentionRemind",
             "QUOTES",
-            "IntentionConnect"
+            "IntentionConnect",
+            "EMIMoments",
+            "EMAType6"
         ],
         "requires": [
             "Ext.device.Connection"

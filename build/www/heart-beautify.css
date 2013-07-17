@@ -1,3 +1,160 @@
+.xxxxxx {
+	background: url(water.jpg) no-repeat center !important;
+}
+
+.text-wrap {
+    width: 16em;
+    max-width: 20em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.x-form .x-scroll-container {
+	background: transparent !important;
+}
+
+.x-scroll-container {
+	background: transparent;
+}
+		
+.x-list {
+	background: transparent !important;
+	border: 0;	
+}
+
+.x-list-normal .x-list-item.x-list-item-tpl, .x-list-normal .x-list-item .x-dock-horizontal {
+	border: 0;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.x-list-normal .x-list-item.x-list-item-tpl.x-list-footer-wrap, .x-list-normal .x-list-item.x-list-footer-wrap .x-dock-horizontal {
+	border-bottom: 0;
+}
+.x-form-fieldset .x-form-fieldset-inner {
+	background: transparent;
+	border: 0;
+}
+
+.x-form {
+	background: transparent;
+}
+
+.x-form-label {
+	background: transparent;
+}
+
+.x-form-field {
+	background: transparent;
+}
+
+.x-field {
+	background: transparent;
+}
+
+.x-field-input {
+	background: transparent;
+}
+
+.x-field-select {
+	background: transparent;
+}
+
+.xhtml {
+	background: transparent;
+}
+
+.x-panel {
+	background: transparent;
+}
+
 .x-button {
-	margin: 16px 4px;
+	border: 0;
+	margin: 8px 4px;
+	background: rgba(200,200,200,0.55);
+}
+
+.x-button-pressing {
+	color: blue;
+	opacity: 0.75;
+	box-shadow: 0 0 8px blue;
+}
+
+
+.x-scroll-indicator.rounded.x-scroll-indicator-y>* {
+	width: 0;
+}
+
+p {
+	padding: 8px;	
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 222px;
+	height: 222px;
+	margin: 50px auto;
+	position: relative;
+	background: #F9F9F9;
+	box-shadow: 0 0 8px white;
+}
+
+.pie {
+	width: 50%;
+	height: 100%;
+	background: #08C;
+	position: absolute;
+	-webkit-transform-origin: 100% 50%;
+	border: 20px solid rgba(0, 0, 0, 0.4);
+}
+
+.spinner {
+	z-index: 200;
+	background: #08C;
+	border-right: none;
+	-webkit-animation: rota 20s linear;
+	-webkit-animation-fill-mode: forwards;
+	border-radius: 100% 0 0 100% / 50% 0 0 50%;
+}
+
+
+.filler {
+	left: 50%;
+	opacity: 0;
+	z-index: 100;
+	border-left: none;
+	border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+	-webkit-animation: fill 20s steps(1, end);
+	-webkit-animation-fill-mode: forwards;	
+}
+
+
+.mask {	
+	opacity: 1;
+	width: 50%;
+	height: 100%;
+	z-index: 300;
+	position: absolute;
+	background: inherit;
+	-webkit-animation: mask 20s steps(1, end);
+	-webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rota {
+	0%		{-webkit-transform: rotate(0deg);}
+	100%	{-webkit-transform: rotate(360deg);}
+}
+			
+@-webkit-keyframes fill {
+	0%	{opacity: 0;}
+	50%, 100% {opacity: 1;}
+}
+			
+@-webkit-keyframes mask{
+	0% {opacity: 1;}
+	50%, 100% {opacity: 0;}
 }
