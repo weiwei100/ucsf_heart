@@ -81,7 +81,7 @@ Ext.define('HEART.view.DAILYLOG', {
 						itemId: 'meditation',
 						styleHtmlContent: true,
 						label: 'Any formal meditation today?',
-						labelAlign: 'top',
+						labelAlign: 'left',
 						labelWidth: '',
 						labelWrap: true
 					},
@@ -166,6 +166,7 @@ Ext.define('HEART.view.DAILYLOG', {
 						itemId: 'mindful',
 						label: 'Any mindful eating today?',
 						labelWidth: '',
+						labelAlign: 'left',
 						labelWrap: true,
 						listeners: [
 							{

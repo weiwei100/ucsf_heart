@@ -95,6 +95,11 @@
 .x-scroll-container {
 	background: transparent;
 }
+
+.x-input-text{
+	border-bottom: 1px solid #aaa;
+	margin: 0 10px;
+}
 		
 .x-list {
 	background: transparent !important;
