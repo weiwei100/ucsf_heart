@@ -117,11 +117,13 @@ Ext.define('HEART.view.DAILYLOG', {
 							{
 								xtype: 'label',
 								html: '&nbsp;Any&nbsp;',
+								cls: 'x-form-label-font thefirst',
 								itemId: 'left'
 							},
 							{
 								xtype: 'label',
 								html: 'mindful eating',
+								cls: 'x-form-label-font',
 								itemId: 'middle',
 								style: {
 									color: 'blue'
@@ -157,6 +159,7 @@ Ext.define('HEART.view.DAILYLOG', {
 							{
 								xtype: 'label',
 								html: '&nbsp;today?',
+								cls: 'x-form-label-font ',
 								itemId: 'right'
 							}
 						]
@@ -165,8 +168,8 @@ Ext.define('HEART.view.DAILYLOG', {
 						xtype: 'checkboxfield',
 						itemId: 'mindful',
 						label: 'Any mindful eating today?',
-						labelWidth: '',
 						labelAlign: 'left',
+						labelWidth: '',
 						labelWrap: true,
 						listeners: [
 							{
