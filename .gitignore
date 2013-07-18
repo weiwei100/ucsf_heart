@@ -1,4 +1,6 @@
 build/android/bin
+/build/android/assets/www/audios
+/build/www/audios
 */lib
 */target
 */bin

@@ -47,7 +47,7 @@ Ext.define('HEART.view.MainTabs', {
 				items: [
 					{
 						xtype: 'label',
-						html: '<center><img src="heart_icon.png" height=111></center>',
+						html: '<center><img src="heart-icon.png" height=111></center>',
 						itemId: 'image'
 					},
 					{

@@ -1,5 +1,5 @@
 .homePanel {
-	background: url(images/image2.png) no-repeat center center fixed !important;
+	background: url(images/image13.png) no-repeat center center fixed !important;
  	background-size: cover !important;
 }
 
@@ -27,6 +27,20 @@
 	background: url(images/image7.png) no-repeat center center fixed !important;
  	background-size: cover !important;
 }
+
+.x-form-label-font {
+	font-size: .8em;
+	color:#333;
+	padding: .6em 0;
+	text-shadow: rgba(255,255,255,0.25) 0 0.08em 0;
+	font-weight: bold;
+}
+
+ .x-input-checkbox{
+ 	color: white;
+ }
+
+.thefirst{padding-left: .6em}
 
 .experience {
 	background: url(images/image5.png) no-repeat center center fixed !important;
@@ -94,6 +108,11 @@
 
 .x-scroll-container {
 	background: transparent;
+}
+
+.x-form-label div{
+	margin-bottom: -30px;
+	padding: 0 20px;
 }
 
 .x-input-text{

@@ -49,14 +49,14 @@ Ext.define('HEART.view.EMAType5', {
 		listeners: [
 			{
 				fn: 'onDoneRelease',
-				event: 'release',
+				event: 'tap',
 				delegate: '#done'
 			}
 		]
 	},
 
 	onDoneRelease: function(button, e, eOpts) {
-		experience=button.parent.child('#stress').getValue();
+		experience=button.parent.child('#experience').getValue();
 
 		user = HEART.getItem('local', 'user');
 		user = JSON.parse(user);
@@ -139,7 +139,7 @@ Ext.define('HEART.view.EMAType5', {
 		mylog = JSON.stringify(mylog);
 		HEART.setItem('local', 'mylog', mylog);
 
-		button.fireEvent('tap');
+		//button.fireEvent('tap');
 	}
 
 });
