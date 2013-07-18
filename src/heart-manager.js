@@ -46,7 +46,6 @@ var HEART = {
 		
 		succ = function(response) {
 			console.log(response);
-			HEART.sync();
 		};
 
 		fail = function(response) {
@@ -135,7 +134,7 @@ var HEART = {
 		
 	},
 	
-	notNow: function( content ) {
+	notNow: function(content) {
 		var url = 'http://app.brainpage.com/ucsf/api/notices';
 		var username = 'breathwear';
 		var password = 'deepbreath';

@@ -150,18 +150,18 @@
                                     "fset.child('#guide').hide();",
                                     "",
                                     "setTimeout(function(){",
-                                    "\t",
+                                    "",
                                     "\tfset.child('#timer').show();",
-                                    "\t",
+                                    "",
                                     "\tsetTimeout(function(){",
-                                    "\t",
-                                    "\t\tfset.child('#timer').hide();",
-                                    "\t",
+                                    "",
+                                    "\t\t//fset.child('#timer').hide();",
+                                    "",
                                     "\t\tsetTimeout(function(){",
-                                    "\t\t\tfset.child('#done').show();",
+                                    "\t\t\t//fset.child('#done').show();",
                                     "\t\t}, 1024);",
-                                    "\t",
-                                    "\t}, 20000);",
+                                    "",
+                                    "\t}, 21000);",
                                     "",
                                     "",
                                     "}, 1024);",
@@ -223,6 +223,59 @@
                     "codeClass": null,
                     "userConfig": {
                         "hidden": true,
+                        "itemId": "timer",
+                        "style": [
+                            "{ ",
+                            "\tfont-size: 90px;",
+                            "\t",
+                            "}"
+                        ]
+                    },
+                    "configAlternates": {
+                        "style": "object"
+                    },
+                    "designerId": "03fa5266-72e6-4a68-b866-9513b0571b2e",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTimerShow",
+                                "implHandler": [
+                                    "count = 20 - 0;",
+                                    "",
+                                    "setInterval(function(){",
+                                    "\t",
+                                    "\tif(count<1){",
+                                    "\t\tcomponent.hide();",
+                                    "component.parent.child('#done').show();",
+                                    "\t\treturn;",
+                                    "\t}",
+                                    "\t",
+                                    "component.setHtml('<center class=\"huge-text\">'+count+'</center>');",
+                                    "\tcount-=1;",
+                                    "\t",
+                                    "}, 1000);"
+                                ],
+                                "name": "show"
+                            },
+                            "designerId": "37826a75-2e6a-47e3-a5ac-5070f46f1830"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
                         "hideAnimation": [
                             "{",
                             "\ttype: 'fadeOut',",
@@ -230,7 +283,7 @@
                             "}"
                         ],
                         "html": "<div class=\"wrapper\">   <div class=\"pie spinner\"></div>   <div class=\"pie filler\"></div>   <div class=\"mask\"></div> </div>",
-                        "itemId": "timer",
+                        "itemId": "reser",
                         "showAnimation": [
                             "{",
                             "\ttype: 'fadeIn',",

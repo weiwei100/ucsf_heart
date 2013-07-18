@@ -1,3 +1,9 @@
+.huge-text {
+	text-shadow: 0 0 8px green;
+	font-size: 111px;
+	color: #333;
+}
+
 .homePanel {
 	background: url(images/image13.png) no-repeat center center fixed !important;
  	background-size: cover !important;
@@ -168,7 +174,7 @@ p {
 	padding: 8px;	
 }
 
-/*************************/
+/*** CSS Pie Timer ****/
 
 * {
 	box-sizing: border-box;

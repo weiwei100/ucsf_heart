@@ -154,7 +154,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 333,
+                        "height": 111,
                         "hidden": true,
                         "hideAnimation": [
                             "{ type: 'fade', duration: 4096 }"

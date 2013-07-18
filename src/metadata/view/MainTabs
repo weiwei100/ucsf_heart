@@ -69,7 +69,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<center><img src=\"heart-icon.png\" height=333></center>",
+                        "html": "<center><img src=\"heart-icon.png\" height=111></center>",
                         "itemId": "image"
                     },
                     "designerId": "cc1300db-e331-42b2-bc5e-59935a8a3a2a"
@@ -226,13 +226,13 @@
                             "",
                             "container.child('#intention').element.on({",
                             "\ttap : function(e, t){",
-                            "\t\t",
+                            "",
                             "\t\tcontent = {};",
                             "\t\tcontent.type = 'popup';",
                             "\t\tcontent.action = 'show-intention';",
-                            "\t\t",
+                            "",
                             "\t\tHEART.toSensor(content);",
-                            "\t\t",
+                            "",
                             "\t\tExt.create('Ext.Panel', {",
                             "\t\t\thideOnMaskTap: true,",
                             "\t\t\tautoDestroy: true, ",
