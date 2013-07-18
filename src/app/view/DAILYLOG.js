@@ -180,6 +180,7 @@ Ext.define('HEART.view.DAILYLOG', {
 						itemId: 'mindful',
 						label: 'Any mindful eating today?',
 						labelWidth: '',
+						labelAlign: 'left',
 						labelWrap: true,
 						name: 'mindful',
 						listeners: [

@@ -21,7 +21,9 @@ Ext.define('HEART.controller.MainController', {
 	},
 
 	launch: function() {
+
 		if(Ext.device.Connection.isOnline()){
+			HEART.uuid=device.uuid;
 			HEART.getQuotes();
 			HEART.sync();
 		}

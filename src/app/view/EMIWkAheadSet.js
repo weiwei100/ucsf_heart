@@ -206,10 +206,8 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 
 		options = [];
 
-		for( i=0; i<24; i++ ){	
+		for( i=5; i<24; i++ ){	
 			option = { text: i +': 00', value: i };	
-			options.push(option);
-			option = { text: i +': 30', value: i+0.5 };
 			options.push(option);
 		}
 
