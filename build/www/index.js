@@ -43,6 +43,7 @@ function initPNHandler() {
 	
 	if(type=='QUOTES'){
 		title=title.substring(0,title.length-3);
+		HEART.goola='pushwoosh';
 		form.child('#content').child('#quote').setHtml(title);
 	}
     Ext.Viewport.getActiveItem().setActiveItem(2);
