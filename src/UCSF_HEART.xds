@@ -316,14 +316,6 @@
             ],
             "className": "IntentionConnect"
         },
-        "f33623a8-ac15-476d-af85-819eac5372cf": {
-            "paths": [
-                "metadata/view/EMIMoments",
-                "app/view/override/EMIMoments.js",
-                "app/view/EMIMoments.js"
-            ],
-            "className": "EMIMoments"
-        },
         "d3bbe1ab-633c-4374-99df-15ed7e7b7748": {
             "paths": [
                 "metadata/view/EMAType6",
@@ -359,7 +351,6 @@
             "afbebebd-90df-4c0b-9fcb-504a7580fdeb",
             "a31b26b2-4771-449e-a519-c49118d76fe6",
             "9f498051-2056-4b3b-a785-c7106ad7991e",
-            "f33623a8-ac15-476d-af85-819eac5372cf",
             "70e406ea-b180-4285-b394-7afe7ae1c037",
             "7d969f35-80f6-497f-9677-8bc260ef4b83",
             "df2a85a8-d4f3-4e68-bab4-1a38a66b43db",

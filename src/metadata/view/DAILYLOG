@@ -558,6 +558,7 @@
                                             "this.parent.pop();",
                                             "",
                                             "form = Ext.create('HEART.view.Experience');",
+                                            "form.emxType='Experience';",
                                             "this.parent.push(form);",
                                             "",
                                             "HEART.toSensor(content);"
@@ -591,6 +592,8 @@
                                     "userConfig": {
                                         "fn": "onNoTap",
                                         "implHandler": [
+                                            "HEART.notNow({page:this.emxType});",
+                                            "",
                                             "this.parent.pop();"
                                         ],
                                         "name": "tap"

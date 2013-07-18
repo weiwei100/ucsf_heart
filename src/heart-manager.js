@@ -135,6 +135,29 @@ var HEART = {
 		
 	},
 	
+	notNow: function( content ) {
+		var url = 'http://app.brainpage.com/ucsf/api/notices';
+		var username = 'breathwear';
+		var password = 'deepbreath';
+	
+		var base = Base64.encode(username + ':' + password);
+		
+		var auth = "Basic " + base;
+		
+		content.uuid=HEART.uuid;
+		
+		succ = function(response){
+			console.log(response);
+		};
+		
+		fail = function(response){
+			console.log(response);
+		};
+		
+		HEART.request(url, auth, content, succ, fail);
+		
+	},
+	
 	uuid: 'dropboxisawesome',
 	
 	audioCallback: {},

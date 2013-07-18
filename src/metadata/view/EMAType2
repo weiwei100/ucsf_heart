@@ -64,6 +64,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "pleasantness",
                         "label": "The amount of pleasant feeling I am experiencing is:  <div><span style=\"float:right\">a lot</span><span>none</span></span>",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -82,6 +83,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "unpleasantness",
                         "label": "The amount of unpleasant feeling I am experiencing is:  <div><span style=\"float:right\">a lot</span><span>none</span></span>",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -100,6 +102,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "energy",
                         "label": "My energy level in this moment is:  <div><span style=\"float:right\">a lot</span><span>none</span></span>",
                         "labelAlign": "top",
                         "labelWrap": true,
@@ -120,6 +123,7 @@
                     "userConfig": {
                         "action": "exercise",
                         "disabled": null,
+                        "itemId": "done",
                         "text": "Done"
                     },
                     "designerId": "929d2455-ecb1-468a-8631-a3afa2fd7344",

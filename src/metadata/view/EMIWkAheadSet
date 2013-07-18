@@ -326,6 +326,8 @@
                             "userConfig": {
                                 "fn": "onNotNowTap",
                                 "implHandler": [
+                                    "HEART.notNow({page:this.emxType});",
+                                    "",
                                     "this.parent.pop();"
                                 ],
                                 "name": "tap"

@@ -28,20 +28,6 @@
  	background-size: cover !important;
 }
 
-.x-form-label-font {
-	font-size: .8em;
-	color:#333;
-	padding: .6em 0;
-	text-shadow: rgba(255,255,255,0.25) 0 0.08em 0;
-	font-weight: bold;
-}
-
- .x-input-checkbox{
- 	color: white;
- }
-
-.thefirst{padding-left: .6em}
-
 .experience {
 	background: url(images/image5.png) no-repeat center center fixed !important;
  	background-size: cover !important;

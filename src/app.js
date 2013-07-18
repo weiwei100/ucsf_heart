@@ -61,7 +61,6 @@ Ext.application({
 		'IntentionRemind',
 		'QUOTES',
 		'IntentionConnect',
-		'EMIMoments',
 		'EMAType6'
 	],
 	controllers: [
