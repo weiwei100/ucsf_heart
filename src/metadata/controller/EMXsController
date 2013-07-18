@@ -115,6 +115,8 @@
                 "implHandler": [
                     "EMX = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio4', 'EMIAudio7'];",
                     "",
+                    "EMX = ['EMITensionCheck'];",
+                    "",
                     "type = EMX[Math.floor(EMX.length*Math.random())]; ",
                     "",
                     "form = Ext.create('HEART.view.'+type);",

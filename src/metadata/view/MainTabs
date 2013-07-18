@@ -550,8 +550,7 @@
                                             "button.parent.child('#buttons').show();",
                                             "",
                                             "this.getTabBar().show();",
-                                            "this.setActiveItem(0);",
-                                            ""
+                                            "this.setActiveItem(0);"
                                         ],
                                         "name": "tap"
                                     },

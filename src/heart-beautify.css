@@ -168,13 +168,15 @@ p {
 	padding: 8px;	
 }
 
+/*************************/
+
 * {
 	box-sizing: border-box;
 }
 
 .wrapper {
-	width: 222px;
-	height: 222px;
+	width: 333px;
+	height: 333px;
 	margin: 50px auto;
 	position: relative;
 	background: #F9F9F9;

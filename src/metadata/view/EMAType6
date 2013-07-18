@@ -103,7 +103,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "fn": "onDoneRelease",
+                                "fn": "onDoneTap",
                                 "implHandler": [
                                     "stress=button.parent.child('#stress').getValue();",
                                     "",
@@ -134,8 +134,12 @@
                                     "if(stress>stressed.high){",
                                     "\tstressed.high=stress;",
                                     "}else if(stress<stressed.low){",
-                                    "\tstressed.low=stressed",
+                                    "\tstressed.low=stress",
                                     "}",
+                                    "",
+                                    "stressed.average-=0;",
+                                    "stressed.count-=0;",
+                                    "stress-=0;",
                                     "",
                                     "stressed.average=(stressed.average*stressed.count+stress)/(stressed.count+1);",
                                     "",
@@ -144,15 +148,11 @@
                                     "mylog.stressed=stressed;",
                                     "",
                                     "mylog = JSON.stringify(mylog);",
-                                    "HEART.setItem('local', 'mylog', mylog);",
-                                    "",
-                                    "",
-                                    "button.fireEvent('tap');"
+                                    "HEART.setItem('local', 'mylog', mylog);"
                                 ],
                                 "delay": null,
                                 "single": null,
-                                "name": "release",
-                                "order": "before"
+                                "name": "tap"
                             },
                             "designerId": "138ade4d-6924-453c-976d-00ffe68b5632"
                         }

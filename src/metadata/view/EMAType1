@@ -103,7 +103,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "fn": "onDoneRelease",
+                                "fn": "onDoneTap",
                                 "implHandler": [
                                     "stress=button.parent.child('#stress').getValue();",
                                     "",
@@ -125,6 +125,7 @@
                                     "\t\tsetTimeout(function(){",
                                     "",
                                     "\t\t\tform = Ext.create('HEART.view.EMAType6');",
+                                    "\t\t\tform.emxType = 'EMAType6';",
                                     "\t\t\tform.goola = 'stressed';",
                                     "",
                                     "\t\t\tExt.Viewport.getActiveItem().setActiveItem(2);",
@@ -148,6 +149,7 @@
                                     "\t\t\tsetTimeout(function(){",
                                     "",
                                     "\t\t\t\tform = Ext.create('HEART.view.'+this.emxType);",
+                                    "\t\t\t\tform.emxType = this.emxType;",
                                     "\t\t\t\tform.goola = 'followup';",
                                     "",
                                     "\t\t\t\tExt.Viewport.getActiveItem().setActiveItem(2);",
@@ -163,6 +165,7 @@
                                     "\t\t\t\tif(user.stress>50){",
                                     "",
                                     "\t\t\t\t\tform = Ext.create('HEART.view.'+this.emxType);",
+                                    "\t\t\t\t\tform.emxType = this.emxType;",
                                     "\t\t\t\t\tform.goola = 'followup';",
                                     "",
                                     "\t\t\t\t\tExt.Viewport.getActiveItem().setActiveItem(2);",
@@ -197,8 +200,12 @@
                                     "if(stress>stressed.high){",
                                     "\tstressed.high=stress;",
                                     "}else if(stress<stressed.low){",
-                                    "\tstressed.low=stressed",
+                                    "\tstressed.low=stress",
                                     "}",
+                                    "",
+                                    "stressed.average-=0;",
+                                    "stressed.count-=0;",
+                                    "stress-=0;",
                                     "",
                                     "stressed.average=(stressed.average*stressed.count+stress)/(stressed.count+1);",
                                     "",
@@ -207,14 +214,11 @@
                                     "mylog.stressed=stressed;",
                                     "",
                                     "mylog = JSON.stringify(mylog);",
-                                    "HEART.setItem('local', 'mylog', mylog);",
-                                    "",
-                                    "button.fireEvent('tap');"
+                                    "HEART.setItem('local', 'mylog', mylog);"
                                 ],
                                 "delay": null,
                                 "single": null,
-                                "name": "release",
-                                "order": "before"
+                                "name": "tap"
                             },
                             "designerId": "e29e96a8-b3cc-46c2-9a07-3b3cb814802d"
                         }

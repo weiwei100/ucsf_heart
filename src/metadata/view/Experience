@@ -181,6 +181,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "action": "exercise",
                         "hideAnimation": [
                             "{ type: 'fadeOut', duration: 2048 }"
                         ],
@@ -191,6 +192,13 @@
                         "hideAnimation": "object"
                     },
                     "designerId": "57559ca4-9faa-4e5c-be02-7f7b950f2a76",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ],
                     "cn": [
                         {
                             "type": "basiceventbinding",

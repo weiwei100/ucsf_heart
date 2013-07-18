@@ -183,15 +183,15 @@
                                 "fn": "onDoneTap",
                                 "implHandler": [
                                     "if(this.goola=='stressed' && Math.random()>2/3){",
-                                    "",
+                                    "\t",
                                     "\tsetTimeout(function(){",
                                     "",
                                     "\t\tform = Ext.create('HEART.view.EMAType1');",
+                                    "\t\tform.emxType = 'EMAType1';",
                                     "\t\tform.goola = 'stressed';",
                                     "",
                                     "\t\tExt.Viewport.getActiveItem().setActiveItem(2);",
                                     "\t\tExt.Viewport.getActiveItem().getActiveItem().push(form);",
-                                    "",
                                     "\t}, 1000*60*15);",
                                     "",
                                     "}"
