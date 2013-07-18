@@ -113,7 +113,7 @@ Ext.define('HEART.controller.EMXsController', {
 			this.getExercises().pop();
 		}else if(form.goola=='stressed'){
 			this.getMainTabs().setActiveItem(0);
-		}else if(form.goola=='push'){
+		}else if(form.goola=='pushwoosh'){
 			this.getExercises().pop();
 			this.getMainTabs().setActiveItem(0);
 		}else{
