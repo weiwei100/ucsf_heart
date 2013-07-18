@@ -102,7 +102,6 @@
                                             "value = textfield.getValue().toUpperCase();",
                                             "button = this.child('#fset').child('#done');",
                                             "",
-                                            "",
                                             "if(this.doValidation()){",
                                             "\tbutton.enable();",
                                             "}else{",

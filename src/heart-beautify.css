@@ -1,5 +1,5 @@
 .homePanel {
-	background: url(images/image14.png) no-repeat center center fixed !important;
+	background: url(images/image13.png) no-repeat center center fixed !important;
  	background-size: cover !important;
 }
 
@@ -94,16 +94,6 @@
 
 .x-scroll-container {
 	background: transparent;
-}
-
-.x-form-label div{
-	margin-bottom: -30px;
-	padding: 0 20px;
-}
-
-.x-input-text{
-	border-bottom: 1px solid #aaa;
-	margin: 0 10px;
 }
 		
 .x-list {

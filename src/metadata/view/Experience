@@ -154,7 +154,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 200,
+                        "height": 333,
                         "hidden": true,
                         "hideAnimation": [
                             "{ type: 'fade', duration: 4096 }"
@@ -165,7 +165,7 @@
                             "{ type: 'fade', duration: 4096 }"
                         ],
                         "styleHtmlContent": true,
-                        "src": "heart_icon.png"
+                        "src": "heart-icon.png"
                     },
                     "configAlternates": {
                         "hideAnimation": "object",
