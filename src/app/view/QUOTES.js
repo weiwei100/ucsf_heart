@@ -60,15 +60,14 @@ Ext.define('HEART.view.QUOTES', {
 
 									}	
 
-									wrapped = 'This is wrapped';
-
-									if(quote.length>60){
-										wrapped = quote.substring(0, 60);
-										wrapped+='...';
-										component.setHtml(wrapped);
-									}else{
-										component.setHtml(quote);
-									}
+									wrapped = '';
+									quotewords = quote.split(" ", 10);
+									for (var i = 0; i< 10; i++) {
+										wrapped += quotewords[i];
+										wrapped += " ";
+									};
+									wrapped+='...';
+									component.setHtml(wrapped);
 
 									component.element.on({
 

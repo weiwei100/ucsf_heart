@@ -26,12 +26,14 @@ Ext.application({
 	models: [
 		'Feed',
 		'EMX',
-		'Experience'
+		'Experience',
+		'Quote'
 	],
 	stores: [
 		'Feeds',
 		'EMXs',
-		'Experiences'
+		'Experiences',
+		'Quotes'
 	],
 	views: [
 		'MainTabs',

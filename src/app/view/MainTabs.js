@@ -40,9 +40,6 @@ Ext.define('HEART.view.MainTabs', {
 				iconCls: 'home',
 				cls: 'homePanel',
 				id: 'homePanel',
-				style: {
-					background: 'url(water.jpg) no-repeat center !important'
-				},
 				layout: {
 					type: 'vbox'
 				},
