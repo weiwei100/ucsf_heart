@@ -25,10 +25,13 @@ function initPNHandler() {
 	form = Ext.create('HEART.view.' + type);
 	form.emxType = type;
 	form.goola = 'exercises';
-
+	
+	if(type=='QUOTES'){
+		title=title.substring(0,title.length-3);
+		form.child('#content').child('#quote').setHtml(title);
+	}
     Ext.Viewport.getActiveItem().setActiveItem(2);
 	Ext.Viewport.getActiveItem().getActiveItem().push(form);
-	
 	content = {};
     content.type = type;
     content.action = 'show-pushed';
