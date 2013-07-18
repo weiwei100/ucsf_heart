@@ -411,18 +411,14 @@ Ext.define('HEART.view.MainTabs', {
 		for( i=5; i<12; i++ ){	
 			option = { text: i +': 00', value: i };	
 			awakeOptions.push(option);
-			option = { text: i +': 30', value: i+0.5 };
-			awakeOptions.push(option);
 		}
 
 		settings.child('#awake').setOptions(awakeOptions);
 
 		sleepOptions = [];
 
-		for( i=18; i<24; i++ ){	
+		for( i=17; i<24; i++ ){	
 			option = { text: i +': 00', value: i };	
-			sleepOptions.push(option);
-			option = { text: i +': 30', value: i+0.5 };
 			sleepOptions.push(option);
 		}
 
@@ -430,10 +426,8 @@ Ext.define('HEART.view.MainTabs', {
 
 		dailyOptions = [];
 
-		for( i=17; i<24; i++ ){
+		for( i=5; i<24; i++ ){
 			option = { text: i+": 00", value: i };
-			dailyOptions.push(option);
-			option = { text: i+": 30", value: i+0.5 };
 			dailyOptions.push(option);
 		}
 
