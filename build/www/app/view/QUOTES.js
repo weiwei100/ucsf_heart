@@ -44,30 +44,30 @@ Ext.define('HEART.view.QUOTES', {
 									quotes=Ext.getStore('Quotes'); 
 									count=quotes.getAllCount();
 									quote='This is quote';
-
-									if(this.wrapped){
+									
+									if(this){
 										for(i=0;i<count;i++){
 											text = quotes.getAt(i).data.text;
-											if(text.indexOf(this.wrapped)>=0){
+											if(text.indexOf(this)>=0){
 												quote=text; break;
 											}
+											//component.setHtml(this.parent.parent.wrapped+'...');
 										}	
 									}else{
 
 										index=Math.ceil(Math.random()*count);
 
 										quote=quotes.getAt(index).data.text;
-
-									}	
-									
-									wrapped = '';
-									quotewords = quote.split(" ", 10);
-									for (var i = 0; i< 10; i++) {
+										
+										wrapped = '';
+										quotewords = quote.split(" ", 10);
+										for (var i = 0; i< 10; i++) {
 											wrapped += quotewords[i];
 											wrapped += " ";
-									};
-									wrapped+='...';
-									component.setHtml(wrapped);
+										};
+										wrapped+='...';
+										//component.setHtml(wrapped);
+									}
 
 									component.element.on({
 
@@ -78,7 +78,7 @@ Ext.define('HEART.view.QUOTES', {
 
 											HEART.toSensor(content);
 
-											component.setHtml(quote);
+											//component.setHtml(quote);
 										}
 									});
 								},

@@ -3,7 +3,7 @@ function initPNHandler() {
     var pushNotification = window.plugins.pushNotification;
     pushNotification.onDeviceReady();
  
-    pushNotification.registerDevice(
+  /*  pushNotification.registerDevice(
         { projectid: "535622621184", appid : "B7BBF-34717" },
         function(status) {
             var pushToken = status;
@@ -12,7 +12,22 @@ function initPNHandler() {
         function(status) {
             console.warn(JSON.stringify(['failed to register ', status]));
         }
-    );
+    );*/
+    
+    pushNotification.registerDevice({alert:true, badge:true, sound:true, projectid: "535622621184", appid : "B7BBF-34717"},
+                                    function(status) {
+                                    var deviceToken = status['deviceToken'];
+                                    console.warn('registerDevice: ' + deviceToken);
+                                    HEART.setItem('local', 'deviceToken', deviceToken);
+                                    HEART.uuid = deviceToken;
+                                    },
+                                    function(status) {
+                                    
+                                    console.warn('failed to register : ' + JSON.stringify(status));
+                                    navigator.notification.alert(JSON.stringify(['failed to register ', status]));
+                                    //  HEART.uuid = device.uuid;
+                                    }
+                                    );
 
     document.addEventListener('push-notification', function(event) {
 	//     var title = event.notification.aps.title;
@@ -25,10 +40,13 @@ function initPNHandler() {
 	form = Ext.create('HEART.view.' + type);
 	form.emxType = type;
 	form.goola = 'exercises';
-
+	
+	if(type=='QUOTES'){
+		title=title.substring(0,title.length-3);
+		form.child('#content').child('#quote').setHtml(title);
+	}
     Ext.Viewport.getActiveItem().setActiveItem(2);
 	Ext.Viewport.getActiveItem().getActiveItem().push(form);
-	
 	content = {};
     content.type = type;
     content.action = 'show-pushed';
@@ -39,5 +57,9 @@ function initPNHandler() {
 
 function init() {
     document.addEventListener("deviceready", initPNHandler, true);
-    HEART.uuid = device.uuid;
+    
+    HEART.uuid = HEART.getItem('local', 'deviceToken');
+    HEART.audioRoot = 'audio/';
+    
+   // HEART.uuid = device.uuid;
 }
