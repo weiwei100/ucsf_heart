@@ -92,6 +92,49 @@ var HEART = {
 		}
 	},
 	
+	getQuotes: function() {
+		var url = 'http://app.brainpage.com/ucsf/api/quotes';
+		var username = 'breathwear';
+		var password = 'deepbreath';
+	
+		var base = Base64.encode(username + ':' + password);
+		
+		var auth = "Basic " + base;
+		
+		succ = function(response){
+			store=Ext.getStore('Quotes'); 
+			store.removeAll();
+			
+			quotes = JSON.parse(response.responseText);
+			
+			for(idx in quotes){
+				content = {};
+				content.auth=quotes[idx].author;
+				content.text=quotes[idx].content;
+				store.add(content);
+			}
+		};
+		
+		fail = function(response){
+			console.log(response);
+		};
+		
+		Ext.Ajax.request({
+			url: url,
+			method: 'GET',
+			params: null,
+			withCredentials: true,
+			useDefaultXhrHeader: false,
+			
+			headers: {Authorization: auth, 'Access-Control-Allow-Origin': '*'},
+			
+			success: succ,
+			failure: fail
+		});
+		
+		
+	},
+	
 	uuid: 'dropboxisawesome',
 	
 	audioCallback: {},

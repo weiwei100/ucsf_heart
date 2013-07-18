@@ -21,6 +21,7 @@
                 "fn": "launch",
                 "implHandler": [
                     "if(Ext.device.Connection.isOnline()){",
+                    "\tHEART.getQuotes();",
                     "\tHEART.sync();",
                     "}"
                 ]

@@ -69,7 +69,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<center><img src=\"heart_icon.png\" height=111></center>",
+                        "html": "<center><img src=\"heart-icon.png\" height=333></center>",
                         "itemId": "image"
                     },
                     "designerId": "cc1300db-e331-42b2-bc5e-59935a8a3a2a"
@@ -209,11 +209,11 @@
                             "",
                             "user = JSON.parse(user);",
                             "",
-                            "content = user.name+'&nbsp;'+'H.E.A.R.T.';",
+                            "content = user.name+'&nbsp;to&nbsp;'+'H.E.A.R.T.';",
                             "",
                             "container.child('#header').child('#sometext').setHtml(content);",
                             "",
-                            "content=user.intention||''; ",
+                            "content=user.intention||'nothing'; ",
                             "",
                             "if(content.length>20){",
                             "\tcontent=content.substring(0,20);",
@@ -230,6 +230,8 @@
                             "\t\tcontent = {};",
                             "\t\tcontent.type = 'popup';",
                             "\t\tcontent.action = 'show-intention';",
+                            "\t\t",
+                            "\t\tHEART.toSensor(content);",
                             "\t\t",
                             "\t\tExt.create('Ext.Panel', {",
                             "\t\t\thideOnMaskTap: true,",
@@ -425,14 +427,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "itemId": "awake",
-                                "label": "Awake Time",
+                                "itemId": "sleep",
+                                "label": "Sleep Time",
                                 "labelWidth": "55%",
                                 "labelWrap": true,
-                                "name": "awake",
+                                "name": "sleep",
                                 "readOnly": false
                             },
-                            "designerId": "a1bbeb64-14ef-4f45-965e-12c53e7a7f0a"
+                            "designerId": "72edc4b0-a099-4f0d-a711-f53baae2eb5b"
                         },
                         {
                             "type": "Ext.field.Select",
@@ -442,14 +444,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "itemId": "sleep",
-                                "label": "Sleep Time",
+                                "itemId": "awake",
+                                "label": "Awake Time",
                                 "labelWidth": "55%",
                                 "labelWrap": true,
-                                "name": "sleep",
+                                "name": "awake",
                                 "readOnly": false
                             },
-                            "designerId": "72edc4b0-a099-4f0d-a711-f53baae2eb5b"
+                            "designerId": "a1bbeb64-14ef-4f45-965e-12c53e7a7f0a"
                         },
                         {
                             "type": "Ext.Label",
@@ -504,6 +506,8 @@
                                     "userConfig": {
                                         "fn": "onSaveTap",
                                         "implHandler": [
+                                            "message = \"You must fill out all information before continuing\";",
+                                            "",
                                             "user = HEART.getItem('local', 'user');",
                                             "values = button.parent.getValues();",
                                             "",
@@ -513,8 +517,6 @@
                                             "\tif(values[field]=='')",
                                             "\t{ empty=true; break; }",
                                             "}",
-                                            "",
-                                            "message = \"You must fill out all information before continuing\";",
                                             "",
                                             "if(empty){",
                                             "\tExt.Msg.alert('Error', message, Ext.emptyFn);",
@@ -535,8 +537,6 @@
                                             "",
                                             "HEART.setItem('local', 'user', user);",
                                             "",
-                                            "button.parent.child('#buttons').show();",
-                                            "",
                                             "succ = function(response) {",
                                             "\tconsole.log(response);",
                                             "};",
@@ -547,8 +547,11 @@
                                             "",
                                             "HEART.toUser( values, succ, fail );",
                                             "",
+                                            "button.parent.child('#buttons').show();",
+                                            "",
                                             "this.getTabBar().show();",
-                                            "this.setActiveItem(0);"
+                                            "this.setActiveItem(0);",
+                                            ""
                                         ],
                                         "name": "tap"
                                     },
@@ -716,17 +719,14 @@
                     "",
                     "user = HEART.getItem('local','user');",
                     "",
-                    "if( user===null ){",
+                    "if(user){",
+                    "\tuser = JSON.parse(user);",
+                    "\tsettings.setValues(user);",
+                    "}else{",
                     "\tthis.setActiveItem(nav);",
                     "\tthis.getTabBar().hide();",
                     "\tbuttons.hide();",
-                    "}else{",
-                    "\tuser = JSON.parse(user);",
-                    "\tsettings.setValues(user);",
-                    "}",
-                    "",
-                    "//form = Ext.create('HEART.view.EMAType1');",
-                    "//Ext.Viewport.setActiveItem(form)"
+                    "}"
                 ]
             },
             "designerId": "9c748870-c0b3-4c73-8cd6-790fb210800f"
