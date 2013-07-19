@@ -85,14 +85,16 @@ Ext.define('HEART.view.DAILYLOG', {
 					},
 					{
 						xtype: 'checkboxfield',
-						html: '(body scan, recorded or self-guided meditation, or mindful breathing)',
 						itemId: 'meditation',
-						styleHtmlContent: true,
 						label: 'Any formal meditation today?',
-						labelAlign: 'top',
 						labelWidth: '',
 						labelWrap: true,
 						name: 'meditation'
+					},
+					{
+						xtype: 'label',
+						html: '(body scan, recorded or self-guided meditation, or mindful breathing)',
+						cls: 'x-html x-label-tip'
 					},
 					{
 						xtype: 'selectfield',
@@ -117,27 +119,27 @@ Ext.define('HEART.view.DAILYLOG', {
 							}
 						]
 					},
+					
 					{
-						xtype: 'container',
-						itemId: 'text-group',
-						layout: {
-							type: 'hbox'
-						},
-						items: [
+						xtype: 'checkboxfield',
+						itemId: 'mindful',
+						label: 'Any mindful eating today?',
+						labelWidth: '',
+						labelWrap: true,
+						name: 'mindful',
+						listeners: [
 							{
-								xtype: 'label',
-								html: '&nbsp;Any&nbsp;',
-								cls: 'x-form-label-font thefirst',
-								itemId: 'left'
-							},
-							{
-								xtype: 'label',
-								html: 'mindful eating',
-								cls: 'x-form-label-font',
-								itemId: 'middle',
-								style: {
-									color: 'blue'
+								fn: function(component, eOpts) {
 								},
+								event: 'initialize'
+							}
+						]
+					},
+					{
+								xtype: 'label',
+								html: '(What\'s mindful eating?)',
+								cls: 'x-html  x-label-tip',
+								itemId: 'middle',							
 								listeners: [
 									{
 										fn: function(component, eOpts) {
@@ -178,32 +180,7 @@ Ext.define('HEART.view.DAILYLOG', {
 									}
 								]
 							},
-							{
-								xtype: 'label',
-								html: '&nbsp;today?',
-								cls: 'x-form-label-font',
-								itemId: 'right'
-							}
-						]
-					},
-					{
-						xtype: 'checkboxfield',
-						itemId: 'mindful',
-						label: 'Any mindful eating today?',
-						labelWidth: '',
-						labelWrap: true,
-						name: 'mindful',
-						listeners: [
-							{
-								fn: function(component, eOpts) {
-									label = component.label;
 
-									label.hide();
-								},
-								event: 'initialize'
-							}
-						]
-					},
 					{
 						xtype: 'selectfield',
 						itemId: 'exercise',
