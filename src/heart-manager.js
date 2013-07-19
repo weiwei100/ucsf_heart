@@ -77,6 +77,7 @@ var HEART = {
 	sync: function() {
 		user = HEART.getItem('local', 'user');
 		user =JSON.parse(user);
+		if(!user) {return;}
 		HEART.toUser(user);
 		
 		feeds=Ext.getStore('Feeds');
@@ -156,8 +157,6 @@ var HEART = {
 		HEART.request(url, auth, content, succ, fail);
 		
 	},
-	
-	uuid: 'dropboxisawesome',
 	
 	audioCallback: {},
 	audioPlay: 'strawberry',
