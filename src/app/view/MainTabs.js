@@ -179,7 +179,7 @@ Ext.define('HEART.view.MainTabs', {
 								xtype: 'textfield',
 								itemId: 'name',
 								label: 'First name',
-								labelWidth: '55%',
+								labelWidth: '40%',
 								labelWrap: true,
 								name: 'name',
 								autoCapitalize: true,
@@ -189,7 +189,7 @@ Ext.define('HEART.view.MainTabs', {
 								xtype: 'textfield',
 								itemId: 'pid',
 								label: 'Participant Id',
-								labelWidth: '55%',
+								labelWidth: '40%',
 								labelWrap: true,
 								name: 'pid'
 							},
@@ -203,7 +203,7 @@ Ext.define('HEART.view.MainTabs', {
 								xtype: 'selectfield',
 								itemId: 'awake',
 								label: 'Awake Time',
-								labelWidth: '55%',
+								labelWidth: '40%',
 								labelWrap: true,
 								name: 'awake',
 								readOnly: false
@@ -212,7 +212,7 @@ Ext.define('HEART.view.MainTabs', {
 								xtype: 'selectfield',
 								itemId: 'sleep',
 								label: 'Sleep Time',
-								labelWidth: '55%',
+								labelWidth: '40%',
 								labelWrap: true,
 								name: 'sleep',
 								readOnly: false
@@ -227,7 +227,7 @@ Ext.define('HEART.view.MainTabs', {
 								xtype: 'selectfield',
 								itemId: 'daily',
 								label: 'Daily Log Time',
-								labelWidth: '55%',
+								labelWidth: '40%',
 								labelWrap: true,
 								name: 'daily'
 							},
