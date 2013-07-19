@@ -1,3 +1,8 @@
+.popup {
+	color: rgb(128,128,128); 
+	font-size: 11px;
+}
+
 .huge-text {
 	text-shadow: 0 0 8px green;
 	font-size: 111px;
@@ -37,16 +42,40 @@
 	font-weight: bold;
 }
 
+.x-field-select .x-component-outer:before{
+	background-image: none;
+}
+
 .x-input-checkbox{
 	color: white;
 }
 
-.thefirst{padding-left: .6em}
+.thefirst{padding-left: 0px; margin-left: -0.2em;}
 
 .x-form-label div{
 	margin-bottom: -30px;
 	padding: 0 20px;
 }
+
+.x-form-label{
+	padding: 0.6em 0;
+}
+
+.x-label-tip{
+	margin-top: -2em;
+	margin-left: -1.2em
+}
+
+.x-slider-field .x-component-outer {
+	padding: 0.6em 0;
+}
+
+.x-field-checkbox .x-field-mask::after,
+.x-field-radio .x-field-mask::after {
+  color: #fff;
+}
+
+
 
 .x-input-text{
 	border-bottom: 1px solid #aaa;
@@ -178,15 +207,46 @@
 }
 
 .x-button {
-	border: 0;
-	margin: 8px 4px;
-	background: rgba(200,200,200,0.55);
+	display: block;
+  font-weight: normal;
+  padding: 4px 12px;
+  margin: 10px;
+  *margin-left: .3em;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.x-button-pressing {
-	color: blue;
-	opacity: 0.75;
-	box-shadow: 0 0 8px blue;
+.x-button-pressing{
+	color: #333333;
+  	background-color: #e6e6e6;
+  	*background-color: #d9d9d9;
 }
 
 
@@ -195,7 +255,7 @@
 }
 
 p {
-	padding: 8px;	
+	padding: 8px 0.6em;	
 }
 
 /*** CSS Pie Timer ****/

@@ -160,7 +160,7 @@ var HEART = {
 	
 	audioCallback: {},
 	audioPlay: 'strawberry',
-	audioRoot: 'file:///android_asset/www/audio/',
+	audioRoot: 'file:///android_asset/www/audios/',
 	
 	setAudio: function(name, succ, fail) {
 		url=HEART.audioRoot+name;
