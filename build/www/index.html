@@ -21,19 +21,16 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>UCSF_HEART</title>
- <script src="cordova-2.5.0.ios.js"></script>
+ 
 	<script src="sencha-touch-all.js"></script>
 	<link rel="stylesheet" href="sencha-touch.css">
-        <link rel="stylesheet" href="heart-beautify.css">
-               <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script> 
-
-	<script src="base64-toolkit.js?_dc=1365423064658"></script>
-    <script type="text/javascript" src="heart-manager.js"></script>
-            <script type="text/javascript" src="index.js"></script>
-
-	<!--<script type="text/javascript" src="index.js"></script>-->
+	<link rel="stylesheet" href="heart-beautify.css">
 	<script type="text/javascript" src="app.js"></script>
- 
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="heart-manager.js"></script>
+	<script type="text/javascript" src="cordova-2.5.0.js"></script>
+	<script type="text/javascript" src="base64-toolkit.js"></script>
+	<script type="text/javascript" charset="utf-8" src="PushNotification.js"></script>
 	<script type="text/javascript">
 		if (!Ext.browser.is.WebKit) {
 			alert("The current browser is unsupported.\n\nSupported browsers:\n" +
@@ -45,37 +42,6 @@
 			);
 		}
 	</script>
-            
-    <script>
-        function initApp(){
-         
-            var pushNotification = window.plugins.pushNotification;
-            pushNotification.onDeviceReady();
-        
-            pushNotification.registerDevice({alert:true, badge:true, sound:true, pw_appid:"B7BBF-34717", appname:"UCSF Heart"},
-                                        function(status) {
-                                        var deviceToken = status['deviceToken'];
-                                        console.warn('registerDevice: ' + deviceToken);
-                                            HEART.setItem('local', 'deviceToken', deviceToken);
-                                             HEART.uuid = deviceToken;
-                                        },
-                                        function(status) {
-                                        console.warn('failed to register : ' + JSON.stringify(status));
-                                        navigator.notification.alert(JSON.stringify(['failed to register ', status]));
-                                           //  HEART.uuid = device.uuid;
-                                        }
-                                        );
-        
-            pushNotification.setApplicationIconBadgeNumber(0);
-            initPNHandler();
-            HEART.uuid = HEART.getItem('local', 'deviceToken');
-            HEART.audioRoot = 'audio/';
-           
-        }
-    </script>
 </head>
-<body onload=""></body>
-    <script>
-        document.addEventListener("deviceready", init(), true);
-    </script>
+<body onload="init();"></body>
 </html>
