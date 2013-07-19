@@ -39,7 +39,7 @@ function initPNHandler() {
 
 	form = Ext.create('HEART.view.' + type);
 	form.emxType = type;
-	form.goola = 'exercises';
+	form.goola = 'pushwoosh';
 	
 	if(type=='QUOTES'){
 		title=title.substring(0,title.length-3);
