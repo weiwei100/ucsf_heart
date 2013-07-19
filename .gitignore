@@ -1,3 +1,4 @@
+*.xds
 build/android/bin
 /build/android/assets/www/audio
 /build/www/audio
