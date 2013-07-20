@@ -81,7 +81,7 @@
 
 .x-label-desc{
 	margin: 1em 0;
-	color: #666;
+	color: #333;
 }
 
 .x-label{
@@ -107,7 +107,7 @@
 
 .x-field-checkbox .x-field-mask::after,
 .x-field-radio .x-field-mask::after {
-  color: #444 !important;
+  color: red !important;
 }
 
 .x-button-label{
