@@ -53,9 +53,9 @@
 .thefirst{padding-left: 0px; margin-left: -0.2em;}
 
 .x-form-label div{
-	margin-bottom: -30px;
+	margin-bottom: -3em;
 	padding: 0 20px;
-	color: #333;
+	color: #333 !important;
 }
 
 .x-form-label{
@@ -71,8 +71,13 @@
 	font-size: .8em;
 }
 
+.with-margin{
+	margin: 1em 0;
+}
+
 .x-slider-field .x-component-outer {
-	margin: 0.2em;
+	margin: 0.2em 0;
+	padding: 0.6em 0;
 }
 
 .x-input-el{
@@ -86,6 +91,11 @@
 
 .x-button-label{
 	font-weight: normal;
+	padding: 0.1em 0;
+}
+
+.x-field-checkbox .x-field-input{
+	border: none;
 }
 
 .x-field-input{
