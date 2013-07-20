@@ -27,7 +27,7 @@ Ext.define('HEART.view.DAILYLOG', {
 					{
 						xtype: 'label',
 						html: 'My Daily Log',
-						cls: 'x-form-fieldset-title',
+						cls: 'x-form-fieldset-title linkColor',
 						itemId: 'title',
 						listeners: [
 							{
@@ -139,7 +139,7 @@ Ext.define('HEART.view.DAILYLOG', {
 					{
 								xtype: 'label',
 								html: '(What\'s mindful eating?)',
-								cls: 'x-html  x-label-tip',
+								cls: 'x-html  x-label-tip linkColor',
 								itemId: 'middle',							
 								listeners: [
 									{

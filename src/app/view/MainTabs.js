@@ -63,6 +63,7 @@ Ext.define('HEART.view.MainTabs', {
 							{
 								xtype: 'label',
 								html: '<b>Welcome</b>',
+								cls: 'linkColor',
 								itemId: 'welcome',
 								listeners: [
 									{
@@ -106,7 +107,7 @@ Ext.define('HEART.view.MainTabs', {
 						]
 					},
 					{
-						xtype: 'label',
+						xtype: 'button',
 						html: '<center>My Meditations</center>',
 						itemId: 'meditation',
 						margin: 22,

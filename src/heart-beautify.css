@@ -3,6 +3,10 @@
 	font-size: 16px;
 }
 
+.linkColor{
+	color: purple !important;
+}
+
 .huge-text {
 	text-shadow: 0 0 8px green;
 	font-size: 111px;
