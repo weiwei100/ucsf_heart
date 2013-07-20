@@ -61,12 +61,14 @@ Ext.define('HEART.view.QUOTES', {
 
 												quotewords = quote.split(" ", 10);
 
-												for (var i = 0; i< 10; i++) {
+												for (var i = 0; i< quotewords.length; i++) {
 													wrapped += quotewords[i];
 													wrapped += " ";
 												};
-												wrapped+='...';
-
+												if(quotewords.length > 10){
+													wrapped+='...';
+												}
+												
 												component.setHtml("<div class='quote'>" + wrapped + "</div>");
 											}
 										}
