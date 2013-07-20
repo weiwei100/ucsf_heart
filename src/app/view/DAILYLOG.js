@@ -46,7 +46,9 @@ Ext.define('HEART.view.DAILYLOG', {
 											Ext.create('Ext.Panel', {
 												hideOnMaskTap: true,
 												autoDestroy: true,
-												//scrollable: 'vertical',
+												scrollable: 'vertical',
+												height: '50%',
+												width: '95%',
 												html: content,
 												modal: true,
 												padding: 10,
@@ -161,12 +163,12 @@ Ext.define('HEART.view.DAILYLOG', {
 													Ext.create('Ext.Panel', {
 														hideOnMaskTap: true,
 														autoDestroy: true,
-														//scrollable: 'vertical',
+														scrollable: 'vertical',
 														html: content,
 														modal: true,
 														padding: 10,
-														//height: '50%',
-														//width: '95%',
+														height: '50%',
+														width: '95%',
 														left: 0,
 														top: 0,
 														cls: 'popup'

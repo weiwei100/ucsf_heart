@@ -36,13 +36,9 @@ Ext.define('HEART.view.EMIPushSlider', {
 			},
 			{
 				xtype: 'label',
-				border: '',
-				centered: false,
-				hidden: false,
-				html: 'Reflect on if you are getting too many or too few push notifications. <br/> If too many, slide it left. <br/> If too few, slide to the right.',
-				itemId: 'pushDesc',
-				margin: '',
-				styleHtmlContent: true
+				html: '<p>Reflect on if you are getting too many or too few push notifications.</p><p>If too many, slide it left.</p><p>If too few, slide to the right.</p>',
+				cls: 'x-label-desc',
+				itemId: 'pushDesc'
 			},
 			{
 				xtype: 'sliderfield',
@@ -114,7 +110,7 @@ Ext.define('HEART.view.EMIPushSlider', {
 		user = HEART.getItem('local', 'user');
 		priority = JSON.parse(user).priority*25||50;
 		this.child('#pushSlider').setValue(priority);
-		this.setLabel(priority, this.child('#pushDesc'));
+		this.setLabel(priority, this.child('#pushLevel'));
 	},
 
 	setLabel: function(value, label) {
