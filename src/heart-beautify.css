@@ -111,10 +111,10 @@
   content: '3';
 }
 
-.x-field-select .x-component-outer:after {
-  z-index: 2;
+.x-thumb:after {
   background-color: red;
 }
+
 
 .x-button-label{
 	font-weight: normal;
