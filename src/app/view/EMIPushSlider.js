@@ -30,7 +30,8 @@ Ext.define('HEART.view.EMIPushSlider', {
 		items: [
 			{
 				xtype: 'label',
-				html: '<center>Too many or too few push notifications?<center>',
+				html: 'Too many or too few push notifications?',
+				cls: 'x-subtitle',
 				itemId: 'pushTitle',
 				ui: ''
 			},
