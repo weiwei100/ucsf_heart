@@ -195,7 +195,7 @@ Ext.define('HEART.view.MainTabs', {
 							},
 							{
 								xtype: 'label',
-								html: '<p>Please keep the app silent between:</p>',
+								html: 'Please keep the app silent between:',
 								itemId: 'silent',
 								style: 'color: rgb(128,128,128)'
 							},
