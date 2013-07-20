@@ -42,8 +42,12 @@
 .x-form-fieldset-title {
 	margin-top:0;
 	margin-left: 0;
-	font-size:  .9em !important;
+	font-size:  150% !important;
 	text-align: center;
+}
+
+.x-subtitle{
+	font-size: 120% !important;
 }
 
 .x-form-label-font {

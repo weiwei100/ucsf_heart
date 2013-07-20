@@ -23,6 +23,7 @@ Ext.define('HEART.view.EMAType6', {
 			{
 				xtype: 'label',
 				html: 'What is happening right now?',
+				cls: 'x-subtitle',
 				itemId: 'question'
 			},
 			{

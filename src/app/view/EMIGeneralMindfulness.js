@@ -29,6 +29,7 @@ Ext.define('HEART.view.EMIGeneralMindfulness', {
 					{
 						xtype: 'label',
 						html: 'Wherever you are in this moment',
+						cls: 'x-subtitle',
 						itemId: 'describe'
 					},
 					{

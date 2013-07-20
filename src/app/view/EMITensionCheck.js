@@ -28,6 +28,7 @@ Ext.define('HEART.view.EMITensionCheck', {
 					{
 						xtype: 'label',
 						html: 'Feel and relax each body part for a few seconds, then check:',
+						cls: 'x-subtitle',
 						itemId: 'describe'
 					},
 					{
