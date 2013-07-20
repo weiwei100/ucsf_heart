@@ -105,9 +105,10 @@
 	padding: 0 0.4em;
 }
 
-.x-field-checkbox .x-field-mask::after,
-.x-field-radio .x-field-mask::after {
-  color: red !important;
+.x-checkmark-base, .x-field-checkbox .x-field-mask::after,
+.x-field-radio .x-field-mask::after, .x-select-overlay .x-item-selected.x-list-item::after {
+  color: red;
+  content: '3';
 }
 
 .x-button-label{
