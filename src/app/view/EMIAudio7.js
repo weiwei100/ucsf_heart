@@ -28,7 +28,7 @@ Ext.define('HEART.view.EMIAudio7', {
 					{
 						xtype: 'sliderfield',
 						itemId: 'pre-slider',
-						label: 'How stressed do you feel now? <div><span style="float:right">A lot</span><span>Not at all</span></div>',
+						label: 'How stressed do you feel now? <br/><br/><div><span style="float:right">A lot</span><span>Not at all</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'pre-slider',
@@ -43,8 +43,7 @@ Ext.define('HEART.view.EMIAudio7', {
 						items: [
 							{
 								xtype: 'label',
-								html: 'Listen to this guided session from the workshop. <br/> Tip: Use headphones and stand or sit down. <br/> Duration: 28:40 min',
-								styleHtmlContent: true
+								html: 'Listen to this guided session from the workshop. <br/> Tip: Use headphones and stand or sit down. <br/> Duration: 28:40 min'
 							},
 							{
 								xtype: 'button',
@@ -56,7 +55,7 @@ Ext.define('HEART.view.EMIAudio7', {
 					{
 						xtype: 'sliderfield',
 						itemId: 'post-slider',
-						label: 'How stressed do you feel now? <div><span style="float:right">A lot</span><span>Not at all</span></div>',
+						label: 'How stressed do you feel now? <br/><br/><div><span style="float:right">A lot</span><span>Not at all</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'post-slider',
