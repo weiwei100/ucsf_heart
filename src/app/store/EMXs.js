@@ -88,6 +88,41 @@ Ext.define('HEART.store.EMXs', {
 				title: 'My Activity',
 				type: 'FEEDBACK',
 				category: 'DASHBOARD'
+			},
+			{
+				title: 'EMAType1',
+				type: 'EMAType1',
+				category: 'EMA'
+			},
+			{
+				title: 'EMAType2',
+				type: 'EMAType2',
+				category: 'EMA'
+			},
+			{
+				title: 'EMAType3',
+				type: 'EMAType3',
+				category: 'EMA'
+			},
+			{
+				title: 'EMAType4',
+				type: 'EMAType4',
+				category: 'EMA'
+			},
+			{
+				title: 'EMAType5',
+				type: 'EMAType5',
+				category: 'EMA'
+			},
+			{
+				title: 'EMAType6',
+				type: 'EMAType6',
+				category: 'EMA'
+			},
+			{
+				title: 'EMAType7',
+				type: 'EMAType7',
+				category: 'EMA'
 			}
 		],
 		groupField: 'category',
