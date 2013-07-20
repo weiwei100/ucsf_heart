@@ -1,0 +1,13 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css",
+        "url": "heart-beautify.css"
+    },
+    "designerId": "a8085bb7-8f59-42f5-b2f8-37fd1c55317e"
+}

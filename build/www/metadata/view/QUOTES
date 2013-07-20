@@ -1,0 +1,207 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "quotes"
+        ],
+        "designer|userClassName": "QUOTES",
+        "layout": "vbox"
+    },
+    "designerId": "70e406ea-b180-4285-b394-7afe7ae1c037",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 3,
+                "docked": null,
+                "floatingCls": null,
+                "itemId": "content",
+                "margin": null,
+                "padding": 20
+            },
+            "designerId": "b33c591a-f7b3-45c9-bc55-70d81b1b52dc",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<br/><br/><br/>",
+                        "itemId": "empty"
+                    },
+                    "designerId": "1799f6cf-2909-4700-b7d3-5fe5496bf0b3"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "goola": "nothing",
+                        "centered": null,
+                        "contentEl": null,
+                        "docked": null,
+                        "html": null,
+                        "itemId": "quote",
+                        "ui": null
+                    },
+                    "designerId": "a7efa295-a358-4303-8a55-75edda60a151",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "goola",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onQuoteInitialize",
+                                "implHandler": [
+                                    "component.element.on({",
+                                    "",
+                                    "\tpainted: function(e, t){",
+                                    "\t",
+                                    "\t\tif(HEART.goola!='pushwoosh'){",
+                                    "\t",
+                                    "\t\t\tquotes=Ext.getStore('Quotes'); ",
+                                    "\t\t\tcount=quotes.getAllCount();",
+                                    "\t\t\tquote='This is quote';",
+                                    "\t",
+                                    "\t\t\tindex=Math.ceil(Math.random()*count);",
+                                    "",
+                                    "\t\t\tquote=quotes.getAt(index).data.text;",
+                                    "\t\t\t",
+                                    "\t\t\tHEART.quote=quote;",
+                                    "\t\t\t\t\t\t\t\t\t\t",
+                                    "\t\t\twrapped = '';",
+                                    "\t",
+                                    "\t\t\tquotewords = quote.split(\" \", 10);",
+                                    "\t",
+                                    "\t\t\tfor (var i = 0; i< 10; i++) {",
+                                    "\t\t\t\twrapped += quotewords[i];",
+                                    "\t\t\t\twrapped += \" \";",
+                                    "\t\t\t};",
+                                    "\t\t\twrapped+='...';",
+                                    "\t",
+                                    "\t\t\tcomponent.setHtml(wrapped);",
+                                    "\t\t}",
+                                    "\t}",
+                                    "",
+                                    "});",
+                                    "",
+                                    "component.element.on({",
+                                    "",
+                                    "\ttap : function(e, t){",
+                                    "\t\t",
+                                    "\t\tquotes=Ext.getStore('Quotes'); ",
+                                    "\t\tcount=quotes.getAllCount();",
+                                    "\t\tquote='This is quote';",
+                                    "\t\t",
+                                    "\t\tif(HEART.goola=='pushwoosh'){",
+                                    "\t\t\twrapped=component.getHtml();",
+                                    "\t\t\twrapped=wrapped.substring(0, wrapped.length-3);",
+                                    "\t\t\t",
+                                    "\t\t\tfor(i=0;i<count;i++){",
+                                    "\t\t\t\ttext = quotes.getAt(i).data.text;",
+                                    "\t\t\t\tif(text.indexOf(wrapped)>=0)",
+                                    "\t\t\t\t{ quote=text; break; }",
+                                    "\t\t\t}",
+                                    "\t\t\tcomponent.setHtml(quote);",
+                                    "\t\t}else{",
+                                    "\t\t\t",
+                                    "\t\t\tcomponent.setHtml(HEART.quote);",
+                                    "\t\t}",
+                                    "\t\t",
+                                    "\t\tcontent = {};",
+                                    "\t\tcontent.type = 'label';",
+                                    "\t\tcontent.action = 'show-quote';",
+                                    "",
+                                    "\t\tHEART.toSensor(content);",
+                                    "",
+                                    "\t\t",
+                                    "\t}",
+                                    "\t\t\t\t\t\t\t\t\t",
+                                    "});"
+                                ],
+                                "name": "initialize"
+                            },
+                            "designerId": "6fcb3114-17d6-49c0-a79a-27d6ebe165f4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "docked": null,
+                "floatingCls": null,
+                "itemId": "handler"
+            },
+            "designerId": "4dedeaea-52e3-48c6-85f3-a652d41b7eb3",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": null,
+                        "docked": null,
+                        "itemId": "done",
+                        "text": "Done"
+                    },
+                    "designerId": "58ff9875-b3b7-4751-a477-fcf309cd0044",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onOKTap",
+                                "implHandler": [
+                                    "this.parent.pop();"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "6c146bc8-07c9-4d55-b776-75b2fa6ff8f5"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

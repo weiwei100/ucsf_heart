@@ -179,7 +179,7 @@ Ext.define('HEART.view.MainTabs', {
 								xtype: 'textfield',
 								itemId: 'name',
 								label: 'First name',
-								labelWidth: '55%',
+								labelWidth: '40%',
 								labelWrap: true,
 								name: 'name',
 								autoCapitalize: true,
@@ -189,13 +189,13 @@ Ext.define('HEART.view.MainTabs', {
 								xtype: 'textfield',
 								itemId: 'pid',
 								label: 'Participant Id',
-								labelWidth: '55%',
+								labelWidth: '40%',
 								labelWrap: true,
 								name: 'pid'
 							},
 							{
 								xtype: 'label',
-								html: '<p>Please keep the app silent between:</p>',
+								html: 'Please keep the app silent between:',
 								itemId: 'silent',
 								style: 'color: rgb(128,128,128)'
 							},
@@ -203,7 +203,7 @@ Ext.define('HEART.view.MainTabs', {
 								xtype: 'selectfield',
 								itemId: 'awake',
 								label: 'Awake Time',
-								labelWidth: '55%',
+								labelWidth: '40%',
 								labelWrap: true,
 								name: 'awake',
 								readOnly: false
@@ -212,14 +212,14 @@ Ext.define('HEART.view.MainTabs', {
 								xtype: 'selectfield',
 								itemId: 'sleep',
 								label: 'Sleep Time',
-								labelWidth: '55%',
+								labelWidth: '40%',
 								labelWrap: true,
 								name: 'sleep',
 								readOnly: false
 							},
 							{
 								xtype: 'label',
-								html: '<p>Please remind me to fill out my Daily Log in the evening at:</p>',
+								html: 'Please remind me to fill out my Daily Log in the evening at:',
 								itemId: 'remind',
 								style: 'color: rgb(128,128,128)'
 							},
@@ -227,7 +227,7 @@ Ext.define('HEART.view.MainTabs', {
 								xtype: 'selectfield',
 								itemId: 'daily',
 								label: 'Daily Log Time',
-								labelWidth: '55%',
+								labelWidth: '40%',
 								labelWrap: true,
 								name: 'daily'
 							},

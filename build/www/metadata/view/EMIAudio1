@@ -1,0 +1,156 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "EMIAudio"
+        ],
+        "designer|userClassName": "EMIAudio1",
+        "scrollable": "vertical"
+    },
+    "designerId": "1eb73208-28ad-410e-a453-81084fc2a8b8",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "goola": "audio",
+                "title": null
+            },
+            "designerId": "80c3b397-b59a-42be-acd0-900d7bd0f712",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "goola",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "pre-slider",
+                        "label": "How stressed do you feel now? <div><span style=\"float:right\">A lot</span><span>Not at all</span></div>",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "pre-slider",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "7aad4363-cec3-42b0-a8fd-7a409b211ead"
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "fsAudio",
+                        "title": "Love-Kindness Meditation"
+                    },
+                    "designerId": "9297f06e-eabd-4ab4-b6f0-d777d6d1d547",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "Listen to this guided session from the workshop. <br/> Tip: Use headphones. <br/> Duration: 5:40 min",
+                                "styleHtmlContent": true
+                            },
+                            "designerId": "720532b6-65f2-4059-b977-903dc3a8d17f"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "audioButton",
+                                "text": "Play"
+                            },
+                            "designerId": "e444ae07-359f-4252-bf11-03e64a9ddd1a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "post-slider",
+                        "label": "How stressed do you feel now? <div><span style=\"float:right\">A lot</span><span>Not at all</span></div>",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "post-slider",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "f4986462-e330-487f-8776-c4032e588697"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "exercise",
+                        "disabled": null,
+                        "text": "Done"
+                    },
+                    "designerId": "f2f3acb9-43aa-407f-8d6b-45f8636780c1",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "HEART.setAudio('LKMeditation.mp3', HEART.audioCallback);"
+                ]
+            },
+            "designerId": "fe687fa9-4c6f-4819-b1d6-d5b0af7725f7"
+        }
+    ]
+}
