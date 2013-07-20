@@ -40,9 +40,8 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 							{
 								xtype: 'label',
 								html: 'Think about how you want to live this week.',
-								itemId: 'describe',
-								style: 'color: rgb(128,128,128); font-size: 15px;',
-								styleHtmlContent: true
+								cls: 'x-label-desc',
+								itemId: 'describe'
 							},
 							{
 								xtype: 'textareafield',
@@ -58,6 +57,7 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 								xtype: 'label',
 								html: 'Example Intentions: <br/> <p>Feel more compassion for myself, be aware of my breadth, notice when I feel grateful to others...</p>',
 								itemId: 'example',
+								cls: 'x-label-desc',
 								style: 'color: rgb(128,128,128); font-size: 15px;'
 							}
 						]
@@ -69,9 +69,7 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 							{
 								xtype: 'label',
 								html: 'Choose 1 activity for this week.<br/> See what it feels like to bring your full awareness to this. <br/> You can change it at any time.',
-								itemId: 'describe',
-								style: 'color: rgb(128,128,128); font-size: 15px;',
-								styleHtmlContent: true
+								itemId: 'describe'
 							},
 							{
 								xtype: 'textfield',
@@ -82,17 +80,17 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 								name: 'habit'
 							},
 							{
+								xtype: 'label',
+								html: 'Example: <p>Brushing my teeth, Driving, Kissing my child goodnight...</p>',
+								cls: 'x-label-desc',
+								itemId: 'example'
+							},
+							{
 								xtype: 'selectfield',
 								itemId: 'time',
 								label: 'Remind me of this at',
 								labelWidth: '65%',
 								name: 'time'
-							},
-							{
-								xtype: 'label',
-								html: 'Example: <p>Brushing my teeth, Driving, Kissing my child goodnight...</p>',
-								itemId: 'example',
-								style: 'color: rgb(128,128,128); font-size: 13px'
 							}
 						]
 					},
