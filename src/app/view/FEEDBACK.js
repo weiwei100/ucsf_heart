@@ -22,7 +22,7 @@ Ext.define('HEART.view.FEEDBACK', {
 		layout: {
 			type: 'vbox'
 		},
-		scrollable: 'vertical',
+		scrollable: false,
 		items: [
 			{
 				xtype: 'fieldset',
@@ -43,26 +43,31 @@ Ext.define('HEART.view.FEEDBACK', {
 					{
 						xtype: 'label',
 						html: 'You exercised XX times this week.',
+						cls: 'with-margin',
 						itemId: 'exercised'
 					},
 					{
 						xtype: 'label',
 						html: 'You did mindful eating XX times this week.',
+						cls: 'with-margin',
 						itemId: 'mindfulEating'
 					},
 					{
 						xtype: 'label',
 						html: 'You did meditation on XX days (%), and roughly XX minutes this week.',
+						cls: 'with-margin',
 						itemId: 'meditation'
 					},
 					{
 						xtype: 'label',
 						html: 'Your stress level: Your range of stress was XX to XX, the average is XX.',
+						cls: 'with-margin',
 						itemId: 'stressLevel'
 					},
 					{
 						xtype: 'label',
 						html: 'Your average feelings of balance were XX.',
+						cls: 'with-margin',
 						itemId: 'balanceFeeling'
 					}
 				],
