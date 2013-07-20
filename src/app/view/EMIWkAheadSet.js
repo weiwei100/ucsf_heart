@@ -40,7 +40,7 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 							{
 								xtype: 'label',
 								html: 'Think about how you want to live this week.',
-								cls: 'x-label-desc',
+								cls: 'x-subtitle',
 								itemId: 'describe'
 							},
 							{

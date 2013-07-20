@@ -1,6 +1,6 @@
 .popup {
 	color: rgb(128,128,128); 
-	font-size: 16px;
+	font-size: 18px !important;
 }
 
 .linkColor{
@@ -44,14 +44,15 @@
 }
 
 .x-form-fieldset-title {
+	text-shadow: none;
 	margin-top:0;
 	margin-left: 0;
-	font-size:  120% !important;
+	font-size:  110% !important;
 	text-align: center;
 }
 
 .x-subtitle{
-	font-size: 110% !important;
+	font-size: 100% !important;
 }
 
 .x-form-label-font {
@@ -274,10 +275,11 @@
   font-weight: normal;
   padding: 8px 12px;
   margin: 10px 0;
+  opacity: 0.8;
   *margin-left: .3em;
   font-size: 16px;
   line-height: 20px;
-  color: #333333;
+  color: #000000;
   text-align: center;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   vertical-align: middle;
