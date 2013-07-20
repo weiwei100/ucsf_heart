@@ -38,6 +38,7 @@
 	margin-top:0;
 	margin-left: 0;
 	font-size:  .9em !important;
+	text-align: center;
 }
 
 .x-form-label-font {
@@ -62,6 +63,10 @@
 	margin-bottom: -2.5em;
 	padding: 0 20px;
 	color: #333 !important;
+}
+
+.x-form-label span{
+	font-weight: normal;
 }
 
 .x-form-label{
@@ -102,7 +107,7 @@
 
 .x-field-checkbox .x-field-mask::after,
 .x-field-radio .x-field-mask::after {
-  color: #ffffff !important;
+  color: #444 !important;
 }
 
 .x-button-label{

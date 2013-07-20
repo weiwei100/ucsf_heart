@@ -23,14 +23,12 @@ Ext.define('HEART.view.EMITensionCheck', {
 			{
 				xtype: 'fieldset',
 				goola: 'emi',
-				centered: false,
-				title: '<div align=\'center\'>Mindful Body-Scan<div>',
+				title: 'Mindful Body-Scan',
 				items: [
 					{
 						xtype: 'label',
 						html: 'Feel and relax each body part for a few seonds, then check:',
-						itemId: 'describe',
-						margin: '8px'
+						itemId: 'describe'
 					},
 					{
 						xtype: 'checkboxfield',

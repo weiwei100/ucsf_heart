@@ -24,14 +24,12 @@ Ext.define('HEART.view.EMIGeneralMindfulness', {
 			{
 				xtype: 'fieldset',
 				goola: 'emi',
-				centered: false,
-				title: '<div align=\'center\'>Breath With Life</div>',
+				title: 'Breath With Life',
 				items: [
 					{
 						xtype: 'label',
 						html: 'Wherever you are in this moment',
-						itemId: 'describe',
-						margin: '8px'
+						itemId: 'describe'
 					},
 					{
 						xtype: 'checkboxfield',
