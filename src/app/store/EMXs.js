@@ -45,7 +45,7 @@ Ext.define('HEART.store.EMXs', {
 				category: 'MINI-MEDITATIONS (AUDIO)'
 			},
 			{
-				title: 'Breath with Life',
+				title: 'Breathing with Life',
 				type: 'EMIGeneralMindfulness',
 				category: 'MINI-MEDITATIONS (NO-AUDIO)'
 			},

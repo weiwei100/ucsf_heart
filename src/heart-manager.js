@@ -70,6 +70,8 @@ var HEART = {
 		var auth = "Basic " + base;
 		
 		content.uuid = HEART.uuid;
+
+		delete content.name;
 		
 		HEART.request(url, auth, content, succ, fail);
 	},
@@ -130,8 +132,7 @@ var HEART = {
 			
 			success: succ,
 			failure: fail
-		});
-		
+		});		
 		
 	},
 	

@@ -22,16 +22,13 @@ Ext.define('HEART.view.FEEDBACK', {
 		layout: {
 			type: 'vbox'
 		},
-		scrollable: 'vertical',
+		//scrollable: 'vertical',
 		items: [
 			{
 				xtype: 'fieldset',
-				flex: 5,
+				//flex: 5,
 				itemId: 'activity',
-				style: {
-					background: 'transparent'
-				},
-				scrollable: 'vertical',
+				//scrollable: 'vertical',
 				title: 'My Activity',
 				items: [
 					{
@@ -89,7 +86,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							object = mylog.exercised||{};
 
-							content = 'You exercised '+object.times+' times this week ('+object.days+' of days)';
+							content = '<p>You exercised '+object.times+' times this week ('+object.days+' of days)</p>';
 
 							label.setHtml(content);
 
@@ -97,7 +94,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							object = mylog.mindful||{};
 
-							content = 'You did mindful eating '+object.times+' times this week ('+object.days+' of the days)';
+							content = '<p>You did mindful eating '+object.times+' times this week ('+object.days+' of the days)</p>';
 
 							label.setHtml(content);
 
@@ -105,7 +102,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							object = mylog.meditation||{};
 
-							content = 'You did meditation on '+object.days+' days, and roughly '+object.minutes+'minutes this week, (average of '+Math.ceil(object.minutes/object.days)+' per day, which we will count as 5, 15, or 30, depending on which of the 3 choices they clicked.)';
+							content = '<p>You did meditation on '+object.days+' days, and roughly '+object.minutes+'minutes this week, (average of '+Math.ceil(object.minutes/object.days)+' per day, which we will count as 5, 15, or 30, depending on which of the 3 choices they clicked.)</p>';
 
 							label.setHtml(content);
 
@@ -113,7 +110,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							object = mylog.stressed||{};
 
-							content = 'Your stress level: Your range of stress was '+object.low+' to '+object.high+', the average is '+object.average;
+							content = '<p>Your stress level: Your range of stress was '+object.low+' to '+object.high+', the average is '+object.average+'</p>';
 
 							label.setHtml(content);
 
@@ -121,7 +118,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							object = mylog.balance||{};
 
-							content = 'Your average feelings of balance were '+object.average;
+							content = '<p>Your average feelings of balance were '+object.average+'</p>';
 
 							label.setHtml(content);
 
@@ -135,15 +132,16 @@ Ext.define('HEART.view.FEEDBACK', {
 			},
 			{
 				xtype: 'fieldset',
-				flex: 5,
+				//flex: 5,
 				itemId: 'experience',
+				height: 440,
 				style: {
 					background: 'transparent'
 				},
 				layout: {
 					type: 'vbox'
 				},
-				scrollable: 'vertical',
+				//scrollable: 'vertical',
 				title: 'My Experience',
 				items: [
 					{
@@ -151,6 +149,7 @@ Ext.define('HEART.view.FEEDBACK', {
 						flex: 1,
 						itemId: 'explist',
 						emptyText: 'Nothing...',
+						itemHeight: 20,
 						itemTpl: [
 							'<span class="x-label"><b>{[ (new Date(values.timestamp-0)).toDateString() ]}</b></span><br/>',
 							'<p><span class="x-label">Pleasant: {pleasant}</span><br/>',

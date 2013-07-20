@@ -40,9 +40,6 @@ Ext.define('HEART.view.MainTabs', {
 				iconCls: 'home',
 				cls: 'homePanel',
 				id: 'homePanel',
-				style: {
-					background: 'url(water.jpg) no-repeat center !important'
-				},
 				layout: {
 					type: 'vbox'
 				},
@@ -165,7 +162,6 @@ Ext.define('HEART.view.MainTabs', {
 			{
 				xtype: 'navigationview',
 				title: 'Settings',
-				badgeText: '',
 				iconCls: 'settings',
 				hidden: false,
 				id: 'settingsNav',
@@ -351,7 +347,7 @@ Ext.define('HEART.view.MainTabs', {
 			return;
 		}
 
-		if(user!=null){
+		if(user){
 			user = JSON.parse(user);
 			value = user.priority||2;	
 			values.priority = value;
@@ -359,8 +355,14 @@ Ext.define('HEART.view.MainTabs', {
 			values.intention=user.intention;
 			values.habit=user.habit;
 			values.time=user.time;
-		}
 
+			this.setActiveItem(0);
+
+		}else{
+			ahead = button.parent.child('#buttons').child('#ahead');
+			ahead.fireEvent('tap', ahead);
+		}
+		
 		user = JSON.stringify(values);
 
 		HEART.setItem('local', 'user', user);
@@ -377,8 +379,6 @@ Ext.define('HEART.view.MainTabs', {
 
 		HEART.toUser( values, succ, fail );
 
-		this.getTabBar().show();
-		this.setActiveItem(0);
 	},
 
 	onIntentionSetTap: function(button, e, eOpts) {
@@ -414,8 +414,6 @@ Ext.define('HEART.view.MainTabs', {
 		for( i=5; i<12; i++ ){	
 			option = { text: i +': 00', value: i };	
 			awakeOptions.push(option);
-			option = { text: i +': 30', value: i+0.5 };
-			awakeOptions.push(option);
 		}
 
 		settings.child('#awake').setOptions(awakeOptions);
@@ -424,8 +422,6 @@ Ext.define('HEART.view.MainTabs', {
 
 		for( i=18; i<24; i++ ){	
 			option = { text: i +': 00', value: i };	
-			sleepOptions.push(option);
-			option = { text: i +': 30', value: i+0.5 };
 			sleepOptions.push(option);
 		}
 
@@ -436,8 +432,6 @@ Ext.define('HEART.view.MainTabs', {
 		for( i=17; i<24; i++ ){
 			option = { text: i+": 00", value: i };
 			dailyOptions.push(option);
-			option = { text: i+": 30", value: i+0.5 };
-			dailyOptions.push(option);
 		}
 
 		settings.child('#daily').setOptions(dailyOptions);
@@ -447,6 +441,14 @@ Ext.define('HEART.view.MainTabs', {
 		if(user){
 			user = JSON.parse(user);
 			settings.setValues(user);
+
+			if(!user.intention){
+				ahead = buttons.child('#ahead');
+				ahead.fireEvent('tap', ahead);
+				this.setActiveItem(nav);
+				this.getTabBar().hide();
+			}
+
 		}else{
 			this.setActiveItem(nav);
 			this.getTabBar().hide();

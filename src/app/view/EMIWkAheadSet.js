@@ -190,6 +190,8 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 		content.type = this.emxType;
 		HEART.toSensor(content);
 
+		this.parent.parent.getTabBar().show();
+
 		this.parent.pop();
 	},
 

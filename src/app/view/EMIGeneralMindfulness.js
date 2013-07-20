@@ -25,7 +25,7 @@ Ext.define('HEART.view.EMIGeneralMindfulness', {
 				xtype: 'fieldset',
 				goola: 'emi',
 				centered: false,
-				title: '<div align=\'center\'>Breath With Life</div>',
+				title: '<div align=\'center\'>Breathing With Life</div>',
 				items: [
 					{
 						xtype: 'label',
