@@ -125,6 +125,12 @@
 	margin: 0 -1em;
 }
 
+.thankyou{
+	text-align:center;
+	font-weight:bold;
+	font-size:150%
+}
+
 .dailyLog {
 	background: url(images/image7.png) no-repeat center center fixed !important;
  	background-size: cover !important;

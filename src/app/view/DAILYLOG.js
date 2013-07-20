@@ -222,7 +222,7 @@ Ext.define('HEART.view.DAILYLOG', {
 						items: [
 							{
 								xtype: 'label',
-								html: '<div style="text-align:center;font-weight:bold;font-size:150%">THANK YOU</div>',
+								html: '<div class="thankyou">THANK YOU</div>',
 								itemId: 'thanks',
 								styleHtmlContent: true
 							},

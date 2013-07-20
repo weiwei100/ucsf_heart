@@ -92,7 +92,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							label=component.child('#exercised');
 
-							object = mylog.exercised||{};
+							object = mylog.exercised||{times: 0, days:0};
 
 							content = 'You exercised '+object.times+' times this week ('+object.days+' of days)';
 
@@ -100,7 +100,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							label=component.child('#mindfulEating');
 
-							object = mylog.mindful||{};
+							object = mylog.mindful||{times:0, days: 0};
 
 							content = 'You did mindful eating '+object.times+' times this week ('+object.days+' of the days)';
 
@@ -108,7 +108,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							label=component.child('#meditation');
 
-							object = mylog.meditation||{};
+							object = mylog.meditation||{days:0, minutes:0};
 
 							content = 'You did meditation on '+object.days+' days, and roughly '+object.minutes+'minutes this week, (average of '+Math.ceil(object.minutes/object.days)+' per day, which we will count as 5, 15, or 30, depending on which of the 3 choices they clicked.)';
 
@@ -116,7 +116,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							label=component.child('#stressLevel');
 
-							object = mylog.stressed||{};
+							object = mylog.stressed||{low:0, high:0, average:0};
 
 							content = 'Your stress level: Your range of stress was '+object.low+' to '+object.high+', the average is '+object.average;
 
@@ -124,7 +124,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							label=component.child('#balanceFeeling');
 
-							object = mylog.balance||{};
+							object = mylog.balance||{average:0};
 
 							content = 'Your average feelings of balance were '+object.average;
 

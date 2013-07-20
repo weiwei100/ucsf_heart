@@ -65,7 +65,8 @@ Ext.define('HEART.view.QUOTES', {
 													wrapped += quotewords[i];
 													wrapped += " ";
 												};
-												if(quotewords.length > 10){
+
+												if(quotewords.length == 10){
 													wrapped+='...';
 												}
 												
