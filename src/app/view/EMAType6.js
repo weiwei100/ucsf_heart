@@ -29,8 +29,6 @@ Ext.define('HEART.view.EMAType6', {
 				xtype: 'fieldset',
 				goola: 'ema',
 				itemId: 'fset',
-				hideOnMaskTap: false,
-				modal: false,
 				items: [
 					{
 						xtype: 'sliderfield',

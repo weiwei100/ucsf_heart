@@ -23,7 +23,7 @@ Ext.define('HEART.view.EMAType3', {
 			{
 				xtype: 'label',
 				cls: 'desc',
-				html: 'What emotions are you experiencing in this moment?<br/><br/><div><span style="float:right">a lot</span><span>none</span></span>',
+				html: 'What emotions are you experiencing in this moment?',
 				itemId: 'question'
 			},
 			{
@@ -34,7 +34,7 @@ Ext.define('HEART.view.EMAType3', {
 					{
 						xtype: 'sliderfield',
 						itemId: 'anger',
-						label: 'I am feeling anger:',
+						label: 'I am feeling anger:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'anger',
@@ -45,7 +45,7 @@ Ext.define('HEART.view.EMAType3', {
 					{
 						xtype: 'sliderfield',
 						itemId: 'sandness',
-						label: 'I am feeling sad:',
+						label: 'I am feeling sad:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'sadness',
@@ -56,7 +56,7 @@ Ext.define('HEART.view.EMAType3', {
 					{
 						xtype: 'sliderfield',
 						itemId: 'joy',
-						label: 'I am feeling joyful',
+						label: 'I am feeling joyful<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'joy',
@@ -67,7 +67,7 @@ Ext.define('HEART.view.EMAType3', {
 					{
 						xtype: 'sliderfield',
 						itemId: 'calm',
-						label: 'I am feeling calm:',
+						label: 'I am feeling calm:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'calm',
@@ -78,7 +78,7 @@ Ext.define('HEART.view.EMAType3', {
 					{
 						xtype: 'sliderfield',
 						itemId: 'fora',
-						label: 'I am feeling fearful or anxious:',
+						label: 'I am feeling fearful or anxious:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'fora',
@@ -89,7 +89,7 @@ Ext.define('HEART.view.EMAType3', {
 					{
 						xtype: 'sliderfield',
 						itemId: 'grate',
-						label: 'I am feeling grateful:',
+						label: 'I am feeling grateful:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'grate',

@@ -29,13 +29,11 @@ Ext.define('HEART.view.EMAType1', {
 				xtype: 'fieldset',
 				goola: 'ema',
 				itemId: 'fset',
-				hideOnMaskTap: false,
-				modal: false,
 				items: [
 					{
 						xtype: 'sliderfield',
 						itemId: 'stress',
-						label: 'How much stress are you experiencing in this moment? <br/><br/><div><span style="float:right">a lot</span><span>none</span></span>',
+						label: 'How much stress are you experiencing in this moment? <br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'stress',

@@ -23,7 +23,7 @@ Ext.define('HEART.view.EMAType7', {
 			{
 				xtype: 'label',
 				cls: 'desc',
-				html: 'What emotions are you experiencing in this moment? <br/><br/> <div><span style="float:right">a lot</span><span>none</span></div>'
+				html: 'What emotions are you experiencing in this moment?'
 			},
 			{
 				xtype: 'fieldset',

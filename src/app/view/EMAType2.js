@@ -34,7 +34,7 @@ Ext.define('HEART.view.EMAType2', {
 					{
 						xtype: 'sliderfield',
 						itemId: 'pleasantness',
-						label: 'The amount of pleasant feeling I am experiencing is: <br/><br/><div><span style="float:right">a lot</span><span>none</span></span>',
+						label: 'The amount of pleasant feeling I am experiencing is: <br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'pleasantness',
@@ -45,7 +45,7 @@ Ext.define('HEART.view.EMAType2', {
 					{
 						xtype: 'sliderfield',
 						itemId: 'unpleasantness',
-						label: 'The amount of unpleasant feeling I am experiencing is:<br/><br/><div><span style="float:right">a lot</span><span>none</span></span>',
+						label: 'The amount of unpleasant feeling I am experiencing is:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'unpleasantness',
@@ -56,7 +56,7 @@ Ext.define('HEART.view.EMAType2', {
 					{
 						xtype: 'sliderfield',
 						itemId: 'energy',
-						label: 'My energy level in this moment is:<br/><br/><div><span style="float:right">a lot</span><span>none</span></span>',
+						label: 'My energy level in this moment is:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'energy',
