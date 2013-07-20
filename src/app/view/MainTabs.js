@@ -107,8 +107,10 @@ Ext.define('HEART.view.MainTabs', {
 						]
 					},
 					{
-						xtype: 'button',
+						xtype: 'label',
 						html: '<center>My Meditations</center>',
+						style: 'background-color: #f5f5f5;',
+						width: '110px',
 						itemId: 'meditation',
 						margin: 22,
 						listeners: [
