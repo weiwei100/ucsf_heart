@@ -32,6 +32,8 @@ function initPNHandler() {
     document.addEventListener('push-notification', function(event) {
 	//     var title = event.notification.aps.title;
 	//     var userData = event.notification.u;
+   // navigator.notification.alert(event.notification.title);
+                              
 	var title = event.notification.title;
 	var userData = event.notification.userdata;
           
@@ -50,6 +52,7 @@ function initPNHandler() {
 	Ext.Viewport.getActiveItem().getActiveItem().push(form);
 	content = {};
     content.type = type;
+                              content.title = title;
     content.action = 'show-pushed';
     HEART.toSensor(content);
 	

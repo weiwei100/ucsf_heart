@@ -34,9 +34,7 @@
 		3088BBC0154F3926009F9C59 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBBA154F3926009F9C59 /* Default-Portrait~ipad.png */; };
 		3088BBC1154F3926009F9C59 /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBBB154F3926009F9C59 /* Default@2x~iphone.png */; };
 		3088BBC2154F3926009F9C59 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBBC154F3926009F9C59 /* Default~iphone.png */; };
-		308D05371370CCF300D202BF /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D052E1370CCF300D202BF /* icon-72.png */; };
 		308D05381370CCF300D202BF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D052F1370CCF300D202BF /* icon.png */; };
-		308D05391370CCF300D202BF /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D05301370CCF300D202BF /* icon@2x.png */; };
 		30A0434814DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434314DC770100060A13 /* Localizable.strings */; };
 		30A0434914DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434614DC770100060A13 /* Localizable.strings */; };
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -58,6 +56,156 @@
 		D3EBB3C31712CE350054EA7A /* PWSendBadgeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EBB3B21712CE350054EA7A /* PWSendBadgeRequest.m */; };
 		D3EBB3C41712CE350054EA7A /* PWSetTagsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EBB3B41712CE350054EA7A /* PWSetTagsRequest.m */; };
 		D3EBB3C51712CE350054EA7A /* README in Resources */ = {isa = PBXBuildFile; fileRef = D3EBB3B51712CE350054EA7A /* README */; };
+		D3FDE22F179A29CE001F0E04 /* .architect in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE184179A29CD001F0E04 /* .architect */; };
+		D3FDE230179A29CE001F0E04 /* EMXsController.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE187179A29CD001F0E04 /* EMXsController.js */; };
+		D3FDE231179A29CE001F0E04 /* MainController.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE188179A29CD001F0E04 /* MainController.js */; };
+		D3FDE232179A29CE001F0E04 /* EMX.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE18A179A29CD001F0E04 /* EMX.js */; };
+		D3FDE233179A29CE001F0E04 /* Experience.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE18B179A29CD001F0E04 /* Experience.js */; };
+		D3FDE234179A29CE001F0E04 /* Feed.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE18C179A29CD001F0E04 /* Feed.js */; };
+		D3FDE235179A29CE001F0E04 /* Quote.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE18D179A29CD001F0E04 /* Quote.js */; };
+		D3FDE236179A29CE001F0E04 /* EMXs.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE18F179A29CD001F0E04 /* EMXs.js */; };
+		D3FDE237179A29CE001F0E04 /* Experiences.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE190179A29CD001F0E04 /* Experiences.js */; };
+		D3FDE238179A29CE001F0E04 /* Feeds.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE191179A29CD001F0E04 /* Feeds.js */; };
+		D3FDE239179A29CE001F0E04 /* Quotes.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE192179A29CD001F0E04 /* Quotes.js */; };
+		D3FDE23A179A29CE001F0E04 /* DAILYLOG.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE194179A29CD001F0E04 /* DAILYLOG.js */; };
+		D3FDE23B179A29CE001F0E04 /* EMAType1.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE195179A29CD001F0E04 /* EMAType1.js */; };
+		D3FDE23C179A29CE001F0E04 /* EMAType2.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE196179A29CD001F0E04 /* EMAType2.js */; };
+		D3FDE23D179A29CE001F0E04 /* EMAType3.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE197179A29CD001F0E04 /* EMAType3.js */; };
+		D3FDE23E179A29CE001F0E04 /* EMAType4.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE198179A29CD001F0E04 /* EMAType4.js */; };
+		D3FDE23F179A29CE001F0E04 /* EMAType5.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE199179A29CD001F0E04 /* EMAType5.js */; };
+		D3FDE240179A29CE001F0E04 /* EMAType6.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE19A179A29CD001F0E04 /* EMAType6.js */; };
+		D3FDE241179A29CE001F0E04 /* EMAType7.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE19B179A29CD001F0E04 /* EMAType7.js */; };
+		D3FDE242179A29CE001F0E04 /* EMIAudio1.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE19C179A29CD001F0E04 /* EMIAudio1.js */; };
+		D3FDE243179A29CE001F0E04 /* EMIAudio2.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE19D179A29CD001F0E04 /* EMIAudio2.js */; };
+		D3FDE244179A29CE001F0E04 /* EMIAudio3.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE19E179A29CD001F0E04 /* EMIAudio3.js */; };
+		D3FDE245179A29CE001F0E04 /* EMIAudio4.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE19F179A29CD001F0E04 /* EMIAudio4.js */; };
+		D3FDE246179A29CE001F0E04 /* EMIAudio5.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1A0179A29CD001F0E04 /* EMIAudio5.js */; };
+		D3FDE247179A29CE001F0E04 /* EMIAudio6.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1A1179A29CD001F0E04 /* EMIAudio6.js */; };
+		D3FDE248179A29CE001F0E04 /* EMIAudio7.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1A2179A29CD001F0E04 /* EMIAudio7.js */; };
+		D3FDE249179A29CE001F0E04 /* EMIGeneralMindfulness.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1A3179A29CD001F0E04 /* EMIGeneralMindfulness.js */; };
+		D3FDE24A179A29CE001F0E04 /* EMIHabit.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1A4179A29CD001F0E04 /* EMIHabit.js */; };
+		D3FDE24B179A29CE001F0E04 /* EMIPushSlider.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1A5179A29CD001F0E04 /* EMIPushSlider.js */; };
+		D3FDE24C179A29CE001F0E04 /* EMITensionCheck.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1A6179A29CD001F0E04 /* EMITensionCheck.js */; };
+		D3FDE24D179A29CE001F0E04 /* EMIWkAheadSet.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1A7179A29CD001F0E04 /* EMIWkAheadSet.js */; };
+		D3FDE24E179A29CE001F0E04 /* Experience.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1A8179A29CD001F0E04 /* Experience.js */; };
+		D3FDE24F179A29CE001F0E04 /* FEEDBACK.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1A9179A29CD001F0E04 /* FEEDBACK.js */; };
+		D3FDE250179A29CE001F0E04 /* IntentionConnect.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1AA179A29CD001F0E04 /* IntentionConnect.js */; };
+		D3FDE251179A29CE001F0E04 /* IntentionRemind.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1AB179A29CD001F0E04 /* IntentionRemind.js */; };
+		D3FDE252179A29CE001F0E04 /* MainTabs.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1AC179A29CD001F0E04 /* MainTabs.js */; };
+		D3FDE253179A29CE001F0E04 /* MyTabPanel1.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1AD179A29CD001F0E04 /* MyTabPanel1.js */; };
+		D3FDE254179A29CE001F0E04 /* QUOTES.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1AE179A29CD001F0E04 /* QUOTES.js */; };
+		D3FDE255179A29CE001F0E04 /* app.html in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1AF179A29CD001F0E04 /* app.html */; };
+		D3FDE256179A29CE001F0E04 /* app.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1B0179A29CD001F0E04 /* app.js */; };
+		D3FDE257179A29CE001F0E04 /* apple.css in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1B1179A29CD001F0E04 /* apple.css */; };
+		D3FDE258179A29CE001F0E04 /* base64-toolkit.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1B2179A29CD001F0E04 /* base64-toolkit.js */; };
+		D3FDE259179A29CE001F0E04 /* cordova-2.5.0.ios.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1B3179A29CD001F0E04 /* cordova-2.5.0.ios.js */; };
+		D3FDE25A179A29CE001F0E04 /* cordova-2.5.0.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1B4179A29CD001F0E04 /* cordova-2.5.0.js */; };
+		D3FDE25B179A29CE001F0E04 /* heart-beautify.css in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1B5179A29CD001F0E04 /* heart-beautify.css */; };
+		D3FDE25C179A29CE001F0E04 /* heart-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1B6179A29CD001F0E04 /* heart-icon.png */; };
+		D3FDE25D179A29CE001F0E04 /* heart-manager.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1B7179A29CD001F0E04 /* heart-manager.js */; };
+		D3FDE25E179A29CE001F0E04 /* beach.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1B9179A29CD001F0E04 /* beach.png */; };
+		D3FDE25F179A29CE001F0E04 /* calm_water.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1BA179A29CD001F0E04 /* calm_water.png */; };
+		D3FDE260179A29CE001F0E04 /* clouds1.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1BB179A29CD001F0E04 /* clouds1.png */; };
+		D3FDE261179A29CE001F0E04 /* clouds2.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1BC179A29CD001F0E04 /* clouds2.png */; };
+		D3FDE262179A29CE001F0E04 /* snow.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1BD179A29CD001F0E04 /* snow.png */; };
+		D3FDE263179A29CE001F0E04 /* sunrise.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1BE179A29CD001F0E04 /* sunrise.png */; };
+		D3FDE264179A29CE001F0E04 /* water-drop.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1BF179A29CD001F0E04 /* water-drop.png */; };
+		D3FDE265179A29CE001F0E04 /* water_with_fog.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1C0179A29CD001F0E04 /* water_with_fog.png */; };
+		D3FDE266179A29CE001F0E04 /* yellow_sunset.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1C1179A29CD001F0E04 /* yellow_sunset.png */; };
+		D3FDE267179A29CE001F0E04 /* index-ios.html in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1C2179A29CD001F0E04 /* index-ios.html */; };
+		D3FDE268179A29CE001F0E04 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1C3179A29CD001F0E04 /* index.html */; };
+		D3FDE269179A29CE001F0E04 /* index.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1C4179A29CD001F0E04 /* index.js */; };
+		D3FDE26A179A29CE001F0E04 /* logo_header.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1C5179A29CD001F0E04 /* logo_header.png */; };
+		D3FDE26B179A29CE001F0E04 /* Application in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1C7179A29CD001F0E04 /* Application */; };
+		D3FDE26C179A29CE001F0E04 /* Application1 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1C8179A29CD001F0E04 /* Application1 */; };
+		D3FDE26D179A29CE001F0E04 /* EMXsController in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1CA179A29CD001F0E04 /* EMXsController */; };
+		D3FDE26E179A29CE001F0E04 /* MainController in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1CB179A29CD001F0E04 /* MainController */; };
+		D3FDE26F179A29CE001F0E04 /* EMX in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1CD179A29CD001F0E04 /* EMX */; };
+		D3FDE270179A29CE001F0E04 /* Experience in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1CE179A29CD001F0E04 /* Experience */; };
+		D3FDE271179A29CE001F0E04 /* Feed in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1CF179A29CD001F0E04 /* Feed */; };
+		D3FDE272179A29CE001F0E04 /* Quote in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1D0179A29CD001F0E04 /* Quote */; };
+		D3FDE273179A29CE001F0E04 /* css in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1D2179A29CD001F0E04 /* css */; };
+		D3FDE274179A29CE001F0E04 /* js in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1D3179A29CD001F0E04 /* js */; };
+		D3FDE275179A29CE001F0E04 /* js1 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1D4179A29CD001F0E04 /* js1 */; };
+		D3FDE276179A29CE001F0E04 /* js2 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1D5179A29CD001F0E04 /* js2 */; };
+		D3FDE277179A29CE001F0E04 /* Library in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1D6179A29CD001F0E04 /* Library */; };
+		D3FDE278179A29CE001F0E04 /* EMXs in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1D8179A29CD001F0E04 /* EMXs */; };
+		D3FDE279179A29CE001F0E04 /* Experiences in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1D9179A29CD001F0E04 /* Experiences */; };
+		D3FDE27A179A29CE001F0E04 /* Feeds in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1DA179A29CD001F0E04 /* Feeds */; };
+		D3FDE27B179A29CE001F0E04 /* Quotes in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1DB179A29CD001F0E04 /* Quotes */; };
+		D3FDE27C179A29CE001F0E04 /* DAILYLOG in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1DD179A29CD001F0E04 /* DAILYLOG */; };
+		D3FDE27D179A29CE001F0E04 /* EMAType1 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1DE179A29CD001F0E04 /* EMAType1 */; };
+		D3FDE27E179A29CE001F0E04 /* EMAType2 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1DF179A29CD001F0E04 /* EMAType2 */; };
+		D3FDE27F179A29CE001F0E04 /* EMAType3 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1E0179A29CD001F0E04 /* EMAType3 */; };
+		D3FDE280179A29CE001F0E04 /* EMAType4 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1E1179A29CD001F0E04 /* EMAType4 */; };
+		D3FDE281179A29CE001F0E04 /* EMAType5 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1E2179A29CD001F0E04 /* EMAType5 */; };
+		D3FDE282179A29CE001F0E04 /* EMAType6 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1E3179A29CD001F0E04 /* EMAType6 */; };
+		D3FDE283179A29CE001F0E04 /* EMAType7 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1E4179A29CD001F0E04 /* EMAType7 */; };
+		D3FDE284179A29CE001F0E04 /* EMIAudio1 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1E5179A29CD001F0E04 /* EMIAudio1 */; };
+		D3FDE285179A29CE001F0E04 /* EMIAudio2 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1E6179A29CD001F0E04 /* EMIAudio2 */; };
+		D3FDE286179A29CE001F0E04 /* EMIAudio3 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1E7179A29CD001F0E04 /* EMIAudio3 */; };
+		D3FDE287179A29CE001F0E04 /* EMIAudio4 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1E8179A29CD001F0E04 /* EMIAudio4 */; };
+		D3FDE288179A29CE001F0E04 /* EMIAudio5 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1E9179A29CD001F0E04 /* EMIAudio5 */; };
+		D3FDE289179A29CE001F0E04 /* EMIAudio6 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1EA179A29CD001F0E04 /* EMIAudio6 */; };
+		D3FDE28A179A29CE001F0E04 /* EMIAudio7 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1EB179A29CD001F0E04 /* EMIAudio7 */; };
+		D3FDE28B179A29CE001F0E04 /* EMIGeneralMindfulness in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1EC179A29CD001F0E04 /* EMIGeneralMindfulness */; };
+		D3FDE28C179A29CE001F0E04 /* EMIHabit in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1ED179A29CD001F0E04 /* EMIHabit */; };
+		D3FDE28D179A29CE001F0E04 /* EMIPushSlider in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1EE179A29CD001F0E04 /* EMIPushSlider */; };
+		D3FDE28E179A29CE001F0E04 /* EMITensionCheck in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1EF179A29CD001F0E04 /* EMITensionCheck */; };
+		D3FDE28F179A29CE001F0E04 /* EMIWkAheadSet in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F0179A29CD001F0E04 /* EMIWkAheadSet */; };
+		D3FDE290179A29CE001F0E04 /* Experience in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F1179A29CD001F0E04 /* Experience */; };
+		D3FDE291179A29CE001F0E04 /* FEEDBACK in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F2179A29CD001F0E04 /* FEEDBACK */; };
+		D3FDE292179A29CE001F0E04 /* IntentionConnect in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F3179A29CD001F0E04 /* IntentionConnect */; };
+		D3FDE293179A29CE001F0E04 /* IntentionRemind in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F4179A29CD001F0E04 /* IntentionRemind */; };
+		D3FDE294179A29CE001F0E04 /* MainTabs in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F5179A29CD001F0E04 /* MainTabs */; };
+		D3FDE295179A29CE001F0E04 /* MyTabPanel1 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F6179A29CD001F0E04 /* MyTabPanel1 */; };
+		D3FDE296179A29CE001F0E04 /* QUOTES in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F7179A29CD001F0E04 /* QUOTES */; };
+		D3FDE297179A29CE001F0E04 /* PushNotification.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1F8179A29CD001F0E04 /* PushNotification.js */; };
+		D3FDE298179A29CE001F0E04 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F9179A29CD001F0E04 /* README.md */; };
+		D3FDE299179A29CE001F0E04 /* sencha-touch-all.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1FA179A29CD001F0E04 /* sencha-touch-all.js */; };
+		D3FDE29A179A29CE001F0E04 /* sencha-touch.css in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1FB179A29CD001F0E04 /* sencha-touch.css */; };
+		D3FDE29B179A29CE001F0E04 /* Abstract.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1FF179A29CD001F0E04 /* Abstract.js */; };
+		D3FDE29C179A29CE001F0E04 /* PhoneGap.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE200179A29CE001F0E04 /* PhoneGap.js */; };
+		D3FDE29D179A29CE001F0E04 /* Sencha.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE201179A29CE001F0E04 /* Sencha.js */; };
+		D3FDE29E179A29CE001F0E04 /* Simulator.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE202179A29CE001F0E04 /* Simulator.js */; };
+		D3FDE29F179A29CE001F0E04 /* Camera.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE203179A29CE001F0E04 /* Camera.js */; };
+		D3FDE2A0179A29CE001F0E04 /* Android.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE205179A29CE001F0E04 /* Android.js */; };
+		D3FDE2A1179A29CE001F0E04 /* Default.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE206179A29CE001F0E04 /* Default.js */; };
+		D3FDE2A2179A29CE001F0E04 /* Communicator.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE207179A29CE001F0E04 /* Communicator.js */; };
+		D3FDE2A3179A29CE001F0E04 /* Abstract.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE209179A29CE001F0E04 /* Abstract.js */; };
+		D3FDE2A4179A29CE001F0E04 /* PhoneGap.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE20A179A29CE001F0E04 /* PhoneGap.js */; };
+		D3FDE2A5179A29CE001F0E04 /* Sencha.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE20B179A29CE001F0E04 /* Sencha.js */; };
+		D3FDE2A6179A29CE001F0E04 /* Simulator.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE20C179A29CE001F0E04 /* Simulator.js */; };
+		D3FDE2A7179A29CE001F0E04 /* Connection.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE20D179A29CE001F0E04 /* Connection.js */; };
+		D3FDE2A8179A29CE001F0E04 /* Abstract.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE20F179A29CE001F0E04 /* Abstract.js */; };
+		D3FDE2A9179A29CE001F0E04 /* Sencha.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE210179A29CE001F0E04 /* Sencha.js */; };
+		D3FDE2AA179A29CE001F0E04 /* Contacts.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE211179A29CE001F0E04 /* Contacts.js */; };
+		D3FDE2AB179A29CE001F0E04 /* Abstract.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE213179A29CE001F0E04 /* Abstract.js */; };
+		D3FDE2AC179A29CE001F0E04 /* PhoneGap.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE214179A29CE001F0E04 /* PhoneGap.js */; };
+		D3FDE2AD179A29CE001F0E04 /* Sencha.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE215179A29CE001F0E04 /* Sencha.js */; };
+		D3FDE2AE179A29CE001F0E04 /* Simulator.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE216179A29CE001F0E04 /* Simulator.js */; };
+		D3FDE2AF179A29CE001F0E04 /* Device.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE217179A29CE001F0E04 /* Device.js */; };
+		D3FDE2B0179A29CE001F0E04 /* Abstract.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE219179A29CE001F0E04 /* Abstract.js */; };
+		D3FDE2B1179A29CE001F0E04 /* Sencha.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE21A179A29CE001F0E04 /* Sencha.js */; };
+		D3FDE2B2179A29CE001F0E04 /* Simulator.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE21B179A29CE001F0E04 /* Simulator.js */; };
+		D3FDE2B3179A29CE001F0E04 /* Geolocation.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE21C179A29CE001F0E04 /* Geolocation.js */; };
+		D3FDE2B4179A29CE001F0E04 /* Abstract.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE21E179A29CE001F0E04 /* Abstract.js */; };
+		D3FDE2B5179A29CE001F0E04 /* PhoneGap.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE21F179A29CE001F0E04 /* PhoneGap.js */; };
+		D3FDE2B6179A29CE001F0E04 /* Sencha.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE220179A29CE001F0E04 /* Sencha.js */; };
+		D3FDE2B7179A29CE001F0E04 /* Simulator.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE221179A29CE001F0E04 /* Simulator.js */; };
+		D3FDE2B8179A29CE001F0E04 /* Notification.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE222179A29CE001F0E04 /* Notification.js */; };
+		D3FDE2B9179A29CE001F0E04 /* Abstract.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE224179A29CE001F0E04 /* Abstract.js */; };
+		D3FDE2BA179A29CE001F0E04 /* HTML5.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE225179A29CE001F0E04 /* HTML5.js */; };
+		D3FDE2BB179A29CE001F0E04 /* Sencha.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE226179A29CE001F0E04 /* Sencha.js */; };
+		D3FDE2BC179A29CE001F0E04 /* Orientation.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE227179A29CE001F0E04 /* Orientation.js */; };
+		D3FDE2BD179A29CE001F0E04 /* Sencha.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE229179A29CE001F0E04 /* Sencha.js */; };
+		D3FDE2BE179A29CE001F0E04 /* Purchases.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE22A179A29CE001F0E04 /* Purchases.js */; };
+		D3FDE2BF179A29CE001F0E04 /* Abstract.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE22C179A29CE001F0E04 /* Abstract.js */; };
+		D3FDE2C0179A29CE001F0E04 /* Sencha.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE22D179A29CE001F0E04 /* Sencha.js */; };
+		D3FDE2C1179A29CE001F0E04 /* Push.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE22E179A29CE001F0E04 /* Push.js */; };
+		D3FDE2C5179A2D4A001F0E04 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE2C2179A2D4A001F0E04 /* icon-72.png */; };
+		D3FDE2C6179A2D4A001F0E04 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE2C3179A2D4A001F0E04 /* icon-72@2x.png */; };
+		D3FDE2C7179A2D4A001F0E04 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE2C4179A2D4A001F0E04 /* icon@2x.png */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 /* End PBXBuildFile section */
@@ -110,9 +258,7 @@
 		3088BBBA154F3926009F9C59 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		3088BBBB154F3926009F9C59 /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~iphone.png"; sourceTree = "<group>"; };
 		3088BBBC154F3926009F9C59 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
-		308D052E1370CCF300D202BF /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
 		308D052F1370CCF300D202BF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		308D05301370CCF300D202BF /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		30A0434414DC770100060A13 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Localizable.strings; sourceTree = "<group>"; };
 		30A0434714DC770100060A13 /* se */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = se; path = Localizable.strings; sourceTree = "<group>"; };
 		30E5649113A7FCAF007403D8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -151,6 +297,156 @@
 		D3EBB3B31712CE350054EA7A /* PWSetTagsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWSetTagsRequest.h; sourceTree = "<group>"; };
 		D3EBB3B41712CE350054EA7A /* PWSetTagsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWSetTagsRequest.m; sourceTree = "<group>"; };
 		D3EBB3B51712CE350054EA7A /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		D3FDE184179A29CD001F0E04 /* .architect */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .architect; sourceTree = "<group>"; };
+		D3FDE187179A29CD001F0E04 /* EMXsController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMXsController.js; sourceTree = "<group>"; };
+		D3FDE188179A29CD001F0E04 /* MainController.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MainController.js; sourceTree = "<group>"; };
+		D3FDE18A179A29CD001F0E04 /* EMX.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMX.js; sourceTree = "<group>"; };
+		D3FDE18B179A29CD001F0E04 /* Experience.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Experience.js; sourceTree = "<group>"; };
+		D3FDE18C179A29CD001F0E04 /* Feed.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Feed.js; sourceTree = "<group>"; };
+		D3FDE18D179A29CD001F0E04 /* Quote.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Quote.js; sourceTree = "<group>"; };
+		D3FDE18F179A29CD001F0E04 /* EMXs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMXs.js; sourceTree = "<group>"; };
+		D3FDE190179A29CD001F0E04 /* Experiences.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Experiences.js; sourceTree = "<group>"; };
+		D3FDE191179A29CD001F0E04 /* Feeds.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Feeds.js; sourceTree = "<group>"; };
+		D3FDE192179A29CD001F0E04 /* Quotes.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Quotes.js; sourceTree = "<group>"; };
+		D3FDE194179A29CD001F0E04 /* DAILYLOG.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = DAILYLOG.js; sourceTree = "<group>"; };
+		D3FDE195179A29CD001F0E04 /* EMAType1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMAType1.js; sourceTree = "<group>"; };
+		D3FDE196179A29CD001F0E04 /* EMAType2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMAType2.js; sourceTree = "<group>"; };
+		D3FDE197179A29CD001F0E04 /* EMAType3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMAType3.js; sourceTree = "<group>"; };
+		D3FDE198179A29CD001F0E04 /* EMAType4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMAType4.js; sourceTree = "<group>"; };
+		D3FDE199179A29CD001F0E04 /* EMAType5.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMAType5.js; sourceTree = "<group>"; };
+		D3FDE19A179A29CD001F0E04 /* EMAType6.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMAType6.js; sourceTree = "<group>"; };
+		D3FDE19B179A29CD001F0E04 /* EMAType7.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMAType7.js; sourceTree = "<group>"; };
+		D3FDE19C179A29CD001F0E04 /* EMIAudio1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMIAudio1.js; sourceTree = "<group>"; };
+		D3FDE19D179A29CD001F0E04 /* EMIAudio2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMIAudio2.js; sourceTree = "<group>"; };
+		D3FDE19E179A29CD001F0E04 /* EMIAudio3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMIAudio3.js; sourceTree = "<group>"; };
+		D3FDE19F179A29CD001F0E04 /* EMIAudio4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMIAudio4.js; sourceTree = "<group>"; };
+		D3FDE1A0179A29CD001F0E04 /* EMIAudio5.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMIAudio5.js; sourceTree = "<group>"; };
+		D3FDE1A1179A29CD001F0E04 /* EMIAudio6.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMIAudio6.js; sourceTree = "<group>"; };
+		D3FDE1A2179A29CD001F0E04 /* EMIAudio7.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMIAudio7.js; sourceTree = "<group>"; };
+		D3FDE1A3179A29CD001F0E04 /* EMIGeneralMindfulness.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMIGeneralMindfulness.js; sourceTree = "<group>"; };
+		D3FDE1A4179A29CD001F0E04 /* EMIHabit.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMIHabit.js; sourceTree = "<group>"; };
+		D3FDE1A5179A29CD001F0E04 /* EMIPushSlider.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMIPushSlider.js; sourceTree = "<group>"; };
+		D3FDE1A6179A29CD001F0E04 /* EMITensionCheck.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMITensionCheck.js; sourceTree = "<group>"; };
+		D3FDE1A7179A29CD001F0E04 /* EMIWkAheadSet.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = EMIWkAheadSet.js; sourceTree = "<group>"; };
+		D3FDE1A8179A29CD001F0E04 /* Experience.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Experience.js; sourceTree = "<group>"; };
+		D3FDE1A9179A29CD001F0E04 /* FEEDBACK.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FEEDBACK.js; sourceTree = "<group>"; };
+		D3FDE1AA179A29CD001F0E04 /* IntentionConnect.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = IntentionConnect.js; sourceTree = "<group>"; };
+		D3FDE1AB179A29CD001F0E04 /* IntentionRemind.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = IntentionRemind.js; sourceTree = "<group>"; };
+		D3FDE1AC179A29CD001F0E04 /* MainTabs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MainTabs.js; sourceTree = "<group>"; };
+		D3FDE1AD179A29CD001F0E04 /* MyTabPanel1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MyTabPanel1.js; sourceTree = "<group>"; };
+		D3FDE1AE179A29CD001F0E04 /* QUOTES.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = QUOTES.js; sourceTree = "<group>"; };
+		D3FDE1AF179A29CD001F0E04 /* app.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.html; sourceTree = "<group>"; };
+		D3FDE1B0179A29CD001F0E04 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
+		D3FDE1B1179A29CD001F0E04 /* apple.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = apple.css; sourceTree = "<group>"; };
+		D3FDE1B2179A29CD001F0E04 /* base64-toolkit.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "base64-toolkit.js"; sourceTree = "<group>"; };
+		D3FDE1B3179A29CD001F0E04 /* cordova-2.5.0.ios.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "cordova-2.5.0.ios.js"; sourceTree = "<group>"; };
+		D3FDE1B4179A29CD001F0E04 /* cordova-2.5.0.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "cordova-2.5.0.js"; sourceTree = "<group>"; };
+		D3FDE1B5179A29CD001F0E04 /* heart-beautify.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "heart-beautify.css"; sourceTree = "<group>"; };
+		D3FDE1B6179A29CD001F0E04 /* heart-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-icon.png"; sourceTree = "<group>"; };
+		D3FDE1B7179A29CD001F0E04 /* heart-manager.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "heart-manager.js"; sourceTree = "<group>"; };
+		D3FDE1B9179A29CD001F0E04 /* beach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach.png; sourceTree = "<group>"; };
+		D3FDE1BA179A29CD001F0E04 /* calm_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calm_water.png; sourceTree = "<group>"; };
+		D3FDE1BB179A29CD001F0E04 /* clouds1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clouds1.png; sourceTree = "<group>"; };
+		D3FDE1BC179A29CD001F0E04 /* clouds2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clouds2.png; sourceTree = "<group>"; };
+		D3FDE1BD179A29CD001F0E04 /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow.png; sourceTree = "<group>"; };
+		D3FDE1BE179A29CD001F0E04 /* sunrise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunrise.png; sourceTree = "<group>"; };
+		D3FDE1BF179A29CD001F0E04 /* water-drop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "water-drop.png"; sourceTree = "<group>"; };
+		D3FDE1C0179A29CD001F0E04 /* water_with_fog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water_with_fog.png; sourceTree = "<group>"; };
+		D3FDE1C1179A29CD001F0E04 /* yellow_sunset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow_sunset.png; sourceTree = "<group>"; };
+		D3FDE1C2179A29CD001F0E04 /* index-ios.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index-ios.html"; sourceTree = "<group>"; };
+		D3FDE1C3179A29CD001F0E04 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		D3FDE1C4179A29CD001F0E04 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		D3FDE1C5179A29CD001F0E04 /* logo_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_header.png; sourceTree = "<group>"; };
+		D3FDE1C7179A29CD001F0E04 /* Application */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Application; sourceTree = "<group>"; };
+		D3FDE1C8179A29CD001F0E04 /* Application1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Application1; sourceTree = "<group>"; };
+		D3FDE1CA179A29CD001F0E04 /* EMXsController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMXsController; sourceTree = "<group>"; };
+		D3FDE1CB179A29CD001F0E04 /* MainController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MainController; sourceTree = "<group>"; };
+		D3FDE1CD179A29CD001F0E04 /* EMX */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMX; sourceTree = "<group>"; };
+		D3FDE1CE179A29CD001F0E04 /* Experience */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Experience; sourceTree = "<group>"; };
+		D3FDE1CF179A29CD001F0E04 /* Feed */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Feed; sourceTree = "<group>"; };
+		D3FDE1D0179A29CD001F0E04 /* Quote */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Quote; sourceTree = "<group>"; };
+		D3FDE1D2179A29CD001F0E04 /* css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = css; sourceTree = "<group>"; };
+		D3FDE1D3179A29CD001F0E04 /* js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = js; sourceTree = "<group>"; };
+		D3FDE1D4179A29CD001F0E04 /* js1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = js1; sourceTree = "<group>"; };
+		D3FDE1D5179A29CD001F0E04 /* js2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = js2; sourceTree = "<group>"; };
+		D3FDE1D6179A29CD001F0E04 /* Library */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Library; sourceTree = "<group>"; };
+		D3FDE1D8179A29CD001F0E04 /* EMXs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMXs; sourceTree = "<group>"; };
+		D3FDE1D9179A29CD001F0E04 /* Experiences */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Experiences; sourceTree = "<group>"; };
+		D3FDE1DA179A29CD001F0E04 /* Feeds */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Feeds; sourceTree = "<group>"; };
+		D3FDE1DB179A29CD001F0E04 /* Quotes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Quotes; sourceTree = "<group>"; };
+		D3FDE1DD179A29CD001F0E04 /* DAILYLOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DAILYLOG; sourceTree = "<group>"; };
+		D3FDE1DE179A29CD001F0E04 /* EMAType1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMAType1; sourceTree = "<group>"; };
+		D3FDE1DF179A29CD001F0E04 /* EMAType2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMAType2; sourceTree = "<group>"; };
+		D3FDE1E0179A29CD001F0E04 /* EMAType3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMAType3; sourceTree = "<group>"; };
+		D3FDE1E1179A29CD001F0E04 /* EMAType4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMAType4; sourceTree = "<group>"; };
+		D3FDE1E2179A29CD001F0E04 /* EMAType5 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMAType5; sourceTree = "<group>"; };
+		D3FDE1E3179A29CD001F0E04 /* EMAType6 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMAType6; sourceTree = "<group>"; };
+		D3FDE1E4179A29CD001F0E04 /* EMAType7 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMAType7; sourceTree = "<group>"; };
+		D3FDE1E5179A29CD001F0E04 /* EMIAudio1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMIAudio1; sourceTree = "<group>"; };
+		D3FDE1E6179A29CD001F0E04 /* EMIAudio2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMIAudio2; sourceTree = "<group>"; };
+		D3FDE1E7179A29CD001F0E04 /* EMIAudio3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMIAudio3; sourceTree = "<group>"; };
+		D3FDE1E8179A29CD001F0E04 /* EMIAudio4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMIAudio4; sourceTree = "<group>"; };
+		D3FDE1E9179A29CD001F0E04 /* EMIAudio5 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMIAudio5; sourceTree = "<group>"; };
+		D3FDE1EA179A29CD001F0E04 /* EMIAudio6 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMIAudio6; sourceTree = "<group>"; };
+		D3FDE1EB179A29CD001F0E04 /* EMIAudio7 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMIAudio7; sourceTree = "<group>"; };
+		D3FDE1EC179A29CD001F0E04 /* EMIGeneralMindfulness */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMIGeneralMindfulness; sourceTree = "<group>"; };
+		D3FDE1ED179A29CD001F0E04 /* EMIHabit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMIHabit; sourceTree = "<group>"; };
+		D3FDE1EE179A29CD001F0E04 /* EMIPushSlider */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMIPushSlider; sourceTree = "<group>"; };
+		D3FDE1EF179A29CD001F0E04 /* EMITensionCheck */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMITensionCheck; sourceTree = "<group>"; };
+		D3FDE1F0179A29CD001F0E04 /* EMIWkAheadSet */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EMIWkAheadSet; sourceTree = "<group>"; };
+		D3FDE1F1179A29CD001F0E04 /* Experience */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Experience; sourceTree = "<group>"; };
+		D3FDE1F2179A29CD001F0E04 /* FEEDBACK */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FEEDBACK; sourceTree = "<group>"; };
+		D3FDE1F3179A29CD001F0E04 /* IntentionConnect */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IntentionConnect; sourceTree = "<group>"; };
+		D3FDE1F4179A29CD001F0E04 /* IntentionRemind */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IntentionRemind; sourceTree = "<group>"; };
+		D3FDE1F5179A29CD001F0E04 /* MainTabs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MainTabs; sourceTree = "<group>"; };
+		D3FDE1F6179A29CD001F0E04 /* MyTabPanel1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyTabPanel1; sourceTree = "<group>"; };
+		D3FDE1F7179A29CD001F0E04 /* QUOTES */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QUOTES; sourceTree = "<group>"; };
+		D3FDE1F8179A29CD001F0E04 /* PushNotification.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = PushNotification.js; sourceTree = "<group>"; };
+		D3FDE1F9179A29CD001F0E04 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D3FDE1FA179A29CD001F0E04 /* sencha-touch-all.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "sencha-touch-all.js"; sourceTree = "<group>"; };
+		D3FDE1FB179A29CD001F0E04 /* sencha-touch.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "sencha-touch.css"; sourceTree = "<group>"; };
+		D3FDE1FF179A29CD001F0E04 /* Abstract.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Abstract.js; sourceTree = "<group>"; };
+		D3FDE200179A29CE001F0E04 /* PhoneGap.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = PhoneGap.js; sourceTree = "<group>"; };
+		D3FDE201179A29CE001F0E04 /* Sencha.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Sencha.js; sourceTree = "<group>"; };
+		D3FDE202179A29CE001F0E04 /* Simulator.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Simulator.js; sourceTree = "<group>"; };
+		D3FDE203179A29CE001F0E04 /* Camera.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Camera.js; sourceTree = "<group>"; };
+		D3FDE205179A29CE001F0E04 /* Android.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Android.js; sourceTree = "<group>"; };
+		D3FDE206179A29CE001F0E04 /* Default.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Default.js; sourceTree = "<group>"; };
+		D3FDE207179A29CE001F0E04 /* Communicator.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Communicator.js; sourceTree = "<group>"; };
+		D3FDE209179A29CE001F0E04 /* Abstract.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Abstract.js; sourceTree = "<group>"; };
+		D3FDE20A179A29CE001F0E04 /* PhoneGap.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = PhoneGap.js; sourceTree = "<group>"; };
+		D3FDE20B179A29CE001F0E04 /* Sencha.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Sencha.js; sourceTree = "<group>"; };
+		D3FDE20C179A29CE001F0E04 /* Simulator.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Simulator.js; sourceTree = "<group>"; };
+		D3FDE20D179A29CE001F0E04 /* Connection.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Connection.js; sourceTree = "<group>"; };
+		D3FDE20F179A29CE001F0E04 /* Abstract.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Abstract.js; sourceTree = "<group>"; };
+		D3FDE210179A29CE001F0E04 /* Sencha.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Sencha.js; sourceTree = "<group>"; };
+		D3FDE211179A29CE001F0E04 /* Contacts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Contacts.js; sourceTree = "<group>"; };
+		D3FDE213179A29CE001F0E04 /* Abstract.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Abstract.js; sourceTree = "<group>"; };
+		D3FDE214179A29CE001F0E04 /* PhoneGap.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = PhoneGap.js; sourceTree = "<group>"; };
+		D3FDE215179A29CE001F0E04 /* Sencha.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Sencha.js; sourceTree = "<group>"; };
+		D3FDE216179A29CE001F0E04 /* Simulator.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Simulator.js; sourceTree = "<group>"; };
+		D3FDE217179A29CE001F0E04 /* Device.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Device.js; sourceTree = "<group>"; };
+		D3FDE219179A29CE001F0E04 /* Abstract.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Abstract.js; sourceTree = "<group>"; };
+		D3FDE21A179A29CE001F0E04 /* Sencha.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Sencha.js; sourceTree = "<group>"; };
+		D3FDE21B179A29CE001F0E04 /* Simulator.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Simulator.js; sourceTree = "<group>"; };
+		D3FDE21C179A29CE001F0E04 /* Geolocation.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Geolocation.js; sourceTree = "<group>"; };
+		D3FDE21E179A29CE001F0E04 /* Abstract.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Abstract.js; sourceTree = "<group>"; };
+		D3FDE21F179A29CE001F0E04 /* PhoneGap.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = PhoneGap.js; sourceTree = "<group>"; };
+		D3FDE220179A29CE001F0E04 /* Sencha.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Sencha.js; sourceTree = "<group>"; };
+		D3FDE221179A29CE001F0E04 /* Simulator.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Simulator.js; sourceTree = "<group>"; };
+		D3FDE222179A29CE001F0E04 /* Notification.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Notification.js; sourceTree = "<group>"; };
+		D3FDE224179A29CE001F0E04 /* Abstract.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Abstract.js; sourceTree = "<group>"; };
+		D3FDE225179A29CE001F0E04 /* HTML5.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = HTML5.js; sourceTree = "<group>"; };
+		D3FDE226179A29CE001F0E04 /* Sencha.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Sencha.js; sourceTree = "<group>"; };
+		D3FDE227179A29CE001F0E04 /* Orientation.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Orientation.js; sourceTree = "<group>"; };
+		D3FDE229179A29CE001F0E04 /* Sencha.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Sencha.js; sourceTree = "<group>"; };
+		D3FDE22A179A29CE001F0E04 /* Purchases.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Purchases.js; sourceTree = "<group>"; };
+		D3FDE22C179A29CE001F0E04 /* Abstract.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Abstract.js; sourceTree = "<group>"; };
+		D3FDE22D179A29CE001F0E04 /* Sencha.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Sencha.js; sourceTree = "<group>"; };
+		D3FDE22E179A29CE001F0E04 /* Push.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Push.js; sourceTree = "<group>"; };
+		D3FDE2C2179A2D4A001F0E04 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
+		D3FDE2C3179A2D4A001F0E04 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
+		D3FDE2C4179A2D4A001F0E04 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ucsf_heart_ios/config.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +518,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				D3FDE183179A29CD001F0E04 /* src */,
 				F840E1F0165FE0F500CFE078 /* config.xml */,
 				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -302,10 +599,11 @@
 		308D052D1370CCF300D202BF /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				D3FDE2C2179A2D4A001F0E04 /* icon-72.png */,
+				D3FDE2C3179A2D4A001F0E04 /* icon-72@2x.png */,
+				D3FDE2C4179A2D4A001F0E04 /* icon@2x.png */,
 				D3CE6AA31712E8B1008D4EEB /* heart_icon-128x128.png */,
-				308D052E1370CCF300D202BF /* icon-72.png */,
 				308D052F1370CCF300D202BF /* icon.png */,
-				308D05301370CCF300D202BF /* icon@2x.png */,
 			);
 			path = icons;
 			sourceTree = "<group>";
@@ -377,6 +675,353 @@
 			);
 			path = PushWoosh;
 			sourceTree = SOURCE_ROOT;
+		};
+		D3FDE183179A29CD001F0E04 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE184179A29CD001F0E04 /* .architect */,
+				D3FDE185179A29CD001F0E04 /* app */,
+				D3FDE1AF179A29CD001F0E04 /* app.html */,
+				D3FDE1B0179A29CD001F0E04 /* app.js */,
+				D3FDE1B1179A29CD001F0E04 /* apple.css */,
+				D3FDE1B2179A29CD001F0E04 /* base64-toolkit.js */,
+				D3FDE1B3179A29CD001F0E04 /* cordova-2.5.0.ios.js */,
+				D3FDE1B4179A29CD001F0E04 /* cordova-2.5.0.js */,
+				D3FDE1B5179A29CD001F0E04 /* heart-beautify.css */,
+				D3FDE1B6179A29CD001F0E04 /* heart-icon.png */,
+				D3FDE1B7179A29CD001F0E04 /* heart-manager.js */,
+				D3FDE1B8179A29CD001F0E04 /* images */,
+				D3FDE1C2179A29CD001F0E04 /* index-ios.html */,
+				D3FDE1C3179A29CD001F0E04 /* index.html */,
+				D3FDE1C4179A29CD001F0E04 /* index.js */,
+				D3FDE1C5179A29CD001F0E04 /* logo_header.png */,
+				D3FDE1C6179A29CD001F0E04 /* metadata */,
+				D3FDE1F8179A29CD001F0E04 /* PushNotification.js */,
+				D3FDE1F9179A29CD001F0E04 /* README.md */,
+				D3FDE1FA179A29CD001F0E04 /* sencha-touch-all.js */,
+				D3FDE1FB179A29CD001F0E04 /* sencha-touch.css */,
+				D3FDE1FC179A29CD001F0E04 /* src */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
+		D3FDE185179A29CD001F0E04 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE186179A29CD001F0E04 /* controller */,
+				D3FDE189179A29CD001F0E04 /* model */,
+				D3FDE18E179A29CD001F0E04 /* store */,
+				D3FDE193179A29CD001F0E04 /* view */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		D3FDE186179A29CD001F0E04 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE187179A29CD001F0E04 /* EMXsController.js */,
+				D3FDE188179A29CD001F0E04 /* MainController.js */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		D3FDE189179A29CD001F0E04 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE18A179A29CD001F0E04 /* EMX.js */,
+				D3FDE18B179A29CD001F0E04 /* Experience.js */,
+				D3FDE18C179A29CD001F0E04 /* Feed.js */,
+				D3FDE18D179A29CD001F0E04 /* Quote.js */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		D3FDE18E179A29CD001F0E04 /* store */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE18F179A29CD001F0E04 /* EMXs.js */,
+				D3FDE190179A29CD001F0E04 /* Experiences.js */,
+				D3FDE191179A29CD001F0E04 /* Feeds.js */,
+				D3FDE192179A29CD001F0E04 /* Quotes.js */,
+			);
+			path = store;
+			sourceTree = "<group>";
+		};
+		D3FDE193179A29CD001F0E04 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE194179A29CD001F0E04 /* DAILYLOG.js */,
+				D3FDE195179A29CD001F0E04 /* EMAType1.js */,
+				D3FDE196179A29CD001F0E04 /* EMAType2.js */,
+				D3FDE197179A29CD001F0E04 /* EMAType3.js */,
+				D3FDE198179A29CD001F0E04 /* EMAType4.js */,
+				D3FDE199179A29CD001F0E04 /* EMAType5.js */,
+				D3FDE19A179A29CD001F0E04 /* EMAType6.js */,
+				D3FDE19B179A29CD001F0E04 /* EMAType7.js */,
+				D3FDE19C179A29CD001F0E04 /* EMIAudio1.js */,
+				D3FDE19D179A29CD001F0E04 /* EMIAudio2.js */,
+				D3FDE19E179A29CD001F0E04 /* EMIAudio3.js */,
+				D3FDE19F179A29CD001F0E04 /* EMIAudio4.js */,
+				D3FDE1A0179A29CD001F0E04 /* EMIAudio5.js */,
+				D3FDE1A1179A29CD001F0E04 /* EMIAudio6.js */,
+				D3FDE1A2179A29CD001F0E04 /* EMIAudio7.js */,
+				D3FDE1A3179A29CD001F0E04 /* EMIGeneralMindfulness.js */,
+				D3FDE1A4179A29CD001F0E04 /* EMIHabit.js */,
+				D3FDE1A5179A29CD001F0E04 /* EMIPushSlider.js */,
+				D3FDE1A6179A29CD001F0E04 /* EMITensionCheck.js */,
+				D3FDE1A7179A29CD001F0E04 /* EMIWkAheadSet.js */,
+				D3FDE1A8179A29CD001F0E04 /* Experience.js */,
+				D3FDE1A9179A29CD001F0E04 /* FEEDBACK.js */,
+				D3FDE1AA179A29CD001F0E04 /* IntentionConnect.js */,
+				D3FDE1AB179A29CD001F0E04 /* IntentionRemind.js */,
+				D3FDE1AC179A29CD001F0E04 /* MainTabs.js */,
+				D3FDE1AD179A29CD001F0E04 /* MyTabPanel1.js */,
+				D3FDE1AE179A29CD001F0E04 /* QUOTES.js */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		D3FDE1B8179A29CD001F0E04 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE1B9179A29CD001F0E04 /* beach.png */,
+				D3FDE1BA179A29CD001F0E04 /* calm_water.png */,
+				D3FDE1BB179A29CD001F0E04 /* clouds1.png */,
+				D3FDE1BC179A29CD001F0E04 /* clouds2.png */,
+				D3FDE1BD179A29CD001F0E04 /* snow.png */,
+				D3FDE1BE179A29CD001F0E04 /* sunrise.png */,
+				D3FDE1BF179A29CD001F0E04 /* water-drop.png */,
+				D3FDE1C0179A29CD001F0E04 /* water_with_fog.png */,
+				D3FDE1C1179A29CD001F0E04 /* yellow_sunset.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		D3FDE1C6179A29CD001F0E04 /* metadata */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE1C7179A29CD001F0E04 /* Application */,
+				D3FDE1C8179A29CD001F0E04 /* Application1 */,
+				D3FDE1C9179A29CD001F0E04 /* controller */,
+				D3FDE1CC179A29CD001F0E04 /* model */,
+				D3FDE1D1179A29CD001F0E04 /* resource */,
+				D3FDE1D7179A29CD001F0E04 /* store */,
+				D3FDE1DC179A29CD001F0E04 /* view */,
+			);
+			path = metadata;
+			sourceTree = "<group>";
+		};
+		D3FDE1C9179A29CD001F0E04 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE1CA179A29CD001F0E04 /* EMXsController */,
+				D3FDE1CB179A29CD001F0E04 /* MainController */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		D3FDE1CC179A29CD001F0E04 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE1CD179A29CD001F0E04 /* EMX */,
+				D3FDE1CE179A29CD001F0E04 /* Experience */,
+				D3FDE1CF179A29CD001F0E04 /* Feed */,
+				D3FDE1D0179A29CD001F0E04 /* Quote */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		D3FDE1D1179A29CD001F0E04 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE1D2179A29CD001F0E04 /* css */,
+				D3FDE1D3179A29CD001F0E04 /* js */,
+				D3FDE1D4179A29CD001F0E04 /* js1 */,
+				D3FDE1D5179A29CD001F0E04 /* js2 */,
+				D3FDE1D6179A29CD001F0E04 /* Library */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		D3FDE1D7179A29CD001F0E04 /* store */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE1D8179A29CD001F0E04 /* EMXs */,
+				D3FDE1D9179A29CD001F0E04 /* Experiences */,
+				D3FDE1DA179A29CD001F0E04 /* Feeds */,
+				D3FDE1DB179A29CD001F0E04 /* Quotes */,
+			);
+			path = store;
+			sourceTree = "<group>";
+		};
+		D3FDE1DC179A29CD001F0E04 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE1DD179A29CD001F0E04 /* DAILYLOG */,
+				D3FDE1DE179A29CD001F0E04 /* EMAType1 */,
+				D3FDE1DF179A29CD001F0E04 /* EMAType2 */,
+				D3FDE1E0179A29CD001F0E04 /* EMAType3 */,
+				D3FDE1E1179A29CD001F0E04 /* EMAType4 */,
+				D3FDE1E2179A29CD001F0E04 /* EMAType5 */,
+				D3FDE1E3179A29CD001F0E04 /* EMAType6 */,
+				D3FDE1E4179A29CD001F0E04 /* EMAType7 */,
+				D3FDE1E5179A29CD001F0E04 /* EMIAudio1 */,
+				D3FDE1E6179A29CD001F0E04 /* EMIAudio2 */,
+				D3FDE1E7179A29CD001F0E04 /* EMIAudio3 */,
+				D3FDE1E8179A29CD001F0E04 /* EMIAudio4 */,
+				D3FDE1E9179A29CD001F0E04 /* EMIAudio5 */,
+				D3FDE1EA179A29CD001F0E04 /* EMIAudio6 */,
+				D3FDE1EB179A29CD001F0E04 /* EMIAudio7 */,
+				D3FDE1EC179A29CD001F0E04 /* EMIGeneralMindfulness */,
+				D3FDE1ED179A29CD001F0E04 /* EMIHabit */,
+				D3FDE1EE179A29CD001F0E04 /* EMIPushSlider */,
+				D3FDE1EF179A29CD001F0E04 /* EMITensionCheck */,
+				D3FDE1F0179A29CD001F0E04 /* EMIWkAheadSet */,
+				D3FDE1F1179A29CD001F0E04 /* Experience */,
+				D3FDE1F2179A29CD001F0E04 /* FEEDBACK */,
+				D3FDE1F3179A29CD001F0E04 /* IntentionConnect */,
+				D3FDE1F4179A29CD001F0E04 /* IntentionRemind */,
+				D3FDE1F5179A29CD001F0E04 /* MainTabs */,
+				D3FDE1F6179A29CD001F0E04 /* MyTabPanel1 */,
+				D3FDE1F7179A29CD001F0E04 /* QUOTES */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		D3FDE1FC179A29CD001F0E04 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE1FD179A29CD001F0E04 /* device */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		D3FDE1FD179A29CD001F0E04 /* device */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE1FE179A29CD001F0E04 /* camera */,
+				D3FDE203179A29CE001F0E04 /* Camera.js */,
+				D3FDE204179A29CE001F0E04 /* communicator */,
+				D3FDE207179A29CE001F0E04 /* Communicator.js */,
+				D3FDE208179A29CE001F0E04 /* connection */,
+				D3FDE20D179A29CE001F0E04 /* Connection.js */,
+				D3FDE20E179A29CE001F0E04 /* contacts */,
+				D3FDE211179A29CE001F0E04 /* Contacts.js */,
+				D3FDE212179A29CE001F0E04 /* device */,
+				D3FDE217179A29CE001F0E04 /* Device.js */,
+				D3FDE218179A29CE001F0E04 /* geolocation */,
+				D3FDE21C179A29CE001F0E04 /* Geolocation.js */,
+				D3FDE21D179A29CE001F0E04 /* notification */,
+				D3FDE222179A29CE001F0E04 /* Notification.js */,
+				D3FDE223179A29CE001F0E04 /* orientation */,
+				D3FDE227179A29CE001F0E04 /* Orientation.js */,
+				D3FDE228179A29CE001F0E04 /* purchases */,
+				D3FDE22A179A29CE001F0E04 /* Purchases.js */,
+				D3FDE22B179A29CE001F0E04 /* push */,
+				D3FDE22E179A29CE001F0E04 /* Push.js */,
+			);
+			path = device;
+			sourceTree = "<group>";
+		};
+		D3FDE1FE179A29CD001F0E04 /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE1FF179A29CD001F0E04 /* Abstract.js */,
+				D3FDE200179A29CE001F0E04 /* PhoneGap.js */,
+				D3FDE201179A29CE001F0E04 /* Sencha.js */,
+				D3FDE202179A29CE001F0E04 /* Simulator.js */,
+			);
+			path = camera;
+			sourceTree = "<group>";
+		};
+		D3FDE204179A29CE001F0E04 /* communicator */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE205179A29CE001F0E04 /* Android.js */,
+				D3FDE206179A29CE001F0E04 /* Default.js */,
+			);
+			path = communicator;
+			sourceTree = "<group>";
+		};
+		D3FDE208179A29CE001F0E04 /* connection */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE209179A29CE001F0E04 /* Abstract.js */,
+				D3FDE20A179A29CE001F0E04 /* PhoneGap.js */,
+				D3FDE20B179A29CE001F0E04 /* Sencha.js */,
+				D3FDE20C179A29CE001F0E04 /* Simulator.js */,
+			);
+			path = connection;
+			sourceTree = "<group>";
+		};
+		D3FDE20E179A29CE001F0E04 /* contacts */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE20F179A29CE001F0E04 /* Abstract.js */,
+				D3FDE210179A29CE001F0E04 /* Sencha.js */,
+			);
+			path = contacts;
+			sourceTree = "<group>";
+		};
+		D3FDE212179A29CE001F0E04 /* device */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE213179A29CE001F0E04 /* Abstract.js */,
+				D3FDE214179A29CE001F0E04 /* PhoneGap.js */,
+				D3FDE215179A29CE001F0E04 /* Sencha.js */,
+				D3FDE216179A29CE001F0E04 /* Simulator.js */,
+			);
+			path = device;
+			sourceTree = "<group>";
+		};
+		D3FDE218179A29CE001F0E04 /* geolocation */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE219179A29CE001F0E04 /* Abstract.js */,
+				D3FDE21A179A29CE001F0E04 /* Sencha.js */,
+				D3FDE21B179A29CE001F0E04 /* Simulator.js */,
+			);
+			path = geolocation;
+			sourceTree = "<group>";
+		};
+		D3FDE21D179A29CE001F0E04 /* notification */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE21E179A29CE001F0E04 /* Abstract.js */,
+				D3FDE21F179A29CE001F0E04 /* PhoneGap.js */,
+				D3FDE220179A29CE001F0E04 /* Sencha.js */,
+				D3FDE221179A29CE001F0E04 /* Simulator.js */,
+			);
+			path = notification;
+			sourceTree = "<group>";
+		};
+		D3FDE223179A29CE001F0E04 /* orientation */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE224179A29CE001F0E04 /* Abstract.js */,
+				D3FDE225179A29CE001F0E04 /* HTML5.js */,
+				D3FDE226179A29CE001F0E04 /* Sencha.js */,
+			);
+			path = orientation;
+			sourceTree = "<group>";
+		};
+		D3FDE228179A29CE001F0E04 /* purchases */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE229179A29CE001F0E04 /* Sencha.js */,
+			);
+			path = purchases;
+			sourceTree = "<group>";
+		};
+		D3FDE22B179A29CE001F0E04 /* push */ = {
+			isa = PBXGroup;
+			children = (
+				D3FDE22C179A29CE001F0E04 /* Abstract.js */,
+				D3FDE22D179A29CE001F0E04 /* Sencha.js */,
+			);
+			path = push;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -453,9 +1098,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F840E1F1165FE0F500CFE078 /* config.xml in Resources */,
-				308D05371370CCF300D202BF /* icon-72.png in Resources */,
 				308D05381370CCF300D202BF /* icon.png in Resources */,
-				308D05391370CCF300D202BF /* icon@2x.png in Resources */,
 				3072F99713A8081B00425683 /* Capture.bundle in Resources */,
 				1F766FE113BBADB100FB74C0 /* Localizable.strings in Resources */,
 				1F766FE213BBADB100FB74C0 /* Localizable.strings in Resources */,
@@ -471,6 +1114,72 @@
 				D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */,
 				D3EBB3C51712CE350054EA7A /* README in Resources */,
 				D3CE6AA41712E8B1008D4EEB /* heart_icon-128x128.png in Resources */,
+				D3FDE22F179A29CE001F0E04 /* .architect in Resources */,
+				D3FDE255179A29CE001F0E04 /* app.html in Resources */,
+				D3FDE257179A29CE001F0E04 /* apple.css in Resources */,
+				D3FDE25B179A29CE001F0E04 /* heart-beautify.css in Resources */,
+				D3FDE25C179A29CE001F0E04 /* heart-icon.png in Resources */,
+				D3FDE25E179A29CE001F0E04 /* beach.png in Resources */,
+				D3FDE25F179A29CE001F0E04 /* calm_water.png in Resources */,
+				D3FDE260179A29CE001F0E04 /* clouds1.png in Resources */,
+				D3FDE261179A29CE001F0E04 /* clouds2.png in Resources */,
+				D3FDE262179A29CE001F0E04 /* snow.png in Resources */,
+				D3FDE263179A29CE001F0E04 /* sunrise.png in Resources */,
+				D3FDE264179A29CE001F0E04 /* water-drop.png in Resources */,
+				D3FDE265179A29CE001F0E04 /* water_with_fog.png in Resources */,
+				D3FDE266179A29CE001F0E04 /* yellow_sunset.png in Resources */,
+				D3FDE267179A29CE001F0E04 /* index-ios.html in Resources */,
+				D3FDE268179A29CE001F0E04 /* index.html in Resources */,
+				D3FDE26A179A29CE001F0E04 /* logo_header.png in Resources */,
+				D3FDE26B179A29CE001F0E04 /* Application in Resources */,
+				D3FDE26C179A29CE001F0E04 /* Application1 in Resources */,
+				D3FDE26D179A29CE001F0E04 /* EMXsController in Resources */,
+				D3FDE26E179A29CE001F0E04 /* MainController in Resources */,
+				D3FDE26F179A29CE001F0E04 /* EMX in Resources */,
+				D3FDE270179A29CE001F0E04 /* Experience in Resources */,
+				D3FDE271179A29CE001F0E04 /* Feed in Resources */,
+				D3FDE272179A29CE001F0E04 /* Quote in Resources */,
+				D3FDE273179A29CE001F0E04 /* css in Resources */,
+				D3FDE274179A29CE001F0E04 /* js in Resources */,
+				D3FDE275179A29CE001F0E04 /* js1 in Resources */,
+				D3FDE276179A29CE001F0E04 /* js2 in Resources */,
+				D3FDE277179A29CE001F0E04 /* Library in Resources */,
+				D3FDE278179A29CE001F0E04 /* EMXs in Resources */,
+				D3FDE279179A29CE001F0E04 /* Experiences in Resources */,
+				D3FDE27A179A29CE001F0E04 /* Feeds in Resources */,
+				D3FDE27B179A29CE001F0E04 /* Quotes in Resources */,
+				D3FDE27C179A29CE001F0E04 /* DAILYLOG in Resources */,
+				D3FDE27D179A29CE001F0E04 /* EMAType1 in Resources */,
+				D3FDE27E179A29CE001F0E04 /* EMAType2 in Resources */,
+				D3FDE27F179A29CE001F0E04 /* EMAType3 in Resources */,
+				D3FDE280179A29CE001F0E04 /* EMAType4 in Resources */,
+				D3FDE281179A29CE001F0E04 /* EMAType5 in Resources */,
+				D3FDE282179A29CE001F0E04 /* EMAType6 in Resources */,
+				D3FDE283179A29CE001F0E04 /* EMAType7 in Resources */,
+				D3FDE284179A29CE001F0E04 /* EMIAudio1 in Resources */,
+				D3FDE285179A29CE001F0E04 /* EMIAudio2 in Resources */,
+				D3FDE286179A29CE001F0E04 /* EMIAudio3 in Resources */,
+				D3FDE287179A29CE001F0E04 /* EMIAudio4 in Resources */,
+				D3FDE288179A29CE001F0E04 /* EMIAudio5 in Resources */,
+				D3FDE289179A29CE001F0E04 /* EMIAudio6 in Resources */,
+				D3FDE28A179A29CE001F0E04 /* EMIAudio7 in Resources */,
+				D3FDE28B179A29CE001F0E04 /* EMIGeneralMindfulness in Resources */,
+				D3FDE28C179A29CE001F0E04 /* EMIHabit in Resources */,
+				D3FDE28D179A29CE001F0E04 /* EMIPushSlider in Resources */,
+				D3FDE28E179A29CE001F0E04 /* EMITensionCheck in Resources */,
+				D3FDE28F179A29CE001F0E04 /* EMIWkAheadSet in Resources */,
+				D3FDE290179A29CE001F0E04 /* Experience in Resources */,
+				D3FDE291179A29CE001F0E04 /* FEEDBACK in Resources */,
+				D3FDE292179A29CE001F0E04 /* IntentionConnect in Resources */,
+				D3FDE293179A29CE001F0E04 /* IntentionRemind in Resources */,
+				D3FDE294179A29CE001F0E04 /* MainTabs in Resources */,
+				D3FDE295179A29CE001F0E04 /* MyTabPanel1 in Resources */,
+				D3FDE296179A29CE001F0E04 /* QUOTES in Resources */,
+				D3FDE298179A29CE001F0E04 /* README.md in Resources */,
+				D3FDE29A179A29CE001F0E04 /* sencha-touch.css in Resources */,
+				D3FDE2C5179A2D4A001F0E04 /* icon-72.png in Resources */,
+				D3FDE2C6179A2D4A001F0E04 /* icon-72@2x.png in Resources */,
+				D3FDE2C7179A2D4A001F0E04 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,7 +1198,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SRC_DIR=\"../www\"\nDST_DIR=\"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME/www\"\nCOPY_HIDDEN=\n\nif [[ ! -e \"$SRC_DIR\" ]]; then\n  echo \"Path does not exist: $SRC_DIR\"\n  exit 1\nfi\n\nif [[ -n $COPY_HIDDEN ]]; then\n  alias do_find='find \"$SRC_DIR\"'\nelse\n  alias do_find='find \"$SRC_DIR\" -name \".*\" -prune -o'\nfi\n\ntime (\n# Code signing files must be removed or else there are\n# resource signing errors.\nrm -rf \"$DST_DIR\" \\\n       \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME/_CodeSignature\" \\\n       \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME/PkgInfo\" \\\n       \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME/embedded.mobileprovision\"\n\n# Directories\nfor p in $(do_find -type d -print); do\n  subpath=\"${p#$SRC_DIR}\"\n  mkdir \"$DST_DIR$subpath\" || exit 1\ndone\n\n# Symlinks\nfor p in $(do_find -type l -print); do\n  subpath=\"${p#$SRC_DIR}\"\n  cp -a \"$SRC_DIR$subpath\" \"$DST_DIR$subpath\" || exit 2\ndone\n\n# Files\nfor p in $(do_find -type f -print); do\n  subpath=\"${p#$SRC_DIR}\"\n  if ! ln \"$SRC_DIR$subpath\" \"$DST_DIR$subpath\"; then\n    cp -a \"$SRC_DIR$subpath\" \"$DST_DIR$subpath\" || exit 3\n  fi\ndone\n\n)";
+			shellScript = "SRC_DIR=\"../../src\"\nDST_DIR=\"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME/www\"\nCOPY_HIDDEN=\n\nif [[ ! -e \"$SRC_DIR\" ]]; then\n  echo \"Path does not exist: $SRC_DIR\"\n  exit 1\nfi\n\nif [[ -n $COPY_HIDDEN ]]; then\n  alias do_find='find \"$SRC_DIR\"'\nelse\n  alias do_find='find \"$SRC_DIR\" -name \".*\" -prune -o'\nfi\n\ntime (\n# Code signing files must be removed or else there are\n# resource signing errors.\nrm -rf \"$DST_DIR\" \\\n       \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME/_CodeSignature\" \\\n       \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME/PkgInfo\" \\\n       \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME/embedded.mobileprovision\"\n\n# Directories\nfor p in $(do_find -type d -print); do\n  subpath=\"${p#$SRC_DIR}\"\n  mkdir \"$DST_DIR$subpath\" || exit 1\ndone\n\n# Symlinks\nfor p in $(do_find -type l -print); do\n  subpath=\"${p#$SRC_DIR}\"\n  cp -a \"$SRC_DIR$subpath\" \"$DST_DIR$subpath\" || exit 2\ndone\n\n# Files\nfor p in $(do_find -type f -print); do\n  subpath=\"${p#$SRC_DIR}\"\n  if ! ln \"$SRC_DIR$subpath\" \"$DST_DIR$subpath\"; then\n    cp -a \"$SRC_DIR$subpath\" \"$DST_DIR$subpath\" || exit 3\n  fi\ndone\n\n)";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -516,6 +1225,90 @@
 				D3EBB3C21712CE350054EA7A /* PWRequestManager.m in Sources */,
 				D3EBB3C31712CE350054EA7A /* PWSendBadgeRequest.m in Sources */,
 				D3EBB3C41712CE350054EA7A /* PWSetTagsRequest.m in Sources */,
+				D3FDE230179A29CE001F0E04 /* EMXsController.js in Sources */,
+				D3FDE231179A29CE001F0E04 /* MainController.js in Sources */,
+				D3FDE232179A29CE001F0E04 /* EMX.js in Sources */,
+				D3FDE233179A29CE001F0E04 /* Experience.js in Sources */,
+				D3FDE234179A29CE001F0E04 /* Feed.js in Sources */,
+				D3FDE235179A29CE001F0E04 /* Quote.js in Sources */,
+				D3FDE236179A29CE001F0E04 /* EMXs.js in Sources */,
+				D3FDE237179A29CE001F0E04 /* Experiences.js in Sources */,
+				D3FDE238179A29CE001F0E04 /* Feeds.js in Sources */,
+				D3FDE239179A29CE001F0E04 /* Quotes.js in Sources */,
+				D3FDE23A179A29CE001F0E04 /* DAILYLOG.js in Sources */,
+				D3FDE23B179A29CE001F0E04 /* EMAType1.js in Sources */,
+				D3FDE23C179A29CE001F0E04 /* EMAType2.js in Sources */,
+				D3FDE23D179A29CE001F0E04 /* EMAType3.js in Sources */,
+				D3FDE23E179A29CE001F0E04 /* EMAType4.js in Sources */,
+				D3FDE23F179A29CE001F0E04 /* EMAType5.js in Sources */,
+				D3FDE240179A29CE001F0E04 /* EMAType6.js in Sources */,
+				D3FDE241179A29CE001F0E04 /* EMAType7.js in Sources */,
+				D3FDE242179A29CE001F0E04 /* EMIAudio1.js in Sources */,
+				D3FDE243179A29CE001F0E04 /* EMIAudio2.js in Sources */,
+				D3FDE244179A29CE001F0E04 /* EMIAudio3.js in Sources */,
+				D3FDE245179A29CE001F0E04 /* EMIAudio4.js in Sources */,
+				D3FDE246179A29CE001F0E04 /* EMIAudio5.js in Sources */,
+				D3FDE247179A29CE001F0E04 /* EMIAudio6.js in Sources */,
+				D3FDE248179A29CE001F0E04 /* EMIAudio7.js in Sources */,
+				D3FDE249179A29CE001F0E04 /* EMIGeneralMindfulness.js in Sources */,
+				D3FDE24A179A29CE001F0E04 /* EMIHabit.js in Sources */,
+				D3FDE24B179A29CE001F0E04 /* EMIPushSlider.js in Sources */,
+				D3FDE24C179A29CE001F0E04 /* EMITensionCheck.js in Sources */,
+				D3FDE24D179A29CE001F0E04 /* EMIWkAheadSet.js in Sources */,
+				D3FDE24E179A29CE001F0E04 /* Experience.js in Sources */,
+				D3FDE24F179A29CE001F0E04 /* FEEDBACK.js in Sources */,
+				D3FDE250179A29CE001F0E04 /* IntentionConnect.js in Sources */,
+				D3FDE251179A29CE001F0E04 /* IntentionRemind.js in Sources */,
+				D3FDE252179A29CE001F0E04 /* MainTabs.js in Sources */,
+				D3FDE253179A29CE001F0E04 /* MyTabPanel1.js in Sources */,
+				D3FDE254179A29CE001F0E04 /* QUOTES.js in Sources */,
+				D3FDE256179A29CE001F0E04 /* app.js in Sources */,
+				D3FDE258179A29CE001F0E04 /* base64-toolkit.js in Sources */,
+				D3FDE259179A29CE001F0E04 /* cordova-2.5.0.ios.js in Sources */,
+				D3FDE25A179A29CE001F0E04 /* cordova-2.5.0.js in Sources */,
+				D3FDE25D179A29CE001F0E04 /* heart-manager.js in Sources */,
+				D3FDE269179A29CE001F0E04 /* index.js in Sources */,
+				D3FDE297179A29CE001F0E04 /* PushNotification.js in Sources */,
+				D3FDE299179A29CE001F0E04 /* sencha-touch-all.js in Sources */,
+				D3FDE29B179A29CE001F0E04 /* Abstract.js in Sources */,
+				D3FDE29C179A29CE001F0E04 /* PhoneGap.js in Sources */,
+				D3FDE29D179A29CE001F0E04 /* Sencha.js in Sources */,
+				D3FDE29E179A29CE001F0E04 /* Simulator.js in Sources */,
+				D3FDE29F179A29CE001F0E04 /* Camera.js in Sources */,
+				D3FDE2A0179A29CE001F0E04 /* Android.js in Sources */,
+				D3FDE2A1179A29CE001F0E04 /* Default.js in Sources */,
+				D3FDE2A2179A29CE001F0E04 /* Communicator.js in Sources */,
+				D3FDE2A3179A29CE001F0E04 /* Abstract.js in Sources */,
+				D3FDE2A4179A29CE001F0E04 /* PhoneGap.js in Sources */,
+				D3FDE2A5179A29CE001F0E04 /* Sencha.js in Sources */,
+				D3FDE2A6179A29CE001F0E04 /* Simulator.js in Sources */,
+				D3FDE2A7179A29CE001F0E04 /* Connection.js in Sources */,
+				D3FDE2A8179A29CE001F0E04 /* Abstract.js in Sources */,
+				D3FDE2A9179A29CE001F0E04 /* Sencha.js in Sources */,
+				D3FDE2AA179A29CE001F0E04 /* Contacts.js in Sources */,
+				D3FDE2AB179A29CE001F0E04 /* Abstract.js in Sources */,
+				D3FDE2AC179A29CE001F0E04 /* PhoneGap.js in Sources */,
+				D3FDE2AD179A29CE001F0E04 /* Sencha.js in Sources */,
+				D3FDE2AE179A29CE001F0E04 /* Simulator.js in Sources */,
+				D3FDE2AF179A29CE001F0E04 /* Device.js in Sources */,
+				D3FDE2B0179A29CE001F0E04 /* Abstract.js in Sources */,
+				D3FDE2B1179A29CE001F0E04 /* Sencha.js in Sources */,
+				D3FDE2B2179A29CE001F0E04 /* Simulator.js in Sources */,
+				D3FDE2B3179A29CE001F0E04 /* Geolocation.js in Sources */,
+				D3FDE2B4179A29CE001F0E04 /* Abstract.js in Sources */,
+				D3FDE2B5179A29CE001F0E04 /* PhoneGap.js in Sources */,
+				D3FDE2B6179A29CE001F0E04 /* Sencha.js in Sources */,
+				D3FDE2B7179A29CE001F0E04 /* Simulator.js in Sources */,
+				D3FDE2B8179A29CE001F0E04 /* Notification.js in Sources */,
+				D3FDE2B9179A29CE001F0E04 /* Abstract.js in Sources */,
+				D3FDE2BA179A29CE001F0E04 /* HTML5.js in Sources */,
+				D3FDE2BB179A29CE001F0E04 /* Sencha.js in Sources */,
+				D3FDE2BC179A29CE001F0E04 /* Orientation.js in Sources */,
+				D3FDE2BD179A29CE001F0E04 /* Sencha.js in Sources */,
+				D3FDE2BE179A29CE001F0E04 /* Purchases.js in Sources */,
+				D3FDE2BF179A29CE001F0E04 /* Abstract.js in Sources */,
+				D3FDE2C0179A29CE001F0E04 /* Sencha.js in Sources */,
+				D3FDE2C1179A29CE001F0E04 /* Push.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,8 +1375,13 @@
 				INFOPLIST_FILE = "ucsf_heart_ios/HEART-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = HEART;
+<<<<<<< HEAD
+				PROVISIONING_PROFILE = "FC5B22CA-D1AF-4284-9619-3A55E92A66A4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FC5B22CA-D1AF-4284-9619-3A55E92A66A4";
+=======
 				PROVISIONING_PROFILE = "FE775DA2-D22E-4D4A-AEAF-B152C645BA77";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FE775DA2-D22E-4D4A-AEAF-B152C645BA77";
+>>>>>>> fe0cb29b52aeda715ba711d1acc0c654dc270ea5
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -603,8 +1401,8 @@
 				INFOPLIST_FILE = "ucsf_heart_ios/HEART-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = HEART;
-				PROVISIONING_PROFILE = "0CCCD8B4-0744-44D9-8A01-5C6C1F14B69A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0CCCD8B4-0744-44D9-8A01-5C6C1F14B69A";
+				PROVISIONING_PROFILE = "001B4ED0-E14A-4B76-9460-03614CDEF096";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "001B4ED0-E14A-4B76-9460-03614CDEF096";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

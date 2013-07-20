@@ -31,6 +31,7 @@
 
 @interface AppDelegate : NSObject <UIApplicationDelegate>{}
 
+
 // invoke string is passed to your app on launch, this is only valid if you
 // edit ucsf_heart_ios-Info.plist to add a protocol
 // a simple tutorial can be found here :
@@ -38,5 +39,6 @@
 
 @property (nonatomic, strong) IBOutlet UIWindow* window;
 @property (nonatomic, strong) IBOutlet CDVViewController* viewController;
+
 
 @end
