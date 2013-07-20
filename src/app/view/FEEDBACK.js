@@ -157,9 +157,9 @@ Ext.define('HEART.view.FEEDBACK', {
 						itemId: 'explist',
 						emptyText: 'Nothing...',
 						itemTpl: [
-							'<span class="x-label"><b>{[ (new Date(values.timestamp-0)).toDateString() ]}</b></span><br/>',
-							'<p><span class="x-label">Pleasant: {pleasant}</span><br/>',
-							'	<span class="x-label">Unpleasant: {unpleasant}</span></p>'
+							'<p class="x-label"><b>{[ (new Date(values.timestamp-0)).toDateString() ]}</b></p>',
+							'<p class="x-label">Pleasant: {pleasant}</p>',
+							'<p class="x-label">Unpleasant: {unpleasant}</p>'
 						],
 						store: 'Experiences'
 					}

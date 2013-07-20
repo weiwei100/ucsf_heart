@@ -55,10 +55,9 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 							},
 							{
 								xtype: 'label',
-								html: 'Example Intentions: <br/> <p>Feel more compassion for myself, be aware of my breadth, notice when I feel grateful to others...</p>',
+								html: 'Example Intentions: <p>Feel more compassion for myself, be aware of my breadth, notice when I feel grateful to others...</p>',
 								itemId: 'example',
-								cls: 'x-label-desc',
-								style: 'color: rgb(128,128,128); font-size: 15px;'
+								cls: 'x-label-desc'
 							}
 						]
 					},
