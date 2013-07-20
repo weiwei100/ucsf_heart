@@ -40,9 +40,6 @@ Ext.define('HEART.view.MainTabs', {
 				iconCls: 'home',
 				cls: 'homePanel',
 				id: 'homePanel',
-				style: {
-					background: 'url(water.jpg) no-repeat center !important'
-				},
 				layout: {
 					type: 'vbox'
 				},
@@ -195,9 +192,9 @@ Ext.define('HEART.view.MainTabs', {
 							},
 							{
 								xtype: 'label',
-								html: '<p>Please keep the app silent between:</p>',
-								itemId: 'silent',
-								style: 'color: rgb(128,128,128)'
+								html: 'Please keep the app silent between:',
+								cls: 'x-label-desc',
+								itemId: 'silent'
 							},
 							{
 								xtype: 'selectfield',
@@ -219,9 +216,9 @@ Ext.define('HEART.view.MainTabs', {
 							},
 							{
 								xtype: 'label',
-								html: '<p>Please remind me to fill out my Daily Log in the evening at:</p>',
+								html: 'Please remind me to fill out my Daily Log in the evening at:',
 								itemId: 'remind',
-								style: 'color: rgb(128,128,128)'
+								cls: 'x-label-desc'
 							},
 							{
 								xtype: 'selectfield',

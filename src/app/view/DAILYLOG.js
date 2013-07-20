@@ -27,6 +27,7 @@ Ext.define('HEART.view.DAILYLOG', {
 					{
 						xtype: 'label',
 						html: 'My Daily Log',
+						cls: 'x-form-fieldset-title',
 						itemId: 'title',
 						listeners: [
 							{
@@ -186,8 +187,6 @@ Ext.define('HEART.view.DAILYLOG', {
 						itemId: 'exercise',
 						label: 'Any exercise today? (10min or more)',
 						labelAlign: 'top',
-						labelWidth: '100%',
-						labelWrap: true,
 						name: 'exercise',
 						options: [
 							{
@@ -223,7 +222,7 @@ Ext.define('HEART.view.DAILYLOG', {
 						items: [
 							{
 								xtype: 'label',
-								html: '<b>THANK YOU</b>',
+								html: '<div class="thankyou">THANK YOU</div>',
 								itemId: 'thanks',
 								styleHtmlContent: true
 							},

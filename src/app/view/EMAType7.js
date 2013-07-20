@@ -19,13 +19,11 @@ Ext.define('HEART.view.EMAType7', {
 
 	config: {
 		cls: 'EMAType',
-		scrollable: 'vertical',
 		items: [
 			{
 				xtype: 'label',
 				cls: 'desc',
-				html: 'What emotions are you experiencing in this moment? <br/><br/> <div><span style="float:right">a lot</span><span>none</span></div>',
-				margin: '8px'
+				html: 'What emotions are you experiencing in this moment?'
 			},
 			{
 				xtype: 'fieldset',
@@ -33,7 +31,7 @@ Ext.define('HEART.view.EMAType7', {
 				items: [
 					{
 						xtype: 'sliderfield',
-						label: 'How much stress are you experiencing in this moment? <div><span style="float:right"> a lot</span><span>none</span></div>',
+						label: 'How much stress are you experiencing in this moment? <br/><br/><div><span style="float:right"> a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'stress',

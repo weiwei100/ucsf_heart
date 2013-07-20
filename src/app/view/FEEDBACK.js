@@ -22,7 +22,7 @@ Ext.define('HEART.view.FEEDBACK', {
 		layout: {
 			type: 'vbox'
 		},
-		scrollable: 'vertical',
+		scrollable: false,
 		items: [
 			{
 				xtype: 'fieldset',
@@ -36,39 +36,38 @@ Ext.define('HEART.view.FEEDBACK', {
 				items: [
 					{
 						xtype: 'label',
-						html: 'Here is your summary statistics of your activities this week. <br/> (Note: Missed days count as 0)',
-						itemId: 'describe',
-						styleHtmlContent: true
+						html: '<b>Here is your summary statistics of your activities this week. <br/> (Note: Missed days count as 0)</b>',
+						itemId: 'describe'
 					},
 					{
 						xtype: 'label',
 						html: 'You exercised XX times this week.',
-						itemId: 'exercised',
-						styleHtmlContent: true
+						cls: 'with-margin',
+						itemId: 'exercised'
 					},
 					{
 						xtype: 'label',
 						html: 'You did mindful eating XX times this week.',
-						itemId: 'mindfulEating',
-						styleHtmlContent: true
+						cls: 'with-margin',
+						itemId: 'mindfulEating'
 					},
 					{
 						xtype: 'label',
 						html: 'You did meditation on XX days (%), and roughly XX minutes this week.',
-						itemId: 'meditation',
-						styleHtmlContent: true
+						cls: 'with-margin',
+						itemId: 'meditation'
 					},
 					{
 						xtype: 'label',
 						html: 'Your stress level: Your range of stress was XX to XX, the average is XX.',
-						itemId: 'stressLevel',
-						styleHtmlContent: true
+						cls: 'with-margin',
+						itemId: 'stressLevel'
 					},
 					{
 						xtype: 'label',
 						html: 'Your average feelings of balance were XX.',
-						itemId: 'balanceFeeling',
-						styleHtmlContent: true
+						cls: 'with-margin',
+						itemId: 'balanceFeeling'
 					}
 				],
 				listeners: [
@@ -92,7 +91,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							label=component.child('#exercised');
 
-							object = mylog.exercised||{};
+							object = mylog.exercised||{times: 0, days:0};
 
 							content = 'You exercised '+object.times+' times this week ('+object.days+' of days)';
 
@@ -100,7 +99,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							label=component.child('#mindfulEating');
 
-							object = mylog.mindful||{};
+							object = mylog.mindful||{times:0, days: 0};
 
 							content = 'You did mindful eating '+object.times+' times this week ('+object.days+' of the days)';
 
@@ -108,7 +107,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							label=component.child('#meditation');
 
-							object = mylog.meditation||{};
+							object = mylog.meditation||{days:0, minutes:0};
 
 							content = 'You did meditation on '+object.days+' days, and roughly '+object.minutes+'minutes this week, (average of '+Math.ceil(object.minutes/object.days)+' per day, which we will count as 5, 15, or 30, depending on which of the 3 choices they clicked.)';
 
@@ -116,7 +115,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							label=component.child('#stressLevel');
 
-							object = mylog.stressed||{};
+							object = mylog.stressed||{low:0, high:0, average:0};
 
 							content = 'Your stress level: Your range of stress was '+object.low+' to '+object.high+', the average is '+object.average;
 
@@ -124,7 +123,7 @@ Ext.define('HEART.view.FEEDBACK', {
 
 							label=component.child('#balanceFeeling');
 
-							object = mylog.balance||{};
+							object = mylog.balance||{average:0};
 
 							content = 'Your average feelings of balance were '+object.average;
 
@@ -157,9 +156,9 @@ Ext.define('HEART.view.FEEDBACK', {
 						itemId: 'explist',
 						emptyText: 'Nothing...',
 						itemTpl: [
-							'<span><b>{[ (new Date(values.timestamp-0)).toDateString() ]}</b></span><br/>',
-							'<p><span>Pleasant: {pleasant}</span><br/>',
-							'	<span>Unpleasant: {unpleasant}</span></p>'
+							'<p class="x-label"><b>{[ (new Date(values.timestamp-0)).toDateString() ]}</b></p>',
+							'<p class="x-label">Pleasant: {pleasant}</p>',
+							'<p class="x-label">Unpleasant: {unpleasant}</p>'
 						],
 						store: 'Experiences'
 					}
