@@ -61,13 +61,16 @@ Ext.define('HEART.view.QUOTES', {
 
 												quotewords = quote.split(" ", 10);
 
-												for (var i = 0; i< 10; i++) {
+												for (var i = 0; i< quotewords.length; i++) {
 													wrapped += quotewords[i];
 													wrapped += " ";
 												};
-												wrapped+='...';
 
-												component.setHtml(wrapped);
+												if(quotewords.length == 10){
+													wrapped+='...';
+												}
+												
+												component.setHtml("<div class='quote'>" + wrapped + "</div>");
 											}
 										}
 
@@ -79,7 +82,7 @@ Ext.define('HEART.view.QUOTES', {
 
 											quotes=Ext.getStore('Quotes'); 
 											count=quotes.getAllCount();
-											quote='This is quote';
+											quote=HEART.quote;
 
 											if(HEART.goola=='pushwoosh'){
 												wrapped=component.getHtml();
@@ -91,10 +94,10 @@ Ext.define('HEART.view.QUOTES', {
 													{ quote=text; break; }
 												}
 												component.setHtml(quote);
-											}else{
-
-												component.setHtml(HEART.quote);
 											}
+
+											component.setHtml("<div class='quote'>" + quote + "</div>");
+											
 
 											content = {};
 											content.type = 'label';

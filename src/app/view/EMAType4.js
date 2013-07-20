@@ -19,14 +19,12 @@ Ext.define('HEART.view.EMAType4', {
 
 	config: {
 		cls: 'EMAType',
-		scrollable: 'vertical',
 		items: [
 			{
 				xtype: 'label',
 				cls: 'desc',
-				html: 'Is there an emotion present you are trying NOT to feel or are pushing away right now? <br/> <div><span style="float:right">a lot</span><span>none</span></span>',
-				itemId: 'question',
-				margin: '8px'
+				html: 'Is there an emotion present you are trying NOT to feel or are pushing away right now?',
+				itemId: 'question'
 			},
 			{
 				xtype: 'fieldset',
@@ -35,7 +33,7 @@ Ext.define('HEART.view.EMAType4', {
 				items: [
 					{
 						xtype: 'sliderfield',
-						label: 'I am pushing away feeling hopeful:',
+						label: 'I am pushing away feeling hopeful:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'hopeful',
@@ -45,7 +43,7 @@ Ext.define('HEART.view.EMAType4', {
 					},
 					{
 						xtype: 'sliderfield',
-						label: 'I am pushing away feeling Anger:',
+						label: 'I am pushing away feeling Anger:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'anger',
@@ -55,7 +53,7 @@ Ext.define('HEART.view.EMAType4', {
 					},
 					{
 						xtype: 'sliderfield',
-						label: 'I am pushing away feeling Sadness:',
+						label: 'I am pushing away feeling Sadness:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'sandness',
@@ -65,7 +63,7 @@ Ext.define('HEART.view.EMAType4', {
 					},
 					{
 						xtype: 'sliderfield',
-						label: 'I am pushing away feeling shame:',
+						label: 'I am pushing away feeling shame:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'shame',
@@ -75,7 +73,7 @@ Ext.define('HEART.view.EMAType4', {
 					},
 					{
 						xtype: 'sliderfield',
-						label: 'I am pushing away feeling fear or anxiety :',
+						label: 'I am pushing away feeling fear or anxiety:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'fora',
@@ -85,7 +83,7 @@ Ext.define('HEART.view.EMAType4', {
 					},
 					{
 						xtype: 'sliderfield',
-						label: 'How much energy are you using to avoid these feelings (if any)?',
+						label: 'How much energy are you using to avoid these feelings (if any)?<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'much',
