@@ -37,6 +37,7 @@ Ext.define('HEART.view.QUOTES', {
 					{
 						xtype: 'label',
 						goola: 'nothing',
+						cls: 'quote',
 						itemId: 'quote',
 						listeners: [
 							{
