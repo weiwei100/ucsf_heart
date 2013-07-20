@@ -123,6 +123,11 @@ Ext.define('HEART.store.EMXs', {
 				title: 'EMAType7',
 				type: 'EMAType7',
 				category: 'EMA'
+			},
+			{
+				title: 'EMIGeneralMindfulness',
+				type: 'EMIGeneralMindfulness',
+				category: 'EMA'
 			}
 		],
 		groupField: 'category',
