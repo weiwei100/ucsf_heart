@@ -24,6 +24,7 @@ Ext.define('HEART.view.EMAType2', {
 				xtype: 'label',
 				cls: 'desc',
 				html: 'What is happening in your body right now?',
+				cls: 'x-subtitle',
 				itemId: 'question'
 			},
 			{

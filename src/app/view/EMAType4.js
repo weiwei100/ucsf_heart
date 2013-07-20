@@ -24,6 +24,7 @@ Ext.define('HEART.view.EMAType4', {
 				xtype: 'label',
 				cls: 'desc',
 				html: 'Is there an emotion present you are trying NOT to feel or are pushing away right now?',
+				cls: 'x-subtitle',
 				itemId: 'question'
 			},
 			{
