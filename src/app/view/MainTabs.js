@@ -196,9 +196,8 @@ Ext.define('HEART.view.MainTabs', {
 							{
 								xtype: 'label',
 								html: 'Please keep the app silent between:',
-								cls: 'with-margin',
-								itemId: 'silent',
-								style: 'color: rgb(128,128,128)'
+								cls: 'x-label-desc',
+								itemId: 'silent'
 							},
 							{
 								xtype: 'selectfield',
@@ -222,8 +221,7 @@ Ext.define('HEART.view.MainTabs', {
 								xtype: 'label',
 								html: 'Please remind me to fill out my Daily Log in the evening at:',
 								itemId: 'remind',
-								style: 'color: rgb(128,128,128)',
-								cls: 'with-margin'
+								cls: 'x-label-desc'
 							},
 							{
 								xtype: 'selectfield',

@@ -27,6 +27,7 @@ Ext.define('HEART.view.DAILYLOG', {
 					{
 						xtype: 'label',
 						html: 'My Daily Log',
+						cls: 'x-form-fieldset-title',
 						itemId: 'title',
 						listeners: [
 							{

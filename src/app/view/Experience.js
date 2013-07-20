@@ -27,8 +27,8 @@ Ext.define('HEART.view.Experience', {
 					{
 						xtype: 'label',
 						html: 'Write a few words to capture your experiences today (emotions felt, your reactions, etc)',
+						cls: 'x-label-desc',
 						itemId: 'describe',
-						styleHtmlContent: true,
 						listeners: [
 							{
 								fn: function(component, eOpts) {
