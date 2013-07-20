@@ -36,8 +36,7 @@ Ext.define('HEART.view.FEEDBACK', {
 				items: [
 					{
 						xtype: 'label',
-						html: 'Here is your summary statistics of your activities this week. <br/> (Note: Missed days count as 0)',
-						cls: 'x-label-desc',
+						html: '<b>Here is your summary statistics of your activities this week. <br/> (Note: Missed days count as 0)</b>',
 						itemId: 'describe'
 					},
 					{
