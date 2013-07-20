@@ -120,7 +120,7 @@ Ext.define('HEART.view.Experience', {
 							type: 'fade',
 							duration: 4096
 						},
-						html: '<div class="thankyou">Thank You</div>',
+						html: '<div class="thankyou" style="font-size:.8em;padding-top:3em">Thank You</div>',
 						itemId: 'heart',
 						showAnimation: {
 							type: 'fade',
