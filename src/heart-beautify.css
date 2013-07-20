@@ -78,8 +78,11 @@
 }
 
 .x-slider-field .x-component-outer {
-	margin: 0.2em 0;
 	padding: 0.6em 0;
+}
+
+.x-component-outer {
+	margin: 0.2em 0;
 }
 
 .x-input-el{
@@ -103,7 +106,6 @@
 .x-field-input{
 	border-radius: 4px;
 	border: 1px solid #eee;
-	margin: 0 10px;
 }
 
 .dailyLog {
