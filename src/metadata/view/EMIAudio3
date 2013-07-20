@@ -1,0 +1,164 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "EMIAudio"
+        ],
+        "designer|userClassName": "EMIAudio3",
+        "scrollable": "vertical"
+    },
+    "designerId": "5e7c2ac9-f8b6-4753-9b18-c5d3d9549bc6",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "goola": "audio",
+                "title": null
+            },
+            "designerId": "525b2870-aabf-4239-9ebd-bd615906ecb0",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "goola",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "random_show": "y",
+                        "itemId": "pre-slider",
+                        "label": "How stressed do you feel now? <div><span style=\"float:right\">A lot</span><span>Not at all</span></div>",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "pre-slider",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "e016f34d-9a10-4904-98d8-3f762c540a15",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "random_show",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "fsAudio",
+                        "title": "Body Connection"
+                    },
+                    "designerId": "61d496ee-28ea-4093-a11f-54a191f0dce8",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "Listen to this guided session from the workshop. <br/> Tip: Use headphones and stand or sit down. <br/> Duration: 0:35 min",
+                                "styleHtmlContent": true
+                            },
+                            "designerId": "212db81b-a269-43c4-b6cc-c04fdf2ad981"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "audioButton",
+                                "text": "Play"
+                            },
+                            "designerId": "7bcc333b-f33d-4c67-9a99-baa7733abba3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Slider",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "post-slider",
+                        "label": "How stressed do you feel now? <div><span style=\"float:right\">A lot</span><span>Not at all</span></div>",
+                        "labelAlign": "top",
+                        "labelWrap": true,
+                        "name": "post-slider",
+                        "value": [
+                            50
+                        ]
+                    },
+                    "designerId": "8556fef7-29fd-4c16-b07c-84d327fbde4e"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "exercise",
+                        "disabled": null,
+                        "text": "Done"
+                    },
+                    "designerId": "94716c0f-84a9-4733-b8b0-d29dbc396eeb",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "HEART.setAudio('T35sec.mp3', HEART.audioCallback);"
+                ]
+            },
+            "designerId": "c36322f5-590c-4afb-bdbb-00665471727e"
+        }
+    ]
+}

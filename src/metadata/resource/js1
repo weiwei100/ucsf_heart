@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js1",
+        "url": "cordova-2.5.0.js"
+    },
+    "designerId": "fe766666-7f5d-4bb6-921e-7d0ed5fb4526"
+}

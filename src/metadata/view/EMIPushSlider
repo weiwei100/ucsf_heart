@@ -1,0 +1,215 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "pushSlider"
+        ],
+        "hideAnimation": [
+            "{type :\"fadeOut\", duration : 768}"
+        ],
+        "showAnimation": [
+            "{type :\"fadeIn\", duration : 768}"
+        ],
+        "designer|userClassName": "EMIPushSlider"
+    },
+    "configAlternates": {
+        "showAnimation": "object",
+        "hideAnimation": "object"
+    },
+    "designerId": "356e2f39-aebc-46c3-a290-2b75aad8eb97",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": null,
+                "html": "<center>Too many or too few push notifications?<center>",
+                "itemId": "pushTitle",
+                "ui": ""
+            },
+            "designerId": "11cfff80-7fb3-48bc-b1f1-b1742b7c4295"
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": "",
+                "centered": false,
+                "hidden": false,
+                "html": "Reflect on if you are getting too many or too few push notifications. <br/> If too many, slide it left. <br/> If too few, slide to the right.",
+                "itemId": "pushDesc",
+                "margin": "",
+                "styleHtmlContent": true,
+                "top": null
+            },
+            "designerId": "b8f6b25c-9e14-43c2-ab1c-d09f9b9ee76d"
+        },
+        {
+            "type": "Ext.field.Slider",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "pushSlider",
+                "label": "",
+                "value": [
+                    50
+                ],
+                "increment": 25
+            },
+            "designerId": "a7fba6ed-33fa-4d1f-afd1-01bd350ef530",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPushSliderChange",
+                        "implHandler": [
+                            "label = me.parent.child('#pushLevel');",
+                            "",
+                            "me.parent.setLabel(newValue, label);",
+                            "",
+                            "user = HEART.getItem('local', 'user');",
+                            "user = JSON.parse(user);",
+                            "",
+                            "user.priority = newValue/25;",
+                            "",
+                            "succ = function(response) {",
+                            "\tconsole.log(response);",
+                            "};",
+                            "",
+                            "fail = function(response) {",
+                            "\tconsole.log(response);",
+                            "};",
+                            "",
+                            "HEART.toUser( user, succ, fail );",
+                            "",
+                            "user = JSON.stringify(user);",
+                            "",
+                            "HEART.setItem('local', 'user', user);"
+                        ],
+                        "name": "change"
+                    },
+                    "designerId": "fcf31ded-34d9-4ce5-aefe-5de7b7195d66"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<center>Some pushes<center>",
+                "itemId": "pushLevel"
+            },
+            "designerId": "8876a8bb-2440-42b4-8eda-058a29d68639"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "button"
+                ],
+                "disabled": null,
+                "itemId": "pushDone",
+                "text": "Done"
+            },
+            "designerId": "98fa9cd7-428d-4bef-b37b-0bb02386fc00",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPushSettingSave",
+                        "implHandler": [
+                            "this.parent.pop();",
+                            ""
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "0b17e74d-d689-45dc-92c0-c91b4b7b1330"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "user = HEART.getItem('local', 'user');",
+                    "priority = JSON.parse(user).priority*25||50;",
+                    "this.child('#pushSlider').setValue(priority);",
+                    "this.setLabel(priority, this.child('#pushDesc'));"
+                ]
+            },
+            "designerId": "95a6fa43-74ad-4c76-8593-7ab39e000a80"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setLabel",
+                "designer|params": [
+                    "value",
+                    "label"
+                ],
+                "implHandler": [
+                    "switch(value){",
+                    "\tcase 0: label.setHtml('<center>Only show urgent pushes.</center>'); ",
+                    "\tbreak;",
+                    "\tcase 25: label.setHtml('<center>Very few pushes.</center>'); ",
+                    "\tbreak;",
+                    "\tcase 50: label.setHtml('<center>Some pushes.</center>'); ",
+                    "\tbreak;",
+                    "\tcase 75: label.setHtml('<center>Many pushes.</center>'); ",
+                    "\tbreak;",
+                    "\tcase 100: label.setHtml('<center>Show all pushes.</center>'); ",
+                    "\tbreak;",
+                    "}"
+                ]
+            },
+            "designerId": "ebbaa1c6-c4ed-423c-837a-8866922c9e4c"
+        }
+    ]
+}
