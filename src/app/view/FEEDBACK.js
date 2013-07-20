@@ -37,38 +37,33 @@ Ext.define('HEART.view.FEEDBACK', {
 					{
 						xtype: 'label',
 						html: 'Here is your summary statistics of your activities this week. <br/> (Note: Missed days count as 0)',
-						itemId: 'describe',
-						styleHtmlContent: true
+						cls: 'x-label-desc',
+						itemId: 'describe'
 					},
 					{
 						xtype: 'label',
 						html: 'You exercised XX times this week.',
-						itemId: 'exercised',
-						styleHtmlContent: true
+						itemId: 'exercised'
 					},
 					{
 						xtype: 'label',
 						html: 'You did mindful eating XX times this week.',
-						itemId: 'mindfulEating',
-						styleHtmlContent: true
+						itemId: 'mindfulEating'
 					},
 					{
 						xtype: 'label',
 						html: 'You did meditation on XX days (%), and roughly XX minutes this week.',
-						itemId: 'meditation',
-						styleHtmlContent: true
+						itemId: 'meditation'
 					},
 					{
 						xtype: 'label',
 						html: 'Your stress level: Your range of stress was XX to XX, the average is XX.',
-						itemId: 'stressLevel',
-						styleHtmlContent: true
+						itemId: 'stressLevel'
 					},
 					{
 						xtype: 'label',
 						html: 'Your average feelings of balance were XX.',
-						itemId: 'balanceFeeling',
-						styleHtmlContent: true
+						itemId: 'balanceFeeling'
 					}
 				],
 				listeners: [
@@ -157,9 +152,9 @@ Ext.define('HEART.view.FEEDBACK', {
 						itemId: 'explist',
 						emptyText: 'Nothing...',
 						itemTpl: [
-							'<span><b>{[ (new Date(values.timestamp-0)).toDateString() ]}</b></span><br/>',
-							'<p><span>Pleasant: {pleasant}</span><br/>',
-							'	<span>Unpleasant: {unpleasant}</span></p>'
+							'<span class="x-label"><b>{[ (new Date(values.timestamp-0)).toDateString() ]}</b></span><br/>',
+							'<p><span class="x-label">Pleasant: {pleasant}</span><br/>',
+							'	<span class="x-label">Unpleasant: {unpleasant}</span></p>'
 						],
 						store: 'Experiences'
 					}
