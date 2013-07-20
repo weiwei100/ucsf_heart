@@ -27,7 +27,7 @@ Ext.define('HEART.view.Experience', {
 					{
 						xtype: 'label',
 						html: 'Write a few words to capture your experiences today (emotions felt, your reactions, etc)',
-						cls: 'x-label-desc',
+						cls: 'x-subtitle linkColor',
 						itemId: 'describe',
 						listeners: [
 							{
@@ -120,13 +120,12 @@ Ext.define('HEART.view.Experience', {
 							type: 'fade',
 							duration: 4096
 						},
-						html: 'Thank You',
+						html: '<div class="thankyou">Thank You</div>',
 						itemId: 'heart',
 						showAnimation: {
 							type: 'fade',
 							duration: 4096
 						},
-						styleHtmlContent: true,
 						src: 'heart-icon.png'
 					},
 					{

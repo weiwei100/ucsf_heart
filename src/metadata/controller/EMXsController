@@ -1,0 +1,380 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EMXsController"
+    },
+    "designerId": "e3282f86-3944-46c9-a9f6-339833db34db",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onExerciseSelect",
+                "implHandler": [
+                    "type = record.get(\"type\");",
+                    "form = Ext.create('HEART.view.'+type);",
+                    "",
+                    "form.emxType = type;",
+                    "form.goola = 'exercises';",
+                    "",
+                    "this.getExercises().push(form);",
+                    "",
+                    "dataview.deselectAll();",
+                    "",
+                    "content = {};",
+                    "content.type = type;",
+                    "content.action = 'show-exercises';",
+                    "",
+                    "HEART.toSensor(content);"
+                ],
+                "name": "select",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "#exerciseList"
+            },
+            "designerId": "e6598e40-fef6-4bbf-b6fb-acad809e58de"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "this.getSettingsNav().getNavigationBar().hide();",
+                    "this.getExercises().getNavigationBar().hide();",
+                    "this.getStressed().getNavigationBar().hide();"
+                ]
+            },
+            "designerId": "dd4da508-1f77-48bf-bffe-c6833c62e462"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "exercises",
+                "selector": "#exercises"
+            },
+            "designerId": "bc7a5445-3930-4933-8929-f59f46701fd5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onExercisesHide",
+                "implHandler": [
+                    "this.getExercises().pop();"
+                ],
+                "name": "hide",
+                "designer|targetType": "Ext.navigation.View",
+                "designer|controlQuery": "#exercises"
+            },
+            "designerId": "9910458a-ad91-49e4-a7f7-03e4f9c9ff91"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "stressed",
+                "selector": "#stressed"
+            },
+            "designerId": "380bf61c-189c-459b-9819-b72f47a31cf9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStressedShow",
+                "implHandler": [
+                    "EMX = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio4', 'EMIAudio7'];",
+                    "",
+                    "type = EMX[Math.floor(EMX.length*Math.random())]; ",
+                    "",
+                    "form = Ext.create('HEART.view.'+type);",
+                    "",
+                    "form.emxType = type;",
+                    "form.goola = 'stressed';",
+                    "",
+                    "this.getStressed().push(form);",
+                    "",
+                    "content = {};",
+                    "content.type = type;",
+                    "content.action = 'show-stressed';",
+                    "",
+                    "HEART.toSensor(content);"
+                ],
+                "name": "show",
+                "designer|targetType": "Ext.navigation.View",
+                "designer|controlQuery": "#stressed"
+            },
+            "designerId": "ab72d431-16a4-43ab-88f3-0cfb5483fa3d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStressedHide",
+                "implHandler": [
+                    "this.getStressed().pop();"
+                ],
+                "name": "hide",
+                "designer|targetType": "Ext.navigation.View",
+                "designer|controlQuery": "#stressed"
+            },
+            "designerId": "1fa47330-c437-4bfd-93a2-9c8d15ff4fdf"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onExerciseDone",
+                "implHandler": [
+                    "form = button.parent.parent;",
+                    "content = form.getValues();",
+                    "",
+                    "content.type = form.emxType;",
+                    "content.action='form-submit';",
+                    "",
+                    "HEART.toSensor(content);",
+                    "",
+                    "if(form.goola=='exercises'){",
+                    "",
+                    "\tthis.getExercises().pop();",
+                    "",
+                    "}else if(form.goola=='stressed'){",
+                    "",
+                    "\tthis.getMainTabs().setActiveItem(0);",
+                    "",
+                    "}else if(form.goola=='pushwoosh'){",
+                    "",
+                    "\tthis.getExercises().pop();",
+                    "\tthis.getMainTabs().setActiveItem(0);",
+                    "",
+                    "}else{",
+                    "",
+                    "\tform.parent.pop();",
+                    "",
+                    "}",
+                    "",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[action=exercise]"
+            },
+            "designerId": "4e47477b-a5ac-44a6-9e25-8784b2d2a942"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onEMAInitialize",
+                "implHandler": [
+                    "items = component.getInnerItems();",
+                    "",
+                    "for(i=1;i<items.length;i++){",
+                    "\tcomponent.getAt(i).hide();",
+                    "}",
+                    "",
+                    "for(i=0; i< items.length; i++){",
+                    "\titem = component.getAt(i);",
+                    "\titem.index = i;",
+                    "",
+                    "\tonChange = function() {",
+                    "\t\tnext = component.getAt(this.index+1);",
+                    "\t\tnext.setShowAnimation({type: \"fadeIn\", duration: 1024});",
+                    "\t\tnext.show();",
+                    "\t\tnext.addAfterListener('show', function(){component.parent.getScrollable().getScroller().scrollToEnd({type: \"slide\"});});",
+                    "\t};",
+                    "",
+                    "\titem.on({ change: onChange });",
+                    "}"
+                ],
+                "name": "initialize",
+                "designer|targetType": "Ext.form.FieldSet",
+                "designer|controlQuery": "fieldset[goola=ema]"
+            },
+            "designerId": "9372221e-b368-4ccb-862f-8a3e0dad0bc0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onEMIInitialize",
+                "implHandler": [
+                    "items = component.getInnerItems();",
+                    "",
+                    "for(i=2;i<items.length;i++){",
+                    "\tcomponent.getAt(i).hide();",
+                    "}",
+                    "",
+                    "for(i=1; i< items.length; i++){",
+                    "\titem = component.getAt(i);",
+                    "\titem.index = i;",
+                    "",
+                    "\tonChange = function() {",
+                    "\t\tnext = component.getAt(this.index+1);",
+                    "\t\tnext.setShowAnimation({type: \"fadeIn\", duration: 1024});",
+                    "\t\tnext.show();",
+                    "\t\tsetTimeout(function(){component.parent.getScrollable().getScroller().scrollToEnd({type: \"slide\"});}, 64);",
+                    "\t};",
+                    "",
+                    "\titem.on({ change: onChange });",
+                    "}"
+                ],
+                "name": "initialize",
+                "designer|targetType": "Ext.form.FieldSet",
+                "designer|controlQuery": "fieldset[goola=emi]"
+            },
+            "designerId": "520222c3-6bb3-47e4-8252-78df62885bb3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onAudioPanelInitialize",
+                "implHandler": [
+                    "",
+                    "preSlider = component.child('#pre-slider');",
+                    "postSlider = component.child('#post-slider');",
+                    "",
+                    "button = component.child('button[text=Done]');",
+                    "button.setShowAnimation({type: \"fadeIn\", duration: 1024});",
+                    "",
+                    "audioFrame = component.child('#fsAudio');",
+                    "audioFrame.setShowAnimation({type: \"fadeIn\", duration: 1024});",
+                    "",
+                    "audioButton = audioFrame.child('#audioButton');",
+                    "audioHandle = function(button, e, eOpts) {",
+                    "\tif(button.getText()=='Play'){",
+                    "\t\tHEART.getAudio().play();",
+                    "\t\tbutton.setText('Pause');",
+                    "",
+                    "\t}else{",
+                    "\t\tHEART.getAudio().pause();",
+                    "\t\tbutton.setText('Play');",
+                    "\t\tHEART.audioCallback();",
+                    "\t}",
+                    "};",
+                    "",
+                    "audioButton.on( {tap: audioHandle} );",
+                    "",
+                    "button.setShowAnimation({type: \"fadeIn\", duration: 1024});",
+                    "",
+                    "if(preSlider.random_show == 'y' && Math.random()>HEART.probability){",
+                    "\tconsole.log(\"HERE\");",
+                    "\tpreSlider.destroy();",
+                    "\tpostSlider.destroy();",
+                    "\tHEART.audioCallback = function() {",
+                    "",
+                    "\t\tbutton.show();",
+                    "\t\tsetTimeout(function(){component.parent.getScrollable().getScroller().scrollToEnd({type: \"slide\"});}, 64);",
+                    "\t};",
+                    "}else{ ",
+                    "\tpreSlider.on( { change: function() { audioFrame.show(); setTimeout(function(){component.parent.getScrollable().getScroller().scrollToEnd({type: \"slide\"});}, 64);} } );",
+                    "\taudioFrame.hide();",
+                    "\tpostSlider.setShowAnimation({type: \"fadeIn\", duration: 1024});",
+                    "\tpostSlider.hide();",
+                    "\tpostSlider.on( { change: function() { button.show(); setTimeout(function(){component.parent.getScrollable().getScroller().scrollToEnd({type: \"slide\"});}, 64);} } );",
+                    "\tHEART.audioCallback =function() {",
+                    "",
+                    "\t\tpostSlider.show();",
+                    "\t\tsetTimeout(function(){component.parent.getScrollable().getScroller().scrollToEnd({type: \"slide\"});}, 64);",
+                    "\t};",
+                    "}",
+                    "",
+                    "audioRelease = function() { ",
+                    "\taudio=HEART.getAudio();",
+                    "\tif(HEART!='strawberry'){",
+                    "\t\taudio.release();",
+                    "\t\taudio='strawberry';",
+                    "\t}   ",
+                    "};",
+                    "",
+                    "component.on({ activeitemchange: audioRelease });",
+                    "",
+                    "button.on( { tap: audioRelease } );",
+                    "",
+                    "button.hide();"
+                ],
+                "name": "initialize",
+                "designer|targetType": "Ext.form.FieldSet",
+                "designer|controlQuery": "fieldset[goola=audio]"
+            },
+            "designerId": "412aeae3-588e-4c8a-94de-857f389ec065"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainTabs",
+                "selector": "#mainTabs"
+            },
+            "designerId": "66a73a13-59ae-46bd-b88b-00eef8ed6380"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "settingsNav",
+                "selector": "#settingsNav"
+            },
+            "designerId": "e1a90b2c-df5b-4bda-91d2-4d34693b5443"
+        }
+    ]
+}

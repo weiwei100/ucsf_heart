@@ -19,7 +19,6 @@ Ext.define('HEART.view.EMAType5', {
 
 	config: {
 		cls: 'EMAType',
-		scrollable: 'vertical',
 		items: [
 			{
 				xtype: 'fieldset',
@@ -29,7 +28,7 @@ Ext.define('HEART.view.EMAType5', {
 					{
 						xtype: 'sliderfield',
 						itemId: 'experience',
-						label: 'What is your experience in this moment? <br/>  <div><span style="float:right">overwhelmed</span><span>balanced</span></div>',
+						label: 'What is your experience in this moment?<br/><br/><div><span style="float:right">overwhelmed</span><span>balanced</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'experience',

@@ -1,0 +1,57 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Feed",
+            "EMX",
+            "Intention",
+            "Experience"
+        ],
+        "stores": [
+            "Feeds",
+            "EMXs",
+            "Intentions",
+            "Experiences"
+        ],
+        "views": [
+            "MainTabs",
+            "EMITensionCheck",
+            "EMIGeneralMindfulness",
+            "EMIPushSlider",
+            "EMAType1",
+            "EMAType2",
+            "EMAType3",
+            "EMAType4",
+            "EMAType5",
+            "EMIAudio1",
+            "EMIAudio2",
+            "EMIAudio3",
+            "EMIAudio4",
+            "EMIAudio5",
+            "EMIAudio6",
+            "EMIAudio7",
+            "MindfulnessHabit",
+            "QUOTES",
+            "DAILYLOG",
+            "Experience",
+            "FEEDBACK",
+            "EMAType6",
+            "EMAType7",
+            "EMIWkAheadSet"
+        ],
+        "requires": [
+            "Ext.device.Connection"
+        ],
+        "controllers": [
+            "EMXsController",
+            "MainController"
+        ],
+        "name": "HEART"
+    },
+    "designerId": "application"
+}

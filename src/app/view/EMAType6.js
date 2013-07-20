@@ -19,25 +19,22 @@ Ext.define('HEART.view.EMAType6', {
 
 	config: {
 		cls: 'EMAType',
-		scrollable: 'vertical',
 		items: [
 			{
 				xtype: 'label',
 				html: 'What is happening right now?',
-				itemId: 'question',
-				margin: '8px'
+				cls: 'x-subtitle',
+				itemId: 'question'
 			},
 			{
 				xtype: 'fieldset',
 				goola: 'ema',
 				itemId: 'fset',
-				hideOnMaskTap: false,
-				modal: false,
 				items: [
 					{
 						xtype: 'sliderfield',
 						itemId: 'stress',
-						label: 'How much stress are you experiencing in this moment? <div><span style="float:right">a lot</span><span>none</span></span>',
+						label: 'How much stress are you experiencing in this moment? <br/><br/><div><span style="float:right">a lot</span><span>none</span></span>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'stress',
