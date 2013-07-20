@@ -1,0 +1,29 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "Feed",
+        "storeId": "Feeds",
+        "designer|userClassName": "Feeds"
+    },
+    "designerId": "a12e83bf-bcd8-4c88-8534-3fe90620d505",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "feeds"
+            },
+            "designerId": "4e423c99-41bb-4dd1-a95d-f663bd2f779f"
+        }
+    ]
+}
