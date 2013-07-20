@@ -68,7 +68,7 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 						items: [
 							{
 								xtype: 'label',
-								html: 'Choose 1 activity for this week.<br/> See what it feels like to bring your full awareness to this. <br/> You can change it at any time.',
+								html: '<p>Choose 1 activity for this week.</p><p> See what it feels like to bring your full awareness to this. </p><p>You can change it at any time.</p>',
 								itemId: 'describe'
 							},
 							{

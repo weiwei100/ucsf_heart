@@ -66,7 +66,7 @@
 }
 
 .x-form-label span{
-	font-weight: 550;
+	font-weight: 500;
 }
 
 .x-form-label{
@@ -81,7 +81,7 @@
 
 .x-label-desc{
 	margin: 1em 0;
-	color: #666;
+	color: #333;
 }
 
 .x-label{
@@ -265,7 +265,7 @@
 }
 
 p {
-	padding: 8px 0;	
+	padding: 5px 0;	
 }
 
 /*** CSS Pie Timer ****/
