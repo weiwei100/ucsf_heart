@@ -56,10 +56,12 @@
 	margin-bottom: -3em;
 	padding: 0 20px;
 	color: #333 !important;
+	
 }
 
 .x-form-label{
 	padding: 0.8em 0;
+	line-height: 1.0;
 }
 
 .x-label-tip{
@@ -69,6 +71,7 @@
 
 .x-label{
 	font-size: .8em;
+	line-height: 1.0;
 }
 
 .with-margin{

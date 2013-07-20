@@ -185,8 +185,7 @@ Ext.define('HEART.view.DAILYLOG', {
 						xtype: 'selectfield',
 						itemId: 'exercise',
 						label: 'Any exercise today? (10min or more)',
-							
-						labelWrap: true,
+						labelAlign: 'top',
 						name: 'exercise',
 						options: [
 							{
