@@ -67,9 +67,16 @@
 	margin-left: -1.2em
 }
 
+.x-label{
+	font-size: .8em;
+}
+
 .x-slider-field .x-component-outer {
-	padding: 0.4em 0;
 	margin: 0.2em;
+}
+
+.x-input-el{
+	padding: 0 0.4em;
 }
 
 .x-field-checkbox .x-field-mask::after,
@@ -82,6 +89,7 @@
 }
 
 .x-field-input{
+	border-radius: 4px;
 	border: 1px solid #eee;
 	margin: 0 10px;
 }

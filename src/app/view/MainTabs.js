@@ -219,7 +219,7 @@ Ext.define('HEART.view.MainTabs', {
 							},
 							{
 								xtype: 'label',
-								html: '<p>Please remind me to fill out my Daily Log in the evening at:</p>',
+								html: 'Please remind me to fill out my Daily Log in the evening at:',
 								itemId: 'remind',
 								style: 'color: rgb(128,128,128)'
 							},
