@@ -19,14 +19,12 @@ Ext.define('HEART.view.EMAType4', {
 
 	config: {
 		cls: 'EMAType',
-		scrollable: 'vertical',
 		items: [
 			{
 				xtype: 'label',
 				cls: 'desc',
-				html: 'Is there an emotion present you are trying NOT to feel or are pushing away right now? <br/> <div><span style="float:right">a lot</span><span>none</span></span>',
-				itemId: 'question',
-				margin: '8px'
+				html: 'Is there an emotion present you are trying NOT to feel or are pushing away right now?<br/><br/><div><span style="float:right">a lot</span><span>none</span></span>',
+				itemId: 'question'
 			},
 			{
 				xtype: 'fieldset',
