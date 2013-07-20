@@ -111,6 +111,11 @@
   content: '3';
 }
 
+.x-field-select .x-component-outer:after {
+  z-index: 2;
+  background-color: red;
+}
+
 .x-button-label{
 	font-weight: normal;
 	padding: 0.1em 0;
