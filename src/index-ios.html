@@ -29,8 +29,7 @@
 
 	<script src="base64-toolkit.js?_dc=1365423064658"></script>
     <script type="text/javascript" src="heart-manager.js"></script>
-            <script type="text/javascript" src="index.js"></script>
-
+     
 	<!--<script type="text/javascript" src="index.js"></script>-->
 	<script type="text/javascript" src="app.js"></script>
  
@@ -67,7 +66,38 @@
                                         );
         
             pushNotification.setApplicationIconBadgeNumber(0);
-            initPNHandler();
+            document.addEventListener('push-notification', function(event) {
+                                       //    var title = event.notification.aps.title;
+                                      //     var userData = event.notification.u;
+                                      // navigator.notification.alert(event.notification.title);
+                                     
+                                      var title = event.notification.aps.title;
+                                      var type = event.notification.u.type;
+                                      
+                                      //var type = JSON.parse(userData).type;
+                                      
+                                      pushNotification.setApplicationIconBadgeNumber(0);
+                                      pushNotification.cancelAllLocalNotifications();
+                                      form = Ext.create('HEART.view.' + type);
+                                      form.emxType = type;
+                                      form.goola = 'pushwoosh';
+                                      
+                                      if(type=='QUOTES'){
+                                      alert("quote");
+                                        title=title.substring(0,title.length-3);
+                                        HEART.goola='pushwoosh';
+                                        form.child('#content').child('#quote').setHtml(title);
+                                      }
+                                      Ext.Viewport.getActiveItem().setActiveItem(2);
+                                      Ext.Viewport.getActiveItem().getActiveItem().push(form);
+                                      content = {};
+                                      content.type = type;
+                                      content.title = title;
+                                      content.action = 'show-pushed';
+                                      HEART.toSensor(content);
+                                      
+                                });
+
             HEART.uuid = HEART.getItem('local', 'deviceToken');
             HEART.audioRoot = 'audio/';
            
