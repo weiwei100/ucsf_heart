@@ -37,7 +37,6 @@ Ext.define('HEART.view.QUOTES', {
 					{
 						xtype: 'label',
 						goola: 'nothing',
-						cls: 'quote',
 						itemId: 'quote',
 						listeners: [
 							{
@@ -68,7 +67,7 @@ Ext.define('HEART.view.QUOTES', {
 												};
 												wrapped+='...';
 
-												component.setHtml(wrapped);
+												component.setHtml("<div class='quote'>" + wrapped + "</div>");
 											}
 										}
 
@@ -80,7 +79,7 @@ Ext.define('HEART.view.QUOTES', {
 
 											quotes=Ext.getStore('Quotes'); 
 											count=quotes.getAllCount();
-											quote='This is quote';
+											quote=HEART.quote;
 
 											if(HEART.goola=='pushwoosh'){
 												wrapped=component.getHtml();
@@ -92,10 +91,10 @@ Ext.define('HEART.view.QUOTES', {
 													{ quote=text; break; }
 												}
 												component.setHtml(quote);
-											}else{
-
-												component.setHtml(HEART.quote);
 											}
+
+											component.setHtml("<div class='quote'>" + quote + "</div>");
+											
 
 											content = {};
 											content.type = 'label';
