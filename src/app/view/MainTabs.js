@@ -65,7 +65,7 @@ Ext.define('HEART.view.MainTabs', {
 						items: [
 							{
 								xtype: 'label',
-								html: '<b>Welcome,</b>',
+								html: '<b>Welcome</b>',
 								itemId: 'welcome',
 								listeners: [
 									{
@@ -110,7 +110,7 @@ Ext.define('HEART.view.MainTabs', {
 					},
 					{
 						xtype: 'label',
-						html: '<center>Meditation</center>',
+						html: '<center>My Meditations</center>',
 						itemId: 'meditation',
 						margin: 22,
 						listeners: [
@@ -142,7 +142,7 @@ Ext.define('HEART.view.MainTabs', {
 			{
 				xtype: 'navigationview',
 				title: 'Exercises',
-				iconCls: 'organize',
+				iconCls: 'exercises',
 				cls: 'exercise',
 				id: 'exercises',
 				items: [
@@ -302,7 +302,7 @@ Ext.define('HEART.view.MainTabs', {
 			container.child('#intention').hide();
 		}
 
-		content = '"'+user.name+'"'+'&nbsp;to&nbsp;'+'H.E.A.R.T.';
+		content = '['+user.name+'],'+'&nbsp;to&nbsp;'+'HEART';
 		container.child('#header').child('#sometext').setHtml(content);
 
 		content=user.intention||'nothing'; 

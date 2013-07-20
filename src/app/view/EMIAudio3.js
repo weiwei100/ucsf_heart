@@ -44,7 +44,7 @@ Ext.define('HEART.view.EMIAudio3', {
 						items: [
 							{
 								xtype: 'label',
-								html: 'Listen to this guided session from the workshop. <br/> Tip: Use headphones and stand or sit down. <br/> Duration: 0:35 min'							},
+								html: 'Enjoy this meditation. <br/> Tip: Use headphones and stand or sit down. <br/> Duration: 0:35 min'							},
 							{
 								xtype: 'button',
 								itemId: 'audioButton',

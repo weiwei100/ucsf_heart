@@ -19,6 +19,11 @@
  	background-size: cover !important;
 }
 
+.exercises {
+	background: url(images/exercises.png) no-repeat center center  !important;
+ 	background-size: 100% !important;
+}
+
 .setting {
 	background: url(images/image4.png) no-repeat center center fixed !important;
  	background-size: cover !important;
