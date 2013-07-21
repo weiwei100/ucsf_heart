@@ -22,7 +22,6 @@ Ext.define('HEART.view.FEEDBACK', {
 		layout: {
 			type: 'vbox'
 		},
-		scrollable: false,
 		items: [
 			{
 				xtype: 'fieldset',
@@ -33,7 +32,8 @@ Ext.define('HEART.view.FEEDBACK', {
 				items: [
 					{
 						xtype: 'label',
-						html: '<b>Here is your summary statistics of your activities this week. <br/> (Note: Missed days count as 0)</b>',
+						html: 'Here is your summary statistics of your activities this week. <br/> (Note: Missed days count as 0)',
+						cls: 'x-subtitle',
 						itemId: 'describe'
 					},
 					{
@@ -145,7 +145,6 @@ Ext.define('HEART.view.FEEDBACK', {
 				layout: {
 					type: 'vbox'
 				},
-				//scrollable: 'vertical',
 				title: 'My Experience',
 				items: [
 					{
@@ -153,11 +152,9 @@ Ext.define('HEART.view.FEEDBACK', {
 						flex: 1,
 						itemId: 'explist',
 						emptyText: 'Nothing...',
-						itemHeight: 20,
 						itemTpl: [
-							'<p class="x-label"><b>{[ (new Date(values.timestamp-0)).toDateString() ]}</b></p>',
-							'<p class="x-label">Pleasant: {pleasant}</p>',
-							'<p class="x-label">Unpleasant: {unpleasant}</p>'
+							'<p class="x-label" style="margin:0 -0.9em"><b>{[ (new Date(values.timestamp-0)).toDateString() ]}</b></p>',
+							'<p class="x-label" style="margin:-0.4em 0 0 -0.9em">Pleasant: {pleasant}<br />Unpleasant: {unpleasant}</p>',
 						],
 						store: 'Experiences'
 					}

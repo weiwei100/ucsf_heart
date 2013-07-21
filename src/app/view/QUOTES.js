@@ -57,20 +57,20 @@ Ext.define('HEART.view.QUOTES', {
 
 												HEART.quote=quote;
 
-												wrapped = '';
-
-												quotewords = quote.split(" ", 10);
-
-												for (var i = 0; i< quotewords.length; i++) {
-													wrapped += quotewords[i];
-													wrapped += " ";
-												};
-
-												if(quotewords.length == 10){
-													wrapped+='...';
-												}
+												//wrapped = '';
+                                                //
+												//quotewords = quote.split(" ", 10);
+                                                //
+												//for (var i = 0; i< quotewords.length; i++) {
+												//	wrapped += quotewords[i];
+												//	wrapped += " ";
+												//};
+                                                //
+												//if(quotewords.length == 10){
+												//	wrapped+='...';
+												//}
 												
-												component.setHtml("<div class='quote'>" + wrapped + "</div>");
+												component.setHtml("<div class='quote'>" + quote + "</div>");
 											}
 										}
 

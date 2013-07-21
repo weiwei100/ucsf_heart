@@ -92,7 +92,6 @@
 		D3FDE250179A29CE001F0E04 /* IntentionConnect.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1AA179A29CD001F0E04 /* IntentionConnect.js */; };
 		D3FDE251179A29CE001F0E04 /* IntentionRemind.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1AB179A29CD001F0E04 /* IntentionRemind.js */; };
 		D3FDE252179A29CE001F0E04 /* MainTabs.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1AC179A29CD001F0E04 /* MainTabs.js */; };
-		D3FDE253179A29CE001F0E04 /* MyTabPanel1.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1AD179A29CD001F0E04 /* MyTabPanel1.js */; };
 		D3FDE254179A29CE001F0E04 /* QUOTES.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1AE179A29CD001F0E04 /* QUOTES.js */; };
 		D3FDE255179A29CE001F0E04 /* app.html in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1AF179A29CD001F0E04 /* app.html */; };
 		D3FDE256179A29CE001F0E04 /* app.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1B0179A29CD001F0E04 /* app.js */; };
@@ -158,7 +157,6 @@
 		D3FDE292179A29CE001F0E04 /* IntentionConnect in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F3179A29CD001F0E04 /* IntentionConnect */; };
 		D3FDE293179A29CE001F0E04 /* IntentionRemind in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F4179A29CD001F0E04 /* IntentionRemind */; };
 		D3FDE294179A29CE001F0E04 /* MainTabs in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F5179A29CD001F0E04 /* MainTabs */; };
-		D3FDE295179A29CE001F0E04 /* MyTabPanel1 in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F6179A29CD001F0E04 /* MyTabPanel1 */; };
 		D3FDE296179A29CE001F0E04 /* QUOTES in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F7179A29CD001F0E04 /* QUOTES */; };
 		D3FDE297179A29CE001F0E04 /* PushNotification.js in Sources */ = {isa = PBXBuildFile; fileRef = D3FDE1F8179A29CD001F0E04 /* PushNotification.js */; };
 		D3FDE298179A29CE001F0E04 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D3FDE1F9179A29CD001F0E04 /* README.md */; };
@@ -333,7 +331,6 @@
 		D3FDE1AA179A29CD001F0E04 /* IntentionConnect.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = IntentionConnect.js; sourceTree = "<group>"; };
 		D3FDE1AB179A29CD001F0E04 /* IntentionRemind.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = IntentionRemind.js; sourceTree = "<group>"; };
 		D3FDE1AC179A29CD001F0E04 /* MainTabs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MainTabs.js; sourceTree = "<group>"; };
-		D3FDE1AD179A29CD001F0E04 /* MyTabPanel1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MyTabPanel1.js; sourceTree = "<group>"; };
 		D3FDE1AE179A29CD001F0E04 /* QUOTES.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = QUOTES.js; sourceTree = "<group>"; };
 		D3FDE1AF179A29CD001F0E04 /* app.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.html; sourceTree = "<group>"; };
 		D3FDE1B0179A29CD001F0E04 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
@@ -399,7 +396,6 @@
 		D3FDE1F3179A29CD001F0E04 /* IntentionConnect */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IntentionConnect; sourceTree = "<group>"; };
 		D3FDE1F4179A29CD001F0E04 /* IntentionRemind */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IntentionRemind; sourceTree = "<group>"; };
 		D3FDE1F5179A29CD001F0E04 /* MainTabs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MainTabs; sourceTree = "<group>"; };
-		D3FDE1F6179A29CD001F0E04 /* MyTabPanel1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyTabPanel1; sourceTree = "<group>"; };
 		D3FDE1F7179A29CD001F0E04 /* QUOTES */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QUOTES; sourceTree = "<group>"; };
 		D3FDE1F8179A29CD001F0E04 /* PushNotification.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = PushNotification.js; sourceTree = "<group>"; };
 		D3FDE1F9179A29CD001F0E04 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -776,7 +772,6 @@
 				D3FDE1AA179A29CD001F0E04 /* IntentionConnect.js */,
 				D3FDE1AB179A29CD001F0E04 /* IntentionRemind.js */,
 				D3FDE1AC179A29CD001F0E04 /* MainTabs.js */,
-				D3FDE1AD179A29CD001F0E04 /* MyTabPanel1.js */,
 				D3FDE1AE179A29CD001F0E04 /* QUOTES.js */,
 			);
 			path = view;
@@ -883,7 +878,6 @@
 				D3FDE1F3179A29CD001F0E04 /* IntentionConnect */,
 				D3FDE1F4179A29CD001F0E04 /* IntentionRemind */,
 				D3FDE1F5179A29CD001F0E04 /* MainTabs */,
-				D3FDE1F6179A29CD001F0E04 /* MyTabPanel1 */,
 				D3FDE1F7179A29CD001F0E04 /* QUOTES */,
 			);
 			path = view;
@@ -1173,7 +1167,6 @@
 				D3FDE292179A29CE001F0E04 /* IntentionConnect in Resources */,
 				D3FDE293179A29CE001F0E04 /* IntentionRemind in Resources */,
 				D3FDE294179A29CE001F0E04 /* MainTabs in Resources */,
-				D3FDE295179A29CE001F0E04 /* MyTabPanel1 in Resources */,
 				D3FDE296179A29CE001F0E04 /* QUOTES in Resources */,
 				D3FDE298179A29CE001F0E04 /* README.md in Resources */,
 				D3FDE29A179A29CE001F0E04 /* sencha-touch.css in Resources */,
@@ -1260,7 +1253,6 @@
 				D3FDE250179A29CE001F0E04 /* IntentionConnect.js in Sources */,
 				D3FDE251179A29CE001F0E04 /* IntentionRemind.js in Sources */,
 				D3FDE252179A29CE001F0E04 /* MainTabs.js in Sources */,
-				D3FDE253179A29CE001F0E04 /* MyTabPanel1.js in Sources */,
 				D3FDE254179A29CE001F0E04 /* QUOTES.js in Sources */,
 				D3FDE256179A29CE001F0E04 /* app.js in Sources */,
 				D3FDE258179A29CE001F0E04 /* base64-toolkit.js in Sources */,
@@ -1375,13 +1367,8 @@
 				INFOPLIST_FILE = "ucsf_heart_ios/HEART-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = HEART;
-<<<<<<< HEAD
-				PROVISIONING_PROFILE = "FC5B22CA-D1AF-4284-9619-3A55E92A66A4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FC5B22CA-D1AF-4284-9619-3A55E92A66A4";
-=======
 				PROVISIONING_PROFILE = "FE775DA2-D22E-4D4A-AEAF-B152C645BA77";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FE775DA2-D22E-4D4A-AEAF-B152C645BA77";
->>>>>>> fe0cb29b52aeda715ba711d1acc0c654dc270ea5
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
