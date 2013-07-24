@@ -299,7 +299,7 @@ Ext.define('HEART.view.MainTabs', {
 			container.child('#intention').hide();
 		}
 
-		content = '['+user.name+'],'+'&nbsp;to&nbsp;'+'HEART';
+		content = user.name+','+'&nbsp;to&nbsp;'+'HEART';
 		container.child('#header').child('#sometext').setHtml(content);
 
 		content=user.intention||'nothing'; 
@@ -331,55 +331,43 @@ Ext.define('HEART.view.MainTabs', {
 	},
 
 	onSaveTap: function(button, e, eOpts) {
-		user = HEART.getItem('local', 'user');
-		values = button.parent.getValues();
+		values = button.parent.getValues(); var empty;
 
-		var empty;
-
-		for(field in values){
-			if(values[field]=='')
-			{ empty=true; break; }
-		}
-
+		for(field in values){if(values[field]=='') {empty=true; break;}}
 		message = "You must fill out all information before continuing";
+		if(empty){Ext.Msg.alert('Error', message, Ext.emptyFn); return;}
 
-		if(empty){
-			Ext.Msg.alert('Error', message, Ext.emptyFn);
-			return;
-		}
+		content=HEART.clone(values);
+		content.type = 'settings';
+		content.action='form-submit';
 
-		if(user){
+		HEART.toSensor(content);
+
+		user=HEART.getItem('local', 'user');
+
+		if(user) {
+
 			user = JSON.parse(user);
 			value = user.priority||2;	
 			values.priority = value;
 
-			values.intention=user.intention;
-			values.habit=user.habit;
-			values.time=user.time;
+			for(field in values){
+				user[field]=values[field];
+			}
+
+			HEART.toUser(user);
 
 			this.setActiveItem(0);
 
 		}else{
 			ahead = button.parent.child('#buttons').child('#ahead');
 			ahead.fireEvent('tap', ahead);
+			values.priority = 2;
+			HEART.toUser(values);
 		}
 		
-		user = JSON.stringify(values);
-
-		HEART.setItem('local', 'user', user);
-
 		button.parent.child('#buttons').show();
-
-		succ = function(response) {
-			console.log(response);
-		};
-
-		fail = function(response) {
-			console.log(response);
-		};
-
-		HEART.toUser( values, succ, fail );
-
+		
 	},
 
 	onIntentionSetTap: function(button, e, eOpts) {

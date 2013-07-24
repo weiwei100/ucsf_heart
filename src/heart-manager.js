@@ -60,7 +60,7 @@ var HEART = {
 		HEART.toSensocol(content, succ, fail);	
 	},
 	
-	toUser: function(content, succ, fail) {
+	toUser: function(content) {
 		var url = 'https://app.brainpage.com/ucsf/api/users';
 		var username = 'breathwear';
 		var password = 'deepbreath';
@@ -71,9 +71,14 @@ var HEART = {
 		
 		content.uuid = HEART.uuid;
 
-		delete content.name;
+		user=HEART.clone(content);
+
+		delete user.name;
 		
-		HEART.request(url, auth, content, succ, fail);
+		HEART.request(url, auth, user);
+
+		content = JSON.stringify(content);
+		HEART.setItem('local', 'user', content);
 	},
 	
 	sync: function() {
@@ -157,6 +162,14 @@ var HEART = {
 		
 		HEART.request(url, auth, content, succ, fail);
 		
+	},
+
+	clone: function(object) {
+		result = {};
+		for(field in object){
+			result[field]=object[field];
+		}
+		return result;
 	},
 	
 	audioCallback: {},

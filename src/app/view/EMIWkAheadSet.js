@@ -63,7 +63,7 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 					},
 					{
 						xtype: 'container',
-						itemId: 'habit',
+						itemId: 'mindful',
 						items: [
 							{
 								xtype: 'label',
@@ -115,7 +115,7 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 				delegate: '#intention'
 			},
 			{
-				fn: 'onHabitKeyup',
+				fn: 'onHabitChange',
 				event: 'keyup',
 				delegate: '#habit'
 			},
@@ -149,7 +149,7 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 		textfield.setValue(value);
 	},
 
-	onHabitKeyup: function(textfield, e, eOpts) {
+	onHabitChange: function(textfield, e, eOpts) {
 		button = this.child('#fset').child('#done');
 
 		if(this.doValidation()){
@@ -160,33 +160,22 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 	},
 
 	onAheadSave: function(button, e, eOpts) {
-		intention = this.child('#fset').child('#intention').child('#intention').getValue();
-		habit = this.child('#fset').child('#habit').child('#habit').getValue();
-		time = this.child('#fset').child('#habit').child('#time').getValue();
+		intention=this.child('#fset').child('#intention').child('#intention').getValue();
+		habit=this.child('#fset').child('#mindful').child('#habit').getValue();
+		time=this.child('#fset').child('#mindful').child('#time').getValue();
 
-		user = HEART.getItem('local', 'user');
-		user = JSON.parse(user);
+		user=HEART.getItem('local', 'user');
+		user=JSON.parse(user);
 
 		user.intention=intention;
-		user.habit = habit; 
-		user.time = time;
+		user.habit=habit; 
+		user.time=time;
 
-		succ = function(response) {
-			console.log(response);
-		};
-
-		fail = function(response) {
-			console.log(response);
-		};
-
-		HEART.toUser( user, succ, fail );
-
-		user = JSON.stringify(user);
-
-		HEART.setItem('local', 'user', user);
+		HEART.toUser(user);
 
 		content = this.getValues();
 		content.type = this.emxType;
+		content.action='form-submit';
 		HEART.toSensor(content);
 
 		this.parent.parent.getTabBar().show();
@@ -196,12 +185,11 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 
 	onNotNowTap: function(button, e, eOpts) {
 		HEART.notNow({page:this.emxType});
-
 		this.parent.pop();
 	},
 
 	onFormpanelInitialize: function(component, eOpts) {
-		time = this.child('#fset').child('#habit').child('#time');
+		time = this.child('#fset').child('#mindful').child('#time');
 
 		options = [];
 
@@ -215,8 +203,8 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 	},
 
 	doValidation: function() {
-		intention = this.child('#fset').child('#intention').child('#intention').getValue();
-		habit = this.child('#fset').child('#habit').child('#habit').getValue();
+		intention=this.child('#fset').child('#intention').child('#intention').getValue();
+		habit=this.child('#fset').child('#mindful').child('#habit').getValue();
 
 		if(intention.length<2){
 			return false;
