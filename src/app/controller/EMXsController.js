@@ -183,6 +183,7 @@ Ext.define('HEART.controller.EMXsController', {
 		audioFrame.setShowAnimation({type: "fadeIn", duration: 1024});
 
 		audioButton = audioFrame.child('#audioButton');
+
 		audioHandle = function(button, e, eOpts) {
 			if(button.getText()=='Play'){
 				HEART.getAudio().play();
@@ -199,12 +200,11 @@ Ext.define('HEART.controller.EMXsController', {
 
 		button.setShowAnimation({type: "fadeIn", duration: 1024});
 
-		if(preSlider.random_show == 'y' && Math.random()>HEART.probability){
-			console.log("HERE");
+		if(Math.random()>HEART.probability){
 			preSlider.destroy();
 			postSlider.destroy();
 			HEART.audioCallback = function() {
-
+				console.log(HEART.getAudio());
 				button.show();
 				setTimeout(function(){component.parent.getScrollable().getScroller().scrollToEnd({type: "slide"});}, 64);
 			};
@@ -215,7 +215,6 @@ Ext.define('HEART.controller.EMXsController', {
 			postSlider.hide();
 			postSlider.on( { change: function() { button.show(); setTimeout(function(){component.parent.getScrollable().getScroller().scrollToEnd({type: "slide"});}, 64);} } );
 			HEART.audioCallback =function() {
-
 				postSlider.show();
 				setTimeout(function(){component.parent.getScrollable().getScroller().scrollToEnd({type: "slide"});}, 64);
 			};
