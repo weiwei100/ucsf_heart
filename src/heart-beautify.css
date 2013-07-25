@@ -18,14 +18,14 @@
  	background-size: cover !important;
 }
 
-.exercise {
+.exe-list {
 	background: url(images/yellow_sunset.png) no-repeat center center fixed !important;
  	background-size: cover !important;
 }
 
-.exercises {
-	background: url(images/exercises.png) no-repeat center center  !important;
- 	background-size: 100% !important;
+.exe-icon {
+	background: url(images/exe-icon.png) no-repeat center center  !important;
+ 	background-size: cover !important;
 }
 
 .setting {
@@ -38,8 +38,8 @@
  	background-size: cover !important;
 }
 
-.pushSlider {
-	background: url(images/image3.png) no-repeat center center fixed !important;
+.push-slider {
+	background: url(images/snow.png) no-repeat center center fixed !important;
  	background-size: cover !important;
 }
 
