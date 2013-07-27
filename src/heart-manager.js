@@ -171,6 +171,40 @@ var HEART = {
 		}
 		return result;
 	},
+
+	stressed: function(goola) {
+		emx = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio3', 'EMIAudio4'];
+		type = emx[Math.floor(emx.length*Math.random())]; 
+
+		form = Ext.create('HEART.view.'+type);
+		form.emxType = type;
+		form.goola = goola;
+
+		Ext.Viewport.getActiveItem().setActiveItem(2);
+		Ext.Viewport.getActiveItem().getActiveItem().push(form);
+	},
+
+	follow: function(type, goola) {
+		form = Ext.create('HEART.view.'+type);
+		form.emxType = type;
+		form.goola = goola;
+
+		Ext.Viewport.getActiveItem().setActiveItem(2);
+		Ext.Viewport.getActiveItem().getActiveItem().push(form);
+	},
+
+	mylog: function() {
+		mylog = JSON.parse(HEART.getItem('local', 'mylog'))||{};
+		dead = new Date(Date.now()-Date.now()%(1000*60*60*24*7)+(1000*60*60*24*10));
+		if(mylog.expire){
+			if(Date.now()>mylog.expire)
+			{ mylog = {}; mylog.expire = dead; }
+		}else{ mylog.expire = dead; }
+
+		mylog = JSON.stringify(mylog);
+		HEART.setItem('local', 'mylog', mylog);
+		return JSON.parse(HEART.getItem('local','mylog'));
+	},
 	
 	audioCallback: {},
 	audioPlay: 'strawberry',

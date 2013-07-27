@@ -6,7 +6,7 @@ Ext.define('HEART.view.EMAType6', {
 		items: [
 			{
 				xtype: 'label',
-				html: 'What is happening right now?',
+				html: 'Has your stressful situation resolved?',
 				cls: 'x-subtitle',
 				itemId: 'question'
 			},
@@ -55,37 +55,16 @@ Ext.define('HEART.view.EMAType6', {
 		user = JSON.stringify(user);
 		HEART.setItem('local', 'user', user);
 
-		mylog = JSON.parse(HEART.getItem('local', 'mylog'))||{};
+		mylog = HEART.mylog();
 
-		dead = new Date(Date.now()-Date.now()%(1000*60*60*24*7)+(1000*60*60*24*10));
+		stressed=mylog.stressed||{high:stress,low:stress,average:stress,count:0};
 
-		if(mylog.expire){
-			if(Date.now()>mylog.expire){
-				mylog = {};
-				mylog.expire = dead;
-			}
+		if(stress>stressed.high){stressed.high=stress;}
+		else if(stress<stressed.low){stressed.low=stress;}
 
-		}else{
-			mylog.expire = dead
-		}
-
-		stressed = mylog.stressed||{high: stress, low: stress, average: stress, count: 0};
-
-		if(stress>stressed.high){
-			stressed.high=stress;
-		}else if(stress<stressed.low){
-			stressed.low=stress
-		}
-
-		stressed.average-=0;
-		stressed.count-=0;
-		stress-=0;
-
+		stressed.average-=0;stressed.count-=0;stress-=0;
 		stressed.average=(stressed.average*stressed.count+stress)/(stressed.count+1);
-
-		stressed.count+=1;
-
-		mylog.stressed=stressed;
+		stressed.count+=1;mylog.stressed=stressed;
 
 		mylog = JSON.stringify(mylog);
 		HEART.setItem('local', 'mylog', mylog);

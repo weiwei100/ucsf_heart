@@ -43,7 +43,7 @@ Ext.define('HEART.view.IntentionRemind', {
 					},
 					{
 						xtype: 'label',
-						html: 'How do you feel in your body? <br> How do you feel overall?',
+						html: 'Notice how you feel in your body..<br>Notice how you feel in your heart/mind as you engage this reflection..',
 						itemId: 'question',
 						styleHtmlContent: true
 					},
@@ -59,9 +59,7 @@ Ext.define('HEART.view.IntentionRemind', {
 							color: 'green'
 						},
 						iconCls: 'time',
-						iconMask: true,
-						labelCls: '\'\'',
-						pressedCls: '\'\''
+						iconMask: true
 					},
 					{
 						xtype: 'button',
@@ -136,10 +134,10 @@ Ext.define('HEART.view.IntentionRemind', {
 
 			setTimeout(function(){
 
-				//fset.child('#timer').hide();
+				fset.child('#timer').hide();
 
 				setTimeout(function(){
-					//fset.child('#done').show();
+					fset.child('#done').show();
 				}, 1024);
 
 			}, 21000);

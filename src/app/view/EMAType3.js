@@ -62,11 +62,22 @@ Ext.define('HEART.view.EMAType3', {
 					},
 					{
 						xtype: 'sliderfield',
-						itemId: 'fora',
-						label: 'I am feeling fearful or anxious:<br/><div><span style="float:right">a lot</span><span>none</span></div>',
+						itemId: 'fearful',
+						label: 'I am feeling fearful:<br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
-						name: 'fora',
+						name: 'fearful',
+						value: [
+							50
+						]
+					},
+					{
+						xtype: 'sliderfield',
+						itemId: 'anxious',
+						label: 'I am feeling anxious:<br/><div><span style="float:right">a lot</span><span>none</span></div>',
+						labelAlign: 'top',
+						labelWrap: true,
+						name: 'anxious',
 						value: [
 							50
 						]
@@ -102,29 +113,24 @@ Ext.define('HEART.view.EMAType3', {
 
 	onDoneRelease: function(button, e, eOpts) {
 		anger=button.parent.child('#anger').getValue();
-		fora=button.parent.child('#fora').getValue();
+		fearful=button.parent.child('#fearful').getValue();
+		anxious=button.parent.child('#anxious').getValue();
 
 		user = HEART.getItem('local', 'user');
 		user = JSON.parse(user);
 
 		user.anger=anger;
-		user.fora=fora;
+		user.fearful=fearful;
+		user.anxious=anxious;
 
 		user = JSON.stringify(user);
 		HEART.setItem('local', 'user', user);
 
 		if(this.goola=='followup'){return;}
 
-		if(anger>50||fora>50){
+		if(anger>50||fearful>50||anxious>50){
 
-			EMX = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio4', 'EMIAudio7'];
-
-			type = EMX[Math.floor(EMX.length*Math.random())]; 
-
-			form = Ext.create('HEART.view.'+type);
-
-			Ext.Viewport.getActiveItem().setActiveItem(2);
-			Ext.Viewport.getActiveItem().getActiveItem().push(form);
+			HEART.stressed('followup');
 
 			if(Math.random()<1/3){
 
@@ -132,12 +138,7 @@ Ext.define('HEART.view.EMAType3', {
 
 				setTimeout(function(){
 
-					form = Ext.create('HEART.view.'+emx);
-					form.emxType = emx;
-					form.goola = 'followup';
-
-					Ext.Viewport.getActiveItem().setActiveItem(2);
-					Ext.Viewport.getActiveItem().getActiveItem().push(form);
+					HEART.follow(emx, 'followup');
 
 				}, 1000*20*15);
 
@@ -146,16 +147,11 @@ Ext.define('HEART.view.EMAType3', {
 					user = HEART.getItem('local', 'user');
 					user = JSON.parse(user);
 
-					if(anger>50||fora>50){
+					if(anger>50||fearful>50||anxious>50){
 
-						form = Ext.create('HEART.view.'+emx);
-						form.emxType = emx;
-						form.goola = 'followup';
-
-						Ext.Viewport.getActiveItem().setActiveItem(2);
-						Ext.Viewport.getActiveItem().getActiveItem().push(form);
+						HEART.follow(emx, 'followup');
+						
 					}
-
 
 				}, 1000*60*30);
 

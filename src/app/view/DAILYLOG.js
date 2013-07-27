@@ -74,7 +74,6 @@ Ext.define('HEART.view.DAILYLOG', {
 						xtype: 'checkboxfield',
 						itemId: 'meditation',
 						label: 'Any formal meditation today?',
-						labelWidth: '',
 						labelWrap: true,
 						name: 'meditation'
 					},
@@ -293,19 +292,7 @@ Ext.define('HEART.view.DAILYLOG', {
 		meditation=container.child('#meditation').getChecked();
 		howlong = container.child('#howlong').getValue();
 
-		mylog = JSON.parse(HEART.getItem('local', 'mylog'))||{};
-
-		dead = new Date(Date.now()-Date.now()%(1000*60*60*24*7)+(1000*60*60*24*10));
-
-		if(mylog.expire){
-			if(Date.now()>mylog.expire){
-				mylog = {};
-				mylog.expire = dead;
-			}
-
-		}else{
-			mylog.expire = dead
-		}
+		mylog=HEART.log();
 
 		if(exercise>0){
 			exercised = mylog.exercised||{times:0,days:1,updated:Date.now()};
@@ -365,7 +352,6 @@ Ext.define('HEART.view.DAILYLOG', {
 		}
 
 		mylog = JSON.stringify(mylog);
-
 		HEART.setItem('local', 'mylog', mylog);
 
 		this.parent.pop();
@@ -379,8 +365,14 @@ Ext.define('HEART.view.DAILYLOG', {
 	},
 
 	onNoTap: function(button, e, eOpts) {
-		HEART.notNow({page:this.emxType});
 
+		content = {};
+		content.type = this.emxType;
+		content.action='no-tapped';
+
+		HEART.toSensor(content);
+
+		HEART.notNow({page:this.emxType});
 		this.parent.pop();
 	}
 

@@ -28,7 +28,7 @@ Ext.define('HEART.view.EMAType4', {
 					},
 					{
 						xtype: 'sliderfield',
-						label: 'I am pushing away feeling Anger:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
+						label: 'I am pushing away feeling anger:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'anger',
@@ -38,7 +38,7 @@ Ext.define('HEART.view.EMAType4', {
 					},
 					{
 						xtype: 'sliderfield',
-						label: 'I am pushing away feeling Sadness:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
+						label: 'I am pushing away feeling sadness:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'sandness',
@@ -58,10 +58,20 @@ Ext.define('HEART.view.EMAType4', {
 					},
 					{
 						xtype: 'sliderfield',
-						label: 'I am pushing away feeling fear or anxiety:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
+						label: 'I am pushing away feeling fear:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
-						name: 'fora',
+						name: 'fear',
+						value: [
+							0
+						]
+					},
+					{
+						xtype: 'sliderfield',
+						label: 'I am pushing away feeling anxiety:<br/><br/><div><span style="float:right">a lot</span><span>none</span></div>',
+						labelAlign: 'top',
+						labelWrap: true,
+						name: 'anxiety',
 						value: [
 							0
 						]
@@ -79,11 +89,36 @@ Ext.define('HEART.view.EMAType4', {
 					{
 						xtype: 'button',
 						action: 'exercise',
+						itemId: 'done',
 						text: 'Done'
 					}
 				]
 			}
+		],
+		listeners: [
+			{
+				fn: 'onDoneTap',
+					event: 'tap',
+					delegate: '#done'
+			}
 		]
+	},
+
+	onDoneTap: function(button, e, eOpts){
+		values = this.getValues();
+
+		fear = values.fear;
+		angry = values.angry;
+		anxiety= values.anxiety;
+
+		if(fear>49||angry>49||anxiety>49){
+			setTimeout(function(){
+				
+				HEART.follow('EMAType8', 'followup');
+
+			}, 1000*60*15);
+		}
+		
 	}
 
 });

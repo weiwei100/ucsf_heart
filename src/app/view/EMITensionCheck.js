@@ -77,12 +77,8 @@ Ext.define('HEART.view.EMITensionCheck', {
 
 			setTimeout(function(){
 
-				form = Ext.create('HEART.view.EMAType1');
-				form.emxType = 'EMAType1';
-				form.goola = 'stressed';
+				HEART.follow('EMAType1', 'stressed');
 
-				Ext.Viewport.getActiveItem().setActiveItem(2);
-				Ext.Viewport.getActiveItem().getActiveItem().push(form);
 			}, 1000*60*15);
 
 		}

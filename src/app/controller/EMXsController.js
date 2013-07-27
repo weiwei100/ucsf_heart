@@ -58,7 +58,7 @@ Ext.define('HEART.controller.EMXsController', {
 	},
 
 	onStressedShow: function(component, eOpts) {
-		EMX = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio4', 'EMIAudio7'];
+		EMX = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio3', 'EMIAudio4'];
 
 		type = EMX[Math.floor(EMX.length*Math.random())]; 
 
@@ -168,15 +168,51 @@ Ext.define('HEART.controller.EMXsController', {
 
 		audioButton = audioFrame.child('#audioButton');
 
+		content = {};
+
 		audioHandle = function(button, e, eOpts) {
 			if(button.getText()=='Play'){
-				HEART.getAudio().play();
+
+				audio=HEART.getAudio();
+
 				button.setText('Pause');
+				audio.play();
+
+				audio.getCurrentPosition(
+					function(position){
+						content.position=position; },
+					function(error){console.log(error);}
+        		);
+
+				source = audio.src;
+				index = source.lastIndexOf('/');
+				content.name= source.slice(index+1);
+				content.type = audio.getDuration();
+				content.action = 'audio-play';
+				HEART.toSensor(content);
 
 			}else{
-				HEART.getAudio().pause();
-				button.setText('Play');
+
+				audio=HEART.getAudio();
+
+				audio.getCurrentPosition(
+					function(position){
+						content.position=position; },
+					function(error){console.log(error);}
+        		);
+
+				source = audio.src;
+				index = source.lastIndexOf('/');
+				content.name= source.slice(index+1);
+				content.type = audio.getDuration();
+				content.action = 'audio-pause';
+				HEART.toSensor(content);
+					
 				HEART.audioCallback();
+
+				button.setText('Play');
+				audio.pause();
+
 			}
 		};
 
@@ -184,7 +220,7 @@ Ext.define('HEART.controller.EMXsController', {
 
 		button.setShowAnimation({type: "fadeIn", duration: 1024});
 
-		if(Math.random()>HEART.probability){
+		if(Math.random()>HEART.probability||HEART.must){
 			preSlider.destroy();
 			postSlider.destroy();
 			HEART.audioCallback = function() {
@@ -204,10 +240,28 @@ Ext.define('HEART.controller.EMXsController', {
 			};
 		}
 
+		HEART.must = false;
+
 		audioRelease = function() { 
 			audio=HEART.getAudio();
-			if(HEART!='strawberry'){
+
+			if(audio!='strawberry'){
+
+				audio.getCurrentPosition(
+					function(position){
+						content.position=position; },
+					function(error){console.log(error);}
+        		);
+
+				source = audio.src;
+				index = source.lastIndexOf('/');
+				content.name= source.slice(index+1);
+				content.type = audio.getDuration();
+				content.action = 'audio-release';
+				HEART.toSensor(content);
+
 				audio.release();
+
 				audio='strawberry';
 			}   
 		};

@@ -74,6 +74,11 @@ Ext.define('HEART.view.EMIPushSlider', {
 	},
 
 	onPushSettingSave: function(button, e, eOpts) {
+		content = {};
+		content.type = this.emxType;
+		content.action='form-submit';
+		HEART.toSensor(content);
+
 		this.parent.pop();
 	},
 

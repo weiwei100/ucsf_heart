@@ -20,7 +20,6 @@ Ext.define('HEART.view.QUOTES', {
 					},
 					{
 						xtype: 'label',
-						goola: 'nothing',
 						itemId: 'quote',
 						listeners: [
 							{
@@ -29,67 +28,20 @@ Ext.define('HEART.view.QUOTES', {
 
 										painted: function(e, t){
 
-											if(HEART.goola!='pushwoosh'){
-
-												quotes=Ext.getStore('Quotes'); 
-												count=quotes.getAllCount();
-												quote='This is quote';
-
-												index=Math.ceil(Math.random()*count);
-
-												quote=quotes.getAt(index).data.text;
-
-												HEART.quote=quote;
-
-												//wrapped = '';
-                                                //
-												//quotewords = quote.split(" ", 10);
-                                                //
-												//for (var i = 0; i< quotewords.length; i++) {
-												//	wrapped += quotewords[i];
-												//	wrapped += " ";
-												//};
-                                                //
-												//if(quotewords.length == 10){
-												//	wrapped+='...';
-												//}
-												
-												component.setHtml("<div class='quote'>" + quote + "</div>");
-											}
-										}
-
-									});
-
-									component.element.on({
-
-										tap : function(e, t){
+											wrapped=HEART.getItem('session', 'wrapped');
 
 											quotes=Ext.getStore('Quotes'); 
 											count=quotes.getAllCount();
-											quote=HEART.quote;
+											quote='This is quote';
 
-											if(HEART.goola=='pushwoosh'){
-												wrapped=component.getHtml();
-												wrapped=wrapped.substring(0, wrapped.length-3);
-
-												for(i=0;i<count;i++){
+											for(i=0;i<count;i++){
 													text = quotes.getAt(i).data.text;
 													if(text.indexOf(wrapped)>=0)
 													{ quote=text; break; }
-												}
-												component.setHtml(quote);
 											}
 
 											component.setHtml("<div class='quote'>" + quote + "</div>");
 											
-
-											content = {};
-											content.type = 'label';
-											content.action = 'show-quote';
-
-											HEART.toSensor(content);
-
-
 										}
 
 									});

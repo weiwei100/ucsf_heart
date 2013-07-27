@@ -11,11 +11,11 @@ Ext.define('HEART.view.EMAType5', {
 				items: [
 					{
 						xtype: 'sliderfield',
-						itemId: 'experience',
-						label: 'What is your experience in this moment?<br/><br/><div><span style="float:right">overwhelmed</span><span>balanced</span></div>',
+						itemId: 'feeling',
+						label: 'How are you feeling in this moment?<br/><br/><div><span style="float:right">overwhelmed</span><span>balanced</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
-						name: 'experience',
+						name: 'feeling',
 						value: [
 							50
 						]
@@ -39,28 +39,32 @@ Ext.define('HEART.view.EMAType5', {
 	},
 
 	onDoneTap: function(button, e, eOpts) {
-		experience=button.parent.child('#experience').getValue();
+		feeling=button.parent.child('#feeling').getValue();
 
 		user = HEART.getItem('local', 'user');
 		user = JSON.parse(user);
 
-		user.experience=experience;
+		user.feeling=feeling;
 
 		user = JSON.stringify(user);
 		HEART.setItem('local', 'user', user);
 
+		mylog=HEART.mylog();
+
+		balance=mylog.balance||{average:feeling,count:0};
+
+		balance.average-=0;balance.count-=0;feeling-=0;
+		balance.average=(balance.average*balance.count+feeling)/(balance.count+1);
+		balance.count+=1;mylog.balance=balance;
+
+		mylog = JSON.stringify(mylog);
+		HEART.setItem('local', 'mylog', mylog);
+
 		if(this.goola=='followup'){return;}
 
-		if(experience>50){
+		if(feeling>50){
 
-			EMX = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio4', 'EMIAudio7'];
-
-			type = EMX[Math.floor(EMX.length*Math.random())]; 
-
-			form = Ext.create('HEART.view.'+type);
-
-			Ext.Viewport.getActiveItem().setActiveItem(2);
-			Ext.Viewport.getActiveItem().getActiveItem().push(form);
+			HEART.stressed('followup');
 
 			if(Math.random()<1/3){
 
@@ -68,12 +72,7 @@ Ext.define('HEART.view.EMAType5', {
 
 				setTimeout(function(){
 
-					form = Ext.create('HEART.view.'+emx);
-					form.emxType = emx;
-					form.goola = 'followup';
-
-					Ext.Viewport.getActiveItem().setActiveItem(2);
-					Ext.Viewport.getActiveItem().getActiveItem().push(form);
+					HEART.follow(emx, 'followup');
 
 				}, 1000*60*15);
 
@@ -82,16 +81,11 @@ Ext.define('HEART.view.EMAType5', {
 					user = HEART.getItem('local', 'user');
 					user = JSON.parse(user);
 
-					if(user.experience>50){
+					if(user.feeling>50){
 
-						form = Ext.create('HEART.view.'+emx);
-						form.emxType = emx;
-						form.goola = 'followup';
+						HEART.follow(emx, 'followup');
 
-						Ext.Viewport.getActiveItem().setActiveItem(2);
-						Ext.Viewport.getActiveItem().getActiveItem().push(form);
 					}
-
 
 				}, 1000*60*30);
 
@@ -99,35 +93,6 @@ Ext.define('HEART.view.EMAType5', {
 
 		}
 
-
-		mylog = JSON.parse(HEART.getItem('local', 'mylog'))||{};
-
-		dead = new Date(Date.now()-Date.now()%(1000*60*60*24*7)+(1000*60*60*24*10));
-
-		if(mylog.expire){
-			if(Date.now()>mylog.expire){
-				mylog = {};
-				mylog.expire = dead;
-			}
-
-		}else{
-			mylog.expire = dead
-		}
-
-		balance = mylog.balance||{ average: experience, count: 0 };
-
-		balance.average-=0;
-		balance.count-=0;
-		experience-=0;
-
-		balance.average=(balance.average*balance.count+experience)/(balance.count+1);
-
-		balance.count+=1;
-
-		mylog.balance=balance;
-
-		mylog = JSON.stringify(mylog);
-		HEART.setItem('local', 'mylog', mylog);
 	}
 
 });

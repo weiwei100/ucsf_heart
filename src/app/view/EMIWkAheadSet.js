@@ -168,6 +168,13 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 	},
 
 	onNotNowTap: function(button, e, eOpts) {
+
+		content = {};
+		content.type = this.emxType;
+		content.action='notnow-tapped';
+
+		HEART.toSensor(content);
+
 		HEART.notNow({page:this.emxType});
 		this.parent.pop();
 	},
@@ -190,9 +197,7 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 		intention=this.child('#fset').child('#intention').child('#intention').getValue();
 		habit=this.child('#fset').child('#mindful').child('#habit').getValue();
 
-		if(intention.length<2){
-			return false;
-		}else if(habit.length<2){
+		if(intention.length<2||habit.length<2){
 			return false;
 		}else{
 			return true;
