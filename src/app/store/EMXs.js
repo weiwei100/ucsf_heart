@@ -8,7 +8,6 @@ Ext.define('HEART.store.EMXs', {
 	config: {
 		autoLoad: true,
 		data: [
-			{ title: 'Intention Connect', type: 'IntentionConnect', category: 'Other'},
 			{
 				title: 'Mindful Moment (35 seconds)',
 				type: 'EMIAudio3',
