@@ -14,7 +14,6 @@ function initPNHandler(){
         },
         function(status){                 
             console.warn('failed to register : ' + JSON.stringify(status));
-            navigator.notification.alert(JSON.stringify(['failed to register ', status]));
         }
     );
 
@@ -44,10 +43,28 @@ function initPNHandler(){
        HEART.toSensor(content);
 	
     });
-}
+};
+
+function onPause(){
+    content = {};
+    content.type = 'HEART';
+    content.action = 'heart-paused';
+    HEART.toSensor(content);
+};
+
+function onResume(){
+    content = {};
+    content.type = 'HEART';
+    content.action = 'heart-resumed';
+    HEART.toSensor(content);
+};
 
 function init(){
     document.addEventListener("deviceready", initPNHandler, true);
+    
+    document.addEventListener("resume",onResume, false);
+    document.addEventListener("pause", onPause, false);
+
     HEART.uuid = HEART.getItem('local', 'deviceToken');
     HEART.audioRoot = 'audio/';
 }

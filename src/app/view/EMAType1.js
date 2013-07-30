@@ -78,6 +78,12 @@ Ext.define('HEART.view.EMAType1', {
 				setTimeout(function(){
 
 					HEART.follow('EMAType6', 'stressed');
+					
+					content = {};
+					content.from = 'EMAType1';
+					content.type = 'EMAType6';
+					content.action = 'followup';
+					HEART.toSensor(content);
 
 				}, 1000*60*30);
 

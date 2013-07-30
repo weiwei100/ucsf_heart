@@ -45,67 +45,88 @@
 		}
 	</script>
             
-    <script>
-        function initApp(){
-         
-            var pushNotification = window.plugins.pushNotification;
-            pushNotification.onDeviceReady();
-        
-            pushNotification.registerDevice({alert:true, badge:true, sound:true, pw_appid:"B7BBF-34717", appname:"UCSF Heart"},
-                                        function(status) {
-                                        var deviceToken = status['deviceToken'];
-                                        console.warn('registerDevice: ' + deviceToken);
-                                            HEART.setItem('local', 'deviceToken', deviceToken);
-                                             HEART.uuid = deviceToken;
-                                        },
-                                        function(status) {
-                                        console.warn('failed to register : ' + JSON.stringify(status));
-                                        navigator.notification.alert(JSON.stringify(['failed to register ', status]));
-                                           //  HEART.uuid = device.uuid;
-                                        }
-                                        );
-        
-            pushNotification.setApplicationIconBadgeNumber(0);
-            document.addEventListener('push-notification', function(event) {
-                                       //    var title = event.notification.aps.title;
-                                      //     var userData = event.notification.u;
-                                      // navigator.notification.alert(event.notification.title);
-                                     
-                                      var title = event.notification.aps.title;
-                                      var type = event.notification.u.type;
-                                      
-                                      //var type = JSON.parse(userData).type;
-                                      
-                                      pushNotification.setApplicationIconBadgeNumber(0);
-                                      pushNotification.cancelAllLocalNotifications();
-                                      form = Ext.create('HEART.view.' + type);
-                                      form.emxType = type;
-                                      form.goola = 'pushwoosh';
-                                      
-                                      if(type=='QUOTES'){
-                                      alert("quote");
-                                        title=title.substring(0,title.length-3);
-                                        HEART.goola='pushwoosh';
-                                        form.child('#content').child('#quote').setHtml(title);
-                                      }
-                                      Ext.Viewport.getActiveItem().setActiveItem(2);
-                                      Ext.Viewport.getActiveItem().getActiveItem().push(form);
-                                      content = {};
-                                      content.type = type;
-                                      content.title = title;
-                                      content.action = 'show-pushed';
-                                      HEART.toSensor(content);
-                                      
-                                });
+  <script>
 
-            HEART.uuid = HEART.getItem('local', 'deviceToken');
-            HEART.audioRoot = 'audio/';
-           
+    function initApp(){
+  
+      pushNotification = window.plugins.pushNotification;
+      pushNotification.onDeviceReady();
+    
+      pushNotification.registerDevice(
+          {alert:true, badge:true, sound:true, projectid: "535622621184", appid : "B7BBF-34717"},
+                                    
+          function(status){
+              var deviceToken = status['deviceToken'];
+              console.warn('registerDevice: ' + deviceToken);
+              HEART.setItem('local', 'deviceToken', deviceToken);
+              HEART.uuid = deviceToken;
+          },
+          function(status){                 
+              console.warn('failed to register : ' + JSON.stringify(status));
+          }
+      );
+
+      document.addEventListener('push-notification', function(event){
+
+        //  var title = event.notification.aps.title;
+        //  var userData = event.notification.u;
+                              
+        var title = event.notification.title;
+        var userData = event.notification.userdata;
+          
+        var type = JSON.parse(userData).type;
+
+        //pushNotification.setApplicationIconBadgeNumber(0);
+        //pushNotification.cancelAllLocalNotifications();
+
+        form = Ext.create('HEART.view.' + type);
+        form.goola = 'pushwoosh';
+        form.emxType = type;
+     
+        if(type=='QUOTES'){
+          title=title.substring(0,title.length-3);
+          HEART.setItem('session', 'wrapped', title);
         }
-    </script>
+
+        Ext.Viewport.getActiveItem().setActiveItem(2);
+        Ext.Viewport.getActiveItem().getActiveItem().push(form);
+
+        content = {};
+        content.type = type;
+        content.title = title;
+        content.action = 'show-pushed';
+        HEART.toSensor(content);
+  
+      });
+
+      HEART.uuid = HEART.getItem('local', 'deviceToken');
+      HEART.audioRoot = 'audio/';
+
+    };
+
+    function onPause(){
+      content = {};
+      content.type = 'HEART';
+      content.action = 'heart-paused';
+      HEART.toSensor(content);
+    };
+
+    function onResume(){
+      content = {};
+      content.type = 'HEART';
+      content.action = 'heart-resumed';
+      HEART.toSensor(content);
+    };
+
+  </script>
 </head>
 <body onload=""></body>
     <script>
+
         document.addEventListener("deviceready", initApp, true);
+        
+        document.addEventListener("resume", onResume, true);
+        document.addEventListener("pause", onPause, true);
+        
     </script>
 </html>

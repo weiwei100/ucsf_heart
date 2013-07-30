@@ -1,20 +1,20 @@
 var HEART = {
 	
-	getItem: function(type, key) {
+	getItem: function(type, key){
 		if(type=='local')
 			return window.localStorage.getItem(key);
 		if(type=='session')
 			return window.sessionStorage.getItem(key);
 	},
 	
-	setItem: function(type, key, value) {
+	setItem: function(type, key, value){
 		if(type=='local')
 			return window.localStorage.setItem(key, value);
 		if(type=='session')
 			return window.sessionStorage.setItem(key, value);
 	},
 	
-	request: function(location, auth, content, succ, fail) {
+	request: function(location, auth, content, succ, fail){
 		
 		Ext.Ajax.request({
 			url: location,
@@ -22,15 +22,15 @@ var HEART = {
 			params: content,
 			withCredentials: true,
 			useDefaultXhrHeader: false,
-			
+
 			headers: {Authorization: auth, 'Access-Control-Allow-Origin': '*'},
-			
+
 			success: succ,
 			failure: fail
 		});
 	},
 	
-	toSensocol: function(content, succ, fail) {
+	toSensocol: function(content, succ, fail){
 		var url = 'http://sensocol.bj.brainpage.com/v1/sensors/events';
 		var username = '2551135934';
 		var password = '4bbdbcd0b64e75ca047aac5e7d44934b';
@@ -41,14 +41,14 @@ var HEART = {
 		HEART.request(url, auth, content, succ, fail);	
 	},
 	
-	toSensor: function(content) {	
+	toSensor: function(content){	
 		content.user = HEART.uuid;
 		
-		succ = function(response) {
+		succ = function(response){
 			console.log(response);
 		};
 
-		fail = function(response) {
+		fail = function(response){
 			console.log(response);
 			feeds = Ext.getStore("Feeds");
 			store = { data: content };
@@ -60,7 +60,7 @@ var HEART = {
 		HEART.toSensocol(content, succ, fail);	
 	},
 	
-	toUser: function(content) {
+	toUser: function(content){
 		var url = 'https://app.brainpage.com/ucsf/api/users';
 		var username = 'breathwear';
 		var password = 'deepbreath';
@@ -74,24 +74,26 @@ var HEART = {
 		user=HEART.clone(content);
 
 		delete user.name;
-		
-		HEART.request(url, auth, user);
 
+		callback=function(response){
+			console.log(response);};
+		
+		HEART.request(url,auth,user,callback);
 		content = JSON.stringify(content);
-		HEART.setItem('local', 'user', content);
+		HEART.setItem('local','user',content);
 	},
 	
-	sync: function() {
+	sync: function(){
 		user = HEART.getItem('local', 'user');
 		user =JSON.parse(user);
 		if(!user) {return;}
 		HEART.toUser(user);
-		
+		console.log("sync...");
 		feeds=Ext.getStore('Feeds');
 		if(feeds.getAllCount()>0){
 			feeds.each(function(item, index, length){
-				var succ = function(response){feeds.removeAt(index);feeds.sync();};
-				var fail = function(response){console.log(response);};
+				succ = function(response){feeds.removeAt(index);feeds.sync();};
+				fail = function(response){console.log(response);};
 				var content = item.data.data;
 				content.timestamp = item.data.timestamp;
 				HEART.toSensocol(content, succ, fail);					
@@ -99,7 +101,7 @@ var HEART = {
 		}
 	},
 	
-	getQuotes: function() {
+	getQuotes: function(){
 		var url = 'http://app.brainpage.com/ucsf/api/quotes';
 		var username = 'breathwear';
 		var password = 'deepbreath';
@@ -141,7 +143,7 @@ var HEART = {
 		
 	},
 	
-	notNow: function(content) {
+	notNow: function(content){
 		var url = 'http://app.brainpage.com/ucsf/api/notices';
 		var username = 'breathwear';
 		var password = 'deepbreath';
@@ -164,15 +166,14 @@ var HEART = {
 		
 	},
 
-	clone: function(object) {
+	clone: function(object){
 		result = {};
 		for(field in object){
-			result[field]=object[field];
-		}
-		return result;
+			result[field]=object[field]; 
+		} return result;
 	},
 
-	stressed: function(goola) {
+	stressed: function(goola){
 		emx = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio3', 'EMIAudio4'];
 		type = emx[Math.floor(emx.length*Math.random())]; 
 
@@ -184,7 +185,7 @@ var HEART = {
 		Ext.Viewport.getActiveItem().getActiveItem().push(form);
 	},
 
-	follow: function(type, goola) {
+	follow: function(type, goola){
 		form = Ext.create('HEART.view.'+type);
 		form.emxType = type;
 		form.goola = goola;
@@ -193,7 +194,7 @@ var HEART = {
 		Ext.Viewport.getActiveItem().getActiveItem().push(form);
 	},
 
-	mylog: function() {
+	mylog: function(){
 		mylog = JSON.parse(HEART.getItem('local', 'mylog'))||{};
 		dead = new Date(Date.now()-Date.now()%(1000*60*60*24*7)+(1000*60*60*24*10));
 		if(mylog.expire){
@@ -210,14 +211,14 @@ var HEART = {
 	audioPlay: 'strawberry',
 	audioRoot: 'file:///android_asset/www/audios/',
 	
-	setAudio: function(name, succ, fail) {
+	setAudio: function(name, succ, fail){
 		url=HEART.audioRoot+name;
 		finished = function(){HEART.audioCallback();};
 		audio=new Media(url,finished, finished);
 		HEART.audioPlay = audio;
 	},
 	
-    getAudio: function() { 
+    getAudio: function(){ 
 		return HEART.audioPlay;
 	},
 	

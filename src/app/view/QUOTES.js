@@ -75,6 +75,12 @@ Ext.define('HEART.view.QUOTES', {
 	},
 
 	onOKTap: function(button, e, eOpts) {
+		content = {};
+		content.type = 'QUOTES';
+		content.action = 'form-submit';
+		
+		HEART.toSensor(content);
+		
 		this.parent.pop();
 	}
 

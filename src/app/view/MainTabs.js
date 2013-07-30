@@ -55,6 +55,12 @@ Ext.define('HEART.view.MainTabs', {
 											component.element.on({
 												tap : function(e, t){
 
+													content = {};
+													content.type = 'popup';
+													content.title = 'welcome-instruction';
+
+													HEART.toSensor(content);
+
 													content='<p>“HEART stands for health enhancement, emotions, and resiliency training.” In addition to the workshops, we developed the HEART app to help you bring mindfulness into your day.</p>';
 
 													content+='<p>HEART helps you to develop your own present moment awareness, to find greater calm and stability in the midst of your life’s changing conditions. The HEART app is here to help you work with various aspects of mindfulness—increasing awareness of your own body and mind states, and developing the capacity to “be with” whatever is happening in a more relaxed and balanced way.</p>';
@@ -100,6 +106,9 @@ Ext.define('HEART.view.MainTabs', {
 								fn: function(component, eOpts) {
 									component.element.on({
 										tap : function(e, t){
+											content = {};
+											content.type = 'popup';
+											content.title = 'meditation-foward';
 											component.parent.parent.setActiveItem(2);
 										}
 									});
@@ -149,7 +158,7 @@ Ext.define('HEART.view.MainTabs', {
 				title: 'Settings',
 				iconCls: 'settings',
 				hidden: false,
-				id: 'settingsNav',
+				id: 'settingn',
 				items: [
 					{
 						xtype: 'formpanel',
@@ -271,6 +280,12 @@ Ext.define('HEART.view.MainTabs', {
 	},
 
 	onHomePanelActivate: function(container, newActiveItem, oldActiveItem, eOpts) {
+
+		content = {};
+    	content.type = 'HEART';
+    	content.action = 'homePanel-active';
+    	HEART.toSensor(content);
+
 		user = HEART.getItem('local', 'user');
 
 		if(!user){ return; }
@@ -303,7 +318,7 @@ Ext.define('HEART.view.MainTabs', {
 				callback = function(){
 					content = {};
 					content.type = 'popup';
-					content.action = 'show-intention';
+					content.action = 'intention-show';
 
 					HEART.toSensor(content);
 				};
@@ -363,22 +378,31 @@ Ext.define('HEART.view.MainTabs', {
 
 		nav.push(form);
 
+		content = {};
+    	content.type = 'EMIWkAheadSet';
+    	content.action = 'setting-select';
+    	HEART.toSensor(content);
 	},
 
 	onNotificationTap: function(button, e, eOpts) {
 		nav = button.parent.parent.parent;
 
 		form = Ext.create('HEART.view.EMIPushSlider');
-		form.emxType = 'EMIPushSlidert';
+		form.emxType = 'EMIPushSlider';
 		form.goola = 'settings';
 
 		nav.push(form);
+
+		content = {};
+    	content.type = 'EMIPushSlider';
+    	content.action = 'setting-select';
+    	HEART.toSensor(content);
 	},
 
 	initialize: function() {
 		this.callParent();
 
-		nav = this.child('#settingsNav');
+		nav = this.child('#settingn');
 		settings = nav.child('#settings');
 		buttons = settings.child('#buttons');
 

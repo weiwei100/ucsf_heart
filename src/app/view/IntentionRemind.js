@@ -125,6 +125,12 @@ Ext.define('HEART.view.IntentionRemind', {
 
 	onFakeTimerTap: function(button, e, eOpts) {
 		button.hide();
+
+		content = {};
+		content.type = 'IntentionRemind';
+		content.action = 'FakeTimer-Tap';
+		HEART.toSensor(content);
+
 		fset = button.parent
 		fset.child('#guide').hide();
 
@@ -148,6 +154,11 @@ Ext.define('HEART.view.IntentionRemind', {
 	},
 
 	onDoneTap: function(button, e, eOpts) {
+		content = {};
+		content.type = 'IntentionRemind';
+		content.action = 'form-submit';
+		HEART.toSensor(content);
+
 		this.parent.pop();
 	},
 

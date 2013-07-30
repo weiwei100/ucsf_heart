@@ -49,14 +49,13 @@ Ext.application({
 		'QUOTES'
 	],
 	controllers: [
-		'EMXsController',
+		'EMXController',
 		'MainController'
 	],
 	name: 'HEART',
 
 	launch: function() {
-
-		Ext.create('HEART.view.MainTabs', {fullscreen: true});
+		Ext.create('HEART.view.MainTabs',{fullscreen:true});
 	}
 
 });

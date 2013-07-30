@@ -21,7 +21,7 @@ Ext.define('HEART.view.DAILYLOG', {
 
 											content = {};
 											content.type = 'popup';
-											content.action = 'mylog-instructions';
+											content.title = 'mylog-instruction';
 
 											HEART.toSensor(content);
 
@@ -112,14 +112,7 @@ Ext.define('HEART.view.DAILYLOG', {
 						label: 'Any mindful eating today?',
 						labelWidth: '',
 						labelWrap: true,
-						name: 'mindful',
-						listeners: [
-							{
-								fn: function(component, eOpts) {
-								},
-								event: 'initialize'
-							}
-						]
+						name: 'mindful'
 					},
 					{
 								xtype: 'label',
@@ -134,7 +127,7 @@ Ext.define('HEART.view.DAILYLOG', {
 
 													content = {};
 													content.type = 'popup';
-													content.action = 'minful-eating';
+													content.action = 'minfuleating-iinstruction';
 
 													HEART.toSensor(content);
 
@@ -292,7 +285,7 @@ Ext.define('HEART.view.DAILYLOG', {
 		meditation=container.child('#meditation').getChecked();
 		howlong = container.child('#howlong').getValue();
 
-		mylog=HEART.log();
+		mylog=HEART.mylog();
 
 		if(exercise>0){
 			exercised = mylog.exercised||{times:0,days:1,updated:Date.now()};

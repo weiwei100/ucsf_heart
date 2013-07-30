@@ -52,7 +52,20 @@ Ext.define('HEART.view.IntentionConnect', {
 							type: 'fadeIn',
 							duration: 2048
 						},
-						text: 'Done'
+						text: 'Done',
+						listeners: [
+							{
+								fn: function(button, e, eOpts){
+									button.parent.parent.parent.pop();
+									content = {};
+									content.type = 'IntentionConnect';
+									content.action = 'form-submit';
+									HEART.toSensor(content);
+	
+								},
+								event: 'tap'
+							}
+						]
 					}
 				],
 				listeners: [
@@ -64,11 +77,9 @@ Ext.define('HEART.view.IntentionConnect', {
 
 								component.child('#describe').show();
 
-
 								setTimeout(function(){
 
 									component.child('#done').show();
-
 
 								}, 2048);
 

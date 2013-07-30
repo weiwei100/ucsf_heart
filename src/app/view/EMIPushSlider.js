@@ -28,7 +28,7 @@ Ext.define('HEART.view.EMIPushSlider', {
 			{
 				xtype: 'sliderfield',
 				itemId: 'pushSlider',
-				label: '',
+				name: 'level',
 				value: [
 					50
 				],
@@ -74,7 +74,7 @@ Ext.define('HEART.view.EMIPushSlider', {
 	},
 
 	onPushSettingSave: function(button, e, eOpts) {
-		content = {};
+		content = button.parent.getValues();
 		content.type = this.emxType;
 		content.action='form-submit';
 		HEART.toSensor(content);

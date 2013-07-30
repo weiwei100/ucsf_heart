@@ -1,12 +1,11 @@
-Ext.define('HEART.controller.EMXsController', {
+Ext.define('HEART.controller.EMXController', {
 	extend: 'Ext.app.Controller',
 
 	config: {
 		refs: {
-			exercises: '#exercises',
-			stressed: '#stressed',
 			mainTabs: '#mainTabs',
-			settingsNav: '#settingsNav'
+			stressed: '#stressed',
+			exercises: '#exercises'
 		},
 
 		control: {
@@ -14,6 +13,7 @@ Ext.define('HEART.controller.EMXsController', {
 				select: 'onExerciseSelect'
 			},
 			"#exercises": {
+				show: 'onExercisesShow',
 				hide: 'onExercisesHide'
 			},
 			"#stressed": {
@@ -30,7 +30,7 @@ Ext.define('HEART.controller.EMXsController', {
 				initialize: 'onEMIInitialize'
 			},
 			"fieldset[goola=audio]": {
-				initialize: 'onAudioPanelInitialize'
+				initialize: 'onAudioInitialize'
 			}
 		}
 	},
@@ -48,16 +48,34 @@ Ext.define('HEART.controller.EMXsController', {
 
 		content = {};
 		content.type = type;
-		content.action = 'show-exercises';
+		content.action = 'exercise-select';
 
 		HEART.toSensor(content);
 	},
 
+	onExercisesShow: function(component, eOpts) {
+
+		content = {};
+   		content.type = 'HEART';
+      	content.action = 'exercises-show';
+      	HEART.toSensor(content);
+	},
+
 	onExercisesHide: function(component, eOpts) {
+		size=component.getItems().length;
+		if( size<3 ) { return; }
+
 		this.getExercises().pop();
+
+		content = {};
+   		content.type = 'HEART';
+      	content.action = 'exercises-pop';
+      	HEART.toSensor(content);
+		
 	},
 
 	onStressedShow: function(component, eOpts) {
+
 		EMX = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio3', 'EMIAudio4'];
 
 		type = EMX[Math.floor(EMX.length*Math.random())]; 
@@ -71,13 +89,21 @@ Ext.define('HEART.controller.EMXsController', {
 
 		content = {};
 		content.type = type;
-		content.action = 'show-stressed';
+		content.action = 'stressed-show';
 
 		HEART.toSensor(content);
 	},
 
 	onStressedHide: function(component, eOpts) {
+		size=component.getItems().length;
+		if( size<2 ){ return; }
+
 		this.getStressed().pop();
+
+		content = {};
+   		content.type = 'HEART';
+      	content.action = 'stressed-pop';
+      	HEART.toSensor(content);
 	},
 
 	onExerciseDone: function(button, e, eOpts) {
@@ -86,7 +112,6 @@ Ext.define('HEART.controller.EMXsController', {
 
 		content.type = form.emxType;
 		content.action='form-submit';
-
 		HEART.toSensor(content);
 
 		if(form.goola=='exercises'){
@@ -102,11 +127,7 @@ Ext.define('HEART.controller.EMXsController', {
 			this.getExercises().pop();
 			this.getMainTabs().setActiveItem(0);
 
-		}else{
-
-			form.parent.pop();
-
-		}
+		}else{ form.parent.pop(); }
 
 
 	},
@@ -155,7 +176,7 @@ Ext.define('HEART.controller.EMXsController', {
 		}
 	},
 
-	onAudioPanelInitialize: function(component, eOpts) {
+	onAudioInitialize: function(component, eOpts) {
 
 		preSlider = component.child('#pre-slider');
 		postSlider = component.child('#post-slider');
@@ -274,7 +295,6 @@ Ext.define('HEART.controller.EMXsController', {
 	},
 
 	launch: function() {
-		this.getSettingsNav().getNavigationBar().hide();
 		this.getExercises().getNavigationBar().hide();
 		this.getStressed().getNavigationBar().hide();
 	}

@@ -79,6 +79,12 @@ Ext.define('HEART.view.EMITensionCheck', {
 
 				HEART.follow('EMAType1', 'stressed');
 
+				content = {};
+				content.from = 'EMITensionCheck';
+				content.type = 'EMAType1';
+				content.action = 'followup';
+				HEART.toSensor(content);
+
 			}, 1000*60*15);
 
 		}
