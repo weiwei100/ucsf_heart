@@ -34,7 +34,7 @@ Ext.define('HEART.store.EMXs', {
 				category: 'A. MINDFUL CHECK-INS (NO-AUDIO)'
 			},
 			{
-				title: 'Mindfull Body Scan',
+				title: 'Mindful Body Scan',
 				type: 'EMITensionCheck',
 				category: 'A. MINDFUL CHECK-INS (NO-AUDIO)'
 			},

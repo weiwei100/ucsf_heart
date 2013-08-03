@@ -24,11 +24,11 @@ Ext.define('HEART.view.EMIAudio3', {
 					{
 						xtype: 'fieldset',
 						itemId: 'fsAudio',
-						title: 'Body Connection',
+						title: 'Mindful Moment',
 						items: [
 							{
 								xtype: 'label',
-								html: '<p>Tip: Use headphones and stand or sit down.</p><p>Duration: 0:35 min</p>'							},
+								html: '<p>Tip: Use headphones and stand or sit down.</p><p>Duration: 35 sec</p>'							},
 							{
 								xtype: 'button',
 								itemId: 'audioButton',
