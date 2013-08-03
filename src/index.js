@@ -1,5 +1,4 @@
 function initPNHandler(){
-  
     pushNotification = window.plugins.pushNotification;
     pushNotification.onDeviceReady();
     
@@ -7,13 +6,13 @@ function initPNHandler(){
         {alert:true, badge:true, sound:true, projectid: "535622621184", appid : "B7BBF-34717"},
                                     
         function(status){
-            var deviceToken = status['deviceToken'];
+            var deviceToken = status;
             console.warn('registerDevice: ' + deviceToken);
             HEART.setItem('local', 'deviceToken', deviceToken);
             HEART.uuid = deviceToken;
         },
         function(status){                 
-            console.warn('failed to register : ' + JSON.stringify(status));
+            HEART.notify = 'failed to register : ' + JSON.stringify(status);
         }
     );
 
@@ -66,5 +65,5 @@ function init(){
     document.addEventListener("pause", onPause, false);
 
     HEART.uuid = HEART.getItem('local', 'deviceToken');
-    HEART.audioRoot = 'audio/';
+    HEART.audioRoot: 'file:///android_asset/www/audio/';
 }
