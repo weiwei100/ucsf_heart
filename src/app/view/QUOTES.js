@@ -32,7 +32,7 @@ Ext.define('HEART.view.QUOTES', {
 
 											quotes=Ext.getStore('Quotes'); 
 											count=quotes.getAllCount();
-											quote='This is quote';
+											quote='Quote not found.';
 
 											for(i=0;i<count;i++){
 													text = quotes.getAt(i).data.text;
@@ -40,7 +40,7 @@ Ext.define('HEART.view.QUOTES', {
 													{ quote=text; break; }
 											}
 
-											component.setHtml("<div class='quote'>" + quote + "</div>");
+											component.setHtml("<div class='quote'>" + quote +  "</div>");
 											
 										}
 

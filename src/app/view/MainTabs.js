@@ -460,7 +460,7 @@ Ext.define('HEART.view.MainTabs', {
             form.goola = 'pushwoosh';
             form.emxType = HEART.show_on_load_type;
             if(HEART.show_on_load_type=='QUOTES'){
-                HEART.show_on_load_title=HEART.show_on_load_title.substring(0,HEART.show_on_load_title.length-3);
+                HEART.show_on_load_title=HEART.show_on_load_title.substring(0,20);
                 HEART.setItem('session', 'wrapped', HEART.show_on_load_title);
             }
            

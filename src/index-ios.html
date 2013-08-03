@@ -49,12 +49,13 @@
 
     function initApp(){
     
-       // HEART.notify = "test6";
+      //  HEART.notify = "test6";
+       
         pushNotification = window.plugins.pushNotification;
       pushNotification.onDeviceReady();
-    
+   
       pushNotification.registerDevice(
-          {alert:true, badge:true, sound:true, projectid: "535622621184", appid : "B7BBF-34717"},
+                                      {alert:true, badge:true, sound:true, pw_appid: "B7BBF-34717", appname: "UCSF Heart"},
                                     
           function(status){
               var deviceToken = status['deviceToken'];
@@ -64,18 +65,20 @@
               HEART.uuid = deviceToken;
           },
           function(status){
-             HEART.notify = "Failed to register push notifications";
+             HEART.notify = "Failed to register: " + JSON.stringify(status);
             //  console.warn('failed to register : ' + JSON.stringify(status));
           }
+     
       );
 
       document.addEventListener('push-notification', function(event){
-
+   
           var title = event.notification.aps.alert;
+                                //HEART.notify = "obj:" + JSON.stringify(event.notification);
 
         var type = event.notification.u.type;
         
- 
+   
         if(Ext.Viewport.getActiveItem()){
 
             form = Ext.create('HEART.view.' + type);
@@ -83,7 +86,7 @@
             form.emxType = type;
      
         if(type=='QUOTES'){
-          title=title.substring(0,title.length-3);
+          title=title.substring(0,20);
           HEART.setItem('session', 'wrapped', title);
         }
  
