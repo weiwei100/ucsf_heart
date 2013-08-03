@@ -14,12 +14,12 @@
 }
 
 .homePanel {
-	background: url(images/home.png) no-repeat center bottom fixed !important;
+	background: url(images/home.png) no-repeat center bottom !important;
  	background-size: cover !important;
 }
 
 .exe-list {
-	background: url(images/yellow_sunset.png) no-repeat center center fixed !important;
+	background: url(images/yellow_sunset.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 
@@ -29,17 +29,17 @@
 }
 
 .setting {
-	background: url(images/snow.png) no-repeat center center fixed !important;
+	background: url(images/snow.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 
 .weekAhead {
-	background: url(images/snow.png) no-repeat center center fixed !important;
+	background: url(images/snow.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 
 .push-slider {
-	background: url(images/snow.png) no-repeat center center fixed !important;
+	background: url(images/snow.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 
@@ -149,67 +149,67 @@
 }
 
 .dailyLog {
-	background: url(images/water-drop.png) no-repeat center center fixed !important;
+	background: url(images/water-drop.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 
 .experience {
-	background: url(images/image5.png) no-repeat center center fixed !important;
+	background: url(images/image5.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 
 .feedback {
-	background: url(images/image8.png) no-repeat center center fixed !important;
+	background: url(images/image8.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 
 .bodyScan {
-	background: url(images/beach.png) no-repeat center center fixed !important;
+	background: url(images/beach.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 
 .breathLife {
-	background: url(images/beach.png) no-repeat center center fixed !important;
+	background: url(images/beach.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 
 .quotes {
-	background: url(images/sunrise.png) no-repeat center center fixed !important;
+	background: url(images/sunrise.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 
 .habit {
-	background: url(images/calm_water.png) no-repeat center center fixed !important;
+	background: url(images/calm_water.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 
 .moments {
-	background: url(images/water_with_fog.png) no-repeat center center fixed !important;
+	background: url(images/water_with_fog.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 
 .intention  {
-	background: url(images/water_with_fog.png) no-repeat center center fixed !important;
+	background: url(images/water_with_fog.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 
 .EMAType {
-	background: url(images/clouds2.png) no-repeat center center fixed !important;
+	background: url(images/clouds2.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 
 .EMIAudio {
-	background: url(images/clouds1.png) no-repeat center center fixed !important;
+	background: url(images/clouds1.png) no-repeat center center !important;
  	background-size: cover !important;
 }
 .EMIAudioA {
-    background: url(images/waterfall.png) no-repeat center center fixed !important;
+    background: url(images/waterfall.png) no-repeat center center !important;
  	background-size: cover !important;
 
 }
 
 .EMIAudioB {
-    background: url(images/ocean.png) no-repeat center center fixed !important;
+    background: url(images/ocean.png) no-repeat center center !important;
  	background-size: cover !important;
     
 }

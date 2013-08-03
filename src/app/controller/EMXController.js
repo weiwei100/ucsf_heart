@@ -113,8 +113,7 @@ Ext.define('HEART.controller.EMXController', {
 		content.type = form.emxType;
 		content.action='form-submit';
 		HEART.toSensor(content);
-  Ext.Msg.alert('Notification', form.goola, Ext.emptyFn);
-		if(form.goola=='exercises'){
+ 		if(form.goola=='exercises'){
 
 			this.getExercises().pop();
 
