@@ -281,6 +281,7 @@ Ext.define('HEART.view.MainTabs', {
 
 	onHomePanelActivate: function(container, newActiveItem, oldActiveItem, eOpts) {
 
+        Ext.Msg.alert('Intention', HEART.notify, callback);
 		content = {};
     	content.type = 'HEART';
     	content.action = 'homePanel-active';

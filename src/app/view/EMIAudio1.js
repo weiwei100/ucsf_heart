@@ -27,7 +27,7 @@ Ext.define('HEART.view.EMIAudio1', {
 						items: [
 							{
 								xtype: 'label',
-								html: '<p>Enjoy this meditation.</p><p>Tip: Use headphones.</p><p>Duration: 5:40 min</p>'
+								html: '<p>Tip: Use headphones.</p><p>Duration: 5:40 min</p>'
 							},
 							{
 								xtype: 'button',

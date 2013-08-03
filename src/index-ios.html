@@ -48,8 +48,9 @@
   <script>
 
     function initApp(){
-  
-      pushNotification = window.plugins.pushNotification;
+    
+       // HEART.notify = "test6";
+        pushNotification = window.plugins.pushNotification;
       pushNotification.onDeviceReady();
     
       pushNotification.registerDevice(
@@ -58,10 +59,12 @@
           function(status){
               var deviceToken = status['deviceToken'];
               console.warn('registerDevice: ' + deviceToken);
+           // HEART.notify = "test5";
               HEART.setItem('local', 'deviceToken', deviceToken);
               HEART.uuid = deviceToken;
           },
-          function(status){                 
+          function(status){
+          //   HEART.notify = "test4";
               console.warn('failed to register : ' + JSON.stringify(status));
           }
       );
@@ -70,7 +73,7 @@
 
         //  var title = event.notification.aps.title;
         //  var userData = event.notification.u;
-                              
+                               
         var title = event.notification.title;
         var userData = event.notification.userdata;
           
@@ -87,7 +90,7 @@
           title=title.substring(0,title.length-3);
           HEART.setItem('session', 'wrapped', title);
         }
-
+     //   alert('hi world');
         Ext.Viewport.getActiveItem().setActiveItem(2);
         Ext.Viewport.getActiveItem().getActiveItem().push(form);
 

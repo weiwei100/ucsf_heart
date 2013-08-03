@@ -221,6 +221,8 @@ var HEART = {
     getAudio: function(){ 
 		return HEART.audioPlay;
 	},
+    
+    notify: "hi",
 	
 	probability: 0.55
 	
