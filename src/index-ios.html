@@ -58,41 +58,41 @@
                                     
           function(status){
               var deviceToken = status['deviceToken'];
-              console.warn('registerDevice: ' + deviceToken);
+             // console.warn('registerDevice: ' + deviceToken);
            // HEART.notify = "test5";
               HEART.setItem('local', 'deviceToken', deviceToken);
               HEART.uuid = deviceToken;
           },
           function(status){
-          //   HEART.notify = "test4";
-              console.warn('failed to register : ' + JSON.stringify(status));
+             HEART.notify = "Failed to register push notifications";
+            //  console.warn('failed to register : ' + JSON.stringify(status));
           }
       );
 
       document.addEventListener('push-notification', function(event){
 
-        //  var title = event.notification.aps.title;
-        //  var userData = event.notification.u;
-                               
-        var title = event.notification.title;
-        var userData = event.notification.userdata;
-          
-        var type = JSON.parse(userData).type;
+          var title = event.notification.aps.alert;
 
-        //pushNotification.setApplicationIconBadgeNumber(0);
-        //pushNotification.cancelAllLocalNotifications();
+        var type = event.notification.u.type;
+        
+ 
+        if(Ext.Viewport.getActiveItem()){
 
-        form = Ext.create('HEART.view.' + type);
-        form.goola = 'pushwoosh';
-        form.emxType = type;
+            form = Ext.create('HEART.view.' + type);
+            form.goola = 'pushwoosh';
+            form.emxType = type;
      
         if(type=='QUOTES'){
           title=title.substring(0,title.length-3);
           HEART.setItem('session', 'wrapped', title);
         }
-     //   alert('hi world');
-        Ext.Viewport.getActiveItem().setActiveItem(2);
+ 
+                                       Ext.Viewport.getActiveItem().setActiveItem(2);
         Ext.Viewport.getActiveItem().getActiveItem().push(form);
+        }else{
+                                HEART.show_on_load_title = title;
+                                HEART.show_on_load_type = type;
+        }
 
         content = {};
         content.type = type;

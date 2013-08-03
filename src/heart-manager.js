@@ -222,7 +222,9 @@ var HEART = {
 		return HEART.audioPlay;
 	},
     
-    notify: "hi",
+    notify: null,
+    show_on_load_title: null,
+    show_on_load_type: null,
 	
 	probability: 0.55
 	

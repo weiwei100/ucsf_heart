@@ -202,7 +202,17 @@
 	background: url(images/clouds1.png) no-repeat center center fixed !important;
  	background-size: cover !important;
 }
+.EMIAudioA {
+    background: url(images/waterfall.png) no-repeat center center fixed !important;
+ 	background-size: cover !important;
 
+}
+
+.EMIAudioB {
+    background: url(images/ocean.png) no-repeat center center fixed !important;
+ 	background-size: cover !important;
+    
+}
 /* Background ended here */
 
 .x-form .x-scroll-container {

@@ -2,7 +2,7 @@ Ext.define('HEART.view.EMIAudio5', {
 	extend: 'Ext.form.Panel',
 
 	config: {
-		cls: 'EMIAudio',
+		cls: 'EMIAudioB',
 		scrollable: 'vertical',
 		items: [
 			{

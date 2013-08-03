@@ -281,7 +281,11 @@ Ext.define('HEART.view.MainTabs', {
 
 	onHomePanelActivate: function(container, newActiveItem, oldActiveItem, eOpts) {
 
-        Ext.Msg.alert('Intention', HEART.notify, callback);
+        if(HEART.notify != null)
+        {
+           Ext.Msg.alert('Notification', HEART.notify, Ext.emptyFn);
+           HEART.notify = null;
+        }
 		content = {};
     	content.type = 'HEART';
     	content.action = 'homePanel-active';
@@ -328,6 +332,8 @@ Ext.define('HEART.view.MainTabs', {
 
 			}
 		});
+                    
+
 	},
 
 	onSaveTap: function(button, e, eOpts) {
@@ -446,6 +452,24 @@ Ext.define('HEART.view.MainTabs', {
 				ahead = buttons.child('#ahead');
 				ahead.fireEvent('tap', ahead);
 			}
+
+           
+           if(HEART.show_on_load_title){
+           
+            form = Ext.create('HEART.view.' + HEART.show_on_load_type);
+            form.goola = 'pushwoosh';
+            form.emxType = HEART.show_on_load_type;
+            if(HEART.show_on_load_type=='QUOTES'){
+                HEART.show_on_load_title=HEART.show_on_load_title.substring(0,HEART.show_on_load_title.length-3);
+                HEART.setItem('session', 'wrapped', HEART.show_on_load_title);
+            }
+           
+            nav = this.child('#exercises');
+         
+           this.setActiveItem(nav);
+           nav.push(form);
+           HEART.show_on_load_title = null;
+           }
 
 		}else{
 			this.setActiveItem(nav);
