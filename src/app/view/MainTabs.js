@@ -350,7 +350,7 @@ Ext.define('HEART.view.MainTabs', {
 		HEART.toSensor(content);
 
 		user=HEART.getItem('local', 'user');
-		Ext.Msg.alert('debug', 'd1', Ext.emptyFn);
+
 		if(user) {
 
 			user = JSON.parse(user);
@@ -361,7 +361,6 @@ Ext.define('HEART.view.MainTabs', {
 				user[field]=values[field];
 			}
 
-		Ext.Msg.alert('debug', 'd2', Ext.emptyFn);
 			HEART.toUser(user);
 
 			this.setActiveItem(0);
