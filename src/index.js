@@ -1,7 +1,8 @@
 function initPNHandler(){
+    HEART.notify = "here2";
     pushNotification = window.plugins.pushNotification;
     pushNotification.onDeviceReady();
-    
+    HEART.notify = "here";
     pushNotification.registerDevice(
         {alert:true, badge:true, sound:true, projectid: "535622621184", appid : "B7BBF-34717"},
                                     
@@ -59,6 +60,8 @@ function onResume(){
 };
 
 function init(){
+	HEART.notify = "h1";
+	//alert('hi world');
     document.addEventListener("deviceready", initPNHandler, true);
     
     document.addEventListener("resume",onResume, false);

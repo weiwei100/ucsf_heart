@@ -222,7 +222,7 @@ var HEART = {
 		return HEART.audioPlay;
 	},
     
-    notify: null,
+    notify: 't',
     show_on_load_title: null,
     show_on_load_type: null,
 	

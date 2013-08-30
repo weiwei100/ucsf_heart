@@ -281,11 +281,11 @@ Ext.define('HEART.view.MainTabs', {
 
 	onHomePanelActivate: function(container, newActiveItem, oldActiveItem, eOpts) {
 
-        if(HEART.notify != null)
-        {
+      //  if(HEART.notify != null)
+      //  {
            Ext.Msg.alert('Notification', HEART.notify, Ext.emptyFn);
-           HEART.notify = null;
-        }
+      //     HEART.notify = null;
+      //  }
 		content = {};
     	content.type = 'HEART';
     	content.action = 'homePanel-active';
