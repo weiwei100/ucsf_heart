@@ -68,5 +68,4 @@ function init(){
     document.addEventListener("pause", onPause, false);
 
     HEART.uuid = HEART.getItem('local', 'deviceToken');
-    HEART.audioRoot: 'file:///android_asset/www/audio/';
 }

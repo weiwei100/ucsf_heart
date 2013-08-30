@@ -45,10 +45,12 @@ var HEART = {
 		content.user = HEART.uuid;
 		
 		succ = function(response){
+			response = JSON.stringify(response);
 			console.log(response);
 		};
 
 		fail = function(response){
+			response = JSON.stringify(response);
 			console.log(response);
 			feeds = Ext.getStore("Feeds");
 			store = { data: content };
@@ -76,6 +78,7 @@ var HEART = {
 		delete user.name;
 
 		callback=function(response){
+			response = JSON.stringify(response);
 			console.log(response);};
 		
 		HEART.request(url,auth,user,callback);
