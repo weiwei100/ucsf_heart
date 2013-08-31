@@ -1,8 +1,6 @@
 function initPNHandler(){
-    HEART.notify = "here2";
     pushNotification = window.plugins.pushNotification;
     pushNotification.onDeviceReady();
-    HEART.notify = "here";
     pushNotification.registerDevice(
         {alert:true, badge:true, sound:true, projectid: "535622621184", appid : "B7BBF-34717"},
                                     
@@ -11,6 +9,7 @@ function initPNHandler(){
             console.warn('registerDevice: ' + deviceToken);
             HEART.setItem('local', 'deviceToken', deviceToken);
             HEART.uuid = deviceToken;
+ 
         },
         function(status){                 
             HEART.notify = 'failed to register : ' + JSON.stringify(status);
@@ -59,8 +58,7 @@ function onResume(){
     HEART.toSensor(content);
 };
 
-function init(){
-	HEART.notify = "h1";
+function inita(){
 	//alert('hi world');
     document.addEventListener("deviceready", initPNHandler, true);
     
