@@ -93,8 +93,10 @@
                                        Ext.Viewport.getActiveItem().setActiveItem(2);
         Ext.Viewport.getActiveItem().getActiveItem().push(form);
         }else{
-                                HEART.show_on_load_title = title;
-                                HEART.show_on_load_type = type;
+                                if(type != "EMIMoments" && type != "EMIReflections"){
+                                    HEART.show_on_load_title = title;
+                                    HEART.show_on_load_type = type;
+                                }
         }
 
         content = {};
