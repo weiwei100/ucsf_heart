@@ -1,4 +1,7 @@
+*.xds
 build/android/bin
+/build/android/assets/www/audio
+/build/www/audio
 */lib
 */target
 */bin
@@ -20,3 +23,4 @@ Gemfile.lock
 gen/
 local.properties
 proguard/
+*/*sencha

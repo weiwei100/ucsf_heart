@@ -1,0 +1,406 @@
+.popup {
+	color: rgb(128,128,128); 
+	font-size: 18px !important;
+}
+
+.linkColor{
+	color: purple !important;
+}
+
+.huge-text {
+	text-shadow: 0 0 8px green;
+	font-size: 111px;
+	color: #333;
+}
+
+.homePanel {
+	background: url(images/home.png) no-repeat center bottom !important;
+ 	background-size: cover !important;
+}
+
+.exe-list {
+	background: url(images/yellow_sunset.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.exe-icon {
+	background: url(images/exe-icon.png) no-repeat center center  !important;
+ 	background-size: cover !important;
+}
+
+.setting {
+	background: url(images/snow.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.weekAhead {
+	background: url(images/snow.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.push-slider {
+	background: url(images/snow.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.x-form-fieldset-title {
+	text-shadow: none;
+	margin-top:0;
+	margin-left: 0;
+	font-size:  110% !important;
+	text-align: center;
+	line-height: 1.2em !important;
+}
+
+.x-subtitle{
+	font-size: 100% !important;
+}
+
+.x-form-label-font {
+	font-size: .8em;
+	color:#333;
+	padding: .6em 0;
+	text-shadow: rgba(255,255,255,0.25) 0 0.08em 0;
+	font-weight: bold;
+}
+
+.x-field-select .x-component-outer:before{
+	background-image: none;
+}
+
+.x-input-checkbox{
+	color: white;
+}
+
+.thefirst{padding-left: 0px; margin-left: -0.2em;}
+
+.x-form-label div{
+	margin-bottom: -2.5em;
+	padding: 0 20px;
+	color: #333 !important;
+}
+
+.x-form-label span{
+	font-weight: 550;
+}
+
+.x-form-label{
+	padding: 0.8em 0;
+	line-height: 1.0;
+}
+
+.x-label-tip{
+	margin-top: -2em;
+	margin-left: -1.2em
+}
+
+.x-label-desc{
+	margin: 1em 0;
+	color: #555;
+}
+
+.x-label{
+	font-size: .8em;
+	line-height: 1.0;
+}
+
+.with-margin{
+	margin: .5em 0;
+}
+
+.x-slider-field .x-component-outer {
+	padding: 0.6em 0;
+}
+
+.x-component-outer {
+	margin: 0.2em 0;
+}
+
+.x-input-el{
+	padding: 0 0.4em;
+}
+
+.x-button-label{
+	font-weight: normal;
+	padding: 0.1em 0;
+}
+
+.x-field-checkbox .x-field-input{
+	border: none;
+}
+
+.x-field-input{
+	border-radius: 4px;
+	border: 1px solid #eee;
+}
+
+.quote{
+	line-height: 1.3;
+	font-size: 120%;
+	margin: 0 -1em;
+	color: white;
+}
+
+.thankyou{
+	text-align:center;
+	font-weight:bold;
+	font-size:150%
+
+}
+
+.dailyLog {
+	background: url(images/water-drop.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.experience {
+	background: url(images/image5.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.feedback {
+	background: url(images/image8.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.bodyScan {
+	background: url(images/beach.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.breathLife {
+	background: url(images/beach.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.quotes {
+	background: url(images/sunrise.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.habit {
+	background: url(images/calm_water.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.moments {
+	background: url(images/water_with_fog.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.intention  {
+	background: url(images/water_with_fog.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.EMAType {
+	background: url(images/clouds2.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.EMIAudio {
+	background: url(images/clouds1.png) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+.EMIAudioA {
+    background: url(images/waterfall.png) no-repeat center center !important;
+ 	background-size: cover !important;
+
+}
+
+.EMIAudioB {
+    background: url(images/ocean.png) no-repeat center center !important;
+ 	background-size: cover !important;
+    
+}
+/* Background ended here */
+
+.x-form .x-scroll-container {
+	background: transparent !important;
+}
+
+.x-form-fieldset .x-field {
+	border-bottom: 0;
+}
+
+.x-form-fieldset .x-form-label {
+	border-top: 0;
+}
+
+.x-scroll-container {
+	background: transparent;
+}
+		
+.x-list {
+	background: transparent !important;
+	border: 0;	
+}
+
+.x-list-normal .x-list-item.x-list-item-tpl, .x-list-normal .x-list-item .x-dock-horizontal {
+	border: 0;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.x-list-normal .x-list-item.x-list-item-tpl.x-list-footer-wrap, .x-list-normal .x-list-item.x-list-footer-wrap .x-dock-horizontal {
+	border-bottom: 0;
+}
+.x-form-fieldset .x-form-fieldset-inner {
+	background: transparent;
+	border: 0;
+}
+
+.x-form {
+	background: transparent;
+}
+
+.x-form-label {
+	background: transparent;
+}
+
+.x-form-field {
+	background: transparent;
+}
+
+.x-field {
+	background: transparent;
+}
+
+.x-field-input {
+	background: transparent;
+}
+
+.x-field-select {
+	background: transparent;
+}
+
+.xhtml {
+	background: transparent;
+}
+
+.x-panel {
+	background: transparent;
+}
+
+.x-button {
+	display: block;
+  font-weight: normal;
+  padding: 8px 12px;
+  margin: 10px 0;
+
+  *margin-left: .3em;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+ 
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.x-button-pressing{
+	color: #333333;
+  	background-color: #e6e6e6;
+  	*background-color: #d9d9d9;
+}
+
+
+.x-scroll-indicator.rounded.x-scroll-indicator-y>* {
+	width: 0;
+}
+
+p {
+	padding: 5px 0;	
+}
+
+/*** CSS Pie Timer ****/
+
+* {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 333px;
+	height: 333px;
+	margin: 50px auto;
+	position: relative;
+	background: #F9F9F9;
+	box-shadow: 0 0 8px white;
+}
+
+.pie {
+	width: 50%;
+	height: 100%;
+	background: #08C;
+	position: absolute;
+	-webkit-transform-origin: 100% 50%;
+	border: 20px solid rgba(0, 0, 0, 0.4);
+}
+
+.spinner {
+	z-index: 200;
+	background: #08C;
+	border-right: none;
+	-webkit-animation: rota 20s linear;
+	-webkit-animation-fill-mode: forwards;
+	border-radius: 100% 0 0 100% / 50% 0 0 50%;
+}
+
+
+.filler {
+	left: 50%;
+	opacity: 0;
+	z-index: 100;
+	border-left: none;
+	border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+	-webkit-animation: fill 20s steps(1, end);
+	-webkit-animation-fill-mode: forwards;	
+}
+
+
+.mask {	
+	opacity: 1;
+	width: 50%;
+	height: 100%;
+	z-index: 300;
+	position: absolute;
+	background: inherit;
+	-webkit-animation: mask 20s steps(1, end);
+	-webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rota {
+	0%		{-webkit-transform: rotate(0deg);}
+	100%	{-webkit-transform: rotate(360deg);}
+}
+			
+@-webkit-keyframes fill {
+	0%	{opacity: 0;}
+	50%, 100% {opacity: 1;}
+}
+			
+@-webkit-keyframes mask{
+	0% {opacity: 1;}
+	50%, 100% {opacity: 0;}
+}

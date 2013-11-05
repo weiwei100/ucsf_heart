@@ -1,0 +1,669 @@
+Tucsf_heart_ios
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Info.plist ucsf_heart_ios/ucsf_heart_ios-Info.plist
+cPhaseScriptExecution "Copy www directory" /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Script-304B58A110DAC018002A0835.sh
+cCpResource ucsf_heart_ios/config.xml build/ucsf_heart_ios.app/config.xml
+cCpResource ucsf_heart_ios/Resources/icons/icon-72.png build/ucsf_heart_ios.app/icon-72.png
+cCpResource ucsf_heart_ios/Resources/icons/icon.png build/ucsf_heart_ios.app/icon.png
+cCpResource ucsf_heart_ios/Resources/icons/icon@2x.png build/ucsf_heart_ios.app/icon@2x.png
+cCpResource ucsf_heart_ios/Resources/Capture.bundle build/ucsf_heart_ios.app/Capture.bundle
+cCopyStringsFile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/en.lproj/Localizable.strings ucsf_heart_ios/Resources/en.lproj/Localizable.strings
+cCopyStringsFile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/es.lproj/Localizable.strings ucsf_heart_ios/Resources/es.lproj/Localizable.strings
+cCompileXIB /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.xib
+cCopyStringsFile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/de.lproj/Localizable.strings ucsf_heart_ios/Resources/de.lproj/Localizable.strings
+cCopyStringsFile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/se.lproj/Localizable.strings ucsf_heart_ios/Resources/se.lproj/Localizable.strings
+cCpResource ucsf_heart_ios/Resources/splash/Default-Landscape@2x~ipad.png build/ucsf_heart_ios.app/Default-Landscape@2x~ipad.png
+cCpResource ucsf_heart_ios/Resources/splash/Default-Landscape~ipad.png build/ucsf_heart_ios.app/Default-Landscape~ipad.png
+cCpResource ucsf_heart_ios/Resources/splash/Default-Portrait@2x~ipad.png build/ucsf_heart_ios.app/Default-Portrait@2x~ipad.png
+cCpResource ucsf_heart_ios/Resources/splash/Default-Portrait~ipad.png build/ucsf_heart_ios.app/Default-Portrait~ipad.png
+cCpResource ucsf_heart_ios/Resources/splash/Default@2x~iphone.png build/ucsf_heart_ios.app/Default@2x~iphone.png
+cCpResource ucsf_heart_ios/Resources/splash/Default~iphone.png build/ucsf_heart_ios.app/Default~iphone.png
+cCpResource ucsf_heart_ios/Resources/splash/Default-568h@2x~iphone.png build/ucsf_heart_ios.app/Default-568h@2x~iphone.png
+cProcessPCH /var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ucsf_heart_ios-Prefix-glxmpjslnwubchdqecdzrhuetgsb/ucsf_heart_ios-Prefix.pch.pth ucsf_heart_ios/ucsf_heart_ios-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/main.o /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/AppDelegate.o /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/MainViewController.o /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/ucsf_heart_ios normal i386
+cGenerateDSYMFile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app.dSYM /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/ucsf_heart_ios
+cTouch /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
+c000000005102E2D30000000000000110
+t1359143635
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c00000000511DC60D00000000001EB540
+t1360905741
+s2012480
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AddressBook.framework/AddressBook
+c00000000511DC60D00000000000C1030
+t1360905741
+s790576
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
+c00000000511DC60D0000000000193640
+t1360905741
+s1652288
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
+c00000000511DC60D00000000000226E0
+t1360905741
+s141024
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c00000000511DC60D00000000003D4DF0
+t1360905741
+s4017648
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c00000000511DC60E0000000000215DB0
+t1360905742
+s2186672
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000511DC60E0000000000228FE0
+t1360905742
+s2265056
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c00000000511DC60E000000000009C590
+t1360905742
+s640400
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+c00000000511DC60E0000000000085620
+t1360905742
+s546336
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000511DC61000000000003DDFA0
+t1360905744
+s4054944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/MediaPlayer.framework/MediaPlayer
+c00000000511DC61200000000002DBA50
+t1360905746
+s2996816
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c00000000511DC61300000000000BCC20
+t1360905747
+s773152
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c00000000511DC61300000000001D5750
+t1360905747
+s1922896
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c00000000511DC614000000000006CC50
+t1360905748
+s445520
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c00000000511DC6160000000000AB6230
+t1360905750
+s11231792
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include/Cordova/CDVAvailability.h
+c0000000051628CFA0000000000000AF8
+t1365413114
+s2808
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include/Cordova/CDVCommandDelegate.h
+c0000000051628CFA000000000000095D
+t1365413114
+s2397
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include/Cordova/CDVCommandDelegateImpl.h
+c0000000051628CFA0000000000000473
+t1365413114
+s1139
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include/Cordova/CDVCommandQueue.h
+c0000000051628CFA00000000000005AA
+t1365413114
+s1450
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include/Cordova/CDVInvokedUrlCommand.h
+c0000000051628CFA0000000000000907
+t1365413114
+s2311
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include/Cordova/CDVPlugin.h
+c0000000051628CFA00000000000008CC
+t1365413114
+s2252
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include/Cordova/CDVPluginResult.h
+c0000000051628CFA0000000000000A5D
+t1365413114
+s2653
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include/Cordova/CDVScreenOrientationDelegate.h
+c0000000051628CFA0000000000000408
+t1365413114
+s1032
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include/Cordova/CDVViewController.h
+c0000000051628CFA0000000000000B1D
+t1365413114
+s2845
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include/Cordova/CDVWhitelist.h
+c0000000051628CFA000000000000052D
+t1365413114
+s1325
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include/Cordova/NSMutableArray+QueueAdditions.h
+c0000000051628CFA00000000000003A0
+t1365413114
+s928
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/libCordova.a
+c0000000051628DB20000000000349350
+t1365413298
+s3445584
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app.dSYM
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Capture.bundle
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Default-568h@2x~iphone.png
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Default-Landscape@2x~ipad.png
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Default-Landscape~ipad.png
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Default-Portrait@2x~ipad.png
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Default-Portrait~ipad.png
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Default@2x~iphone.png
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Default~iphone.png
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Info.plist
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/MainViewController.nib
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/PkgInfo
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/config.xml
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/de.lproj/Localizable.strings
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/en.lproj/Localizable.strings
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/es.lproj/Localizable.strings
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/icon-72.png
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/icon.png
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/icon@2x.png
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/se.lproj/Localizable.strings
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/ucsf_heart_ios
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/AppDelegate.o
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/MainViewController.o
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/ucsf_heart_ios.LinkFileList
+c0000000051628DB200000000000001FE
+t1365413298
+s510
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Script-304B58A110DAC018002A0835.sh
+c0000000051628DB2000000000000042B
+t1365413298
+s1067
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/AppDelegate.h
+c0000000051628C2500000000000005C1
+t1365412901
+s1473
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/AppDelegate.m
+c0000000051628C250000000000001234
+t1365412901
+s4660
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.h
+c0000000051628C2500000000000004D4
+t1365412901
+s1236
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.m
+c0000000051628C25000000000000126F
+t1365412901
+s4719
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.xib
+c0000000051628C240000000000001759
+t1365412900
+s5977
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/Capture.bundle
+c0000000051628C25000000000000030E
+t1365412901
+s782
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/de.lproj/Localizable.strings
+c0000000051628C250000000000000485
+t1365412901
+s1157
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/en.lproj/Localizable.strings
+c0000000051628C250000000000000470
+t1365412901
+s1136
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/es.lproj/Localizable.strings
+c0000000051628C25000000000000047D
+t1365412901
+s1149
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/icons/icon-72.png
+c0000000051628C250000000000001350
+t1365412901
+s4944
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/icons/icon.png
+c0000000051628C250000000000000F3E
+t1365412901
+s3902
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/icons/icon@2x.png
+c0000000051628C250000000000001EBD
+t1365412901
+s7869
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/se.lproj/Localizable.strings
+c0000000051628C250000000000000471
+t1365412901
+s1137
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/splash/Default-568h@2x~iphone.png
+c0000000051628C2500000000000074F8
+t1365412901
+s29944
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/splash/Default-Landscape@2x~ipad.png
+c0000000051628C250000000000012735
+t1365412901
+s75573
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/splash/Default-Landscape~ipad.png
+c0000000051628C25000000000000817B
+t1365412901
+s33147
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/splash/Default-Portrait@2x~ipad.png
+c0000000051628C250000000000012171
+t1365412901
+s74097
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/splash/Default-Portrait~ipad.png
+c0000000051628C250000000000007F9A
+t1365412901
+s32666
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/splash/Default@2x~iphone.png
+c0000000051628C250000000000007323
+t1365412901
+s29475
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/splash/Default~iphone.png
+c0000000051628C25000000000000289A
+t1365412901
+s10394
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/config.xml
+c0000000051628C240000000000000B13
+t1365412900
+s2835
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/main.m
+c0000000051628C250000000000000460
+t1365412901
+s1120
+
+N/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/ucsf_heart_ios-Prefix.pch
+c0000000051628C2500000000000003CD
+t1365412901
+s973
+
+N/var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ucsf_heart_ios-Prefix-glxmpjslnwubchdqecdzrhuetgsb/ucsf_heart_ios-Prefix.pch.pth
+t2
+s0
+
+Nucsf_heart_ios/ucsf_heart_ios-Info.plist
+c0000000051628C2500000000000009CC
+t1365412901
+s2508
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesb055b632c512b741^4a9ab732c512b741^---0#1#0#--18"Check dependencies36"E91FBD41-A1A7-45B9-A789-FEE96C582D14-
+
+CCompileC build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/AppDelegate.o /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387106099.950436
+e387106100.049948
+r1
+xCompileC
+xbuild/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/AppDelegate.o
+x/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/AppDelegate.m:68:25: warning: 'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property. [-Wdeprecated-declarations]
+o    self.viewController.useSplashScreen = YES;
+o                        ^
+o/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include/Cordova/CDVViewController.h:47:47: note: 'useSplashScreen' declared here
+o@property (nonatomic, readwrite, assign) BOOL useSplashScreen CDV_DEPRECATED(2.5, "Add/Remove the SplashScreen plugin instead of setting this property.");
+o                                              ^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/AppDelegate.m508df333c512b741^26c80c34c512b741^-726"/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/AppDelegate.m:68:25: warning: 'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property. [-Wdeprecated-declarations]    self.viewController.useSplashScreen = YES;                        ^/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include/Cordova/CDVViewController.h:47:47: note: 'useSplashScreen' declared here@property (nonatomic, readwrite, assign) BOOL useSplashScreen CDV_DEPRECATED(2.5, "Add/Remove the SplashScreen plugin instead of setting this property.");                                              ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@128"'useSplashScreen' is deprecated: Deprecated in Cordova 2.5. Add/Remove the SplashScreen plugin instead of setting this property.-387106100#18446744073709551615#0#1(2@31"'useSplashScreen' declared here-387106100#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@120"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/CordovaLib/Classes/CDVViewController.h0000000000000000^46#46#46#46#1832#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@118"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/AppDelegate.m0000000000000000^67#24#67#24#2271#0#12"Deprecations--0#0#0#-19%DVTDocumentLocation4@118"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/AppDelegate.m0000000000000000^4232"CompileC build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/AppDelegate.o ucsf_heart_ios/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-generated-files.hmap -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-own-target-headers.hmap -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-all-target-headers.hmap -iquote /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-project-headers.hmap -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/usr/local/lib/include -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/UninstalledProducts/include -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/DerivedSources/i386 -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/DerivedSources -F/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build -include /var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ucsf_heart_ios-Prefix-glxmpjslnwubchdqecdzrhuetgsb/ucsf_heart_ios-Prefix.pch -MMD -MT dependencies -MF /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/AppDelegate.dia -c /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/AppDelegate.m -o /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/AppDelegate.o36"76D3C64D-50A2-47F1-8B20-175D0D27BC33-
+
+CCompileC build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/MainViewController.o /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387106099.950444
+e387106100.035474
+r1
+xCompileC
+xbuild/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/MainViewController.o
+x/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Compile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.m7e8ef333c512b741^ad150934c512b741^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.m0000000000000000^4274"CompileC build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/MainViewController.o ucsf_heart_ios/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-generated-files.hmap -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-own-target-headers.hmap -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-all-target-headers.hmap -iquote /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-project-headers.hmap -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/usr/local/lib/include -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/UninstalledProducts/include -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/DerivedSources/i386 -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/DerivedSources -F/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build -include /var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ucsf_heart_ios-Prefix-glxmpjslnwubchdqecdzrhuetgsb/ucsf_heart_ios-Prefix.pch -MMD -MT dependencies -MF /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/MainViewController.dia -c /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.m -o /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/MainViewController.o36"4F8BAB1D-EE20-45F7-8B6D-3318FBC5C19F-
+
+CCompileC build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/main.o /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387106099.949786
+e387106099.988324
+r1
+xCompileC
+xbuild/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/main.o
+x/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/main.m295cf333c512b741^5b28fd33c512b741^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/main.m0000000000000000^4174"CompileC build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/main.o ucsf_heart_ios/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-generated-files.hmap -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-own-target-headers.hmap -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-all-target-headers.hmap -iquote /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-project-headers.hmap -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/usr/local/lib/include -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/UninstalledProducts/include -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/DerivedSources/i386 -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/DerivedSources -F/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build -include /var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ucsf_heart_ios-Prefix-glxmpjslnwubchdqecdzrhuetgsb/ucsf_heart_ios-Prefix.pch -MMD -MT dependencies -MF /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/main.dia -c /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/main.m -o /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/main.o36"49AFB897-1E5C-447C-9D35-5ED7AC396339-
+
+CCompileXIB /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.xib
+s387106098.789392
+e387106099.540721
+r1
+xCompileXIB
+x/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.xib
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Compiling /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.xib3d45ca32c512b741^7a6d8a33c512b741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.xib0000000000000000^1282"CompileXIB ucsf_heart_ios/Classes/MainViewController.xib    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/MainViewController.nib /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Classes/MainViewController.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk36"D76CBDC8-CED8-494F-A340-B438B3501E65-
+
+CCopyStringsFile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/de.lproj/Localizable.strings ucsf_heart_ios/Resources/de.lproj/Localizable.strings
+s387106098.797588
+e387106098.829091
+r1
+xCopyStringsFile
+x/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/de.lproj/Localizable.strings
+xucsf_heart_ios/Resources/de.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy ucsf_heart_ios/Resources/de.lproj/Localizable.strings9356cc32c512b741^594cd432c512b741^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/de.lproj/Localizable.strings0000000000000000^926"CopyStringsFile build/ucsf_heart_ios.app/de.lproj/Localizable.strings ucsf_heart_ios/Resources/de.lproj/Localizable.strings    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/de.lproj -- ucsf_heart_ios/Resources/de.lproj/Localizable.strings36"4D268A9C-2748-4093-9582-809A73884D1D-
+
+CCopyStringsFile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/en.lproj/Localizable.strings ucsf_heart_ios/Resources/en.lproj/Localizable.strings
+s387106098.782707
+e387106098.827638
+r1
+xCopyStringsFile
+x/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/en.lproj/Localizable.strings
+xucsf_heart_ios/Resources/en.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy ucsf_heart_ios/Resources/en.lproj/Localizable.stringsa697c832c512b741^59e0d332c512b741^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/en.lproj/Localizable.strings0000000000000000^926"CopyStringsFile build/ucsf_heart_ios.app/en.lproj/Localizable.strings ucsf_heart_ios/Resources/en.lproj/Localizable.strings    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/en.lproj -- ucsf_heart_ios/Resources/en.lproj/Localizable.strings36"B3AC1EB4-469B-4DB8-8680-46940E96876C-
+
+CCopyStringsFile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/es.lproj/Localizable.strings ucsf_heart_ios/Resources/es.lproj/Localizable.strings
+s387106098.785486
+e387106098.828294
+r1
+xCopyStringsFile
+x/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/es.lproj/Localizable.strings
+xucsf_heart_ios/Resources/es.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy ucsf_heart_ios/Resources/es.lproj/Localizable.stringsf73ec932c512b741^d00ad432c512b741^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/es.lproj/Localizable.strings0000000000000000^926"CopyStringsFile build/ucsf_heart_ios.app/es.lproj/Localizable.strings ucsf_heart_ios/Resources/es.lproj/Localizable.strings    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/es.lproj -- ucsf_heart_ios/Resources/es.lproj/Localizable.strings36"C55A872E-E50E-4094-958E-DFCF86E817EA-
+
+CCopyStringsFile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/se.lproj/Localizable.strings ucsf_heart_ios/Resources/se.lproj/Localizable.strings
+s387106098.829553
+e387106098.833812
+r1
+xCopyStringsFile
+x/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/se.lproj/Localizable.strings
+xucsf_heart_ios/Resources/se.lproj/Localizable.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy ucsf_heart_ios/Resources/se.lproj/Localizable.stringsb684d432c512b741^8274d532c512b741^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/se.lproj/Localizable.strings0000000000000000^926"CopyStringsFile build/ucsf_heart_ios.app/se.lproj/Localizable.strings ucsf_heart_ios/Resources/se.lproj/Localizable.strings    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/se.lproj -- ucsf_heart_ios/Resources/se.lproj/Localizable.strings36"BEBEA32D-F34B-4002-97CD-9E8276BD2FC5-
+
+CCpResource ucsf_heart_ios/Resources/Capture.bundle build/ucsf_heart_ios.app/Capture.bundle
+s387106098.782694
+e387106098.796100
+r1
+xCpResource
+xucsf_heart_ios/Resources/Capture.bundle
+xbuild/ucsf_heart_ios.app/Capture.bundle
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Copy build/ucsf_heart_ios.app/Capture.bundle8c82c832c512b741^64cecb32c512b741^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Capture.bundle000000000080d041^955"CpResource ucsf_heart_ios/Resources/Capture.bundle build/ucsf_heart_ios.app/Capture.bundle    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/Capture.bundle /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app36"DC4DC275-45CD-4DC2-A96D-A47766718B6A-
+
+CCpResource ucsf_heart_ios/Resources/icons/icon-72.png build/ucsf_heart_ios.app/icon-72.png
+s387106098.778493
+e387106098.782159
+r1
+xCpResource
+xucsf_heart_ios/Resources/icons/icon-72.png
+xbuild/ucsf_heart_ios.app/icon-72.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy build/ucsf_heart_ios.app/icon-72.png1f66c732c512b741^b43bc832c512b741^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/icon-72.png000000000080d041^958"CpResource ucsf_heart_ios/Resources/icons/icon-72.png build/ucsf_heart_ios.app/icon-72.png    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/icons/icon-72.png /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app36"032D6E16-0E8F-4C0A-A1AC-531640BB8A4B-
+
+CCpResource ucsf_heart_ios/Resources/icons/icon.png build/ucsf_heart_ios.app/icon.png
+s387106098.779039
+e387106098.783587
+r1
+xCpResource
+xucsf_heart_ios/Resources/icons/icon.png
+xbuild/ucsf_heart_ios.app/icon.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Copy build/ucsf_heart_ios.app/icon.png3388c732c512b741^01a2c832c512b741^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/icon.png000000000080d041^949"CpResource ucsf_heart_ios/Resources/icons/icon.png build/ucsf_heart_ios.app/icon.png    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/icons/icon.png /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app36"5A6980B4-F759-4987-BF49-7AB3CC061844-
+
+CCpResource ucsf_heart_ios/Resources/icons/icon@2x.png build/ucsf_heart_ios.app/icon@2x.png
+s387106098.779161
+e387106098.786495
+r1
+xCpResource
+xucsf_heart_ios/Resources/icons/icon@2x.png
+xbuild/ucsf_heart_ios.app/icon@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy build/ucsf_heart_ios.app/icon@2x.png3a96c732c512b741^666bc932c512b741^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/icon@2x.png000000000080d041^964"CpResource "ucsf_heart_ios/Resources/icons/icon@2x.png" "build/ucsf_heart_ios.app/icon@2x.png"    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/icons/icon@2x.png" /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app36"76E7EDCD-5EC2-4AFD-B752-9DA384EC8E49-
+
+CCpResource ucsf_heart_ios/Resources/splash/Default-568h@2x~iphone.png build/ucsf_heart_ios.app/Default-568h@2x~iphone.png
+s387106098.845492
+e387106098.850850
+r1
+xCpResource
+xucsf_heart_ios/Resources/splash/Default-568h@2x~iphone.png
+xbuild/ucsf_heart_ios.app/Default-568h@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy build/ucsf_heart_ios.app/Default-568h@2x~iphone.png2592d832c512b741^b3d1d932c512b741^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Default-568h@2x~iphone.png000000000080d041^1011"CpResource "ucsf_heart_ios/Resources/splash/Default-568h@2x~iphone.png" "build/ucsf_heart_ios.app/Default-568h@2x~iphone.png"    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/splash/Default-568h@2x~iphone.png" /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app36"B4A57BC6-575C-4B09-A342-49DDEE6D0E1C-
+
+CCpResource ucsf_heart_ios/Resources/splash/Default-Landscape@2x~ipad.png build/ucsf_heart_ios.app/Default-Landscape@2x~ipad.png
+s387106098.830625
+e387106098.834688
+r1
+xCpResource
+xucsf_heart_ios/Resources/splash/Default-Landscape@2x~ipad.png
+xbuild/ucsf_heart_ios.app/Default-Landscape@2x~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Copy build/ucsf_heart_ios.app/Default-Landscape@2x~ipad.pngb5c6d432c512b741^edbcd532c512b741^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Default-Landscape@2x~ipad.png000000000080d041^1020"CpResource "ucsf_heart_ios/Resources/splash/Default-Landscape@2x~ipad.png" "build/ucsf_heart_ios.app/Default-Landscape@2x~ipad.png"    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/splash/Default-Landscape@2x~ipad.png" /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app36"93EA9CAA-1E29-4F9E-943A-74CBC6D86AC2-
+
+CCpResource ucsf_heart_ios/Resources/splash/Default-Landscape~ipad.png build/ucsf_heart_ios.app/Default-Landscape~ipad.png
+s387106098.831511
+e387106098.843139
+r1
+xCpResource
+xucsf_heart_ios/Resources/splash/Default-Landscape~ipad.png
+xbuild/ucsf_heart_ios.app/Default-Landscape~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy build/ucsf_heart_ios.app/Default-Landscape~ipad.png32ffd432c512b741^fc17d832c512b741^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Default-Landscape~ipad.png000000000080d041^1011"CpResource "ucsf_heart_ios/Resources/splash/Default-Landscape~ipad.png" "build/ucsf_heart_ios.app/Default-Landscape~ipad.png"    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/splash/Default-Landscape~ipad.png" /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app36"E03BE140-9829-436B-BFFC-A0CA684F5230-
+
+CCpResource ucsf_heart_ios/Resources/splash/Default-Portrait@2x~ipad.png build/ucsf_heart_ios.app/Default-Portrait@2x~ipad.png
+s387106098.835384
+e387106098.843662
+r1
+xCpResource
+xucsf_heart_ios/Resources/splash/Default-Portrait@2x~ipad.png
+xbuild/ucsf_heart_ios.app/Default-Portrait@2x~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy build/ucsf_heart_ios.app/Default-Portrait@2x~ipad.png5801d632c512b741^ac1ed832c512b741^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Default-Portrait@2x~ipad.png000000000080d041^1017"CpResource "ucsf_heart_ios/Resources/splash/Default-Portrait@2x~ipad.png" "build/ucsf_heart_ios.app/Default-Portrait@2x~ipad.png"    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/splash/Default-Portrait@2x~ipad.png" /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app36"693E4146-A0BD-4B77-A138-4C68DF8CE840-
+
+CCpResource ucsf_heart_ios/Resources/splash/Default-Portrait~ipad.png build/ucsf_heart_ios.app/Default-Portrait~ipad.png
+s387106098.836544
+e387106098.843906
+r1
+xCpResource
+xucsf_heart_ios/Resources/splash/Default-Portrait~ipad.png
+xbuild/ucsf_heart_ios.app/Default-Portrait~ipad.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy build/ucsf_heart_ios.app/Default-Portrait~ipad.png384ed632c512b741^e125d832c512b741^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Default-Portrait~ipad.png000000000080d041^1008"CpResource "ucsf_heart_ios/Resources/splash/Default-Portrait~ipad.png" "build/ucsf_heart_ios.app/Default-Portrait~ipad.png"    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/splash/Default-Portrait~ipad.png" /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app36"81C3FB95-80A8-4E1C-AAFE-9236B6A3F7EB-
+
+CCpResource ucsf_heart_ios/Resources/splash/Default@2x~iphone.png build/ucsf_heart_ios.app/Default@2x~iphone.png
+s387106098.845241
+e387106098.848972
+r1
+xCpResource
+xucsf_heart_ios/Resources/splash/Default@2x~iphone.png
+xbuild/ucsf_heart_ios.app/Default@2x~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/ucsf_heart_ios.app/Default@2x~iphone.pngba87d832c512b741^2a56d932c512b741^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Default@2x~iphone.png000000000080d041^996"CpResource "ucsf_heart_ios/Resources/splash/Default@2x~iphone.png" "build/ucsf_heart_ios.app/Default@2x~iphone.png"    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/splash/Default@2x~iphone.png" /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app36"81A0AAC7-600F-4425-99CE-4BEEA4B5A0B9-
+
+CCpResource ucsf_heart_ios/Resources/splash/Default~iphone.png build/ucsf_heart_ios.app/Default~iphone.png
+s387106098.845264
+e387106098.849366
+r1
+xCpResource
+xucsf_heart_ios/Resources/splash/Default~iphone.png
+xbuild/ucsf_heart_ios.app/Default~iphone.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy build/ucsf_heart_ios.app/Default~iphone.pnga987d832c512b741^c570d932c512b741^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Default~iphone.png000000000080d041^987"CpResource "ucsf_heart_ios/Resources/splash/Default~iphone.png" "build/ucsf_heart_ios.app/Default~iphone.png"    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/Resources/splash/Default~iphone.png" /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app36"C68B79D3-925E-4436-80E8-0AD25D860398-
+
+CCpResource ucsf_heart_ios/config.xml build/ucsf_heart_ios.app/config.xml
+s387106098.778488
+e387106098.781544
+r1
+xCpResource
+xucsf_heart_ios/config.xml
+xbuild/ucsf_heart_ios.app/config.xml
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/ucsf_heart_ios.app/config.xml906bc732c512b741^2313c832c512b741^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/config.xml000000000080d041^923"CpResource ucsf_heart_ios/config.xml build/ucsf_heart_ios.app/config.xml    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/config.xml /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app36"68153C70-1143-400A-80A3-B9E24F534F57-
+
+CGenerateDSYMFile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app.dSYM /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/ucsf_heart_ios
+s387106100.196904
+e387106100.338873
+r1
+xGenerateDSYMFile
+x/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app.dSYM
+x/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/ucsf_heart_ios
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Generate /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app.dSYMd3833234c512b741^40c05634c512b741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app.dSYM000000000080d041^947"GenerateDSYMFile build/ucsf_heart_ios.app.dSYM build/ucsf_heart_ios.app/ucsf_heart_ios    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/ucsf_heart_ios -o /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app.dSYM36"65F01528-5276-4ABB-B7F8-751FB2523EBE-
+
+CLd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/ucsf_heart_ios normal i386
+s387106100.057060
+e387106100.189159
+r1
+xLd
+x/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/ucsf_heart_ios
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Link /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/ucsf_heart_iosffce0e34c512b741^ef6f3034c512b741^---0#0#0#--2051"Ld build/ucsf_heart_ios.app/ucsf_heart_ios normal i386    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build -F/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build -filelist /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/ucsf_heart_ios.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=5.0 -framework AssetsLibrary /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/libCordova.a -framework Foundation -weak_framework UIKit -framework CoreGraphics -framework AddressBook -framework AddressBookUI -framework AudioToolbox -weak_framework AVFoundation -framework CFNetwork -framework CoreLocation -framework MediaPlayer -framework QuartzCore -framework SystemConfiguration -framework MobileCoreServices -weak_framework CoreMedia -o /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/ucsf_heart_ios36"C84FCBBC-AF15-4E6F-8AB5-AA7DF68B3904-
+
+CPhaseScriptExecution "Copy www directory" /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Script-304B58A110DAC018002A0835.sh
+s387106098.737468
+e387106098.769209
+r1
+xPhaseScriptExecution
+xCopy www directory
+x/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Script-304B58A110DAC018002A0835.sh
+o
+oreal	0m0.012s
+ouser	0m0.004s
+osys	0m0.008s
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'86a9bd32c512b741^3f1bc532c512b741^-42"real	0m0.012suser	0m0.004ssys	0m0.008s3(21%IDEActivityLogMessage2@14"real	0m0.012s-387106098#1#14#-0#-----2@14"user	0m0.004s-387106098#15#14#-0#-----2@13"sys	0m0.008s-387106098#29#13#-0#-----0#0#0#--22145"PhaseScriptExecution "Copy www directory" build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Script-304B58A110DAC018002A0835.sh    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER jpalley    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_UNIVERSAL_IPHONE_OS i386    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build    setenv BUILD_ROOT /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build    setenv CACHE_ROOT /var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ENABLE_OBJC_ARC NO    setenv CLANG_WARN_CONSTANT_CONVERSION YES    setenv CLANG_WARN_ENUM_CONVERSION YES    setenv CLANG_WARN_INT_CONVERSION YES    setenv CLANG_WARN__DUPLICATE_METHOD_MATCH YES    setenv CLASS_FILE_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build    setenv CONFIGURATION_TEMP_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator    setenv CONTENTS_FOLDER_PATH ucsf_heart_ios.app    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Applications/Xcode.app/Contents/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH ucsf_heart_ios.app/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/ucsf_heart_ios.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME ucsf_heart_ios.app.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH ucsf_heart_ios.app/Executables    setenv EXECUTABLE_FOLDER_PATH ucsf_heart_ios.app    setenv EXECUTABLE_NAME ucsf_heart_ios    setenv EXECUTABLE_PATH ucsf_heart_ios.app/ucsf_heart_ios    setenv FILE_LIST /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH ucsf_heart_ios.app/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME ucsf_heart_ios.app    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OBJC_LEGACY_DISPATCH YES    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER ucsf_heart_ios/ucsf_heart_ios-Prefix.pch    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES    setenv GCC_THUMB_SUPPORT NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvm_clang_1_0    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNINITIALIZED_AUTOS YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include\" \"/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/usr/local/lib/include\" \"/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/UninstalledProducts/include\" \"/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE ucsf_heart_ios/ucsf_heart_ios-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH ucsf_heart_ios.app/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH ucsf_heart_ios.app/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/ucsf_heart_ios.dst/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER jpalley    setenv INSTALL_PATH /Applications    setenv INSTALL_ROOT /tmp/ucsf_heart_ios.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH ucsf_heart_ios.app/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-LinkMap-normal-i386.txt    setenv LD_NO_PIE NO    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal/i386/ucsf_heart_ios.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH ucsf_heart_ios.app/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 11E53    setenv MAC_OS_X_VERSION_ACTUAL 1074    setenv MAC_OS_X_VERSION_MAJOR 1070    setenv MAC_OS_X_VERSION_MINOR 0704    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJC_ABI_VERSION 2    setenv OBJECT_FILE_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Objects-normal    setenv OBJROOT /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS "-weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -all_load -Obj-C"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH ucsf_heart_ios.app/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/PkgInfo    setenv PKGINFO_PATH ucsf_heart_ios.app/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform    setenv PLATFORM_NAME iphonesimulator    setenv PLATFORM_PREFERRED_ARCH i386    setenv PLATFORM_PRODUCT_BUILD_VERSION 10B141    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 60100    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH ucsf_heart_ios.app/PlugIns    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH ucsf_heart_ios.app/PrivateHeaders    setenv PRODUCT_NAME ucsf_heart_ios    setenv PRODUCT_SETTINGS_PATH /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/ucsf_heart_ios-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT ucsf_heart_ios    setenv PROJECT_DERIVED_FILE_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/DerivedSources    setenv PROJECT_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PROJECT_FILE_PATH /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios.xcodeproj    setenv PROJECT_NAME ucsf_heart_ios    setenv PROJECT_TEMP_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build    setenv PROJECT_TEMP_ROOT /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build    setenv PUBLIC_HEADERS_FOLDER_PATH ucsf_heart_ios.app/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH ucsf_heart_ios.app/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk    setenv SDK_NAME iphonesimulator6.1    setenv SDK_PRODUCT_BUILD_VERSION 10B141    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH ucsf_heart_ios.app/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH ucsf_heart_ios.app/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv SRCROOT /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"    setenv SYMROOT /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1,2    setenv TARGETNAME ucsf_heart_ios    setenv TARGET_BUILD_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build    setenv TARGET_NAME ucsf_heart_ios    setenv TARGET_TEMP_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build    setenv TEMP_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build    setenv TEMP_FILES_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build    setenv TEMP_FILE_DIR /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build    setenv TEMP_ROOT /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build    setenv TEST_AFTER_BUILD NO    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH ucsf_heart_ios.app    setenv UNSTRIPPED_PRODUCT NO    setenv USER jpalley    setenv USER_APPS_DIR /Users/jpalley/Applications    setenv USER_LIBRARY_DIR /Users/jpalley/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS i386    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH ucsf_heart_ios.app/version.plist    setenv VERSION_INFO_BUILDER jpalley    setenv VERSION_INFO_FILE ucsf_heart_ios_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:ucsf_heart_ios  PROJECT:ucsf_heart_ios-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME ucsf_heart_ios.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4H127    setenv XCODE_VERSION_ACTUAL 0460    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0460    setenv YACC yacc    /bin/sh -c /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/Script-304B58A110DAC018002A0835.sh36"A5AD125F-F0E9-43C8-BFAD-EB62974A7AC5-
+
+CProcessInfoPlistFile /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Info.plist ucsf_heart_ios/ucsf_heart_ios-Info.plist
+s387106098.723709
+e387106098.728546
+r1
+xProcessInfoPlistFile
+x/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Info.plist
+xucsf_heart_ios/ucsf_heart_ios-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Process ucsf_heart_ios/ucsf_heart_ios-Info.plistf964b932c512b741^0e82ba32c512b741^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/ucsf_heart_ios-Info.plist0000000000000000^1001"ProcessInfoPlistFile build/ucsf_heart_ios.app/Info.plist ucsf_heart_ios/ucsf_heart_ios-Info.plist    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    builtin-infoPlistUtility ucsf_heart_ios/ucsf_heart_ios-Info.plist -genpkginfo /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app/Info.plist36"BBA23CC3-72D4-499A-BF8E-C7797056C23A-
+
+CProcessPCH /var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ucsf_heart_ios-Prefix-glxmpjslnwubchdqecdzrhuetgsb/ucsf_heart_ios-Prefix.pch.pth ucsf_heart_ios/ucsf_heart_ios-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s387106099.549414
+e387106099.942949
+r1
+xProcessPCH
+x/var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ucsf_heart_ios-Prefix-glxmpjslnwubchdqecdzrhuetgsb/ucsf_heart_ios-Prefix.pch.pth
+xucsf_heart_ios/ucsf_heart_ios-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Precompile ucsf_heart_ios/ucsf_heart_ios-Prefix.pchcae08c33c512b741^3d65f133c512b741^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/ucsf_heart_ios-Prefix.pch0000000000000000^4151"ProcessPCH /var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ucsf_heart_ios-Prefix-glxmpjslnwubchdqecdzrhuetgsb/ucsf_heart_ios-Prefix.pch.pth ucsf_heart_ios/ucsf_heart_ios-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-generated-files.hmap -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-own-target-headers.hmap -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-all-target-headers.hmap -iquote /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/ucsf_heart_ios-project-headers.hmap -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/include -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/usr/local/lib/include -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/UninstalledProducts/include -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/DerivedSources/i386 -I/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.build/Debug-iphonesimulator/ucsf_heart_ios.build/DerivedSources -F/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build --serialize-diagnostics /var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ucsf_heart_ios-Prefix-glxmpjslnwubchdqecdzrhuetgsb/ucsf_heart_ios-Prefix.pch.dia -c /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/ucsf_heart_ios/ucsf_heart_ios-Prefix.pch -o /var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ucsf_heart_ios-Prefix-glxmpjslnwubchdqecdzrhuetgsb/ucsf_heart_ios-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/pv/mzh8kkhd32bd_tmrym5720040000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/ucsf_heart_ios-Prefix-glxmpjslnwubchdqecdzrhuetgsb/ucsf_heart_ios-Prefix.pch.d36"0BCFBCDF-7A53-4046-BAC6-B311A919E0EA-
+
+CTouch /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app
+s387106100.348020
+e387106100.354355
+r1
+xTouch
+x/Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Touch /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app03405934c512b741^28b65a34c512b741^---0#0#0#--699"Touch build/ucsf_heart_ios.app    cd /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin/Sencha/Cmd/3.0.2.288:/usr/local/bin:/usr/local/share/python:/opt/local/bin:/opt/local/sbin:/Users/jpalley/.rbenv/shims:/Users/jpalley/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/usr/local/Qt4.6/bin:/opt/msp430-gcc-4.4.5/bin"    /usr/bin/touch -c /Users/jpalley/Documents/projects/breathwear/ucsf_heart/build/ios/build/ucsf_heart_ios.app36"D8149C0B-623B-46D5-96F7-2B9268FD2D49-
+
