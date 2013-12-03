@@ -38,7 +38,7 @@ public class HEART extends DroidGap
         // Set by <content src="index.html" /> in config.xml
 
         //initialize the push manager, pushwoosh app ID and GCM sender ID(project num)
-        PushManager pushManager = new PushManager(this, /*"F86CD-A3DC5"*/"B7BBF-34717", "535622621184");
+        PushManager pushManager = new PushManager(this, /*"F86CD-A3DC5"*/"AD5F7-8926E", "535622621184");
         pushManager.onStartup(this);
         checkMessage(getIntent());
 
