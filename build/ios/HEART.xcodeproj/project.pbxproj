@@ -164,8 +164,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -413,6 +413,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 8J9FTQXVQ2;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HEART" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -578,8 +583,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Lei Guo (QY38G8D6CJ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lei Guo (QY38G8D6CJ)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Spire Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Spire Inc.";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -590,8 +595,8 @@
 				INFOPLIST_FILE = "ucsf_heart_ios/HEART-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = HEART;
-				PROVISIONING_PROFILE = "FE775DA2-D22E-4D4A-AEAF-B152C645BA77";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FE775DA2-D22E-4D4A-AEAF-B152C645BA77";
+				PROVISIONING_PROFILE = "E727C46F-148A-4BB9-B40E-26EA2E556DBE";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E727C46F-148A-4BB9-B40E-26EA2E556DBE";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -601,8 +606,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Improv Technology (T2P3VC5L8H)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Improv Technology (T2P3VC5L8H)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Spire Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Spire Inc.";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ucsf_heart_ios/HEART-Prefix.pch";
@@ -611,8 +616,8 @@
 				INFOPLIST_FILE = "ucsf_heart_ios/HEART-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = HEART;
-				PROVISIONING_PROFILE = "CCCA64AC-E80B-45B3-ACB6-50B7AF48B9FE";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CCCA64AC-E80B-45B3-ACB6-50B7AF48B9FE";
+				PROVISIONING_PROFILE = "E727C46F-148A-4BB9-B40E-26EA2E556DBE";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E727C46F-148A-4BB9-B40E-26EA2E556DBE";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
