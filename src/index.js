@@ -59,7 +59,7 @@ function onResume(){
 };
 
 function inita(){
-	//alert('hi world');
+	alert('hi world');
     document.addEventListener("deviceready", initPNHandler, true);
     
     document.addEventListener("resume",onResume, false);
