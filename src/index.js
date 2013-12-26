@@ -2,7 +2,7 @@ function initPNHandler(){
     pushNotification = window.plugins.pushNotification;
     pushNotification.onDeviceReady();
     pushNotification.registerDevice(
-        {alert:true, badge:true, sound:true, projectid: "535622621184", appid : "AD5F7-8926E"},
+        {alert:true, badge:true, sound:true, projectid: "535622621184", appid : "B7BBF-34717"/*"AD5F7-8926E"*/},
                                     
         function(status){
             var deviceToken = status;
@@ -59,7 +59,6 @@ function onResume(){
 };
 
 function inita(){
-	alert('hi world');
     document.addEventListener("deviceready", initPNHandler, true);
     
     document.addEventListener("resume",onResume, false);
