@@ -46,7 +46,9 @@ Ext.application({
 		'EMIWkAheadSet',
 		'IntentionRemind',
 		'IntentionConnect',
-		'QUOTES'
+		'QUOTES',
+		'Presented',
+		'Customized'
 	],
 	controllers: [
 		'EMXController',

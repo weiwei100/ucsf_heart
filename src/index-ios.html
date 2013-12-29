@@ -19,84 +19,84 @@
 -->
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>UCSF_HEART</title>
- <script src="cordova-2.5.0.ios.js"></script>
-	<script src="sencha-touch-all.js"></script>
-	<link rel="stylesheet" href="sencha-touch.css">
-        <link rel="stylesheet" href="heart-beautify.css">
-               <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>UCSF_HEART</title>
+  <script src="cordova-2.5.0.ios.js"></script>
+  <script src="sencha-touch-all.js"></script>
+  <link rel="stylesheet" href="sencha-touch.css">
+  <link rel="stylesheet" href="heart-beautify.css">
+  <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script> 
 
-	<script src="base64-toolkit.js?_dc=1365423064658"></script>
-    <script type="text/javascript" src="heart-manager.js"></script>
-     
-	<!--<script type="text/javascript" src="index.js"></script>-->
-	<script type="text/javascript" src="app.js"></script>
- 
-	<script type="text/javascript">
-		if (!Ext.browser.is.WebKit) {
-			alert("The current browser is unsupported.\n\nSupported browsers:\n" +
-				"Google Chrome\n" +
-				"Apple Safari\n" +
-				"Mobile Safari (iOS)\n" +
-				"Android Browser\n" +
-				"BlackBerry Browser"
-			);
-		}
-	</script>
+  <script type="text/javascript" src="app.js"></script>
+  <script src="base64-toolkit.js?_dc=1365423064658"></script>
+  <script type="text/javascript" src="heart-manager.js"></script>
+
+  <script type="text/javascript">
+  	if (!Ext.browser.is.WebKit) {
+  		alert("The current browser is unsupported.\n\nSupported browsers:\n" +
+  			"Google Chrome\n" +
+  			"Apple Safari\n" +
+  			"Mobile Safari (iOS)\n" +
+  			"Android Browser\n" +
+  			"BlackBerry Browser"
+  		);
+  	}
+  </script>
             
   <script>
 
-    function initApp(){
-    
-      //  HEART.notify = "test6";
-       
-        pushNotification = window.plugins.pushNotification;
+    function initApp() {
+
+      pushNotification = window.plugins.pushNotification;
       pushNotification.onDeviceReady();
    
       pushNotification.registerDevice(
-                                      {alert:true, badge:true, sound:true, pw_appid: "AD5F7-8926E", appname: "UCSF HEART"},
+          
+          {alert:true, badge:true, sound:true, pw_appid: "AD5F7-8926E", appname: "UCSF HEART"},
                                     
           function(status){
               var deviceToken = status['deviceToken'];
-             // console.warn('registerDevice: ' + deviceToken);
-           // HEART.notify = "test5";
+              console.warn('registerDevice: ' + deviceToken);
               HEART.setItem('local', 'deviceToken', deviceToken);
               HEART.uuid = deviceToken;
           },
+
           function(status){
              HEART.notify = "Failed to register: " + JSON.stringify(status);
-            //  console.warn('failed to register : ' + JSON.stringify(status));
+             console.warn('failed to register : ' + JSON.stringify(status));
           }
      
       );
 
-      document.addEventListener('push-notification', function(event){
+      document.addEventListener('push-notification', function(event) {
    
-          var title = event.notification.aps.alert;
-                                //HEART.notify = "obj:" + JSON.stringify(event.notification);
+        var title = event.notification.aps.alert;
+        //HEART.notify = "obj:" + JSON.stringify(event.notification);
 
         var type = event.notification.u.type;
         
-   
         if(Ext.Viewport.getActiveItem()){
 
             form = Ext.create('HEART.view.' + type);
             form.goola = 'pushwoosh';
             form.emxType = type;
      
-        if(type=='QUOTES'){
-          title=title.substring(0,20);
-          HEART.setItem('session', 'wrapped', title);
-        }
- 
-                                       Ext.Viewport.getActiveItem().setActiveItem(2);
-        Ext.Viewport.getActiveItem().getActiveItem().push(form);
-        }else{
-                                if(type != "EMIMoments" && type != "EMIReflections"){
-                                    HEART.show_on_load_title = title;
-                                    HEART.show_on_load_type = type;
-                                }
+          if(type=='QUOTES'){
+
+            title=title.substring(0,title.length-3);
+            HEART.setItem('session', 'wrapped', title);
+          }
+
+          Ext.Viewport.getActiveItem().setActiveItem(3);
+          Ext.Viewport.getActiveItem().getActiveItem().push(form);
+
+        } else {
+            
+            if(type != "EMIMoments" && type != "EMIReflections"){
+
+                HEART.show_on_load_title = title;
+                HEART.show_on_load_type = type;
+            }
         }
 
         content = {};
@@ -108,7 +108,6 @@
       });
 
       HEART.uuid = HEART.getItem('local', 'deviceToken');
-      HEART.audioRoot = 'audio/';
 
     };
 
@@ -125,16 +124,18 @@
       content.action = 'heart-resumed';
       HEART.toSensor(content);
     };
+  
+    function boot(){
+
+      document.addEventListener("deviceready", initApp, true);
+          
+      document.addEventListener("resume", onResume, true);
+      document.addEventListener("pause", onPause, true);
+
+      HEART.setItem('local', 'audioRoot', 'audio/');
+    }
 
   </script>
 </head>
-<body onload=""></body>
-    <script>
-
-        document.addEventListener("deviceready", initApp, true);
-        
-        document.addEventListener("resume", onResume, true);
-        document.addEventListener("pause", onPause, true);
-        
-    </script>
+<body onload="boot();"></body>
 </html>

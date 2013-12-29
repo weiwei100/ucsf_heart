@@ -109,7 +109,7 @@ Ext.define('HEART.view.MainTabs', {
 											content = {};
 											content.type = 'popup';
 											content.title = 'meditation-foward';
-											component.parent.parent.setActiveItem(2);
+											component.parent.parent.setActiveItem(3);
 										}
 									});
 								},
@@ -126,8 +126,17 @@ Ext.define('HEART.view.MainTabs', {
 			},
 			{
 				xtype: 'navigationview',
+				title: 'I\'m Present',
+				iconCls: 'user present-color',
+				id: 'presented',
+				//layout: { type: 'vbox'},
+				//scrollable: 'vertical',
+				items: []
+			},
+			{
+				xtype: 'navigationview',
 				title: 'I\'m stressed!',
-				iconCls: 'user',
+				iconCls: 'user stressed-color', 
 				id: 'stressed'
 			},
 			{
@@ -408,7 +417,7 @@ Ext.define('HEART.view.MainTabs', {
 
 	initialize: function() {
 		this.callParent();
-
+		
 		nav = this.child('#settingn');
 		settings = nav.child('#settings');
 		buttons = settings.child('#buttons');

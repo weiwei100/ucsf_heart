@@ -54,19 +54,9 @@ Ext.define('HEART.store.EMXs', {
 				category: 'C. LONGER-MEDITATIONS (AUDIO)'
 			},
 			{
-				title: 'My Daily Log',
-				type: 'DAILYLOG',
-				category: 'D. DASHBOARD'
-			},
-			{
-				title: 'My Experiences',
-				type: 'Experience',
-				category: 'D. DASHBOARD'
-			},
-			{
-				title: 'My Activity Summary',
-				type: 'FEEDBACK',
-				category: 'D. DASHBOARD'
+				title: 'Meditation Timer',
+				type: 'Customized',
+				category: 'D: Customized Meditation'
 			}
 		],
 		groupField: 'category',

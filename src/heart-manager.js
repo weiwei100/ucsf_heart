@@ -212,23 +212,76 @@ var HEART = {
 	
 	audioCallback: {},
 	audioPlay: 'strawberry',
-	audioRoot: 'file:///android_asset/www/audio/',
 	
 	setAudio: function(name, succ, fail){
-		url=HEART.audioRoot+name;
+		url=HEART.audioRoot()+name;
 		finished = function(){HEART.audioCallback();};
 		audio=new Media(url,finished, finished);
 		HEART.audioPlay = audio;
 	},
+
+	audioRoot: function(){
+
+		return HEART.getItem('local', 'audioRoot');
+	},
 	
     getAudio: function(){ 
+
 		return HEART.audioPlay;
+	},
+
+	showImage: function(duration){
+
+		var index = Math.ceil(10*Math.random());
+
+		var img = Ext.create('Ext.Img', {
+						src: 'images/images-'+index+'.jpeg',
+
+						height: window.innerHeight,
+						width: window.innerWidth,
+
+						fullscreen: true,
+						centered: true
+
+					});
+
+		img.setShowAnimation({type: "fadeIn", duration: 4096});
+
+		img.setHideAnimation({type: "fadeOut", duration: 4096});
+
+		img.setStyle({ 'background-color': 'black' });
+
+		img.setCentered(true);
+
+		Ext.Viewport.add(img);
+
+		img.show();
+
+		setTimeout(function(){
+
+			img.hide();
+
+			setTimeout(function() {
+				
+				img.destroy();
+
+			}, 4096);
+
+		}, 4096+duration);
+
+		img.on({tap: function(){
+
+			img.destroy();
+		}});
 	},
     
     notify: null,
     show_on_load_title: null,
     show_on_load_type: null,
 	
-	probability: 0.55
-	
+	probability: 0.55,
+
+	showTimer: function(){
+
+	}
 };

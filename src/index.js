@@ -32,7 +32,7 @@ function initPNHandler(){
 		  HEART.setItem('session', 'wrapped', title);
 	   }
 
-       Ext.Viewport.getActiveItem().setActiveItem(2);
+       Ext.Viewport.getActiveItem().setActiveItem(3);
 	   Ext.Viewport.getActiveItem().getActiveItem().push(form);
 
 	   content = {};
@@ -59,11 +59,13 @@ function onResume(){
 };
 
 function inita(){
-	//alert('hi world');
+
     document.addEventListener("deviceready", initPNHandler, true);
     
     document.addEventListener("resume",onResume, false);
     document.addEventListener("pause", onPause, false);
 
     HEART.uuid = HEART.getItem('local', 'deviceToken');
+
+    HEART.setItem('local', 'audioRoot', 'file:///android_asset/www/audio/');
 }

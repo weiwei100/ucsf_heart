@@ -170,7 +170,7 @@
     self.wwwFolderName = @"www";
     self.startPage = delegate.startPage;
     if (self.startPage == nil) {
-        self.startPage = @"index.html";
+        self.startPage = @"index-ios.html";
     }
 
     // Initialize the plugin objects dict.

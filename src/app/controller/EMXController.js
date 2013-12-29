@@ -4,8 +4,9 @@ Ext.define('HEART.controller.EMXController', {
 	config: {
 		refs: {
 			mainTabs: '#mainTabs',
+			exercises: '#exercises',
 			stressed: '#stressed',
-			exercises: '#exercises'
+			presented: '#presented'
 		},
 
 		control: {
@@ -15,6 +16,10 @@ Ext.define('HEART.controller.EMXController', {
 			"#exercises": {
 				show: 'onExercisesShow',
 				hide: 'onExercisesHide'
+			},
+			"#presented": {
+				show: 'onPresentedShow',
+				hide: 'onPresentedHide'
 			},
 			"#stressed": {
 				show: 'onStressedShow',
@@ -72,6 +77,36 @@ Ext.define('HEART.controller.EMXController', {
       	content.action = 'exercises-pop';
       	HEART.toSensor(content);
 		
+	},
+
+	onPresentedShow: function(component, eOpts) {
+
+		var type = "Presented";
+
+		form = Ext.create('HEART.view.'+type);
+
+		form.emxType = type;
+		form.goola = 'presented';
+
+		this.getPresented().push(form);
+
+		content = {};
+		content.type = type;
+		content.action = 'presented-show';
+
+		HEART.toSensor(content);
+	},
+
+	onPresentedHide: function(component, eOpts) {
+		size=component.getItems().length;
+		//if( size<2 ){ return; }
+
+		this.getPresented().pop();
+
+		content = {};
+   		content.type = 'HEART';
+      	content.action = 'presented-pop';
+      	HEART.toSensor(content);
 	},
 
 	onStressedShow: function(component, eOpts) {
@@ -294,7 +329,9 @@ Ext.define('HEART.controller.EMXController', {
 	},
 
 	launch: function() {
+
 		this.getExercises().getNavigationBar().hide();
+		this.getPresented().getNavigationBar().hide();
 		this.getStressed().getNavigationBar().hide();
 	}
 
