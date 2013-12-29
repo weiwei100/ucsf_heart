@@ -29,7 +29,6 @@ Ext.define('HEART.view.QUOTES', {
 										painted: function(e, t){
 
 											wrapped=HEART.getItem('session', 'wrapped');
-
 											quotes=Ext.getStore('Quotes'); 
 											count=quotes.getAllCount();
 											quote='Quote not found.';
