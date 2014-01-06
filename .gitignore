@@ -19,6 +19,8 @@ Gemfile.lock
 *.ap_
 *.dex
 *.m4a
+*.mp3
+*.wav
 *.*~
 gen/
 local.properties
