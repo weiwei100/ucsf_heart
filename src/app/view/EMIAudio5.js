@@ -23,11 +23,11 @@ Ext.define('HEART.view.EMIAudio5', {
 					{
 						xtype: 'fieldset',
 						itemId: 'fsAudio',
-						title: 'Five Minute Meditation',
+						title: 'Sky Meditation',
 						items: [
 							{
 								xtype: 'label',
-								html: '<p>Tip: Use headphones and stand or sit down.</p><p>Duration: 5:00 min</p>'
+								html: '<p>Tip: Use headphones and stand or sit down.</p><p>Duration: 2:04 min</p>'
 							},
 							{
 								xtype: 'button',
@@ -59,7 +59,7 @@ Ext.define('HEART.view.EMIAudio5', {
 
 	initialize: function() {
 		this.callParent();
-		HEART.setAudio('W_5.0.mp3', HEART.audioCallback);
+		HEART.setAudio('sky_meditation.m4a', HEART.audioCallback);
 	}
 
 });

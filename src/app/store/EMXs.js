@@ -8,26 +8,7 @@ Ext.define('HEART.store.EMXs', {
 	config: {
 		autoLoad: true,
 		data: [
-			{
-				title: 'Mindful Moment (35 seconds)',
-				type: 'EMIAudio3',
-				category: 'B. MINI-MEDITATIONS (AUDIO)'
-			},
-			{
-				title: '2 Minute Meditation (2:00 min)',
-				type: 'EMIAudio4',
-				category: 'B. MINI-MEDITATIONS (AUDIO)'
-			},
-			{
-				title: 'Breath Meditation (2:50 min)',
-				type: 'EMIAudio2',
-				category: 'B. MINI-MEDITATIONS (AUDIO)'
-			},
-			{
-				title: '5 Minute Meditation (5 min)',
-				type: 'EMIAudio5',
-				category: 'B. MINI-MEDITATIONS (AUDIO)'
-			},
+            //////////////////////////////////////////////
 			{
 				title: 'Breathing with Life',
 				type: 'EMIGeneralMindfulness',
@@ -38,21 +19,45 @@ Ext.define('HEART.store.EMXs', {
 				type: 'EMITensionCheck',
 				category: 'A. MINDFUL CHECK-INS (NO-AUDIO)'
 			},
+            //////////////////////////////////////////////
 			{
-				title: 'Loving Kindness Meditation (5:40)',
+				title: 'Mountain Meditation',
+				type: 'EMIAudio3',
+				category: 'B. MINI-MEDITATIONS (AUDIO)'
+			},
+			{
+				title: 'HEART Meditation',
+				type: 'EMIAudio2',
+				category: 'B. MINI-MEDITATIONS (AUDIO)'
+			},
+			{
+				title: 'Sky Meditation',
+				type: 'EMIAudio5',
+				category: 'B. MINI-MEDITATIONS (AUDIO)'
+			},
+               
+            {
+               title: 'Short Meditation',
+               type: 'EMIAudio7',
+               category: 'B. MINI-MEDITATIONS (AUDIO)'
+            },
+            //////////////////////////////////////////////
+			{
+				title: 'Loving Kindness Meditation',
 				type: 'EMIAudio1',
 				category: 'C. LONGER-MEDITATIONS (AUDIO)'
 			},
 			{
-				title: '10 Minute Meditation (10 min)',
+				title: 'Body Scan',
 				type: 'EMIAudio6',
 				category: 'C. LONGER-MEDITATIONS (AUDIO)'
 			},
 			{
-				title: 'Body Scan (28:40 min)',
-				type: 'EMIAudio7',
+				title: 'Sitting Meditation',
+				type: 'EMIAudio4',
 				category: 'C. LONGER-MEDITATIONS (AUDIO)'
 			},
+            //////////////////////////////////////////////
 			{
 				title: 'Meditation Timer',
 				type: 'Customized',

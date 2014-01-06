@@ -70,15 +70,15 @@ Ext.define('HEART.view.Customized', {
 
 												if(values.audio==1){
 
-													HEART.setAudio('Dear_Esther.mp3', HEART.audioCallback);
+													//HEART.setAudio('', HEART.audioCallback);
 
-													audio.play();
+													//audio.play();
 												}	
 											};
 
 											setTimeout(function(){
-
-												if(duration>audio.getDuration()){
+                                                       
+												if(duration>audio.getDuration()*1000){
 
 													setTimeout(function(){
 
@@ -94,7 +94,7 @@ Ext.define('HEART.view.Customized', {
 
 														};
 
-													}, duration-audio.getDuration()*1000-4096);
+													}, duration-4096-84*1000);
 												}
 
 											}, 4096);
@@ -122,7 +122,15 @@ Ext.define('HEART.view.Customized', {
 								event: 'initialize'
 							}
 						]
-					}
+					},
+					{
+                        xtype: 'button',
+                        text: 'sage-heart-study.com',
+                        handler: function () {
+                        
+                            window.open('https://mail.ucsf.edu/owa/redir.aspx?C=zJZmDZS2PEG9bY5a6gmynU9MfkfLV9AIiGkJ14ZgrwUcVCIdIBezB4bitO69inP4v4yz6Y3f-Zo.&URL=http%3a%2f%2fsage-heart-study.com', '_system');
+                        }
+                    }
 				]
 			}
 		]
@@ -148,7 +156,7 @@ Ext.define('HEART.view.Customized', {
 
 		this.child('#fset').child('#timer').setOptions(timerOptions);
 
-		HEART.setAudio('singing_bowl_3_chime.wav', HEART.audioCallback);
+		HEART.setAudio('small_bowl_single.wav', HEART.audioCallback);
 	}
 
 });

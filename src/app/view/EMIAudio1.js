@@ -27,7 +27,7 @@ Ext.define('HEART.view.EMIAudio1', {
 						items: [
 							{
 								xtype: 'label',
-								html: '<p>Tip: Use headphones.</p><p>Duration: 5:40 min</p>'
+								html: '<p>Tip: Use headphones.</p><p>Duration: 6:11 min</p>'
 							},
 							{
 								xtype: 'button',
@@ -59,7 +59,7 @@ Ext.define('HEART.view.EMIAudio1', {
 
 	initialize: function() {
 		this.callParent();
-		HEART.setAudio('LKMeditation.mp3', HEART.audioCallback);
+		HEART.setAudio('loving_kindness_meditation.m4a', HEART.audioCallback);
 	}
 
 });
