@@ -31,7 +31,7 @@ var HEART = {
 	},
 	
 	toSensocol: function(content, succ, fail){
-		var url = 'http://sensocol.bj.brainpage.com/v1/sensors/events';
+		var url = 'http://sensocol.spire.io/v1/sensors/events';
 		var username = '2551135934';
 		var password = '4bbdbcd0b64e75ca047aac5e7d44934b';
 		var base = Base64.encode(username + ':' + password);
@@ -63,7 +63,7 @@ var HEART = {
 	},
 	
 	toUser: function(content){
-		var url = 'https://app.brainpage.com/ucsf/api/users';
+		var url = 'https://app.spire.io/ucsf/api/users';
 		var username = 'breathwear';
 		var password = 'deepbreath';
 	
@@ -105,7 +105,7 @@ var HEART = {
 	},
 	
 	getQuotes: function(){
-		var url = 'http://app.brainpage.com/ucsf/api/quotes';
+		var url = 'http://app.spire.io/ucsf/api/quotes';
 		var username = 'breathwear';
 		var password = 'deepbreath';
 	
@@ -147,7 +147,7 @@ var HEART = {
 	},
 	
 	notNow: function(content){
-		var url = 'http://app.brainpage.com/ucsf/api/notices';
+		var url = 'http://app.spire.io/ucsf/api/notices';
 		var username = 'breathwear';
 		var password = 'deepbreath';
 	
