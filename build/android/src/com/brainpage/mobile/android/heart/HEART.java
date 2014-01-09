@@ -24,7 +24,9 @@ import org.apache.cordova.DroidGap;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.arellomobile.android.push.PushManager;
@@ -43,10 +45,19 @@ public class HEART extends DroidGap
         checkMessage(getIntent());
 
         super.loadUrl(Config.getStartUrl());
-        
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,  WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         super.appView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
 //        super.loadUrl("file:///android_asset/www/app.html");
     }
+    
+//    @Override
+//    public void onResume(){
+//    	super.onResume();  
+//    	PowerManager pManager = ((PowerManager) getSystemService(POWER_SERVICE));  
+//    	PowerManager.WakeLock mWakeLock = pManager.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK  
+//                | PowerManager.ON_AFTER_RELEASE, TAG);  
+//        mWakeLock.acquire();  
+//    }
     
     @Override
     public void onNewIntent(Intent intent){
