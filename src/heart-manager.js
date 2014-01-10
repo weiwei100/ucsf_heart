@@ -63,7 +63,7 @@ var HEART = {
 	},
 	
 	toUser: function(content){
-		var url = 'https://app.spire.io/ucsf/api/users';
+		var url = 'http://app.spire.io/ucsf/api/users';
 		var username = 'breathwear';
 		var password = 'deepbreath';
 	
@@ -79,9 +79,9 @@ var HEART = {
 
 		callback=function(response){
 			response = JSON.stringify(response);
-			console.log(response);};
+			console.log(response); };
 		
-		HEART.request(url,auth,user,callback);
+		HEART.request(url,auth,user,callback,callback);
 		content = JSON.stringify(content);
 		HEART.setItem('local','user',content);
 	},
