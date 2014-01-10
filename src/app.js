@@ -47,6 +47,7 @@ Ext.application({
 		'IntentionRemind',
 		'IntentionConnect',
 		'QUOTES',
+		'Stressed',
 		'Presented',
 		'Customized'
 	],

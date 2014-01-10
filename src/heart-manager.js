@@ -79,9 +79,9 @@ var HEART = {
 
 		callback=function(response){
 			response = JSON.stringify(response);
-			console.log(response);};
+			console.log(response); };
 		
-		HEART.request(url,auth,user,callback);
+		HEART.request(url,auth,user,callback,callback);
 		content = JSON.stringify(content);
 		HEART.setItem('local','user',content);
 	},
@@ -214,6 +214,13 @@ var HEART = {
 	audioPlay: 'strawberry',
 	
 	setAudio: function(name, succ, fail){
+
+		audio = HEART.getAudio();
+
+		if(audio!='strawberry'){
+
+			audio.release();}
+
 		url=HEART.audioRoot()+name;
 		finished = function(){HEART.audioCallback();};
 		audio=new Media(url,finished, finished);

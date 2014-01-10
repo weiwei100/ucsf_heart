@@ -11,7 +11,6 @@ Ext.define('HEART.view.EMIAudio3', {
 				items: [
 					{
 						xtype: 'sliderfield',
-						random_show: 'y',
 						itemId: 'pre-slider',
 						label: 'How stressed do you feel now? <br/><br/><div><span style="float:right">A lot</span><span>Not at all</span></div>',
 						labelAlign: 'top',

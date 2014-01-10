@@ -60,7 +60,7 @@ Ext.define('HEART.view.Customized', {
                                                          
 											};
 
-											setTimeout(function(){
+											HEART.someout = setTimeout(function(){
                                                        
 												if(duration>audio.getDuration()*1000){
 
@@ -82,6 +82,35 @@ Ext.define('HEART.view.Customized', {
 												}
 
 											}, 4096);
+
+											audioRelease = function() { 
+
+												clearTimeout(HEART.someout);
+
+									            audio=HEART.getAudio();
+
+									            if(audio!='strawberry'){
+
+									                audio.getCurrentPosition(
+									                        function(position){
+									                                content.position=position; },
+									                        function(error){console.log(error);}
+									        		);
+
+									                source = audio.src;
+									                index = source.lastIndexOf('/');
+									                content.name= source.slice(index+1);
+									                content.type = audio.getDuration();
+									                content.action = 'audio-release';
+									                HEART.toSensor(content);
+
+									                audio.release();
+
+									                audio='strawberry';
+									            }   
+										    };
+
+											component.parent.parent.on({ activeitemchange: audioRelease });
 
 											var count = values.timer*60;
 

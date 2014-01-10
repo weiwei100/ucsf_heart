@@ -125,7 +125,13 @@ Ext.define('HEART.controller.EMXController', {
 		form.emxType = type;
 		form.goola = 'stressed';
 
-		this.getStressed().push(form);
+		HEART.must = true;
+
+		root = Ext.create('HEART.view.Stressed');
+
+		root.dest = form;
+
+		this.getStressed().push(root);
 
 		content = {};
 		content.type = type;
@@ -280,15 +286,19 @@ Ext.define('HEART.controller.EMXController', {
 
 		button.setShowAnimation({type: "fadeIn", duration: 1024});
 
-		if(Math.random()>HEART.probability||HEART.must){
+		if (HEART.must||Math.random()>HEART.probability) {
+
 			preSlider.destroy();
 			postSlider.destroy();
+
 			HEART.audioCallback = function() {
 				console.log(HEART.getAudio());
 				button.show();
 				setTimeout(function(){component.parent.getScrollable().getScroller().scrollToEnd({type: "slide"});}, 64);
 			};
-		}else{ 
+
+		} else { 
+
 			preSlider.on( { change: function() { audioFrame.show(); setTimeout(function(){component.parent.getScrollable().getScroller().scrollToEnd({type: "slide"});}, 64);} } );
 			audioFrame.hide();
 			postSlider.setShowAnimation({type: "fadeIn", duration: 1024});
@@ -303,32 +313,33 @@ Ext.define('HEART.controller.EMXController', {
 		HEART.must = false;
 
 		audioRelease = function() { 
-			audio=HEART.getAudio();
 
-			if(audio!='strawberry'){
+            audio=HEART.getAudio();
 
-				audio.getCurrentPosition(
-					function(position){
-						content.position=position; },
-					function(error){console.log(error);}
+            if(audio!='strawberry'){
+
+                audio.getCurrentPosition(
+                        function(position){
+                                content.position=position; },
+                        function(error){console.log(error);}
         		);
 
-				source = audio.src;
-				index = source.lastIndexOf('/');
-				content.name= source.slice(index+1);
-				content.type = audio.getDuration();
-				content.action = 'audio-release';
-				HEART.toSensor(content);
+                source = audio.src;
+                index = source.lastIndexOf('/');
+                content.name= source.slice(index+1);
+                content.type = audio.getDuration();
+                content.action = 'audio-release';
+                HEART.toSensor(content);
 
-				audio.release();
+                audio.release();
 
-				audio='strawberry';
-			}   
-		};
+                audio='strawberry';
+            }   
+	    };
 
-		component.on({ activeitemchange: audioRelease });
+	    component.on({ activeitemchange: audioRelease });
 
-		button.on( { tap: audioRelease } );
+	    button.on( { tap: audioRelease } );
 
 		button.hide();
 	},

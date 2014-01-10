@@ -583,8 +583,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Senda Li (G7ACW8VVK7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Senda Li (G7ACW8VVK7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Spire Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Spire Inc.";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -595,8 +595,8 @@
 				INFOPLIST_FILE = "ucsf_heart_ios/HEART-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = HEART;
-				PROVISIONING_PROFILE = "2F7171C4-D49E-461E-A469-6196D24BD40A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2F7171C4-D49E-461E-A469-6196D24BD40A";
+				PROVISIONING_PROFILE = "E727C46F-148A-4BB9-B40E-26EA2E556DBE";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E727C46F-148A-4BB9-B40E-26EA2E556DBE";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;

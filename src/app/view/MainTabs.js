@@ -130,13 +130,15 @@ Ext.define('HEART.view.MainTabs', {
 				iconCls: 'user present-color',
 				id: 'presented',
 				scrollable: 'vertical',
-				items: []
+				cls: 'present'
 			},
 			{
 				xtype: 'navigationview',
 				title: 'I\'m stressed!',
 				iconCls: 'user stressed-color', 
-				id: 'stressed'
+				id: 'stressed',
+				scrollable: 'vertical',
+				cls: 'stressed'
 			},
 			{
 				xtype: 'navigationview',
