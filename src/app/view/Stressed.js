@@ -13,7 +13,7 @@ Ext.define('HEART.view.Stressed', {
 					{
 						xtype: 'sliderfield',
 						itemId: 'balanced',
-						label: 'How stress do you feel right now?<br/><br/><div><span style="float:right">Balanced</span><span>Not at all</span></div>',
+						label: 'How stress do you feel right now?<br/><br/><div><span style="float:right">A lot</span><span>Not at all</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'balanced',
