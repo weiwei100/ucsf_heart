@@ -112,6 +112,7 @@
     // re-post ( broadcast )
     [[NSNotificationCenter defaultCenter] postNotificationName:CDVLocalNotification object:notification];
 }
+
 - (void)applicationWillEnterForeground:(UIApplication *)application{
     [self clearNotifications];
 }
