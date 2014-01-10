@@ -2,7 +2,7 @@ Ext.define('HEART.view.EMIAudio2', {
 	extend: 'Ext.form.Panel',
 
 	config: {
-		cls: 'EMIAudioA',
+		cls: 'EMIAudioB',
 		scrollable: 'vertical',
 		items: [
 			{
@@ -23,11 +23,11 @@ Ext.define('HEART.view.EMIAudio2', {
 					{
 						xtype: 'fieldset',
 						itemId: 'fsAudio',
-						title: 'HEART Meditation',
+						title: 'Sky Meditation',
 						items: [
 							{
 								xtype: 'label',
-								html: '<p>Tip: Use headphones and sit or lay down.</p><p>Duration: 2:51 min</p>'
+								html: '<p>Tip: Use headphones and stand or sit down.</p><p>Duration: 2:04 min</p>'
 							},
 							{
 								xtype: 'button',
@@ -59,7 +59,7 @@ Ext.define('HEART.view.EMIAudio2', {
 
 	initialize: function() {
 		this.callParent();
-		HEART.setAudio('heart_meditation.m4a', HEART.audioCallback);
+		HEART.setAudio('sky_meditation.m4a', HEART.audioCallback);
 	}
 
 });

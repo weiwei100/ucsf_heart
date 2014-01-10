@@ -18,8 +18,19 @@
  	background-size: cover !important;
 }
 
+.present {
+
+	background: url(images/images-16.jpeg) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
+.stressed {
+	background: url(images/images-12.jpeg) no-repeat center center !important;
+ 	background-size: cover !important;
+}
+
 .exe-list {
-	background: url(images/yellow_sunset.png) no-repeat center center !important;
+	background: url(images/images-9.jpeg) no-repeat center center !important;
  	background-size: cover !important;
 }
 
@@ -41,7 +52,7 @@
 }
 
 .setting {
-	background: url(images/snow.png) no-repeat center center !important;
+	background: url(images/images-15.jpeg) no-repeat center center !important;
  	background-size: cover !important;
 }
 
@@ -326,6 +337,7 @@
 }
 
 .x-button-pressing{
+
 	color: #333333;
   	background-color: #e6e6e6;
   	*background-color: #d9d9d9;
