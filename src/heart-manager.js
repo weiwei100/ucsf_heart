@@ -63,7 +63,7 @@ var HEART = {
 	},
 	
 	toUser: function(content){
-		var url = 'https://app.spire.io/ucsf/api/users';
+		var url = 'http://app.spire.io/ucsf/api/users';
 		var username = 'breathwear';
 		var password = 'deepbreath';
 	
