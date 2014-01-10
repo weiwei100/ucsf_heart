@@ -214,6 +214,13 @@ var HEART = {
 	audioPlay: 'strawberry',
 	
 	setAudio: function(name, succ, fail){
+
+		audio = HEART.getAudio();
+
+		if(audio!='strawberry'){
+
+			audio.release();}
+
 		url=HEART.audioRoot()+name;
 		finished = function(){HEART.audioCallback();};
 		audio=new Media(url,finished, finished);

@@ -1,4 +1,4 @@
-Ext.define('HEART.view.Presented', {
+Ext.define('HEART.view.Stressed', {
 	extend: 'Ext.form.Panel',
 
 	config: {
@@ -13,7 +13,7 @@ Ext.define('HEART.view.Presented', {
 					{
 						xtype: 'sliderfield',
 						itemId: 'balanced',
-						label: '<p style="color:LightCyan">How balanced do you feel with what is happening right now?<p> <br/><br/><div><span style="float:right;color:LightCyan">Balanced</span><span style="color:LightCyan">Not at all</span></div>',
+						label: 'How stress do you feel right now?<br/><br/><div><span style="float:right">Balanced</span><span>Not at all</span></div>',
 						labelAlign: 'top',
 						labelWrap: true,
 						name: 'balanced',
@@ -30,14 +30,8 @@ Ext.define('HEART.view.Presented', {
 								fn: function(component, eOpts) {
 									component.element.on({
 										tap : function(e, t){
-											
-											HEART.showImage(4096, 10);
 
-											setTimeout(function(){
-
-												component.parent.parent.parent.parent.setActiveItem(0);
-
-											}, 4096);
+											component.parent.parent.parent.push(component.parent.parent.dest);
 										}
 									});
 								},
