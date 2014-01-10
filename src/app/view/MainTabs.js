@@ -129,8 +129,7 @@ Ext.define('HEART.view.MainTabs', {
 				title: 'I\'m Present',
 				iconCls: 'user present-color',
 				id: 'presented',
-				//layout: { type: 'vbox'},
-				//scrollable: 'vertical',
+				scrollable: 'vertical',
 				items: []
 			},
 			{
@@ -218,14 +217,14 @@ Ext.define('HEART.view.MainTabs', {
 							},
 							{
 								xtype: 'label',
-								html: 'Please remind me to fill out my Daily Log in the evening at:',
+								html: 'Please remind to answer a ‘Moment this Week’ every Friday at:',
 								itemId: 'remind',
 								cls: 'x-label-desc'
 							},
 							{
 								xtype: 'selectfield',
 								itemId: 'daily',
-								label: 'Daily Log Time',
+								label: 'Moment this Week',
 								labelWidth: '40%',
 								labelWrap: true,
 								name: 'daily'
@@ -250,7 +249,15 @@ Ext.define('HEART.view.MainTabs', {
 										text: 'Notification Frequency'
 									}
 								]
-							}
+							},
+							{
+                        		xtype: 'button',
+                        		text: 'sage-heart-study.com',
+                        		handler: function () {
+                        
+                            		window.open('http://sage-heart-study.com/', '_system');
+                        		}
+                    		}
 						]
 					}
 				]

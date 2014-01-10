@@ -2,7 +2,7 @@ Ext.define('HEART.view.Presented', {
 	extend: 'Ext.form.Panel',
 
 	config: {
-		//cls: 'EMAType',
+		cls: 'present',
 		items: [
 			
 			{
@@ -31,7 +31,13 @@ Ext.define('HEART.view.Presented', {
 									component.element.on({
 										tap : function(e, t){
 											
-											HEART.showImage(4096);
+											HEART.showImage(4096, 10);
+
+											setTimeout(function(){
+
+												component.parent.parent.parent.parent.setActiveItem(0);
+
+											}, 4096);
 										}
 									});
 								},

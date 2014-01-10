@@ -31,7 +31,7 @@ var HEART = {
 	},
 	
 	toSensocol: function(content, succ, fail){
-		var url = 'http://sensocol.spire.io/v1/sensors/events';
+		var url = 'http://sensocol.spire.io/v1/sensors/'+HEART.uuid;
 		var username = '2551135934';
 		var password = '4bbdbcd0b64e75ca047aac5e7d44934b';
 		var base = Base64.encode(username + ':' + password);
@@ -230,9 +230,9 @@ var HEART = {
 		return HEART.audioPlay;
 	},
 
-	showImage: function(duration){
+	showImage: function(duration, rage){
 
-		var index = Math.ceil(10*Math.random());
+		var index = Math.ceil(rage*Math.random());
 
 		var img = Ext.create('Ext.Img', {
 						src: 'images/images-'+index+'.jpeg',
@@ -267,7 +267,7 @@ var HEART = {
 
 			}, 4096);
 
-		}, 4096+duration);
+		}, duration+4096);
 
 		img.on({tap: function(){
 

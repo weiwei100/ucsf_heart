@@ -57,14 +57,17 @@
 /**
  * This is main kick off after the app inits, the views and Settings are setup here. (preferred - iOS4 and up)
  */
+
 - (void) clearNotifications {
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
 }
+
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     [self clearNotifications];
 }
+
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
@@ -73,18 +76,14 @@
     self.window.autoresizesSubviews = YES;
 
     self.viewController = [[[MainViewController alloc] init] autorelease];
-    self.viewController.useSplashScreen = YES;
-
-    // Set your app's start page by setting the <content src='foo.html' /> tag in config.xml.
-    // If necessary, uncomment the line below to override it.
-    // self.viewController.startPage = @"index.html";
-
-    // NOTE: To customize the view's frame size (which defaults to full screen), override
-    // [self.viewController viewWillAppear:] in your view controller.
+   // self.viewController.useSplashScreen = YES;
+    
+    [application setIdleTimerDisabled:YES];
 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     [self clearNotifications];
+    
     return YES;
 }
 

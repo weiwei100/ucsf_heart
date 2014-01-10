@@ -11,16 +11,6 @@ Ext.define('HEART.view.Customized', {
 				title: 'Your customized Meditation',
 				itemId: 'fset',
 				items: [
-					
-					{
-						xtype: 'selectfield',
-						itemId: 'audio',
-						label: 'Audio',
-						labelWidth: '40%',
-						labelWrap: true,
-						name: 'audio',
-						readOnly: false
-					},
 					{
 						xtype: 'selectfield',
 						itemId: 'timer',
@@ -60,20 +50,14 @@ Ext.define('HEART.view.Customized', {
 
 											var duration = values.timer*60000;
 
-											HEART.showImage(duration);
+											HEART.showImage(duration, 18);
 											
 											audio=HEART.getAudio();
 
 											audio.play();
 
 											HEART.audioCallback = function(){
-
-												if(values.audio==1){
-
-													//HEART.setAudio('', HEART.audioCallback);
-
-													//audio.play();
-												}	
+                                                         
 											};
 
 											setTimeout(function(){
@@ -122,15 +106,7 @@ Ext.define('HEART.view.Customized', {
 								event: 'initialize'
 							}
 						]
-					},
-					{
-                        xtype: 'button',
-                        text: 'sage-heart-study.com',
-                        handler: function () {
-                        
-                            window.open('https://mail.ucsf.edu/owa/redir.aspx?C=zJZmDZS2PEG9bY5a6gmynU9MfkfLV9AIiGkJ14ZgrwUcVCIdIBezB4bitO69inP4v4yz6Y3f-Zo.&URL=http%3a%2f%2fsage-heart-study.com', '_system');
-                        }
-                    }
+					}
 				]
 			}
 		]
@@ -139,13 +115,6 @@ Ext.define('HEART.view.Customized', {
 	initialize: function() {
 
 		this.callParent();
-
-		audioOptions = [];
-
-		audioOptions.push({ text: 'Silence', value: 0 });
-		audioOptions.push({ text: 'Guided intro', value: 1 });
-
-		this.child('#fset').child('#audio').setOptions(audioOptions);
 
 		timerOptions = [];
 

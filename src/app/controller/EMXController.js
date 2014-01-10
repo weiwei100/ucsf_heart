@@ -81,6 +81,10 @@ Ext.define('HEART.controller.EMXController', {
 
 	onPresentedShow: function(component, eOpts) {
 
+		size=component.getItems().length;
+
+		if (size>1) {return};
+
 		var type = "Presented";
 
 		form = Ext.create('HEART.view.'+type);
@@ -99,7 +103,8 @@ Ext.define('HEART.controller.EMXController', {
 
 	onPresentedHide: function(component, eOpts) {
 		size=component.getItems().length;
-		//if( size<2 ){ return; }
+
+		if( size==2 ){ return; }
 
 		this.getPresented().pop();
 
