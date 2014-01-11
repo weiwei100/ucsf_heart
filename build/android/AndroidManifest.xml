@@ -120,7 +120,7 @@
     </application>
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="4"
         android:targetSdkVersion="17" />
 
 </manifest>
