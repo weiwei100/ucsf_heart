@@ -116,7 +116,7 @@ Ext.define('HEART.controller.EMXController', {
 
 	onStressedShow: function(component, eOpts) {
 
-		EMX = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio3', 'EMIAudio4'];
+		EMX = ['EMITensionCheck', 'EMIGeneralMindfulness', 'EMIAudio2', 'EMIAudio3', 'EMIAudio5'];
 
 		type = EMX[Math.floor(EMX.length*Math.random())]; 
 

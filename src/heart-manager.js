@@ -290,5 +290,61 @@ var HEART = {
 
 	showTimer: function(){
 
+	},
+
+	NQS: function() {
+
+		var date = new Date();
+
+		if (date.getMonth()==0&&date.getDate()>9&&date.getDate()<26) {
+
+			return false;
+
+		} else if (date.getMonth()==2&&date.getDate()>7&&date.getDate()<23) {
+
+			return false;
+
+		} else {
+
+			return true;
+		}
+	},
+
+	questions: function(){
+
+		if (HEART.NQS()) {return};
+
+		step = 1;
+
+		if (HEART.qset) {
+
+			step = 2
+
+		} else {
+
+			step = 1;
+
+			HEART.qset = 1+Math.round(Math.random());
+		}
+
+		form = Ext.create('HEART.view.QuestionSet'+HEART.qset);
+
+		form.emxType = type;
+		form.goola = 'presented';
+
+		setTimeout(function(){
+
+			if (step==2) {HEART.qset=0};
+
+			var active = Ext.Viewport.getActiveItem().getActiveItem();
+
+			if (active.id=='homePanel') {
+
+				Ext.Viewport.getActiveItem().setActiveItem(3);	
+			} 
+
+			Ext.Viewport.getActiveItem().getActiveItem().push(form);
+			
+		}, 512);
 	}
 };

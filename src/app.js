@@ -21,8 +21,6 @@ Ext.application({
 	],
 	views: [
 		'MainTabs',
-		'EMITensionCheck',
-		'EMIGeneralMindfulness',
 		'EMAType1',
 		'EMAType2',
 		'EMAType3',
@@ -39,6 +37,8 @@ Ext.application({
 		'EMIAudio6',
 		'EMIAudio7',
 		'EMIHabit',
+		'EMITensionCheck',
+		'EMIGeneralMindfulness',
 		'FEEDBACK',
 		'DAILYLOG',
 		'Experience',
@@ -46,10 +46,13 @@ Ext.application({
 		'EMIWkAheadSet',
 		'IntentionRemind',
 		'IntentionConnect',
-		'QUOTES',
 		'Stressed',
 		'Presented',
-		'Customized'
+		'Customized',
+		'QUOTES',
+		'QuestionSet1',
+		'QuestionSet2',
+		'WeeklyMoment'
 	],
 	controllers: [
 		'EMXController',

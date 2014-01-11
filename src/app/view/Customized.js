@@ -58,11 +58,15 @@ Ext.define('HEART.view.Customized', {
 
 											HEART.audioCallback = function(){
                                                          
+                                            	audio.release();
+
+												component.parent.parent.parent.pop();
+
 											};
 
 											HEART.someout = setTimeout(function(){
                                                        
-												if(duration>audio.getDuration()*1000){
+												if(duration>audio.getDuration()*1000*3){
 
 													setTimeout(function(){
 
@@ -155,6 +159,29 @@ Ext.define('HEART.view.Customized', {
 		this.child('#fset').child('#timer').setOptions(timerOptions);
 
 		HEART.setAudio('small_bowl_single.wav', HEART.audioCallback);
+
+		var form = this;
+
+		var sss = function(){
+
+			HEART.questions();
+
+			form.un({
+				show: sss
+			});
+		};
+
+		form.on({
+
+			show: sss
+		});
+	},
+		
+	destroy: function() {
+
+		HEART.getAudio().release();
+
+		HEART.questions();
 	}
 
 });
