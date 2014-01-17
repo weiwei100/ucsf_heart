@@ -180,6 +180,9 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 	},
 
 	onFormpanelInitialize: function(component, eOpts) {
+
+		intention=this.child('#fset').child('#intention').child('#intention');
+		habit=this.child('#fset').child('#mindful').child('#habit');
 		time = this.child('#fset').child('#mindful').child('#time');
 
 		options = [];
@@ -191,6 +194,24 @@ Ext.define('HEART.view.EMIWkAheadSet', {
 
 		time.setOptions(options);
 
+		user = HEART.getItem('local','user');
+
+		user = JSON.parse(user)||{};
+
+		intention.setValue(user.intention);
+		habit.setValue(user.habit);
+		time.setValue(user.time);
+
+		time.on({
+
+			change: function( selectfield, newValue, oldValue, eOpts ) {
+
+				if (newValue!=oldValue) {
+
+					component.child('#fset').child('#done').enable();
+				}
+			}
+		});
 	},
 
 	doValidation: function() {

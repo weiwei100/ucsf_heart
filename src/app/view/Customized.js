@@ -58,7 +58,7 @@ Ext.define('HEART.view.Customized', {
 
 											HEART.audioCallback = function(){
                                                          
-                                            	audio.release();
+                                            	//audio.release();
 
 												component.parent.parent.parent.pop();
 
@@ -74,47 +74,39 @@ Ext.define('HEART.view.Customized', {
 
 														audio.play();
 
-														HEART.audioCallback = function(){
-															
-															audio.release();
-
-															component.parent.parent.parent.pop();
-
-														};
-
 													}, duration-4096-84*1000);
 												}
 
 											}, 4096);
 
-											audioRelease = function() { 
+											// audioRelease = function() { 
 
-												clearTimeout(HEART.someout);
+											// 	clearTimeout(HEART.someout);
 
-									            audio=HEART.getAudio();
+									  //           audio=HEART.getAudio();
 
-									            if(audio!='strawberry'){
+									  //           if(audio!='strawberry'){
 
-									                audio.getCurrentPosition(
-									                        function(position){
-									                                content.position=position; },
-									                        function(error){console.log(error);}
-									        		);
+									  //               audio.getCurrentPosition(
+									  //                       function(position){
+									  //                               content.position=position; },
+									  //                       function(error){console.log(error);}
+									  //       		);
 
-									                source = audio.src;
-									                index = source.lastIndexOf('/');
-									                content.name= source.slice(index+1);
-									                content.type = audio.getDuration();
-									                content.action = 'audio-release';
-									                HEART.toSensor(content);
+									  //               source = audio.src;
+									  //               index = source.lastIndexOf('/');
+									  //               content.name= source.slice(index+1);
+									  //               content.type = audio.getDuration();
+									  //               content.action = 'audio-release';
+									  //               HEART.toSensor(content);
 
-									                audio.release();
+									  //               audio.release();
 
-									                audio='strawberry';
-									            }   
-										    };
+									  //               audio='strawberry';
+									  //           }   
+										 //    };
 
-											component.parent.parent.on({ activeitemchange: audioRelease });
+											// component.parent.parent.on({ activeitemchange: audioRelease });
 
 											var count = values.timer*60;
 

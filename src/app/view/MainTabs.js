@@ -97,10 +97,11 @@ Ext.define('HEART.view.MainTabs', {
 						]
 					},
 					{
-						xtype: 'button',
+						xtype: 'label',
 						html: '<center>My Meditations</center>',
 						itemId: 'meditation',
-						margin: 22,
+						margin: 11,
+						style: 'color:lightgray; text-shadow: 0 0 8px purple;',
 						listeners: [
 							{
 								fn: function(component, eOpts) {
@@ -118,9 +119,19 @@ Ext.define('HEART.view.MainTabs', {
 						]
 					},
 					{
-						xtype: 'label',
-						html: '<center><b>Intention:</b>&nbsp;&nbsp;[TEXT]</center>',
-						itemId: 'intention'
+						xtype: 'textareafield',
+						itemId: 'intention',
+						clearIcon: false,
+						label: '<center>Intention:</center>',
+						labelAlign: 'top',
+						labelWrap: true,
+						name: 'intention',
+						inputCls: 'cint',
+						hideBorders: true,
+						maxLength: 100,
+						readOnly: true,
+						cls: 'noborder',
+						height: 200
 					}
 				]
 			},
@@ -326,32 +337,7 @@ Ext.define('HEART.view.MainTabs', {
 
 		content=user.intention||'nothing'; 
 
-		if(content.length>10){
-			content=content.substring(0,10);
-			content+='...';
-		}
-
-		text='<center><b>Intention:</b>&nbsp;&nbsp;'+content+'</center>';
-
-		container.child('#intention').setHtml(text);
-
-		container.child('#intention').element.on({
-			tap : function(e, t){
-
-				callback = function(){
-					content = {};
-					content.type = 'popup';
-					content.action = 'intention-show';
-
-					HEART.toSensor(content);
-				};
-
-				Ext.Msg.alert('Intention', user.intention, callback);
-
-			}
-		});
-                    
-
+		container.child('#intention').setValue(content);
 	},
 
 	onSaveTap: function(button, e, eOpts) {
@@ -369,7 +355,7 @@ Ext.define('HEART.view.MainTabs', {
 
 		user=HEART.getItem('local', 'user');
 
-		if(user) {
+		if (user) {
 
 			user = JSON.parse(user);
 			value = user.priority||2;	
@@ -383,15 +369,15 @@ Ext.define('HEART.view.MainTabs', {
 
 			this.setActiveItem(0);
 
-		}else{
+		} else {
+
 			ahead = button.parent.child('#buttons').child('#ahead');
 			ahead.fireEvent('tap', ahead);
 			values.priority = 2;
 			HEART.toUser(values);
 		}
-		
+
 		button.parent.child('#buttons').show();
-		
 	},
 
 	onIntentionSetTap: function(button, e, eOpts) {
@@ -451,7 +437,7 @@ Ext.define('HEART.view.MainTabs', {
 
 		dailyOptions = [];
 
-		for( i=17; i<24; i++ ){
+		for( i=5; i<24; i++ ){
 			option = { text: i+": 00", value: i };
 			dailyOptions.push(option);
 		}

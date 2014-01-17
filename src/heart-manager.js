@@ -59,7 +59,24 @@ var HEART = {
 			feeds.sort("timestamp", 'DESC');		
 			feeds.sync();
 		};
+
+		if (content.type&&content.type!='HEART') {
+
+			if (isNaN(content.type)) {
+
+				if (HEART.shouldReset()) {
+
+					HEART.qset=0; 
+				}
+			}
+		}
+
 		HEART.toSensocol(content, succ, fail);	
+	},
+
+	shouldReset: function(){
+
+		return content.type.indexOf('QuestionSet')<0||content.type.indexOf("Customized")<0||content.type.indexOf("EMIAudio5")<0;
 	},
 	
 	toUser: function(content){
@@ -95,6 +112,7 @@ var HEART = {
 		feeds=Ext.getStore('Feeds');
 		if(feeds.getAllCount()>0){
 			feeds.each(function(item, index, length){
+
 				succ = function(response){feeds.removeAt(index);feeds.sync();};
 				fail = function(response){console.log(response);};
 				var content = item.data.data;
@@ -314,27 +332,44 @@ var HEART = {
 
 		if (HEART.NQS()) {return};
 
-		step = 1;
-
 		if (HEART.qset) {
 
-			step = 2
+			if (HEART.qstep==1) {
+
+				HEART.qstep = 2;
+
+			} else {
+
+				HEART.qstep = 1;
+			}
 
 		} else {
 
-			step = 1;
+			HEART.qstep = 1;
 
 			HEART.qset = 1+Math.round(Math.random());
 		}
 
-		form = Ext.create('HEART.view.QuestionSet'+HEART.qset);
+		type = 'QuestionSet'+HEART.qset
+
+		form = Ext.create('HEART.view.'+type);
 
 		form.emxType = type;
 		form.goola = 'presented';
 
-		setTimeout(function(){
+		if (HEART.qstep==2) {
 
-			if (step==2) {HEART.qset=0};
+			if (HEART.qset==1) {
+
+				HEART.qset=2;
+
+			} else {
+
+				HEART.qset=1;
+			}
+		};
+
+		setTimeout(function(){
 
 			var active = Ext.Viewport.getActiveItem().getActiveItem();
 
@@ -345,6 +380,6 @@ var HEART = {
 
 			Ext.Viewport.getActiveItem().getActiveItem().push(form);
 			
-		}, 512);
+		}, 256);
 	}
 };

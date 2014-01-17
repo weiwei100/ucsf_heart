@@ -277,8 +277,8 @@ Ext.define('HEART.controller.EMXController', {
 				HEART.audioCallback();
 
 				button.setText('Play');
+				
 				audio.pause();
-
 			}
 		};
 

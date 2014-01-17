@@ -125,6 +125,7 @@
 .x-label{
 	font-size: .8em;
 	line-height: 1.0;
+	background-color: none !important;
 }
 
 .with-margin{
@@ -153,8 +154,20 @@
 }
 
 .x-field-input{
+
 	border-radius: 4px;
+
 	border: 1px solid #eee;
+}
+
+.noborder .x-field-input {
+
+	border: none !important;
+}
+
+.cint {
+
+	text-align: center;
 }
 
 .quote{
@@ -305,7 +318,15 @@
 	background: transparent;
 }
 
+.x-button-pressing{
+
+	color: #333333;
+  	background-color: #e6e6e6;
+  	*background-color: #d9d9d9;
+}
+
 .x-button {
+	
 	display: block;
   font-weight: normal;
   padding: 8px 12px;
@@ -326,23 +347,13 @@
   background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
   background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
   background-repeat: repeat-x;
-  border: 1px solid #cccccc;
-  *border: 0;
   border-color: #e6e6e6 #e6e6e6 #bfbfbf;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   border-bottom-color: #b3b3b3;
-  -webkit-border-radius: 6px;
-  *zoom: 1;
+  -webkit-border-radius: 8px;
+
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
-
-.x-button-pressing{
-
-	color: #333333;
-  	background-color: #e6e6e6;
-  	*background-color: #d9d9d9;
-}
-
 
 .x-scroll-indicator.rounded.x-scroll-indicator-y>* {
 	width: 0;
