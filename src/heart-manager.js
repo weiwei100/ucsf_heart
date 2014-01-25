@@ -76,7 +76,7 @@ var HEART = {
 
 	shouldReset: function(){
 
-		return content.type.indexOf('QuestionSet')<0||content.type.indexOf("Customized")<0||content.type.indexOf("EMIAudio5")<0;
+		return content.type.indexOf('QuestionSet')<0&&content.type.indexOf("Customized")<0&&content.type.indexOf("EMIAudio5")<0;
 	},
 	
 	toUser: function(content){

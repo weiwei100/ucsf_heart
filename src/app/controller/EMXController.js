@@ -129,13 +129,14 @@ Ext.define('HEART.controller.EMXController', {
 
 		root = Ext.create('HEART.view.Stressed');
 
+		root.emxType = 'HEART';
 		root.dest = form;
 
 		this.getStressed().push(root);
 
 		content = {};
-		content.type = type;
-		content.action = 'stressed-show';
+		content.type = 'HEART';
+		content.action = type;
 
 		HEART.toSensor(content);
 	},
