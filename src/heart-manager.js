@@ -76,7 +76,7 @@ var HEART = {
 
 	shouldReset: function(){
 
-		return content.type.indexOf('QuestionSet')<0&&content.type.indexOf("Customized")<0&&content.type.indexOf("EMIAudio5")<0;
+		return content.type.indexOf('QuestionSet')<0&&content.type.indexOf("EMIAudio6")<0&&content.type.indexOf("EMIAudio5")<0;
 	},
 	
 	toUser: function(content){
@@ -314,7 +314,7 @@ var HEART = {
 
 		var date = new Date();
 
-		if (date.getMonth()==0&&date.getDate()>9&&date.getDate()<26) {
+		if (date.getMonth()==1&&date.getDate()>12&&date.getDate()<20) {
 
 			return false;
 

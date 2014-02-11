@@ -60,6 +60,29 @@ Ext.define('HEART.view.EMIAudio6', {
 	initialize: function() {
 		this.callParent();
 		HEART.setAudio('bodyscan.m4a', HEART.audioCallback);
+
+		var form = this;
+
+		var sss = function(){
+
+			HEART.questions();
+
+			form.un({
+				show: sss
+			});
+		};
+
+		form.on({
+
+			show: sss
+		});
+	},
+
+	destroy: function() {
+
+		HEART.getAudio().release();
+
+		HEART.questions();
 	}
 
 });

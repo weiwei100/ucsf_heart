@@ -152,28 +152,28 @@ Ext.define('HEART.view.Customized', {
 
 		HEART.setAudio('small_bowl_single.wav', HEART.audioCallback);
 
-		var form = this;
+		// var form = this;
 
-		var sss = function(){
+		// var sss = function(){
 
-			HEART.questions();
+		// 	HEART.questions();
 
-			form.un({
-				show: sss
-			});
-		};
+		// 	form.un({
+		// 		show: sss
+		// 	});
+		// };
 
-		form.on({
+		// form.on({
 
-			show: sss
-		});
+		// 	show: sss
+		// });
 	},
 		
 	destroy: function() {
 
 		HEART.getAudio().release();
 
-		HEART.questions();
+		//HEART.questions();
 	}
 
 });
