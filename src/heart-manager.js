@@ -108,9 +108,11 @@ var HEART = {
 		user =JSON.parse(user);
 		if(!user) {return;}
 		HEART.toUser(user);
-		console.log("sync...");
 		feeds=Ext.getStore('Feeds');
 		if(feeds.getAllCount()>0){
+
+			console.log("sync...");
+
 			feeds.each(function(item, index, length){
 
 				succ = function(response){feeds.removeAt(index);feeds.sync();};

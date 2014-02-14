@@ -58,7 +58,36 @@ function onResume(){
     HEART.toSensor(content);
 };
 
+function clean(name){
+
+  ids = window.localStorage.getItem(name);
+
+  ids = ids.split(',');
+
+  fine=[];
+
+  for (var i = 0; i < ids.length; i++) {
+
+    key = name+'-'+ids[i];
+
+    if (window.localStorage.getItem(key)) {
+
+      fine.push(ids[i]);
+
+    } else {
+
+      //alert(key);
+    }
+
+  };
+
+  window.localStorage.setItem(name, fine.toString());
+};
+
 function inita(){
+
+    clean('feeds');
+    clean('quotes');
 
     document.addEventListener("deviceready", initPNHandler, true);
     
