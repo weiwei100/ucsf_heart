@@ -15,6 +15,12 @@ var HEART = {
 	},
 	
 	request: function(location, auth, content, succ, fail){
+
+		if (content.action) {
+
+			content.act=content.action;
+			delete content.action;
+		};
 		
 		Ext.Ajax.request({
 			url: location,
