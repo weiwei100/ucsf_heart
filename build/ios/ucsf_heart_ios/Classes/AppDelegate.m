@@ -74,13 +74,25 @@
 
     self.window = [[[UIWindow alloc] initWithFrame:screenBounds] autorelease];
     self.window.autoresizesSubviews = YES;
-
-    self.viewController = [[[MainViewController alloc] init] autorelease];
-   // self.viewController.useSplashScreen = YES;
+    
+    [self.window setBackgroundColor:[UIColor blackColor]];
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+        
+        self.window.frame = CGRectMake(0,20,CGRectGetWidth(self.window.frame),CGRectGetHeight(self.window.frame)-20);
+        
+        [application setStatusBarStyle:UIStatusBarStyleLightContent];
+        
+        self.window.clipsToBounds =YES;
+    }
     
     [application setIdleTimerDisabled:YES];
-
+    
+    self.viewController = [[[MainViewController alloc] init] autorelease];
+    // self.viewController.useSplashScreen = YES;
+    
     self.window.rootViewController = self.viewController;
+    
     [self.window makeKeyAndVisible];
     [self clearNotifications];
     

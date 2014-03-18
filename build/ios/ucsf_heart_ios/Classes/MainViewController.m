@@ -69,6 +69,15 @@
     // you can do so here.
 
     [super viewWillAppear:animated];
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+        
+        CGFloat width = CGRectGetWidth(self.view.frame);
+        CGFloat height = CGRectGetHeight(self.view.frame);
+        
+        //[self.view setFrame:CGRectMake(0, 0, width, height-20)];
+        [self.webView setFrame:CGRectMake(0, 0, width, height-20)];
+    }
 }
 
 - (void)viewDidLoad
@@ -98,6 +107,11 @@
     return[super newCordovaViewWithFrame:bounds];
 }
 */
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 #pragma mark UIWebDelegate implementation
 

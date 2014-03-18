@@ -322,11 +322,11 @@ var HEART = {
 
 		var date = new Date();
 
-		if (date.getMonth()==1&&date.getDate()>12&&date.getDate()<20) {
+		if (date.getMonth()==4&&date.getDate()>7&&date.getDate()<15) {
 
 			return false;
 
-		} else if (date.getMonth()==2&&date.getDate()>7&&date.getDate()<23) {
+		} else if (date.getMonth()==5&&date.getDate()>4&&date.getDate()<12) {
 
 			return false;
 
