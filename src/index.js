@@ -61,6 +61,8 @@ function onResume(){
 function clean(name){
 
   ids = window.localStorage.getItem(name);
+    
+  if(!ids) {return;}
 
   ids = ids.split(',');
 
